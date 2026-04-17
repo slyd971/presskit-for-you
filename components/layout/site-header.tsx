@@ -1,0 +1,164 @@
+"use client";
+
+import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+
+import { siteConfig } from "@/content/site";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+export function SiteHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isCompact, setIsCompact] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+
+      setIsCompact(currentY > 24);
+
+      if (currentY > lastY + 8) {
+        setIsOpen(false);
+      }
+
+      lastY = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  return (
+    <header className="sticky top-0 z-50 px-3 pt-3 md:px-5">
+      <div
+        className={cn(
+          "mx-auto max-w-8xl rounded-[1.7rem] border border-white/10 bg-[#0b0e14]/84 shadow-[0_24px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl transition-all duration-300",
+          isCompact ? "rounded-[1.35rem]" : "rounded-[1.7rem]",
+        )}
+      >
+        <div
+          className={cn(
+            "flex items-center justify-between gap-4 px-4 transition-all duration-300 md:px-6",
+            isCompact ? "py-3" : "py-4",
+          )}
+        >
+          <Link href="/" className="text-sm font-semibold uppercase tracking-[0.28em] text-white">
+            {siteConfig.name}
+          </Link>
+
+          <nav className="hidden items-center gap-7 md:flex">
+            {siteConfig.nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-white/72 transition hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <Button href="/contact" className="hidden md:inline-flex">
+              {siteConfig.ctas.call}
+            </Button>
+
+            <button
+              type="button"
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={isOpen}
+              onClick={() => setIsOpen((open) => !open)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-white transition hover:bg-white/10 md:hidden"
+            >
+              <motion.div
+                key={isOpen ? "close" : "open"}
+                initial={{ rotate: -12, opacity: 0, scale: 0.85 }}
+                animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                exit={{ rotate: 12, opacity: 0, scale: 0.85 }}
+                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </motion.div>
+            </button>
+          </div>
+        </div>
+
+        <AnimatePresence initial={false}>
+          {isOpen ? (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              className="overflow-hidden md:hidden"
+            >
+              <motion.div
+                initial={{ y: -10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -8, opacity: 0 }}
+                transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                className="border-t border-white/8 px-4 pb-4 pt-3"
+              >
+                <nav className="grid gap-2">
+                  {siteConfig.nav.map((item, index) => (
+                    <motion.div
+                      key={item.href}
+                      initial={{ y: 8, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: 6, opacity: 0 }}
+                      transition={{
+                        duration: 0.24,
+                        delay: 0.03 * index,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                    >
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="block rounded-2xl border border-transparent px-3 py-3 text-sm text-white/78 transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
+
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 8, opacity: 0 }}
+                  transition={{ duration: 0.24, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Button href="/contact" className="mt-4 w-full justify-center">
+                    {siteConfig.ctas.call}
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </div>
+    </header>
+  );
+}
