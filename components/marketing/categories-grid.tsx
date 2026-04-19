@@ -16,12 +16,13 @@ export function CategoriesGrid() {
   };
 
   return (
-    <section className="section-divider py-20">
+    <section className="section-divider py-20" aria-labelledby="categories-title">
       <PageShell>
         <SectionHeading
           eyebrow="Par métier"
           title="Des modèles premium conçus pour des besoins réels."
           description="Chaque univers a ses codes, ses contenus et ses déclencheurs de confiance. Le site s’adapte au métier, pas l’inverse."
+          id="categories-title"
         />
         <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {displayCategories.map((category, index) => (
@@ -32,7 +33,7 @@ export function CategoriesGrid() {
               >
                 <div className="mb-4 flex justify-end">
                   <span className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white/62">
-                    {badges[category.slug]}
+                    {badges[category.slug] ?? "Sur mesure"}
                   </span>
                 </div>
                 {category.heroImage ? (
@@ -58,7 +59,7 @@ export function CategoriesGrid() {
                 <h3 className="mt-5 text-2xl font-semibold text-white">{category.shortName}</h3>
                 <p className="mt-3 text-sm leading-7 text-white/65">{category.description}</p>
                 <div className="mt-6 flex items-center justify-between text-sm text-white/78">
-                  <span>Voir un exemple</span>
+                  <span>Découvrir ce format</span>
                   <span className="transition group-hover:translate-x-1">→</span>
                 </div>
               </Link>

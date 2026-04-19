@@ -43,12 +43,13 @@ export function PreviewLoopCard({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group block"
+      aria-label={`${title} — ouvrir la démo`}
+      className="group block h-full"
     >
       <motion.div
         whileHover={{ y: -4 }}
         transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-        className="panel-premium accent-ring rounded-[1.4rem] p-4"
+        className="panel-premium accent-ring flex h-full flex-col rounded-[1.4rem] p-4"
       >
         <div className="overflow-hidden rounded-[1rem] border border-white/8 bg-[#0b0e14]">
           <div className="relative h-28 overflow-hidden bg-[#0b0e14]">
@@ -75,7 +76,9 @@ export function PreviewLoopCard({
             Live
           </span>
         </div>
-        <p className="mt-2 text-lg font-medium text-white">{title}</p>
+        <p className="mt-2 min-h-[3.5rem] text-lg font-medium text-white md:min-h-[4.5rem]">
+          {title}
+        </p>
       </motion.div>
     </Link>
   );

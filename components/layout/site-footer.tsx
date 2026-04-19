@@ -12,6 +12,7 @@ export function SiteFooter() {
             Press kits digitaux premium pour mieux présenter ton univers, centraliser tes infos
             et convertir plus proprement.
           </p>
+          <p className="mt-4 text-sm text-white/46">Réponse rapide • Brief cadré • Déploiement propre</p>
         </div>
         <div>
           <p className="text-sm font-medium text-white">Navigation</p>

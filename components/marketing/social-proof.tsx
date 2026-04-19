@@ -5,13 +5,19 @@ import { PageShell } from "@/components/layout/page-shell";
 
 export function SocialProof() {
   return (
-    <section className="section-divider section-wash py-20">
+    <section className="section-divider section-wash py-20" aria-labelledby="social-proof-title">
       <PageShell>
         <SectionHeading
           eyebrow="Réassurance"
           title="Un service conçu pour inspirer confiance avant même le premier échange."
-          description="Même sans énorme volume d’avis publics, le site peut déjà installer sérieux, clarté et niveau de gamme."
+          description="Même sans gros volume d’avis publics, le site peut déjà installer sérieux, clarté et niveau de gamme."
+          id="social-proof-title"
         />
+        <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/64">
+          <span className="rounded-full bg-white/[0.04] px-4 py-2">Structure claire</span>
+          <span className="rounded-full bg-white/[0.04] px-4 py-2">Parcours fluide</span>
+          <span className="rounded-full bg-white/[0.04] px-4 py-2">Image premium</span>
+        </div>
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {testimonials.map((item, index) => (
             <Reveal key={item.name} delay={index * 0.05}>

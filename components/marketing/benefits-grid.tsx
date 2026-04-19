@@ -9,12 +9,13 @@ const icons = [Sparkles, Link2, ShieldCheck, Gauge, Layers3, PenSquare];
 
 export function BenefitsGrid() {
   return (
-    <section className="section-divider section-wash py-20">
+    <section className="section-divider section-wash py-20" aria-labelledby="benefits-title">
       <PageShell>
         <SectionHeading
           eyebrow="Pourquoi ça fonctionne"
           title="Un press kit pensé pour l’impact, pas juste pour faire joli."
-          description="L’objectif est simple: rendre ta présentation plus forte, plus claire et plus facile à envoyer à la bonne personne."
+          description="L’objectif est simple : rendre ta présentation plus forte, plus claire et plus facile à envoyer à la bonne personne."
+          id="benefits-title"
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {benefits.map((benefit, index) => {
@@ -26,7 +27,7 @@ export function BenefitsGrid() {
                     <Icon className="h-5 w-5 text-white" />
                   </div>
                   <p className="mt-5 text-[11px] uppercase tracking-[0.24em] text-white/42">
-                    Valeur percue
+                    Valeur perçue
                   </p>
                   <h3 className="mt-5 text-xl font-semibold text-white">{benefit.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-white/64">{benefit.description}</p>

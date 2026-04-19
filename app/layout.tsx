@@ -19,9 +19,13 @@ const serif = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: "PressKit For You",
+  alternates: {
+    canonical: siteConfig.url,
+  },
   title: {
-    default: "Press kits digitaux premium | PressKit Studio",
-    template: "%s | PressKit Studio",
+    default: "Press kits digitaux premium | PressKit For You",
+    template: "%s | PressKit For You",
   },
   description: siteConfig.description,
   keywords: [
@@ -33,17 +37,21 @@ export const metadata: Metadata = {
     "press kit make up artist",
   ],
   openGraph: {
-    title: "PressKit Studio",
+    title: "PressKit For You",
     description: siteConfig.description,
     url: siteConfig.url,
-    siteName: "PressKit Studio",
+    siteName: "PressKit For You",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PressKit Studio",
+    title: "PressKit For You",
     description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -51,9 +59,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="fr" className={`${sans.variable} ${serif.variable}`}>
       <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="absolute left-4 top-4 z-[100] -translate-y-20 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition focus:translate-y-0"
+        >
+          Aller au contenu
+        </a>
         <div className="relative min-h-screen">
           <SiteHeader />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <SiteFooter />
         </div>
       </body>

@@ -5,12 +5,13 @@ import { PageShell } from "@/components/layout/page-shell";
 
 export function ProcessTimeline() {
   return (
-    <section className="section-divider py-20">
+    <section className="section-divider py-20" aria-labelledby="process-title">
       <PageShell>
         <SectionHeading
           eyebrow="Process"
           title="Un déroulé simple, fluide et cadré du brief à la mise en ligne."
           description="Le service est pensé pour aller droit au but, avec un rendu premium sans complexifier le parcours."
+          id="process-title"
         />
         <div className="relative mt-12 grid gap-5 lg:grid-cols-4">
           <div className="absolute left-10 right-10 top-10 hidden h-px bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(255,145,82,0.25),rgba(255,255,255,0.05))] lg:block" />
