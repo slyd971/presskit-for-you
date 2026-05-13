@@ -2,25 +2,26 @@ import type { Metadata } from "next";
 
 import { ContactPanel } from "@/components/marketing/contact-panel";
 import { PageShell } from "@/components/layout/page-shell";
-import { Badge } from "@/components/ui/badge";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact",
-  description: "Contacte PressKit Studio pour créer un press kit digital premium sur-mesure.",
-};
+  description: "Contacte PressKit For You pour lancer un press kit digital premium sur-mesure pour artiste, DJ, photographe ou independant.",
+  path: "contact",
+  keywords: ["contact press kit digital", "devis press kit", "creation site artiste sur mesure"],
+});
 
 export default function ContactPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="relative overflow-hidden pt-16 pb-6 md:pt-18 md:pb-8">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_0%,rgba(255,145,82,0.12),transparent_24%),radial-gradient(circle_at_84%_12%,rgba(255,255,255,0.05),transparent_18%)]" />
         <PageShell className="max-w-4xl">
-          <Badge>Projet</Badge>
-          <h1 className="mt-6 text-5xl font-semibold tracking-tighter2 text-white md:text-7xl">
-            Parlons de ton press kit et de l’image que tu veux envoyer.
+          <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">
+            Contact
           </h1>
-          <p className="mt-6 text-lg leading-8 text-white/70">
-            Que tu partes de zéro ou d’un univers déjà bien défini, on peut cadrer une base solide,
-            premium et prête à être partagée.
+          <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.68] md:text-lg">
+            Un brief rapide suffit pour cadrer ton besoin, ton niveau de gamme et la bonne direction pour ton press kit.
           </p>
         </PageShell>
       </section>

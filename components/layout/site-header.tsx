@@ -14,18 +14,10 @@ export function SiteHeader() {
   const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
-    let lastY = window.scrollY;
-
     const onScroll = () => {
       const currentY = window.scrollY;
 
       setIsCompact(currentY > 24);
-
-      if (currentY > lastY + 8) {
-        setIsOpen(false);
-      }
-
-      lastY = currentY;
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -53,7 +45,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 px-3 pt-3 md:px-5">
       <div
         className={cn(
-          "mx-auto max-w-8xl rounded-[1.7rem] border border-white/10 bg-[#0b0e14]/84 shadow-[0_24px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl transition-all duration-300",
+          "mx-auto max-w-8xl rounded-[1.7rem] border border-white/[0.08] bg-[#0b0e14]/[0.82] shadow-[0_24px_70px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-all duration-300",
           isCompact ? "rounded-[1.35rem]" : "rounded-[1.7rem]",
         )}
       >
@@ -63,16 +55,20 @@ export function SiteHeader() {
             isCompact ? "py-3" : "py-4",
           )}
         >
-          <Link href="/" className="text-sm font-semibold uppercase tracking-[0.28em] text-white">
-            {siteConfig.name}
+          <Link
+            href="/"
+            className="min-w-0 text-[9px] font-semibold uppercase tracking-[0.14em] text-white transition hover:text-white/[0.82] md:text-sm md:tracking-[0.28em]"
+          >
+            <span className="md:hidden">Press Kit For You</span>
+            <span className="hidden md:inline">{siteConfig.name}</span>
           </Link>
 
-          <nav className="hidden items-center gap-7 md:flex">
+          <nav aria-label="Navigation principale" className="hidden items-center gap-7 md:flex">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-white/72 transition hover:text-white"
+                className="text-sm font-medium text-white/[0.68] transition hover:text-white"
               >
                 {item.label}
               </Link>
@@ -80,16 +76,20 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button href="/contact" className="hidden md:inline-flex">
+            <Button
+              href="/contact"
+              className="px-3 py-2 text-[11px] font-semibold shadow-none md:px-5 md:py-3 md:text-sm"
+            >
               {siteConfig.ctas.call}
             </Button>
 
             <button
               type="button"
+              aria-controls="mobile-navigation"
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((open) => !open)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-white transition hover:bg-white/10 md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-white transition hover:bg-white/[0.08] md:hidden"
             >
               <motion.div
                 key={isOpen ? "close" : "open"}
@@ -118,9 +118,9 @@ export function SiteHeader() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -8, opacity: 0 }}
                 transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-                className="border-t border-white/8 px-4 pb-4 pt-3"
+                className="px-4 pb-4 pt-3"
               >
-                <nav className="grid gap-2">
+                <nav id="mobile-navigation" aria-label="Navigation mobile" className="grid gap-2">
                   {siteConfig.nav.map((item, index) => (
                     <motion.div
                       key={item.href}
@@ -136,7 +136,7 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block rounded-2xl border border-transparent px-3 py-3 text-sm text-white/78 transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+                        className="block rounded-2xl border border-transparent px-3 py-3 text-sm text-white/[0.78] transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
                       >
                         {item.label}
                       </Link>

@@ -28,30 +28,44 @@ export type Category = {
   externalDemoUrl?: string;
 };
 
+export type Example = {
+  slug: string;
+  category: string;
+  title: string;
+  description: string;
+  href: string;
+  accent: string;
+  image?: string;
+  imagePosition?: string;
+  externalDemoUrl?: string;
+};
+
 export const siteConfig = {
-  name: "PressKit Studio",
+  name: "PressKit For You",
   description:
-    "Press kits digitaux premium pour artistes, talents et indépendants qui veulent une présentation nette, crédible et orientée opportunités.",
-  url: "https://presskit-studio.example",
+    "Press kits digitaux premium pour artistes, talents et indépendants qui veulent une présentation claire, crédible et pensée pour convertir.",
+  url: "https://www.presskit.fr",
+  email: "hello@presskitstudio.fr",
+  phone: "+33 6 12 45 88 10",
   nav: [
     { href: "/", label: "Accueil" },
     { href: "/comment-ca-marche", label: "Comment ça marche" },
     { href: "/tarifs", label: "Tarifs" },
-    { href: "/galerie", label: "Galerie" },
+    { href: "/galerie", label: "Exemples" },
     { href: "/contact", label: "Contact" },
   ],
   ctas: {
     primary: "Créer mon press kit",
-    secondary: "Voir les exemples",
-    call: "Réserver un appel",
+    secondary: "Voir les tarifs",
+    call: "Créer mon presskit",
     launch: "Lancer mon projet",
   },
 };
 
 export const heroStats = [
   { value: "48h", label: "pour cadrer le brief et la direction" },
-  { value: "1 lien", label: "pour centraliser infos, médias et contact" },
-  { value: "Premium", label: "dans le fond, la forme et l’expérience" },
+  { value: "1 lien", label: "pour centraliser médias, infos et contact" },
+  { value: "Sur mesure", label: "pour coller à ton univers et à ta cible" },
 ];
 
 export const benefits = [
@@ -68,7 +82,7 @@ export const benefits = [
   {
     title: "Plus simple à partager",
     description:
-      "Pour les bookings, partenariats, collabs, presse et prises de contact rapides.",
+      "Pour les bookings, partenariats, collabs, la presse et les prises de contact rapides.",
   },
   {
     title: "Pensé pour convertir",
@@ -83,28 +97,28 @@ export const benefits = [
   {
     title: "Base scalable",
     description:
-      "Une structure claire pour faire évoluer le site, le contenu et les démos plus tard.",
+      "Une structure claire pour faire évoluer le site, le contenu et les démos dans le temps.",
   },
+];
+
+export const heroProofs = [
+  "Brief cadré rapidement",
+  "Design premium adapté à ton métier",
+  "Lien prêt à partager pour booking, presse et prospects",
 ];
 
 export const testimonials = [
   {
-    name: "Lina M.",
-    role: "Artiste indépendante",
+    name: "Ishma N.",
+    role: "Make-up artist",
     quote:
-      "J’avais besoin d’un lien propre pour les bookers et les médias. Le rendu élève instantanément mon projet.",
+      "Une expérience incroyable ! En tant que make-up artist, j’ai senti que l’équipe avait tout de suite saisi ma signature. Le résultat me ressemble totalement et reflète parfaitement ma façon de travailler. La page est intuitive, très professionnelle et va bien au-delà de mes attentes. Un immense merci.",
   },
   {
-    name: "Nicolas R.",
-    role: "Photographe événementiel",
+    name: "Yed D.",
+    role: "DJ",
     quote:
-      "J’ai enfin un lien qui pose mon univers, mes images et ma disponibilité avec un vrai niveau premium.",
-  },
-  {
-    name: "Camille D.",
-    role: "Make up artist",
-    quote:
-      "Le press kit pose mon univers, mes prestations et mes visuels avec une vraie sensation haut de gamme.",
+      "Merci SlyD pour ton sérieux et ta réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Tu as su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour ton taf et ton efficacité, c’est un vrai plaisir de bosser avec quelqu’un d’aussi fiable !",
   },
 ];
 
@@ -122,12 +136,12 @@ export const processSteps = [
   {
     title: "Intégration",
     description:
-      "Le press kit est développé proprement, responsive et structuré pour convertir.",
+      "Le press kit est intégré proprement, responsive et structuré pour convertir.",
   },
   {
     title: "Livraison",
     description:
-      "Tu reçois un lien prêt à partager, pensé pour inspirer confiance et générer des opportunités.",
+      "Tu reçois un lien prêt à partager, pensé pour inspirer confiance et générer plus d’opportunités.",
   },
 ];
 
@@ -135,6 +149,7 @@ export const pricingTiers = [
   {
     name: "Starter Signature",
     price: "300€",
+    tagline: "pour démarrer vite",
     description: "Pour lancer une présentation propre, claire et déjà premium.",
     features: [
       "Page press kit sur-mesure",
@@ -148,6 +163,7 @@ export const pricingTiers = [
   {
     name: "Deluxe Kit",
     price: "400€",
+    tagline: "pour scaler ton image",
     description:
       "Le meilleur équilibre pour vendre ton image, ton univers et tes opportunités.",
     features: [
@@ -162,6 +178,7 @@ export const pricingTiers = [
   {
     name: "Studio Custom",
     price: "Sur devis",
+    tagline: "pour un projet ultra custom",
     description:
       "Pour une expérience plus éditoriale, plus ambitieuse ou multi-pages.",
     features: [
@@ -184,7 +201,7 @@ export const faqItems = [
   {
     question: "Est-ce un simple mini-site ?",
     answer:
-      "Non. Le press kit est pensé comme un outil de présentation stratégique: image, clarté, rassurance et passage à l’action.",
+      "Non. Le press kit est pensé comme un outil de présentation stratégique : image, clarté, crédibilité et passage à l’action.",
   },
   {
     question: "Puis-je faire évoluer le contenu plus tard ?",
@@ -243,7 +260,7 @@ export const categories: Category[] = [
     heroImage: "/dj.png",
     heroImageAlt: "Hero du press kit DJ inspiré de la référence DJ SLY'D",
     heroOverlayTitle: "Paris to international stages",
-    externalDemoUrl: "https://djslyd-presskit.vercel.app/",
+    externalDemoUrl: "https://djslyd.presskit.fr",
   },
   {
     slug: "artiste",
@@ -298,52 +315,52 @@ export const categories: Category[] = [
   },
   {
     slug: "photographe",
-    name: "Press kit videaste / photographe",
+    name: "Press kit vidéaste / photographe",
     shortName: "Photographe",
-    eyebrow: "Image, nightlife, evenements premium",
+    eyebrow: "Image, nightlife, événements premium",
     description:
-      "Un press kit premium pour presenter ton regard, tes images, tes formats de couverture et faciliter les demandes de booking.",
-    audience: "Photographes, videastes, createurs event, nightlife et marques",
+      "Un press kit premium pour présenter ton regard, tes images, tes formats de couverture et faciliter les demandes de booking.",
+    audience: "Photographes, vidéastes, créateurs event, nightlife et marques",
     tone: "editorial",
     accent: "#D04C57",
     accentSoft: "rgba(208,76,87,0.18)",
     gradient:
       "from-[#D04C57]/28 via-[#4B6CFF]/12 to-transparent",
-    heroTitle: "Un press kit photographe qui donne envie de te confier l’image d’un evenement.",
+    heroTitle: "Un press kit photographe qui donne envie de te confier l’image d’un événement.",
     heroDescription:
-      "Portfolio, univers visuel, formats photo/video, zones d’intervention et contact booking reunis dans une presentation claire, premium et immediate.",
-    valueProps: ["Portfolio plus fort", "Positionnement plus net", "Booking simplifie"],
+      "Portfolio, univers visuel, formats photo/vidéo, zones d’intervention et contact booking réunis dans une présentation claire, premium et immédiate.",
+    valueProps: ["Portfolio plus fort", "Positionnement plus net", "Booking simplifié"],
     benefits: [
       {
-        title: "Univers visuel plus memorable",
-        description: "Tes images, ton energie et ton style se lisent des les premiers scrolls.",
+        title: "Univers visuel plus mémorable",
+        description: "Tes images, ton énergie et ton style se lisent dès les premiers scrolls.",
       },
       {
-        title: "Offre plus simple a projeter",
-        description: "Events, prive, nightlife ou brand content: le prospect comprend vite ou tu apportes le plus.",
+        title: "Offre plus simple à projeter",
+        description: "Events, privé, nightlife ou brand content : le prospect comprend vite où tu apportes le plus.",
       },
       {
         title: "Prise de contact plus directe",
-        description: "Le site cadre l’essentiel pour passer plus vite du coup d’oeil au booking.",
+        description: "Le site cadre l’essentiel pour passer plus vite du coup d’œil au booking.",
       },
     ],
     includes: [
-      "Bio videaste / photographe",
-      "Showreel ou video hero",
+      "Bio vidéaste / photographe",
+      "Showreel ou vidéo hero",
       "Galerie photo premium",
       "Services et formats de couverture",
-      "Reseaux et zones d’intervention",
+      "Réseaux et zones d’intervention",
       "Contact booking direct",
     ],
-    modules: ["Hero video", "Portfolio gallery", "Service blocks", "Booking panel"],
-    sampleHighlights: ["Ambiance nightlife", "Portfolio tres visuel", "CTA booking immediat"],
+    modules: ["Hero vidéo", "Portfolio gallery", "Service blocks", "Booking panel"],
+    sampleHighlights: ["Ambiance nightlife", "Portfolio très visuel", "CTA booking immédiat"],
     stats: [
       { label: "Usage", value: "Events • Nightlife • Brand" },
       { label: "Base", value: "Paris • FR • Intl" },
       { label: "Format", value: "Photo • Video • Booking" },
     ],
     heroImage: "/photographe.png",
-    heroImageAlt: "Apercu du profil videaste photographe Lokko TV",
+    heroImageAlt: "Aperçu du profil vidéaste photographe Lokko TV",
     heroImagePosition: "center 22%",
     previewImage: "/photographe.png",
     previewImagePosition: "center 22%",
@@ -399,13 +416,13 @@ export const categories: Category[] = [
     ],
     heroImage: "https://coaching-presskit.vercel.app/images/hero-main.jpg",
     heroImageAlt: "Aperçu du press kit coach sportif",
-    heroOverlayTitle: "Coaching prive premium",
+    heroOverlayTitle: "Coaching privé premium",
     externalDemoUrl: "https://coaching-presskit.vercel.app/",
   },
   {
     slug: "make-up-artist",
-    name: "Press kit make up artist",
-    shortName: "Make up artist",
+    name: "Press kit make-up artist",
+    shortName: "Make-up artist",
     eyebrow: "Portfolio, prestations, image",
     description:
       "Un écrin digital élégant pour montrer ton style, tes looks, tes prestations et faciliter les prises de contact.",
@@ -415,7 +432,7 @@ export const categories: Category[] = [
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
       "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
-    heroTitle: "Un press kit make up artist pensé pour sublimer ton portfolio.",
+    heroTitle: "Un press kit make-up artist pensé pour sublimer ton portfolio.",
     heroDescription:
       "Galerie, prestations, avant/après, style visuel et demande de booking: ton expertise devient immédiatement plus premium.",
     valueProps: ["Portfolio valorisé", "Offres plus nettes", "Prise de rendez-vous simplifiée"],
@@ -449,7 +466,7 @@ export const categories: Category[] = [
       { label: "Format", value: "Simple à partager" },
     ],
     heroImage: "/makeup.png",
-    heroImageAlt: "Visuel hero premium make up artist",
+    heroImageAlt: "Visuel hero premium make-up artist",
     heroOverlayTitle: "Portfolio beauty premium",
     externalDemoUrl: "https://ishma-makeupartist.vercel.app/",
   },
@@ -497,18 +514,29 @@ export const categories: Category[] = [
     stats: [
       { label: "Usage", value: "Devis • Events • Brand dinners" },
       { label: "Style", value: "Warm editorial" },
-      { label: "Impact", value: "Image + réassurance" },
+      { label: "Impact", value: "Image + crédibilité" },
     ],
   },
 ];
 
-export const examples = [
+export const examples: Example[] = [
   {
     slug: "dj-afterhours",
     category: "DJ",
     title: "Afterhours Signal",
     description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
     href: "/presskit/dj",
+    externalDemoUrl: "https://djslyd.presskit.fr",
+    accent: "#FF9152",
+  },
+  {
+    slug: "yoruboy-dj",
+    category: "DJ",
+    title: "Yoruboy",
+    description: "Un press kit DJ direct, premium et prêt à envoyer aux bookers.",
+    href: "/presskit/dj",
+    externalDemoUrl: "https://yoruboy-dj.presskit.fr",
+    image: "/dj-yoruboy-desktop.png",
     accent: "#FF9152",
   },
   {
@@ -523,7 +551,7 @@ export const examples = [
     slug: "coach-performance",
     category: "Photographe",
     title: "Lokko Nights",
-    description: "Une presentation editoriale pour booking, portfolio et univers nightlife premium.",
+    description: "Une présentation éditoriale pour booking, portfolio et univers nightlife premium.",
     href: "/presskit/photographe",
     accent: "#D04C57",
   },

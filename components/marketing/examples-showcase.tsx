@@ -26,23 +26,26 @@ export function ExamplesShowcase() {
             <Reveal key={example.slug} delay={index * 0.05}>
               {(() => {
                 const category = categories.find((item) => item.shortName === example.category);
-                const href = category?.externalDemoUrl ?? example.href;
+                const href = example.externalDemoUrl ?? category?.externalDemoUrl ?? example.href;
+                const isExternal = href.startsWith("http");
+                const image = example.image ?? category?.heroImage;
+                const imagePosition = example.imagePosition ?? category?.heroImagePosition;
 
                 return (
                   <Link
                     href={href}
-                    target={category?.externalDemoUrl ? "_blank" : undefined}
-                    rel={category?.externalDemoUrl ? "noreferrer" : undefined}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noreferrer" : undefined}
                     className="panel-premium group grid gap-5 rounded-[2rem] p-5 lg:grid-cols-[0.9fr_1.1fr]"
                   >
                 <div className="relative min-h-56 overflow-hidden rounded-[1.5rem] border border-white/8">
-                  {category?.heroImage ? (
+                  {image ? (
                     <>
                       <img
-                        src={category.heroImage}
+                        src={image}
                         alt={example.title}
                         className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
-                        style={category.heroImagePosition ? { objectPosition: category.heroImagePosition } : undefined}
+                        style={imagePosition ? { objectPosition: imagePosition } : undefined}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
                     </>
@@ -58,7 +61,7 @@ export function ExamplesShowcase() {
                     <span className="rounded-full border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                       {exampleBadges[index]}
                     </span>
-                    {category?.externalDemoUrl ? (
+                    {isExternal ? (
                       <span className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                         Demo live
                       </span>
@@ -93,7 +96,7 @@ export function ExamplesShowcase() {
                     </div>
                   </div>
                   <div className="mt-6 inline-flex items-center gap-2 text-sm text-white">
-                    {category?.externalDemoUrl ? "Ouvrir la demo" : "Découvrir la catégorie"}{" "}
+                    {isExternal ? "Ouvrir la demo" : "Découvrir la catégorie"}{" "}
                     <span className="transition group-hover:translate-x-1">→</span>
                   </div>
                 </div>
