@@ -38,6 +38,19 @@ export async function POST(request: Request) {
       );
     }
 
+    const notes = [
+      `Email: ${payload.email}`,
+      `Téléphone / WhatsApp: ${payload.phone || "Non renseigné"}`,
+      `Ville: ${payload.city || "Non renseignée"}`,
+      `Activité / Projet: ${payload.activityName}`,
+      `Type de press kit: ${payload.pressKitType}`,
+      `Objectif: ${payload.mainGoal}`,
+      `Univers: ${payload.visualStyle}`,
+      `Deadline: ${payload.deadline}`,
+      `Budget: ${payload.budget}`,
+      `Message: ${payload.message || "Aucun message complémentaire."}`,
+    ].join("\n");
+
     const airtableResponse = await fetch(
       `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`,
       {
@@ -51,19 +64,12 @@ export async function POST(request: Request) {
             {
               fields: {
                 Nom: payload.lastName,
-                "Prénom": payload.firstName,
+                Prénom: payload.firstName,
                 "Nom de scène": payload.stageName,
-                Email: payload.email,
-                "Téléphone / WhatsApp": payload.phone,
-                Ville: payload.city,
-                "Activité / Projet": payload.activityName,
                 Métier: payload.jobTitle,
-                "Type de press kit": payload.pressKitType,
-                Objectif: payload.mainGoal,
-                Univers: payload.visualStyle,
-                Deadline: payload.deadline,
-                Budget: payload.budget,
-                Message: payload.message,
+                "Type de profil": ["Prospect"],
+                Statut: "Prospect",
+                Notes: notes,
               },
             },
           ],

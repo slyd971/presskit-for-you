@@ -5,12 +5,12 @@ import { PageShell } from "@/components/layout/page-shell";
 
 export function SocialProof() {
   return (
-    <section className="section-divider section-wash py-20" aria-labelledby="social-proof-title">
+    <section className="section-divider section-wash py-24 md:py-32" aria-labelledby="social-proof-title">
       <PageShell>
         <SectionHeading
-          eyebrow="Réassurance"
+          eyebrow="Crédibilité"
           title="Un service conçu pour inspirer confiance avant même le premier échange."
-          description="Même sans gros volume d’avis publics, le site peut déjà installer sérieux, clarté et niveau de gamme."
+          description="Même sans gros volume d'avis publics, le site peut déjà installer sérieux, clarté et niveau de gamme."
           id="social-proof-title"
         />
         <div className="mt-8 flex flex-wrap gap-3 text-sm text-white/64">
@@ -32,7 +32,7 @@ export function SocialProof() {
                     Avis client
                   </span>
                 </div>
-                <p className="mt-5 text-base leading-8 text-white/76">“{item.quote}”</p>
+                <p className="mt-5 text-[15px] leading-9 text-white/[0.84]">&ldquo;{item.quote}&rdquo;</p>
                 <div className="mt-8 flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-sm font-semibold text-white">
                     {item.name

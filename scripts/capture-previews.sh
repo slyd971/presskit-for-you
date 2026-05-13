@@ -54,6 +54,6 @@ APPLESCRIPT
     "$OUT_DIR/${slug}.mp4"
 }
 
-capture_site "dj" "https://djslyd-presskit.vercel.app/"
+capture_site "dj" "https://djslyd.presskit.fr/"
 capture_site "artist" "https://artist-presskit.vercel.app/"
 capture_site "makeup" "https://ishma-makeupartist.vercel.app/"

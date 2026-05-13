@@ -1,106 +1,110 @@
-import { siteConfig, heroStats, heroProofs, categories } from "@/content/site";
+import { siteConfig, heroStats, categories } from "@/content/site";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { PreviewLoopCard } from "@/components/marketing/preview-loop-card";
 import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
 
 export function Hero() {
-  const featured = categories.filter((item) =>
-    ["dj", "artiste", "make-up-artist", "photographe"].includes(item.slug),
-  );
+  const featured = categories.find((item) => item.slug === "dj") ?? categories[0];
 
   return (
-    <section className="section-wash relative overflow-hidden py-16 md:py-24 md:pb-28" aria-labelledby="hero-title">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,145,82,0.24),transparent_24%),radial-gradient(circle_at_78%_18%,rgba(153,119,255,0.16),transparent_24%),radial-gradient(circle_at_60%_68%,rgba(255,255,255,0.04),transparent_18%),linear-gradient(180deg,#0b0e14,rgba(11,14,20,0.94))]" />
-      <div className="absolute left-[-8%] top-24 h-72 w-72 rounded-full bg-[#ff9152]/10 blur-3xl" />
-      <div className="absolute right-[12%] top-10 h-60 w-60 rounded-full bg-white/6 blur-3xl" />
-      <PageShell className="relative grid items-end gap-12 lg:grid-cols-[1fr_1.02fr] lg:gap-14">
+    <section className="section-wash relative overflow-hidden py-12 md:py-[4.5rem] md:pb-24" aria-labelledby="hero-title">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(255,145,82,0.24),transparent_24%),radial-gradient(circle_at_78%_26%,rgba(255,216,158,0.14),transparent_28%),radial-gradient(circle_at_64%_78%,rgba(255,255,255,0.045),transparent_24%),linear-gradient(180deg,#080a10,rgba(10,13,19,0.97))]" />
+      <div className="absolute left-[-14%] top-16 h-[30rem] w-[30rem] rounded-full bg-[#ff9152]/10 blur-3xl" />
+      <div className="absolute right-[-2%] top-6 h-[34rem] w-[34rem] rounded-full bg-[#f4c26b]/[0.075] blur-3xl" />
+      <div className="absolute right-[16%] top-24 h-56 w-56 rounded-full bg-white/[0.055] blur-3xl" />
+      <PageShell className="relative grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
         <Reveal>
-          <div className="max-w-3xl">
-            <Badge className="bg-white/[0.07] text-white/78">Press kits digitaux premium</Badge>
-            <h1 id="hero-title" className="mt-6 text-4xl font-semibold tracking-tighter2 text-white md:text-7xl">
-              Donne à ton talent une présentation à la hauteur de ton ambition.
+          <div className="max-w-[43rem] pt-0">
+            <Badge className="border-white/[0.14] bg-white/[0.075] text-white/[0.82] shadow-[0_14px_50px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.1)]">
+              Press kits digitaux premium
+            </Badge>
+            <h1 id="hero-title" className="mt-5 max-w-[38rem] text-4xl font-semibold leading-[0.94] tracking-tighter2 text-white md:text-[3.75rem] lg:text-[4.2rem]">
+              <span className="block">Présente ton univers</span>
+              <span className="block text-white/[0.92]">comme une vraie marque.</span>
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/76 md:text-xl">
-              Des press kits pensés pour les artistes, talents et indépendants qui veulent mieux
-              se présenter, rassurer plus vite et décrocher plus d’opportunités concrètes.
+            <p className="mt-5 max-w-[36rem] text-base leading-7 text-white/[0.72] md:text-lg md:leading-8">
+              Des press kits premium pour artistes, talents et independants qui veulent inspirer confiance plus vite, mieux vendre leur image et ouvrir plus d'opportunites.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/74">
-                Plus clair pour booking, presse et collabs
-              </span>
-              <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/74">
-                Pensé comme un outil de conversion
-              </span>
-            </div>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="/contact">{siteConfig.ctas.primary}</Button>
-              <Button href="/tarifs" variant="secondary">
-                {siteConfig.ctas.secondary}
-              </Button>
-            </div>
-            <ul className="mt-6 grid gap-2 text-sm text-white/64 sm:grid-cols-3">
-              {heroProofs.map((item) => (
-                <li key={item} className="rounded-2xl bg-white/[0.03] px-4 py-3">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            <div className="mt-6 grid gap-2.5 sm:grid-cols-3">
               {heroStats.map((stat) => (
-                <div key={stat.label} className="panel-premium rounded-3xl p-4 hover:translate-y-0">
-                  <p className="text-2xl font-semibold text-white">{stat.value}</p>
-                  <p className="mt-2 text-sm leading-6 text-white/58">{stat.label}</p>
+                <div
+                  key={stat.label}
+                  className="panel-premium rounded-[1.15rem] border-white/[0.14] p-3.5 shadow-[0_22px_70px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.08)] hover:translate-y-0"
+                >
+                  <p className="text-xl font-semibold leading-none text-white md:text-2xl">{stat.value}</p>
+                  <p className="mt-2 text-xs leading-5 text-white/[0.66]">{stat.label}</p>
                 </div>
               ))}
+            </div>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Button
+                href="/contact"
+                className="w-full px-7 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),0_10px_40px_rgba(255,145,82,0.14),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
+              >
+                {siteConfig.ctas.primary}
+              </Button>
+              <Button
+                href="/#categories-title"
+                variant="secondary"
+                className="w-full px-6 py-4 text-[15px] text-white/[0.88] sm:w-auto"
+              >
+                Voir des exemples
+              </Button>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative isolate">
-            <div className="absolute -inset-8 rounded-[2.8rem] bg-gradient-to-br from-white/10 via-white/0 to-[#ff9152]/8 blur-3xl" />
-            <div className="absolute right-4 top-4 h-24 w-24 rounded-full bg-[#ff9152]/12 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2.2rem] bg-[#10141d]/90 p-5 shadow-[0_32px_100px_rgba(0,0,0,0.32)] md:p-6">
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),transparent)]" />
-              <div className="relative grid gap-4">
-                <div className="relative overflow-hidden rounded-[1.8rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-6 md:p-7">
-                  <div className="absolute right-[-10%] top-[-30%] h-36 w-36 rounded-full bg-white/8 blur-3xl" />
-                  <div className="relative">
-                    <p className="max-w-xl text-3xl font-semibold leading-tight text-white">
-                      Une présence digitale premium
-                      <br />
-                      pour booking, presse et prospects.
-                    </p>
-                    <p className="mt-3 max-w-lg text-sm leading-7 text-white/60">
-                      Des aperçus concrets par univers pour montrer le niveau de rendu, pas juste l’expliquer.
-                    </p>
+          <div className="relative isolate pt-0">
+            <div className="absolute -inset-10 rounded-[3.5rem] bg-[radial-gradient(circle_at_52%_38%,rgba(255,145,82,0.22),transparent_38%),radial-gradient(circle_at_70%_62%,rgba(255,255,255,0.12),transparent_32%)] blur-3xl" />
+            <div className="relative min-h-[25rem] sm:min-h-[28rem] lg:min-h-[32rem]">
+              <a
+                href={featured.externalDemoUrl ?? `/presskit/${featured.slug}`}
+                target={featured.externalDemoUrl ? "_blank" : undefined}
+                rel={featured.externalDemoUrl ? "noreferrer" : undefined}
+                className="group absolute left-0 top-0 block w-[92%] sm:w-[86%]"
+                aria-label={`${featured.name} - aperçu desktop`}
+              >
+                <div className="hero-device-float relative transition duration-500 group-hover:-translate-y-1">
+                  <div className="relative overflow-hidden rounded-t-[1.45rem] border border-white/[0.18] bg-[#07090e] p-2 shadow-[0_42px_140px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] md:rounded-t-[1.75rem] md:p-2.5">
+                    <div className="pointer-events-none absolute inset-x-8 top-0 z-20 h-px bg-gradient-to-r from-transparent via-white/[0.38] to-transparent" />
+                    <div className="absolute left-1/2 top-1.5 z-20 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-white/18" />
+                    <div className="relative aspect-[1.58/1] overflow-hidden rounded-t-[1rem] bg-black md:rounded-t-[1.2rem]">
+                      <img
+                        src="/dj.png"
+                        alt={featured.heroImageAlt ?? featured.name}
+                        className="h-full w-full object-contain object-top transition duration-700 group-hover:scale-[1.015]"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.16),transparent_18%,transparent_68%,rgba(255,255,255,0.055))]" />
+                    </div>
+                  </div>
+                  <div className="relative mx-auto h-5 w-[106%] -translate-x-[3%] rounded-b-[1.4rem] border border-white/[0.14] bg-[linear-gradient(180deg,#303545,#0b0d13)] shadow-[0_18px_48px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
+                    <div className="absolute left-1/2 top-0 h-1.5 w-24 -translate-x-1/2 rounded-b-xl bg-white/[0.12]" />
+                  </div>
+                  <div className="mx-auto h-2 w-[82%] rounded-b-full bg-black/45 blur-sm" />
+                </div>
+              </a>
+              <a
+                href={featured.externalDemoUrl ?? `/presskit/${featured.slug}`}
+                target={featured.externalDemoUrl ? "_blank" : undefined}
+                rel={featured.externalDemoUrl ? "noreferrer" : undefined}
+                className="group absolute bottom-0 right-2 block w-[35%] min-w-[8.75rem] max-w-[13.25rem] sm:right-0 sm:w-[30%] lg:w-[28%]"
+                aria-label={`${featured.name} - aperçu mobile`}
+              >
+                <div className="hero-device-float-slow relative rounded-[2.2rem] border border-white/[0.2] bg-[linear-gradient(145deg,#353b4d,#07090e_38%,#171b25)] p-1.5 shadow-[0_36px_110px_rgba(0,0,0,0.58),inset_0_1px_0_rgba(255,255,255,0.18)] transition duration-500 group-hover:-translate-y-1 group-hover:border-white/[0.3] md:rounded-[2.45rem] md:p-2">
+                  <div className="absolute inset-0 rounded-[2.2rem] bg-[linear-gradient(120deg,rgba(255,255,255,0.22),transparent_18%,transparent_72%,rgba(255,255,255,0.08))] opacity-60 md:rounded-[2.45rem]" />
+                  <div className="relative aspect-[0.48/1] overflow-hidden rounded-[1.75rem] bg-black md:rounded-[2rem]">
+                    <div className="absolute left-1/2 top-2 z-20 h-5 w-16 -translate-x-1/2 rounded-full bg-[#050609] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" />
+                    <img
+                      src="/mobile-dj.jpg"
+                      alt={`${featured.name} en version mobile`}
+                      className="h-[132%] w-full -translate-y-[15%] object-cover object-top transition duration-700 group-hover:scale-[1.02]"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.18),transparent_22%,transparent_72%,rgba(255,255,255,0.06))]" />
                   </div>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {featured.map((item, index) => (
-                    <PreviewLoopCard
-                      key={item.slug}
-                      href={item.externalDemoUrl ?? `/presskit/${item.slug}`}
-                      image={item.previewImage ?? item.heroImage ?? ""}
-                      imagePosition={item.previewImagePosition}
-                      imageOffsetY={item.previewImageOffsetY}
-                      label={item.shortName}
-                      title={item.name}
-                      delayClassName={
-                        index === 1
-                          ? "[animation-delay:-2.8s]"
-                          : index === 2
-                            ? "[animation-delay:-5.2s]"
-                            : index === 3
-                              ? "[animation-delay:-1.4s]"
-                              : ""
-                      }
-                    />
-                  ))}
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </Reveal>

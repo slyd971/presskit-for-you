@@ -28,22 +28,36 @@ export type Category = {
   externalDemoUrl?: string;
 };
 
+export type Example = {
+  slug: string;
+  category: string;
+  title: string;
+  description: string;
+  href: string;
+  accent: string;
+  image?: string;
+  imagePosition?: string;
+  externalDemoUrl?: string;
+};
+
 export const siteConfig = {
   name: "PressKit For You",
   description:
     "Press kits digitaux premium pour artistes, talents et indépendants qui veulent une présentation claire, crédible et pensée pour convertir.",
-  url: "https://presskit-for-you.vercel.app",
+  url: "https://www.presskit.fr",
+  email: "hello@presskitstudio.fr",
+  phone: "+33 6 12 45 88 10",
   nav: [
     { href: "/", label: "Accueil" },
     { href: "/comment-ca-marche", label: "Comment ça marche" },
     { href: "/tarifs", label: "Tarifs" },
-    { href: "/galerie", label: "Galerie" },
+    { href: "/galerie", label: "Exemples" },
     { href: "/contact", label: "Contact" },
   ],
   ctas: {
     primary: "Créer mon press kit",
     secondary: "Voir les tarifs",
-    call: "Réserver un appel",
+    call: "Créer mon presskit",
     launch: "Lancer mon projet",
   },
 };
@@ -95,22 +109,16 @@ export const heroProofs = [
 
 export const testimonials = [
   {
-    name: "Lina M.",
-    role: "Artiste indépendante",
-    quote:
-      "J’avais besoin d’un lien propre pour les bookers et les médias. Le rendu élève immédiatement mon projet.",
-  },
-  {
-    name: "Nicolas R.",
-    role: "Photographe événementiel",
-    quote:
-      "J’ai enfin un lien qui pose mon univers, mes images et ma disponibilité avec un vrai niveau premium.",
-  },
-  {
-    name: "Camille D.",
+    name: "Ishma N.",
     role: "Make-up artist",
     quote:
-      "Le press kit pose mon univers, mes prestations et mes visuels avec une vraie sensation haut de gamme.",
+      "Une expérience incroyable ! En tant que make-up artist, j’ai senti que l’équipe avait tout de suite saisi ma signature. Le résultat me ressemble totalement et reflète parfaitement ma façon de travailler. La page est intuitive, très professionnelle et va bien au-delà de mes attentes. Un immense merci.",
+  },
+  {
+    name: "Yed D.",
+    role: "DJ",
+    quote:
+      "Merci SlyD pour ton sérieux et ta réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Tu as su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour ton taf et ton efficacité, c’est un vrai plaisir de bosser avec quelqu’un d’aussi fiable !",
   },
 ];
 
@@ -141,6 +149,7 @@ export const pricingTiers = [
   {
     name: "Starter Signature",
     price: "300€",
+    tagline: "pour démarrer vite",
     description: "Pour lancer une présentation propre, claire et déjà premium.",
     features: [
       "Page press kit sur-mesure",
@@ -154,6 +163,7 @@ export const pricingTiers = [
   {
     name: "Deluxe Kit",
     price: "400€",
+    tagline: "pour scaler ton image",
     description:
       "Le meilleur équilibre pour vendre ton image, ton univers et tes opportunités.",
     features: [
@@ -168,6 +178,7 @@ export const pricingTiers = [
   {
     name: "Studio Custom",
     price: "Sur devis",
+    tagline: "pour un projet ultra custom",
     description:
       "Pour une expérience plus éditoriale, plus ambitieuse ou multi-pages.",
     features: [
@@ -190,7 +201,7 @@ export const faqItems = [
   {
     question: "Est-ce un simple mini-site ?",
     answer:
-      "Non. Le press kit est pensé comme un outil de présentation stratégique : image, clarté, réassurance et passage à l’action.",
+      "Non. Le press kit est pensé comme un outil de présentation stratégique : image, clarté, crédibilité et passage à l’action.",
   },
   {
     question: "Puis-je faire évoluer le contenu plus tard ?",
@@ -249,7 +260,7 @@ export const categories: Category[] = [
     heroImage: "/dj.png",
     heroImageAlt: "Hero du press kit DJ inspiré de la référence DJ SLY'D",
     heroOverlayTitle: "Paris to international stages",
-    externalDemoUrl: "https://djslyd-presskit.vercel.app/",
+    externalDemoUrl: "https://djslyd.presskit.fr/",
   },
   {
     slug: "artiste",
@@ -503,18 +514,28 @@ export const categories: Category[] = [
     stats: [
       { label: "Usage", value: "Devis • Events • Brand dinners" },
       { label: "Style", value: "Warm editorial" },
-      { label: "Impact", value: "Image + réassurance" },
+      { label: "Impact", value: "Image + crédibilité" },
     ],
   },
 ];
 
-export const examples = [
+export const examples: Example[] = [
   {
     slug: "dj-afterhours",
     category: "DJ",
     title: "Afterhours Signal",
     description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
     href: "/presskit/dj",
+    accent: "#FF9152",
+  },
+  {
+    slug: "yoruboy-dj",
+    category: "DJ",
+    title: "Yoruboy",
+    description: "Un press kit DJ direct, premium et prêt à envoyer aux bookers.",
+    href: "/presskit/dj",
+    externalDemoUrl: "https://yoruboy-dj.presskit.fr",
+    image: "/dj-yoruboy-desktop.png",
     accent: "#FF9152",
   },
   {

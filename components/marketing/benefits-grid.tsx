@@ -9,28 +9,25 @@ const icons = [Sparkles, Link2, ShieldCheck, Gauge, Layers3, PenSquare];
 
 export function BenefitsGrid() {
   return (
-    <section className="section-divider section-wash py-20" aria-labelledby="benefits-title">
+    <section className="section-divider py-24 md:py-28" aria-labelledby="benefits-title">
       <PageShell>
         <SectionHeading
           eyebrow="Pourquoi ça fonctionne"
-          title="Un press kit pensé pour l’impact, pas juste pour faire joli."
-          description="L’objectif est simple : rendre ta présentation plus forte, plus claire et plus facile à envoyer à la bonne personne."
+          title="Un format pense pour rassurer vite et donner envie d'aller plus loin."
+          description="Chaque detail sert la meme chose : mieux presenter, mieux projeter et mieux convertir."
           id="benefits-title"
         />
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid gap-x-8 gap-y-8 md:grid-cols-2 xl:grid-cols-3">
           {benefits.map((benefit, index) => {
             const Icon = icons[index];
             return (
               <Reveal key={benefit.title} delay={index * 0.05}>
-                <article className="panel-premium group h-full rounded-[1.75rem] p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6 transition duration-300 group-hover:border-white/16 group-hover:bg-white/10">
-                    <Icon className="h-5 w-5 text-white" />
+                <article className="border-l border-white/10 pl-5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/[0.05] text-white/[0.88]">
+                    <Icon className="h-4.5 w-4.5" />
                   </div>
-                  <p className="mt-5 text-[11px] uppercase tracking-[0.24em] text-white/42">
-                    Valeur perçue
-                  </p>
-                  <h3 className="mt-5 text-xl font-semibold text-white">{benefit.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/64">{benefit.description}</p>
+                  <h3 className="mt-4 text-lg font-medium leading-snug text-white">{benefit.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-white/[0.64]">{benefit.description}</p>
                 </article>
               </Reveal>
             );

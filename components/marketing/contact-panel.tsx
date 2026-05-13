@@ -169,12 +169,17 @@ export function ContactPanel() {
     <section className="py-16 md:py-20" aria-labelledby="contact-panel-title">
       <PageShell className="grid gap-6 lg:grid-cols-[0.86fr_1.14fr]">
         <div className="lg:pr-6">
-          <SectionHeading
-            id="contact-panel-title"
-            eyebrow="Contact"
-            title="Un brief clair suffit pour lancer un press kit qui inspire confiance."
-            description="Tu peux partir d’une idée simple, d’un univers déjà défini ou d’un besoin urgent de présentation plus premium."
-          />
+          <div className="max-w-2xl">
+            <p id="contact-panel-title" className="text-xs font-semibold uppercase tracking-[0.24em] text-white/[0.46]">
+              Prochaine etape
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-4xl">
+              Un brief simple suffit pour lancer le bon niveau de press kit.
+            </h2>
+            <p className="mt-4 text-base leading-7 text-white/[0.68]">
+              Tu remplis l’essentiel, on clarifie rapidement le besoin, puis on te guide vers la bonne formule et la bonne direction.
+            </p>
+          </div>
           <div className="mt-8 grid gap-3">
             <div className="flex items-center gap-3 rounded-2xl bg-white/[0.03] px-4 py-3 text-sm text-white/72">
               <Mail className="h-4 w-4 text-white/54" aria-hidden="true" />
@@ -186,7 +191,7 @@ export function ContactPanel() {
             </div>
             <div className="flex items-center gap-3 rounded-2xl bg-white/[0.03] px-4 py-3 text-sm text-white/72">
               <Sparkles className="h-4 w-4 text-white/54" aria-hidden="true" />
-              Réponse rapide, cadrage simple, rendu premium.
+              Reponse rapide, brief simple, accompagnement clair.
             </div>
           </div>
           <div className="mt-8 rounded-[1.8rem] bg-white/[0.03] p-5">
@@ -412,7 +417,7 @@ export function ContactPanel() {
                 disabled={isSubmitting}
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition duration-300 hover:bg-[#f2f2f2] disabled:cursor-not-allowed disabled:opacity-65"
               >
-                {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}
+                {isSubmitting ? "Envoi en cours..." : "Recevoir un retour rapide"}
               </button>
             </div>
           </form>

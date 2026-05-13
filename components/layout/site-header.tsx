@@ -45,7 +45,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 px-3 pt-3 md:px-5">
       <div
         className={cn(
-          "mx-auto max-w-8xl rounded-[1.7rem] bg-[#0b0e14]/84 shadow-[0_24px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl transition-all duration-300",
+          "mx-auto max-w-8xl rounded-[1.7rem] border border-white/[0.08] bg-[#0b0e14]/[0.82] shadow-[0_24px_70px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-all duration-300",
           isCompact ? "rounded-[1.35rem]" : "rounded-[1.7rem]",
         )}
       >
@@ -57,7 +57,7 @@ export function SiteHeader() {
         >
           <Link
             href="/"
-            className="min-w-0 text-[9px] font-semibold uppercase tracking-[0.14em] text-white md:text-sm md:tracking-[0.28em]"
+            className="min-w-0 text-[9px] font-semibold uppercase tracking-[0.14em] text-white transition hover:text-white/[0.82] md:text-sm md:tracking-[0.28em]"
           >
             <span className="md:hidden">Press Kit For You</span>
             <span className="hidden md:inline">{siteConfig.name}</span>
@@ -68,7 +68,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-white/72 transition hover:text-white"
+                className="text-sm font-medium text-white/[0.68] transition hover:text-white"
               >
                 {item.label}
               </Link>
@@ -89,7 +89,7 @@ export function SiteHeader() {
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((open) => !open)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-white transition hover:bg-white/8 md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-white transition hover:bg-white/[0.08] md:hidden"
             >
               <motion.div
                 key={isOpen ? "close" : "open"}
@@ -136,7 +136,7 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block rounded-2xl border border-transparent px-3 py-3 text-sm text-white/78 transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+                        className="block rounded-2xl border border-transparent px-3 py-3 text-sm text-white/[0.78] transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
                       >
                         {item.label}
                       </Link>

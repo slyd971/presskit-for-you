@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { categories } from "@/content/site";
 import { CategoryContent } from "@/components/marketing/category-content";
 import { CategoryHero } from "@/components/marketing/category-hero";
+import { createPageMetadata } from "@/lib/seo";
 
 type CategoryPageProps = {
   params: Promise<{ slug: string }>;
@@ -22,8 +23,16 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   return {
-    title: category.name,
-    description: category.description,
+    ...createPageMetadata({
+      title: category.name,
+      description: category.description,
+      path: `presskit/${category.slug}`,
+      keywords: [
+        category.name.toLowerCase(),
+        `creation ${category.name.toLowerCase()}`,
+        "press kit digital premium",
+      ],
+    }),
   };
 }
 

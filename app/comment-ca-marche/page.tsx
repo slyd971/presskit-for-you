@@ -3,42 +3,30 @@ import type { Metadata } from "next";
 import { ProcessTimeline } from "@/components/marketing/process-timeline";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { PageShell } from "@/components/layout/page-shell";
-import { Badge } from "@/components/ui/badge";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Comment ça marche",
-  description: "Découvre le process de création d’un press kit digital premium, du brief à la livraison.",
-};
+  description: "Decouvre le process de creation d un press kit digital premium, du brief a la livraison, avec une methode simple et rapide.",
+  path: "comment-ca-marche",
+  keywords: ["process creation press kit", "comment creer un press kit digital", "methode press kit premium"],
+});
 
 export default function ProcessPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
-        <PageShell className="max-w-4xl">
-          <Badge>Méthode</Badge>
-          <h1 className="mt-6 text-5xl font-semibold tracking-tighter2 text-white md:text-7xl">
-            Un process simple pour livrer un rendu premium sans friction.
+      <section className="relative overflow-hidden pt-16 pb-6 md:pt-18 md:pb-8">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(255,145,82,0.12),transparent_22%),radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.05),transparent_18%)]" />
+        <PageShell className="relative max-w-4xl">
+          <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">
+            Comment ça marche
           </h1>
-          <p className="mt-6 text-lg leading-8 text-white/70">
-            L’objectif n’est pas de compliquer le projet, mais de cadrer vite, bien, puis de
-            traduire ton image dans une expérience digitale claire, belle et utile.
+          <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.68] md:text-lg">
+            Un déroulé simple pour cadrer vite, construire la bonne direction et mettre ton press kit en ligne sans friction.
           </p>
         </PageShell>
       </section>
-      <ProcessTimeline />
-      <section className="pb-10">
-        <PageShell className="grid gap-5 lg:grid-cols-3">
-          {[
-            "Clarifier ce que tu veux montrer",
-            "Choisir la bonne hiérarchie de contenu",
-            "Créer une direction visuelle qui renforce la valeur perçue",
-          ].map((item) => (
-            <div key={item} className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-6 text-white/78">
-              {item}
-            </div>
-          ))}
-        </PageShell>
-      </section>
+      <ProcessTimeline showHeading={false} />
       <FinalCta />
     </>
   );
