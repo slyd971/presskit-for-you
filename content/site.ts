@@ -260,7 +260,7 @@ export const categories: Category[] = [
     heroImage: "/dj.png",
     heroImageAlt: "Hero du press kit DJ inspiré de la référence DJ SLY'D",
     heroOverlayTitle: "Paris to international stages",
-    externalDemoUrl: "https://djslyd.presskit.fr/",
+    externalDemoUrl: "https://djslyd.presskit.fr",
   },
   {
     slug: "artiste",
@@ -526,6 +526,7 @@ export const examples: Example[] = [
     title: "Afterhours Signal",
     description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
     href: "/presskit/dj",
+    externalDemoUrl: "https://djslyd.presskit.fr",
     accent: "#FF9152",
   },
   {
