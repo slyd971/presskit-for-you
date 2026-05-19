@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { categories } from "@/content/site";
+import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
@@ -11,7 +12,23 @@ import { cn } from "@/lib/utils";
 
 export function CategoriesGrid() {
   const displayCategories = categories.filter((category) => category.slug !== "chef");
+  const filterCategories = displayCategories.map((category) =>
+    category.slug === "coach-sportif" ? { ...category, shortName: "Coach Momar" } : category,
+  );
   const categoryCards = displayCategories.flatMap((category) => {
+    if (category.slug === "coach-sportif") {
+      return [
+        {
+          ...category,
+          name: "Coach Momar",
+          shortName: "Coach Momar",
+          description: "Une vitrine coaching claire, crédible et orientée prise de contact.",
+          externalDemoUrl: "https://coach-momar.vercel.app/",
+          filterSlug: category.slug,
+        },
+      ];
+    }
+
     if (category.slug !== "dj") {
       return [{ ...category, filterSlug: category.slug }];
     }
@@ -39,19 +56,11 @@ export function CategoriesGrid() {
         : categoryCards.filter((category) => category.filterSlug === activeCategory),
     [activeCategory, categoryCards],
   );
-  const badges: Record<string, string> = {
-    dj: "Booking",
-    "dj-yoruboy": "Exemple live",
-    artiste: "Éditorial",
-    "coach-sportif": "Conversion",
-    "make-up-artist": "Beauty",
-    photographe: "Portfolio",
-  };
   const cardDescriptions: Record<string, string> = {
     dj: "Un lien clair pour montrer ton univers, tes médias et ton contact booking.",
     "dj-yoruboy": "Exemple Yoruboy : une vitrine DJ premium, directe et prête à envoyer aux bookers.",
     artiste: "Une vitrine élégante pour poser ton image, tes sorties et tes demandes de collab.",
-    "coach-sportif": "Une présentation nette pour rendre ton offre plus crédible et plus facile à choisir.",
+    "coach-sportif": "Exemple Coach Momar : une vitrine coaching claire, crédible et prête à partager.",
     "make-up-artist": "Un portfolio premium pour valoriser tes looks, tes prestations et tes demandes de booking.",
     photographe: "Un aperçu visuel fort pour présenter ton style, tes formats et tes projets.",
   };
@@ -64,7 +73,7 @@ export function CategoriesGrid() {
   };
   const desktopPreviewImages: Record<string, string> = {
     "dj-yoruboy": "/dj-yoruboy-desktop.png",
-    "coach-sportif": "/coach.png",
+    "coach-sportif": "/gallery-previews/coach-momar.png",
   };
   const demoLinks: Record<string, string> = Object.fromEntries(
     categoryCards
@@ -75,6 +84,7 @@ export function CategoriesGrid() {
     dj: "h-[124%] -translate-y-[13%] object-cover",
     "dj-yoruboy": "h-[124%] -translate-y-[13%] object-cover",
     artiste: "h-[118%] -translate-y-[9%] object-cover",
+    "coach-sportif": "h-full object-cover",
     "make-up-artist": "h-[122%] -translate-y-[11%] object-cover",
     photographe: "h-[122%] -translate-y-[11%] object-cover",
   };
@@ -101,7 +111,7 @@ export function CategoriesGrid() {
           >
             Tous les métiers
           </button>
-          {displayCategories.map((category) => (
+          {filterCategories.map((category) => (
             <button
               key={category.slug}
               type="button"
@@ -126,11 +136,6 @@ export function CategoriesGrid() {
                 rel={demoLinks[category.slug] ? "noreferrer" : undefined}
                 className="panel-premium group flex h-full min-h-[31.5rem] flex-col overflow-visible rounded-[1.9rem] p-5"
               >
-                <div className="mb-4 flex justify-end">
-                  <span className="rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/[0.62]">
-                    {badges[category.slug] ?? "Sur mesure"}
-                  </span>
-                </div>
                 {category.heroImage ? (
                   <div className="relative h-56 rounded-[1.5rem]">
                     <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-25 blur-2xl`} />
@@ -201,6 +206,11 @@ export function CategoriesGrid() {
               </Link>
             </Reveal>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Button href="/galerie" variant="secondary">
+            Voir tous les exemples
+          </Button>
         </div>
       </PageShell>
     </section>

@@ -30,7 +30,7 @@ export function ExamplesGalleryGrid() {
     Artiste: "Editorial premium",
     "Coach sportif": "Offre claire",
     Photographe: "Portfolio premium",
-    "Make up artist": "Image haut de gamme",
+    "Make-up artist": "Image haut de gamme",
   };
 
   return (
@@ -98,10 +98,6 @@ export function ExamplesGalleryGrid() {
                         Le plus demande
                       </span>
                     ) : null}
-                  </div>
-                  <div className="absolute inset-x-4 bottom-4">
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-white/60">{example.category}</p>
-                    <p className="mt-2 text-xl font-semibold text-white">{example.title}</p>
                   </div>
                 </div>
                 <p className="mt-5 text-xs uppercase tracking-[0.28em] text-white/44">{example.category}</p>
