@@ -11,10 +11,10 @@ export function FinalCta() {
           <div className="pointer-events-none absolute -right-20 top-8 h-56 w-56 rounded-full bg-[#ff9152]/20 blur-3xl" />
           <p className="relative text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.54]">Passer à l’action</p>
           <h2 id="final-cta-title" className="relative mt-5 max-w-3xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-5xl">
-            Un press kit digital premium pour mieux te présenter, mieux rassurer et mieux convertir.
+            Une vitrine professionnelle conçue pour mettre en valeur votre activité.
           </h2>
           <p className="relative mt-6 max-w-2xl text-base leading-8 text-white/[0.72]">
-            Si tu veux une présentation plus nette, plus actuelle et plus crédible qu’un simple PDF ou une page improvisée, on peut lancer une version pensée pour ton activité.
+            Le format press kit permet de réunir vos contenus, vos références et votre contact dans un site premium plus clair qu’un profil Instagram, un Linktree ou un PDF.
           </p>
           <div className="relative mt-10 flex flex-col gap-3 sm:flex-row">
             <Button href="/contact" className="px-7 py-4 text-[15px]">{siteConfig.ctas.launch}</Button>

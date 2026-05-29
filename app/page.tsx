@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 
-import { BenefitsGrid } from "@/components/marketing/benefits-grid";
 import { CategoriesGrid } from "@/components/marketing/categories-grid";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { Hero } from "@/components/marketing/hero";
+import {
+  ComparisonSection,
+  KpiBenefits,
+  ProblemSection,
+} from "@/components/marketing/home-conversion-sections";
 import { PricingTable } from "@/components/marketing/pricing-table";
 import { ProcessTimeline } from "@/components/marketing/process-timeline";
 import { SocialProof } from "@/components/marketing/social-proof";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Press kits digitaux premium pour artistes, DJs et independants",
+  title: "Une vitrine premium en un lien pour artistes, créateurs et indépendants",
   description:
-    "Creation de press kits digitaux premium pour artistes, DJs, photographes, make-up artists et independants qui veulent une presentation claire et orientee conversion.",
+    "Présentez votre activité, vos contenus et vos références dans une expérience premium plus claire qu'Instagram, plus impactante qu'un PDF et prête à partager.",
   keywords: [
     "press kit digital",
     "creation press kit artiste",
@@ -27,7 +31,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <BenefitsGrid />
+      <KpiBenefits />
+      <ProblemSection />
+      <ComparisonSection />
       <CategoriesGrid />
       <PricingTable variant="highlight" />
       <ProcessTimeline />

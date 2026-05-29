@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
 
 import { categories } from "@/content/site";
 import { Button } from "@/components/ui/button";
@@ -11,78 +10,61 @@ import { PageShell } from "@/components/layout/page-shell";
 import { cn } from "@/lib/utils";
 
 export function CategoriesGrid() {
-  const displayCategories = categories.filter((category) => category.slug !== "chef");
-  const filterCategories = displayCategories.map((category) =>
-    category.slug === "coach-sportif" ? { ...category, shortName: "Coach Momar" } : category,
-  );
-  const categoryCards = displayCategories.flatMap((category) => {
-    if (category.slug === "coach-sportif") {
-      return [
-        {
-          ...category,
-          name: "Coach Momar",
-          shortName: "Coach Momar",
-          description: "Une vitrine coaching claire, crédible et orientée prise de contact.",
-          externalDemoUrl: "https://coach-momar.vercel.app/",
-          filterSlug: category.slug,
-        },
-      ];
-    }
-
-    if (category.slug !== "dj") {
-      return [{ ...category, filterSlug: category.slug }];
-    }
-
-    return [
-      { ...category, filterSlug: category.slug },
-      {
-        ...category,
-        slug: "dj-yoruboy",
-        name: "Yoruboy DJ",
-        shortName: "Yoruboy",
-        description: "Une vitrine DJ premium, directe et prête à envoyer aux bookers.",
-        heroImage: "/dj-yoruboy-desktop.png",
-        heroImageAlt: "Aperçu desktop du press kit DJ Yoruboy",
-        externalDemoUrl: "https://yoruboy-dj.presskit.fr",
-        filterSlug: "dj",
-      },
-    ];
-  });
-  const [activeCategory, setActiveCategory] = useState("all");
-  const filteredCategories = useMemo(
-    () =>
-      activeCategory === "all"
-        ? categoryCards
-        : categoryCards.filter((category) => category.filterSlug === activeCategory),
-    [activeCategory, categoryCards],
-  );
-  const cardDescriptions: Record<string, string> = {
-    dj: "Un lien clair pour montrer ton univers, tes médias et ton contact booking.",
-    "dj-yoruboy": "Exemple Yoruboy : une vitrine DJ premium, directe et prête à envoyer aux bookers.",
-    artiste: "Une vitrine élégante pour poser ton image, tes sorties et tes demandes de collab.",
-    "coach-sportif": "Exemple Coach Momar : une vitrine coaching claire, crédible et prête à partager.",
-    "make-up-artist": "Un portfolio premium pour valoriser tes looks, tes prestations et tes demandes de booking.",
-    photographe: "Un aperçu visuel fort pour présenter ton style, tes formats et tes projets.",
-  };
+  const categoryBySlug = Object.fromEntries(categories.map((category) => [category.slug, category]));
+  const categoryCards = [
+    {
+      ...categoryBySlug.dj,
+      shortName: "DJ",
+      exampleName: "DJ SLY'D",
+      description: "Une vitrine DJ premium pour présenter l'univers, les médias et le contact booking.",
+      mobileImage: "/mobile-dj.jpg",
+      externalDemoUrl: "https://djslyd.presskit.fr",
+    },
+    {
+      ...categoryBySlug.artiste,
+      shortName: "Artiste",
+      exampleName: "SLY'D",
+      description: "Une présence éditoriale pour valoriser les sorties, les contenus et les demandes de collaboration.",
+      mobileImage: "/mobile.artist.png",
+      externalDemoUrl: "https://artist-presskit.vercel.app/",
+    },
+    {
+      ...categoryBySlug.photographe,
+      shortName: "Photographe",
+      exampleName: "Lokko",
+      description: "Un portfolio premium pour montrer un regard, des formats et des références en quelques secondes.",
+      mobileImage: "/mobile-photographe.jpg",
+      externalDemoUrl: "https://lokko-tv.vercel.app/",
+    },
+    {
+      ...categoryBySlug["coach-sportif"],
+      shortName: "Coach",
+      exampleName: "Coach Momar",
+      description: "Une vitrine claire pour expliquer une méthode, rassurer et faciliter la prise de contact.",
+      heroImage: "/gallery-previews/coach-momar.png",
+      mobileImage: "/gallery-previews/coach-momar.png",
+      externalDemoUrl: "https://coach-momar.vercel.app/",
+    },
+    {
+      ...categoryBySlug["make-up-artist"],
+      shortName: "Make-up Artist",
+      exampleName: "Ishma",
+      description: "Un portfolio premium pour présenter des looks, des prestations et une signature visuelle.",
+      mobileImage: "/mobile-makeupartist.jpg",
+      externalDemoUrl: "https://ishma-makeupartist.vercel.app/",
+    },
+  ];
   const mobilePreviewImages: Record<string, string> = {
     dj: "/mobile-dj.jpg",
-    "dj-yoruboy": "/mobile-dj-ypruboy.jpg",
     artiste: "/mobile.artist.png",
     "make-up-artist": "/mobile-makeupartist.jpg",
     photographe: "/mobile-photographe.jpg",
   };
   const desktopPreviewImages: Record<string, string> = {
-    "dj-yoruboy": "/dj-yoruboy-desktop.png",
     "coach-sportif": "/gallery-previews/coach-momar.png",
   };
-  const demoLinks: Record<string, string> = Object.fromEntries(
-    categoryCards
-      .filter((category) => category.externalDemoUrl)
-      .map((category) => [category.slug, category.externalDemoUrl as string]),
-  );
   const mobileCropClasses: Record<string, string> = {
     dj: "h-[124%] -translate-y-[13%] object-cover",
-    "dj-yoruboy": "h-[124%] -translate-y-[13%] object-cover",
     artiste: "h-[118%] -translate-y-[9%] object-cover",
     "coach-sportif": "h-full object-cover",
     "make-up-artist": "h-[122%] -translate-y-[11%] object-cover",
@@ -98,42 +80,13 @@ export function CategoriesGrid() {
           description="Chaque univers a ses codes, ses contenus et ses déclencheurs de confiance. Le site s’adapte au métier, pas l’inverse."
           id="categories-title"
         />
-        <div className="mt-10 flex flex-wrap gap-2.5">
-          <button
-            type="button"
-            onClick={() => setActiveCategory("all")}
-            className={cn(
-              "rounded-full border px-4 py-2 text-sm font-medium transition duration-300",
-              activeCategory === "all"
-                ? "border-white/[0.24] bg-white text-ink shadow-[0_18px_48px_rgba(255,255,255,0.14)]"
-                : "border-white/10 bg-white/[0.045] text-white/[0.68] hover:border-white/[0.18] hover:bg-white/[0.08] hover:text-white",
-            )}
-          >
-            Tous les métiers
-          </button>
-          {filterCategories.map((category) => (
-            <button
-              key={category.slug}
-              type="button"
-              onClick={() => setActiveCategory(category.slug)}
-              className={cn(
-                "rounded-full border px-4 py-2 text-sm font-medium transition duration-300",
-                activeCategory === category.slug
-                  ? "border-white/[0.24] bg-white text-ink shadow-[0_18px_48px_rgba(255,255,255,0.14)]"
-                  : "border-white/10 bg-white/[0.045] text-white/[0.68] hover:border-white/[0.18] hover:bg-white/[0.08] hover:text-white",
-              )}
-            >
-              {category.shortName}
-            </button>
-          ))}
-        </div>
         <div className="mt-14 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">
-          {filteredCategories.map((category, index) => (
+          {categoryCards.map((category, index) => (
             <Reveal key={category.slug} delay={index * 0.06}>
               <Link
-                href={demoLinks[category.slug] ?? `/presskit/${category.slug}`}
-                target={demoLinks[category.slug] ? "_blank" : undefined}
-                rel={demoLinks[category.slug] ? "noreferrer" : undefined}
+                href={category.externalDemoUrl ?? `/presskit/${category.slug}`}
+                target={category.externalDemoUrl ? "_blank" : undefined}
+                rel={category.externalDemoUrl ? "noreferrer" : undefined}
                 className="panel-premium group flex h-full min-h-[31.5rem] flex-col overflow-visible rounded-[1.9rem] p-5"
               >
                 {category.heroImage ? (
@@ -170,6 +123,7 @@ export function CategoriesGrid() {
                           <div className="absolute left-1/2 top-1.5 z-20 h-2.5 w-8 -translate-x-1/2 rounded-full bg-[#050609]" />
                           <img
                             src={
+                              category.mobileImage ??
                               mobilePreviewImages[category.slug] ??
                               desktopPreviewImages[category.slug] ??
                               category.previewImage ??
@@ -196,11 +150,14 @@ export function CategoriesGrid() {
                   <div className={`h-48 rounded-[1.5rem] bg-gradient-to-br ${category.gradient} ring-1 ring-inset ring-white/10`} />
                 )}
                 <h3 className="mt-5 text-2xl font-semibold leading-tight text-white">{category.shortName}</h3>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/[0.44]">
+                  Exemple : {category.exampleName}
+                </p>
                 <p className="mt-3 flex-1 text-sm leading-6 text-white/[0.66]">
-                  {cardDescriptions[category.slug] ?? category.description}
+                  {category.description}
                 </p>
                 <div className="mt-6 flex items-center justify-between text-sm font-medium text-white/80">
-                  <span>{demoLinks[category.slug] ? "Voir l’exemple live" : "Découvrir ce format"}</span>
+                  <span>Voir l’exemple live</span>
                   <span className="transition group-hover:translate-x-1">→</span>
                 </div>
               </Link>

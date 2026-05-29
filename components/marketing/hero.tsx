@@ -1,4 +1,4 @@
-import { siteConfig, heroStats, categories } from "@/content/site";
+import { categories } from "@/content/site";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
@@ -13,43 +13,35 @@ export function Hero() {
       <div className="absolute left-[-14%] top-16 h-[30rem] w-[30rem] rounded-full bg-[#ff9152]/10 blur-3xl" />
       <div className="absolute right-[-2%] top-6 h-[34rem] w-[34rem] rounded-full bg-[#f4c26b]/[0.075] blur-3xl" />
       <div className="absolute right-[16%] top-24 h-56 w-56 rounded-full bg-white/[0.055] blur-3xl" />
-      <PageShell className="relative grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
+      <PageShell className="relative grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
         <Reveal>
-          <div className="max-w-[43rem] pt-0">
+          <div className="max-w-[42rem] pt-0">
             <Badge className="border-white/[0.14] bg-white/[0.075] text-white/[0.82] shadow-[0_14px_50px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.1)]">
-              Press kits digitaux premium
+              ✨ Un simple lien. Toute votre activité.
             </Badge>
-            <h1 id="hero-title" className="mt-5 max-w-[38rem] text-4xl font-semibold leading-[0.94] tracking-tighter2 text-white md:text-[3.75rem] lg:text-[4.2rem]">
-              <span className="block">Présente ton univers</span>
-              <span className="block text-white/[0.92]">comme une vraie marque.</span>
+            <h1 id="hero-title" className="mt-5 max-w-[39rem] text-4xl font-semibold leading-[0.94] tracking-tighter2 text-white md:text-[3.75rem] lg:text-[4.28rem]">
+              <span className="block">Plus pro qu&apos;Instagram.</span>
+              <span className="block text-white/[0.92]">Plus impactant qu&apos;un PDF.</span>
             </h1>
             <p className="mt-5 max-w-[36rem] text-base leading-7 text-white/[0.72] md:text-lg md:leading-8">
-              Des press kits premium pour artistes, talents et independants qui veulent inspirer confiance plus vite, mieux vendre leur image et ouvrir plus d'opportunites.
+              Présentez votre activité, vos réalisations, vos contenus et vos références dans une expérience premium pensée pour convaincre en quelques secondes.
             </p>
-            <div className="mt-6 grid gap-2.5 sm:grid-cols-3">
-              {heroStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="panel-premium rounded-[1.15rem] border-white/[0.14] p-3.5 shadow-[0_22px_70px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.08)] hover:translate-y-0"
-                >
-                  <p className="text-xl font-semibold leading-none text-white md:text-2xl">{stat.value}</p>
-                  <p className="mt-2 text-xs leading-5 text-white/[0.66]">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+            <p className="mt-4 max-w-[34rem] text-sm leading-7 text-white/[0.58] md:text-base">
+              Pensé pour les artistes, créateurs, entrepreneurs et organisateurs qui vivent de leur image.
+            </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button
-                href="/contact"
+                href={featured.externalDemoUrl ?? `/presskit/${featured.slug}`}
                 className="w-full px-7 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),0_10px_40px_rgba(255,145,82,0.14),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
               >
-                {siteConfig.ctas.primary}
+                Voir un exemple
               </Button>
               <Button
-                href="/#categories-title"
+                href="/contact"
                 variant="secondary"
                 className="w-full px-6 py-4 text-[15px] text-white/[0.88] sm:w-auto"
               >
-                Voir des exemples
+                Lancer mon projet
               </Button>
             </div>
           </div>
@@ -58,12 +50,12 @@ export function Hero() {
         <Reveal delay={0.1}>
           <div className="relative isolate pt-0">
             <div className="absolute -inset-10 rounded-[3.5rem] bg-[radial-gradient(circle_at_52%_38%,rgba(255,145,82,0.22),transparent_38%),radial-gradient(circle_at_70%_62%,rgba(255,255,255,0.12),transparent_32%)] blur-3xl" />
-            <div className="relative min-h-[25rem] sm:min-h-[28rem] lg:min-h-[32rem]">
+            <div className="relative min-h-[27rem] sm:min-h-[31rem] lg:min-h-[35rem]">
               <a
                 href={featured.externalDemoUrl ?? `/presskit/${featured.slug}`}
                 target={featured.externalDemoUrl ? "_blank" : undefined}
                 rel={featured.externalDemoUrl ? "noreferrer" : undefined}
-                className="group absolute left-0 top-0 block w-[92%] sm:w-[86%]"
+                className="group absolute left-0 top-0 block w-[96%] sm:w-[90%]"
                 aria-label={`${featured.name} - aperçu desktop`}
               >
                 <div className="hero-device-float relative transition duration-500 group-hover:-translate-y-1">
@@ -89,7 +81,7 @@ export function Hero() {
                 href={featured.externalDemoUrl ?? `/presskit/${featured.slug}`}
                 target={featured.externalDemoUrl ? "_blank" : undefined}
                 rel={featured.externalDemoUrl ? "noreferrer" : undefined}
-                className="group absolute bottom-0 right-2 block w-[35%] min-w-[8.75rem] max-w-[13.25rem] sm:right-0 sm:w-[30%] lg:w-[28%]"
+                className="group absolute bottom-0 right-0 block w-[38%] min-w-[9.25rem] max-w-[14.5rem] sm:w-[31%] lg:w-[29%]"
                 aria-label={`${featured.name} - aperçu mobile`}
               >
                 <div className="hero-device-float-slow relative rounded-[2.2rem] border border-white/[0.2] bg-[linear-gradient(145deg,#353b4d,#07090e_38%,#171b25)] p-1.5 shadow-[0_36px_110px_rgba(0,0,0,0.58),inset_0_1px_0_rgba(255,255,255,0.18)] transition duration-500 group-hover:-translate-y-1 group-hover:border-white/[0.3] md:rounded-[2.45rem] md:p-2">
