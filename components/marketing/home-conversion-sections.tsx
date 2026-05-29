@@ -4,16 +4,16 @@ import { PageShell } from "@/components/layout/page-shell";
 
 const comparisonRows = [
   {
-    current: "Un profil social disperse l'information dans les posts, les stories et la bio.",
-    presskit: "Un press kit donne le contexte, les médias et le contact dans un ordre pensé pour décider vite.",
+    current: "Un PDF présente quelques infos, mais reste statique, vite daté et peu engageant sur mobile.",
+    presskit: "Un site vitrine met en scène votre univers, vos médias et vos preuves avec le bon niveau d'image.",
   },
   {
-    current: "Un PDF rassure peu, circule mal sur mobile et devient vite obsolète.",
-    presskit: "Une page vivante reste partageable, lisible et alignée avec votre image actuelle.",
+    current: "Un dossier classique liste un parcours, des dates, des visuels et des contacts.",
+    presskit: "Un portfolio premium construit une perception : style, crédibilité, concept et envie de vous contacter.",
   },
   {
-    current: "Une liste de liens laisse le prospect reconstruire seul votre valeur.",
-    presskit: "Une narration courte montre le niveau, les preuves et la prochaine action.",
+    current: "Un lien PDF demande au lecteur de reconstruire seul votre valeur ou celle de votre événement.",
+    presskit: "Une page pensée pour convertir guide le regard vers l'essentiel : niveau, proposition, preuves, action.",
   },
 ];
 
@@ -31,23 +31,23 @@ export function ComparisonSection() {
           <Reveal delay={0.08}>
             <div className="border-y border-white/[0.1]">
               <div className="hidden grid-cols-2 border-b border-white/[0.1] py-4 text-[11px] font-semibold uppercase tracking-[0.22em] md:grid">
-                <span>Support classique</span>
-                <span className="text-white/[0.78]">Press kit</span>
+                <span className="text-white/[0.5]">Supports classiques</span>
+                <span className="text-white">Press kit premium</span>
               </div>
               {comparisonRows.map((row) => (
                 <div key={row.current} className="grid gap-5 border-b border-white/[0.07] py-6 last:border-b-0 md:grid-cols-2 md:gap-7">
-                  <div>
+                  <div className="md:pr-4">
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.36] md:hidden">
-                      Support classique
+                      Supports classiques
                     </p>
-                    <p className="text-sm leading-7 text-white/[0.54]">{row.current}</p>
+                    <p className="text-sm leading-7 text-white/[0.62]">{row.current}</p>
                   </div>
-                  <div className="relative border-l border-white/[0.14] pl-4 md:border-white/[0.2] md:pl-7">
-                    <span className="absolute left-0 top-1 hidden h-6 w-px bg-white md:block" aria-hidden="true" />
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.68] md:hidden">
-                      Press kit
+                  <div className="relative border-l border-white/[0.22] pl-4 md:border-white/[0.36] md:pl-7">
+                    <span className="absolute left-0 top-1 hidden h-8 w-px bg-white md:block" aria-hidden="true" />
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white md:hidden">
+                      Press kit premium
                     </p>
-                    <p className="text-[15px] font-medium leading-7 text-white md:text-base md:leading-8">{row.presskit}</p>
+                    <p className="text-[15px] font-semibold leading-7 text-white md:text-[1.05rem] md:leading-8">{row.presskit}</p>
                   </div>
                 </div>
               ))}
