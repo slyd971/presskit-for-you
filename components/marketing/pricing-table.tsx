@@ -1,5 +1,3 @@
-import { Check } from "lucide-react";
-
 import { pricingTiers } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
@@ -52,12 +50,12 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
               <div className={`pointer-events-none absolute inset-x-8 top-0 h-28 bg-gradient-to-b ${tierAccents[index]} blur-2xl transition duration-500 group-hover:opacity-100 ${index === 0 ? "opacity-100" : "opacity-60"}`} />
               <div className="relative flex items-center justify-between gap-4">
                 <h3 className="text-2xl font-semibold leading-tight text-white">{tier.name}</h3>
-                <span className={`rounded-full border px-3 py-1.5 text-xs font-semibold ${index === 0 ? "border-white/[0.2] bg-white text-ink" : "border-white/[0.12] bg-white/[0.07] text-white/70"}`}>
+                <span className="text-right text-[10px] font-semibold uppercase tracking-[0.18em] text-white/[0.42]">
                   {tier.badge}
                 </span>
               </div>
               <div className="relative mt-7">
-                <p className="text-4xl font-semibold tracking-tighter2 text-white md:text-5xl">{tier.price}</p>
+                <p className="text-4xl font-semibold tracking-tighter2 text-white md:text-[2.75rem]">{tier.price}</p>
                 <p className="mt-1.5 text-xs font-medium text-white/[0.42] tracking-wide">{tier.tagline}</p>
               </div>
               <p className="relative mt-5 text-sm leading-7 text-white/[0.7]">{tier.description}</p>
@@ -65,9 +63,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
               <ul className="relative mt-8 flex-1 space-y-4">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm text-white/[0.78]">
-                    <span className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${index === 0 ? "bg-white text-ink" : "bg-white/[0.08] text-white"}`}>
-                      <Check className="h-3.5 w-3.5" />
-                    </span>
+                    <span className="mt-[0.65rem] h-px w-5 shrink-0 bg-white/[0.28]" aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
                 ))}

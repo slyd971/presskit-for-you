@@ -148,7 +148,7 @@ export const processSteps = [
 export const pricingTiers = [
   {
     name: "Press Kit Premium",
-    price: "300 €",
+    price: "À partir de 300 €",
     tagline: "pour lancer ton image pro",
     description: "L’offre idéale pour créer un press kit clair, premium et prêt à partager.",
     features: [

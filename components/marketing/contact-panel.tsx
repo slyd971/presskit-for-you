@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, Sparkles } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useState } from "react";
 
 import {
@@ -190,7 +190,7 @@ export function ContactPanel() {
               +33 6 12 45 88 10
             </div>
             <div className="flex items-center gap-3 rounded-2xl bg-white/[0.03] px-4 py-3 text-sm text-white/72">
-              <Sparkles className="h-4 w-4 text-white/54" aria-hidden="true" />
+              <span className="h-px w-4 bg-white/30" aria-hidden="true" />
               Reponse rapide, brief simple, accompagnement clair.
             </div>
           </div>

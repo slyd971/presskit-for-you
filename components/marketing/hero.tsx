@@ -10,18 +10,16 @@ export function Hero() {
   return (
     <section className="section-wash relative overflow-hidden py-12 md:py-[4.5rem] md:pb-24" aria-labelledby="hero-title">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(255,145,82,0.24),transparent_24%),radial-gradient(circle_at_78%_26%,rgba(255,216,158,0.14),transparent_28%),radial-gradient(circle_at_64%_78%,rgba(255,255,255,0.045),transparent_24%),linear-gradient(180deg,#080a10,rgba(10,13,19,0.97))]" />
-      <div className="absolute left-[-14%] top-16 h-[30rem] w-[30rem] rounded-full bg-[#ff9152]/10 blur-3xl" />
-      <div className="absolute right-[-2%] top-6 h-[34rem] w-[34rem] rounded-full bg-[#f4c26b]/[0.075] blur-3xl" />
-      <div className="absolute right-[16%] top-24 h-56 w-56 rounded-full bg-white/[0.055] blur-3xl" />
       <PageShell className="relative grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
         <Reveal>
-          <div className="max-w-[42rem] pt-0">
+          <div className="w-full max-w-[42rem] min-w-0 pt-0">
             <Badge className="border-white/[0.14] bg-white/[0.075] text-white/[0.82] shadow-[0_14px_50px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.1)]">
-              ✨ Un simple lien. Toute votre activité.
+              Un simple lien. Toute votre activité.
             </Badge>
-            <h1 id="hero-title" className="mt-5 max-w-[39rem] text-4xl font-semibold leading-[0.94] tracking-tighter2 text-white md:text-[3.75rem] lg:text-[4.28rem]">
+            <h1 id="hero-title" className="mt-5 max-w-[39rem] break-words text-4xl font-semibold leading-[0.94] tracking-tighter2 text-white md:text-[3.75rem] lg:text-[4.28rem]">
               <span className="block">Plus pro qu&apos;Instagram.</span>
-              <span className="block text-white/[0.92]">Plus impactant qu&apos;un PDF.</span>
+              <span className="block text-white/[0.92]">Plus impactant</span>
+              <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
             </h1>
             <p className="mt-5 max-w-[36rem] text-base leading-7 text-white/[0.72] md:text-lg md:leading-8">
               Présentez votre activité, vos réalisations, vos contenus et vos références dans une expérience premium pensée pour convaincre en quelques secondes.
@@ -48,7 +46,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative isolate pt-0">
+          <div className="relative isolate min-w-0 overflow-hidden pt-0 lg:overflow-visible">
             <div className="absolute -inset-10 rounded-[3.5rem] bg-[radial-gradient(circle_at_52%_38%,rgba(255,145,82,0.22),transparent_38%),radial-gradient(circle_at_70%_62%,rgba(255,255,255,0.12),transparent_32%)] blur-3xl" />
             <div className="relative min-h-[27rem] sm:min-h-[31rem] lg:min-h-[35rem]">
               <a

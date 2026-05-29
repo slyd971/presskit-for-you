@@ -3,11 +3,7 @@ import type { Metadata } from "next";
 import { CategoriesGrid } from "@/components/marketing/categories-grid";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { Hero } from "@/components/marketing/hero";
-import {
-  ComparisonSection,
-  KpiBenefits,
-  ProblemSection,
-} from "@/components/marketing/home-conversion-sections";
+import { ComparisonSection } from "@/components/marketing/home-conversion-sections";
 import { PricingTable } from "@/components/marketing/pricing-table";
 import { ProcessTimeline } from "@/components/marketing/process-timeline";
 import { SocialProof } from "@/components/marketing/social-proof";
@@ -31,8 +27,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <KpiBenefits />
-      <ProblemSection />
       <ComparisonSection />
       <CategoriesGrid />
       <PricingTable variant="highlight" />

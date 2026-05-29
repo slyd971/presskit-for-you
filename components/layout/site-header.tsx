@@ -78,7 +78,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <Button
               href="/contact"
-              className="px-3 py-2 text-[11px] font-semibold shadow-none md:px-5 md:py-3 md:text-sm"
+              className="hidden px-3 py-2 text-[11px] font-semibold shadow-none sm:inline-flex md:px-5 md:py-3 md:text-sm"
             >
               {siteConfig.ctas.call}
             </Button>
