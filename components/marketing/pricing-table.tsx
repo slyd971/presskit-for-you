@@ -61,8 +61,8 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
         {showHeading ? (
           <SectionHeading
             eyebrow="Tarifs"
-            title="Une page press kit ou un site plus complet : vous choisissez le bon format."
-            description="Le prix dépend surtout du nombre de pages, du volume de contenu à intégrer et du niveau de personnalisation attendu."
+            title="Choisissez le niveau d’image dont votre projet a besoin."
+            description="Deux formats lisibles. Le bon dépend surtout du volume de contenu, du nombre de pages et du niveau de personnalisation."
           />
         ) : null}
         <div className={`grid overflow-hidden rounded-lg border bg-[#f7f5f0] lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-16" : "mt-0"}`}>
@@ -74,20 +74,20 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
               }`}
             >
               <div className="relative flex items-start justify-between gap-4">
-                <h3 className={`max-w-sm text-[clamp(1.9rem,3vw,3.35rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.name}</h3>
+                <h3 className={`max-w-sm text-[clamp(2.15rem,3.8vw,4.2rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.name}</h3>
                 <span className={`text-right text-[10px] font-semibold uppercase tracking-[0.18em] ${offerTone.headingMeta}`}>
                   {tier.badge}
                 </span>
               </div>
-              <div className={`relative mt-9 border-y py-7 ${offerTone.tierBorder}`}>
-                <p className={`text-[clamp(2.7rem,6vw,5.4rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
+              <div className={`relative mt-10 border-y py-8 ${offerTone.tierBorder}`}>
+                <p className={`text-[clamp(3.2rem,7vw,6.7rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
                 <p className={`mt-1.5 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
               </div>
-              <p className={`relative mt-7 max-w-xl text-sm leading-7 md:text-base md:leading-8 ${offerTone.body}`}>{tier.description}</p>
-              <ul className="relative mt-9 grid flex-1 gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                {tier.features.map((feature) => (
-                  <li key={feature} className={`flex items-start gap-3 text-sm ${offerTone.feature}`}>
-                    <span className={`mt-[0.65rem] h-px w-5 shrink-0 ${offerTone.rule}`} aria-hidden="true" />
+              <p className={`relative mt-7 max-w-lg text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
+              <ul className="relative mt-9 grid flex-1 gap-0 border-y border-[#10141d]/[0.1]">
+                {tier.features.slice(0, 5).map((feature) => (
+                  <li key={feature} className={`flex items-center gap-4 border-b border-[#10141d]/[0.08] py-3.5 text-sm last:border-b-0 ${offerTone.feature}`}>
+                    <span className={`h-px w-7 shrink-0 ${offerTone.rule}`} aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
                 ))}

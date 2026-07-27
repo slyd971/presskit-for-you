@@ -205,6 +205,59 @@ body::after {
       inset 0 1px 0 rgba(255, 255, 255, 0.065);
   }
 
+  .signature-thread {
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgba(255, 255, 255, 0.32),
+      rgba(var(--accent-warm), 0.34),
+      transparent
+    );
+    filter: drop-shadow(0 0 18px rgba(var(--accent-warm), 0.28));
+    animation: signature-thread 9s ease-in-out infinite alternate;
+  }
+
+  .case-study-card {
+    --case-accent: #ff9152;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+      radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--case-accent) 28%, transparent), transparent 32%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.028)),
+      rgba(255, 255, 255, 0.02);
+    box-shadow:
+      0 18px 58px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    transition:
+      transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 420ms ease,
+      box-shadow 420ms ease,
+      background 420ms ease;
+  }
+
+  .case-study-card::after {
+    content: "";
+    position: absolute;
+    inset: auto 1.25rem 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--case-accent) 58%, white), transparent);
+    opacity: 0.45;
+    transition: opacity 420ms ease;
+  }
+
+  .case-study-card:hover {
+    transform: translate3d(0, -0.42rem, 0);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow:
+      0 28px 90px rgba(0, 0, 0, 0.34),
+      0 0 64px color-mix(in srgb, var(--case-accent) 18%, transparent),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  }
+
+  .case-study-card:hover::after {
+    opacity: 0.9;
+  }
+
   .accent-ring {
     position: relative;
   }
@@ -336,6 +389,18 @@ svg {
   100% {
     opacity: 0.9;
     transform: translate3d(1rem, -0.65rem, 0) scale(1.03);
+  }
+}
+
+@keyframes signature-thread {
+  0% {
+    opacity: 0.36;
+    transform: translate3d(0, -1.25rem, 0) scaleY(0.92);
+  }
+
+  100% {
+    opacity: 0.72;
+    transform: translate3d(0, 1rem, 0) scaleY(1.06);
   }
 }
 

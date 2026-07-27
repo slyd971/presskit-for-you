@@ -8,12 +8,12 @@ const comparisonRows = [
     presskit: "Une page web rassemble votre bio, vos photos, vos vidéos, vos liens et votre contact dans un format agréable à consulter.",
   },
   {
-    current: "Un dossier classique liste un parcours, des dates, des visuels et des contacts.",
-    presskit: "Un portfolio bien présenté donne tout de suite une impression plus professionnelle et donne envie d’en savoir plus.",
+    current: "Un Linktree aligne des boutons. Il aide à sortir, mais ne raconte pas votre niveau.",
+    presskit: "Un press kit met vos preuves dans le bon ordre : univers, médias, chiffres, références, contact.",
   },
   {
     current: "Un lien PDF demande au lecteur de reconstruire seul votre valeur ou celle de votre événement.",
-    presskit: "Le visiteur trouve vite ce qu’il cherche, puis sait exactement comment vous contacter.",
+    presskit: "Le visiteur ressent d’abord la crédibilité, puis trouve naturellement l’action à faire.",
   },
 ];
 

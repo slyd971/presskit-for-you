@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import type { CSSProperties } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
@@ -14,6 +15,9 @@ const homeExamples = [
     category: "Artiste peintre",
     exampleName: "MelyMelow",
     description: "Un press kit artiste peintre pour exposer un univers résine, acrylique, œuvres et contact pro.",
+    context: "Artiste peintre avec un univers très visuel.",
+    objective: "Présenter œuvres, démarche et contact sans diluer l’image.",
+    result: "Une vitrine contemplative, claire et plus crédible pour les opportunités.",
     desktopImage: "/gallery-previews/home-desktop/melymelow.png",
     mobileImage: "/gallery-previews/home-mobile/melymelow.png",
     externalDemoUrl: "https://presskit.melymelow.art/",
@@ -26,6 +30,9 @@ const homeExamples = [
     category: "Chanteuse",
     exampleName: "Sherin",
     description: "Un press kit chanteuse pour annoncer une sortie, présenter les médias, les chiffres et le booking.",
+    context: "Lancement artistique avec besoin de centraliser médias et preuves.",
+    objective: "Donner envie d’écouter, comprendre et contacter rapidement.",
+    result: "Une page musicale plus structurée qu’un lien bio classique.",
     desktopImage: "/gallery-previews/home-desktop/sherin.png",
     mobileImage: "/gallery-previews/home-mobile/sherin.png",
     externalDemoUrl: "https://sherin.presskit.fr/",
@@ -38,6 +45,9 @@ const homeExamples = [
     category: "Danseur",
     exampleName: "KRIMO",
     description: "Un press kit danseur immersif pour performance, collectif, engagement social et collaborations.",
+    context: "Danseur et projet culturel à forte dimension humaine.",
+    objective: "Faire sentir l’énergie, le propos et les possibilités de collaboration.",
+    result: "Une présence plus incarnée, pensée pour convaincre au-delà d’une vidéo.",
     desktopImage: "/gallery-previews/home-desktop/krimo.png",
     mobileImage: "/gallery-previews/home-mobile/krimo.png",
     externalDemoUrl: "https://krimo-dancer.presskit.fr/",
@@ -50,6 +60,9 @@ const homeExamples = [
     category: "DJ",
     exampleName: "DJ MACK",
     description: "Un press kit DJ & MC international pour références, médias, SoundCloud et booking événementiel.",
+    context: "DJ & MC avec références internationales.",
+    objective: "Rassurer les bookers avec un support immédiatement professionnel.",
+    result: "Booking, médias et univers réunis dans un format premium.",
     desktopImage: "/gallery-previews/home-desktop/dj-mack.png",
     mobileImage: "/gallery-previews/home-mobile/dj-mack.png",
     externalDemoUrl: "https://dj-mack.presskit.fr/",
@@ -62,6 +75,9 @@ const homeExamples = [
     category: "DJ",
     exampleName: "Soyumi",
     description: "Un press kit DJ international entre énergie afro-caribéenne, open format et clubs premium.",
+    context: "DJ open format avec une signature club identifiable.",
+    objective: "Transformer l’énergie de scène en argument de booking.",
+    result: "Un lien vivant, plus simple à envoyer aux lieux et organisateurs.",
     desktopImage: "/gallery-previews/home-desktop/soyumi.png",
     mobileImage: "/gallery-previews/home-mobile/soyumi.png",
     externalDemoUrl: "https://soyumi.presskit.fr/",
@@ -74,6 +90,9 @@ const homeExamples = [
     category: "DJ",
     exampleName: "FLO",
     description: "Un press kit DJ open format pour hôtels, marques, rooftops et événements corporate.",
+    context: "Profil DJ orienté hôtels, marques et événements privés.",
+    objective: "Installer une image élégante, lisible et corporate-ready.",
+    result: "Une présentation directe qui clarifie le niveau et les références.",
     desktopImage: "/gallery-previews/home-desktop/flo.png",
     mobileImage: "/gallery-previews/home-mobile/flo.png",
     externalDemoUrl: "https://www.djfloparis.com/",
@@ -86,6 +105,9 @@ const homeExamples = [
     category: "Organisateur de soirée",
     exampleName: "La Bringue",
     description: "Un press kit organisateur de soirée pour communauté, chiffres, sponsors et partenaires.",
+    context: "Concept événementiel avec communauté et partenaires.",
+    objective: "Montrer la traction, l’ambiance et le potentiel sponsor.",
+    result: "Un dossier digital plus convaincant qu’un PDF statique.",
     desktopImage: "/gallery-previews/home-desktop/la-bringue.png",
     mobileImage: "/gallery-previews/home-mobile/la-bringue.png",
     externalDemoUrl: "https://labringue-party.vercel.app/",
@@ -98,6 +120,9 @@ const homeExamples = [
     category: "DJ",
     exampleName: "Arthur Chaps",
     description: "Un press kit DJ et directeur artistique pour culture club, références et expérience dancefloor.",
+    context: "DJ et directeur artistique avec culture club forte.",
+    objective: "Faire ressortir la crédibilité, le style et les références.",
+    result: "Un positionnement plus haut de gamme, prêt pour le booking.",
     desktopImage: "/gallery-previews/home-desktop/arthur-chaps.png",
     mobileImage: "/gallery-previews/home-mobile/arthur-chaps.png",
     externalDemoUrl: "https://arthur-chaps.presskit.fr/",
@@ -110,6 +135,9 @@ const homeExamples = [
     category: "DJ",
     exampleName: "DJ SLY'D",
     description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
+    context: "DJ avec besoin d’un lien clair pour bookers et clubs.",
+    objective: "Remplacer les envois dispersés par une page complète.",
+    result: "Un support plus net pour présenter univers, médias et contact.",
     desktopImage: "/gallery-previews/home-desktop/dj-slyd.png",
     mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
     externalDemoUrl: "https://djslyd.presskit.fr/",
@@ -139,14 +167,15 @@ export function CategoriesGrid() {
                 href={example.externalDemoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="panel-premium group flex h-full min-h-[28.5rem] flex-col overflow-visible rounded-lg p-4 md:min-h-[31.5rem] md:p-5"
+                className="case-study-card group flex h-full min-h-[36rem] flex-col overflow-visible p-4 md:min-h-[40rem] md:p-5"
+                style={{ "--case-accent": example.accent } as CSSProperties}
               >
                 <span
                   className="absolute left-4 right-4 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.22] to-transparent opacity-70 transition duration-300 group-hover:opacity-100 md:left-5 md:right-5"
                   aria-hidden="true"
                 />
-                <div className="relative h-52 md:h-56">
-                  <div className="absolute left-1/2 top-3 z-10 w-[82%] -translate-x-1/2 transition duration-500 group-hover:-translate-y-1">
+                <div className="relative h-56 md:h-64">
+                  <div className="absolute left-1/2 top-2 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[-0.4deg]">
                     <div className="overflow-hidden rounded-t-[0.9rem] border border-white/[0.16] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.1)]">
                       <div className="relative aspect-[1.58/1] overflow-hidden rounded-t-[0.62rem] bg-black">
                         <img
@@ -159,7 +188,7 @@ export function CategoriesGrid() {
                     </div>
                     <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
                   </div>
-                  <div className="absolute -bottom-4 right-3 z-20 w-[22%] min-w-[3.75rem] transition duration-500 group-hover:-translate-y-1 md:-bottom-5 md:right-4 md:w-[24%] md:min-w-[4.45rem]">
+                  <div className="absolute -bottom-4 right-2 z-20 w-[24%] min-w-[3.95rem] rotate-[4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-5 md:right-4 md:w-[25%] md:min-w-[4.65rem]">
                     <div className="relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                       <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                         <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
@@ -173,15 +202,26 @@ export function CategoriesGrid() {
                     </div>
                   </div>
                 </div>
-                <h3 className="relative mt-5 text-xl font-semibold leading-tight text-white md:text-2xl">{example.title}</h3>
-                <p className="relative mt-2 text-[0.66rem] font-semibold uppercase leading-5 tracking-[0.14em] text-white/[0.58] md:text-xs md:tracking-[0.18em]">
-                  {example.category} · Exemple : {example.exampleName}
-                </p>
-                <p className="relative mt-3 flex-1 text-sm leading-6 text-white/[0.74]">
-                  {example.description}
-                </p>
-                <div className="relative mt-6 flex items-center justify-between text-sm font-medium text-white/80">
-                  <span>Voir l’exemple live</span>
+                <div className="relative mt-7 border-y border-white/[0.1] py-5">
+                  <p className="text-[0.66rem] font-semibold uppercase leading-5 tracking-[0.16em] text-white/[0.56] md:text-xs">
+                    {example.category}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
+                </div>
+                <dl className="relative mt-5 grid flex-1 gap-4 text-sm leading-6">
+                  {[
+                    ["Contexte", example.context],
+                    ["Objectif", example.objective],
+                    ["Résultat", example.result],
+                  ].map(([label, value]) => (
+                    <div key={label} className="grid gap-1 border-b border-white/[0.075] pb-4 last:border-b-0 last:pb-0">
+                      <dt className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.42]">{label}</dt>
+                      <dd className="text-white/[0.76]">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
+                  <span>Découvrir</span>
                   <span className="transition group-hover:translate-x-1">→</span>
                 </div>
               </Link>
