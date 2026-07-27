@@ -13,28 +13,28 @@ const complementaryOptions = [
   {
     name: "Nom de domaine personnalisé",
     price: "+30 €",
-    description: "Une adresse web professionnelle à votre nom.",
+    description: "Pour partager une adresse courte et crédible, reliée à votre nom ou votre marque.",
   },
   {
     name: "Maintenance annuelle",
     price: "+60 €/an",
-    description: "Corrections mineures, mises à jour techniques et assistance sur l’année.",
+    description: "Pour garder la page en ligne, propre et corrigée si un détail technique bouge.",
   },
   {
     name: "Mise à jour de contenu",
     price: "+30 €",
-    description: "Modification ponctuelle de textes, images, vidéos ou liens.",
+    description: "Pour remplacer une photo, ajouter une date, modifier un texte ou mettre à jour vos liens.",
   },
   {
     name: "Séance photo professionnelle",
     price: "+100 €",
-    description: "Une séance photo pour obtenir des visuels de qualité professionnelle.",
+    description: "Pour créer les visuels manquants quand vos photos actuelles ne rendent pas justice au projet.",
   },
 ];
 
 export function PricingTable({ variant = "default", showHeading = true }: PricingTableProps) {
   const isHighlight = variant === "highlight";
-  const spacingClass = showHeading ? "py-24 md:py-32" : "pt-0 pb-16 md:pt-0 md:pb-20";
+  const spacingClass = showHeading ? "py-18 md:py-32" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
     title: "text-[#10141d]",
     border: "border-[#10141d]/[0.14]",
@@ -62,10 +62,10 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
           <SectionHeading
             eyebrow="Tarifs"
             title="Choisissez le niveau d’image dont votre projet a besoin."
-            description="Deux formats lisibles. Le bon dépend surtout du volume de contenu, du nombre de pages et du niveau de personnalisation."
+            description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
           />
         ) : null}
-        <div className={`grid overflow-hidden rounded-lg border bg-[#f7f5f0] lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-16" : "mt-0"}`}>
+        <div className={`grid overflow-hidden rounded-lg border bg-[#f7f5f0] lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-10 md:mt-16" : "mt-0"}`}>
           {pricingTiers.map((tier, index) => (
             <article
               key={tier.name}
@@ -83,7 +83,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
                 <p className={`text-[clamp(3.2rem,7vw,6.7rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
                 <p className={`mt-1.5 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
               </div>
-              <p className={`relative mt-7 max-w-lg text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
+              <p className={`relative mt-7 max-w-md text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
               <ul className="relative mt-9 grid flex-1 gap-0 border-y border-[#10141d]/[0.1]">
                 {tier.features.slice(0, 5).map((feature) => (
                   <li key={feature} className={`flex items-center gap-4 border-b border-[#10141d]/[0.08] py-3.5 text-sm last:border-b-0 ${offerTone.feature}`}>
@@ -106,19 +106,19 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
           <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Options</p>
-              <h3 className="mt-4 text-3xl font-semibold leading-tight tracking-tighter2 text-white md:text-4xl">
-                Les compléments possibles, sans page tarif séparée.
+              <h3 className="mt-4 max-w-lg text-3xl font-semibold leading-tight tracking-tighter2 text-white md:text-4xl">
+                À ajouter seulement si votre projet en a besoin.
               </h3>
               <p className="mt-4 text-sm leading-7 text-white/[0.66]">
-                On ajoute uniquement ce qui sert vraiment au projet : domaine, suivi, contenus ou visuels.
+                Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid border-t border-white/[0.12] md:grid-cols-2 md:border-l md:border-t-0">
               {complementaryOptions.map((option) => (
-                <article key={option.name} className="motion-line border-t border-white/[0.12] pt-4">
-                  <div className="flex items-start justify-between gap-4">
+                <article key={option.name} className="motion-line border-b border-white/[0.09] py-5 md:border-r md:px-5 md:last:border-r">
+                  <div className="flex items-baseline justify-between gap-4">
                     <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
-                    <span className="shrink-0 text-sm font-semibold text-white/[0.86]">{option.price}</span>
+                    <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
                 </article>

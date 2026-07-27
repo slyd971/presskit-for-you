@@ -144,11 +144,25 @@ const homeExamples = [
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
   },
+  {
+    slug: "yoruboy",
+    title: "Yoruboy",
+    category: "DJ",
+    exampleName: "Yoruboy",
+    description: "Un press kit DJ direct, premium et prêt à envoyer aux bookers.",
+    context: "DJ avec besoin d’un support simple à partager.",
+    objective: "Installer un lien plus propre qu’un envoi de médias dispersés.",
+    result: "Une présentation claire pour montrer univers, niveau et contact.",
+    desktopImage: "/dj-yoruboy-desktop.png",
+    externalDemoUrl: "https://yoruboy-dj.presskit.fr",
+    accent: "#FF9152",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+  },
 ];
 
 export function CategoriesGrid() {
   return (
-    <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-24 md:py-28" aria-labelledby="categories-title">
+    <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-18 md:py-28" aria-labelledby="categories-title">
       <PageShell>
         <SectionHeading
           eyebrow="Exemples"
@@ -156,8 +170,8 @@ export function CategoriesGrid() {
           description="Chaque exemple montre un rendu réel, avec ses images, ses sections, ses boutons de contact et son adaptation mobile."
           id="categories-title"
         />
-        <div className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-2 xl:grid-cols-3 [&::-webkit-scrollbar]:hidden">
-          {homeExamples.slice(0, 9).map((example, index) => (
+        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-2 [&::-webkit-scrollbar]:hidden">
+          {homeExamples.slice(0, 10).map((example, index) => (
             <Reveal
               key={example.slug}
               delay={index * 0.06}
@@ -174,39 +188,46 @@ export function CategoriesGrid() {
                   className="absolute left-4 right-4 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.22] to-transparent opacity-70 transition duration-300 group-hover:opacity-100 md:left-5 md:right-5"
                   aria-hidden="true"
                 />
-                <div className="relative h-56 md:h-64">
+                <div className="relative h-60 overflow-hidden pb-8 md:h-72">
                   <div className="absolute left-1/2 top-2 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[-0.4deg]">
                     <div className="overflow-hidden rounded-t-[0.9rem] border border-white/[0.16] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.1)]">
                       <div className="relative aspect-[1.58/1] overflow-hidden rounded-t-[0.62rem] bg-black">
                         <img
                           src={example.desktopImage}
                           alt={`${example.title} en version desktop`}
-                          className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.025]"
+                          className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-[1.025]"
                         />
                         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.16),transparent_24%,transparent_72%,rgba(255,255,255,0.06))]" />
                       </div>
                     </div>
                     <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
                   </div>
-                  <div className="absolute -bottom-4 right-2 z-20 w-[24%] min-w-[3.95rem] rotate-[4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-5 md:right-4 md:w-[25%] md:min-w-[4.65rem]">
-                    <div className="relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
-                      <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
-                        <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
-                        <img
-                          src={example.mobileImage}
-                          alt={`${example.title} en version mobile`}
-                          className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]"
-                        />
-                        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14),transparent_28%,transparent_76%,rgba(255,255,255,0.055))]" />
+                  {example.mobileImage ? (
+                    <div className="absolute bottom-6 right-2 z-20 w-[23%] min-w-[3.7rem] rotate-[4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:bottom-7 md:right-4 md:w-[24%] md:min-w-[4.35rem]">
+                      <div className="relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
+                        <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
+                          <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
+                          <img
+                            src={example.mobileImage}
+                            alt={`${example.title} en version mobile`}
+                            className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-[1.03]"
+                          />
+                          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14),transparent_28%,transparent_76%,rgba(255,255,255,0.055))]" />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  ) : null}
                 </div>
-                <div className="relative mt-7 border-y border-white/[0.1] py-5">
+                <div className="relative mt-4 border-y border-white/[0.1] py-5">
                   <p className="text-[0.66rem] font-semibold uppercase leading-5 tracking-[0.16em] text-white/[0.56] md:text-xs">
                     {example.category}
                   </p>
-                  <h3 className="mt-3 text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
+                  <div className="mt-3 flex items-end justify-between gap-4">
+                    <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
+                    <span className="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-white/[0.42] md:block">
+                      Étude {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
                 </div>
                 <dl className="relative mt-5 grid flex-1 gap-4 text-sm leading-6">
                   {[
@@ -221,14 +242,14 @@ export function CategoriesGrid() {
                   ))}
                 </dl>
                 <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
-                  <span>Découvrir</span>
+                  <span>Voir le projet</span>
                   <span className="transition group-hover:translate-x-1">→</span>
                 </div>
               </Link>
             </Reveal>
           ))}
         </div>
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center md:mt-12">
           <Button href="/galerie" variant="secondary">
             Voir plus d’exemples
           </Button>

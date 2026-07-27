@@ -22,7 +22,7 @@ const comparisonRows = [
 
 export function ComparisonSection() {
   return (
-    <section className="section-divider section-tone-cool py-24 md:py-32" aria-labelledby="comparison-title">
+    <section className="section-divider section-tone-cool py-18 md:py-32" aria-labelledby="comparison-title">
       <PageShell>
         <div className="grid gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <SectionHeading

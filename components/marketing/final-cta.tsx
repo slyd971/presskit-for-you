@@ -4,17 +4,17 @@ import { MessageCircle, Phone } from "lucide-react";
 
 export function FinalCta() {
   return (
-    <section id="contact" className="section-divider section-contact scroll-mt-28 py-24 md:py-28" aria-labelledby="final-cta-title">
-      <PageShell className="max-w-6xl">
-        <div className="border-y border-white/[0.14] py-14 text-center md:py-20">
+    <section id="contact" className="section-divider section-contact scroll-mt-28 py-18 md:py-28" aria-labelledby="final-cta-title">
+      <PageShell className="max-w-5xl">
+        <div className="py-8 text-center md:py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.56]">Prochain échange</p>
-          <h2 id="final-cta-title" className="mx-auto mt-5 max-w-3xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-6xl">
+          <h2 id="final-cta-title" className="mx-auto mt-5 max-w-2xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-6xl">
             Parlez-nous de votre univers.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/[0.7]">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-white/[0.7]">
             On vous aide à cadrer le bon format, le bon niveau de design et les contenus qui feront vraiment la différence.
           </p>
-          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row md:mt-10">
             <a
               href={siteConfig.whatsappUrl}
               target="_blank"

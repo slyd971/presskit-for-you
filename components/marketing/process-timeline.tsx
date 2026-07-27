@@ -25,16 +25,21 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           <div className="relative border-y border-white/[0.1]">
             {processSteps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.06}>
-                <div className="motion-line group grid gap-4 border-b border-white/[0.075] py-6 last:border-b-0 md:grid-cols-[4.5rem_7.5rem_1fr] md:px-4">
-                  <p className="editorial-number text-4xl font-semibold leading-none tracking-tighter2">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/[0.56] md:pt-1">
+                <div className="motion-line group grid gap-3 border-b border-white/[0.075] py-5 last:border-b-0 md:grid-cols-[4.5rem_7.5rem_1fr] md:gap-4 md:px-4 md:py-6">
+                  <div className="flex items-center gap-3 md:block">
+                    <p className="editorial-number text-3xl font-semibold leading-none tracking-tighter2 md:text-4xl">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/[0.56] md:hidden">
+                      {stepLabels[index]}
+                    </p>
+                  </div>
+                  <p className="hidden text-[11px] font-semibold uppercase tracking-[0.22em] text-white/[0.56] md:block md:pt-1">
                     {stepLabels[index]}
                   </p>
                   <div>
                     <h3 className="text-xl font-semibold leading-tight text-white">{step.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-white/[0.74]">{step.description}</p>
+                    <p className="mt-2 text-sm leading-7 text-white/[0.74] md:mt-3">{step.description}</p>
                   </div>
                 </div>
               </Reveal>

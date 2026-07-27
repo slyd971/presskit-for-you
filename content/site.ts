@@ -109,6 +109,12 @@ export const heroProofs = [
 
 export const testimonials = [
   {
+    name: "Izzy Lokko",
+    role: "Vidéaste",
+    quote:
+      "Très satisfait du press kit : c’est une mise en avant qualitative de mon travail professionnel, qui me démarque directement de la concurrence. Ça porte déjà ses fruits et m’a permis de décrocher de nouveaux clients.",
+  },
+  {
     name: "Ishma N.",
     role: "Make-up artist",
     quote:

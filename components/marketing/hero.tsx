@@ -16,6 +16,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/melymelow.png",
     mobileImage: "/gallery-previews/home-mobile/melymelow.png",
     accent: "#F4C26B",
+    objective: "Présenter œuvres, démarche et contact pro.",
     result: "Un univers artistique lisible, prêt à envoyer aux galeries et partenaires.",
   },
   {
@@ -24,6 +25,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/sherin.png",
     mobileImage: "/gallery-previews/home-mobile/sherin.png",
     accent: "#F46B8D",
+    objective: "Centraliser sortie, médias, chiffres et booking.",
     result: "Sortie, médias, chiffres et booking réunis dans un récit clair.",
   },
   {
@@ -32,6 +34,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/dj-slyd.png",
     mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
     accent: "#FF9152",
+    objective: "Remplacer les envois dispersés par un lien clair.",
     result: "Un support net pour présenter univers, médias, résidences et contact booking.",
   },
   {
@@ -40,6 +43,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/krimo.png",
     mobileImage: "/gallery-previews/home-mobile/krimo.png",
     accent: "#D5A928",
+    objective: "Faire sentir l’énergie et ouvrir la collaboration.",
     result: "Une présence vidéo-first pour performer, convaincre et collaborer.",
   },
   {
@@ -48,6 +52,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/dj-mack.png",
     mobileImage: "/gallery-previews/home-mobile/dj-mack.png",
     accent: "#CE5DFF",
+    objective: "Rassurer bookers, marques et scènes internationales.",
     result: "Un support premium pour rassurer bookers, marques et scènes internationales.",
   },
   {
@@ -56,6 +61,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/soyumi.png",
     mobileImage: "/gallery-previews/home-mobile/soyumi.png",
     accent: "#FF9152",
+    objective: "Transformer l’énergie club en argument de booking.",
     result: "Une énergie club traduite dans un lien rapide à comprendre.",
   },
   {
@@ -64,6 +70,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/la-bringue.png",
     mobileImage: "/gallery-previews/home-mobile/la-bringue.png",
     accent: "#63E6BE",
+    objective: "Montrer communauté, traction et potentiel partenaire.",
     result: "Communauté, sponsors et preuves de traction mis en scène.",
   },
   {
@@ -72,6 +79,7 @@ const heroKits = [
     desktopImage: "/gallery-previews/home-desktop/arthur-chaps.png",
     mobileImage: "/gallery-previews/home-mobile/arthur-chaps.png",
     accent: "#5FA8FF",
+    objective: "Clarifier style, références et culture club.",
     result: "Un positionnement club plus net, plus mémorable, plus facile à partager.",
   },
 ];
@@ -91,7 +99,7 @@ export function Hero() {
   useEffect(() => {
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % heroKits.length);
-    }, 4200);
+    }, 6800);
 
     return () => window.clearInterval(interval);
   }, []);
@@ -132,7 +140,13 @@ export function Hero() {
   return (
     <section className="section-wash relative overflow-hidden pb-16 pt-10 md:pb-28 md:pt-24" aria-labelledby="hero-title">
       <div className="signature-thread absolute left-[8%] top-8 h-[72%] w-px opacity-70" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(255,255,255,0.09),transparent_24%),radial-gradient(circle_at_78%_26%,rgba(206,93,255,0.09),transparent_28%),radial-gradient(circle_at_64%_78%,rgba(255,145,82,0.075),transparent_24%),linear-gradient(180deg,#0d1118,rgba(17,22,32,0.97))]" />
+      <motion.div
+        className="absolute inset-0"
+        animate={{
+          background: `radial-gradient(circle at 16% 12%, rgba(255,255,255,0.09), transparent 24%), radial-gradient(circle at 78% 26%, ${activeKit.accent}24, transparent 28%), radial-gradient(circle at 64% 78%, ${activeKit.accent}1a, transparent 24%), linear-gradient(180deg,#0d1118,rgba(17,22,32,0.97))`,
+        }}
+        transition={{ duration: 1.8, ease: "easeInOut" }}
+      />
       <PageShell className="relative grid items-center gap-9 md:gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
         <Reveal>
           <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-10">
@@ -143,9 +157,6 @@ export function Hero() {
             </h1>
             <p className="mt-6 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-7 md:text-lg md:leading-9">
               Présentez votre activité, vos réalisations, vos contenus et vos références dans une expérience premium pensée pour convaincre en quelques secondes.
-            </p>
-            <p className="mt-5 hidden max-w-[31rem] text-sm leading-7 text-white/[0.68] sm:block md:text-base">
-              Le visiteur ne parcourt plus une liste d’informations : il entre dans votre univers, comprend votre niveau et sait comment vous contacter.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
               <Button
@@ -216,12 +227,15 @@ export function Hero() {
                       />
                     </span>
                     <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.2),transparent_22%,transparent_74%,rgba(255,255,255,0.07))]" />
-                    <span className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-3 border-t border-white/[0.12] bg-black/30 px-3 py-2 text-white opacity-0 backdrop-blur-md transition duration-300 group-hover:opacity-100">
+                    <span className={`absolute bottom-3 left-3 right-3 border-t border-white/[0.12] bg-black/36 px-3 py-2 text-white backdrop-blur-md transition duration-300 ${slot.offset === 0 ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}>
                       <span>
                         <span className="block text-xs font-semibold">{kit.title}</span>
                         <span className="block text-[10px] uppercase tracking-[0.16em] text-white/56">{kit.category}</span>
+                        <span className="mt-1 hidden max-w-[20rem] text-[11px] leading-4 text-white/62 lg:block">{kit.objective}</span>
                       </span>
-                      <span className="rounded-lg bg-white px-3 py-1.5 text-[11px] font-semibold text-[#10141d]">Explorer</span>
+                      <span className="mt-2 inline-flex items-center gap-2 text-[11px] font-semibold text-white">
+                        Prévisualiser <span aria-hidden="true">→</span>
+                      </span>
                     </span>
                   </span>
                 </motion.button>
@@ -289,7 +303,9 @@ export function Hero() {
                           <span className="block text-sm font-semibold leading-none">{kit.title}</span>
                           <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-white/50">{kit.category}</span>
                         </span>
-                        <span className="text-lg leading-none">{index === 0 ? "→" : ""}</span>
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/70">
+                          Preview
+                        </span>
                       </span>
                     </span>
                   </button>
