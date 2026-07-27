@@ -45,8 +45,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 px-3 pt-3 md:px-5">
       <div
         className={cn(
-          "mx-auto max-w-8xl rounded-[1.7rem] border border-white/[0.08] bg-[#0b0e14]/[0.82] shadow-[0_24px_70px_rgba(0,0,0,0.26),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-all duration-300",
-          isCompact ? "rounded-[1.35rem]" : "rounded-[1.7rem]",
+          "mx-auto max-w-8xl rounded-lg border border-white/[0.08] bg-[#0b0e14]/[0.86] shadow-[0_18px_52px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-all duration-300",
+          isCompact ? "rounded-lg" : "rounded-lg",
         )}
       >
         <div
@@ -77,7 +77,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <Button
-              href="/contact"
+              href="/#contact"
               className="hidden px-3 py-2 text-[11px] font-semibold shadow-none sm:inline-flex md:px-5 md:py-3 md:text-sm"
             >
               {siteConfig.ctas.call}
@@ -89,7 +89,7 @@ export function SiteHeader() {
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((open) => !open)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-white transition hover:bg-white/[0.08] md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white transition hover:bg-white/[0.08] md:hidden"
             >
               <motion.div
                 key={isOpen ? "close" : "open"}
@@ -136,7 +136,7 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block rounded-2xl border border-transparent px-3 py-3 text-sm text-white/[0.78] transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+                        className="block rounded-lg border border-transparent px-3 py-3 text-sm text-white/[0.78] transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
                       >
                         {item.label}
                       </Link>
@@ -150,7 +150,7 @@ export function SiteHeader() {
                   exit={{ y: 8, opacity: 0 }}
                   transition={{ duration: 0.24, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <Button href="/contact" className="mt-4 w-full justify-center">
+                  <Button href="/#contact" className="mt-4 w-full justify-center">
                     {siteConfig.ctas.call}
                   </Button>
                 </motion.div>

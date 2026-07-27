@@ -1,25 +1,36 @@
 import { siteConfig } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
-import { Button } from "@/components/ui/button";
+import { MessageCircle, Phone } from "lucide-react";
 
 export function FinalCta() {
   return (
-    <section className="py-24 md:py-28" aria-labelledby="final-cta-title">
-      <PageShell>
-        <div className="relative overflow-hidden rounded-[2.35rem] border border-white/[0.13] bg-[radial-gradient(circle_at_20%_0%,rgba(255,145,82,0.23),transparent_26%),radial-gradient(circle_at_88%_8%,rgba(255,255,255,0.1),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.105),rgba(255,255,255,0.032))] p-8 shadow-[0_38px_130px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.08)] md:p-12 lg:p-14">
-          <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.24] to-transparent" />
-          <p className="relative text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.54]">Prochain échange</p>
-          <h2 id="final-cta-title" className="relative mt-5 max-w-3xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-5xl">
+    <section id="contact" className="section-divider section-contact scroll-mt-28 py-24 md:py-28" aria-labelledby="final-cta-title">
+      <PageShell className="max-w-6xl">
+        <div className="border-y border-white/[0.14] py-14 text-center md:py-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.56]">Prochain échange</p>
+          <h2 id="final-cta-title" className="mx-auto mt-5 max-w-3xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-6xl">
             Parlez-nous de votre univers.
           </h2>
-          <p className="relative mt-6 max-w-2xl text-base leading-8 text-white/[0.72]">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/[0.7]">
             On vous aide à cadrer le bon format, le bon niveau de design et les contenus qui feront vraiment la différence.
           </p>
-          <div className="relative mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="/contact" className="px-7 py-4 text-[15px]">{siteConfig.ctas.launch}</Button>
-            <Button href="/tarifs" variant="secondary" className="px-7 py-4 text-[15px]">
-              Voir les tarifs
-            </Button>
+          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+            <a
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-white px-7 py-4 text-[15px] font-semibold text-[#10141d] shadow-[0_18px_50px_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(13,16,22,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#f4efe4]"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              Écrire sur WhatsApp
+            </a>
+            <a
+              href="tel:0663907888"
+              className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-white/[0.18] bg-white/[0.075] px-7 py-4 text-[15px] font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-white/[0.28] hover:bg-white/[0.12]"
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              {siteConfig.phone}
+            </a>
           </div>
         </div>
       </PageShell>

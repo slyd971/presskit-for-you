@@ -17,20 +17,20 @@ export function CategoryHero({ category }: CategoryHeroProps) {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">{category.heroDescription}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button href="/contact">Demander mon press kit</Button>
+            <Button href="/#contact">Demander mon press kit</Button>
             <Button href="/galerie" variant="secondary">
               Voir les exemples
             </Button>
           </div>
         </div>
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 shadow-soft">
+        <div className="rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-soft">
           <div
-            className={`rounded-[1.7rem] bg-gradient-to-br ${category.gradient} p-3 ring-1 ring-inset ring-white/10 md:p-4`}
+            className={`rounded-lg bg-gradient-to-br ${category.gradient} p-3 ring-1 ring-inset ring-white/10 md:p-4`}
           >
-            <div className="rounded-[1.5rem] border border-white/10 bg-[#10141b]/80 p-5">
+            <div className="rounded-lg border border-white/10 bg-[#10141b]/80 p-5">
               <p className="text-xs uppercase tracking-[0.28em] text-white/48">Preview structure</p>
               <div className="mt-6 grid gap-4">
-                <div className="rounded-[1.4rem] border border-white/8 bg-white/[0.04] p-4">
+                <div className="rounded-lg border border-white/8 bg-white/[0.04] p-4">
                   <p className="text-sm text-white/46">Audience</p>
                   <p className="mt-2 text-lg text-white">{category.audience}</p>
                 </div>
@@ -38,7 +38,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                   {category.stats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="rounded-[1.2rem] border border-white/8 bg-white/[0.03] p-4"
+                      className="rounded-lg border border-white/8 bg-white/[0.03] p-4"
                     >
                       <p className="text-xs uppercase tracking-[0.22em] text-white/42">{stat.label}</p>
                       <p className="mt-2 text-sm leading-6 text-white/78">{stat.value}</p>

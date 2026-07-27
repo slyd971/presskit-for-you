@@ -9,11 +9,10 @@ import { cn } from "@/lib/utils";
 
 export function ExamplesGalleryGrid() {
   const galleryExamples = examples.filter((example) => example.category !== "Chef / Traiteur");
+  const galleryCategories = Array.from(new Set(galleryExamples.map((example) => example.category)));
   const filterOptions = [
     { value: "all", label: "Tous les métiers" },
-    ...categories
-      .filter((category) => category.slug !== "chef")
-      .map((category) => ({ value: category.shortName, label: category.shortName })),
+    ...galleryCategories.map((category) => ({ value: category, label: category })),
   ];
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -27,7 +26,10 @@ export function ExamplesGalleryGrid() {
 
   const galleryBadges: Record<string, string> = {
     DJ: "Ideal pour booking",
-    Artiste: "Editorial premium",
+    "Artiste peintre": "Editorial premium",
+    Chanteuse: "Sortie musicale",
+    Danseur: "Video-first",
+    Organisateur: "Sponsors ready",
     "Coach sportif": "Offre claire",
     Photographe: "Portfolio premium",
     "Make-up artist": "Image haut de gamme",
@@ -43,7 +45,7 @@ export function ExamplesGalleryGrid() {
               type="button"
               onClick={() => setActiveFilter(filter.value)}
               className={cn(
-                "rounded-full border px-4 py-2 text-sm font-medium transition duration-300",
+                "rounded-lg border px-4 py-2 text-sm font-medium transition duration-300",
                 activeFilter === filter.value
                   ? "border-white/[0.24] bg-white text-ink shadow-[0_18px_48px_rgba(255,255,255,0.14)]"
                   : "border-white/10 bg-white/[0.045] text-white/[0.68] hover:border-white/[0.18] hover:bg-white/[0.08] hover:text-white",
@@ -68,9 +70,9 @@ export function ExamplesGalleryGrid() {
                 href={href}
                 target={isExternal ? "_blank" : undefined}
                 rel={isExternal ? "noreferrer" : undefined}
-                className="panel-premium group rounded-[2rem] p-5"
+                className="panel-premium group rounded-lg p-5"
               >
-                <div className="relative overflow-hidden rounded-[1.5rem] border border-white/8">
+                <div className="relative overflow-hidden rounded-lg border border-white/8">
                   {image ? (
                     <>
                       <img
@@ -90,11 +92,11 @@ export function ExamplesGalleryGrid() {
                     />
                   )}
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-                    <span className="rounded-full border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
+                    <span className="rounded-lg border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                       {galleryBadges[example.category] ?? "Premium"}
                     </span>
                     {index === 1 ? (
-                      <span className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
+                      <span className="rounded-lg border border-white/12 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                         Le plus demande
                       </span>
                     ) : null}
@@ -107,7 +109,7 @@ export function ExamplesGalleryGrid() {
                   {(category?.sampleHighlights ?? []).slice(0, 2).map((highlight) => (
                     <span
                       key={highlight}
-                      className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white/58"
+                      className="rounded-lg border border-white/10 bg-white/6 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white/58"
                     >
                       {highlight}
                     </span>

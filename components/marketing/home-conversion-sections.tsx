@@ -5,49 +5,51 @@ import { PageShell } from "@/components/layout/page-shell";
 const comparisonRows = [
   {
     current: "Un PDF présente quelques infos, mais reste statique, vite daté et peu engageant sur mobile.",
-    presskit: "Un site vitrine met en scène votre univers, vos médias et vos preuves avec le bon niveau d'image.",
+    presskit: "Une page web rassemble votre bio, vos photos, vos vidéos, vos liens et votre contact dans un format agréable à consulter.",
   },
   {
     current: "Un dossier classique liste un parcours, des dates, des visuels et des contacts.",
-    presskit: "Un portfolio premium construit une perception : style, crédibilité, concept et envie de vous contacter.",
+    presskit: "Un portfolio bien présenté donne tout de suite une impression plus professionnelle et donne envie d’en savoir plus.",
   },
   {
     current: "Un lien PDF demande au lecteur de reconstruire seul votre valeur ou celle de votre événement.",
-    presskit: "Une page pensée pour convertir guide le regard vers l'essentiel : niveau, proposition, preuves, action.",
+    presskit: "Le visiteur trouve vite ce qu’il cherche, puis sait exactement comment vous contacter.",
   },
 ];
 
 export function ComparisonSection() {
   return (
-    <section className="section-divider py-20 md:py-24" aria-labelledby="comparison-title">
+    <section className="section-divider section-tone-cool py-24 md:py-32" aria-labelledby="comparison-title">
       <PageShell>
-        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <div className="grid gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <SectionHeading
             eyebrow="Positionnement"
-            title="Le bon lien ne liste pas vos contenus. Il met votre niveau en scène."
+            title="Votre visiteur doit comprendre vite qui vous êtes et pourquoi vous contacter."
             description="Un booker, un client ou un partenaire doit comprendre vite qui vous êtes, ce que vous proposez, ou le concept que vous voulez faire vivre."
             id="comparison-title"
           />
           <Reveal delay={0.08}>
-            <div className="border-y border-white/[0.1]">
-              <div className="hidden grid-cols-2 border-b border-white/[0.1] py-4 text-[11px] font-semibold uppercase tracking-[0.22em] md:grid">
-                <span className="text-white/[0.5]">Supports classiques</span>
-                <span className="text-white">Press kit premium</span>
-              </div>
-              {comparisonRows.map((row) => (
-                <div key={row.current} className="grid gap-5 border-b border-white/[0.07] py-6 last:border-b-0 md:grid-cols-2 md:gap-7">
-                  <div className="md:pr-4">
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.36] md:hidden">
+            <div className="border-y border-white/[0.12]">
+              {comparisonRows.map((row, index) => (
+                <div
+                  key={row.current}
+                  className="motion-line grid gap-6 border-b border-white/[0.08] py-7 last:border-b-0 md:grid-cols-[5rem_1fr_1.08fr] md:py-8"
+                >
+                  <p className="editorial-number text-4xl font-semibold leading-none tracking-tighter2 md:text-5xl">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <div>
+                    <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.54]">
                       Supports classiques
                     </p>
-                    <p className="text-sm leading-7 text-white/[0.62]">{row.current}</p>
+                    <p className="text-sm leading-7 text-white/[0.7] md:max-w-sm">{row.current}</p>
                   </div>
-                  <div className="relative border-l border-white/[0.22] pl-4 md:border-white/[0.36] md:pl-7">
-                    <span className="absolute left-0 top-1 hidden h-8 w-px bg-white md:block" aria-hidden="true" />
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white md:hidden">
+                  <div className="relative border-l border-white/[0.22] pl-5 md:pl-7">
+                    <span className="absolute left-0 top-1 h-10 w-px bg-white/60" aria-hidden="true" />
+                    <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white">
                       Press kit premium
                     </p>
-                    <p className="text-[15px] font-semibold leading-7 text-white md:text-[1.05rem] md:leading-8">{row.presskit}</p>
+                    <p className="text-[clamp(1rem,1.6vw,1.25rem)] font-semibold leading-8 text-white">{row.presskit}</p>
                   </div>
                 </div>
               ))}

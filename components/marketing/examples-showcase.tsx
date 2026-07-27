@@ -36,9 +36,9 @@ export function ExamplesShowcase() {
                     href={href}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noreferrer" : undefined}
-                    className="panel-premium group grid gap-5 rounded-[2rem] p-5 lg:grid-cols-[0.9fr_1.1fr]"
+                    className="panel-premium group grid gap-5 rounded-lg p-5 lg:grid-cols-[0.9fr_1.1fr]"
                   >
-                <div className="relative min-h-56 overflow-hidden rounded-[1.5rem] border border-white/8">
+                <div className="relative min-h-56 overflow-hidden rounded-lg border border-white/8">
                   {image ? (
                     <>
                       <img
@@ -58,11 +58,11 @@ export function ExamplesShowcase() {
                     />
                   )}
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-                    <span className="rounded-full border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
+                    <span className="rounded-lg border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                       {exampleBadges[index]}
                     </span>
                     {isExternal ? (
-                      <span className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
+                      <span className="rounded-lg border border-white/12 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                         Demo live
                       </span>
                     ) : null}
@@ -74,7 +74,7 @@ export function ExamplesShowcase() {
                       </p>
                       <p className="mt-2 text-lg font-medium text-white">{example.title}</p>
                     </div>
-                    <span className="rounded-full border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
+                    <span className="rounded-lg border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
                       Premium
                     </span>
                   </div>
@@ -88,7 +88,7 @@ export function ExamplesShowcase() {
                       {(category?.sampleHighlights ?? []).slice(0, 2).map((highlight) => (
                         <span
                           key={highlight}
-                          className="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white/58"
+                          className="rounded-lg border border-white/10 bg-white/6 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white/58"
                         >
                           {highlight}
                         </span>

@@ -11,9 +11,9 @@ export function Faq() {
           title="Les questions les plus fréquentes avant de lancer un projet."
           description="De quoi cadrer rapidement le service, la logique du format et son évolution future."
         />
-        <div className="mt-12 grid gap-5">
+        <div className="mt-12 border-y border-white/[0.12]">
           {faqItems.map((item) => (
-            <article key={item.question} className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-6">
+            <article key={item.question} className="border-b border-white/[0.08] py-6 last:border-b-0">
               <h3 className="text-xl font-semibold text-white">{item.question}</h3>
               <p className="mt-3 text-sm leading-7 text-white/64">{item.answer}</p>
             </article>
