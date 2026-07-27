@@ -28,6 +28,14 @@ const heroKits = [
     result: "Sortie, médias, chiffres et booking réunis dans un récit clair.",
   },
   {
+    title: "DJ SLY'D",
+    category: "DJ",
+    desktopImage: "/gallery-previews/home-desktop/dj-slyd.png",
+    mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
+    accent: "#FF9152",
+    result: "Un support net pour présenter univers, médias, résidences et contact booking.",
+  },
+  {
     title: "KRIMO",
     category: "Danseur",
     desktopImage: "/gallery-previews/home-desktop/krimo.png",
@@ -69,31 +77,41 @@ const heroKits = [
   },
 ];
 
-const kitPositions = [
-  { left: "7%", top: "7%", width: "46%", rotate: -8 },
-  { left: "48%", top: "3%", width: "43%", rotate: 7 },
-  { left: "27%", top: "25%", width: "52%", rotate: 1 },
-  { left: "4%", top: "48%", width: "40%", rotate: 8 },
-  { left: "56%", top: "43%", width: "37%", rotate: -6 },
-  { left: "34%", top: "66%", width: "34%", rotate: 5 },
-  { left: "70%", top: "67%", width: "24%", rotate: -4 },
+const carouselSlots = [
+  { offset: 0, x: "-2%", y: "10%", width: "73%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
+  { offset: 1, x: "35%", y: "20%", width: "54%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
+  { offset: -1, x: "-28%", y: "24%", width: "52%", rotate: -3.5, scale: 0.86, opacity: 0.58, zIndex: 24 },
 ];
 
 export function Hero() {
-  const [orderSeed, setOrderSeed] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedKit, setSelectedKit] = useState<(typeof heroKits)[number] | null>(null);
   const [previewMode, setPreviewMode] = useState<"desktop" | "mobile">("desktop");
+  const activeKit = heroKits[activeIndex % heroKits.length];
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setOrderSeed((current) => current + 1);
-    }, 5200);
+      setActiveIndex((current) => (current + 1) % heroKits.length);
+    }, 4200);
 
     return () => window.clearInterval(interval);
   }, []);
 
   useEffect(() => {
     if (!selectedKit) return;
+    const scrollY = window.scrollY;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousBodyPosition = document.body.style.position;
+    const previousBodyTop = document.body.style.top;
+    const previousBodyWidth = document.body.style.width;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setSelectedKit(null);
@@ -101,31 +119,39 @@ export function Hero() {
     };
 
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+      document.body.style.position = previousBodyPosition;
+      document.body.style.top = previousBodyTop;
+      document.body.style.width = previousBodyWidth;
+      window.scrollTo(0, scrollY);
+    };
   }, [selectedKit]);
 
   return (
-    <section className="section-wash relative overflow-hidden pb-20 pt-14 md:pb-28 md:pt-24" aria-labelledby="hero-title">
+    <section className="section-wash relative overflow-hidden pb-16 pt-10 md:pb-28 md:pt-24" aria-labelledby="hero-title">
       <div className="signature-thread absolute left-[8%] top-8 h-[72%] w-px opacity-70" aria-hidden="true" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_12%,rgba(255,255,255,0.09),transparent_24%),radial-gradient(circle_at_78%_26%,rgba(206,93,255,0.09),transparent_28%),radial-gradient(circle_at_64%_78%,rgba(255,145,82,0.075),transparent_24%),linear-gradient(180deg,#0d1118,rgba(17,22,32,0.97))]" />
-      <PageShell className="relative grid items-center gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
+      <PageShell className="relative grid items-center gap-9 md:gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
         <Reveal>
           <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-10">
             <Badge className="border-white/[0.14] bg-white/[0.075] text-white/[0.82] shadow-[0_14px_50px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.1)]">
               Galerie digitale pour talents premium.
             </Badge>
-            <h1 id="hero-title" className="mt-7 max-w-[17.5rem] break-words text-[clamp(2.35rem,10vw,5.45rem)] font-semibold leading-[0.92] tracking-tighter2 text-white min-[375px]:max-w-[20rem] sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
+            <h1 id="hero-title" className="mt-6 max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:mt-7 sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
               <span className="block">Plus pro qu&apos;Instagram.</span>
               <span className="block text-white/[0.92]">Plus impactant</span>
               <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
             </h1>
-            <p className="mt-7 max-w-[35rem] text-base leading-8 text-white/[0.72] md:text-lg md:leading-9">
+            <p className="mt-6 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-7 md:text-lg md:leading-9">
               Présentez votre activité, vos réalisations, vos contenus et vos références dans une expérience premium pensée pour convaincre en quelques secondes.
             </p>
-            <p className="mt-5 max-w-[31rem] text-sm leading-7 text-white/[0.68] md:text-base">
+            <p className="mt-5 hidden max-w-[31rem] text-sm leading-7 text-white/[0.68] sm:block md:text-base">
               Le visiteur ne parcourt plus une liste d’informations : il entre dans votre univers, comprend votre niveau et sait comment vous contacter.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
               <Button
                 href="#exemples"
                 className="min-h-12 w-full px-7 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
@@ -144,34 +170,37 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative isolate min-h-[31rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:min-h-[44rem]">
+          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:min-h-[44rem]">
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.16),transparent_45%)] blur-3xl" />
             <div className="pointer-events-none absolute inset-x-8 top-1/2 h-px bg-gradient-to-r from-transparent via-white/[0.24] to-transparent" />
-            {heroKits.map((kit, index) => {
-              const position = kitPositions[(index + orderSeed) % kitPositions.length];
-              const zIndex = 20 + ((heroKits.length - index + orderSeed) % heroKits.length);
+            {carouselSlots.map((slot) => {
+              const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
+              const kit = heroKits[kitIndex];
 
               return (
                 <motion.button
-                  key={kit.title}
+                  key={`${slot.offset}-${kit.title}`}
                   type="button"
                   aria-label={`Prévisualiser ${kit.title}`}
                   className="group absolute hidden cursor-pointer text-left outline-none sm:block"
                   style={{
-                    left: position.left,
-                    top: position.top,
-                    width: position.width,
-                    zIndex,
+                    left: "50%",
+                    top: slot.y,
+                    width: slot.width,
+                    zIndex: slot.zIndex,
                   }}
+                  initial={false}
                   animate={{
-                    rotate: position.rotate,
-                    y: [0, index % 2 === 0 ? -9 : 8, 0],
+                    x: slot.x,
+                    rotate: slot.rotate,
+                    scale: slot.scale,
+                    opacity: slot.opacity,
                   }}
                   transition={{
-                    rotate: { duration: 1.4, ease: [0.22, 1, 0.36, 1] },
-                    y: { duration: 7 + index * 0.45, repeat: Infinity, ease: "easeInOut" },
+                    duration: 1.05,
+                    ease: [0.22, 1, 0.36, 1],
                   }}
-                  whileHover={{ scale: 1.055, y: -12, rotate: position.rotate * 0.55 }}
+                  whileHover={{ scale: slot.scale + 0.05, y: -10, rotate: slot.rotate * 0.55 }}
                   onClick={() => {
                     setSelectedKit(kit);
                     setPreviewMode("desktop");
@@ -182,7 +211,7 @@ export function Hero() {
                     style={{ background: kit.accent }}
                     aria-hidden="true"
                   />
-                  <span className="relative block overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] group-hover:shadow-[0_42px_130px_rgba(0,0,0,0.58)]">
+                  <span className="relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] group-hover:shadow-[0_42px_130px_rgba(0,0,0,0.58)]">
                     <span className="block aspect-[1.58/1] overflow-hidden bg-black">
                       <img
                         src={kit.desktopImage}
@@ -202,25 +231,75 @@ export function Hero() {
                 </motion.button>
               );
             })}
-
-            <button
+            <motion.button
               type="button"
-              className="group absolute inset-x-0 top-8 mx-auto block w-[92%] text-left sm:hidden"
+              aria-label={`Prévisualiser ${activeKit.title} en mobile`}
+              className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none sm:block"
+              initial={false}
+              animate={{ y: [0, -8, 0], rotate: -2 }}
+              transition={{ y: { duration: 6.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 0.8 } }}
+              whileHover={{ scale: 1.05, y: -12 }}
               onClick={() => {
-                setSelectedKit(heroKits[0]);
-                setPreviewMode("desktop");
+                setSelectedKit(activeKit);
+                setPreviewMode("mobile");
               }}
             >
-              <span className="relative block overflow-hidden border border-white/[0.16] bg-[#080b11] p-2 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.12)]">
-                <span className="block aspect-[1.58/1] overflow-hidden bg-black">
-                  <img src={heroKits[0].desktopImage} alt="Aperçu PressKit MelyMelow" className="h-full w-full object-cover object-top" />
-                </span>
-                <span className="mt-3 flex items-center justify-between text-sm text-white">
-                  <span>Ouvrir la preview</span>
-                  <span>→</span>
+              <span
+                className="absolute -inset-5 rounded-full opacity-35 blur-2xl transition duration-500 group-hover:opacity-60"
+                style={{ background: activeKit.accent }}
+                aria-hidden="true"
+              />
+              <span className="relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
+                  <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
+                  <img
+                    src={activeKit.mobileImage}
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
                 </span>
               </span>
-            </button>
+            </motion.button>
+
+            <div className="-mx-5 block overflow-hidden sm:hidden">
+              <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {heroKits.slice(0, 5).map((kit, index) => (
+                  <button
+                    key={kit.title}
+                    type="button"
+                    aria-label={`Prévisualiser ${kit.title}`}
+                    className="group w-[82vw] max-w-[21rem] shrink-0 snap-start text-left outline-none"
+                    onClick={() => {
+                      setSelectedKit(kit);
+                      setPreviewMode("desktop");
+                    }}
+                  >
+                    <span
+                      className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
+                      style={{ "--case-accent": kit.accent } as CSSProperties}
+                    >
+                      <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,color-mix(in_srgb,var(--case-accent)_64%,white),transparent)] opacity-70" aria-hidden="true" />
+                      <span className="relative block aspect-[1.54/1] overflow-hidden bg-black">
+                        <img src={kit.desktopImage} alt="" className="h-full w-full object-cover object-top" />
+                      </span>
+                      <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[#080b11] p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
+                        <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
+                          <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
+                          <img src={kit.mobileImage} alt="" className="h-full w-full object-cover object-center" />
+                        </span>
+                      </span>
+                      <span className="flex items-center justify-between gap-3 border-t border-white/[0.1] px-1 py-3 text-white">
+                        <span>
+                          <span className="block text-sm font-semibold leading-none">{kit.title}</span>
+                          <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-white/50">{kit.category}</span>
+                        </span>
+                        <span className="text-lg leading-none">{index === 0 ? "→" : ""}</span>
+                      </span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </Reveal>
       </PageShell>
@@ -228,7 +307,7 @@ export function Hero() {
       <AnimatePresence>
         {selectedKit ? (
           <motion.div
-            className="fixed inset-0 z-[90] bg-[#05070b]/82 p-4 backdrop-blur-2xl md:p-8"
+            className="fixed inset-0 z-[200] overflow-hidden bg-[#05070b]/88 p-4 backdrop-blur-2xl md:p-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -293,7 +372,10 @@ export function Hero() {
                       src={previewMode === "desktop" ? selectedKit.desktopImage : selectedKit.mobileImage}
                       alt={`Preview ${previewMode} ${selectedKit.title}`}
                       className="preview-scroll"
-                      style={{ "--preview-travel": previewMode === "desktop" ? "4rem" : "7rem" } as CSSProperties}
+                      style={{
+                        "--preview-travel": previewMode === "desktop" ? "4rem" : "7rem",
+                        objectPosition: previewMode === "desktop" ? "center top" : "center top",
+                      } as CSSProperties}
                     />
                   </div>
                 </div>

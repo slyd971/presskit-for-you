@@ -62,6 +62,7 @@ export function ExamplesGalleryGrid() {
             const href = example.externalDemoUrl ?? category?.externalDemoUrl ?? example.href;
             const isExternal = href.startsWith("http");
             const image = example.image ?? category?.heroImage;
+            const mobileImage = example.mobileImage;
             const imagePosition = example.imagePosition ?? category?.heroImagePosition;
 
             return (
@@ -72,15 +73,36 @@ export function ExamplesGalleryGrid() {
                 rel={isExternal ? "noreferrer" : undefined}
                 className="panel-premium group rounded-lg p-5"
               >
-                <div className="relative overflow-hidden rounded-lg border border-white/8">
+                <div className="relative h-64 overflow-hidden rounded-lg border border-white/8 bg-[#07090e]">
                   {image ? (
                     <>
-                      <img
-                        src={image}
-                        alt={example.title}
-                        className="h-56 w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
-                        style={imagePosition ? { objectPosition: imagePosition } : undefined}
-                      />
+                      <div className="absolute left-4 top-8 w-[82%] rotate-[-1.5deg] transition duration-500 group-hover:-translate-y-1 group-hover:rotate-[-0.4deg]">
+                        <div className="overflow-hidden rounded-t-[0.85rem] border border-white/[0.14] bg-black p-1.5 shadow-[0_22px_70px_rgba(0,0,0,0.42)]">
+                          <div className="aspect-[1.58/1] overflow-hidden rounded-t-[0.55rem] bg-black">
+                            <img
+                              src={image}
+                              alt={`${example.title} en version desktop`}
+                              className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
+                              style={imagePosition ? { objectPosition: imagePosition } : undefined}
+                            />
+                          </div>
+                        </div>
+                        <div className="mx-auto h-2 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)]" />
+                      </div>
+                      {mobileImage ? (
+                        <div className="absolute bottom-5 right-4 w-[23%] min-w-[4.2rem] rotate-[4deg] transition duration-500 group-hover:-translate-y-1 group-hover:rotate-[2deg]">
+                          <div className="rounded-[1.05rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_52px_rgba(0,0,0,0.48)]">
+                            <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black">
+                              <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609]" />
+                              <img
+                                src={mobileImage}
+                                alt={`${example.title} en version mobile`}
+                                className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      ) : null}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                     </>
                   ) : (

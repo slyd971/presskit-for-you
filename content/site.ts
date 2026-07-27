@@ -36,6 +36,7 @@ export type Example = {
   href: string;
   accent: string;
   image?: string;
+  mobileImage?: string;
   imagePosition?: string;
   externalDemoUrl?: string;
 };
@@ -463,6 +464,7 @@ export const examples: Example[] = [
     href: "/galerie",
     externalDemoUrl: "https://presskit.melymelow.art/",
     image: "/gallery-previews/home-desktop/melymelow.png",
+    mobileImage: "/gallery-previews/home-mobile/melymelow.png",
     accent: "#F4C26B",
   },
   {
@@ -473,6 +475,7 @@ export const examples: Example[] = [
     href: "/galerie",
     externalDemoUrl: "https://sherin.presskit.fr/",
     image: "/gallery-previews/home-desktop/sherin.png",
+    mobileImage: "/gallery-previews/home-mobile/sherin.png",
     accent: "#F4C26B",
   },
   {
@@ -483,6 +486,7 @@ export const examples: Example[] = [
     href: "/galerie",
     externalDemoUrl: "https://krimo-dancer.presskit.fr/",
     image: "/gallery-previews/home-desktop/krimo.png",
+    mobileImage: "/gallery-previews/home-mobile/krimo.png",
     accent: "#D5A928",
   },
   {
@@ -493,6 +497,7 @@ export const examples: Example[] = [
     href: "/#contact",
     externalDemoUrl: "https://dj-mack.presskit.fr/",
     image: "/gallery-previews/home-desktop/dj-mack.png",
+    mobileImage: "/gallery-previews/home-mobile/dj-mack.png",
     accent: "#FF9152",
   },
   {
@@ -503,6 +508,7 @@ export const examples: Example[] = [
     href: "/#contact",
     externalDemoUrl: "https://soyumi.presskit.fr/",
     image: "/gallery-previews/home-desktop/soyumi.png",
+    mobileImage: "/gallery-previews/home-mobile/soyumi.png",
     accent: "#FF9152",
   },
   {
@@ -513,6 +519,7 @@ export const examples: Example[] = [
     href: "/#contact",
     externalDemoUrl: "https://www.djfloparis.com/",
     image: "/gallery-previews/home-desktop/flo.png",
+    mobileImage: "/gallery-previews/home-mobile/flo.png",
     accent: "#FF9152",
   },
   {
@@ -523,6 +530,7 @@ export const examples: Example[] = [
     href: "/galerie",
     externalDemoUrl: "https://labringue-party.vercel.app/",
     image: "/gallery-previews/home-desktop/la-bringue.png",
+    mobileImage: "/gallery-previews/home-mobile/la-bringue.png",
     accent: "#FF8DAA",
   },
   {
@@ -533,6 +541,7 @@ export const examples: Example[] = [
     href: "/#contact",
     externalDemoUrl: "https://arthur-chaps.presskit.fr/",
     image: "/gallery-previews/home-desktop/arthur-chaps.png",
+    mobileImage: "/gallery-previews/home-mobile/arthur-chaps.png",
     accent: "#FF9152",
   },
   {
@@ -542,6 +551,8 @@ export const examples: Example[] = [
     description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
     href: "/#contact",
     externalDemoUrl: "https://djslyd.presskit.fr",
+    image: "/gallery-previews/home-desktop/dj-slyd.png",
+    mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
     accent: "#FF9152",
   },
   {

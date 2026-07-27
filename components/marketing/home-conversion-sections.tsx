@@ -4,14 +4,17 @@ import { PageShell } from "@/components/layout/page-shell";
 
 const comparisonRows = [
   {
+    title: "Le PDF donne des infos. La page donne envie.",
     current: "Un PDF présente quelques infos, mais reste statique, vite daté et peu engageant sur mobile.",
     presskit: "Une page web rassemble votre bio, vos photos, vos vidéos, vos liens et votre contact dans un format agréable à consulter.",
   },
   {
+    title: "Un lien ne suffit pas quand il faut convaincre.",
     current: "Un Linktree aligne des boutons. Il aide à sortir, mais ne raconte pas votre niveau.",
     presskit: "Un press kit met vos preuves dans le bon ordre : univers, médias, chiffres, références, contact.",
   },
   {
+    title: "Le visiteur doit comprendre avant de chercher.",
     current: "Un lien PDF demande au lecteur de reconstruire seul votre valeur ou celle de votre événement.",
     presskit: "Le visiteur ressent d’abord la crédibilité, puis trouve naturellement l’action à faire.",
   },
@@ -24,12 +27,43 @@ export function ComparisonSection() {
         <div className="grid gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <SectionHeading
             eyebrow="Positionnement"
-            title="Votre visiteur doit comprendre vite qui vous êtes et pourquoi vous contacter."
-            description="Un booker, un client ou un partenaire doit comprendre vite qui vous êtes, ce que vous proposez, ou le concept que vous voulez faire vivre."
+            title="Comprendre vite. Donner envie de répondre."
+            description="En quelques secondes, votre page doit poser le contexte, montrer votre niveau et rendre le contact évident."
             id="comparison-title"
           />
           <Reveal delay={0.08}>
-            <div className="border-y border-white/[0.12]">
+            <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 [-ms-overflow-style:none] [scrollbar-width:none] md:hidden [&::-webkit-scrollbar]:hidden">
+              {comparisonRows.map((row, index) => (
+                <article
+                  key={row.current}
+                  className="w-[84vw] max-w-[21.5rem] shrink-0 snap-start border-y border-white/[0.12] bg-white/[0.045] px-5 py-6"
+                >
+                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.48]">
+                    <p>Cas {String(index + 1).padStart(2, "0")}</p>
+                    <span className="h-px w-12 bg-white/[0.18]" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-6 max-w-[17rem] text-2xl font-semibold leading-tight tracking-tighter2 text-white">
+                    {row.title}
+                  </h3>
+                  <div className="mt-7 space-y-5">
+                    <div>
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.44]">
+                        Support classique
+                      </p>
+                      <p className="text-sm leading-7 text-white/[0.68]">{row.current}</p>
+                    </div>
+                    <div className="border-t border-white/[0.14] pt-5">
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+                        Press kit
+                      </p>
+                      <p className="text-base font-semibold leading-7 text-white">{row.presskit}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="hidden border-y border-white/[0.12] md:block">
               {comparisonRows.map((row, index) => (
                 <div
                   key={row.current}
