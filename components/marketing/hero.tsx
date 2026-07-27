@@ -5,7 +5,6 @@ import { X } from "lucide-react";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
@@ -137,10 +136,7 @@ export function Hero() {
       <PageShell className="relative grid items-center gap-9 md:gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
         <Reveal>
           <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-10">
-            <Badge className="border-white/[0.14] bg-white/[0.075] text-white/[0.82] shadow-[0_14px_50px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.1)]">
-              Galerie digitale pour talents premium.
-            </Badge>
-            <h1 id="hero-title" className="mt-6 max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:mt-7 sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
+            <h1 id="hero-title" className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
               <span className="block">Plus pro qu&apos;Instagram.</span>
               <span className="block text-white/[0.92]">Plus impactant</span>
               <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
