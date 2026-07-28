@@ -7,30 +7,49 @@ const proofStats = [
   { value: "7 jours", label: "ouvrés maximum pour la livraison" },
   { value: "+ de 10", label: "exemples réels déjà en ligne" },
   { value: "1 lien", label: "prêt à envoyer aux bons contacts" },
+  { value: "100%", label: "responsive mobile, tablette et desktop" },
+  { value: "SEO", label: "structure optimisée pour le référencement" },
+  { value: "MAJ", label: "contenus faciles à faire évoluer" },
 ];
 
 export function ProofStats() {
   return (
-    <section className="bg-white py-10 text-[#10141d] md:py-10" aria-labelledby="proof-stats-title">
+    <section className="relative overflow-hidden bg-white py-12 text-[#10141d] md:py-14" aria-labelledby="proof-stats-title">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(16,20,29,0.08),transparent_24%),linear-gradient(rgba(16,20,29,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(16,20,29,0.032)_1px,transparent_1px)] bg-[size:auto,92px_92px,92px_92px]" aria-hidden="true" />
       <PageShell>
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 id="proof-stats-title" className="mx-auto max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
-            Des clients qui repartent avec un lien clair, pro et prêt à envoyer.
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#4d5561] md:text-lg">
-            Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité.
-          </p>
-        </div>
+        <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
+              Des clients qui repartent avec un lien clair, pro et prêt à envoyer.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-[#4d5561] md:text-lg">
+              Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité.
+            </p>
 
-        <div className="mx-auto mt-8 grid max-w-4xl gap-5 text-center md:mt-9 md:grid-cols-3">
-          {proofStats.map((stat) => (
-            <div key={stat.value} className="px-4 py-3">
-              <p className="text-5xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-6xl">{stat.value}</p>
-              <p className="mx-auto mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
-                {stat.label}
-              </p>
+            <div className="mt-8 grid gap-x-8 gap-y-6 border-y border-[#10141d]/[0.12] py-6 text-left sm:grid-cols-3">
+              {proofStats.map((stat) => (
+                <div key={stat.value}>
+                  <p className="text-4xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-5xl">{stat.value}</p>
+                  <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="relative min-h-[18rem] lg:min-h-[22rem]">
+            <div className="product-drift absolute left-0 top-6 w-[82%] rotate-[-1.5deg] border border-[#10141d]/[0.12] bg-[#080b11] p-2 shadow-[0_26px_80px_rgba(16,20,29,0.2)]">
+              <div className="aspect-[91/60] overflow-hidden bg-black">
+                <img src="/gallery-previews/home-desktop/dj-slyd.png" alt="" className="h-full w-full object-contain object-center" />
+              </div>
+            </div>
+            <div className="product-drift-slow absolute bottom-0 right-4 w-[26%] min-w-[5rem] rotate-[4deg] border border-[#10141d]/[0.16] bg-[#080b11] p-1.5 shadow-[0_22px_60px_rgba(16,20,29,0.22)]">
+              <div className="aspect-[0.48/1] overflow-hidden bg-black">
+                <img src="/gallery-previews/home-mobile/dj-slyd.png" alt="" className="h-full w-full object-cover object-top" />
+              </div>
+            </div>
+          </div>
         </div>
       </PageShell>
     </section>

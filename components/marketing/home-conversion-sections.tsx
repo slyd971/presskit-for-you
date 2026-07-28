@@ -31,6 +31,25 @@ export function ComparisonSection() {
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
               En quelques secondes, votre page doit poser le contexte, montrer votre niveau et rendre le contact évident.
             </p>
+            <div className="mt-8 hidden max-w-md border-y border-white/[0.12] py-5 lg:block">
+              <div className="grid grid-cols-[0.9fr_1.1fr] gap-4">
+                <div className="space-y-3">
+                  <span className="block h-3 w-24 bg-white" />
+                  <span className="block h-2 w-36 bg-white/24" />
+                  <span className="block h-2 w-28 bg-white/18" />
+                  <span className="mt-5 block h-8 w-24 bg-white" />
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <span className="h-16 border border-white/12 bg-white/[0.045]" />
+                  <span className="h-16 border border-white/12 bg-white/[0.07]" />
+                  <span className="h-16 border border-white/12 bg-white/[0.06]" />
+                  <span className="h-16 border border-white/12 bg-white/[0.04]" />
+                </div>
+              </div>
+              <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.42]">
+                Bio · médias · preuves · contact
+              </p>
+            </div>
           </div>
           <Reveal delay={0.08}>
             <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 [-ms-overflow-style:none] [scrollbar-width:none] md:hidden [&::-webkit-scrollbar]:hidden">

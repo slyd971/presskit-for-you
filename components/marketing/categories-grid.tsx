@@ -183,14 +183,14 @@ export function CategoriesGrid() {
                 href={example.externalDemoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="case-study-card group flex h-full min-h-[39rem] flex-col overflow-visible p-4 md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
+                className="case-study-card group flex h-full min-h-[35rem] flex-col overflow-visible p-4 md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
                 style={{ "--case-accent": example.accent } as CSSProperties}
               >
                 <span
                   className="absolute left-4 right-4 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.22] to-transparent opacity-70 transition duration-300 group-hover:opacity-100 md:left-5 md:right-5"
                   aria-hidden="true"
                 />
-                <div className="relative h-[22rem] overflow-visible md:h-[36rem] lg:h-[27rem]">
+                <div className="relative h-[18rem] overflow-visible md:h-[36rem] lg:h-[27rem]">
                   <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
                     <div className="overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
                       <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">

@@ -485,6 +485,18 @@ svg {
   will-change: transform;
 }
 
+.product-drift {
+  animation: product-drift 9s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.product-drift-slow {
+  animation: product-drift-slow 11s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
 @keyframes hero-device-float {
   0%,
   100% {
@@ -504,6 +516,28 @@ svg {
 
   50% {
     transform: translate3d(0, -0.65rem, 0) rotate(0.35deg);
+  }
+}
+
+@keyframes product-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1.5deg);
+  }
+
+  50% {
+    transform: translate3d(0, -0.45rem, 0) rotate(-0.9deg);
+  }
+}
+
+@keyframes product-drift-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(4deg);
+  }
+
+  50% {
+    transform: translate3d(0, -0.6rem, 0) rotate(3.2deg);
   }
 }
 

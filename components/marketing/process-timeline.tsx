@@ -163,27 +163,40 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
 
         </div>
 
-        <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:mt-12 md:grid-cols-3 md:gap-4">
           {dossierCards.map((card, index) => (
-            <motion.article
-              key={card.status}
-              initial={{ y: 30, opacity: 0, rotate: index === 1 ? 0.25 : -0.25 }}
-              whileInView={{ y: 0, opacity: 1, rotate: index === 1 ? 0.1 : -0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.75, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -8, scale: 1.025 }}
-              className="overflow-hidden border border-[#10141d]/10 bg-[#f7f6f1] text-[#10141d] shadow-[0_24px_80px_rgba(0,0,0,0.22)] transition-colors duration-500 ease-out hover:border-[#10141d]/20 hover:shadow-[0_34px_110px_rgba(0,0,0,0.32)]"
-            >
-              <CompactVisual type={card.visual} />
-              <div className="p-6 md:p-7">
-                <div className="flex items-center justify-between gap-4 border-b border-[#10141d]/12 pb-4">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#10141d]/48">{card.status}</p>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#10141d]/34">{card.meta}</p>
+            <div key={card.status} className="relative">
+              <motion.article
+                initial={{ y: 30, opacity: 0, rotate: index === 1 ? 0.25 : -0.25 }}
+                whileInView={{ y: 0, opacity: 1, rotate: index === 1 ? 0.1 : -0.1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.75, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -8, scale: 1.025 }}
+                className="h-full overflow-hidden border border-[#10141d]/10 bg-[#f7f6f1] text-[#10141d] shadow-[0_24px_80px_rgba(0,0,0,0.22)] transition-colors duration-500 ease-out hover:border-[#10141d]/20 hover:shadow-[0_34px_110px_rgba(0,0,0,0.32)]"
+              >
+                <CompactVisual type={card.visual} />
+                <div className="p-6 md:p-7">
+                  <div className="flex items-center justify-between gap-4 border-b border-[#10141d]/12 pb-4">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#10141d]/48">{card.status}</p>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#10141d]/34">{card.meta}</p>
+                  </div>
+                  <h3 className="mt-6 text-4xl font-semibold leading-none tracking-tighter2 md:text-5xl">{card.title}</h3>
+                  <p className="mt-5 text-sm leading-7 text-[#303744]">{card.description}</p>
                 </div>
-                <h3 className="mt-6 text-4xl font-semibold leading-none tracking-tighter2 md:text-5xl">{card.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-[#303744]">{card.description}</p>
-              </div>
-            </motion.article>
+              </motion.article>
+              {index < dossierCards.length - 1 ? (
+                <motion.div
+                  initial={{ opacity: 0, scaleY: 0.35 }}
+                  whileInView={{ opacity: 1, scaleY: 1 }}
+                  viewport={{ once: true, amount: 0.8 }}
+                  transition={{ duration: 0.55, delay: 0.2 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  className="pointer-events-none absolute left-1/2 top-full z-10 flex h-5 origin-top -translate-x-1/2 items-center justify-center md:hidden"
+                  aria-hidden="true"
+                >
+                  <span className="h-full w-px bg-gradient-to-b from-white/50 via-white/25 to-transparent" />
+                </motion.div>
+              ) : null}
+            </div>
           ))}
         </div>
 
@@ -192,7 +205,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 flex justify-center md:mt-12"
+          className="mt-10 flex justify-center pb-4 md:mt-12 md:pb-0"
         >
           <Button href="#exemples" className="shrink-0 px-7 py-4 text-[15px]">
             Découvrir un exemple
