@@ -5,7 +5,6 @@ import type { CSSProperties } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
 
 const homeExamples = [
@@ -165,12 +164,14 @@ export function CategoriesGrid() {
   return (
     <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-18 md:py-28" aria-labelledby="categories-title">
       <PageShell>
-        <SectionHeading
-          eyebrow="Exemples"
-          title="Inspirez-vous de press kits déjà en ligne."
-          description="Chaque exemple montre un rendu réel, avec ses images, ses sections, ses boutons de contact et son adaptation mobile."
-          id="categories-title"
-        />
+        <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
+          <h2 id="categories-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+            Inspirez-vous de press kits déjà en ligne.
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
+            Chaque exemple montre un rendu réel, avec ses images, ses sections, ses boutons de contact et son adaptation mobile.
+          </p>
+        </div>
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-2 [&::-webkit-scrollbar]:hidden">
           {homeExamples.slice(0, 10).map((example, index) => (
             <Reveal

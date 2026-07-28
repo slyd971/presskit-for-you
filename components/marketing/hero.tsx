@@ -109,7 +109,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="section-wash relative overflow-hidden pb-16 pt-10 md:pb-28 md:pt-24" aria-labelledby="hero-title">
+    <section className="section-wash relative overflow-hidden pb-8 pt-28 md:pb-16 md:pt-32" aria-labelledby="hero-title">
       <div className="signature-thread absolute left-[8%] top-8 h-[72%] w-px opacity-70" aria-hidden="true" />
       <motion.div
         className="absolute inset-0"

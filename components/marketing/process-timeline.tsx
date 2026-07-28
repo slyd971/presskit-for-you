@@ -1,6 +1,5 @@
 import { processSteps } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
 
 const stepLabels = ["Cadrage", "Style", "Build", "Live"];
@@ -11,16 +10,18 @@ type ProcessTimelineProps = {
 
 export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
   return (
-    <section id="methode" className="section-tone-cool scroll-mt-28 pt-10 pb-16 md:pt-12 md:pb-20" aria-labelledby="process-title">
+    <section id="methode" className="section-tone-cool scroll-mt-28 py-14 md:py-18" aria-labelledby="process-title">
       <PageShell>
         <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           {showHeading ? (
-            <SectionHeading
-              eyebrow="Méthode"
-              title="On part de vos contenus, puis on construit la page."
-              description="Brief, direction visuelle, intégration et mise en ligne : chaque étape sert à transformer vos textes, images et liens en press kit prêt à envoyer."
-              id="process-title"
-            />
+            <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
+              <h2 id="process-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+                On part de vos contenus, puis on construit la page.
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
+                Brief, direction visuelle, intégration et mise en ligne : chaque étape sert à transformer vos textes, images et liens en press kit prêt à envoyer.
+              </p>
+            </div>
           ) : null}
           <div className="relative border-y border-white/[0.1]">
             {processSteps.map((step, index) => (

@@ -4,30 +4,29 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
 
 const proofStats = [
-  { value: "48h", label: "pour cadrer le brief et la direction" },
-  { value: "10", label: "exemples réels déjà en ligne" },
+  { value: "7 jours", label: "ouvrés maximum pour la livraison" },
+  { value: "+ de 10", label: "exemples réels déjà en ligne" },
   { value: "1 lien", label: "prêt à envoyer aux bons contacts" },
 ];
 
 export function ProofStats() {
   return (
-    <section className="section-divider section-wash py-12 md:py-18" aria-labelledby="proof-stats-title">
+    <section className="bg-white py-8 text-[#10141d] md:py-10" aria-labelledby="proof-stats-title">
       <PageShell>
         <div className="mx-auto max-w-3xl text-center">
-          <SectionHeading
-            eyebrow="Crédibilité"
-            title="Des clients qui repartent avec un lien clair, pro et prêt à envoyer."
-            description="Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité."
-            id="proof-stats-title"
-            align="center"
-          />
+          <h2 id="proof-stats-title" className="mx-auto max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
+            Des clients qui repartent avec un lien clair, pro et prêt à envoyer.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#4d5561] md:text-lg">
+            Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité.
+          </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-4xl gap-6 text-center md:mt-12 md:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-4xl gap-5 text-center md:mt-9 md:grid-cols-3">
           {proofStats.map((stat) => (
-            <div key={stat.value} className="px-4 py-4">
-              <p className="text-5xl font-semibold leading-none tracking-tighter2 text-white md:text-6xl">{stat.value}</p>
-              <p className="mx-auto mt-4 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-white/[0.5]">
+            <div key={stat.value} className="px-4 py-3">
+              <p className="text-5xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-6xl">{stat.value}</p>
+              <p className="mx-auto mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
                 {stat.label}
               </p>
             </div>
@@ -45,7 +44,7 @@ export function SocialProof() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading
             eyebrow="Témoignages"
-            title="Des retours concrets après mise en ligne."
+            title="Témoignages de nos clients"
             description="Ils parlent de clarté, de crédibilité et d'un rendu plus professionnel pour présenter leur travail."
             id="social-proof-title"
             align="center"

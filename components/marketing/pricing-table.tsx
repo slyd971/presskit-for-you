@@ -27,7 +27,7 @@ const complementaryOptions = [
   },
   {
     name: "Séance photo professionnelle",
-    price: "+100 €",
+    price: "Sur devis",
     description: "Pour créer les visuels manquants quand vos photos actuelles ne rendent pas justice au projet.",
   },
 ];

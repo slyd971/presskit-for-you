@@ -1,5 +1,4 @@
 import { Reveal } from "@/components/ui/reveal";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
 
 const comparisonRows = [
@@ -25,12 +24,14 @@ export function ComparisonSection() {
     <section className="section-divider section-tone-cool py-18 md:py-32" aria-labelledby="comparison-title">
       <PageShell>
         <div className="grid gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
-          <SectionHeading
-            eyebrow="Positionnement"
-            title="Comprendre vite. Donner envie de répondre."
-            description="En quelques secondes, votre page doit poser le contexte, montrer votre niveau et rendre le contact évident."
-            id="comparison-title"
-          />
+          <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
+            <h2 id="comparison-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+              Comprendre vite. Donner envie de répondre.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
+              En quelques secondes, votre page doit poser le contexte, montrer votre niveau et rendre le contact évident.
+            </p>
+          </div>
           <Reveal delay={0.08}>
             <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 [-ms-overflow-style:none] [scrollbar-width:none] md:hidden [&::-webkit-scrollbar]:hidden">
               {comparisonRows.map((row, index) => (
