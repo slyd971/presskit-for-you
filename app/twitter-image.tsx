@@ -13,9 +13,8 @@ export default function TwitterImage() {
   return new ImageResponse(
     (
       <OgImage
-        eyebrow="Press kits digitaux premium"
-        title="Donne a ton talent une presentation a la hauteur de ton ambition."
-        description="Des press kits premium pour artistes, talents et independants qui veulent mieux se presenter, rassurer plus vite et convertir."
+        title="Plus pro qu'Instagram. Plus impactant qu'un PDF."
+        description="Presentez votre activite, vos contenus et vos references dans une experience premium prete a partager."
       />
     ),
     size,

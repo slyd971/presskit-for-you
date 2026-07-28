@@ -1,10 +1,9 @@
 type OgImageProps = {
   title: string;
-  eyebrow: string;
   description: string;
 };
 
-export function OgImage({ title, eyebrow, description }: OgImageProps) {
+export function OgImage({ title, description }: OgImageProps) {
   return (
     <div
       style={{
@@ -14,8 +13,8 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
         position: "relative",
         overflow: "hidden",
         background:
-          "radial-gradient(circle at 12% 18%, rgba(255,145,82,0.28), transparent 24%), radial-gradient(circle at 82% 14%, rgba(255,255,255,0.08), transparent 18%), linear-gradient(180deg, #0a0d13 0%, #090c12 45%, #080a10 100%)",
-        color: "#f7f5f0",
+          "radial-gradient(circle at 18% 0%, rgba(184,193,205,0.08), transparent 26%), radial-gradient(circle at 78% 20%, rgba(255,255,255,0.06), transparent 20%), linear-gradient(180deg, #0d1118 0%, #171d28 48%, #111620 100%)",
+        color: "#ffffff",
         fontFamily: "sans-serif",
       }}
     >
@@ -23,10 +22,10 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.3,
+          opacity: 0.22,
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
-          backgroundSize: "88px 88px",
+            "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
+          backgroundSize: "92px 92px",
           maskImage: "radial-gradient(circle at center, black 45%, transparent 95%)",
         }}
       />
@@ -34,26 +33,54 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
       <div
         style={{
           position: "absolute",
-          right: -80,
-          top: -80,
-          height: 280,
-          width: 280,
-          borderRadius: 9999,
-          background: "rgba(255,255,255,0.08)",
-          filter: "blur(60px)",
+          left: 0,
+          right: 0,
+          top: 0,
+          height: 92,
+          borderBottom: "1px solid rgba(255,255,255,0.12)",
+          background: "rgba(11,14,20,0.92)",
         }}
       />
 
       <div
         style={{
           position: "absolute",
-          left: -40,
-          bottom: -120,
-          height: 300,
-          width: 300,
-          borderRadius: 9999,
-          background: "rgba(255,145,82,0.14)",
-          filter: "blur(70px)",
+          left: 64,
+          top: 28,
+          display: "flex",
+          alignItems: "center",
+          gap: 18,
+          fontSize: 26,
+          fontWeight: 800,
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 42,
+            width: 42,
+            border: "1px solid rgba(255,255,255,0.26)",
+            fontSize: 18,
+            letterSpacing: "-0.08em",
+          }}
+        >
+          PK
+        </div>
+        <span>PressKit For You</span>
+      </div>
+
+      <div
+        style={{
+          position: "absolute",
+          left: 64,
+          right: 64,
+          bottom: 54,
+          height: 1,
+          background: "linear-gradient(90deg, rgba(255,255,255,0.36), transparent)",
         }}
       />
 
@@ -63,51 +90,34 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
-          gap: 36,
-          padding: "58px 64px",
+          gap: 48,
+          padding: "138px 64px 58px",
         }}
       >
         <div
           style={{
             display: "flex",
-            maxWidth: 730,
+            maxWidth: 760,
             flexDirection: "column",
             justifyContent: "space-between",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-            <div
-              style={{
-                display: "flex",
-                width: "auto",
-                borderRadius: 9999,
-                border: "1px solid rgba(255,255,255,0.16)",
-                background: "rgba(255,255,255,0.06)",
-                padding: "10px 18px",
-                fontSize: 18,
-                letterSpacing: "0.28em",
-                textTransform: "uppercase",
-                color: "rgba(247,245,240,0.76)",
-              }}
-            >
-              {eyebrow}
-            </div>
-
+          <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: 20,
+                gap: 24,
               }}
             >
               <h1
                 style={{
                   margin: 0,
-                  fontSize: 72,
-                  lineHeight: 1.02,
+                  fontSize: 78,
+                  lineHeight: 0.98,
                   fontWeight: 700,
-                  letterSpacing: "-0.04em",
-                  maxWidth: 680,
+                  letterSpacing: "-0.045em",
+                  maxWidth: 730,
                 }}
               >
                 {title}
@@ -115,10 +125,10 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
               <p
                 style={{
                   margin: 0,
-                  maxWidth: 620,
+                  maxWidth: 670,
                   fontSize: 28,
                   lineHeight: 1.45,
-                  color: "rgba(247,245,240,0.72)",
+                  color: "rgba(255,255,255,0.72)",
                 }}
               >
                 {description}
@@ -130,20 +140,20 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 18,
+              gap: 0,
+              borderTop: "1px solid rgba(255,255,255,0.14)",
+              borderBottom: "1px solid rgba(255,255,255,0.14)",
             }}
           >
-            {["Booking", "Presse", "Prospects"].map((item) => (
+            {["+ de 10 exemples", "Livraison sous 7 jours", "1 lien a partager"].map((item) => (
               <div
                 key={item}
                 style={{
                   display: "flex",
-                  borderRadius: 9999,
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  background: "rgba(255,255,255,0.04)",
-                  padding: "12px 18px",
+                  borderRight: "1px solid rgba(255,255,255,0.12)",
+                  padding: "16px 24px",
                   fontSize: 20,
-                  color: "rgba(247,245,240,0.72)",
+                  color: "rgba(255,255,255,0.72)",
                 }}
               >
                 {item}
@@ -155,101 +165,65 @@ export function OgImage({ title, eyebrow, description }: OgImageProps) {
         <div
           style={{
             display: "flex",
-            minWidth: 320,
+            minWidth: 330,
             flexDirection: "column",
             justifyContent: "space-between",
+            alignItems: "flex-end",
           }}
         >
           <div
             style={{
               display: "flex",
-              alignSelf: "flex-end",
-              borderRadius: 40,
-              background:
-                "linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.025))",
-              padding: 24,
-              boxShadow: "0 24px 70px rgba(0,0,0,0.24)",
+              position: "relative",
+              height: 360,
+              width: 330,
+              border: "1px solid rgba(255,255,255,0.16)",
+              background: "#080b11",
+              padding: 10,
+              boxShadow: "0 28px 90px rgba(0,0,0,0.42)",
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: 16,
-                minWidth: 256,
+                width: "100%",
+                height: "100%",
+                background: "linear-gradient(180deg,#f6f7f8 0%,#ffffff 100%)",
+                color: "#10141d",
+                padding: 26,
+                justifyContent: "space-between",
               }}
             >
               <div
                 style={{
                   display: "flex",
-                  width: "100%",
-                  borderRadius: 30,
-                  background:
-                    "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))",
-                  padding: 20,
-                  minHeight: 120,
+                  flexDirection: "column",
+                  gap: 14,
                 }}
               >
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                  <span
-                    style={{
-                      display: "flex",
-                      fontSize: 18,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.2em",
-                      color: "rgba(247,245,240,0.5)",
-                    }}
-                  >
-                    PressKit For You
-                  </span>
-                  <span
-                    style={{
-                      display: "flex",
-                      fontSize: 34,
-                      lineHeight: 1.08,
-                      fontWeight: 700,
-                    }}
-                  >
-                    Une presence digitale premium
-                  </span>
-                </div>
+                <span style={{ display: "flex", height: 8, width: 96, background: "#10141d" }} />
+                <span style={{ display: "flex", height: 8, width: 172, background: "rgba(16,20,29,0.22)" }} />
+                <span style={{ display: "flex", height: 8, width: 138, background: "rgba(16,20,29,0.16)" }} />
               </div>
 
-              {[
-                "Presentation claire",
-                "Image plus credible",
-                "Lien unique a partager",
-              ].map((item) => (
-                <div
-                  key={item}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    borderRadius: 24,
-                    background: "rgba(255,255,255,0.04)",
-                    padding: "14px 16px",
-                    fontSize: 20,
-                    color: "rgba(247,245,240,0.76)",
-                  }}
-                >
-                  {item}
-                </div>
-              ))}
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {[220, 180, 245, 150].map((width) => (
+                  <span key={width} style={{ display: "flex", height: 18, width, background: "rgba(16,20,29,0.1)" }} />
+                ))}
+              </div>
+
+              <div style={{ display: "flex", height: 58, width: "100%", background: "#10141d" }} />
             </div>
           </div>
 
           <div
             style={{
               display: "flex",
-              alignSelf: "flex-end",
-              borderRadius: 9999,
-              border: "1px solid rgba(255,255,255,0.14)",
-              background: "rgba(255,255,255,0.06)",
-              padding: "12px 20px",
+              border: "1px solid rgba(255,255,255,0.16)",
+              padding: "14px 22px",
               fontSize: 20,
-              color: "rgba(247,245,240,0.8)",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.78)",
             }}
           >
             www.presskit.fr
