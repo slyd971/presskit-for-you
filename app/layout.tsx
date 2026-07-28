@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph-image?v=20260728-2",
         width: 1200,
         height: 630,
         alt: "PressKit For You - press kits digitaux premium",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PressKit For You",
     description: siteConfig.description,
-    images: ["/twitter-image"],
+    images: ["/twitter-image?v=20260728-2"],
   },
   robots: {
     index: true,
