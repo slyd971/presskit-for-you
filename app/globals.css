@@ -425,6 +425,15 @@ svg {
   }
 }
 
+.phone-preview-scroll {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .hero-device-float {
   animation: hero-device-float 7s ease-in-out infinite;
   transform-origin: center;

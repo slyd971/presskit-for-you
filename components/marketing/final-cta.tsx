@@ -7,8 +7,7 @@ export function FinalCta() {
     <section id="contact" className="section-divider section-contact scroll-mt-28 py-18 md:py-28" aria-labelledby="final-cta-title">
       <PageShell className="max-w-5xl">
         <div className="py-8 text-center md:py-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.56]">Prochain échange</p>
-          <h2 id="final-cta-title" className="mx-auto mt-5 max-w-2xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-6xl">
+          <h2 id="final-cta-title" className="mx-auto max-w-2xl text-4xl font-semibold leading-[1.03] tracking-tighter2 text-white md:text-6xl">
             Parlez-nous de votre univers.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-white/[0.7]">

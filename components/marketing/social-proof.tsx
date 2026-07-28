@@ -46,9 +46,6 @@ export function SocialProof() {
               <article className="motion-line flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.035] px-5 py-6 md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
                 <div className="border-b border-white/[0.1] pb-5">
                   <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
-                  <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.45]">
-                    Témoignage client
-                  </p>
                 </div>
                 <p className="flex-1 pt-7 text-[1.05rem] font-medium leading-8 text-white/[0.84] md:text-[1.12rem] md:leading-9">
                   &ldquo;{item.quote}&rdquo;

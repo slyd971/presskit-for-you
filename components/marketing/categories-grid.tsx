@@ -19,7 +19,7 @@ const homeExamples = [
     objective: "Présenter œuvres, démarche et contact sans diluer l’image.",
     result: "Une vitrine contemplative, claire et plus crédible pour les opportunités.",
     desktopImage: "/gallery-previews/home-desktop/melymelow.png",
-    mobileImage: "/gallery-previews/home-mobile/melymelow.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-melymelow.jpg",
     externalDemoUrl: "https://presskit.melymelow.art/",
     accent: "#F4C26B",
     gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
@@ -34,7 +34,7 @@ const homeExamples = [
     objective: "Donner envie d’écouter, comprendre et contacter rapidement.",
     result: "Une page musicale plus structurée qu’un lien bio classique.",
     desktopImage: "/gallery-previews/home-desktop/sherin.png",
-    mobileImage: "/gallery-previews/home-mobile/sherin.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.jpg",
     externalDemoUrl: "https://sherin.presskit.fr/",
     accent: "#F4C26B",
     gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
@@ -49,7 +49,7 @@ const homeExamples = [
     objective: "Faire sentir l’énergie, le propos et les possibilités de collaboration.",
     result: "Une présence plus incarnée, pensée pour convaincre au-delà d’une vidéo.",
     desktopImage: "/gallery-previews/home-desktop/krimo.png",
-    mobileImage: "/gallery-previews/home-mobile/krimo.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.jpg",
     externalDemoUrl: "https://krimo-dancer.presskit.fr/",
     accent: "#D5A928",
     gradient: "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
@@ -79,7 +79,7 @@ const homeExamples = [
     objective: "Transformer l’énergie de scène en argument de booking.",
     result: "Un lien vivant, plus simple à envoyer aux lieux et organisateurs.",
     desktopImage: "/gallery-previews/home-desktop/soyumi.png",
-    mobileImage: "/gallery-previews/home-mobile/soyumi.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.jpg",
     externalDemoUrl: "https://soyumi.presskit.fr/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -94,7 +94,7 @@ const homeExamples = [
     objective: "Installer une image élégante, lisible et corporate-ready.",
     result: "Une présentation directe qui clarifie le niveau et les références.",
     desktopImage: "/gallery-previews/home-desktop/flo.png",
-    mobileImage: "/gallery-previews/home-mobile/flo.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-djflo.jpg",
     externalDemoUrl: "https://www.djfloparis.com/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -109,7 +109,7 @@ const homeExamples = [
     objective: "Montrer la traction, l’ambiance et le potentiel sponsor.",
     result: "Un dossier digital plus convaincant qu’un PDF statique.",
     desktopImage: "/gallery-previews/home-desktop/la-bringue.png",
-    mobileImage: "/gallery-previews/home-mobile/la-bringue.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.jpg",
     externalDemoUrl: "https://labringue-party.vercel.app/",
     accent: "#FF8DAA",
     gradient: "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
@@ -145,18 +145,19 @@ const homeExamples = [
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
   },
   {
-    slug: "yoruboy",
-    title: "Yoruboy",
-    category: "DJ",
-    exampleName: "Yoruboy",
-    description: "Un press kit DJ direct, premium et prêt à envoyer aux bookers.",
-    context: "DJ avec besoin d’un support simple à partager.",
-    objective: "Installer un lien plus propre qu’un envoi de médias dispersés.",
-    result: "Une présentation claire pour montrer univers, niveau et contact.",
-    desktopImage: "/dj-yoruboy-desktop.png",
-    externalDemoUrl: "https://yoruboy-dj.presskit.fr",
-    accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    slug: "black-moz",
+    title: "Black Moz",
+    category: "Chanteur / Rap",
+    exampleName: "Black Moz",
+    description: "Un press kit rap, slam et poésie engagée pour présenter univers, écoute et booking.",
+    context: "Artiste rap/slam avec un univers éditorial affirmé.",
+    objective: "Mettre en avant la signature artistique, les médias et le contact booking.",
+    result: "Une présence sobre, premium et mémorable, prête à partager.",
+    desktopImage: "/gallery-previews/home-desktop/black-moz.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-blackmoz.jpg",
+    externalDemoUrl: "https://black-moz.presskit.fr/",
+    accent: "#C8BBAE",
+    gradient: "from-[#C8BBAE]/28 via-[#FFFFFF]/10 to-transparent",
   },
 ];
 
@@ -188,7 +189,7 @@ export function CategoriesGrid() {
                   className="absolute left-4 right-4 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.22] to-transparent opacity-70 transition duration-300 group-hover:opacity-100 md:left-5 md:right-5"
                   aria-hidden="true"
                 />
-                <div className="relative h-60 overflow-hidden pb-8 md:h-72">
+                <div className="relative h-60 overflow-visible pb-10 md:h-72 md:pb-12">
                   <div className="absolute left-1/2 top-2 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[-0.4deg]">
                     <div className="overflow-hidden rounded-t-[0.9rem] border border-white/[0.16] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.1)]">
                       <div className="relative aspect-[1.58/1] overflow-hidden rounded-t-[0.62rem] bg-black">
@@ -203,14 +204,14 @@ export function CategoriesGrid() {
                     <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
                   </div>
                   {example.mobileImage ? (
-                    <div className="absolute bottom-6 right-2 z-20 w-[23%] min-w-[3.7rem] rotate-[4deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:bottom-7 md:right-4 md:w-[24%] md:min-w-[4.35rem]">
+                    <div className="absolute -bottom-1 -right-2 z-20 w-[27%] min-w-[4.1rem] rotate-[5deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-2 md:-right-3 md:w-[28%] md:min-w-[4.85rem]">
                       <div className="relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                         <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                           <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
                           <img
                             src={example.mobileImage}
                             alt={`${example.title} en version mobile`}
-                            className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-[1.03]"
+                            className="phone-preview-scroll transition duration-700 group-hover:scale-[1.03]"
                           />
                           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14),transparent_28%,transparent_76%,rgba(255,255,255,0.055))]" />
                         </div>
@@ -224,9 +225,6 @@ export function CategoriesGrid() {
                   </p>
                   <div className="mt-3 flex items-end justify-between gap-4">
                     <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
-                    <span className="hidden text-[10px] font-semibold uppercase tracking-[0.18em] text-white/[0.42] md:block">
-                      Étude {String(index + 1).padStart(2, "0")}
-                    </span>
                   </div>
                 </div>
                 <dl className="relative mt-5 grid flex-1 gap-4 text-sm leading-6">

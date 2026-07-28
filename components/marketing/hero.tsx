@@ -1,7 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { X } from "lucide-react";
+import { motion } from "framer-motion";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 
@@ -9,78 +8,85 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
 
-const heroKits = [
+type HeroKit = {
+  title: string;
+  category: string;
+  desktopImage: string;
+  mobileImage?: string;
+  heroMobileImage?: string;
+  externalDemoUrl: string;
+  accent: string;
+};
+
+const heroKits: HeroKit[] = [
   {
     title: "MelyMelow",
     category: "Artiste peintre",
     desktopImage: "/gallery-previews/home-desktop/melymelow.png",
-    mobileImage: "/gallery-previews/home-mobile/melymelow.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-melymelow.jpg",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpg",
+    externalDemoUrl: "https://presskit.melymelow.art/",
     accent: "#F4C26B",
-    objective: "Présenter œuvres, démarche et contact pro.",
-    result: "Un univers artistique lisible, prêt à envoyer aux galeries et partenaires.",
   },
   {
     title: "Sherin",
     category: "Chanteuse",
     desktopImage: "/gallery-previews/home-desktop/sherin.png",
-    mobileImage: "/gallery-previews/home-mobile/sherin.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.jpg",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-sherin.jpg",
+    externalDemoUrl: "https://sherin.presskit.fr/",
     accent: "#F46B8D",
-    objective: "Centraliser sortie, médias, chiffres et booking.",
-    result: "Sortie, médias, chiffres et booking réunis dans un récit clair.",
   },
   {
     title: "DJ SLY'D",
     category: "DJ",
     desktopImage: "/gallery-previews/home-desktop/dj-slyd.png",
     mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
+    externalDemoUrl: "https://djslyd.presskit.fr/",
     accent: "#FF9152",
-    objective: "Remplacer les envois dispersés par un lien clair.",
-    result: "Un support net pour présenter univers, médias, résidences et contact booking.",
   },
   {
     title: "KRIMO",
     category: "Danseur",
     desktopImage: "/gallery-previews/home-desktop/krimo.png",
-    mobileImage: "/gallery-previews/home-mobile/krimo.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.jpg",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-krimo.jpg",
+    externalDemoUrl: "https://krimo-dancer.presskit.fr/",
     accent: "#D5A928",
-    objective: "Faire sentir l’énergie et ouvrir la collaboration.",
-    result: "Une présence vidéo-first pour performer, convaincre et collaborer.",
   },
   {
     title: "DJ MACK",
     category: "DJ & MC",
     desktopImage: "/gallery-previews/home-desktop/dj-mack.png",
     mobileImage: "/gallery-previews/home-mobile/dj-mack.png",
+    externalDemoUrl: "https://dj-mack.presskit.fr/",
     accent: "#CE5DFF",
-    objective: "Rassurer bookers, marques et scènes internationales.",
-    result: "Un support premium pour rassurer bookers, marques et scènes internationales.",
   },
   {
     title: "Soyumi",
     category: "DJ",
     desktopImage: "/gallery-previews/home-desktop/soyumi.png",
-    mobileImage: "/gallery-previews/home-mobile/soyumi.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.jpg",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-soyumi.jpg",
+    externalDemoUrl: "https://soyumi.presskit.fr/",
     accent: "#FF9152",
-    objective: "Transformer l’énergie club en argument de booking.",
-    result: "Une énergie club traduite dans un lien rapide à comprendre.",
   },
   {
     title: "La Bringue",
     category: "Organisateur",
     desktopImage: "/gallery-previews/home-desktop/la-bringue.png",
-    mobileImage: "/gallery-previews/home-mobile/la-bringue.png",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.jpg",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-labringueparty.jpg",
+    externalDemoUrl: "https://labringue-party.vercel.app/",
     accent: "#63E6BE",
-    objective: "Montrer communauté, traction et potentiel partenaire.",
-    result: "Communauté, sponsors et preuves de traction mis en scène.",
   },
   {
     title: "Arthur Chaps",
     category: "DJ",
     desktopImage: "/gallery-previews/home-desktop/arthur-chaps.png",
     mobileImage: "/gallery-previews/home-mobile/arthur-chaps.png",
+    externalDemoUrl: "https://arthur-chaps.presskit.fr/",
     accent: "#5FA8FF",
-    objective: "Clarifier style, références et culture club.",
-    result: "Un positionnement club plus net, plus mémorable, plus facile à partager.",
   },
 ];
 
@@ -92,9 +98,8 @@ const carouselSlots = [
 
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedKit, setSelectedKit] = useState<(typeof heroKits)[number] | null>(null);
-  const [previewMode, setPreviewMode] = useState<"desktop" | "mobile">("desktop");
   const activeKit = heroKits[activeIndex % heroKits.length];
+  const activeMobileImage = activeKit.heroMobileImage ?? activeKit.mobileImage;
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -103,39 +108,6 @@ export function Hero() {
 
     return () => window.clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    if (!selectedKit) return;
-    const scrollY = window.scrollY;
-    const previousBodyOverflow = document.body.style.overflow;
-    const previousBodyPosition = document.body.style.position;
-    const previousBodyTop = document.body.style.top;
-    const previousBodyWidth = document.body.style.width;
-    const previousHtmlOverflow = document.documentElement.style.overflow;
-
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = "100%";
-
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setSelectedKit(null);
-      }
-    };
-
-    window.addEventListener("keydown", onKeyDown);
-    return () => {
-      window.removeEventListener("keydown", onKeyDown);
-      document.documentElement.style.overflow = previousHtmlOverflow;
-      document.body.style.overflow = previousBodyOverflow;
-      document.body.style.position = previousBodyPosition;
-      document.body.style.top = previousBodyTop;
-      document.body.style.width = previousBodyWidth;
-      window.scrollTo(0, scrollY);
-    };
-  }, [selectedKit]);
 
   return (
     <section className="section-wash relative overflow-hidden pb-16 pt-10 md:pb-28 md:pt-24" aria-labelledby="hero-title">
@@ -185,10 +157,12 @@ export function Hero() {
               const kit = heroKits[kitIndex];
 
               return (
-                <motion.button
+                <motion.a
                   key={`${slot.offset}-${kit.title}`}
-                  type="button"
-                  aria-label={`Prévisualiser ${kit.title}`}
+                  href={kit.externalDemoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Voir le rendu live ${kit.title}`}
                   className="group absolute hidden cursor-pointer text-left outline-none sm:block"
                   style={{
                     left: "50%",
@@ -208,10 +182,6 @@ export function Hero() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   whileHover={{ scale: slot.scale + 0.05, y: -10, rotate: slot.rotate * 0.55 }}
-                  onClick={() => {
-                    setSelectedKit(kit);
-                    setPreviewMode("desktop");
-                  }}
                 >
                   <span
                     className="absolute -inset-8 rounded-full opacity-0 blur-3xl transition duration-700 group-hover:opacity-70"
@@ -219,183 +189,85 @@ export function Hero() {
                     aria-hidden="true"
                   />
                   <span className="relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] group-hover:shadow-[0_42px_130px_rgba(0,0,0,0.58)]">
-                    <span className="block aspect-[1.58/1] overflow-hidden bg-black">
+                    <span className="block aspect-[91/60] overflow-hidden bg-black">
                       <img
                         src={kit.desktopImage}
                         alt=""
-                        className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.035]"
+                        className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-[1.02]"
                       />
                     </span>
                     <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.2),transparent_22%,transparent_74%,rgba(255,255,255,0.07))]" />
-                    <span className={`absolute bottom-3 left-3 right-3 border-t border-white/[0.12] bg-black/36 px-3 py-2 text-white backdrop-blur-md transition duration-300 ${slot.offset === 0 ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}>
-                      <span>
-                        <span className="block text-xs font-semibold">{kit.title}</span>
-                        <span className="block text-[10px] uppercase tracking-[0.16em] text-white/56">{kit.category}</span>
-                        <span className="mt-1 hidden max-w-[20rem] text-[11px] leading-4 text-white/62 lg:block">{kit.objective}</span>
-                      </span>
-                      <span className="mt-2 inline-flex items-center gap-2 text-[11px] font-semibold text-white">
-                        Prévisualiser <span aria-hidden="true">→</span>
-                      </span>
-                    </span>
                   </span>
-                </motion.button>
+                </motion.a>
               );
             })}
-            <motion.button
-              type="button"
-              aria-label={`Prévisualiser ${activeKit.title} en mobile`}
-              className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none sm:block"
-              initial={false}
-              animate={{ y: [0, -8, 0], rotate: -2 }}
-              transition={{ y: { duration: 6.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 0.8 } }}
-              whileHover={{ scale: 1.05, y: -12 }}
-              onClick={() => {
-                setSelectedKit(activeKit);
-                setPreviewMode("mobile");
-              }}
-            >
-              <span
-                className="absolute -inset-5 rounded-full opacity-35 blur-2xl transition duration-500 group-hover:opacity-60"
-                style={{ background: activeKit.accent }}
-                aria-hidden="true"
-              />
-              <span className="relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
-                <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
-                  <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
-                  <img
-                    src={activeKit.mobileImage}
-                    alt=""
-                    className="h-full w-full object-cover object-center"
-                  />
+            {activeMobileImage ? (
+              <motion.a
+                href={activeKit.externalDemoUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Voir le rendu live ${activeKit.title}`}
+                className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none sm:block"
+                initial={false}
+                animate={{ y: [0, -8, 0], rotate: -2 }}
+                transition={{ y: { duration: 6.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 0.8 } }}
+                whileHover={{ scale: 1.05, y: -12 }}
+              >
+                <span
+                  className="absolute -inset-5 rounded-full opacity-35 blur-2xl transition duration-500 group-hover:opacity-60"
+                  style={{ background: activeKit.accent }}
+                  aria-hidden="true"
+                />
+                <span className="relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                  <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
+                    <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
+                    <img src={activeMobileImage} alt="" className="phone-preview-scroll" />
+                  </span>
                 </span>
-              </span>
-            </motion.button>
+              </motion.a>
+            ) : null}
 
             <div className="-mx-5 block overflow-hidden sm:hidden">
               <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {heroKits.slice(0, 5).map((kit, index) => (
-                  <button
+                  <a
                     key={kit.title}
-                    type="button"
-                    aria-label={`Prévisualiser ${kit.title}`}
+                    href={kit.externalDemoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Voir le rendu live ${kit.title}`}
                     className="group w-[82vw] max-w-[21rem] shrink-0 snap-start text-left outline-none"
-                    onClick={() => {
-                      setSelectedKit(kit);
-                      setPreviewMode("desktop");
-                    }}
                   >
                     <span
                       className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
                       style={{ "--case-accent": kit.accent } as CSSProperties}
                     >
                       <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,color-mix(in_srgb,var(--case-accent)_64%,white),transparent)] opacity-70" aria-hidden="true" />
-                      <span className="relative block aspect-[1.54/1] overflow-hidden bg-black">
-                        <img src={kit.desktopImage} alt="" className="h-full w-full object-cover object-top" />
+                      <span className="relative block aspect-[91/60] overflow-hidden bg-black">
+                        <img src={kit.desktopImage} alt="" className="h-full w-full object-contain object-center" />
                       </span>
-                      <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[#080b11] p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
-                        <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
-                          <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
-                          <img src={kit.mobileImage} alt="" className="h-full w-full object-cover object-center" />
+                      {kit.heroMobileImage || kit.mobileImage ? (
+                        <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[#080b11] p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
+                          <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
+                            <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
+                            <img src={kit.heroMobileImage ?? kit.mobileImage} alt="" className="phone-preview-scroll" />
+                          </span>
                         </span>
-                      </span>
+                      ) : null}
                       <span className="flex items-center justify-between gap-3 border-t border-white/[0.1] px-1 py-3 text-white">
                         <span>
                           <span className="block text-sm font-semibold leading-none">{kit.title}</span>
                           <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-white/50">{kit.category}</span>
                         </span>
-                        <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/70">
-                          Preview
-                        </span>
                       </span>
                     </span>
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>
           </div>
         </Reveal>
       </PageShell>
-
-      <AnimatePresence>
-        {selectedKit ? (
-          <motion.div
-            className="fixed inset-0 z-[200] overflow-hidden bg-[#05070b]/88 p-4 backdrop-blur-2xl md:p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            role="dialog"
-            aria-modal="true"
-            aria-label={`Preview ${selectedKit.title}`}
-          >
-            <motion.div
-              className="mx-auto flex h-full max-w-7xl flex-col border border-white/[0.14] bg-[#0d1118] shadow-[0_40px_160px_rgba(0,0,0,0.68)]"
-              initial={{ y: 28, scale: 0.97, opacity: 0 }}
-              animate={{ y: 0, scale: 1, opacity: 1 }}
-              exit={{ y: 18, scale: 0.98, opacity: 0 }}
-              transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.12] px-4 py-4 md:px-6">
-                <div>
-                  <p className="text-lg font-semibold text-white">{selectedKit.title}</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.2em] text-white/[0.48]">{selectedKit.category}</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  {(["desktop", "mobile"] as const).map((mode) => (
-                    <button
-                      key={mode}
-                      type="button"
-                      onClick={() => setPreviewMode(mode)}
-                      className={`rounded-lg border px-4 py-2 text-sm font-semibold transition ${
-                        previewMode === mode
-                          ? "border-white/30 bg-white text-[#10141d]"
-                          : "border-white/[0.14] bg-white/[0.05] text-white/70 hover:bg-white/[0.09] hover:text-white"
-                      }`}
-                    >
-                      {mode === "desktop" ? "Desktop" : "Mobile"}
-                    </button>
-                  ))}
-                  <button
-                    type="button"
-                    aria-label="Fermer la preview"
-                    onClick={() => setSelectedKit(null)}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.14] bg-white/[0.05] text-white transition hover:bg-white/[0.1]"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-              <div className="grid flex-1 min-h-0 gap-0 lg:grid-cols-[0.34fr_0.66fr]">
-                <div className="border-b border-white/[0.12] p-5 lg:border-b-0 lg:border-r lg:p-7">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/[0.46]">Résultat</p>
-                  <p className="mt-5 text-2xl font-semibold leading-tight text-white md:text-3xl">{selectedKit.result}</p>
-                  <p className="mt-6 text-sm leading-7 text-white/[0.62]">
-                    La preview se scrolle automatiquement pour montrer la page comme un produit vivant, pas comme une capture plate.
-                  </p>
-                </div>
-                <div className="flex min-h-0 items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_42%)] p-4 md:p-8">
-                  <div
-                    className={`relative overflow-hidden border border-white/[0.16] bg-black shadow-[0_34px_120px_rgba(0,0,0,0.54)] ${
-                      previewMode === "desktop"
-                        ? "aspect-[1.58/1] w-full max-w-4xl"
-                        : "aspect-[0.48/1] h-full max-h-[68vh] w-auto rounded-[1.6rem] p-1.5"
-                    }`}
-                  >
-                    <img
-                      src={previewMode === "desktop" ? selectedKit.desktopImage : selectedKit.mobileImage}
-                      alt={`Preview ${previewMode} ${selectedKit.title}`}
-                      className="preview-scroll"
-                      style={{
-                        "--preview-travel": previewMode === "desktop" ? "4rem" : "7rem",
-                        objectPosition: previewMode === "desktop" ? "center top" : "center top",
-                      } as CSSProperties}
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
     </section>
   );
 }

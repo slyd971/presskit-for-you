@@ -24,17 +24,6 @@ export function ExamplesGalleryGrid() {
     [activeFilter, galleryExamples],
   );
 
-  const galleryBadges: Record<string, string> = {
-    DJ: "Ideal pour booking",
-    "Artiste peintre": "Editorial premium",
-    Chanteuse: "Sortie musicale",
-    Danseur: "Video-first",
-    Organisateur: "Sponsors ready",
-    "Coach sportif": "Offre claire",
-    Photographe: "Portfolio premium",
-    "Make-up artist": "Image haut de gamme",
-  };
-
   return (
     <section className="section-divider pb-20 pt-6 md:pt-8">
       <PageShell>
@@ -57,7 +46,7 @@ export function ExamplesGalleryGrid() {
         </div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filteredExamples.map((example, index) => {
+          {filteredExamples.map((example) => {
             const category = categories.find((item) => item.shortName === example.category);
             const href = example.externalDemoUrl ?? category?.externalDemoUrl ?? example.href;
             const isExternal = href.startsWith("http");
@@ -97,7 +86,7 @@ export function ExamplesGalleryGrid() {
                               <img
                                 src={mobileImage}
                                 alt={`${example.title} en version mobile`}
-                                className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+                                className="phone-preview-scroll transition duration-500 group-hover:scale-[1.03]"
                               />
                             </div>
                           </div>
@@ -113,30 +102,10 @@ export function ExamplesGalleryGrid() {
                       }}
                     />
                   )}
-                  <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-                    <span className="rounded-lg border border-white/12 bg-black/35 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
-                      {galleryBadges[example.category] ?? "Premium"}
-                    </span>
-                    {index === 1 ? (
-                      <span className="rounded-lg border border-white/12 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/74 backdrop-blur-md">
-                        Le plus demande
-                      </span>
-                    ) : null}
-                  </div>
                 </div>
                 <p className="mt-5 text-xs uppercase tracking-[0.28em] text-white/44">{example.category}</p>
                 <h2 className="mt-3 text-2xl font-semibold text-white">{example.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-white/64">{example.description}</p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {(category?.sampleHighlights ?? []).slice(0, 2).map((highlight) => (
-                    <span
-                      key={highlight}
-                      className="rounded-lg border border-white/10 bg-white/6 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white/58"
-                    >
-                      {highlight}
-                    </span>
-                  ))}
-                </div>
                 <p className="mt-6 text-sm font-medium text-white/80">
                   {isExternal ? "Voir le rendu en live" : "Decouvrir ce format"}{" "}
                   <span className="transition group-hover:translate-x-1 inline-block">→</span>
