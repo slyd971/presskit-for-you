@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -115,7 +114,7 @@ export function Hero() {
       <motion.div
         className="absolute inset-0"
         animate={{
-          background: `radial-gradient(circle at 16% 12%, rgba(255,255,255,0.09), transparent 24%), radial-gradient(circle at 78% 26%, ${activeKit.accent}24, transparent 28%), radial-gradient(circle at 64% 78%, ${activeKit.accent}1a, transparent 24%), linear-gradient(180deg,#0d1118,rgba(17,22,32,0.97))`,
+          background: "radial-gradient(circle at 16% 12%, rgba(255,255,255,0.09), transparent 24%), radial-gradient(circle at 78% 26%, rgba(184,193,205,0.08), transparent 28%), radial-gradient(circle at 64% 78%, rgba(255,255,255,0.045), transparent 24%), linear-gradient(180deg,#0d1118,rgba(17,22,32,0.97))",
         }}
         transition={{ duration: 1.8, ease: "easeInOut" }}
       />
@@ -183,11 +182,7 @@ export function Hero() {
                   }}
                   whileHover={{ scale: slot.scale + 0.05, y: -10, rotate: slot.rotate * 0.55 }}
                 >
-                  <span
-                    className="absolute -inset-8 rounded-full opacity-0 blur-3xl transition duration-700 group-hover:opacity-70"
-                    style={{ background: kit.accent }}
-                    aria-hidden="true"
-                  />
+                  <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-700 group-hover:opacity-10" aria-hidden="true" />
                   <span className="relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] group-hover:shadow-[0_42px_130px_rgba(0,0,0,0.58)]">
                     <span className="block aspect-[91/60] overflow-hidden bg-black">
                       <img
@@ -213,11 +208,7 @@ export function Hero() {
                 transition={{ y: { duration: 6.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 0.8 } }}
                 whileHover={{ scale: 1.05, y: -12 }}
               >
-                <span
-                  className="absolute -inset-5 rounded-full opacity-35 blur-2xl transition duration-500 group-hover:opacity-60"
-                  style={{ background: activeKit.accent }}
-                  aria-hidden="true"
-                />
+                <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />
                 <span className="relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
                   <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
                     <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
@@ -240,9 +231,8 @@ export function Hero() {
                   >
                     <span
                       className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
-                      style={{ "--case-accent": kit.accent } as CSSProperties}
                     >
-                      <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,color-mix(in_srgb,var(--case-accent)_64%,white),transparent)] opacity-70" aria-hidden="true" />
+                      <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.42),transparent)] opacity-70" aria-hidden="true" />
                       <span className="relative block aspect-[91/60] overflow-hidden bg-black">
                         <img src={kit.desktopImage} alt="" className="h-full w-full object-contain object-center" />
                       </span>

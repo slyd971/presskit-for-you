@@ -34,7 +34,7 @@ const complementaryOptions = [
 
 export function PricingTable({ variant = "default", showHeading = true }: PricingTableProps) {
   const isHighlight = variant === "highlight";
-  const spacingClass = showHeading ? "py-18 md:py-32" : "pt-0 pb-14 md:pt-0 md:pb-20";
+  const spacingClass = showHeading ? "pt-18 pb-10 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
     title: "text-[#10141d]",
     border: "border-[#10141d]/[0.14]",
@@ -65,7 +65,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
             description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
           />
         ) : null}
-        <div className={`grid overflow-hidden rounded-lg border bg-[#f7f5f0] lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-10 md:mt-16" : "mt-0"}`}>
+        <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-10 md:mt-16" : "mt-0"}`}>
           {pricingTiers.map((tier, index) => (
             <article
               key={tier.name}
@@ -81,7 +81,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
               </div>
               <div className={`relative mt-10 border-y py-8 ${offerTone.tierBorder}`}>
                 <p className={`text-[clamp(3.2rem,7vw,6.7rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
-                <p className={`mt-1.5 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
+                <p className={`mt-4 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
               </div>
               <p className={`relative mt-7 max-w-md text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
               <ul className="relative mt-9 grid flex-1 gap-0 border-y border-[#10141d]/[0.1]">
@@ -102,7 +102,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
             </article>
           ))}
         </div>
-        <div className="mt-10 border-y border-white/[0.12] py-8 md:mt-12 md:py-10">
+        <div className="mt-10 py-8 md:mt-12 md:py-10">
           <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Options</p>
@@ -113,7 +113,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.
               </p>
             </div>
-            <div className="grid border-t border-white/[0.12] md:grid-cols-2 md:border-l md:border-t-0">
+            <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
               {complementaryOptions.map((option) => (
                 <article key={option.name} className="motion-line border-b border-white/[0.09] py-5 md:border-r md:px-5 md:last:border-r">
                   <div className="flex items-baseline justify-between gap-4">

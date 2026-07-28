@@ -9,16 +9,16 @@ const proofStats = [
   { value: "1 lien", label: "prêt à envoyer aux bons contacts" },
 ];
 
-export function SocialProof() {
+export function ProofStats() {
   return (
-    <section id="avis" className="section-divider section-wash scroll-mt-28 py-18 md:py-32" aria-labelledby="social-proof-title">
+    <section className="section-divider section-wash py-12 md:py-18" aria-labelledby="proof-stats-title">
       <PageShell>
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading
             eyebrow="Crédibilité"
             title="Des clients qui repartent avec un lien clair, pro et prêt à envoyer."
             description="Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité."
-            id="social-proof-title"
+            id="proof-stats-title"
             align="center"
           />
         </div>
@@ -33,8 +33,24 @@ export function SocialProof() {
             </div>
           ))}
         </div>
+      </PageShell>
+    </section>
+  );
+}
 
-        <div className="mx-auto mt-8 h-px max-w-4xl bg-gradient-to-r from-transparent via-white/[0.16] to-transparent md:mt-10" />
+export function SocialProof() {
+  return (
+    <section id="avis" className="section-divider section-wash scroll-mt-28 py-18 md:py-32" aria-labelledby="social-proof-title">
+      <PageShell>
+        <div className="mx-auto max-w-3xl text-center">
+          <SectionHeading
+            eyebrow="Témoignages"
+            title="Des retours concrets après mise en ligne."
+            description="Ils parlent de clarté, de crédibilité et d'un rendu plus professionnel pour présenter leur travail."
+            id="social-proof-title"
+            align="center"
+          />
+        </div>
 
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-12 md:grid md:snap-none md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 md:pb-0 xl:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {testimonials.map((item, index) => (

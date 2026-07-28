@@ -7,7 +7,17 @@ export function SiteFooter() {
     <footer className="border-t border-white/[0.1] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_20%),radial-gradient(circle_at_85%_15%,rgba(255,255,255,0.055),transparent_20%),linear-gradient(180deg,#171d28_0%,#1d2430_100%)]">
       <div className="mx-auto grid max-w-8xl gap-12 px-5 py-16 md:px-8 lg:grid-cols-[1.35fr_0.65fr_0.65fr] lg:py-24">
         <div className="border-b border-white/[0.1] pb-10 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.26em] text-white/[0.58]">{siteConfig.name}</p>
+          <Link
+            href="/"
+            className="block h-16 w-72 max-w-full opacity-95 transition hover:opacity-80"
+            aria-label={siteConfig.name}
+          >
+            <img
+              src="/logo/logo-presskitforyou-cropped.png"
+              alt=""
+              className="h-full w-full object-contain object-left"
+            />
+          </Link>
           <p className="mt-7 max-w-xl text-[clamp(1.05rem,2vw,1.5rem)] leading-9 text-white/[0.68]">
             Press kits digitaux premium pour mieux présenter ton univers, centraliser tes infos
             et convertir plus proprement.

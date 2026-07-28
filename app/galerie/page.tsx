@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ExamplesGalleryGrid } from "@/components/marketing/examples-gallery-grid";
+import { FinalCta } from "@/components/marketing/final-cta";
 import { PageShell } from "@/components/layout/page-shell";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -26,6 +27,7 @@ export default function GalleryPage() {
         </PageShell>
       </section>
       <ExamplesGalleryGrid />
+      <FinalCta />
     </>
   );
 }

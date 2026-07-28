@@ -63,6 +63,17 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      {
+        url: "/favicon/favicon-presskitforyou-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicon/favicon-presskitforyou-512.png",
+    apple: "/favicon/favicon-presskitforyou-512.png",
+  },
 };
 
 const structuredData = {

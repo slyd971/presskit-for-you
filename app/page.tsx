@@ -6,7 +6,7 @@ import { Hero } from "@/components/marketing/hero";
 import { ComparisonSection } from "@/components/marketing/home-conversion-sections";
 import { PricingTable } from "@/components/marketing/pricing-table";
 import { ProcessTimeline } from "@/components/marketing/process-timeline";
-import { SocialProof } from "@/components/marketing/social-proof";
+import { ProofStats, SocialProof } from "@/components/marketing/social-proof";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -27,6 +27,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ProofStats />
       <ComparisonSection />
       <CategoriesGrid />
       <PricingTable variant="highlight" />

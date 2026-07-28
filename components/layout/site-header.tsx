@@ -42,33 +42,45 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 px-3 pt-3 md:px-5">
+    <header className="fixed inset-x-0 top-0 z-50">
       <div
         className={cn(
-          "mx-auto max-w-8xl rounded-lg border border-white/[0.08] bg-[#0b0e14]/[0.86] shadow-[0_18px_52px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl transition-all duration-300",
-          isCompact ? "rounded-lg" : "rounded-lg",
+          "w-full border-b backdrop-blur-xl transition-all duration-300",
+          isCompact
+            ? "border-black/[0.08] bg-white/[0.96] shadow-[0_12px_36px_rgba(13,17,24,0.1)]"
+            : "border-white/[0.08] bg-[#0b0e14]/[0.9] shadow-[0_12px_36px_rgba(0,0,0,0.18)]",
         )}
       >
         <div
           className={cn(
-            "flex items-center justify-between gap-4 px-4 transition-all duration-300 md:px-6",
+            "mx-auto flex max-w-8xl items-center justify-between gap-4 px-4 transition-all duration-300 md:px-8",
             isCompact ? "py-3" : "py-4",
           )}
         >
           <Link
             href="/"
-            className="min-w-0 text-[9px] font-semibold uppercase tracking-[0.14em] text-white transition hover:text-white/[0.82] md:text-sm md:tracking-[0.28em]"
+            className={cn(
+              "block h-10 w-44 shrink-0 transition md:h-12 md:w-60",
+              isCompact ? "opacity-100 hover:opacity-80" : "opacity-95 hover:opacity-80",
+            )}
+            aria-label={siteConfig.name}
           >
-            <span className="md:hidden">Press Kit For You</span>
-            <span className="hidden md:inline">{siteConfig.name}</span>
+            <img
+              src="/logo/logo-presskitforyou-cropped.png"
+              alt=""
+              className={cn("h-full w-full object-contain object-left transition duration-300", isCompact && "brightness-0")}
+            />
           </Link>
 
-          <nav aria-label="Navigation principale" className="hidden items-center gap-7 md:flex">
+          <nav aria-label="Navigation principale" className="hidden items-center gap-8 md:flex">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-white/[0.68] transition hover:text-white"
+                className={cn(
+                  "text-[15px] font-semibold transition",
+                  isCompact ? "text-[#10141d]/[0.78] hover:text-[#10141d]" : "text-white/[0.82] hover:text-white",
+                )}
               >
                 {item.label}
               </Link>
@@ -78,6 +90,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <Button
               href="/#contact"
+              variant={isCompact ? "primaryOnLight" : "primary"}
               className="hidden px-3 py-2 text-[11px] font-semibold shadow-none sm:inline-flex md:px-5 md:py-3 md:text-sm"
             >
               {siteConfig.ctas.call}
@@ -89,7 +102,10 @@ export function SiteHeader() {
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((open) => !open)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white transition hover:bg-white/[0.08] md:hidden"
+              className={cn(
+                "inline-flex h-10 w-10 items-center justify-center rounded-lg transition md:hidden",
+                isCompact ? "text-[#10141d] hover:bg-[#10141d]/[0.06]" : "text-white hover:bg-white/[0.08]",
+              )}
             >
               <motion.div
                 key={isOpen ? "close" : "open"}
@@ -136,7 +152,12 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block rounded-lg border border-transparent px-3 py-3 text-sm text-white/[0.78] transition hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+                        className={cn(
+                          "block rounded-lg border border-transparent px-3 py-3 text-[15px] font-semibold transition",
+                          isCompact
+                            ? "text-[#10141d]/[0.82] hover:border-[#10141d]/10 hover:bg-[#10141d]/[0.04] hover:text-[#10141d]"
+                            : "text-white/[0.86] hover:border-white/10 hover:bg-white/[0.04] hover:text-white",
+                        )}
                       >
                         {item.label}
                       </Link>
@@ -150,7 +171,7 @@ export function SiteHeader() {
                   exit={{ y: 8, opacity: 0 }}
                   transition={{ duration: 0.24, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <Button href="/#contact" className="mt-4 w-full justify-center">
+                  <Button href="/#contact" variant={isCompact ? "primaryOnLight" : "primary"} className="mt-4 w-full justify-center">
                     {siteConfig.ctas.call}
                   </Button>
                 </motion.div>

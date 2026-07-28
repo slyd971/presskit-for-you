@@ -8,7 +8,7 @@
   --surface-850: #111620;
   --surface-800: #171d28;
   --surface-760: #1d2430;
-  --accent-warm: 255, 145, 82;
+  --accent-warm: 184, 193, 205;
 }
 
 html {
@@ -23,7 +23,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 18% 0%, rgba(var(--accent-warm), 0.09), transparent 25%),
+    radial-gradient(circle at 18% 0%, rgba(var(--accent-warm), 0.055), transparent 25%),
     radial-gradient(circle at 50% 52%, rgba(255, 255, 255, 0.045), transparent 30%),
     linear-gradient(180deg, var(--surface-900) 0%, var(--surface-800) 38%, var(--surface-850) 100%);
   color: #f7f5f0;
@@ -68,7 +68,7 @@ body::after {
 }
 
 ::selection {
-  background: rgba(var(--accent-warm), 0.32);
+  background: rgba(var(--accent-warm), 0.28);
   color: white;
 }
 
@@ -119,34 +119,73 @@ body::after {
   .section-divider::before {
     content: "";
     position: absolute;
-    left: 1.25rem;
-    right: 1.25rem;
+    left: 0;
+    right: 0;
     top: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+    z-index: -1;
+    height: 5.5rem;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent) top center / calc(100% - 2.5rem) 1px no-repeat,
+      radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.075), transparent 64%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.038), transparent 72%);
   }
 
   .section-tone-cool {
     background:
       radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.04), transparent 24%),
       linear-gradient(180deg, rgba(25, 31, 42, 0.78), rgba(17, 22, 31, 0.66));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.035),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.045);
   }
 
   .section-tone-lift {
     background:
       radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.045), transparent 24%),
       linear-gradient(180deg, rgba(18, 23, 32, 0.62), rgba(29, 36, 48, 0.72));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .section-contact {
     isolation: isolate;
+    color: #11151d;
     background:
-      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.09), transparent 34%),
-      linear-gradient(180deg, rgba(30, 37, 49, 0.96), rgba(18, 23, 32, 0.92));
+      radial-gradient(circle at 18% 0%, rgba(13, 17, 24, 0.045), transparent 28%),
+      radial-gradient(circle at 82% 16%, rgba(13, 17, 24, 0.08), transparent 24%),
+      linear-gradient(180deg, #ffffff 0%, #f6f7f8 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 -36px 90px rgba(0, 0, 0, 0.14);
+  }
+
+  .section-contact::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 6rem;
+    background:
+      linear-gradient(90deg, transparent, rgba(13, 17, 24, 0.18), transparent) top center / calc(100% - 2.5rem) 1px no-repeat,
+      linear-gradient(180deg, rgba(13, 17, 24, 0.08), transparent 70%);
   }
 
   .section-contact::after {
-    content: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 12% 22%, rgba(13, 17, 24, 0.08) 0 1px, transparent 1.5px),
+      radial-gradient(circle at 76% 58%, rgba(13, 17, 24, 0.055) 0 1px, transparent 1.5px);
+    background-size: 13px 17px, 19px 23px;
+    opacity: 0.16;
+    mix-blend-mode: multiply;
   }
 
   .editorial-panel {
@@ -210,19 +249,19 @@ body::after {
       180deg,
       transparent,
       rgba(255, 255, 255, 0.32),
-      rgba(var(--accent-warm), 0.34),
+      rgba(var(--accent-warm), 0.24),
       transparent
     );
-    filter: drop-shadow(0 0 18px rgba(var(--accent-warm), 0.28));
+    filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.16));
     animation: signature-thread 9s ease-in-out infinite alternate;
   }
 
   .case-study-card {
-    --case-accent: #ff9152;
+    --case-accent: rgba(255, 255, 255, 0.72);
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.12);
     background:
-      radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--case-accent) 28%, transparent), transparent 32%),
+      radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.06), transparent 32%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.028)),
       rgba(255, 255, 255, 0.02);
     box-shadow:
@@ -240,7 +279,7 @@ body::after {
     position: absolute;
     inset: auto 1.25rem 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--case-accent) 58%, white), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36), transparent);
     opacity: 0.45;
     transition: opacity 420ms ease;
   }
@@ -250,7 +289,7 @@ body::after {
     border-color: rgba(255, 255, 255, 0.22);
     box-shadow:
       0 28px 90px rgba(0, 0, 0, 0.34),
-      0 0 64px color-mix(in srgb, var(--case-accent) 18%, transparent),
+      0 0 64px rgba(255, 255, 255, 0.06),
       inset 0 1px 0 rgba(255, 255, 255, 0.09);
   }
 

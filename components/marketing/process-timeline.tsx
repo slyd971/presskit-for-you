@@ -11,7 +11,7 @@ type ProcessTimelineProps = {
 
 export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
   return (
-    <section id="methode" className="section-divider section-tone-cool scroll-mt-28 py-16 md:py-20" aria-labelledby="process-title">
+    <section id="methode" className="section-tone-cool scroll-mt-28 pt-10 pb-16 md:pt-12 md:pb-20" aria-labelledby="process-title">
       <PageShell>
         <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           {showHeading ? (
