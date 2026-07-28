@@ -34,6 +34,9 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
+            <Link href="/galerie" className="block text-sm text-white/[0.64] transition duration-300 hover:translate-x-1 hover:text-white">
+              Tous les exemples
+            </Link>
           </div>
         </div>
         <div>

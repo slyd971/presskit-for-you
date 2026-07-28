@@ -66,13 +66,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: "/favicon.ico",
+        sizes: "any",
+      },
+      {
+        url: "/icon.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+      {
         url: "/favicon/favicon-presskitforyou-512.png",
         sizes: "512x512",
         type: "image/png",
       },
     ],
-    shortcut: "/favicon/favicon-presskitforyou-512.png",
-    apple: "/favicon/favicon-presskitforyou-512.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -93,9 +102,24 @@ const structuredData = {
       name: siteConfig.name,
       inLanguage: "fr-FR",
       description: siteConfig.description,
+      hasPart: [
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/galerie#webpage`,
+          url: `${siteConfig.url}/galerie`,
+          name: "Exemples de press kits",
+          description: "Exemples réels de press kits digitaux premium déjà en ligne.",
+        },
+      ],
       publisher: {
         "@id": `${siteConfig.url}/#organization`,
       },
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": `${siteConfig.url}/#navigation-exemples`,
+      name: "Exemples",
+      url: `${siteConfig.url}/galerie`,
     },
     {
       "@type": "Service",
