@@ -39,8 +39,18 @@ export function ProofStats() {
 
 export function SocialProof() {
   return (
-    <section id="avis" className="section-divider section-wash scroll-mt-28 py-20 md:py-32" aria-labelledby="social-proof-title">
-      <PageShell>
+    <section id="avis" className="section-divider section-wash scroll-mt-28 overflow-hidden py-20 md:py-32" aria-labelledby="social-proof-title">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-45"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 18% 22%, rgba(255,255,255,0.08) 0 1px, transparent 1.5px), radial-gradient(circle at 74% 64%, rgba(255,255,255,0.045) 0 1px, transparent 1.5px), linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px)",
+          backgroundSize: "17px 19px, 29px 31px, 86px 86px",
+        }}
+      />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.09),transparent_68%)]" aria-hidden="true" />
+      <PageShell className="relative">
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading
             eyebrow="Témoignages"
@@ -58,16 +68,23 @@ export function SocialProof() {
               delay={index * 0.05}
               className="w-[86vw] max-w-[22rem] shrink-0 snap-start md:w-auto md:max-w-none md:shrink"
             >
-              <article className="motion-line flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.035] px-5 py-6 md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
-                <div className="border-b border-white/[0.1] pb-5">
-                  <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
+              <article className="group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.045] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] transition duration-500 ease-out hover:-translate-y-2 hover:scale-[1.025] hover:border-white/[0.24] hover:bg-white/[0.075] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
+                <div className="flex items-center gap-4 border-b border-white/[0.1] pb-5">
+                  {"image" in item && item.image ? (
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
+                    />
+                  ) : null}
+                  <div>
+                    <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
+                    <p className="mt-1 text-sm font-medium text-white/[0.58]">{item.role}</p>
+                  </div>
                 </div>
                 <p className="flex-1 pt-7 text-[1.05rem] font-medium leading-8 text-white/[0.84] md:text-[1.12rem] md:leading-9">
                   &ldquo;{item.quote}&rdquo;
                 </p>
-                <div className="mt-8 border-t border-white/[0.1] pt-5">
-                  <p className="text-sm font-medium text-white/[0.58]">{item.role}</p>
-                </div>
               </article>
             </Reveal>
           ))}

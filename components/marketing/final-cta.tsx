@@ -18,7 +18,7 @@ export function FinalCta() {
               href={siteConfig.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-[#10141d] px-8 py-[1.125rem] text-base font-semibold text-white shadow-[0_18px_50px_rgba(13,17,24,0.18),inset_0_-1px_0_rgba(255,255,255,0.12)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#1b2230]"
+              className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-8 py-[1.125rem] text-base font-semibold text-[#07140c] shadow-[0_18px_50px_rgba(37,211,102,0.24),inset_0_-1px_0_rgba(7,20,12,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#1fbd59]"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Écrire sur WhatsApp

@@ -111,18 +111,21 @@ export const testimonials = [
   {
     name: "Izzy Lokko",
     role: "Vidéaste",
+    image: "/témoignages/izzy-profil.png",
     quote:
       "Très satisfait du press kit : c’est une mise en avant qualitative de mon travail professionnel, qui me démarque directement de la concurrence. Ça porte déjà ses fruits et m’a permis de décrocher de nouveaux clients.",
   },
   {
     name: "Ishma N.",
     role: "Make-up artist",
+    image: "/témoignages/ishma.png",
     quote:
       "Une expérience incroyable ! En tant que make-up artist, j’ai senti que l’équipe avait tout de suite saisi ma signature. Le résultat me ressemble totalement et reflète parfaitement ma façon de travailler. La page est intuitive, très professionnelle et va bien au-delà de mes attentes. Un immense merci.",
   },
   {
     name: "Yed D.",
     role: "DJ",
+    image: "/témoignages/yoruboy.jpeg",
     quote:
       "Merci SlyD pour ton sérieux et ta réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Tu as su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour ton taf et ton efficacité, c’est un vrai plaisir de bosser avec quelqu’un d’aussi fiable !",
   },

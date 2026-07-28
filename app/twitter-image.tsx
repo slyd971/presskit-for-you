@@ -13,8 +13,8 @@ export default function TwitterImage() {
   return new ImageResponse(
     (
       <OgImage
-        title="Plus pro qu'Instagram. Plus impactant qu'un PDF."
-        description="Presentez votre activite, vos contenus et vos references dans une experience premium prete a partager."
+        title="De vos contenus à un lien prêt à envoyer."
+        description="Un press kit digital premium pour présenter votre activité, vos médias, vos preuves et votre contact au même endroit."
       />
     ),
     size,
