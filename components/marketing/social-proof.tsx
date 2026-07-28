@@ -11,7 +11,7 @@ const proofStats = [
 
 export function ProofStats() {
   return (
-    <section className="bg-white py-8 text-[#10141d] md:py-10" aria-labelledby="proof-stats-title">
+    <section className="bg-white py-10 text-[#10141d] md:py-10" aria-labelledby="proof-stats-title">
       <PageShell>
         <div className="mx-auto max-w-3xl text-center">
           <h2 id="proof-stats-title" className="mx-auto max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
@@ -39,7 +39,7 @@ export function ProofStats() {
 
 export function SocialProof() {
   return (
-    <section id="avis" className="section-divider section-wash scroll-mt-28 py-18 md:py-32" aria-labelledby="social-proof-title">
+    <section id="avis" className="section-divider section-wash scroll-mt-28 py-20 md:py-32" aria-labelledby="social-proof-title">
       <PageShell>
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading

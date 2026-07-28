@@ -162,7 +162,7 @@ const homeExamples = [
 
 export function CategoriesGrid() {
   return (
-    <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-18 md:py-28" aria-labelledby="categories-title">
+    <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-20 md:py-28" aria-labelledby="categories-title">
       <PageShell>
         <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
           <h2 id="categories-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">

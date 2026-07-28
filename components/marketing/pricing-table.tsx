@@ -3,6 +3,7 @@ import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 
 type PricingTableProps = {
   variant?: "default" | "highlight";
@@ -34,7 +35,7 @@ const complementaryOptions = [
 
 export function PricingTable({ variant = "default", showHeading = true }: PricingTableProps) {
   const isHighlight = variant === "highlight";
-  const spacingClass = showHeading ? "pt-18 pb-10 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
+  const spacingClass = showHeading ? "pt-20 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
     title: "text-[#10141d]",
     border: "border-[#10141d]/[0.14]",
@@ -69,7 +70,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
           {pricingTiers.map((tier, index) => (
             <article
               key={tier.name}
-              className={`motion-line group relative flex h-full flex-col border-b px-0 py-8 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${offerTone.tierBorder} ${
+              className={`motion-line group relative flex h-full flex-col border-b px-5 py-8 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${offerTone.tierBorder} ${
                 index === 0 ? offerTone.tierAccent : offerTone.tierSubtle
               }`}
             >
@@ -115,13 +116,25 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
             </div>
             <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
               {complementaryOptions.map((option) => (
-                <article key={option.name} className="motion-line border-b border-white/[0.09] py-5 md:border-r md:px-5 md:last:border-r">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
-                    <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
-                </article>
+                <div key={option.name}>
+                  <details className="group border-b border-white/[0.09] py-4 md:hidden">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                      <span>
+                        <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
+                        <span className="mt-1 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">{option.price}</span>
+                      </span>
+                      <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition duration-300 group-open:rotate-180" aria-hidden="true" />
+                    </summary>
+                    <p className="mt-3 pr-8 text-sm leading-6 text-white/[0.62]">{option.description}</p>
+                  </details>
+                  <article className="motion-line hidden border-b border-white/[0.09] py-5 md:block md:border-r md:px-5 md:last:border-r">
+                    <div className="flex items-baseline justify-between gap-4">
+                      <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
+                      <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
+                    </div>
+                    <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
+                  </article>
+                </div>
               ))}
             </div>
           </div>

@@ -341,9 +341,9 @@ svg {
   content: "";
   position: absolute;
   inset-block: 0;
-  left: 0;
+  left: -0.625rem;
   width: 2px;
-  background: rgba(255, 255, 255, 0.38);
+  background: var(--motion-line-color, rgba(255, 255, 255, 0.38));
   opacity: 0;
   transform: scaleY(0.35);
   transform-origin: center;
@@ -353,7 +353,7 @@ svg {
 }
 
 .motion-line:hover {
-  background: rgba(255, 255, 255, 0.035);
+  background: var(--motion-line-hover, rgba(255, 255, 255, 0.035));
   transform: translateX(0.25rem);
 }
 
