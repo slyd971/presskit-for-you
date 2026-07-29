@@ -26,11 +26,8 @@ export function ComparisonSection() {
         <div className="grid gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
             <h2 id="comparison-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
-              Comprendre vite. Donner envie de répondre.
+              Faire impression dès les premières secondes
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
-              En quelques secondes, votre page doit poser le contexte, montrer votre niveau et rendre le contact évident.
-            </p>
             <div className="mt-9 hidden max-w-md border-y border-white/[0.1] py-6 lg:block">
               <div className="grid grid-cols-[0.82fr_1.18fr] items-center gap-5">
                 <div className="comparison-pdf-fade space-y-3 border border-white/[0.1] bg-white/[0.035] p-4">
