@@ -296,6 +296,64 @@ body::after {
     opacity: 0.9;
   }
 
+  .spotlight-card {
+    --spotlight-x: 50%;
+    --spotlight-y: 24%;
+  }
+
+  .spotlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at var(--spotlight-x) var(--spotlight-y),
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.045) 18%,
+      transparent 42%
+    );
+    opacity: 0;
+    transition: opacity 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+
+  .spotlight-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pricing-featured-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      0 0 54px rgba(255, 255, 255, 0.055);
+    opacity: 0.58;
+    transition:
+      opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .pricing-featured-card:hover::after {
+    opacity: 0.9;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 0 72px rgba(255, 255, 255, 0.075);
+  }
+
+  .pricing-featured-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
   .accent-ring {
     position: relative;
   }
@@ -331,9 +389,9 @@ svg {
 .motion-line {
   position: relative;
   transition:
-    background 320ms ease,
-    border-color 320ms ease,
-    transform 320ms ease;
+    background 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .motion-line::before {
@@ -353,7 +411,7 @@ svg {
 
 .motion-line:hover {
   background: var(--motion-line-hover, rgba(255, 255, 255, 0.035));
-  transform: translateX(0.25rem);
+  transform: translate3d(0, -0.18rem, 0);
 }
 
 .motion-line:hover::before {
@@ -379,6 +437,19 @@ svg {
 
 .cta-shine:hover::after {
   animation: cta-shine 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta-shine:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.quote-line {
+  animation: quote-line-reveal 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
+}
+
+.quote-line-delay {
+  animation-delay: 120ms;
 }
 
 .ambient-shift {
@@ -425,6 +496,18 @@ svg {
   100% {
     opacity: 0;
     transform: translateX(330%) skewX(-18deg);
+  }
+}
+
+@keyframes quote-line-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.55rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 

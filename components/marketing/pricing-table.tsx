@@ -70,7 +70,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
           {pricingTiers.map((tier, index) => (
             <article
               key={tier.name}
-              className={`motion-line group relative flex h-full flex-col border-b px-5 py-8 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${offerTone.tierBorder} ${
+              className={`motion-line group relative flex h-full flex-col border-b px-5 py-8 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${index === 0 ? "pricing-featured-card" : ""} ${offerTone.tierBorder} ${
                 index === 0 ? offerTone.tierAccent : offerTone.tierSubtle
               }`}
             >
