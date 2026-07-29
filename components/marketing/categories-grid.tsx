@@ -160,6 +160,11 @@ const homeExamples = [
   },
 ];
 
+const featuredHomeExampleSlugs = ["melymelow", "sherin", "krimo", "flo", "la-bringue", "black-moz"];
+const featuredHomeExamples = featuredHomeExampleSlugs
+  .map((slug) => homeExamples.find((example) => example.slug === slug))
+  .filter((example): example is (typeof homeExamples)[number] => Boolean(example));
+
 export function CategoriesGrid() {
   return (
     <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-20 md:py-28" aria-labelledby="categories-title">
@@ -173,7 +178,7 @@ export function CategoriesGrid() {
           </p>
         </div>
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-2 [&::-webkit-scrollbar]:hidden">
-          {homeExamples.slice(0, 10).map((example, index) => (
+          {featuredHomeExamples.map((example, index) => (
             <Reveal
               key={example.slug}
               delay={index * 0.06}
