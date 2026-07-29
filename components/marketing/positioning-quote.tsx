@@ -6,7 +6,7 @@ export function PositioningQuote() {
       <PageShell>
         <div className="reveal-up mx-auto max-w-4xl text-center">
           <blockquote>
-            <p className="text-[clamp(2.55rem,7.2vw,6.7rem)] font-semibold leading-[0.96] tracking-tighter2">
+            <p className="text-[clamp(2.55rem,7.2vw,6.7rem)] font-semibold leading-[1.08] tracking-tighter2">
               Le bon lien ne liste pas vos contenus.
               <br />
               Il met votre niveau en scène.
