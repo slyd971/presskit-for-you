@@ -167,7 +167,7 @@ export function Hero() {
                   aria-label={`Voir le rendu live ${kit.title}`}
                   className="group absolute hidden cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                   style={{
-                    left: "33%",
+                    left: "43%",
                     top: slot.y,
                     width: slot.width,
                     zIndex: slot.zIndex,
