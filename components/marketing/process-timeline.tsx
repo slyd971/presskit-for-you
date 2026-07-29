@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileImage, Mail, Phone, Video } from "lucide-react";
+import { ArrowDown, FileImage, Mail, Phone, Video } from "lucide-react";
 
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
@@ -163,7 +163,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
 
         </div>
 
-        <div className="mt-10 grid gap-5 md:mt-12 md:grid-cols-3 md:gap-4">
+        <div className="mt-10 grid gap-9 md:mt-12 md:grid-cols-3 md:gap-4">
           {dossierCards.map((card, index) => (
             <div key={card.status} className="relative">
               <motion.article
@@ -186,14 +186,17 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
               </motion.article>
               {index < dossierCards.length - 1 ? (
                 <motion.div
-                  initial={{ opacity: 0, scaleY: 0.35 }}
-                  whileInView={{ opacity: 1, scaleY: 1 }}
+                  initial={{ opacity: 0, y: -8, scaleY: 0.55 }}
+                  whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
                   viewport={{ once: true, amount: 0.8 }}
-                  transition={{ duration: 0.55, delay: 0.2 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="pointer-events-none absolute left-1/2 top-full z-10 flex h-5 origin-top -translate-x-1/2 items-center justify-center md:hidden"
+                  transition={{ duration: 0.65, delay: 0.2 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  className="pointer-events-none absolute left-1/2 top-full z-10 flex h-9 origin-top -translate-x-1/2 items-center justify-center md:hidden"
                   aria-hidden="true"
                 >
-                  <span className="h-full w-px bg-gradient-to-b from-white/50 via-white/25 to-transparent" />
+                  <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-white/55 via-white/34 to-transparent" />
+                  <span className="relative flex h-7 w-7 items-center justify-center rounded-full border border-white/18 bg-white/[0.08] text-white shadow-[0_12px_34px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.14)]">
+                    <ArrowDown className="h-3.5 w-3.5" />
+                  </span>
                 </motion.div>
               ) : null}
             </div>
