@@ -5,7 +5,7 @@ const comparisonRows = [
   {
     title: "Le PDF donne des infos. La page donne envie.",
     current: "Un PDF présente quelques infos, mais reste statique, vite daté et peu engageant sur mobile.",
-    presskit: "Une page web rassemble votre bio, vos photos, vos vidéos, vos liens et votre contact dans un format agréable à consulter.",
+    presskit: "Une page web qui centralise votre bio, vos photos, vos vidéos, vos liens et vos coordonnées dans un format clair et structuré.",
   },
   {
     title: "Un lien ne suffit pas quand il faut convaincre.",
