@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { CSSProperties, PointerEvent } from "react";
+import type { CSSProperties } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
@@ -166,12 +166,6 @@ const featuredHomeExamples = featuredHomeExampleSlugs
   .filter((example): example is (typeof homeExamples)[number] => Boolean(example));
 
 export function CategoriesGrid() {
-  const updateSpotlight = (event: PointerEvent<HTMLAnchorElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    event.currentTarget.style.setProperty("--spotlight-x", `${event.clientX - rect.left}px`);
-    event.currentTarget.style.setProperty("--spotlight-y", `${event.clientY - rect.top}px`);
-  };
-
   return (
     <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-20 md:py-28" aria-labelledby="categories-title">
       <PageShell>
@@ -194,9 +188,8 @@ export function CategoriesGrid() {
                 href={example.externalDemoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="case-study-card spotlight-card group flex h-full min-h-[35rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
+                className="case-study-card group flex h-full min-h-[35rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
                 style={{ "--case-accent": example.accent } as CSSProperties}
-                onPointerMove={updateSpotlight}
               >
                 <div className="relative h-[18rem] overflow-visible md:h-[36rem] lg:h-[27rem]">
                   <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">

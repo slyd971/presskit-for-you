@@ -7,8 +7,9 @@ export function PositioningQuote() {
         <div className="reveal-up mx-auto max-w-4xl text-center">
           <blockquote>
             <p className="text-[clamp(2.55rem,7.2vw,6.7rem)] font-semibold leading-[1.08] tracking-tighter2">
-              <span className="quote-line block">Le bon lien ne liste pas vos contenus.</span>
-              <span className="quote-line quote-line-delay block">IL met votre niveau en scène.</span>
+              Le bon lien ne liste pas vos contenus.
+              <br />
+              IL met votre niveau en scène.
             </p>
           </blockquote>
           <p className="mx-auto mt-9 max-w-xl text-[11px] font-semibold uppercase leading-5 tracking-[0.2em] text-[#5d6470] md:mt-11">

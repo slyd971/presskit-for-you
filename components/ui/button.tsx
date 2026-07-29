@@ -32,7 +32,7 @@ export function Button({
     <Link
       href={href}
       className={cn(
-        "cta-shine group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold tracking-[0.01em] transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] active:translate-y-0 active:scale-[0.985] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current",
+        "cta-shine group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold tracking-[0.01em] transition duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current",
         styles[variant],
         className,
       )}

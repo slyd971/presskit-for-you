@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -98,8 +98,6 @@ const carouselSlots = [
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll();
-  const previewParallaxY = useTransform(scrollYProgress, [0, 0.24], [0, -8]);
   const activeKit = heroKits[activeIndex % heroKits.length];
   const activeMobileImage = activeKit.heroMobileImage ?? activeKit.mobileImage;
 
@@ -154,10 +152,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <motion.div
-            className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:min-h-[44rem]"
-            style={{ y: shouldReduceMotion ? 0 : previewParallaxY }}
-          >
+          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:min-h-[44rem]">
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
@@ -188,8 +183,7 @@ export function Hero() {
                     duration: shouldReduceMotion ? 0 : 1.28,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  whileHover={{ scale: slot.scale * 1.018, y: -8, rotate: slot.rotate * 0.55 }}
-                  whileTap={{ scale: slot.scale * 0.99 }}
+                  whileHover={{ scale: slot.scale + 0.05, y: -10, rotate: slot.rotate * 0.55 }}
                 >
                   <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-700 group-hover:opacity-10" aria-hidden="true" />
                   <span className="relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] group-hover:shadow-[0_42px_130px_rgba(0,0,0,0.58)]">
@@ -215,8 +209,7 @@ export function Hero() {
                 initial={false}
                 animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
                 transition={{ y: { duration: 7.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 1 } }}
-                whileHover={{ scale: 1.035, y: -10 }}
-                whileTap={{ scale: 0.99 }}
+                whileHover={{ scale: 1.05, y: -12 }}
               >
                 <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />
                 <span className="relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
@@ -265,7 +258,7 @@ export function Hero() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </Reveal>
       </PageShell>
     </section>

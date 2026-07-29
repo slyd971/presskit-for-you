@@ -27,20 +27,20 @@ export function ProofStats() {
             </p>
 
             <div className="mt-9 grid gap-7 border-y border-[#10141d]/[0.1] py-7 text-left sm:grid-cols-[0.92fr_1.08fr] md:mt-10">
-              <Reveal>
+              <div>
                 <p className="text-[clamp(7rem,18vw,12rem)] font-semibold leading-[0.78] tracking-tighter2 text-[#10141d]">{proofStats[0].value}</p>
                 <p className="mt-4 max-w-40 text-xs font-semibold uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
                   {proofStats[0].label}
                 </p>
-              </Reveal>
+              </div>
               <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-                {proofStats.slice(1).map((stat, index) => (
-                  <Reveal key={stat.value} delay={0.04 + index * 0.035}>
+                {proofStats.slice(1).map((stat) => (
+                  <div key={stat.value}>
                     <p className="text-4xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-5xl">{stat.value}</p>
                     <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
                       {stat.label}
                     </p>
-                  </Reveal>
+                  </div>
                 ))}
               </div>
             </div>
