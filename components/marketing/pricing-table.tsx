@@ -96,7 +96,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
               <Button
                 href="/#contact"
                 variant="primaryOnLight"
-                className="relative mt-10 min-h-12 w-fit justify-center px-6 py-3.5 sm:w-full"
+                className="relative mx-auto mt-10 min-h-12 w-full max-w-sm justify-center px-6 py-3.5"
               >
                 Demander mon press kit
               </Button>

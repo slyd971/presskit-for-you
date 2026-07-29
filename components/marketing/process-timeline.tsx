@@ -190,7 +190,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
                   whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
                   viewport={{ once: true, amount: 0.8 }}
                   transition={{ duration: 0.65, delay: 0.2 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  className="pointer-events-none absolute left-1/2 top-full z-10 flex h-9 origin-top -translate-x-1/2 items-center justify-center md:hidden"
+                  className="pointer-events-none absolute left-1/2 top-full z-10 flex h-9 w-9 origin-top -translate-x-1/2 items-center justify-center md:hidden"
                   aria-hidden="true"
                 >
                   <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-white/55 via-white/34 to-transparent" />
