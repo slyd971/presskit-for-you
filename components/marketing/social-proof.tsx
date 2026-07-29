@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
 
 const proofStats = [
-  { value: "7 jours", label: "ouvrés maximum pour la livraison" },
+  { value: "7", label: "jours ouvrés maximum pour la livraison" },
   { value: "+ de 10", label: "exemples réels déjà en ligne" },
   { value: "1 lien", label: "prêt à envoyer aux bons contacts" },
   { value: "100%", label: "responsive mobile, tablette et desktop" },
@@ -14,10 +14,10 @@ const proofStats = [
 
 export function ProofStats() {
   return (
-    <section className="relative overflow-hidden bg-white py-12 text-[#10141d] md:py-14" aria-labelledby="proof-stats-title">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(16,20,29,0.08),transparent_24%),linear-gradient(rgba(16,20,29,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(16,20,29,0.032)_1px,transparent_1px)] bg-[size:auto,92px_92px,92px_92px]" aria-hidden="true" />
+    <section className="relative overflow-hidden bg-white py-14 text-[#10141d] md:py-18" aria-labelledby="proof-stats-title">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,20,29,0.075),transparent_28%)]" aria-hidden="true" />
       <PageShell>
-        <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
               Des clients qui repartent avec un lien clair, pro et prêt à envoyer.
@@ -26,15 +26,23 @@ export function ProofStats() {
               Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité.
             </p>
 
-            <div className="mt-8 grid gap-x-8 gap-y-6 border-y border-[#10141d]/[0.12] py-6 text-left sm:grid-cols-3">
-              {proofStats.map((stat) => (
-                <div key={stat.value}>
-                  <p className="text-4xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-5xl">{stat.value}</p>
-                  <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+            <div className="mt-9 grid gap-7 border-y border-[#10141d]/[0.1] py-7 text-left sm:grid-cols-[0.92fr_1.08fr] md:mt-10">
+              <div>
+                <p className="text-[clamp(7rem,18vw,12rem)] font-semibold leading-[0.78] tracking-tighter2 text-[#10141d]">{proofStats[0].value}</p>
+                <p className="mt-4 max-w-40 text-xs font-semibold uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
+                  {proofStats[0].label}
+                </p>
+              </div>
+              <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                {proofStats.slice(1).map((stat) => (
+                  <div key={stat.value}>
+                    <p className="text-4xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-5xl">{stat.value}</p>
+                    <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

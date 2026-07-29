@@ -113,7 +113,7 @@ body::after {
       linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
     background-size: 120px 120px;
     mask-image: radial-gradient(circle at center, black 35%, transparent 92%);
-    opacity: 0.35;
+    opacity: 0.24;
   }
 
   .section-divider::before {
@@ -123,12 +123,11 @@ body::after {
     right: 0;
     top: 0;
     z-index: -1;
-    height: 5.5rem;
+    height: 5rem;
     pointer-events: none;
     background:
-      linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent) top center / calc(100% - 2.5rem) 1px no-repeat,
-      radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.075), transparent 64%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.038), transparent 72%);
+      radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.06), transparent 64%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.026), transparent 72%);
   }
 
   .section-tone-cool {
@@ -162,7 +161,7 @@ body::after {
   }
 
   .section-contact::before {
-    content: "";
+    content: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -275,7 +274,7 @@ body::after {
   }
 
   .case-study-card::after {
-    content: "";
+    content: none;
     position: absolute;
     inset: auto 1.25rem 0;
     height: 1px;
@@ -387,6 +386,16 @@ svg {
   will-change: opacity, transform;
 }
 
+.comparison-pdf-fade {
+  animation: comparison-pdf-fade 7.5s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.comparison-kit-rise {
+  animation: comparison-kit-rise 7.5s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
 .snap-x {
   scroll-behavior: smooth;
 }
@@ -428,6 +437,34 @@ svg {
   100% {
     opacity: 0.9;
     transform: translate3d(1rem, -0.65rem, 0) scale(1.03);
+  }
+}
+
+@keyframes comparison-pdf-fade {
+  0%,
+  38% {
+    opacity: 0.72;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  68%,
+  100% {
+    opacity: 0.3;
+    transform: translate3d(-0.35rem, 0.2rem, 0) scale(0.985);
+  }
+}
+
+@keyframes comparison-kit-rise {
+  0%,
+  38% {
+    opacity: 0.72;
+    transform: translate3d(0.35rem, 0.25rem, 0) scale(0.985);
+  }
+
+  68%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }
 

@@ -1,12 +1,12 @@
 import { siteConfig } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
-import { MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export function FinalCta() {
   return (
-    <section id="contact" className="section-divider section-contact scroll-mt-28 py-12 md:py-20" aria-labelledby="final-cta-title">
+    <section id="contact" className="section-contact scroll-mt-28 py-14 md:py-24" aria-labelledby="final-cta-title">
       <PageShell className="max-w-5xl">
-        <div className="mx-auto max-w-4xl py-4 text-center md:py-8">
+        <div className="mx-auto max-w-4xl py-2 text-center md:py-4">
           <h2 id="final-cta-title" className="mx-auto max-w-3xl text-5xl font-semibold leading-[1.02] tracking-tighter2 text-[#10141d] md:text-7xl">
             Parlez-nous de votre univers.
           </h2>
@@ -21,14 +21,14 @@ export function FinalCta() {
               className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-8 py-[1.125rem] text-base font-semibold text-[#07140c] shadow-[0_18px_50px_rgba(37,211,102,0.24),inset_0_-1px_0_rgba(7,20,12,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#1fbd59]"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              Écrire sur WhatsApp
+              Discuter du projet
             </a>
             <a
-              href="tel:0663907888"
+              href="mailto:david.mecorvin@hotmail.fr"
               className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-[#10141d]/20 bg-white/55 px-8 py-[1.125rem] text-base font-semibold text-[#10141d] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[#10141d]/32 hover:bg-white/78"
             >
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              {siteConfig.phone}
+              <Mail className="h-4 w-4" aria-hidden="true" />
+              Envoyer un email
             </a>
           </div>
         </div>

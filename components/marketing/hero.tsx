@@ -109,8 +109,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="section-wash relative overflow-hidden pb-8 pt-28 md:pb-16 md:pt-32" aria-labelledby="hero-title">
-      <div className="signature-thread absolute left-[8%] top-8 h-[72%] w-px opacity-70" aria-hidden="true" />
+    <section className="section-wash relative overflow-hidden pb-10 pt-28 md:pb-20 md:pt-32" aria-labelledby="hero-title">
       <motion.div
         className="absolute inset-0"
         animate={{
@@ -149,8 +148,7 @@ export function Hero() {
 
         <Reveal delay={0.1}>
           <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:min-h-[44rem]">
-            <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.16),transparent_45%)] blur-3xl" />
-            <div className="pointer-events-none absolute inset-x-8 top-1/2 h-px bg-gradient-to-r from-transparent via-white/[0.24] to-transparent" />
+            <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
               const kit = heroKits[kitIndex];

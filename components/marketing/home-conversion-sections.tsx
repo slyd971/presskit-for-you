@@ -31,23 +31,26 @@ export function ComparisonSection() {
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
               En quelques secondes, votre page doit poser le contexte, montrer votre niveau et rendre le contact évident.
             </p>
-            <div className="mt-8 hidden max-w-md border-y border-white/[0.12] py-5 lg:block">
-              <div className="grid grid-cols-[0.9fr_1.1fr] gap-4">
-                <div className="space-y-3">
-                  <span className="block h-3 w-24 bg-white" />
-                  <span className="block h-2 w-36 bg-white/24" />
-                  <span className="block h-2 w-28 bg-white/18" />
-                  <span className="mt-5 block h-8 w-24 bg-white" />
+            <div className="mt-9 hidden max-w-md border-y border-white/[0.1] py-6 lg:block">
+              <div className="grid grid-cols-[0.82fr_1.18fr] items-center gap-5">
+                <div className="comparison-pdf-fade space-y-3 border border-white/[0.1] bg-white/[0.035] p-4">
+                  <span className="block h-3 w-20 bg-white/56" />
+                  <span className="block h-2 w-32 bg-white/22" />
+                  <span className="block h-2 w-28 bg-white/16" />
+                  <span className="block h-2 w-24 bg-white/14" />
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <span className="h-16 border border-white/12 bg-white/[0.045]" />
-                  <span className="h-16 border border-white/12 bg-white/[0.07]" />
-                  <span className="h-16 border border-white/12 bg-white/[0.06]" />
-                  <span className="h-16 border border-white/12 bg-white/[0.04]" />
+                <div className="comparison-kit-rise border border-white/[0.16] bg-white/[0.07] p-4">
+                  <span className="block h-3 w-28 bg-white" />
+                  <span className="mt-3 block h-2 w-36 bg-white/28" />
+                  <div className="mt-5 grid grid-cols-2 gap-2">
+                    <span className="h-14 bg-white/[0.13]" />
+                    <span className="h-14 bg-white/[0.09]" />
+                  </div>
+                  <span className="mt-4 block h-7 w-24 bg-white" />
                 </div>
               </div>
               <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.42]">
-                Bio · médias · preuves · contact
+                Du fichier consulté au lien qui convainc
               </p>
             </div>
           </div>
