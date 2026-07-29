@@ -91,9 +91,9 @@ const heroKits: HeroKit[] = [
 ];
 
 const carouselSlots = [
-  { offset: 0, x: "-2%", y: "10%", width: "73%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
-  { offset: 1, x: "18%", y: "20%", width: "54%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
-  { offset: -1, x: "-28%", y: "24%", width: "52%", rotate: -3.5, scale: 0.86, opacity: 0.58, zIndex: 24 },
+  { offset: 0, x: "-2%", y: "10%", width: "62%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
+  { offset: 1, x: "10%", y: "20%", width: "44%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
+  { offset: -1, x: "-24%", y: "24%", width: "44%", rotate: -3.5, scale: 0.86, opacity: 0.58, zIndex: 24 },
 ];
 
 export function Hero() {
@@ -153,7 +153,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:min-h-[44rem]">
+          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:mr-20 lg:min-h-[44rem] xl:mr-32 2xl:mr-44">
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
@@ -168,7 +168,7 @@ export function Hero() {
                   aria-label={`Voir le rendu live ${kit.title}`}
                   className="group absolute hidden cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                   style={{
-                    left: "38%",
+                    left: "40%",
                     top: slot.y,
                     width: slot.width,
                     zIndex: slot.zIndex,
@@ -205,7 +205,7 @@ export function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Voir le rendu live ${activeKit.title}`}
-                className="group absolute right-[43%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
+                className="group absolute right-[38%] top-[42%] z-50 hidden w-[17%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                 initial={false}
                 animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
                 transition={{ y: { duration: motionTokens.duration.slow, ease: motionTokens.easing.interaction }, rotate: { duration: motionTokens.duration.fast } }}
