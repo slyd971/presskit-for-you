@@ -33,7 +33,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/[0.58]">Navigation</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white">Navigation</p>
           <div className="mt-6 space-y-4">
             {siteConfig.nav.map((item) => (
               <Link key={item.href} href={item.href} className="footer-link text-sm text-white/[0.64] hover:text-white">
@@ -46,7 +46,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/[0.58]">Contact</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white">Contact</p>
           <div className="mt-6 space-y-4">
             <a
               href={siteConfig.whatsappUrl}
