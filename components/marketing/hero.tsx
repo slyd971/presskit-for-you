@@ -183,18 +183,17 @@ export function Hero() {
                     duration: shouldReduceMotion ? 0 : 1.28,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  whileHover={{ scale: slot.scale + 0.05, y: -10, rotate: slot.rotate * 0.55 }}
+                  whileHover={{ y: -8, rotate: slot.rotate * 0.64 }}
                 >
                   <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-700 group-hover:opacity-10" aria-hidden="true" />
-                  <span className="relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)] transition duration-500 group-hover:border-white/[0.28] group-hover:shadow-[0_42px_130px_rgba(0,0,0,0.58)]">
+                  <span className="mockup-surface relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
                     <span className="block aspect-[91/60] overflow-hidden bg-black">
                       <img
                         src={kit.desktopImage}
                         alt=""
-                        className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-[1.02]"
+                        className="h-full w-full object-contain object-center"
                       />
                     </span>
-                    <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.2),transparent_22%,transparent_74%,rgba(255,255,255,0.07))]" />
                   </span>
                 </motion.a>
               );
@@ -209,10 +208,10 @@ export function Hero() {
                 initial={false}
                 animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
                 transition={{ y: { duration: 7.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 1 } }}
-                whileHover={{ scale: 1.05, y: -12 }}
+                whileHover={{ y: -10 }}
               >
                 <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />
-                <span className="relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                <span className="mockup-surface relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
                   <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
                     <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
                     <img src={activeMobileImage} alt="" className="phone-preview-scroll" />

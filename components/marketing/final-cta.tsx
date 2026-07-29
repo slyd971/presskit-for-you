@@ -18,14 +18,14 @@ export function FinalCta() {
               href={siteConfig.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-8 py-[1.125rem] text-base font-semibold text-[#07140c] shadow-[0_18px_50px_rgba(37,211,102,0.24),inset_0_-1px_0_rgba(7,20,12,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#1fbd59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+              className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-8 py-[1.125rem] text-base font-semibold text-[#07140c] shadow-[0_18px_50px_rgba(37,211,102,0.24),inset_0_-1px_0_rgba(7,20,12,0.14)] hover:bg-[#1fbd59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Discuter du projet
             </a>
             <a
               href="mailto:david.mecorvin@hotmail.fr"
-              className="cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-[#10141d]/20 bg-white/55 px-8 py-[1.125rem] text-base font-semibold text-[#10141d] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[#10141d]/32 hover:bg-white/78 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+              className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-[#10141d]/20 bg-white/55 px-8 py-[1.125rem] text-base font-semibold text-[#10141d] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] hover:border-[#10141d]/32 hover:bg-white/78 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
               Envoyer un email

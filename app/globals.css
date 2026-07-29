@@ -9,6 +9,11 @@
   --surface-800: #171d28;
   --surface-760: #1d2430;
   --accent-warm: 184, 193, 205;
+  --ease-presskit: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-presskit-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-feedback: 180ms;
+  --duration-hover: 420ms;
+  --duration-reveal: 680ms;
 }
 
 html {
@@ -267,10 +272,12 @@ body::after {
       0 18px 58px rgba(0, 0, 0, 0.22),
       inset 0 1px 0 rgba(255, 255, 255, 0.07);
     transition:
-      transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 420ms ease,
-      box-shadow 420ms ease,
-      background 420ms ease;
+      transform var(--duration-hover) var(--ease-presskit),
+      border-color var(--duration-hover) var(--ease-presskit),
+      box-shadow var(--duration-hover) var(--ease-presskit),
+      background var(--duration-hover) var(--ease-presskit);
+    transform: translateZ(0);
+    transform-origin: center 72%;
   }
 
   .case-study-card::after {
@@ -284,7 +291,7 @@ body::after {
   }
 
   .case-study-card:hover {
-    transform: translate3d(0, -0.42rem, 0);
+    transform: perspective(1200px) translate3d(0, -0.32rem, 0) rotateX(0.35deg);
     border-color: rgba(255, 255, 255, 0.22);
     box-shadow:
       0 28px 90px rgba(0, 0, 0, 0.34),
@@ -325,15 +332,15 @@ svg {
 
 .reveal-up {
   min-width: 0;
-  animation: reveal-up 680ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: reveal-up var(--duration-reveal) var(--ease-presskit-out) both;
 }
 
 .motion-line {
   position: relative;
   transition:
-    background 320ms ease,
-    border-color 320ms ease,
-    transform 320ms ease;
+    background var(--duration-hover) var(--ease-presskit),
+    border-color var(--duration-hover) var(--ease-presskit),
+    transform var(--duration-hover) var(--ease-presskit);
 }
 
 .motion-line::before {
@@ -353,7 +360,7 @@ svg {
 
 .motion-line:hover {
   background: var(--motion-line-hover, rgba(255, 255, 255, 0.035));
-  transform: translateX(0.25rem);
+  transform: perspective(900px) translate3d(0, -0.16rem, 0) rotateX(0.25deg);
 }
 
 .motion-line:hover::before {
@@ -364,6 +371,50 @@ svg {
 .cta-shine {
   position: relative;
   overflow: hidden;
+}
+
+.button-cycle {
+  transform: translateZ(0);
+  transform-origin: center 70%;
+  transition:
+    transform var(--duration-hover) var(--ease-presskit),
+    background-color var(--duration-hover) var(--ease-presskit),
+    border-color var(--duration-hover) var(--ease-presskit),
+    box-shadow var(--duration-hover) var(--ease-presskit),
+    color var(--duration-hover) var(--ease-presskit);
+  will-change: transform;
+  touch-action: manipulation;
+}
+
+.button-cycle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 48%);
+  opacity: 0.36;
+  transition:
+    opacity var(--duration-hover) var(--ease-presskit),
+    transform var(--duration-hover) var(--ease-presskit);
+}
+
+.button-cycle:hover {
+  transform: perspective(700px) translate3d(0, -0.125rem, 0) rotateX(0.65deg);
+}
+
+.button-cycle:hover::before {
+  opacity: 0.52;
+  transform: translate3d(0, -0.04rem, 0);
+}
+
+.button-cycle:active {
+  transform: perspective(700px) translate3d(0, 0.0625rem, 0) rotateX(-0.45deg);
+  transition-duration: var(--duration-feedback);
+}
+
+.button-cycle > * {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-shine::after {
@@ -379,6 +430,71 @@ svg {
 
 .cta-shine:hover::after {
   animation: cta-shine 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mockup-surface {
+  transform: translateZ(0);
+  transition:
+    border-color var(--duration-hover) var(--ease-presskit),
+    box-shadow var(--duration-hover) var(--ease-presskit),
+    filter var(--duration-hover) var(--ease-presskit);
+}
+
+.mockup-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.16), transparent 23%, transparent 72%, rgba(255, 255, 255, 0.055)),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.11), transparent 48%);
+  opacity: 0.74;
+  transition:
+    opacity var(--duration-hover) var(--ease-presskit),
+    transform var(--duration-hover) var(--ease-presskit);
+}
+
+.group:hover .mockup-surface {
+  border-color: rgba(255, 255, 255, 0.24);
+  filter: saturate(1.02);
+  box-shadow:
+    0 30px 88px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.group:hover .mockup-surface::after {
+  opacity: 0.9;
+  transform: translate3d(0, -0.18rem, 0);
+}
+
+.footer-link {
+  position: relative;
+  display: block;
+  width: fit-content;
+  transition:
+    color var(--duration-hover) var(--ease-presskit),
+    opacity var(--duration-hover) var(--ease-presskit);
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.2rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0.42);
+  transform-origin: left center;
+  transition:
+    opacity var(--duration-hover) var(--ease-presskit),
+    transform var(--duration-hover) var(--ease-presskit);
+}
+
+.footer-link:hover::after {
+  opacity: 0.28;
+  transform: scaleX(1);
 }
 
 .ambient-shift {

@@ -171,7 +171,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
                 whileInView={{ y: 0, opacity: 1, rotate: index === 1 ? 0.1 : -0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.75, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -8, scale: 1.025 }}
+                whileHover={{ y: -6, rotate: index === 1 ? 0.02 : -0.02 }}
                 className="h-full overflow-hidden border border-[#10141d]/10 bg-[#f7f6f1] text-[#10141d] shadow-[0_24px_80px_rgba(0,0,0,0.22)] transition-colors duration-500 ease-out hover:border-[#10141d]/20 hover:shadow-[0_34px_110px_rgba(0,0,0,0.32)]"
               >
                 <CompactVisual type={card.visual} />

@@ -38,13 +38,13 @@ export function ExamplesShowcase() {
                     rel={isExternal ? "noreferrer" : undefined}
                     className="panel-premium group grid gap-5 rounded-lg p-5 lg:grid-cols-[0.9fr_1.1fr]"
                   >
-                <div className="relative min-h-56 overflow-hidden rounded-lg border border-white/8">
+                <div className="mockup-surface relative min-h-56 overflow-hidden rounded-lg border border-white/8">
                   {image ? (
                     <>
                       <img
                         src={image}
                         alt={example.title}
-                        className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
+                        className="h-full w-full object-cover object-top"
                         style={imagePosition ? { objectPosition: imagePosition } : undefined}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
@@ -97,7 +97,7 @@ export function ExamplesShowcase() {
                   </div>
                   <div className="mt-6 inline-flex items-center gap-2 text-sm text-white">
                     {isExternal ? "Ouvrir la demo" : "Découvrir la catégorie"}{" "}
-                    <span className="transition group-hover:translate-x-1">→</span>
+                    <span className="transition duration-300 ease-out group-hover:text-white/72">→</span>
                   </div>
                 </div>
                   </Link>

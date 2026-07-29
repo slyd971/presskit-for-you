@@ -36,11 +36,11 @@ export function SiteFooter() {
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/[0.58]">Navigation</p>
           <div className="mt-6 space-y-4">
             {siteConfig.nav.map((item) => (
-              <Link key={item.href} href={item.href} className="block text-sm text-white/[0.64] transition duration-300 hover:translate-x-1 hover:text-white">
+              <Link key={item.href} href={item.href} className="footer-link text-sm text-white/[0.64] hover:text-white">
                 {item.label}
               </Link>
             ))}
-            <Link href="/galerie" className="block text-sm text-white/[0.64] transition duration-300 hover:translate-x-1 hover:text-white">
+            <Link href="/galerie" className="footer-link text-sm text-white/[0.64] hover:text-white">
               Tous les exemples
             </Link>
           </div>
@@ -52,13 +52,13 @@ export function SiteFooter() {
               href={siteConfig.whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="block text-sm text-white/[0.64] transition duration-300 hover:translate-x-1 hover:text-white"
+              className="footer-link text-sm text-white/[0.64] hover:text-white"
             >
               Discuter du projet
             </a>
             <a
               href="mailto:david.mecorvin@hotmail.fr"
-              className="block text-sm text-white/[0.64] transition duration-300 hover:translate-x-1 hover:text-white"
+              className="footer-link text-sm text-white/[0.64] hover:text-white"
             >
               Envoyer un email
             </a>
