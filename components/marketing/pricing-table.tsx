@@ -19,7 +19,7 @@ const complementaryOptions = [
   {
     name: "Maintenance annuelle",
     price: "+60 €/an",
-    description: "Pour garder la page en ligne, propre et corrigée si un détail technique bouge.",
+    description: "Pour assurer les mises à jour, les corrections et le bon fonctionnement de votre press kit.",
   },
   {
     name: "Mise à jour de contenu",
@@ -62,7 +62,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
         {showHeading ? (
           <SectionHeading
             eyebrow="Tarifs"
-            title="Choisissez le niveau d’image dont votre projet a besoin."
+            title="Investissez dans une présentation à la hauteur de votre activité."
             description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
           />
         ) : null}

@@ -22,7 +22,7 @@ export default function GalleryPage() {
             Exemples
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.68] md:text-lg">
-            Des rendus concrets pour te projeter vite dans le bon niveau d'image, selon ton métier et le type de présence que tu veux envoyer.
+            Inspirez-vous de réalisations conçues pour différents profils, univers et objectifs.
           </p>
         </PageShell>
       </section>

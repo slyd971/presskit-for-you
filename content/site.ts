@@ -557,7 +557,7 @@ export const examples: Example[] = [
     slug: "dj-afterhours",
     category: "DJ",
     title: "DJ SLY'D",
-    description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
+    description: "Conçu pour valoriser votre image auprès des clubs, festivals et organisateurs.",
     href: "/#contact",
     externalDemoUrl: "https://djslyd.presskit.fr",
     image: "/gallery-previews/home-desktop/dj-slyd.png",

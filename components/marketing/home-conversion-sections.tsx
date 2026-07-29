@@ -9,13 +9,13 @@ const comparisonRows = [
   },
   {
     title: "Un lien ne suffit pas quand il faut convaincre.",
-    current: "Un Linktree aligne des boutons. Il aide à sortir, mais ne raconte pas votre niveau.",
-    presskit: "Un press kit met vos preuves dans le bon ordre : univers, médias, chiffres, références, contact.",
+    current: "Un Linktree aligne des liens, mais ne donne pas d'information en profondeur.",
+    presskit: "Un press kit guide naturellement le visiteur à travers votre univers, vos réalisations, vos références et vos coordonnées.",
   },
   {
     title: "Le visiteur doit comprendre avant de chercher.",
-    current: "Un lien PDF demande au lecteur de reconstruire seul votre valeur ou celle de votre événement.",
-    presskit: "Le visiteur ressent d’abord la crédibilité, puis trouve naturellement l’action à faire.",
+    current: "Instagram montre ce que vous publiez.",
+    presskit: "Un press kit montre qui vous êtes.",
   },
 ];
 
@@ -70,13 +70,13 @@ export function ComparisonSection() {
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.44]">
                         Support classique
                       </p>
-                      <p className="text-sm leading-7 text-white/[0.68]">{row.current}</p>
+                      <p className={index === 2 ? "text-lg font-semibold leading-7 text-white/[0.86]" : "text-sm leading-7 text-white/[0.68]"}>{row.current}</p>
                     </div>
                     <div className="border-t border-white/[0.14] pt-5">
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
                         Press kit
                       </p>
-                      <p className="text-base font-semibold leading-7 text-white">{row.presskit}</p>
+                      <p className={index === 2 ? "text-xl font-semibold leading-8 text-white" : "text-base font-semibold leading-7 text-white"}>{row.presskit}</p>
                     </div>
                   </div>
                 </article>
@@ -96,14 +96,14 @@ export function ComparisonSection() {
                     <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.54]">
                       Supports classiques
                     </p>
-                    <p className="text-sm leading-7 text-white/[0.7] md:max-w-sm">{row.current}</p>
+                    <p className={index === 2 ? "text-xl font-semibold leading-8 text-white md:max-w-sm md:text-2xl md:leading-9" : "text-sm leading-7 text-white/[0.7] md:max-w-sm"}>{row.current}</p>
                   </div>
                   <div className="relative border-l border-white/[0.22] pl-5 md:pl-7">
                     <span className="absolute left-0 top-1 h-10 w-px bg-white/60" aria-hidden="true" />
                     <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white">
                       Press kit premium
                     </p>
-                    <p className="text-[clamp(1rem,1.6vw,1.25rem)] font-semibold leading-8 text-white">{row.presskit}</p>
+                    <p className={index === 2 ? "text-xl font-semibold leading-8 text-white md:text-2xl md:leading-9" : "text-[clamp(1rem,1.6vw,1.25rem)] font-semibold leading-8 text-white"}>{row.presskit}</p>
                   </div>
                 </div>
               ))}

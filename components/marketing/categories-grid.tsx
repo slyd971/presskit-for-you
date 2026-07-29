@@ -133,7 +133,7 @@ const homeExamples = [
     title: "DJ SLY'D",
     category: "DJ",
     exampleName: "DJ SLY'D",
-    description: "Un press kit taillé pour la nuit, le booking et les résidences premium.",
+    description: "Conçu pour valoriser votre image auprès des clubs, festivals et organisateurs.",
     context: "DJ avec besoin d’un lien clair pour bookers et clubs.",
     objective: "Remplacer les envois dispersés par une page complète.",
     result: "Un support plus net pour présenter univers, médias et contact.",
