@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -97,16 +97,21 @@ const carouselSlots = [
 
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const shouldReduceMotion = useReducedMotion();
   const activeKit = heroKits[activeIndex % heroKits.length];
   const activeMobileImage = activeKit.heroMobileImage ?? activeKit.mobileImage;
 
   useEffect(() => {
+    if (shouldReduceMotion) {
+      return;
+    }
+
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % heroKits.length);
-    }, 6800);
+    }, 7600);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [shouldReduceMotion]);
 
   return (
     <section className="section-wash relative overflow-hidden pb-10 pt-28 md:pb-20 md:pt-32" aria-labelledby="hero-title">
@@ -160,7 +165,7 @@ export function Hero() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`Voir le rendu live ${kit.title}`}
-                  className="group absolute hidden cursor-pointer text-left outline-none sm:block"
+                  className="group absolute hidden cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                   style={{
                     left: "50%",
                     top: slot.y,
@@ -175,7 +180,7 @@ export function Hero() {
                     opacity: slot.opacity,
                   }}
                   transition={{
-                    duration: 1.05,
+                    duration: shouldReduceMotion ? 0 : 1.28,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   whileHover={{ scale: slot.scale + 0.05, y: -10, rotate: slot.rotate * 0.55 }}
@@ -200,10 +205,10 @@ export function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Voir le rendu live ${activeKit.title}`}
-                className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none sm:block"
+                className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                 initial={false}
-                animate={{ y: [0, -8, 0], rotate: -2 }}
-                transition={{ y: { duration: 6.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 0.8 } }}
+                animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
+                transition={{ y: { duration: 7.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 1 } }}
                 whileHover={{ scale: 1.05, y: -12 }}
               >
                 <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />
@@ -225,7 +230,7 @@ export function Hero() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Voir le rendu live ${kit.title}`}
-                    className="group w-[82vw] max-w-[21rem] shrink-0 snap-start text-left outline-none"
+                    className="group w-[82vw] max-w-[21rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118]"
                   >
                     <span
                       className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"

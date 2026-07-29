@@ -183,7 +183,7 @@ export function CategoriesGrid() {
                 href={example.externalDemoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="case-study-card group flex h-full min-h-[35rem] flex-col overflow-visible p-4 md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
+                className="case-study-card group flex h-full min-h-[35rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
                 style={{ "--case-accent": example.accent } as CSSProperties}
               >
                 <div className="relative h-[18rem] overflow-visible md:h-[36rem] lg:h-[27rem]">
@@ -193,6 +193,8 @@ export function CategoriesGrid() {
                         <img
                           src={example.desktopImage}
                           alt={`${example.title} en version desktop`}
+                          loading="lazy"
+                          decoding="async"
                           className="h-full w-full object-contain object-center transition duration-700 group-hover:scale-[1.025]"
                         />
                         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14),transparent_24%,transparent_72%,rgba(255,255,255,0.05))]" />
@@ -207,6 +209,8 @@ export function CategoriesGrid() {
                             <img
                               src={example.mobileImage}
                               alt={`${example.title} en version mobile`}
+                              loading="lazy"
+                              decoding="async"
                               className="phone-preview-scroll transition duration-700 group-hover:scale-[1.03]"
                             />
                             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.14),transparent_28%,transparent_76%,rgba(255,255,255,0.055))]" />
