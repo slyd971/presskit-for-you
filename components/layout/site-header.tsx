@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { motionTokens } from "@/lib/motion";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,7 +113,7 @@ export function SiteHeader() {
                 initial={{ rotate: -12, opacity: 0, scale: 0.85 }}
                 animate={{ rotate: 0, opacity: 1, scale: 1 }}
                 exit={{ rotate: 12, opacity: 0, scale: 0.85 }}
-                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: motionTokens.duration.feedback, ease: motionTokens.easing.interaction }}
               >
                 {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </motion.div>
@@ -126,14 +127,14 @@ export function SiteHeader() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: motionTokens.duration.fast, ease: motionTokens.easing.interaction }}
               className="overflow-hidden md:hidden"
             >
               <motion.div
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -8, opacity: 0 }}
-                transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: motionTokens.duration.fast, ease: motionTokens.easing.enter }}
                 className="px-4 pb-4 pt-3"
               >
                 <nav id="mobile-navigation" aria-label="Navigation mobile" className="grid gap-2">
@@ -144,9 +145,9 @@ export function SiteHeader() {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: 6, opacity: 0 }}
                       transition={{
-                        duration: 0.24,
+                        duration: motionTokens.duration.fast,
                         delay: 0.03 * index,
-                        ease: [0.22, 1, 0.36, 1],
+                        ease: motionTokens.easing.enter,
                       }}
                     >
                       <Link
@@ -169,7 +170,7 @@ export function SiteHeader() {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: 8, opacity: 0 }}
-                  transition={{ duration: 0.24, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: motionTokens.duration.fast, delay: motionTokens.delay.related, ease: motionTokens.easing.enter }}
                 >
                   <Button href="/#contact" variant={isCompact ? "primaryOnLight" : "primary"} className="mt-4 w-full justify-center">
                     {siteConfig.ctas.call}

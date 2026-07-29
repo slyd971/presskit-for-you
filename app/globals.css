@@ -13,7 +13,7 @@
   --ease-presskit-out: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-feedback: 180ms;
   --duration-hover: 420ms;
-  --duration-reveal: 680ms;
+  --duration-reveal: 480ms;
 }
 
 html {
@@ -335,6 +335,19 @@ svg {
   animation: reveal-up var(--duration-reveal) var(--ease-presskit-out) both;
 }
 
+.quote-line {
+  animation: quote-line-reveal 520ms var(--ease-presskit-out) both;
+  will-change: opacity, transform;
+}
+
+.quote-line-delay {
+  animation-delay: 80ms;
+}
+
+.quote-proof-delay {
+  animation-delay: 160ms;
+}
+
 .motion-line {
   position: relative;
   transition:
@@ -498,17 +511,17 @@ svg {
 }
 
 .ambient-shift {
-  animation: ambient-shift 12s ease-in-out infinite alternate;
-  will-change: opacity, transform;
+  opacity: 0.72;
+  transform: translate3d(0.35rem, -0.2rem, 0) scale(1.01);
 }
 
 .comparison-pdf-fade {
-  animation: comparison-pdf-fade 7.5s ease-in-out infinite;
+  animation: comparison-pdf-fade 720ms var(--ease-presskit-out) 120ms both;
   will-change: opacity, transform;
 }
 
 .comparison-kit-rise {
-  animation: comparison-kit-rise 7.5s ease-in-out infinite;
+  animation: comparison-kit-rise 840ms var(--ease-presskit-out) 220ms both;
   will-change: opacity, transform;
 }
 
@@ -519,7 +532,19 @@ svg {
 @keyframes reveal-up {
   from {
     opacity: 0;
-    transform: translate3d(0, 1.25rem, 0);
+    transform: translate3d(0, 0.75rem, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes quote-line-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.5rem, 0);
   }
 
   to {
@@ -544,40 +569,24 @@ svg {
   }
 }
 
-@keyframes ambient-shift {
-  0% {
-    opacity: 0.55;
-    transform: translate3d(-1rem, 0, 0) scale(0.98);
-  }
-
-  100% {
-    opacity: 0.9;
-    transform: translate3d(1rem, -0.65rem, 0) scale(1.03);
-  }
-}
-
 @keyframes comparison-pdf-fade {
-  0%,
-  38% {
+  0% {
     opacity: 0.72;
     transform: translate3d(0, 0, 0) scale(1);
   }
 
-  68%,
   100% {
-    opacity: 0.3;
-    transform: translate3d(-0.35rem, 0.2rem, 0) scale(0.985);
+    opacity: 0.42;
+    transform: translate3d(-0.12rem, 0.08rem, 0) scale(0.995);
   }
 }
 
 @keyframes comparison-kit-rise {
-  0%,
-  38% {
-    opacity: 0.72;
-    transform: translate3d(0.35rem, 0.25rem, 0) scale(0.985);
+  0% {
+    opacity: 0.76;
+    transform: translate3d(0.14rem, 0.12rem, 0) scale(0.998);
   }
 
-  68%,
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
@@ -627,71 +636,19 @@ svg {
 }
 
 .hero-device-float {
-  animation: hero-device-float 7s ease-in-out infinite;
   transform-origin: center;
-  will-change: transform;
 }
 
 .hero-device-float-slow {
-  animation: hero-device-float-slow 8.5s ease-in-out infinite;
   transform-origin: center;
-  will-change: transform;
 }
 
 .product-drift {
-  animation: product-drift 9s ease-in-out infinite;
   transform-origin: center;
-  will-change: transform;
 }
 
 .product-drift-slow {
-  animation: product-drift-slow 11s ease-in-out infinite;
   transform-origin: center;
-  will-change: transform;
-}
-
-@keyframes hero-device-float {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotateX(0deg);
-  }
-
-  50% {
-    transform: translate3d(0, -0.45rem, 0) rotateX(0.8deg);
-  }
-}
-
-@keyframes hero-device-float-slow {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(-0.2deg);
-  }
-
-  50% {
-    transform: translate3d(0, -0.65rem, 0) rotate(0.35deg);
-  }
-}
-
-@keyframes product-drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(-1.5deg);
-  }
-
-  50% {
-    transform: translate3d(0, -0.45rem, 0) rotate(-0.9deg);
-  }
-}
-
-@keyframes product-drift-slow {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(4deg);
-  }
-
-  50% {
-    transform: translate3d(0, -0.6rem, 0) rotate(3.2deg);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

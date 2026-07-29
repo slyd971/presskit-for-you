@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CSSProperties } from "react";
+import { motionTokens } from "@/lib/motion";
 
 type PreviewLoopCardProps = {
   title: string;
@@ -48,7 +49,7 @@ export function PreviewLoopCard({
     >
       <motion.div
         whileHover={{ y: -2, rotateX: 0.3 }}
-        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: motionTokens.duration.fast, ease: motionTokens.easing.interaction }}
         className="panel-premium accent-ring flex h-full flex-col rounded-[1.4rem] p-4"
       >
         <div className="mockup-surface relative overflow-hidden rounded-[1rem] border border-white/8 bg-[#0b0e14]">

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
+import { motionTokens } from "@/lib/motion";
 
 type HeroKit = {
   title: string;
@@ -180,8 +181,8 @@ export function Hero() {
                     opacity: slot.opacity,
                   }}
                   transition={{
-                    duration: shouldReduceMotion ? 0 : 1.28,
-                    ease: [0.22, 1, 0.36, 1],
+                    duration: shouldReduceMotion ? 0 : motionTokens.duration.slow,
+                    ease: motionTokens.easing.interaction,
                   }}
                   whileHover={{ y: -8, rotate: slot.rotate * 0.64 }}
                 >
@@ -207,7 +208,7 @@ export function Hero() {
                 className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                 initial={false}
                 animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
-                transition={{ y: { duration: 7.4, repeat: Infinity, ease: "easeInOut" }, rotate: { duration: 1 } }}
+                transition={{ y: { duration: motionTokens.duration.slow, ease: motionTokens.easing.interaction }, rotate: { duration: motionTokens.duration.fast } }}
                 whileHover={{ y: -10 }}
               >
                 <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />

@@ -5,6 +5,7 @@ import { ArrowDown, FileImage, Mail, Phone, Video } from "lucide-react";
 
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
+import { motionTokens } from "@/lib/motion";
 
 type ProcessTimelineProps = {
   showHeading?: boolean;
@@ -167,10 +168,10 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           {dossierCards.map((card, index) => (
             <div key={card.status} className="relative">
               <motion.article
-                initial={{ y: 30, opacity: 0, rotate: index === 1 ? 0.25 : -0.25 }}
+                initial={{ y: motionTokens.distance.strong, opacity: 0, rotate: index === 1 ? 0.25 : -0.25 }}
                 whileInView={{ y: 0, opacity: 1, rotate: index === 1 ? 0.1 : -0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.75, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: motionTokens.duration.normal, delay: index * motionTokens.delay.related, ease: motionTokens.easing.enter }}
                 whileHover={{ y: -6, rotate: index === 1 ? 0.02 : -0.02 }}
                 className="h-full overflow-hidden border border-[#10141d]/10 bg-[#f7f6f1] text-[#10141d] shadow-[0_24px_80px_rgba(0,0,0,0.22)] transition-colors duration-500 ease-out hover:border-[#10141d]/20 hover:shadow-[0_34px_110px_rgba(0,0,0,0.32)]"
               >
@@ -186,10 +187,10 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
               </motion.article>
               {index < dossierCards.length - 1 ? (
                 <motion.div
-                  initial={{ opacity: 0, y: -8, scaleY: 0.55 }}
+                  initial={{ opacity: 0, y: -motionTokens.distance.subtle, scaleY: 0.72 }}
                   whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
                   viewport={{ once: true, amount: 0.8 }}
-                  transition={{ duration: 0.65, delay: 0.2 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: motionTokens.duration.normal, delay: 0.08 + index * motionTokens.delay.related, ease: motionTokens.easing.enter }}
                   className="pointer-events-none absolute left-1/2 top-full z-10 flex h-9 w-9 origin-top -translate-x-1/2 items-center justify-center md:hidden"
                   aria-hidden="true"
                 >
@@ -204,10 +205,10 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
         </div>
 
         <motion.div
-          initial={{ y: 22, opacity: 0 }}
+          initial={{ y: motionTokens.distance.standard, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: motionTokens.duration.normal, ease: motionTokens.easing.enter }}
           className="mt-10 flex justify-center md:mt-12"
         >
           <Button href="#exemples" className="shrink-0 px-7 py-4 text-[15px]">
