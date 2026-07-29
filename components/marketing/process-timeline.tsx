@@ -147,7 +147,7 @@ function CompactVisual({ type }: { type: string }) {
 
 export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
   return (
-    <section id="methode" className="section-tone-cool scroll-mt-28 overflow-hidden py-18 md:py-24" aria-labelledby="process-title">
+    <section id="methode" className="section-tone-cool scroll-mt-28 overflow-hidden pb-28 pt-18 md:pb-36 md:pt-24" aria-labelledby="process-title">
       <PageShell>
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           {showHeading ? (
@@ -208,7 +208,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 flex justify-center pb-20 md:mt-12 md:pb-16"
+          className="mt-10 flex justify-center md:mt-12"
         >
           <Button href="#exemples" className="shrink-0 px-7 py-4 text-[15px]">
             Découvrir un exemple
