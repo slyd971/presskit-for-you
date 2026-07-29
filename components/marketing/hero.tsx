@@ -99,8 +99,6 @@ const carouselSlots = [
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
-  const activeKit = heroKits[activeIndex % heroKits.length];
-  const activeMobileImage = activeKit.heroMobileImage ?? activeKit.mobileImage;
 
   useEffect(() => {
     if (shouldReduceMotion) {
@@ -158,6 +156,7 @@ export function Hero() {
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
               const kit = heroKits[kitIndex];
+              const mobileImage = kit.heroMobileImage ?? kit.mobileImage;
 
               return (
                 <motion.a
@@ -186,40 +185,32 @@ export function Hero() {
                   }}
                   whileHover={{ y: -8, rotate: slot.rotate * 0.64 }}
                 >
-                  <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-700 group-hover:opacity-10" aria-hidden="true" />
-                  <span className="mockup-surface relative block -translate-x-1/2 overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
-                    <span className="block aspect-[91/60] overflow-hidden bg-black">
-                      <img
-                        src={kit.desktopImage}
-                        alt=""
-                        className="h-full w-full object-contain object-center"
-                      />
+                  <span className="relative block -translate-x-1/2 overflow-visible">
+                    <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-700 group-hover:opacity-10" aria-hidden="true" />
+                    <span className="mockup-surface relative block overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
+                      <span className="block aspect-[91/60] overflow-hidden bg-black">
+                        <img
+                          src={kit.desktopImage}
+                          alt=""
+                          className="h-full w-full object-contain object-center"
+                        />
+                      </span>
                     </span>
+                    {slot.offset === 0 && mobileImage ? (
+                      <span className="absolute -bottom-8 -right-8 z-50 block w-[24%] min-w-[5.9rem] rotate-[3deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[1.5deg]">
+                        <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />
+                        <span className="mockup-surface relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                          <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
+                            <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
+                            <img src={mobileImage} alt="" className="phone-preview-scroll" />
+                          </span>
+                        </span>
+                      </span>
+                    ) : null}
                   </span>
                 </motion.a>
               );
             })}
-            {activeMobileImage ? (
-              <motion.a
-                href={activeKit.externalDemoUrl}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Voir le rendu live ${activeKit.title}`}
-                className="group absolute right-[8%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
-                initial={false}
-                animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
-                transition={{ y: { duration: motionTokens.duration.slow, ease: motionTokens.easing.interaction }, rotate: { duration: motionTokens.duration.fast } }}
-                whileHover={{ y: -10 }}
-              >
-                <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-500 group-hover:opacity-16" aria-hidden="true" />
-                <span className="mockup-surface relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
-                  <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
-                    <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
-                    <img src={activeMobileImage} alt="" className="phone-preview-scroll" />
-                  </span>
-                </span>
-              </motion.a>
-            ) : null}
 
             <div className="-mx-5 block overflow-hidden sm:hidden">
               <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
