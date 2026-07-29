@@ -131,7 +131,7 @@ export function Hero() {
               <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
             </h1>
             <p className="mt-6 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-7 md:text-lg md:leading-9">
-              Présentez votre activité, vos réalisations, vos contenus et vos références dans une expérience premium pensée pour convaincre en quelques secondes.
+              Valorisez votre image grâce à une expérience premium, déjà adoptée par des artistes, DJs, photographes et créateurs.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
               <Button
