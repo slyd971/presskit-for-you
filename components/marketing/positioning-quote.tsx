@@ -9,7 +9,7 @@ export function PositioningQuote() {
             <p className="text-[clamp(2.55rem,7.2vw,6.7rem)] font-semibold leading-[1.08] tracking-tighter2">
               Le bon lien ne liste pas vos contenus.
               <br />
-              Il met votre niveau en scène.
+              IL met votre niveau en scène.
             </p>
           </blockquote>
           <p className="mx-auto mt-9 max-w-xl text-[11px] font-semibold uppercase leading-5 tracking-[0.2em] text-[#5d6470] md:mt-11">
