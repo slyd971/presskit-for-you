@@ -168,7 +168,7 @@ export function Hero() {
                   aria-label={`Voir le rendu live ${kit.title}`}
                   className="group absolute hidden cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                   style={{
-                    left: "50%",
+                    left: "46%",
                     top: slot.y,
                     width: slot.width,
                     zIndex: slot.zIndex,
@@ -205,7 +205,7 @@ export function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Voir le rendu live ${activeKit.title}`}
-                className="group absolute right-[23%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
+                className="group absolute right-[29%] top-[42%] z-50 hidden w-[18%] min-w-[5.9rem] cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                 initial={false}
                 animate={shouldReduceMotion ? { y: 0, rotate: -2 } : { y: [0, -6, 0], rotate: -2 }}
                 transition={{ y: { duration: motionTokens.duration.slow, ease: motionTokens.easing.interaction }, rotate: { duration: motionTokens.duration.fast } }}
