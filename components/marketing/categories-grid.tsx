@@ -18,7 +18,7 @@ const homeExamples = [
     objective: "Présenter œuvres, démarche et contact sans diluer l’image.",
     result: "Une vitrine contemplative, claire et plus crédible pour les opportunités.",
     desktopImage: "/gallery-previews/home-desktop/melymelow.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-melymelow.jpg",
+    mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     externalDemoUrl: "https://presskit.melymelow.art/",
     accent: "#F4C26B",
     gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",

@@ -473,7 +473,7 @@ export const examples: Example[] = [
     href: "/galerie",
     externalDemoUrl: "https://presskit.melymelow.art/",
     image: "/gallery-previews/home-desktop/melymelow.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-melymelow.jpg",
+    mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     accent: "#F4C26B",
   },
   {
