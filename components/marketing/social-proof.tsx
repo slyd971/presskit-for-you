@@ -20,7 +20,7 @@ export function ProofStats() {
         <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
-              Des clients qui repartent avec un lien clair, pro et prêt à envoyer.
+              Une carte de visite digitale, accessible en un seul lien, prête à être partagée.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-[#4d5561] md:text-lg">
               Le press kit doit ressembler à la personne qu'il présente, tout en donnant un cadre plus professionnel à son activité.

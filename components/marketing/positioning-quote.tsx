@@ -11,9 +11,6 @@ export function PositioningQuote() {
               <span className="quote-line quote-line-delay block">Il met votre niveau en scène.</span>
             </p>
           </blockquote>
-          <p className="quote-line quote-proof-delay mx-auto mt-9 max-w-xl text-[11px] font-semibold uppercase leading-5 tracking-[0.2em] text-[#5d6470] md:mt-11">
-            Déjà adopté par des artistes, DJs, photographes et créateurs.
-          </p>
         </div>
       </PageShell>
     </section>
