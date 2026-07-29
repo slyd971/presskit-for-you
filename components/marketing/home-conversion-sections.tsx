@@ -70,7 +70,7 @@ export function ComparisonSection() {
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.44]">
                         Support classique
                       </p>
-                      <p className={index === 2 ? "text-lg font-semibold leading-7 text-white/[0.86]" : "text-sm leading-7 text-white/[0.68]"}>{row.current}</p>
+                      <p className={index === 2 ? "text-lg font-semibold leading-7 text-white/[0.68]" : "text-sm leading-7 text-white/[0.68]"}>{row.current}</p>
                     </div>
                     <div className="border-t border-white/[0.14] pt-5">
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
@@ -96,7 +96,7 @@ export function ComparisonSection() {
                     <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.54]">
                       Supports classiques
                     </p>
-                    <p className={index === 2 ? "text-xl font-semibold leading-8 text-white md:max-w-sm md:text-2xl md:leading-9" : "text-sm leading-7 text-white/[0.7] md:max-w-sm"}>{row.current}</p>
+                    <p className={index === 2 ? "text-xl font-semibold leading-8 text-white/[0.7] md:max-w-sm md:text-2xl md:leading-9" : "text-sm leading-7 text-white/[0.7] md:max-w-sm"}>{row.current}</p>
                   </div>
                   <div className="relative border-l border-white/[0.22] pl-5 md:pl-7">
                     <span className="absolute left-0 top-1 h-10 w-px bg-white/60" aria-hidden="true" />

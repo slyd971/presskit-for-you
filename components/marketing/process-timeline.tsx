@@ -22,7 +22,7 @@ const dossierCards = [
   {
     status: "MAQUETTE",
     title: "On prépare la maquette.",
-    description: "On choisit le style, l'ordre des sections et les boutons importants pour que le visiteur comprenne vite quoi faire.",
+    description: "On choisit la direction artistique, l'organisation des informations et la hiérarchisation des boutons d'action",
     meta: "Jour 02-03 / Maquette",
     visual: "direction",
   },
