@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/button";
+import { footerCategoryLinks } from "@/lib/presskit-categories";
 
 export function SiteFooter() {
   return (
@@ -21,13 +22,13 @@ export function SiteFooter() {
             />
           </Link>
           <p className="mt-10 max-w-3xl text-[clamp(2.45rem,5.6vw,6.4rem)] font-semibold leading-[0.94] tracking-tighter2 text-white">
-            L'image que vous envoyez avant même de parler.
+            {"L'image que vous envoyez avant même de parler."}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button href="/#contact" className="justify-center px-7 py-4 text-[15px]">
               Créer mon presskit
             </Button>
-            <Button href="/galerie" variant="secondary" className="justify-center px-7 py-4 text-[15px]">
+            <Button href="/exemples" variant="secondary" className="justify-center px-7 py-4 text-[15px]">
               Voir les exemples
             </Button>
           </div>
@@ -40,9 +41,17 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/galerie" className="footer-link text-sm text-white/[0.64] hover:text-white">
+            <Link href="/exemples" className="footer-link text-sm text-white/[0.64] hover:text-white">
               Tous les exemples
             </Link>
+          </div>
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Métiers</p>
+          <div className="mt-6 space-y-4">
+            {footerCategoryLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="footer-link text-sm text-white/[0.64] hover:text-white">
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
         <div>

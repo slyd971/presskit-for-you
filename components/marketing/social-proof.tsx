@@ -23,7 +23,7 @@ export function ProofStats() {
               Une carte de visite digitale, accessible en un seul lien, prête à être partagée.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-[#4d5561] md:text-lg">
-              Le press kit doit refléter la personnalité de la personne qu'il présente, tout en renforçant la crédibilité de son activité
+              {"Le press kit doit refléter la personnalité de la personne qu'il présente, tout en renforçant la crédibilité de son activité"}
             </p>
 
             <div className="mt-9 grid gap-7 border-y border-[#10141d]/[0.1] py-7 text-left sm:grid-cols-[0.92fr_1.08fr] md:mt-10">

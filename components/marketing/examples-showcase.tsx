@@ -44,6 +44,8 @@ export function ExamplesShowcase() {
                       <img
                         src={image}
                         alt={example.title}
+                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover object-top"
                         style={imagePosition ? { objectPosition: imagePosition } : undefined}
                       />

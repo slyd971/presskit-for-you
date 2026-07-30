@@ -1,0 +1,1379 @@
+{
+  "metadata": {
+    "project": "PressKit",
+    "scope": [
+      "app/globals.css",
+      "tailwind.config.ts",
+      "app/layout.tsx",
+      "app/page.tsx",
+      "app/galerie/page.tsx",
+      "app/not-found.tsx",
+      "components/layout",
+      "components/ui",
+      "components/marketing",
+      "content/site.ts",
+      "lib/motion.ts",
+      "lib/og-image.tsx",
+      "package.json"
+    ],
+    "productionFilesModified": false,
+    "notes": "Inventaire manuel structure a partir de la lecture du code source. Les occurrences listent les fichiers principaux concernes, pas chaque ligne exhaustive."
+  },
+  "dependencies": {
+    "ui": [],
+    "motion": [
+      {
+        "name": "framer-motion",
+        "version": "^11.11.17",
+        "files": [
+          "components/layout/site-header.tsx",
+          "components/marketing/hero.tsx",
+          "components/marketing/process-timeline.tsx",
+          "components/marketing/preview-loop-card.tsx"
+        ]
+      }
+    ],
+    "icons": [
+      {
+        "name": "lucide-react",
+        "version": "^0.468.0",
+        "files": [
+          "components/layout/site-header.tsx",
+          "components/marketing/final-cta.tsx",
+          "components/marketing/process-timeline.tsx",
+          "components/marketing/pricing-table.tsx"
+        ]
+      }
+    ],
+    "classUtilities": [
+      "clsx",
+      "tailwind-merge"
+    ]
+  },
+  "colors": {
+    "recurring": [
+      {
+        "name": "dark.canvas",
+        "values": [
+          "#0d1118",
+          "#111620",
+          "#171d28",
+          "#1d2430"
+        ],
+        "usage": "Fonds globaux, sections sombres, footer, hero, OG image.",
+        "files": [
+          "app/globals.css",
+          "tailwind.config.ts",
+          "components/marketing/hero.tsx",
+          "components/layout/site-footer.tsx",
+          "components/marketing/pricing-table.tsx",
+          "lib/og-image.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "dark.ink",
+        "values": [
+          "#10141d",
+          "#11151d",
+          "#0D1016",
+          "#0d1016",
+          "#10141b"
+        ],
+        "usage": "Texte et bordures sur sections claires, token Tailwind ink, surfaces anciennes.",
+        "files": [
+          "tailwind.config.ts",
+          "app/globals.css",
+          "components/ui/button.tsx",
+          "components/marketing/pricing-table.tsx",
+          "components/marketing/process-timeline.tsx",
+          "components/marketing/final-cta.tsx",
+          "components/marketing/social-proof.tsx",
+          "components/marketing/category-content.tsx"
+        ],
+        "classification": "incoherence probable"
+      },
+      {
+        "name": "mockup.black",
+        "values": [
+          "#080b11",
+          "#07090e",
+          "#050609",
+          "#0b0e14",
+          "#0a0c12",
+          "#000000"
+        ],
+        "usage": "Cadres des previews desktop/mobile, fonds de devices, notch mobile.",
+        "files": [
+          "components/marketing/hero.tsx",
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/examples-gallery-grid.tsx",
+          "components/marketing/process-timeline.tsx",
+          "components/marketing/preview-loop-card.tsx",
+          "lib/og-image.tsx"
+        ],
+        "classification": "regle recurrente avec valeurs presque identiques"
+      },
+      {
+        "name": "light.editorial",
+        "values": [
+          "#ffffff",
+          "#f6f7f8",
+          "#f7f6f1",
+          "#f5f5f1",
+          "#f2efe8",
+          "#F4EFE7"
+        ],
+        "usage": "Sections blanches, pricing, process cards, CTA contact.",
+        "files": [
+          "app/globals.css",
+          "tailwind.config.ts",
+          "components/marketing/positioning-quote.tsx",
+          "components/marketing/social-proof.tsx",
+          "components/marketing/pricing-table.tsx",
+          "components/marketing/process-timeline.tsx",
+          "components/marketing/final-cta.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "text.light.primary",
+        "values": [
+          "#ffffff",
+          "#f7f5f0",
+          "text-white"
+        ],
+        "usage": "Texte principal sur fond sombre.",
+        "files": [
+          "app/globals.css",
+          "components/**/*.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "text.light.secondary",
+        "values": [
+          "text-white/[0.42]",
+          "text-white/[0.52]",
+          "text-white/[0.58]",
+          "text-white/[0.62]",
+          "text-white/[0.64]",
+          "text-white/[0.66]",
+          "text-white/[0.68]",
+          "text-white/[0.7]",
+          "text-white/[0.72]",
+          "text-white/[0.74]",
+          "text-white/[0.76]",
+          "text-white/[0.84]"
+        ],
+        "usage": "Paragraphes, labels, meta, liens secondaires.",
+        "files": [
+          "components/ui/section-heading.tsx",
+          "components/ui/badge.tsx",
+          "components/marketing/*.tsx",
+          "components/layout/*.tsx",
+          "app/galerie/page.tsx",
+          "app/not-found.tsx"
+        ],
+        "classification": "regle recurrente avec valeurs presque identiques"
+      },
+      {
+        "name": "text.dark.secondary",
+        "values": [
+          "#303744",
+          "#3d4551",
+          "#4d5561",
+          "#5d6470",
+          "#1f2632"
+        ],
+        "usage": "Paragraphes et meta sur sections claires.",
+        "files": [
+          "components/marketing/pricing-table.tsx",
+          "components/marketing/process-timeline.tsx",
+          "components/marketing/final-cta.tsx",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "surface.glass",
+        "values": [
+          "bg-white/[0.03]",
+          "bg-white/[0.035]",
+          "bg-white/[0.04]",
+          "bg-white/[0.045]",
+          "bg-white/[0.055]",
+          "bg-white/[0.07]",
+          "bg-white/[0.075]",
+          "bg-white/[0.095]",
+          "rgba(255,255,255,0.024)",
+          "rgba(255,255,255,0.032)",
+          "rgba(255,255,255,0.074)"
+        ],
+        "usage": "Panels, cards, badges, comparison, testimonials.",
+        "files": [
+          "app/globals.css",
+          "components/ui/button.tsx",
+          "components/ui/badge.tsx",
+          "components/marketing/category-content.tsx",
+          "components/marketing/home-conversion-sections.tsx",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "regle recurrente avec incoherences probables"
+      },
+      {
+        "name": "border.light",
+        "values": [
+          "border-white/[0.08]",
+          "border-white/[0.1]",
+          "border-white/[0.12]",
+          "border-white/[0.14]",
+          "border-white/[0.16]",
+          "border-white/[0.18]",
+          "border-white/[0.22]",
+          "border-white/[0.24]",
+          "rgba(255,255,255,0.12)",
+          "rgba(255,255,255,0.2)"
+        ],
+        "usage": "Contours panels, cards, header, footer, mockups, hover.",
+        "files": [
+          "app/globals.css",
+          "components/**/*.tsx",
+          "lib/og-image.tsx"
+        ],
+        "classification": "regle recurrente avec valeurs presque identiques"
+      },
+      {
+        "name": "accent.projects",
+        "values": [
+          "#FF9152",
+          "#CE5DFF",
+          "#F4C26B",
+          "#F46B8D",
+          "#D5A928",
+          "#63E6BE",
+          "#5FA8FF",
+          "#FF8DAA",
+          "#FFD37A",
+          "#C8BBAE",
+          "#D04C57",
+          "#4B6CFF",
+          "#D7A86E",
+          "#E25E3E"
+        ],
+        "usage": "Accents categories, exemples clients, gradients par metier.",
+        "files": [
+          "content/site.ts",
+          "components/marketing/hero.tsx",
+          "components/marketing/categories-grid.tsx"
+        ],
+        "classification": "exception artistique potentiellement volontaire"
+      },
+      {
+        "name": "accent.whatsapp",
+        "values": [
+          "#25D366",
+          "#1fbd59",
+          "#07140c"
+        ],
+        "usage": "CTA WhatsApp final.",
+        "files": [
+          "components/marketing/final-cta.tsx"
+        ],
+        "classification": "valeur isolee fonctionnelle"
+      }
+    ],
+    "tailwindTokens": {
+      "ink": "#0D1016",
+      "sand": "#F4EFE7",
+      "mist": "#A8B1C7",
+      "line": "rgba(255,255,255,0.08)",
+      "panel": "rgba(255,255,255,0.05)",
+      "panelStrong": "rgba(255,255,255,0.1)"
+    }
+  },
+  "typography": {
+    "families": [
+      {
+        "name": "Manrope",
+        "source": "next/font/google",
+        "variable": "--font-sans",
+        "usage": "Body and all visible components.",
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "Cormorant Garamond",
+        "source": "next/font/google",
+        "variable": "--font-serif",
+        "weights": [
+          "500",
+          "600",
+          "700"
+        ],
+        "usage": "Chargee dans layout, pas d'usage visible observe.",
+        "classification": "incoherence probable"
+      }
+    ],
+    "sizes": [
+      {
+        "name": "display.hero",
+        "values": [
+          "text-[clamp(2.28rem,9.5vw,5.45rem)]",
+          "sm:text-[clamp(3rem,6.2vw,5.45rem)]"
+        ],
+        "files": [
+          "components/marketing/hero.tsx"
+        ],
+        "classification": "exception artistique volontaire"
+      },
+      {
+        "name": "display.editorial",
+        "values": [
+          "text-[clamp(2.45rem,5.6vw,6.4rem)]",
+          "text-[clamp(2.55rem,7.2vw,6.7rem)]",
+          "text-[clamp(7rem,18vw,12rem)]"
+        ],
+        "files": [
+          "components/layout/site-footer.tsx",
+          "components/marketing/positioning-quote.tsx",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "regle recurrente editoriale"
+      },
+      {
+        "name": "heading.section",
+        "values": [
+          "text-3xl md:text-5xl",
+          "text-4xl md:text-6xl",
+          "text-5xl md:text-7xl"
+        ],
+        "files": [
+          "components/ui/section-heading.tsx",
+          "components/marketing/*.tsx",
+          "app/galerie/page.tsx",
+          "app/not-found.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "body",
+        "values": [
+          "text-sm leading-7",
+          "text-base leading-8",
+          "text-lg leading-8",
+          "text-lg leading-9",
+          "md:text-lg",
+          "md:leading-9"
+        ],
+        "files": [
+          "components/**/*.tsx",
+          "app/*.tsx",
+          "app/galerie/page.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "microcopy",
+        "values": [
+          "text-[8px]",
+          "text-[9px]",
+          "text-[10px]",
+          "text-[11px]",
+          "text-xs"
+        ],
+        "styles": [
+          "uppercase",
+          "font-semibold",
+          "tracking-[0.12em]",
+          "tracking-[0.16em]",
+          "tracking-[0.18em]",
+          "tracking-[0.2em]",
+          "tracking-[0.22em]",
+          "tracking-[0.24em]",
+          "tracking-[0.28em]"
+        ],
+        "files": [
+          "components/ui/badge.tsx",
+          "components/marketing/*.tsx",
+          "components/layout/site-footer.tsx",
+          "app/not-found.tsx"
+        ],
+        "classification": "regle recurrente avec valeurs presque identiques"
+      }
+    ],
+    "weights": [
+      "font-medium",
+      "font-semibold"
+    ],
+    "letterSpacing": {
+      "tailwindToken": {
+        "tighter2": "-0.05em"
+      },
+      "inlineOrArbitrary": [
+        "tracking-[0.01em]",
+        "tracking-[0.12em]",
+        "tracking-[0.14em]",
+        "tracking-[0.16em]",
+        "tracking-[0.18em]",
+        "tracking-[0.2em]",
+        "tracking-[0.22em]",
+        "tracking-[0.24em]",
+        "tracking-[0.28em]",
+        "letterSpacing: -0.045em",
+        "letterSpacing: -0.08em"
+      ]
+    },
+    "lineHeights": [
+      "leading-[0.91]",
+      "leading-[0.94]",
+      "leading-[0.95]",
+      "leading-[0.98]",
+      "leading-none",
+      "leading-tight",
+      "leading-snug",
+      "leading-6",
+      "leading-7",
+      "leading-8",
+      "leading-9",
+      "leading-10",
+      "leading-[1.02]",
+      "leading-[1.04]",
+      "leading-[1.08]",
+      "leading-[1.55]"
+    ]
+  },
+  "spacing": {
+    "containers": [
+      {
+        "name": "PageShell",
+        "values": [
+          "max-w-8xl",
+          "92rem",
+          "px-5 sm:px-6 md:px-8"
+        ],
+        "files": [
+          "components/layout/page-shell.tsx",
+          "tailwind.config.ts"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "textColumnMobile",
+        "values": [
+          "max-w-[17.5rem]",
+          "min-[375px]:max-w-[20rem]",
+          "sm:max-w-3xl"
+        ],
+        "files": [
+          "components/ui/section-heading.tsx",
+          "components/marketing/hero.tsx",
+          "components/marketing/home-conversion-sections.tsx",
+          "components/marketing/categories-grid.tsx"
+        ],
+        "classification": "regle recurrente"
+      }
+    ],
+    "sectionPadding": [
+      {
+        "values": [
+          "py-20 md:py-28",
+          "py-20 md:py-32",
+          "pb-28 pt-18 md:pb-36 md:pt-24",
+          "py-14 md:py-24",
+          "pt-28 md:pt-32 pb-10 md:pb-20"
+        ],
+        "files": [
+          "components/marketing/*.tsx",
+          "app/galerie/page.tsx"
+        ],
+        "classification": "regle recurrente avec incoherences probables"
+      }
+    ],
+    "grids": [
+      {
+        "name": "hero",
+        "value": "lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]",
+        "files": [
+          "components/marketing/hero.tsx"
+        ]
+      },
+      {
+        "name": "comparison",
+        "value": "lg:grid-cols-[0.78fr_1.22fr], md:grid-cols-[5rem_1fr_1.08fr]",
+        "files": [
+          "components/marketing/home-conversion-sections.tsx"
+        ]
+      },
+      {
+        "name": "pricing",
+        "value": "lg:grid-cols-[1.15fr_0.85fr]",
+        "files": [
+          "components/marketing/pricing-table.tsx"
+        ]
+      },
+      {
+        "name": "footer",
+        "value": "lg:grid-cols-[1.5fr_0.5fr_0.5fr]",
+        "files": [
+          "components/layout/site-footer.tsx"
+        ]
+      },
+      {
+        "name": "mobileSnapRail",
+        "values": [
+          "-mx-5",
+          "snap-x snap-mandatory",
+          "overflow-x-auto",
+          "w-[82vw]",
+          "w-[84vw]",
+          "w-[86vw]"
+        ],
+        "files": [
+          "components/marketing/hero.tsx",
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/home-conversion-sections.tsx",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "duplication"
+      }
+    ],
+    "commonGaps": [
+      "gap-2",
+      "gap-2.5",
+      "gap-3",
+      "gap-4",
+      "gap-5",
+      "gap-6",
+      "gap-8",
+      "gap-9",
+      "gap-10",
+      "gap-12",
+      "gap-14",
+      "gap-16"
+    ]
+  },
+  "radius": {
+    "recurring": [
+      {
+        "name": "standard",
+        "values": [
+          "rounded-lg"
+        ],
+        "files": [
+          "components/**/*.tsx",
+          "app/*.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "pill",
+        "values": [
+          "rounded-full"
+        ],
+        "files": [
+          "app/layout.tsx",
+          "components/marketing/hero.tsx",
+          "components/marketing/preview-loop-card.tsx",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "regle recurrente limitee"
+      },
+      {
+        "name": "mockup.desktop",
+        "values": [
+          "rounded-t-[0.9rem]",
+          "rounded-t-[0.62rem]"
+        ],
+        "files": [
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/examples-gallery-grid.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "mockup.mobile",
+        "values": [
+          "rounded-[0.58rem]",
+          "rounded-[0.78rem]",
+          "rounded-[0.85rem]",
+          "rounded-[1rem]",
+          "rounded-[1.1rem]",
+          "rounded-[1.35rem]",
+          "rounded-[1.4rem]"
+        ],
+        "files": [
+          "components/marketing/hero.tsx",
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/examples-gallery-grid.tsx",
+          "components/marketing/preview-loop-card.tsx"
+        ],
+        "classification": "regle recurrente avec valeurs presque identiques"
+      }
+    ],
+    "tailwindTokens": {
+      "4xl": "2rem"
+    }
+  },
+  "shadows": {
+    "recurring": [
+      {
+        "name": "button.glow.light",
+        "values": [
+          "0 18px 50px rgba(255,255,255,0.16)",
+          "0 24px 70px rgba(255,255,255,0.22)",
+          "0 26px 80px rgba(255,255,255,0.2)"
+        ],
+        "files": [
+          "components/ui/button.tsx",
+          "components/marketing/hero.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "panel.depth",
+        "values": [
+          "0 12px 42px rgba(0,0,0,0.16)",
+          "0 14px 52px rgba(0,0,0,0.16)",
+          "0 18px 58px rgba(0,0,0,0.22)",
+          "0 28px 90px rgba(0,0,0,0.34)"
+        ],
+        "files": [
+          "app/globals.css",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "mockup.depth",
+        "values": [
+          "0 24px 70px rgba(0,0,0,0.38)",
+          "0 24px 78px rgba(0,0,0,0.48)",
+          "0 28px 90px rgba(0,0,0,0.42)",
+          "0 28px 90px rgba(0,0,0,0.55)",
+          "0 30px 88px rgba(0,0,0,0.42)"
+        ],
+        "files": [
+          "components/marketing/hero.tsx",
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/examples-gallery-grid.tsx",
+          "app/globals.css"
+        ],
+        "classification": "regle recurrente avec valeurs presque identiques"
+      },
+      {
+        "name": "process.depth",
+        "values": [
+          "0 24px 80px rgba(0,0,0,0.22)",
+          "0 34px 110px rgba(0,0,0,0.32)"
+        ],
+        "files": [
+          "components/marketing/process-timeline.tsx"
+        ],
+        "classification": "valeur isolee"
+      }
+    ],
+    "tailwindTokens": {
+      "soft": "0 20px 60px rgba(4, 8, 20, 0.18)",
+      "glow": "0 24px 80px rgba(255, 145, 77, 0.18)"
+    }
+  },
+  "gradients": {
+    "recurring": [
+      {
+        "name": "global.canvas",
+        "value": "radial white/accent washes plus dark linear gradient",
+        "files": [
+          "app/globals.css",
+          "lib/og-image.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "section.wash",
+        "value": "radial highlights and grid overlays",
+        "files": [
+          "app/globals.css",
+          "app/galerie/page.tsx",
+          "components/marketing/social-proof.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "section.cool.lift",
+        "values": [
+          ".section-tone-cool",
+          ".section-tone-lift"
+        ],
+        "files": [
+          "app/globals.css",
+          "components/marketing/home-conversion-sections.tsx",
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/process-timeline.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "mockup.mobile.chrome",
+        "value": "linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)",
+        "files": [
+          "components/marketing/hero.tsx",
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/examples-gallery-grid.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "category.accents",
+        "values": [
+          "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+          "from-[#D04C57]/28 via-[#4B6CFF]/12 to-transparent",
+          "from-[#63E6BE]/28 via-[#4DA6FF]/12 to-transparent",
+          "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+          "from-[#D7A86E]/28 via-[#E25E3E]/12 to-transparent",
+          "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+          "from-[#C8BBAE]/28 via-[#FFFFFF]/10 to-transparent"
+        ],
+        "files": [
+          "content/site.ts",
+          "components/marketing/categories-grid.tsx"
+        ],
+        "classification": "exception artistique potentiellement volontaire"
+      }
+    ],
+    "isolated": [
+      {
+        "name": "footer.grid",
+        "files": [
+          "components/layout/site-footer.tsx"
+        ]
+      },
+      {
+        "name": "socialProof.inlineDots",
+        "files": [
+          "components/marketing/social-proof.tsx"
+        ]
+      },
+      {
+        "name": "process.compactVisualGrids",
+        "files": [
+          "components/marketing/process-timeline.tsx"
+        ]
+      }
+    ]
+  },
+  "breakpoints": {
+    "tailwindDefaultUsed": [
+      "sm",
+      "md",
+      "lg",
+      "xl",
+      "2xl"
+    ],
+    "customArbitraryUsed": [
+      "min-[375px]"
+    ],
+    "patterns": [
+      {
+        "name": "mobileSnapToDesktopGrid",
+        "files": [
+          "components/marketing/categories-grid.tsx",
+          "components/marketing/social-proof.tsx",
+          "components/marketing/home-conversion-sections.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "headerMobileMenu",
+        "files": [
+          "components/layout/site-header.tsx"
+        ],
+        "classification": "regle recurrente"
+      }
+    ]
+  },
+  "animations": {
+    "tokens": {
+      "css": {
+        "easePresskit": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "easePresskitOut": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "durationFeedback": "180ms",
+        "durationHover": "420ms",
+        "durationReveal": "480ms"
+      },
+      "framer": {
+        "duration": {
+          "feedback": 0.18,
+          "fast": 0.32,
+          "normal": 0.48,
+          "slow": 0.72
+        },
+        "distance": {
+          "subtle": 8,
+          "standard": 12,
+          "strong": 16
+        },
+        "delay": {
+          "related": 0.07,
+          "sequence": 0.09
+        },
+        "easing": {
+          "enter": [
+            0.16,
+            1,
+            0.3,
+            1
+          ],
+          "interaction": [
+            0.22,
+            1,
+            0.36,
+            1
+          ],
+          "exit": [
+            0.4,
+            0,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "cssKeyframes": [
+      {
+        "name": "reveal-up",
+        "duration": "480ms",
+        "files": [
+          "app/globals.css",
+          "components/ui/reveal.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "quote-line-reveal",
+        "duration": "520ms",
+        "files": [
+          "app/globals.css",
+          "components/marketing/positioning-quote.tsx"
+        ],
+        "classification": "valeur isolee"
+      },
+      {
+        "name": "cta-shine",
+        "duration": "760ms",
+        "files": [
+          "app/globals.css",
+          "components/ui/button.tsx",
+          "components/marketing/final-cta.tsx"
+        ],
+        "classification": "regle recurrente"
+      },
+      {
+        "name": "preview-scroll-loop",
+        "duration": "8s",
+        "files": [
+          "app/globals.css",
+          "components/marketing/preview-loop-card.tsx"
+        ],
+        "classification": "exception artistique potentiellement volontaire"
+      },
+      {
+        "name": "signature-thread",
+        "duration": "9s",
+        "files": [
+          "app/globals.css"
+        ],
+        "classification": "valeur isolee"
+      },
+      {
+        "name": "comparison-pdf-fade",
+        "duration": "720ms",
+        "files": [
+          "app/globals.css",
+          "components/marketing/home-conversion-sections.tsx"
+        ],
+        "classification": "valeur isolee"
+      },
+      {
+        "name": "comparison-kit-rise",
+        "duration": "840ms",
+        "files": [
+          "app/globals.css",
+          "components/marketing/home-conversion-sections.tsx"
+        ],
+        "classification": "valeur isolee"
+      }
+    ],
+    "framerPatterns": [
+      {
+        "name": "headerMenu",
+        "motions": [
+          "height auto",
+          "opacity",
+          "y",
+          "icon rotate/scale"
+        ],
+        "files": [
+          "components/layout/site-header.tsx"
+        ]
+      },
+      {
+        "name": "heroCarousel",
+        "motions": [
+          "x",
+          "rotate",
+          "scale",
+          "opacity",
+          "whileHover y"
+        ],
+        "interval": "7600ms",
+        "files": [
+          "components/marketing/hero.tsx"
+        ]
+      },
+      {
+        "name": "processReveal",
+        "motions": [
+          "whileInView y/opacity/rotate",
+          "whileHover y/rotate"
+        ],
+        "files": [
+          "components/marketing/process-timeline.tsx"
+        ]
+      }
+    ],
+    "reducedMotion": {
+      "css": "Global @media (prefers-reduced-motion: reduce) sets animation/transition duration to 0.01ms and disables smooth scroll.",
+      "js": "Hero uses useReducedMotion to stop interval and set transition duration to 0.",
+      "files": [
+        "app/globals.css",
+        "components/marketing/hero.tsx"
+      ]
+    },
+    "inconsistencies": [
+      "Mix de tokens CSS, tokens Framer et Tailwind duration-300/500/700.",
+      "panel-premium utilise 300ms ease; case-study-card utilise 420ms tokenise.",
+      "Classes avec transform-origin sans animation visible: hero-device-float, product-drift."
+    ]
+  },
+  "components": [
+    {
+      "name": "SiteHeader",
+      "files": [
+        "components/layout/site-header.tsx"
+      ],
+      "variants": [
+        "top dark",
+        "compact light",
+        "mobile menu open"
+      ],
+      "states": {
+        "hover": "Logo opacity, nav text color, mobile links background/border.",
+        "focus": "Menu button native focus; CTA via Button focus-visible.",
+        "active": "Button active via .button-cycle.",
+        "disabled": "Absent."
+      },
+      "responsive": "Desktop nav from md; mobile menu below md.",
+      "classification": "regle recurrente"
+    },
+    {
+      "name": "SiteFooter",
+      "files": [
+        "components/layout/site-footer.tsx"
+      ],
+      "variants": [
+        "single footer"
+      ],
+      "states": {
+        "hover": "Footer link underline and opacity; CTA Button hover.",
+        "focus": "Link/browser default plus Button focus.",
+        "active": "Button active.",
+        "disabled": "Absent."
+      },
+      "responsive": "Grid becomes 3 columns on lg.",
+      "classification": "element identitaire"
+    },
+    {
+      "name": "Button",
+      "files": [
+        "components/ui/button.tsx",
+        "app/globals.css"
+      ],
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "primaryOnLight",
+        "secondaryOnLight"
+      ],
+      "states": {
+        "hover": "Lift, color/background/border/shadow, shine overlay.",
+        "focus": "focus-visible outline currentColor.",
+        "active": "Perspective press down.",
+        "disabled": "Absent."
+      },
+      "duplications": [
+        "FinalCta recode deux boutons en anchors inline."
+      ],
+      "classification": "regle recurrente"
+    },
+    {
+      "name": "Badge",
+      "files": [
+        "components/ui/badge.tsx"
+      ],
+      "variants": [
+        "single glass uppercase"
+      ],
+      "states": {
+        "hover": "Absent.",
+        "focus": "N/A.",
+        "active": "N/A.",
+        "disabled": "Absent."
+      },
+      "classification": "regle recurrente limitee"
+    },
+    {
+      "name": "SectionHeading",
+      "files": [
+        "components/ui/section-heading.tsx"
+      ],
+      "variants": [
+        "left",
+        "center"
+      ],
+      "states": {},
+      "responsive": "Mobile max width constrained, md text scale.",
+      "inconsistencies": [
+        "Prop eyebrow declaree mais non rendue."
+      ],
+      "classification": "regle recurrente avec dette"
+    },
+    {
+      "name": "Reveal",
+      "files": [
+        "components/ui/reveal.tsx",
+        "app/globals.css"
+      ],
+      "variants": [
+        "delay inline"
+      ],
+      "states": {},
+      "inconsistencies": [
+        "Prop distance declaree mais non utilisee."
+      ],
+      "classification": "regle recurrente avec dette"
+    },
+    {
+      "name": "Hero",
+      "files": [
+        "components/marketing/hero.tsx"
+      ],
+      "variants": [
+        "desktop layered carousel",
+        "mobile snap carousel"
+      ],
+      "states": {
+        "hover": "Mockup lift, rotate refinement, halo opacity.",
+        "focus": "focus-visible ring on demo links.",
+        "active": "Links default.",
+        "disabled": "Absent."
+      },
+      "responsive": "Desktop scene hidden below sm; mobile rail shown below sm.",
+      "classification": "element identitaire a conserver"
+    },
+    {
+      "name": "CategoriesGrid",
+      "files": [
+        "components/marketing/categories-grid.tsx",
+        "app/globals.css"
+      ],
+      "variants": [
+        "mobile rail",
+        "desktop 2-column grid"
+      ],
+      "states": {
+        "hover": "case-study-card perspective lift, border/shadow, mockup lift, arrow translate.",
+        "focus": "focus-visible ring.",
+        "active": "Link default.",
+        "disabled": "Absent."
+      },
+      "duplications": [
+        "Mockup composition duplicated in ExamplesGalleryGrid.",
+        "Mobile rail duplicated in SocialProof and ComparisonSection."
+      ],
+      "classification": "element identitaire avec duplication"
+    },
+    {
+      "name": "ExamplesGalleryGrid",
+      "files": [
+        "components/marketing/examples-gallery-grid.tsx"
+      ],
+      "variants": [
+        "filter active",
+        "filter inactive",
+        "gallery card with image",
+        "gallery card fallback accent"
+      ],
+      "states": {
+        "hover": "Filter inactive hover; panel-premium hover; mockup lift; arrow translate.",
+        "focus": "Not explicitly defined on filters/cards beyond browser/link defaults.",
+        "active": "Filter selected style.",
+        "disabled": "Absent."
+      },
+      "responsive": "Grid md 2 columns, xl 3 columns.",
+      "duplications": [
+        "Mockup composition duplicated from CategoriesGrid."
+      ],
+      "classification": "regle recurrente avec duplication"
+    },
+    {
+      "name": "PricingTable",
+      "files": [
+        "components/marketing/pricing-table.tsx"
+      ],
+      "variants": [
+        "default",
+        "highlight",
+        "showHeading true",
+        "showHeading false",
+        "options details mobile",
+        "options article desktop"
+      ],
+      "states": {
+        "hover": "motion-line hover; details chevron rotate on open.",
+        "focus": "Summary/button browser defaults; CTA Button focus.",
+        "active": "CTA Button active.",
+        "disabled": "Absent."
+      },
+      "responsive": "Pricing grid on lg; options accordion mobile, grid desktop.",
+      "classification": "regle recurrente claire editoriale"
+    },
+    {
+      "name": "ProcessTimeline",
+      "files": [
+        "components/marketing/process-timeline.tsx"
+      ],
+      "variants": [
+        "brief visual",
+        "direction visual",
+        "final visual"
+      ],
+      "states": {
+        "hover": "Card lift/rotate and shadow/border change.",
+        "focus": "No explicit interactive focus except CTA.",
+        "active": "CTA Button active.",
+        "disabled": "Absent."
+      },
+      "responsive": "Single column mobile with arrow connectors; 3-column desktop.",
+      "classification": "exception artistique potentiellement volontaire"
+    },
+    {
+      "name": "SocialProof",
+      "files": [
+        "components/marketing/social-proof.tsx"
+      ],
+      "variants": [
+        "mobile rail",
+        "desktop grid"
+      ],
+      "states": {
+        "hover": "motion-line background/border/shadow.",
+        "focus": "N/A articles.",
+        "active": "N/A.",
+        "disabled": "Absent."
+      },
+      "responsive": "Mobile horizontal snap; md grid 2; xl grid 3.",
+      "classification": "regle recurrente"
+    },
+    {
+      "name": "FinalCta",
+      "files": [
+        "components/marketing/final-cta.tsx",
+        "app/globals.css"
+      ],
+      "variants": [
+        "whatsapp primary",
+        "email secondary"
+      ],
+      "states": {
+        "hover": "Button-cycle lift/shine plus color/border changes.",
+        "focus": "focus-visible outline.",
+        "active": "button-cycle active.",
+        "disabled": "Absent."
+      },
+      "responsive": "Stacked mobile, row from sm.",
+      "duplications": [
+        "Inline button styles duplicate Button primitive patterns."
+      ],
+      "classification": "regle recurrente avec valeur isolee"
+    },
+    {
+      "name": "CategoryHero",
+      "files": [
+        "components/marketing/category-hero.tsx"
+      ],
+      "variants": [
+        "category gradient"
+      ],
+      "states": {
+        "hover": "CTA Button hover.",
+        "focus": "CTA Button focus.",
+        "active": "CTA Button active."
+      },
+      "responsive": "Two-column from lg.",
+      "classification": "composant visuellement proche mais moins recent"
+    },
+    {
+      "name": "CategoryContent",
+      "files": [
+        "components/marketing/category-content.tsx"
+      ],
+      "variants": [
+        "benefit cards",
+        "include list",
+        "module grid",
+        "CTA panel"
+      ],
+      "states": {
+        "hover": "CTA Button only.",
+        "focus": "CTA Button only.",
+        "active": "CTA Button only."
+      },
+      "classification": "composant visuellement proche mais moins recent"
+    },
+    {
+      "name": "Faq",
+      "files": [
+        "components/marketing/faq.tsx"
+      ],
+      "variants": [
+        "static FAQ rows"
+      ],
+      "states": {
+        "hover": "Absent.",
+        "focus": "Absent.",
+        "active": "Absent."
+      },
+      "classification": "composant simple / valeur isolee"
+    },
+    {
+      "name": "PreviewLoopCard",
+      "files": [
+        "components/marketing/preview-loop-card.tsx",
+        "app/globals.css"
+      ],
+      "variants": [
+        "scrolling preview",
+        "live pill"
+      ],
+      "states": {
+        "hover": "Framer lift/rotate, overlay opacity, text/pill changes.",
+        "focus": "Link default.",
+        "active": "Link default.",
+        "disabled": "Absent."
+      },
+      "classification": "exception artistique potentiellement volontaire"
+    },
+    {
+      "name": "ExamplesShowcase",
+      "files": [
+        "components/marketing/examples-showcase.tsx"
+      ],
+      "variants": [
+        "image card",
+        "fallback accent"
+      ],
+      "states": {
+        "hover": "panel-premium, mockup-surface, arrow text.",
+        "focus": "Link default.",
+        "active": "Link default."
+      },
+      "classification": "composant probablement moins central"
+    }
+  ],
+  "inconsistencies": [
+    {
+      "type": "valuesAlmostIdentical",
+      "items": [
+        "#07090e",
+        "#080b11",
+        "#0b0e14",
+        "#0d1016",
+        "#0d1118",
+        "#10141b",
+        "#10141d",
+        "#11151d"
+      ],
+      "risk": "Palette sombre difficile a gouverner."
+    },
+    {
+      "type": "surfaceAlphaDrift",
+      "items": [
+        "0.03",
+        "0.035",
+        "0.04",
+        "0.045",
+        "0.05",
+        "0.055",
+        "0.06",
+        "0.07",
+        "0.074",
+        "0.075"
+      ],
+      "risk": "Surfaces visuellement proches mais non nommees."
+    },
+    {
+      "type": "duplicatedComponents",
+      "items": [
+        "CategoriesGrid mockup card",
+        "ExamplesGalleryGrid mockup card",
+        "Hero mockup scene",
+        "mobile snap rails",
+        "FinalCta inline buttons vs Button primitive"
+      ],
+      "risk": "Corrections futures repetitives et drift responsive."
+    },
+    {
+      "type": "unusedOrDeadDesignHooks",
+      "items": [
+        "SectionHeading.eyebrow",
+        "Reveal.distance",
+        ".editorial-panel::before content none",
+        ".case-study-card::after content none",
+        ".section-contact::before content none",
+        ".accent-ring::after content none",
+        "Cormorant Garamond loaded but not observed in use"
+      ],
+      "risk": "Intentions design confuses et cout de maintenance."
+    },
+    {
+      "type": "motionTokenDrift",
+      "items": [
+        "CSS variables",
+        "lib/motion.ts tokens",
+        "Tailwind duration-300/500/700",
+        "inline Framer duration 1.8"
+      ],
+      "risk": "Rythme motion moins controlable a l'echelle."
+    }
+  ],
+  "identityToPreserve": [
+    "Fond sombre stratifie avec grille et grain lumineux.",
+    "Alternance sombre premium / sections blanches editoriales.",
+    "Mockups desktop/mobile inclines avec superposition.",
+    "Micro-labels uppercase tres espaces.",
+    "Accents de projet/metier non uniformes mais controles.",
+    "Animations de reveal et preview lentes.",
+    "Mini schematisation du process en cartes claires."
+  ],
+  "preliminaryRecommendations": [
+    "Definir des roles de couleur avant tout refactor: canvas, section, surface, border, text, accent.",
+    "Limiter les alphas de surfaces et bordures a quelques niveaux nommes.",
+    "Creer plus tard une primitive de mockup desktop/mobile.",
+    "Creer plus tard une primitive de rail mobile snap.",
+    "Clarifier le role de Cormorant Garamond.",
+    "Rendre ou retirer l'eyebrow de SectionHeading.",
+    "Aligner les tokens motion CSS et Framer.",
+    "Conserver les exceptions artistiques par projet au lieu de les lisser."
+  ]
+}

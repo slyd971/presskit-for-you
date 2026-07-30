@@ -252,7 +252,7 @@ export function CategoriesGrid() {
           ))}
         </div>
         <div className="mt-10 flex justify-center md:mt-12">
-          <Button href="/galerie" variant="secondary">
+          <Button href="/exemples" variant="secondary">
             Voir plus d’exemples
           </Button>
         </div>

@@ -71,6 +71,8 @@ export function ExamplesGalleryGrid() {
                             <img
                               src={image}
                               alt={`${example.title} en version desktop`}
+                              loading="lazy"
+                              decoding="async"
                               className="h-full w-full object-contain object-center"
                               style={imagePosition ? { objectPosition: imagePosition } : undefined}
                             />
@@ -85,6 +87,8 @@ export function ExamplesGalleryGrid() {
                                 <img
                                   src={mobileImage}
                                   alt={`${example.title} en version mobile`}
+                                  loading="lazy"
+                                  decoding="async"
                                   className="phone-preview-scroll"
                                 />
                               </div>

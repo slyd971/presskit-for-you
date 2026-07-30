@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Manrope, Cormorant_Garamond } from "next/font/google";
 
 import { siteConfig } from "@/content/site";
-import { absoluteUrl } from "@/lib/seo";
+import { publishedPresskitCategories } from "@/lib/presskit-categories";
+import { absoluteUrl, socialImage, twitterImage } from "@/lib/seo";
 import "@/app/globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -44,24 +45,24 @@ export const metadata: Metadata = {
     siteName: "PressKit For You",
     locale: "fr_FR",
     type: "website",
-    images: [
-      {
-        url: "/opengraph-image?v=20260728-2",
-        width: 1200,
-        height: 630,
-        alt: "PressKit For You - press kits digitaux premium",
-      },
-    ],
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "PressKit For You",
     description: siteConfig.description,
-    images: ["/twitter-image?v=20260728-2"],
+    images: [twitterImage],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: [
@@ -105,22 +106,81 @@ const structuredData = {
       hasPart: [
         {
           "@type": "WebPage",
-          "@id": `${siteConfig.url}/galerie#webpage`,
-          url: `${siteConfig.url}/galerie`,
-          name: "Exemples de press kits",
-          description: "Exemples réels de press kits digitaux premium déjà en ligne.",
+          "@id": `${siteConfig.url}/#webpage`,
+          url: siteConfig.url,
+          name: "PressKit For You",
+          description: siteConfig.description,
         },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/exemples#webpage`,
+          url: `${siteConfig.url}/exemples`,
+          name: "Exemples de press kits",
+          description: "Exemples réels de press kits digitaux déjà en ligne.",
+        },
+        ...publishedPresskitCategories.map((category) => ({
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/${category.slug}#webpage`,
+          url: `${siteConfig.url}/${category.slug}`,
+          name: category.name,
+          description: category.heroDescription,
+        })),
       ],
       publisher: {
         "@id": `${siteConfig.url}/#organization`,
       },
     },
     {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/#webpage`,
+      url: siteConfig.url,
+      name: "PressKit For You",
+      description: siteConfig.description,
+      isPartOf: {
+        "@id": `${siteConfig.url}/#website`,
+      },
+      about: {
+        "@id": `${siteConfig.url}/#service`,
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/exemples#webpage`,
+      url: `${siteConfig.url}/exemples`,
+      name: "Exemples de press kits",
+      description: "Exemples réels de press kits digitaux déjà en ligne.",
+      isPartOf: {
+        "@id": `${siteConfig.url}/#website`,
+      },
+      about: {
+        "@id": `${siteConfig.url}/#service`,
+      },
+    },
+    ...publishedPresskitCategories.map((category) => ({
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/${category.slug}#webpage`,
+      url: `${siteConfig.url}/${category.slug}`,
+      name: category.name,
+      description: category.heroDescription,
+      isPartOf: {
+        "@id": `${siteConfig.url}/#website`,
+      },
+      about: {
+        "@id": `${siteConfig.url}/#service`,
+      },
+    })),
+    {
       "@type": "SiteNavigationElement",
       "@id": `${siteConfig.url}/#navigation-exemples`,
       name: "Exemples",
-      url: `${siteConfig.url}/galerie`,
+      url: `${siteConfig.url}/exemples`,
     },
+    ...publishedPresskitCategories.map((category) => ({
+      "@type": "SiteNavigationElement",
+      "@id": `${siteConfig.url}/#navigation-${category.slug}`,
+      name: category.name,
+      url: `${siteConfig.url}/${category.slug}`,
+    })),
     {
       "@type": "Service",
       "@id": `${siteConfig.url}/#service`,
@@ -131,7 +191,7 @@ const structuredData = {
         "@id": `${siteConfig.url}/#organization`,
       },
       areaServed: "FR",
-      url: absoluteUrl("contact"),
+      url: absoluteUrl("#contact"),
     },
   ],
 };

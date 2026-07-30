@@ -7,12 +7,12 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Exemples",
-  description: "Explore plusieurs exemples de press kits digitaux premium pour artistes, DJs, photographes, coachs et make-up artists.",
-  path: "galerie",
-  keywords: ["exemple press kit", "galerie site artiste", "demo press kit digital"],
+  description: "Explore plusieurs exemples de press kits digitaux pour artistes, DJs, photographes, coachs et make-up artists.",
+  path: "exemples",
+  keywords: ["exemple press kit", "exemples press kit", "demo press kit digital"],
 });
 
-export default function GalleryPage() {
+export default function ExamplesPage() {
   return (
     <>
       <section className="section-wash relative overflow-hidden pt-16 pb-6 md:pt-18 md:pb-8">
@@ -22,7 +22,7 @@ export default function GalleryPage() {
             Exemples
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.68] md:text-lg">
-            Inspirez-vous de réalisations conçues pour différents profils, univers et objectifs.
+            Inspirez-vous de réalisations conçues pour différents profils, métiers et objectifs.
           </p>
         </PageShell>
       </section>

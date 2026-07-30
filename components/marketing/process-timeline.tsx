@@ -76,11 +76,11 @@ function CompactVisual({ type }: { type: string }) {
     return (
       <div className="relative h-56 overflow-hidden bg-[#080b11] p-3 md:h-64">
         <div className="overflow-hidden border border-white/10 bg-black">
-          <img src="/gallery-previews/home-desktop/dj-slyd.png" alt="" className="h-full w-full object-contain object-center" />
+          <img src="/gallery-previews/home-desktop/dj-slyd.png" alt="" loading="lazy" decoding="async" className="h-full w-full object-contain object-center" />
         </div>
         <div className="absolute bottom-5 right-5 w-[24%] min-w-[4rem] rotate-[3deg] border border-white/20 bg-[#080b11] p-1 shadow-[0_18px_48px_rgba(0,0,0,0.45)]">
           <div className="aspect-[0.48/1] overflow-hidden bg-black">
-            <img src="/gallery-previews/home-mobile/dj-slyd.png" alt="" className="h-full w-full object-cover object-top" />
+            <img src="/gallery-previews/home-mobile/dj-slyd.png" alt="" loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
           </div>
         </div>
       </div>

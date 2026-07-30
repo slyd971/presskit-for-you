@@ -57,6 +57,8 @@ export function PreviewLoopCard({
             <img
               src={image}
               alt={title}
+              loading="lazy"
+              decoding="async"
               className={`preview-scroll w-full max-w-none ${delayClassName}`}
               style={Object.keys(imageStyle).length > 0 ? imageStyle : undefined}
             />
