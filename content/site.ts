@@ -41,6 +41,8 @@ export type Example = {
   externalDemoUrl?: string;
 };
 
+export { pricingTiers } from "@/content/pricing";
+
 export const siteConfig = {
   name: "PressKit For You",
   description:
@@ -151,40 +153,6 @@ export const processSteps = [
     title: "Livraison",
     description:
       "Tu reçois un lien prêt à partager, pensé pour inspirer confiance et générer plus d’opportunités.",
-  },
-];
-
-export const pricingTiers = [
-  {
-    name: "Press Kit Premium",
-    price: "À partir de 300 €",
-    tagline: "pour lancer ton image pro",
-    description: "L’offre idéale pour créer un press kit clair, premium et prêt à partager.",
-    features: [
-      "Page press kit sur-mesure",
-      "Adaptation mobile",
-      "Jusqu’à 5 sections",
-      "Galerie photos / vidéos",
-      "Intégration réseaux sociaux",
-      "CTA contact intégré",
-      "Livraison rapide",
-    ],
-    badge: "Le plus demandé",
-  },
-  {
-    name: "Studio Custom",
-    price: "Sur devis",
-    tagline: "pour un projet plus ambitieux",
-    description: "Pour une expérience plus éditoriale, multi-pages ou entièrement sur mesure.",
-    features: [
-      "Architecture complète",
-      "Pages supplémentaires",
-      "Direction artistique plus poussée",
-      "Fonctionnalités spécifiques",
-      "SEO avancé",
-      "Accompagnement contenu",
-    ],
-    badge: "Projet avancé",
   },
 ];
 

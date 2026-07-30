@@ -91,9 +91,9 @@ const heroKits: HeroKit[] = [
 ];
 
 const carouselSlots = [
-  { offset: 0, x: "-2%", y: "10%", width: "73%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
-  { offset: 1, x: "18%", y: "20%", width: "54%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
-  { offset: -1, x: "-28%", y: "24%", width: "52%", rotate: -3.5, scale: 0.86, opacity: 0.58, zIndex: 24 },
+  { offset: 0, x: "-6%", y: "8%", width: "88%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
+  { offset: 1, x: "22%", y: "19%", width: "62%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
+  { offset: -1, x: "-34%", y: "22%", width: "60%", rotate: -3.5, scale: 0.86, opacity: 0.58, zIndex: 24 },
 ];
 
 export function Hero() {
@@ -151,7 +151,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[38rem] lg:mr-20 lg:min-h-[44rem] xl:mr-32 2xl:mr-44">
+          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]">
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
@@ -167,7 +167,7 @@ export function Hero() {
                   aria-label={`Voir le rendu live ${kit.title}`}
                   className="group absolute hidden cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118] sm:block"
                   style={{
-                    left: "43%",
+                    left: "45%",
                     top: slot.y,
                     width: slot.width,
                     zIndex: slot.zIndex,
@@ -221,7 +221,7 @@ export function Hero() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Voir le rendu live ${kit.title}`}
-                    className="group w-[82vw] max-w-[21rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118]"
+                    className="group w-[90vw] max-w-[24rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118]"
                   >
                     <span
                       className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"

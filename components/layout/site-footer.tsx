@@ -44,6 +44,9 @@ export function SiteFooter() {
             <Link href="/exemples" className="footer-link text-sm text-white/[0.64] hover:text-white">
               Tous les exemples
             </Link>
+            <Link href="/tarifs" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              Tous les tarifs
+            </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Métiers</p>
           <div className="mt-6 space-y-4">

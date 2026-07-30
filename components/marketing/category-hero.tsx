@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { CSSProperties } from "react";
 
 import type { Category } from "@/content/site";
 import { Button } from "@/components/ui/button";
@@ -53,8 +52,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
             href={href}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noreferrer" : undefined}
-            className="case-study-card group block overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:p-5"
-            style={{ "--case-accent": category.accent } as CSSProperties}
+            className="group block overflow-visible outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
           >
             <div className="relative min-h-[21rem] overflow-visible sm:min-h-[36rem]">
               <div

@@ -118,6 +118,13 @@ const structuredData = {
           name: "Exemples de press kits",
           description: "Exemples réels de press kits digitaux déjà en ligne.",
         },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/tarifs#webpage`,
+          url: `${siteConfig.url}/tarifs`,
+          name: "Tarifs PressKit For You",
+          description: "Tarifs et formules de création de press kits digitaux premium.",
+        },
         ...publishedPresskitCategories.map((category) => ({
           "@type": "WebPage",
           "@id": `${siteConfig.url}/${category.slug}#webpage`,
@@ -156,6 +163,19 @@ const structuredData = {
         "@id": `${siteConfig.url}/#service`,
       },
     },
+    {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/tarifs#webpage`,
+      url: `${siteConfig.url}/tarifs`,
+      name: "Tarifs PressKit For You",
+      description: "Tarifs et formules de création de press kits digitaux premium.",
+      isPartOf: {
+        "@id": `${siteConfig.url}/#website`,
+      },
+      about: {
+        "@id": `${siteConfig.url}/#service`,
+      },
+    },
     ...publishedPresskitCategories.map((category) => ({
       "@type": "WebPage",
       "@id": `${siteConfig.url}/${category.slug}#webpage`,
@@ -174,6 +194,12 @@ const structuredData = {
       "@id": `${siteConfig.url}/#navigation-exemples`,
       name: "Exemples",
       url: `${siteConfig.url}/exemples`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": `${siteConfig.url}/#navigation-tarifs`,
+      name: "Tarifs",
+      url: `${siteConfig.url}/tarifs`,
     },
     ...publishedPresskitCategories.map((category) => ({
       "@type": "SiteNavigationElement",

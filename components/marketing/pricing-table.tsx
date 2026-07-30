@@ -1,4 +1,4 @@
-import { pricingTiers } from "@/content/site";
+import { pricingOptions, pricingTiers } from "@/content/pricing";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -8,32 +8,16 @@ import { ChevronDown } from "lucide-react";
 type PricingTableProps = {
   variant?: "default" | "highlight";
   showHeading?: boolean;
+  sectionId?: string | null;
+  contactHref?: string;
 };
 
-const complementaryOptions = [
-  {
-    name: "Nom de domaine personnalisé",
-    price: "+30 €",
-    description: "Pour partager une adresse courte et crédible, reliée à votre nom ou votre marque.",
-  },
-  {
-    name: "Maintenance annuelle",
-    price: "+60 €/an",
-    description: "Pour assurer les mises à jour, les corrections et le bon fonctionnement de votre press kit.",
-  },
-  {
-    name: "Mise à jour de contenu",
-    price: "+30 €",
-    description: "Pour remplacer une photo, ajouter une date, modifier un texte ou mettre à jour vos liens.",
-  },
-  {
-    name: "Séance photo professionnelle",
-    price: "Sur devis",
-    description: "Pour créer les visuels manquants quand vos photos actuelles ne rendent pas justice au projet.",
-  },
-];
-
-export function PricingTable({ variant = "default", showHeading = true }: PricingTableProps) {
+export function PricingTable({
+  variant = "default",
+  showHeading = true,
+  sectionId = "tarifs",
+  contactHref = "/#contact",
+}: PricingTableProps) {
   const isHighlight = variant === "highlight";
   const spacingClass = showHeading ? "pt-20 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
@@ -50,7 +34,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
 
   return (
     <section
-      id="tarifs"
+      id={sectionId ?? undefined}
       className={cn(
         "scroll-mt-28",
         spacingClass,
@@ -94,7 +78,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
                 ))}
               </ul>
               <Button
-                href="/#contact"
+                href={contactHref}
                 variant="primaryOnLight"
                 className="relative mx-auto mt-10 min-h-12 w-full max-w-sm justify-center px-6 py-3.5"
               >
@@ -115,7 +99,7 @@ export function PricingTable({ variant = "default", showHeading = true }: Pricin
               </p>
             </div>
             <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
-              {complementaryOptions.map((option) => (
+              {pricingOptions.map((option) => (
                 <div key={option.name}>
                   <details className="group border-b border-white/[0.09] py-4 md:hidden">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
