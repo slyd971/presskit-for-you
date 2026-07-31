@@ -25,7 +25,7 @@ export function FinalCta() {
             </a>
             <a
               href="mailto:david.mecorvin@hotmail.fr"
-              className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-[#10141d]/20 bg-white/55 px-8 py-[1.125rem] text-base font-semibold text-[#10141d] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] hover:border-[#10141d]/32 hover:bg-white/78 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+              className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-[#10141d]/[0.24] bg-white px-8 py-[1.125rem] text-base font-semibold text-[#10141d] shadow-[0_12px_34px_rgba(13,16,22,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] hover:border-[#10141d]/[0.36] hover:bg-[#F4EFE7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
               Envoyer un email

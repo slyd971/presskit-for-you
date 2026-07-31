@@ -211,7 +211,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           transition={{ duration: motionTokens.duration.normal, ease: motionTokens.easing.enter }}
           className="mt-10 flex justify-center md:mt-12"
         >
-          <Button href="#exemples" className="shrink-0 px-7 py-4 text-[15px]">
+          <Button href="#exemples" variant="secondary" className="shrink-0 px-7 py-4 text-[15px]">
             Découvrir un exemple
           </Button>
         </motion.div>

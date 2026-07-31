@@ -135,14 +135,14 @@ export function Hero() {
             <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
               <Button
                 href="#exemples"
-                className="min-h-12 w-full px-7 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
+                variant="secondary"
+                className="min-h-12 w-full px-7 py-4 text-[15px] sm:w-auto"
               >
                 Voir des exemples
               </Button>
               <Button
                 href="#contact"
-                variant="secondary"
-                className="min-h-12 w-full px-6 py-4 text-[15px] text-white/[0.88] sm:w-auto"
+                className="min-h-12 w-full px-6 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
               >
                 Lancer mon projet
               </Button>
