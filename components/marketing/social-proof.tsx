@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { testimonials } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -48,13 +50,25 @@ export function ProofStats() {
 
           <div className="relative min-h-[18rem] lg:min-h-[22rem]">
             <div className="product-drift absolute left-0 top-6 w-[82%] rotate-[-1.5deg] border border-[#10141d]/[0.12] bg-[#080b11] p-2 shadow-[0_26px_80px_rgba(16,20,29,0.2)]">
-              <div className="aspect-[91/60] overflow-hidden bg-black">
-                <img src="/gallery-previews/home-desktop/dj-slyd.png" alt="" loading="lazy" decoding="async" className="h-full w-full object-contain object-center" />
+              <div className="relative aspect-[91/60] overflow-hidden bg-black">
+                <Image
+                  src="/gallery-previews/home-desktop/dj-slyd.webp"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 42vw, 82vw"
+                  className="object-contain object-center"
+                />
               </div>
             </div>
             <div className="product-drift-slow absolute bottom-0 right-4 w-[26%] min-w-[5rem] rotate-[4deg] border border-[#10141d]/[0.16] bg-[#080b11] p-1.5 shadow-[0_22px_60px_rgba(16,20,29,0.22)]">
-              <div className="aspect-[0.48/1] overflow-hidden bg-black">
-                <img src="/gallery-previews/home-mobile/dj-slyd.png" alt="" loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
+              <div className="relative aspect-[0.48/1] overflow-hidden bg-black">
+                <Image
+                  src="/gallery-previews/home-mobile/dj-slyd.webp"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 13vw, 26vw"
+                  className="object-cover object-top"
+                />
               </div>
             </div>
           </div>
@@ -98,11 +112,11 @@ export function SocialProof() {
               <article className="motion-line group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.045] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.075] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
                 <div className="flex items-center gap-4 border-b border-white/[0.1] pb-5">
                   {"image" in item && item.image ? (
-                    <img
+                    <Image
                       src={item.image}
                       alt=""
-                      loading="lazy"
-                      decoding="async"
+                      width={56}
+                      height={56}
                       className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
                     />
                   ) : null}

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { motionTokens } from "@/lib/motion";
 
@@ -54,11 +55,12 @@ export function PreviewLoopCard({
       >
         <div className="mockup-surface relative overflow-hidden rounded-[1rem] border border-white/8 bg-[#0b0e14]">
           <div className="relative h-28 overflow-hidden bg-[#0b0e14]">
-            <img
+            <Image
               src={image}
               alt={title}
-              loading="lazy"
-              decoding="async"
+              width={640}
+              height={420}
+              sizes="(min-width: 1024px) 18rem, 80vw"
               className={`preview-scroll w-full max-w-none ${delayClassName}`}
               style={Object.keys(imageStyle).length > 0 ? imageStyle : undefined}
             />

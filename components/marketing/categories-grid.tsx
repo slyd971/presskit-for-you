@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,7 @@ const homeExamples = [
     context: "Artiste peintre avec un univers très visuel.",
     objective: "Présenter œuvres, démarche et contact sans diluer l’image.",
     result: "Une vitrine contemplative, claire et plus crédible pour les opportunités.",
-    desktopImage: "/gallery-previews/home-desktop/melymelow.png",
+    desktopImage: "/gallery-previews/home-desktop/melymelow.webp",
     mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     externalDemoUrl: "https://presskit.melymelow.art/",
     accent: "#F4C26B",
@@ -32,8 +33,8 @@ const homeExamples = [
     context: "Lancement artistique avec besoin de centraliser médias et preuves.",
     objective: "Donner envie d’écouter, comprendre et contacter rapidement.",
     result: "Une page musicale plus structurée qu’un lien bio classique.",
-    desktopImage: "/gallery-previews/home-desktop/sherin.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.jpg",
+    desktopImage: "/gallery-previews/home-desktop/sherin.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.webp",
     externalDemoUrl: "https://sherin.presskit.fr/",
     accent: "#F4C26B",
     gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
@@ -47,8 +48,8 @@ const homeExamples = [
     context: "Danseur et projet culturel à forte dimension humaine.",
     objective: "Faire sentir l’énergie, le propos et les possibilités de collaboration.",
     result: "Une présence plus incarnée, pensée pour convaincre au-delà d’une vidéo.",
-    desktopImage: "/gallery-previews/home-desktop/krimo.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.jpg",
+    desktopImage: "/gallery-previews/home-desktop/krimo.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.webp",
     externalDemoUrl: "https://krimo-dancer.presskit.fr/",
     accent: "#D5A928",
     gradient: "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
@@ -62,8 +63,8 @@ const homeExamples = [
     context: "DJ & MC avec références internationales.",
     objective: "Rassurer les bookers avec un support immédiatement professionnel.",
     result: "Booking, médias et univers réunis dans un format premium.",
-    desktopImage: "/gallery-previews/home-desktop/dj-mack.png",
-    mobileImage: "/gallery-previews/home-mobile/dj-mack.png",
+    desktopImage: "/gallery-previews/home-desktop/dj-mack.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-mack.webp",
     externalDemoUrl: "https://dj-mack.presskit.fr/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -77,8 +78,8 @@ const homeExamples = [
     context: "DJ open format avec une signature club identifiable.",
     objective: "Transformer l’énergie de scène en argument de booking.",
     result: "Un lien vivant, plus simple à envoyer aux lieux et organisateurs.",
-    desktopImage: "/gallery-previews/home-desktop/soyumi.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.jpg",
+    desktopImage: "/gallery-previews/home-desktop/soyumi.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.webp",
     externalDemoUrl: "https://soyumi.presskit.fr/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -92,8 +93,8 @@ const homeExamples = [
     context: "Profil DJ orienté hôtels, marques et événements privés.",
     objective: "Installer une image élégante, lisible et corporate-ready.",
     result: "Une présentation directe qui clarifie le niveau et les références.",
-    desktopImage: "/gallery-previews/home-desktop/flo.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-djflo.jpg",
+    desktopImage: "/gallery-previews/home-desktop/flo.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-djflo.webp",
     externalDemoUrl: "https://www.djfloparis.com/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -107,8 +108,8 @@ const homeExamples = [
     context: "Concept événementiel avec communauté et partenaires.",
     objective: "Montrer la traction, l’ambiance et le potentiel sponsor.",
     result: "Un dossier digital plus convaincant qu’un PDF statique.",
-    desktopImage: "/gallery-previews/home-desktop/la-bringue.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.jpg",
+    desktopImage: "/gallery-previews/home-desktop/la-bringue.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.webp",
     externalDemoUrl: "https://labringue-party.vercel.app/",
     accent: "#FF8DAA",
     gradient: "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
@@ -122,8 +123,8 @@ const homeExamples = [
     context: "DJ et directeur artistique avec culture club forte.",
     objective: "Faire ressortir la crédibilité, le style et les références.",
     result: "Un positionnement plus haut de gamme, prêt pour le booking.",
-    desktopImage: "/gallery-previews/home-desktop/arthur-chaps.png",
-    mobileImage: "/gallery-previews/home-mobile/arthur-chaps.png",
+    desktopImage: "/gallery-previews/home-desktop/arthur-chaps.webp",
+    mobileImage: "/gallery-previews/home-mobile/arthur-chaps.webp",
     externalDemoUrl: "https://arthur-chaps.presskit.fr/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -137,8 +138,8 @@ const homeExamples = [
     context: "DJ avec besoin d’un lien clair pour bookers et clubs.",
     objective: "Remplacer les envois dispersés par une page complète.",
     result: "Un support plus net pour présenter univers, médias et contact.",
-    desktopImage: "/gallery-previews/home-desktop/dj-slyd.png",
-    mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
+    desktopImage: "/gallery-previews/home-desktop/dj-slyd.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-slyd.webp",
     externalDemoUrl: "https://djslyd.presskit.fr/",
     accent: "#FF9152",
     gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
@@ -152,8 +153,8 @@ const homeExamples = [
     context: "Artiste rap/slam avec un univers éditorial affirmé.",
     objective: "Mettre en avant la signature artistique, les médias et le contact booking.",
     result: "Une présence sobre, premium et mémorable, prête à partager.",
-    desktopImage: "/gallery-previews/home-desktop/black-moz.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-blackmoz.jpg",
+    desktopImage: "/gallery-previews/home-desktop/black-moz.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-blackmoz.webp",
     externalDemoUrl: "https://black-moz.presskit.fr/",
     accent: "#C8BBAE",
     gradient: "from-[#C8BBAE]/28 via-[#FFFFFF]/10 to-transparent",
@@ -195,12 +196,12 @@ export function CategoriesGrid() {
                   <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
                     <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
                       <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
-                        <img
+                        <Image
                           src={example.desktopImage}
                           alt={`${example.title} en version desktop`}
-                          loading="lazy"
-                          decoding="async"
-                          className="h-full w-full object-contain object-center"
+                          fill
+                          sizes="(min-width: 1024px) 40vw, (min-width: 768px) 74vw, 74vw"
+                          className="object-contain object-center"
                         />
                       </div>
                     </div>
@@ -210,12 +211,12 @@ export function CategoriesGrid() {
                         <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                           <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                             <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
-                            <img
+                            <Image
                               src={example.mobileImage}
                               alt={`${example.title} en version mobile`}
-                              loading="lazy"
-                              decoding="async"
-                              className="phone-preview-scroll"
+                              fill
+                              sizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
+                              className="object-cover object-top"
                             />
                           </div>
                         </div>

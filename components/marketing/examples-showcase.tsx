@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { categories, examples } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
@@ -41,12 +42,12 @@ export function ExamplesShowcase() {
                 <div className="mockup-surface relative min-h-56 overflow-hidden rounded-lg border border-white/8">
                   {image ? (
                     <>
-                      <img
+                      <Image
                         src={image}
                         alt={example.title}
-                        loading="lazy"
-                        decoding="async"
-                        className="h-full w-full object-cover object-top"
+                        fill
+                        sizes="(min-width: 1024px) 32vw, 90vw"
+                        className="object-cover object-top"
                         style={imagePosition ? { objectPosition: imagePosition } : undefined}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />

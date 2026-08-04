@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { ArrowDown, FileImage, Mail, Phone, Video } from "lucide-react";
 
 import { PageShell } from "@/components/layout/page-shell";
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { motionTokens } from "@/lib/motion";
 
@@ -75,12 +77,24 @@ function CompactVisual({ type }: { type: string }) {
   if (type === "final") {
     return (
       <div className="relative h-56 overflow-hidden bg-[#080b11] p-3 md:h-64">
-        <div className="overflow-hidden border border-white/10 bg-black">
-          <img src="/gallery-previews/home-desktop/dj-slyd.png" alt="" loading="lazy" decoding="async" className="h-full w-full object-contain object-center" />
+        <div className="relative aspect-[91/60] overflow-hidden border border-white/10 bg-black">
+          <Image
+            src="/gallery-previews/home-desktop/dj-slyd.webp"
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 36vw, 82vw"
+            className="object-contain object-center"
+          />
         </div>
         <div className="absolute bottom-5 right-5 w-[24%] min-w-[4rem] rotate-[3deg] border border-white/20 bg-[#080b11] p-1 shadow-[0_18px_48px_rgba(0,0,0,0.45)]">
-          <div className="aspect-[0.48/1] overflow-hidden bg-black">
-            <img src="/gallery-previews/home-mobile/dj-slyd.png" alt="" loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
+          <div className="relative aspect-[0.48/1] overflow-hidden bg-black">
+            <Image
+              src="/gallery-previews/home-mobile/dj-slyd.webp"
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 10vw, 26vw"
+              className="object-cover object-top"
+            />
           </div>
         </div>
       </div>

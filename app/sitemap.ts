@@ -6,7 +6,7 @@ import { footerCategoryLinks } from "@/lib/presskit-categories";
 const lastContentUpdate = new Date("2026-07-28T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/exemples", "/tarifs"];
+  const staticRoutes = ["", "/exemples", "/tarifs", "/mentions-legales"];
   const categoryRoutes = footerCategoryLinks.map((item) => item.href);
   const homepageFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "weekly";
   const defaultFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "monthly";

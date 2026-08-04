@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/button";
@@ -12,13 +13,15 @@ export function SiteFooter() {
         <div className="border-b border-white/[0.1] pb-10 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-12">
           <Link
             href="/"
-            className="block h-20 w-[24rem] max-w-full opacity-95 transition hover:opacity-80 md:h-24 md:w-[32rem]"
+            className="relative block h-20 w-[24rem] max-w-full opacity-95 transition hover:opacity-80 md:h-24 md:w-[32rem]"
             aria-label={siteConfig.name}
           >
-            <img
+            <Image
               src="/logo/logo-presskitforyou-cropped.png"
               alt=""
-              className="h-full w-full object-contain object-left"
+              fill
+              sizes="(min-width: 768px) 32rem, min(24rem, 100vw)"
+              className="object-contain object-left"
             />
           </Link>
           <p className="mt-10 max-w-3xl text-[clamp(2.45rem,5.6vw,6.4rem)] font-semibold leading-[0.94] tracking-tighter2 text-white">
@@ -46,6 +49,9 @@ export function SiteFooter() {
             </Link>
             <Link href="/tarifs" className="footer-link text-sm text-white/[0.64] hover:text-white">
               Tous les tarifs
+            </Link>
+            <Link href="/mentions-legales" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              Mentions légales
             </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Métiers</p>

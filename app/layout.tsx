@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Cormorant_Garamond } from "next/font/google";
+import { Manrope } from "next/font/google";
 
 import { siteConfig } from "@/content/site";
 import { publishedPresskitCategories } from "@/lib/presskit-categories";
@@ -11,12 +11,6 @@ import { SiteFooter } from "@/components/layout/site-footer";
 const sans = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
-});
-
-const serif = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -86,6 +80,104 @@ export const metadata: Metadata = {
   },
 };
 
+const webPages = [
+  {
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/#webpage`,
+    url: siteConfig.url,
+    name: "PressKit For You",
+    description: siteConfig.description,
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/exemples#webpage`,
+    url: `${siteConfig.url}/exemples`,
+    name: "Exemples de press kits",
+    description: "Exemples réels de press kits digitaux déjà en ligne.",
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/tarifs#webpage`,
+    url: `${siteConfig.url}/tarifs`,
+    name: "Tarifs PressKit For You",
+    description: "Tarifs et formules de création de press kits digitaux premium.",
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/mentions-legales#webpage`,
+    url: `${siteConfig.url}/mentions-legales`,
+    name: "Mentions légales",
+    description: "Informations légales, éditeur et contact de PressKit For You.",
+  },
+  ...publishedPresskitCategories.map((category) => ({
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/${category.slug}#webpage`,
+    url: `${siteConfig.url}/${category.slug}`,
+    name: category.name,
+    description: category.heroDescription,
+  })),
+];
+
+const pageNodes = webPages.map((page) => ({
+  ...page,
+  isPartOf: {
+    "@id": `${siteConfig.url}/#website`,
+  },
+  about: {
+    "@id": `${siteConfig.url}/#service`,
+  },
+}));
+
+const navigationNodes = [
+  {
+    "@type": "SiteNavigationElement",
+    "@id": `${siteConfig.url}/#navigation-exemples`,
+    name: "Exemples",
+    url: `${siteConfig.url}/exemples`,
+  },
+  {
+    "@type": "SiteNavigationElement",
+    "@id": `${siteConfig.url}/#navigation-tarifs`,
+    name: "Tarifs",
+    url: `${siteConfig.url}/tarifs`,
+  },
+  {
+    "@type": "SiteNavigationElement",
+    "@id": `${siteConfig.url}/#navigation-mentions-legales`,
+    name: "Mentions légales",
+    url: `${siteConfig.url}/mentions-legales`,
+  },
+  ...publishedPresskitCategories.map((category) => ({
+    "@type": "SiteNavigationElement",
+    "@id": `${siteConfig.url}/#navigation-${category.slug}`,
+    name: category.name,
+    url: `${siteConfig.url}/${category.slug}`,
+  })),
+];
+
+const breadcrumbNodes = [
+  ...webPages
+    .filter((page) => page.url !== siteConfig.url)
+    .map((page) => ({
+      "@type": "BreadcrumbList",
+      "@id": `${page.url}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: siteConfig.url,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: page.name,
+          item: page.url,
+        },
+      ],
+    })),
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -103,110 +195,14 @@ const structuredData = {
       name: siteConfig.name,
       inLanguage: "fr-FR",
       description: siteConfig.description,
-      hasPart: [
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.url}/#webpage`,
-          url: siteConfig.url,
-          name: "PressKit For You",
-          description: siteConfig.description,
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.url}/exemples#webpage`,
-          url: `${siteConfig.url}/exemples`,
-          name: "Exemples de press kits",
-          description: "Exemples réels de press kits digitaux déjà en ligne.",
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.url}/tarifs#webpage`,
-          url: `${siteConfig.url}/tarifs`,
-          name: "Tarifs PressKit For You",
-          description: "Tarifs et formules de création de press kits digitaux premium.",
-        },
-        ...publishedPresskitCategories.map((category) => ({
-          "@type": "WebPage",
-          "@id": `${siteConfig.url}/${category.slug}#webpage`,
-          url: `${siteConfig.url}/${category.slug}`,
-          name: category.name,
-          description: category.heroDescription,
-        })),
-      ],
+      hasPart: webPages,
       publisher: {
         "@id": `${siteConfig.url}/#organization`,
       },
     },
-    {
-      "@type": "WebPage",
-      "@id": `${siteConfig.url}/#webpage`,
-      url: siteConfig.url,
-      name: "PressKit For You",
-      description: siteConfig.description,
-      isPartOf: {
-        "@id": `${siteConfig.url}/#website`,
-      },
-      about: {
-        "@id": `${siteConfig.url}/#service`,
-      },
-    },
-    {
-      "@type": "WebPage",
-      "@id": `${siteConfig.url}/exemples#webpage`,
-      url: `${siteConfig.url}/exemples`,
-      name: "Exemples de press kits",
-      description: "Exemples réels de press kits digitaux déjà en ligne.",
-      isPartOf: {
-        "@id": `${siteConfig.url}/#website`,
-      },
-      about: {
-        "@id": `${siteConfig.url}/#service`,
-      },
-    },
-    {
-      "@type": "WebPage",
-      "@id": `${siteConfig.url}/tarifs#webpage`,
-      url: `${siteConfig.url}/tarifs`,
-      name: "Tarifs PressKit For You",
-      description: "Tarifs et formules de création de press kits digitaux premium.",
-      isPartOf: {
-        "@id": `${siteConfig.url}/#website`,
-      },
-      about: {
-        "@id": `${siteConfig.url}/#service`,
-      },
-    },
-    ...publishedPresskitCategories.map((category) => ({
-      "@type": "WebPage",
-      "@id": `${siteConfig.url}/${category.slug}#webpage`,
-      url: `${siteConfig.url}/${category.slug}`,
-      name: category.name,
-      description: category.heroDescription,
-      isPartOf: {
-        "@id": `${siteConfig.url}/#website`,
-      },
-      about: {
-        "@id": `${siteConfig.url}/#service`,
-      },
-    })),
-    {
-      "@type": "SiteNavigationElement",
-      "@id": `${siteConfig.url}/#navigation-exemples`,
-      name: "Exemples",
-      url: `${siteConfig.url}/exemples`,
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "@id": `${siteConfig.url}/#navigation-tarifs`,
-      name: "Tarifs",
-      url: `${siteConfig.url}/tarifs`,
-    },
-    ...publishedPresskitCategories.map((category) => ({
-      "@type": "SiteNavigationElement",
-      "@id": `${siteConfig.url}/#navigation-${category.slug}`,
-      name: category.name,
-      url: `${siteConfig.url}/${category.slug}`,
-    })),
+    ...pageNodes,
+    ...navigationNodes,
+    ...breadcrumbNodes,
     {
       "@type": "Service",
       "@id": `${siteConfig.url}/#service`,
@@ -224,7 +220,7 @@ const structuredData = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="fr" className={sans.variable}>
       <body className="font-sans antialiased">
         <script
           type="application/ld+json"

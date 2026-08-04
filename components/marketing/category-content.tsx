@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 
 import type { Category } from "@/content/site";
@@ -265,12 +266,12 @@ export function CategoryContent({ category }: CategoryContentProps) {
                           <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
                             <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
                               {example.image ? (
-                                <img
+                                <Image
                                   src={example.image}
                                   alt={`${example.title} en version desktop`}
-                                  loading="lazy"
-                                  decoding="async"
-                                  className="h-full w-full object-contain object-center"
+                                  fill
+                                  sizes="(min-width: 1024px) 40vw, (min-width: 768px) 74vw, 74vw"
+                                  className="object-contain object-center"
                                   style={example.imagePosition ? { objectPosition: example.imagePosition } : undefined}
                                 />
                               ) : (
@@ -289,12 +290,12 @@ export function CategoryContent({ category }: CategoryContentProps) {
                               <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                                 <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                                   <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
-                                  <img
+                                  <Image
                                     src={example.mobileImage}
                                     alt={`${example.title} en version mobile`}
-                                    loading="lazy"
-                                    decoding="async"
-                                    className="phone-preview-scroll"
+                                    fill
+                                    sizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
+                                    className="object-cover object-top"
                                   />
                                 </div>
                               </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -61,15 +62,18 @@ export function SiteHeader() {
           <Link
             href="/"
             className={cn(
-              "block h-10 w-44 shrink-0 transition md:h-12 md:w-60",
+              "relative block h-10 w-44 shrink-0 transition md:h-12 md:w-60",
               isCompact ? "opacity-100 hover:opacity-80" : "opacity-95 hover:opacity-80",
             )}
             aria-label={siteConfig.name}
           >
-            <img
+            <Image
               src="/logo/logo-presskitforyou-cropped.png"
               alt=""
-              className={cn("h-full w-full object-contain object-left transition duration-300", isCompact && "brightness-0")}
+              fill
+              sizes="(min-width: 768px) 15rem, 11rem"
+              priority
+              className={cn("object-contain object-left transition duration-300", isCompact && "brightness-0")}
             />
           </Link>
 

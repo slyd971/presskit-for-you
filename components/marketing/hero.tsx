@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -22,7 +23,7 @@ const heroKits: HeroKit[] = [
   {
     title: "MelyMelow",
     category: "Artiste peintre",
-    desktopImage: "/gallery-previews/home-desktop/melymelow.png",
+    desktopImage: "/gallery-previews/home-desktop/melymelow.webp",
     mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     heroMobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     externalDemoUrl: "https://presskit.melymelow.art/",
@@ -31,60 +32,60 @@ const heroKits: HeroKit[] = [
   {
     title: "Sherin",
     category: "Chanteuse",
-    desktopImage: "/gallery-previews/home-desktop/sherin.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.jpg",
-    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-sherin.jpg",
+    desktopImage: "/gallery-previews/home-desktop/sherin.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.webp",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-sherin.webp",
     externalDemoUrl: "https://sherin.presskit.fr/",
     accent: "#F46B8D",
   },
   {
     title: "DJ SLY'D",
     category: "DJ",
-    desktopImage: "/gallery-previews/home-desktop/dj-slyd.png",
-    mobileImage: "/gallery-previews/home-mobile/dj-slyd.png",
+    desktopImage: "/gallery-previews/home-desktop/dj-slyd.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-slyd.webp",
     externalDemoUrl: "https://djslyd.presskit.fr/",
     accent: "#FF9152",
   },
   {
     title: "KRIMO",
     category: "Danseur",
-    desktopImage: "/gallery-previews/home-desktop/krimo.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.jpg",
-    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-krimo.jpg",
+    desktopImage: "/gallery-previews/home-desktop/krimo.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.webp",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-krimo.webp",
     externalDemoUrl: "https://krimo-dancer.presskit.fr/",
     accent: "#D5A928",
   },
   {
     title: "DJ MACK",
     category: "DJ & MC",
-    desktopImage: "/gallery-previews/home-desktop/dj-mack.png",
-    mobileImage: "/gallery-previews/home-mobile/dj-mack.png",
+    desktopImage: "/gallery-previews/home-desktop/dj-mack.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-mack.webp",
     externalDemoUrl: "https://dj-mack.presskit.fr/",
     accent: "#CE5DFF",
   },
   {
     title: "Soyumi",
     category: "DJ",
-    desktopImage: "/gallery-previews/home-desktop/soyumi.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.jpg",
-    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-soyumi.jpg",
+    desktopImage: "/gallery-previews/home-desktop/soyumi.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.webp",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-soyumi.webp",
     externalDemoUrl: "https://soyumi.presskit.fr/",
     accent: "#FF9152",
   },
   {
     title: "La Bringue",
     category: "Organisateur",
-    desktopImage: "/gallery-previews/home-desktop/la-bringue.png",
-    mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.jpg",
-    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-labringueparty.jpg",
+    desktopImage: "/gallery-previews/home-desktop/la-bringue.webp",
+    mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.webp",
+    heroMobileImage: "/gallery-previews/hero-mobile/Mobile-labringueparty.webp",
     externalDemoUrl: "https://labringue-party.vercel.app/",
     accent: "#63E6BE",
   },
   {
     title: "Arthur Chaps",
     category: "DJ",
-    desktopImage: "/gallery-previews/home-desktop/arthur-chaps.png",
-    mobileImage: "/gallery-previews/home-mobile/arthur-chaps.png",
+    desktopImage: "/gallery-previews/home-desktop/arthur-chaps.webp",
+    mobileImage: "/gallery-previews/home-mobile/arthur-chaps.webp",
     externalDemoUrl: "https://arthur-chaps.presskit.fr/",
     accent: "#5FA8FF",
   },
@@ -113,7 +114,7 @@ export function Hero() {
   }, [shouldReduceMotion]);
 
   return (
-    <section className="section-wash relative overflow-hidden pb-10 pt-28 md:pb-20 md:pt-32" aria-labelledby="hero-title">
+    <section className="section-wash relative overflow-hidden pb-10 pt-24 md:pb-16 md:pt-28 lg:pt-24" aria-labelledby="hero-title">
       <motion.div
         className="absolute inset-0"
         animate={{
@@ -121,18 +122,18 @@ export function Hero() {
         }}
         transition={{ duration: 1.8, ease: "easeInOut" }}
       />
-      <PageShell className="relative grid items-center gap-9 md:gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
+      <PageShell className="relative grid items-start gap-9 md:gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
         <Reveal>
-          <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-10">
+          <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-6">
             <h1 id="hero-title" className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
               <span className="block">Plus pro qu&apos;Instagram.</span>
               <span className="block text-white/[0.92]">Plus impactant</span>
               <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
             </h1>
-            <p className="mt-6 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-7 md:text-lg md:leading-9">
+            <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-6 md:text-lg md:leading-9">
               Valorisez votre image grâce à une expérience premium, déjà adoptée par des artistes, DJs, photographes et créateurs.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center">
               <Button
                 href="#exemples"
                 variant="secondary"
@@ -189,10 +190,13 @@ export function Hero() {
                     <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-700 group-hover:opacity-10" aria-hidden="true" />
                     <span className="mockup-surface relative block overflow-hidden border border-white/[0.14] bg-[#080b11] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
                       <span className="block aspect-[91/60] overflow-hidden bg-black">
-                        <img
+                        <Image
                           src={kit.desktopImage}
                           alt=""
-                          className="h-full w-full object-contain object-center"
+                          fill
+                          priority={slot.offset === 0}
+                          sizes={slot.offset === 0 ? "(min-width: 1024px) 45vw, 88vw" : "(min-width: 1024px) 30vw, 62vw"}
+                          className="object-contain object-center"
                         />
                       </span>
                     </span>
@@ -202,7 +206,13 @@ export function Hero() {
                         <span className="mockup-surface relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
                           <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
                             <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
-                            <img src={mobileImage} alt="" className="phone-preview-scroll" />
+                            <Image
+                              src={mobileImage}
+                              alt=""
+                              fill
+                              sizes="(min-width: 1024px) 11vw, 20vw"
+                              className="object-cover object-top"
+                            />
                           </span>
                         </span>
                       </span>
@@ -214,39 +224,56 @@ export function Hero() {
 
             <div className="-mx-5 block overflow-hidden sm:hidden">
               <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                {heroKits.slice(0, 5).map((kit, index) => (
-                  <a
-                    key={kit.title}
-                    href={kit.externalDemoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Voir le rendu live ${kit.title}`}
-                    className="group w-[90vw] max-w-[24rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118]"
-                  >
-                    <span
-                      className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
+                {heroKits.slice(0, 5).map((kit, index) => {
+                  const mobileImage = kit.heroMobileImage ?? kit.mobileImage;
+
+                  return (
+                    <a
+                      key={kit.title}
+                      href={kit.externalDemoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Voir le rendu live ${kit.title}`}
+                      className="group w-[90vw] max-w-[24rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0d1118]"
                     >
-                      <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.42),transparent)] opacity-70" aria-hidden="true" />
-                      <span className="relative block aspect-[91/60] overflow-hidden bg-black">
-                        <img src={kit.desktopImage} alt="" className="h-full w-full object-contain object-center" />
-                      </span>
-                      {kit.heroMobileImage || kit.mobileImage ? (
-                        <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[#080b11] p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
-                          <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
-                            <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
-                            <img src={kit.heroMobileImage ?? kit.mobileImage} alt="" className="phone-preview-scroll" />
+                      <span
+                        className="relative block border border-white/[0.16] bg-[#080b11] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
+                      >
+                        <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.42),transparent)] opacity-70" aria-hidden="true" />
+                        <span className="relative block aspect-[91/60] overflow-hidden bg-black">
+                          <Image
+                            src={kit.desktopImage}
+                            alt=""
+                            fill
+                            priority={index === 0}
+                            sizes="90vw"
+                            className="object-contain object-center"
+                          />
+                        </span>
+                        {mobileImage ? (
+                          <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[#080b11] p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
+                            <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
+                              <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
+                              <Image
+                                src={mobileImage}
+                                alt=""
+                                fill
+                                sizes="23vw"
+                                className="object-cover object-top"
+                              />
+                            </span>
+                          </span>
+                        ) : null}
+                        <span className="flex items-center justify-between gap-3 border-t border-white/[0.1] px-1 py-3 text-white">
+                          <span>
+                            <span className="block text-sm font-semibold leading-none">{kit.title}</span>
+                            <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-white/50">{kit.category}</span>
                           </span>
                         </span>
-                      ) : null}
-                      <span className="flex items-center justify-between gap-3 border-t border-white/[0.1] px-1 py-3 text-white">
-                        <span>
-                          <span className="block text-sm font-semibold leading-none">{kit.title}</span>
-                          <span className="mt-1 block text-[10px] uppercase tracking-[0.16em] text-white/50">{kit.category}</span>
-                        </span>
                       </span>
-                    </span>
-                  </a>
-                ))}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
