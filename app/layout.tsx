@@ -109,13 +109,6 @@ const webPages = [
     name: "Mentions légales",
     description: "Informations légales, éditeur et contact de PressKit For You.",
   },
-  {
-    "@type": "WebPage",
-    "@id": `${siteConfig.url}/dj-pirate#webpage`,
-    url: `${siteConfig.url}/dj-pirate`,
-    name: "DJ Pirate",
-    description: "Press kit officiel de DJ Pirate, DJ antillais basé à Paris.",
-  },
   ...publishedPresskitCategories.map((category) => ({
     "@type": "WebPage",
     "@id": `${siteConfig.url}/${category.slug}#webpage`,
@@ -153,12 +146,6 @@ const navigationNodes = [
     "@id": `${siteConfig.url}/#navigation-mentions-legales`,
     name: "Mentions légales",
     url: `${siteConfig.url}/mentions-legales`,
-  },
-  {
-    "@type": "SiteNavigationElement",
-    "@id": `${siteConfig.url}/#navigation-dj-pirate`,
-    name: "DJ Pirate",
-    url: `${siteConfig.url}/dj-pirate`,
   },
   ...publishedPresskitCategories.map((category) => ({
     "@type": "SiteNavigationElement",
