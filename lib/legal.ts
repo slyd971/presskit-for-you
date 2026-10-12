@@ -19,4 +19,4 @@ export const LEGAL = {
   deliveryDays: 7,
 };
 
-export const VAT_MENTION = "TVA non applicable, art. 293 B du CGI";
+export { VAT_MENTION } from "@/lib/vat";

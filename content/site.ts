@@ -1,4 +1,5 @@
 import { EXAMPLE_URLS } from "@/content/example-urls";
+import { VAT_MENTION } from "@/lib/vat";
 
 export type Category = {
   slug: string;
@@ -189,7 +190,7 @@ export const faqItems = [
   },
   {
     question: "Puis-je faire évoluer mon press kit ?",
-    answer: `Oui, via l’option « ${updateOption?.name} » (${updateOption?.price}) ou la ${maintenanceOption?.name.toLowerCase()} (${maintenanceOption?.price}).`,
+    answer: `Oui, via l’option « ${updateOption?.name} » (${updateOption?.price}) ou la ${maintenanceOption?.name.toLowerCase()} (${maintenanceOption?.price}). ${VAT_MENTION}.`,
   },
   {
     question: "Quelle différence entre Press Kit Premium et Studio Custom ?",
@@ -198,7 +199,7 @@ export const faqItems = [
   {
     question: "Comment se passe le paiement ?",
     answer:
-      "50 % à la commande, 50 % à la livraison. Les prix sont nets, la TVA n’est pas applicable (micro-entreprise).",
+      `50 % à la commande, 50 % à la livraison. Les prix sont nets : ${VAT_MENTION} (micro-entreprise).`,
   },
 ];
 
@@ -582,7 +583,7 @@ export const categories: Category[] = [
     benefits: [
       {
         title: "Concept plus clair",
-        description: "Ton identité culinaire est comprise rapidement et donne envie d’en savoir plus.",
+        description: "Votre identité culinaire est comprise rapidement et donne envie d’en savoir plus.",
       },
       {
         title: "Galerie plus impactante",
