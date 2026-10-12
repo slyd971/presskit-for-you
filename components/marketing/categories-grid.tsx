@@ -162,7 +162,7 @@ const homeExamples = [
   },
 ];
 
-const featuredHomeExampleSlugs = ["melymelow", "sherin", "krimo", "flo", "la-bringue", "black-moz"];
+const featuredHomeExampleSlugs = ["melymelow", "sherin", "krimo"];
 const featuredHomeExamples = featuredHomeExampleSlugs
   .map((slug) => homeExamples.find((example) => example.slug === slug))
   .filter((example): example is (typeof homeExamples)[number] => Boolean(example));
@@ -179,7 +179,7 @@ export function CategoriesGrid() {
             Chaque press kit est un projet sur mesure, pensé à partir de votre univers, de vos contenus et de vos objectifs.
           </p>
         </div>
-        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-2 [&::-webkit-scrollbar]:hidden">
+        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 md:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {featuredHomeExamples.map((example, index) => (
             <Reveal
               key={example.slug}
@@ -190,10 +190,10 @@ export function CategoriesGrid() {
                 href={example.externalDemoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="case-study-card group flex h-full min-h-[35rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[48rem] md:p-5 lg:min-h-[44rem]"
+                className="case-study-card group flex h-full min-h-[30rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[32rem] md:p-5 lg:min-h-[34rem]"
                 style={{ "--case-accent": example.accent } as CSSProperties}
               >
-                <div className="relative h-[18rem] overflow-visible md:h-[36rem] lg:h-[27rem]">
+                <div className="relative h-[18rem] overflow-visible md:h-[16rem] lg:h-[18rem]">
                   <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
                     <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
                       <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
@@ -233,18 +233,7 @@ export function CategoriesGrid() {
                     <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
                   </div>
                 </div>
-                <dl className="relative mt-5 grid flex-1 gap-4 text-sm leading-6">
-                  {[
-                    ["Contexte", example.context],
-                    ["Objectif", example.objective],
-                    ["Résultat", example.result],
-                  ].map(([label, value]) => (
-                    <div key={label} className="grid gap-1 border-b border-white/[0.075] pb-4 last:border-b-0 last:pb-0">
-                      <dt className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.42]">{label}</dt>
-                      <dd className="text-white/[0.76]">{value}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <p className="relative mt-5 flex-1 text-sm leading-6 text-white/[0.76]">{example.description}</p>
                 <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
                   <span>Voir le projet</span>
                   <span className="transition group-hover:translate-x-1">→</span>

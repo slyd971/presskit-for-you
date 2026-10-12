@@ -4,7 +4,6 @@ import { CategoriesGrid } from "@/components/marketing/categories-grid";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { Hero } from "@/components/marketing/hero";
 import { ComparisonSection } from "@/components/marketing/home-conversion-sections";
-import { PositioningQuote } from "@/components/marketing/positioning-quote";
 import { PricingTable } from "@/components/marketing/pricing-table";
 import { ProcessTimeline } from "@/components/marketing/process-timeline";
 import { ProofStats, SocialProof } from "@/components/marketing/social-proof";
@@ -28,7 +27,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <PositioningQuote />
       <ProofStats />
       <ComparisonSection />
       <CategoriesGrid />
