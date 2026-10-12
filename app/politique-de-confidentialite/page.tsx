@@ -25,6 +25,7 @@ const sections: LegalSection[] = [
       "Échanges par email et WhatsApp (canal optionnel opéré par Meta) : nom, coordonnées et contenu de vos messages.",
       "Données de projet transmises par le client : textes, photos, vidéos, liens et informations nécessaires à la réalisation du press kit.",
       "Journaux techniques de l'hébergeur, dont l'adresse IP.",
+      "Mesure d'audience : statistiques de fréquentation anonymisées (pages vues, pays, type d'appareil) collectées par Vercel Web Analytics, sans cookie et sans identification des visiteurs.",
     ],
   },
   {
@@ -33,6 +34,7 @@ const sections: LegalSection[] = [
       "Répondre à vos demandes : mesures précontractuelles prises à votre demande.",
       "Réaliser et livrer la prestation : exécution du contrat.",
       "Tenir la comptabilité et la facturation : obligations comptables.",
+      "Mesurer la fréquentation du site et l'améliorer : intérêt légitime, sur des données anonymisées.",
     ],
   },
   {
@@ -51,7 +53,9 @@ const sections: LegalSection[] = [
   },
   {
     title: "Cookies",
-    paragraphs: ["Aucun cookie ni traceur non essentiel n'est déposé sur ce site."],
+    paragraphs: [
+      "Aucun cookie ni traceur non essentiel n'est déposé sur ce site. La mesure d'audience (Vercel Web Analytics) fonctionne sans cookie et ne permet pas d'identifier les visiteurs.",
+    ],
   },
   {
     title: "Vos droits",
