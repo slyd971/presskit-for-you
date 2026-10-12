@@ -10,7 +10,7 @@ const liveExamplesCount = examples.filter((example) => example.externalDemoUrl).
 const proofStats = [
   { value: String(liveExamplesCount), label: "press kits en ligne" },
   { value: "7 jours", label: "ouvrés max pour la livraison" },
-  { value: "dès 300 €", label: "pour un press kit premium" },
+  { value: "dès 30000a0€", label: "pour un press kit premium" },
 ];
 
 export function ProofStats() {
