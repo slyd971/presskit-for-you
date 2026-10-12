@@ -52,7 +52,7 @@ export const siteConfig = {
   whatsappUrl: "https://wa.me/33663907888",
   nav: [
     { href: "/exemples", label: "Exemples" },
-    { href: "/#tarifs", label: "Tarifs" },
+    { href: "/tarifs", label: "Tarifs" },
     { href: "/#methode", label: "Méthode" },
     { href: "/#avis", label: "Avis" },
   ],

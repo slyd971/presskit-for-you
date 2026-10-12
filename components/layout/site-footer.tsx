@@ -57,7 +57,7 @@ export function SiteFooter() {
               CGV
             </Link>
             <Link href="/politique-de-confidentialite" className="footer-link text-sm text-white/[0.64] hover:text-white">
-              Confidentialité
+              Politique de confidentialité
             </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Métiers</p>
