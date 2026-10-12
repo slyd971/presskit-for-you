@@ -36,7 +36,7 @@ export const categorySeo: Record<string, CategorySeo> = {
   },
   "make-up-artist": {
     title: "Press kit make-up artist : portfolio beauté pro | PressKit For You",
-    description: `Vos looks, prestations et avant/après réunis dans un press kit make-up artist qui donne envie de réserver. ${deliveryPitch}`,
+    description: `Vos looks, prestations et zone de déplacement réunis dans un press kit make-up artist qui donne envie de réserver. ${deliveryPitch}`,
     label: "make-up artist",
   },
   organisateur: {

@@ -119,7 +119,7 @@ export const testimonials = [
     name: "Izzy Lokko",
     role: "Vidéaste",
     categorySlug: "photographe",
-    date: "TODO",
+    date: "mai 2026",
     url: EXAMPLE_URLS.lokkoTv,
     image: "/témoignages/izzy-profil.webp",
     quote:
@@ -129,7 +129,7 @@ export const testimonials = [
     name: "Ishma N.",
     role: "Make-up artist",
     categorySlug: "make-up-artist",
-    date: "TODO",
+    date: "juillet 2026",
     url: EXAMPLE_URLS.ishma,
     image: "/témoignages/ishma.webp",
     quote:
@@ -139,7 +139,7 @@ export const testimonials = [
     name: "Yed D.",
     role: "DJ",
     categorySlug: "dj",
-    date: "TODO",
+    date: "juin 2026",
     url: EXAMPLE_URLS.yoruboy,
     image: "/témoignages/yoruboy.webp",
     quote:
@@ -496,7 +496,7 @@ export const categories: Category[] = [
       "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
     heroTitle: "Vos looks, vos prestations, votre contact.",
     heroDescription:
-      "Présentez votre portfolio, vos prestations, vos avant/après, vos références et votre contact aux clientes, marques ou productions.",
+      "Présentez votre portfolio, vos prestations, vos références et votre contact aux clientes, marques ou productions.",
     valueProps: ["Portfolio clair", "Prestations lisibles", "Contact direct"],
     benefits: [
       {
@@ -516,7 +516,6 @@ export const categories: Category[] = [
       "Présentation de votre style",
       "Portfolio / galerie",
       "Prestations",
-      "Avant / après",
       "Références ou collaborations",
       "Prise de rendez-vous",
     ],

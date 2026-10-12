@@ -11,10 +11,6 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
       answer: "Oui, vos sets sont intégrés dans la page : le booker écoute sans quitter votre press kit.",
     },
     {
-      question: "Puis-je ajouter mon rider technique ?",
-      answer: "Oui, dans une section dédiée ou en PDF téléchargeable.",
-    },
-    {
       question: "Quelle différence avec un Linktree pour un DJ ?",
       answer:
         "Un Linktree aligne des liens ; le press kit met en avant vos références de clubs, vos vidéos live et vos styles, ce qu'un booker regarde avant de programmer.",
@@ -48,16 +44,12 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   ],
   "make-up-artist": [
     {
-      question: "Puis-je montrer des avant/après ?",
-      answer: "Oui, la galerie peut mettre vos looks en regard pour montrer votre signature.",
-    },
-    {
       question: "Puis-je présenter mes prestations mariée, shooting et événementiel ?",
       answer: "Oui, chaque prestation peut avoir sa description et son contact de réservation.",
     },
     {
       question: "Puis-je indiquer ma zone de déplacement ?",
-      answer: "Oui, une section dédiée précise où vous intervenez.",
+      answer: "Oui, une section dédiée précise votre zone de déplacement, par exemple partout en Île-de-France.",
     },
     {
       question: "Combien coûte un press kit make-up artist ?",

@@ -140,7 +140,7 @@ const pageCopy: Record<string, PageCopy> = {
   "make-up-artist": {
     promiseTitle: "Montrer vos looks et expliquer vos prestations.",
     promiseDescription:
-      "La page présente votre portfolio, vos prestations, vos avant/après, vos références et votre contact.",
+      "La page présente votre portfolio, vos prestations, vos références et votre contact.",
     benefits: [
       {
         title: "Mettez vos looks en avant",
