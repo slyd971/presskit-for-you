@@ -67,7 +67,7 @@ export function PricingTable({
                 </span>
               </div>
               <div className={`relative mt-10 border-y py-8 ${offerTone.tierBorder}`}>
-                <p className={`text-[clamp(3.2rem,7vw,6.7rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}{tier.priceSuffix ? <span className="ml-3 align-top text-[clamp(1rem,1.8vw,1.6rem)] font-semibold tracking-normal">{tier.priceSuffix}</span> : null}</p>
+                <p className={`text-[clamp(2.6rem,5.4vw,5.4rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}{tier.priceSuffix ? <span className="ml-3 align-top text-[clamp(1rem,1.8vw,1.6rem)] font-semibold tracking-normal">{tier.priceSuffix}</span> : null}</p>
                 <p className={`mt-4 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
               </div>
               <p className={`relative mt-7 max-w-md text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
