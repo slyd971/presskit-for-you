@@ -50,7 +50,7 @@ export function ProofStats() {
               <div className="relative aspect-[91/60] overflow-hidden bg-black">
                 <Image
                   src="/gallery-previews/home-desktop/dj-slyd.webp"
-                  alt=""
+                  alt="Press kit de DJ SLY'D, DJ, version desktop"
                   fill
                   sizes="(min-width: 1024px) 42vw, 82vw"
                   className="object-contain object-center"
@@ -61,13 +61,39 @@ export function ProofStats() {
               <div className="relative aspect-[0.48/1] overflow-hidden bg-black">
                 <Image
                   src="/gallery-previews/home-mobile/dj-slyd.webp"
-                  alt=""
+                  alt="Press kit de DJ SLY'D, DJ, version mobile"
                   fill
                   sizes="(min-width: 1024px) 13vw, 26vw"
                   className="object-cover object-top"
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </PageShell>
+    </section>
+  );
+}
+
+export function AboutBlock() {
+  return (
+    <section className="section-divider section-wash py-16 md:py-20" aria-labelledby="about-title">
+      <PageShell className="max-w-5xl">
+        <div className="grid gap-8 border-y border-white/[0.12] py-10 md:grid-cols-[auto_1fr] md:items-center md:gap-12">
+          {/* TODO: remplacer par la photo de la personne derrière PressKit For You */}
+          <div
+            className="flex h-40 w-40 shrink-0 items-center justify-center rounded-lg border border-white/[0.14] bg-white/[0.04] text-center text-xs font-semibold uppercase tracking-[0.16em] text-white/[0.5]"
+            role="img"
+            aria-label="Photo à venir"
+          >
+            [À COMPLÉTER : photo]
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Qui est derrière PressKit For You</p>
+            <h2 id="about-title" className="mt-4 text-3xl font-semibold leading-tight tracking-tighter2 text-white md:text-4xl">
+              Rencontrez la personne derrière votre press kit.
+            </h2>
+            <p className="mt-4 max-w-2xl leading-8 text-white/[0.68]">[À COMPLÉTER : bio]</p>
           </div>
         </div>
       </PageShell>
@@ -111,7 +137,7 @@ export function SocialProof() {
                   {"image" in item && item.image ? (
                     <Image
                       src={item.image}
-                      alt=""
+                      alt={item.name}
                       width={56}
                       height={56}
                       className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
@@ -121,6 +147,14 @@ export function SocialProof() {
                     <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
                     <p className="mt-1 text-sm font-medium text-white/[0.58]">{item.role}</p>
                   </div>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ml-auto shrink-0 text-xs font-semibold text-white/[0.7] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
+                  >
+                    Voir son press kit
+                  </a>
                 </div>
                 <p className="flex-1 pt-7 text-[1.05rem] font-medium leading-8 text-white/[0.84] md:text-[1.12rem] md:leading-9">
                   &ldquo;{item.quote}&rdquo;
@@ -129,6 +163,9 @@ export function SocialProof() {
             </Reveal>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-white/[0.56]">
+          Avis recueillis directement auprès de clients ayant commandé un press kit.
+        </p>
       </PageShell>
     </section>
   );

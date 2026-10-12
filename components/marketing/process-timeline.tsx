@@ -81,7 +81,7 @@ function CompactVisual({ type }: { type: string }) {
         <div className="relative aspect-[91/60] overflow-hidden border border-white/10 bg-black">
           <Image
             src="/gallery-previews/home-desktop/dj-slyd.webp"
-            alt=""
+            alt="Press kit de DJ SLY'D, DJ, version desktop"
             fill
             sizes="(min-width: 1024px) 36vw, 82vw"
             className="object-contain object-center"
@@ -91,7 +91,7 @@ function CompactVisual({ type }: { type: string }) {
           <div className="relative aspect-[0.48/1] overflow-hidden bg-black">
             <Image
               src="/gallery-previews/home-mobile/dj-slyd.webp"
-              alt=""
+              alt="Press kit de DJ SLY'D, DJ, version mobile"
               fill
               sizes="(min-width: 1024px) 10vw, 26vw"
               className="object-cover object-top"

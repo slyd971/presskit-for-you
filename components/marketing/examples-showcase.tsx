@@ -44,7 +44,7 @@ export function ExamplesShowcase() {
                     <>
                       <Image
                         src={image}
-                        alt={example.title}
+                        alt={`Press kit de ${example.title}, ${example.category}`}
                         fill
                         sizes="(min-width: 1024px) 32vw, 90vw"
                         className="object-cover object-top"

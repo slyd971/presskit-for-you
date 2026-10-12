@@ -1,5 +1,6 @@
 "use client";
 
+import { EXAMPLE_URLS } from "@/content/example-urls";
 import { CTA } from "@/content/site";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
@@ -26,7 +27,7 @@ const heroKits: HeroKit[] = [
     desktopImage: "/gallery-previews/home-desktop/melymelow.webp",
     mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     heroMobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
-    externalDemoUrl: "https://presskit.melymelow.art/",
+    externalDemoUrl: EXAMPLE_URLS.melymelow,
     accent: "#F4C26B",
   },
   {
@@ -35,7 +36,7 @@ const heroKits: HeroKit[] = [
     desktopImage: "/gallery-previews/home-desktop/sherin.webp",
     mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.webp",
     heroMobileImage: "/gallery-previews/hero-mobile/Mobile-sherin.webp",
-    externalDemoUrl: "https://sherin.presskit.fr/",
+    externalDemoUrl: EXAMPLE_URLS.sherin,
     accent: "#F46B8D",
   },
   {
@@ -43,7 +44,7 @@ const heroKits: HeroKit[] = [
     category: "DJ",
     desktopImage: "/gallery-previews/home-desktop/dj-slyd.webp",
     mobileImage: "/gallery-previews/home-mobile/dj-slyd.webp",
-    externalDemoUrl: "https://djslyd.presskit.fr/",
+    externalDemoUrl: EXAMPLE_URLS.djSlyd,
     accent: "#FF9152",
   },
   {
@@ -52,7 +53,7 @@ const heroKits: HeroKit[] = [
     desktopImage: "/gallery-previews/home-desktop/krimo.webp",
     mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.webp",
     heroMobileImage: "/gallery-previews/hero-mobile/Mobile-krimo.webp",
-    externalDemoUrl: "https://krimo-dancer.presskit.fr/",
+    externalDemoUrl: EXAMPLE_URLS.krimo,
     accent: "#D5A928",
   },
   {
@@ -60,7 +61,7 @@ const heroKits: HeroKit[] = [
     category: "DJ & MC",
     desktopImage: "/gallery-previews/home-desktop/dj-mack.webp",
     mobileImage: "/gallery-previews/home-mobile/dj-mack.webp",
-    externalDemoUrl: "https://dj-mack.presskit.fr/",
+    externalDemoUrl: EXAMPLE_URLS.djMack,
     accent: "#CE5DFF",
   },
   {
@@ -69,7 +70,7 @@ const heroKits: HeroKit[] = [
     desktopImage: "/gallery-previews/home-desktop/soyumi.webp",
     mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.webp",
     heroMobileImage: "/gallery-previews/hero-mobile/Mobile-soyumi.webp",
-    externalDemoUrl: "https://soyumi.presskit.fr/",
+    externalDemoUrl: EXAMPLE_URLS.soyumi,
     accent: "#FF9152",
   },
   {
@@ -78,7 +79,7 @@ const heroKits: HeroKit[] = [
     desktopImage: "/gallery-previews/home-desktop/la-bringue.webp",
     mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.webp",
     heroMobileImage: "/gallery-previews/hero-mobile/Mobile-labringueparty.webp",
-    externalDemoUrl: "https://labringue-party.vercel.app/",
+    externalDemoUrl: EXAMPLE_URLS.laBringue,
     accent: "#63E6BE",
   },
   {
@@ -86,7 +87,7 @@ const heroKits: HeroKit[] = [
     category: "DJ",
     desktopImage: "/gallery-previews/home-desktop/arthur-chaps.webp",
     mobileImage: "/gallery-previews/home-mobile/arthur-chaps.webp",
-    externalDemoUrl: "https://arthur-chaps.presskit.fr/",
+    externalDemoUrl: EXAMPLE_URLS.arthurChaps,
     accent: "#5FA8FF",
   },
 ];
@@ -192,7 +193,7 @@ export function Hero() {
                       <span className="block aspect-[91/60] overflow-hidden bg-black">
                         <Image
                           src={kit.desktopImage}
-                          alt=""
+                          alt={`Press kit de ${kit.title}, ${kit.category}, version desktop`}
                           fill
                           priority={slot.offset === 0}
                           sizes={slot.offset === 0 ? "(min-width: 1024px) 45vw, 88vw" : "(min-width: 1024px) 30vw, 62vw"}
@@ -208,7 +209,7 @@ export function Hero() {
                             <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
                             <Image
                               src={mobileImage}
-                              alt=""
+                              alt={`Press kit de ${kit.title}, ${kit.category}, version mobile`}
                               fill
                               sizes="(min-width: 1024px) 11vw, 20vw"
                               className="object-cover object-top"
@@ -243,7 +244,7 @@ export function Hero() {
                         <span className="relative block aspect-[91/60] overflow-hidden bg-black">
                           <Image
                             src={kit.desktopImage}
-                            alt=""
+                            alt={`Press kit de ${kit.title}, ${kit.category}, version desktop`}
                             fill
                             priority={index === 0}
                             sizes="90vw"
@@ -256,7 +257,7 @@ export function Hero() {
                               <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
                               <Image
                                 src={mobileImage}
-                                alt=""
+                                alt={`Press kit de ${kit.title}, ${kit.category}, version mobile`}
                                 fill
                                 sizes="23vw"
                                 className="object-cover object-top"
