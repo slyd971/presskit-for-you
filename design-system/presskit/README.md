@@ -12,13 +12,22 @@ Ce dossier rassemble ce qui existe déjà dans le code du site. Il ne modifie ri
 
 Les tokens sont aussi déclarés dans `tailwind.config.ts`, à utiliser pour tout nouveau code à la place des valeurs en dur :
 
-- Couleurs : `bg-surface-900`, `bg-surface-800`, `bg-surface-850`, `bg-surface-760`, `text-paper`, `text-ink-editorial`, `border-steel`, `bg-whatsapp` / `hover:bg-whatsapp-hover` / `text-whatsapp-ink`, `text-text-secondary-light`, `text-text-muted-light`, `bg-light-section-end`, `accent-gold` … `accent-tan`.
+- Couleurs : `bg-surface-900`, `bg-surface-800`, `bg-surface-850`, `bg-surface-760`, `bg-mockup` (fond des mockups), `text-paper`, `text-ink-editorial`, `border-steel`, `bg-whatsapp` / `hover:bg-whatsapp-hover` / `text-whatsapp-ink`, `text-text-secondary-light`, `text-text-muted-light`, `bg-light-section-end`, `accent-gold` … `accent-tan`.
 - Ombres : `shadow-button-primary`, `shadow-panel`, `shadow-panel-hover`, `shadow-card-hover`.
 - Arrondis : `rounded-mockup-desktop`, `rounded-mockup-mobile`.
-- Typo : `tracking-tighter2` (titres), `tracking-label` (micro-labels).
+- Typo : `tracking-tighter2` (titres), `tracking-label` (0.22em) et `tracking-label-tight` (0.16em) pour les micro-labels.
 - Motion : `duration-feedback`, `duration-fast`, `duration-hover`, `duration-reveal`, `duration-slow` ; `ease-presskit`, `ease-presskit-out`, `ease-exit`.
 
-Les composants existants n'ont pas été modifiés : ils gardent leurs valeurs en dur, à remplacer au fil des retouches.
+Échelles d'opacité autorisées (toujours entre crochets, par exemple `text-white/[0.74]`) :
+
+- Texte blanc sur fond sombre : `0.64`, `0.74`, `0.84`, `0.92` (ou plein). Jamais en dessous de 0.64.
+- Texte sombre sur fond clair : `text-ink-editorial`, `text-text-secondary-light`, `text-text-muted-light`, sans opacité.
+- Fonds en verre (`bg-white`) : `0.04`, `0.055`, `0.08`, `0.1`.
+- Bordures (`border-white` ou `border-ink-editorial`) : `0.08`, `0.12`, `0.18`, `0.24`.
+
+Attention : Tailwind ignore une opacité sans crochets qui n'est pas un multiple de 5 (`text-white/72`, `border-x/16`). La classe ne génère alors aucun CSS. Toujours écrire `/[0.72]`.
+
+Les composants et pages (`components/`, `app/`, `content/`) suivent ces tokens et ces échelles. Les classes de `app/globals.css` (panneaux, sections) gardent encore leurs valeurs propres.
 
 ## 1. Voix
 

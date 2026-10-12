@@ -13,7 +13,7 @@ const proofStats = [
 
 export function ProofStats() {
   return (
-    <section className="relative overflow-hidden bg-white py-14 text-[#10141d] md:py-18" aria-labelledby="proof-stats-title">
+    <section className="relative overflow-hidden bg-white py-14 text-ink-editorial md:py-18" aria-labelledby="proof-stats-title">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,20,29,0.075),transparent_28%)]" aria-hidden="true" />
       <PageShell>
         <div className="relative mx-auto mb-14 max-w-4xl text-center md:mb-20">
@@ -24,18 +24,18 @@ export function ProofStats() {
         </div>
         <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-[#10141d] md:text-5xl">
+            <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-ink-editorial md:text-5xl">
               Une carte de visite digitale, accessible en un seul lien, prête à être partagée.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-[#4d5561] md:text-lg">
               {"Le press kit doit refléter la personnalité de la personne qu'il présente, tout en renforçant la crédibilité de son activité"}
             </p>
 
-            <div className="mt-9 grid gap-7 border-y border-[#10141d]/[0.1] py-7 text-left sm:grid-cols-3 md:mt-10">
+            <div className="mt-9 grid gap-7 border-y border-ink-editorial/[0.12] py-7 text-left sm:grid-cols-3 md:mt-10">
               {proofStats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-4xl font-semibold leading-none tracking-tighter2 text-[#10141d] md:text-5xl">{stat.value}</p>
-                  <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
+                  <p className="text-4xl font-semibold leading-none tracking-tighter2 text-ink-editorial md:text-5xl">{stat.value}</p>
+                  <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-label-tight text-[#5d6470]">
                     {stat.label}
                   </p>
                 </div>
@@ -44,7 +44,7 @@ export function ProofStats() {
           </div>
 
           <div className="relative min-h-[18rem] lg:min-h-[22rem]">
-            <div className="product-drift absolute left-0 top-6 w-[82%] rotate-[-1.5deg] border border-[#10141d]/[0.12] bg-[#080b11] p-2 shadow-[0_26px_80px_rgba(16,20,29,0.2)]">
+            <div className="product-drift absolute left-0 top-6 w-[82%] rotate-[-1.5deg] border border-ink-editorial/[0.12] bg-mockup p-2 shadow-[0_26px_80px_rgba(16,20,29,0.2)]">
               <div className="relative aspect-[91/60] overflow-hidden bg-black">
                 <Image
                   src="/gallery-previews/home-desktop/dj-slyd.webp"
@@ -55,7 +55,7 @@ export function ProofStats() {
                 />
               </div>
             </div>
-            <div className="product-drift-slow absolute bottom-0 right-4 w-[26%] min-w-[5rem] rotate-[4deg] border border-[#10141d]/[0.16] bg-[#080b11] p-1.5 shadow-[0_22px_60px_rgba(16,20,29,0.22)]">
+            <div className="product-drift-slow absolute bottom-0 right-4 w-[26%] min-w-[5rem] rotate-[4deg] border border-ink-editorial/[0.18] bg-mockup p-1.5 shadow-[0_22px_60px_rgba(16,20,29,0.22)]">
               <div className="relative aspect-[0.48/1] overflow-hidden bg-black">
                 <Image
                   src="/gallery-previews/home-mobile/dj-slyd.webp"
@@ -77,8 +77,8 @@ type Testimonial = (typeof testimonials)[number];
 
 export function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-      <article className="motion-line group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.045] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.075] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
-        <div className="flex items-center gap-4 border-b border-white/[0.1] pb-5">
+      <article className="motion-line group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.04] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.08] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.12] md:px-6 md:py-7">
+        <div className="flex items-center gap-4 border-b border-white/[0.12] pb-5">
           {"image" in item && item.image ? (
             <Image
               src={item.image}
@@ -90,14 +90,14 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
           ) : null}
           <div>
             <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
-            <p className="mt-1 text-sm font-medium text-white/[0.58]">{item.role}</p>
-            {item.date && item.date !== "TODO" ? <p className="mt-0.5 text-xs text-white/[0.44]">{item.date}</p> : null}
+            <p className="mt-1 text-sm font-medium text-white/[0.64]">{item.role}</p>
+            {item.date && item.date !== "TODO" ? <p className="mt-0.5 text-xs text-white/[0.64]">{item.date}</p> : null}
           </div>
           <a
             href={item.url}
             target="_blank"
             rel="noreferrer"
-            className="ml-auto shrink-0 text-xs font-semibold text-white/[0.7] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
+            className="ml-auto shrink-0 text-xs font-semibold text-white/[0.74] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
           >
             Voir son press kit
           </a>
@@ -144,7 +144,7 @@ export function SocialProof() {
             </Reveal>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm text-white/[0.56]">
+        <p className="mt-8 text-center text-sm text-white/[0.64]">
           Avis recueillis directement auprès de clients ayant commandé un press kit.
         </p>
       </PageShell>

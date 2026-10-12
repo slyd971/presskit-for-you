@@ -23,10 +23,10 @@ export function LegalDocument({ title, updatedAt, intro, sections, annex }: Lega
       />
       <PageShell className="relative max-w-4xl">
         <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">{title}</h1>
-        <p className="mt-4 text-sm text-white/[0.5]">Dernière mise à jour : {updatedAt}</p>
-        {intro ? <p className="mt-6 leading-8 text-white/[0.72]">{intro}</p> : null}
+        <p className="mt-4 text-sm text-white/[0.64]">Dernière mise à jour : {updatedAt}</p>
+        {intro ? <p className="mt-6 leading-8 text-white/[0.74]">{intro}</p> : null}
 
-        <div className="mt-10 grid gap-8 border-y border-white/[0.12] py-8 text-white/[0.72]">
+        <div className="mt-10 grid gap-8 border-y border-white/[0.12] py-8 text-white/[0.74]">
           {sections.map((section, index) => (
             <section key={section.title} className="overflow-visible">
               <h2 className="text-2xl font-semibold tracking-tighter2 text-white">

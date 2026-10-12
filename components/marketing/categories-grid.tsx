@@ -24,7 +24,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     externalDemoUrl: EXAMPLE_URLS.melymelow,
     accent: "#F4C26B",
-    gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+    gradient: "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
   },
   {
     slug: "sherin",
@@ -39,7 +39,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.webp",
     externalDemoUrl: EXAMPLE_URLS.sherin,
     accent: "#F4C26B",
-    gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+    gradient: "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
   },
   {
     slug: "krimo",
@@ -54,7 +54,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.webp",
     externalDemoUrl: EXAMPLE_URLS.krimo,
     accent: "#D5A928",
-    gradient: "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
+    gradient: "from-[#D5A928]/[0.28] via-[#63E6BE]/[0.12] to-transparent",
   },
   {
     slug: "dj-mack",
@@ -69,7 +69,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/dj-mack.webp",
     externalDemoUrl: EXAMPLE_URLS.djMack,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "soyumi",
@@ -84,7 +84,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.webp",
     externalDemoUrl: EXAMPLE_URLS.soyumi,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "flo",
@@ -99,7 +99,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-djflo.webp",
     externalDemoUrl: EXAMPLE_URLS.flo,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "la-bringue",
@@ -114,7 +114,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.webp",
     externalDemoUrl: EXAMPLE_URLS.laBringue,
     accent: "#FF8DAA",
-    gradient: "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+    gradient: "from-[#FF8DAA]/[0.28] via-[#FFD37A]/[0.12] to-transparent",
   },
   {
     slug: "arthur-chaps",
@@ -129,7 +129,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/arthur-chaps.webp",
     externalDemoUrl: EXAMPLE_URLS.arthurChaps,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "dj-slyd",
@@ -144,7 +144,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/dj-slyd.webp",
     externalDemoUrl: EXAMPLE_URLS.djSlyd,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "black-moz",
@@ -159,7 +159,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-blackmoz.webp",
     externalDemoUrl: EXAMPLE_URLS.blackMoz,
     accent: "#C8BBAE",
-    gradient: "from-[#C8BBAE]/28 via-[#FFFFFF]/10 to-transparent",
+    gradient: "from-[#C8BBAE]/[0.28] via-[#FFFFFF]/10 to-transparent",
   },
 ];
 
@@ -195,8 +195,8 @@ export function CategoriesGrid() {
                 style={{ "--case-accent": example.accent } as CSSProperties}
               >
                 <div className="relative h-[18rem] overflow-visible md:h-[16rem] lg:h-[18rem]">
-                  <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
-                    <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
+                  <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-hover group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
+                    <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.12] bg-mockup p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
                       <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
                         <Image
                           src={example.desktopImage}
@@ -207,9 +207,9 @@ export function CategoriesGrid() {
                         />
                       </div>
                     </div>
-                    <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
+                    <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.12] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
                     {example.mobileImage ? (
-                      <div className="absolute -bottom-5 -right-8 z-20 w-[30%] min-w-[4.35rem] rotate-[5deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-6 md:-right-10 md:w-[31%] md:min-w-[5rem]">
+                      <div className="absolute -bottom-5 -right-8 z-20 w-[30%] min-w-[4.35rem] rotate-[5deg] transition duration-hover group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-6 md:-right-10 md:w-[31%] md:min-w-[5rem]">
                         <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                           <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                             <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
@@ -226,15 +226,15 @@ export function CategoriesGrid() {
                     ) : null}
                   </div>
                 </div>
-                <div className="relative mt-2 border-y border-white/[0.1] py-5">
-                  <p className="text-[0.66rem] font-semibold uppercase leading-5 tracking-[0.16em] text-white/[0.56] md:text-xs">
+                <div className="relative mt-2 border-y border-white/[0.12] py-5">
+                  <p className="text-[0.66rem] font-semibold uppercase leading-5 tracking-label-tight text-white/[0.64] md:text-xs">
                     {example.category}
                   </p>
                   <div className="mt-3 flex items-end justify-between gap-4">
                     <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
                   </div>
                 </div>
-                <p className="relative mt-5 flex-1 text-sm leading-6 text-white/[0.76]">{example.description}</p>
+                <p className="relative mt-5 flex-1 text-sm leading-6 text-white/[0.74]">{example.description}</p>
                 <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
                   <span>Voir le projet</span>
                   <span className="transition group-hover:translate-x-1">→</span>

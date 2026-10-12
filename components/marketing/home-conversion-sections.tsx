@@ -40,7 +40,7 @@ export function ComparisonSection() {
             <h2 id="comparison-title" className="text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
               Faire impression dès les premières secondes
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/[0.68] md:text-lg">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/[0.64] md:text-lg">
               Un press kit transforme vos infos en présentation claire, crédible et prête à convaincre.
             </p>
           </div>
@@ -50,20 +50,20 @@ export function ComparisonSection() {
               {comparisonRows.map((row) => (
                 <article
                   key={row.current}
-                  className="w-[84vw] max-w-[21.5rem] shrink-0 snap-start border-y border-white/[0.12] bg-white/[0.045] px-5 py-6"
+                  className="w-[84vw] max-w-[21.5rem] shrink-0 snap-start border-y border-white/[0.12] bg-white/[0.04] px-5 py-6"
                 >
                   <h3 className="max-w-[17rem] text-2xl font-semibold leading-tight tracking-tighter2 text-white">
                     {row.criterion}
                   </h3>
                   <div className="mt-7 space-y-5">
                     <div>
-                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/[0.44]">
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-label text-white/[0.64]">
                         Support classique
                       </p>
-                      <p className="text-sm leading-7 text-white/[0.68]">{row.current}</p>
+                      <p className="text-sm leading-7 text-white/[0.64]">{row.current}</p>
                     </div>
-                    <div className="border-t border-white/[0.14] pt-5">
-                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+                    <div className="border-t border-white/[0.12] pt-5">
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-label text-white">
                         Press kit
                       </p>
                       <p className="text-base font-semibold leading-7 text-white">{row.presskit}</p>
@@ -76,17 +76,17 @@ export function ComparisonSection() {
             <div className="mt-12 hidden overflow-hidden border-y border-white/[0.12] md:block">
               <div className="grid grid-cols-[0.52fr_1fr_1fr] border-b border-white/[0.12]">
                 <div className="px-6 py-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/[0.54]">
+                  <p className="text-xs font-semibold uppercase tracking-label text-white/[0.64]">
                     Critère
                   </p>
                 </div>
-                <div className="border-l border-white/[0.1] px-6 py-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/[0.54]">
+                <div className="border-l border-white/[0.12] px-6 py-5">
+                  <p className="text-xs font-semibold uppercase tracking-label text-white/[0.64]">
                     Supports classiques
                   </p>
                 </div>
-                <div className="border-l border-white/[0.18] bg-white/[0.035] px-6 py-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white">
+                <div className="border-l border-white/[0.18] bg-white/[0.04] px-6 py-5">
+                  <p className="text-xs font-semibold uppercase tracking-label text-white">
                     Press kit premium
                   </p>
                 </div>
@@ -101,8 +101,8 @@ export function ComparisonSection() {
                       {row.criterion}
                     </p>
                   </div>
-                  <div className="border-l border-white/[0.1] px-6 py-7">
-                    <p className="text-base leading-8 text-white/[0.66]">{row.current}</p>
+                  <div className="border-l border-white/[0.12] px-6 py-7">
+                    <p className="text-base leading-8 text-white/[0.64]">{row.current}</p>
                   </div>
                   <div className="relative border-l border-white/[0.18] bg-white/[0.04] px-6 py-7 shadow-[inset_1px_0_0_rgba(255,255,255,0.12)]">
                     <span className="absolute left-0 top-7 h-8 w-px bg-white/70" aria-hidden="true" />

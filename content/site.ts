@@ -237,7 +237,7 @@ export const categories: Category[] = [
     accent: "#F4C26B",
     accentSoft: "rgba(244,194,107,0.18)",
     gradient:
-      "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+      "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
     heroTitle: "Valorisez votre image, en tant qu'artiste",
     heroDescription:
       "Utilisez votre press kit comme une carte de visite digitale pour les médias, sponsors et futurs partenaires.",
@@ -288,7 +288,7 @@ export const categories: Category[] = [
     accent: "#FF9152",
     accentSoft: "rgba(255,145,82,0.18)",
     gradient:
-      "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+      "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
     heroTitle: "Votre profil DJ, clair pour les bookers.",
     heroDescription:
       "Présentez vos styles, vos photos, vos vidéos, vos liens d’écoute, vos références et votre contact booking.",
@@ -339,7 +339,7 @@ export const categories: Category[] = [
     accent: "#D5A928",
     accentSoft: "rgba(213,169,40,0.18)",
     gradient:
-      "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
+      "from-[#D5A928]/[0.28] via-[#63E6BE]/[0.12] to-transparent",
     heroTitle: "Votre parcours de danseur, plus facile à comprendre.",
     heroDescription:
       "Présentez vos vidéos, vos photos, vos références, vos collaborations et votre contact aux lieux, marques et projets culturels.",
@@ -390,7 +390,7 @@ export const categories: Category[] = [
     accent: "#D04C57",
     accentSoft: "rgba(208,76,87,0.18)",
     gradient:
-      "from-[#D04C57]/28 via-[#4B6CFF]/12 to-transparent",
+      "from-[#D04C57]/[0.28] via-[#4B6CFF]/[0.12] to-transparent",
     heroTitle: "Votre regard, vos images, vos prestations.",
     heroDescription:
       "Présentez votre portfolio, vos formats photo ou vidéo, vos zones d’intervention et votre contact.",
@@ -445,7 +445,7 @@ export const categories: Category[] = [
     accent: "#63E6BE",
     accentSoft: "rgba(99,230,190,0.18)",
     gradient:
-      "from-[#63E6BE]/28 via-[#4DA6FF]/12 to-transparent",
+      "from-[#63E6BE]/[0.28] via-[#4DA6FF]/[0.12] to-transparent",
     heroTitle: "Votre coaching, vos offres, vos résultats.",
     heroDescription:
       "Présentez votre méthode, vos prestations, vos résultats, vos réseaux et votre prise de rendez-vous.",
@@ -493,7 +493,7 @@ export const categories: Category[] = [
     accent: "#FF8DAA",
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
-      "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+      "from-[#FF8DAA]/[0.28] via-[#FFD37A]/[0.12] to-transparent",
     heroTitle: "Vos looks, vos prestations, votre contact.",
     heroDescription:
       "Présentez votre portfolio, vos prestations, vos références et votre contact aux clientes, marques ou productions.",
@@ -543,7 +543,7 @@ export const categories: Category[] = [
     accent: "#FF8DAA",
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
-      "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+      "from-[#FF8DAA]/[0.28] via-[#FFD37A]/[0.12] to-transparent",
     heroTitle: "Votre événement, lisible pour les lieux et sponsors.",
     heroDescription:
       "Présentez votre événement, vos photos, vos vidéos, votre communauté, vos chiffres, vos partenaires et votre contact.",
@@ -594,7 +594,7 @@ export const categories: Category[] = [
     accent: "#D7A86E",
     accentSoft: "rgba(215,168,110,0.18)",
     gradient:
-      "from-[#D7A86E]/28 via-[#E25E3E]/12 to-transparent",
+      "from-[#D7A86E]/[0.28] via-[#E25E3E]/[0.12] to-transparent",
     heroTitle: "Un press kit culinaire qui ouvre l’appétit et rassure vos clients.",
     heroDescription:
       "Concept, prestations, galerie plats, formats événementiels et contact devis réunis dans une présentation premium.",
