@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { CategoriesGrid } from "@/components/marketing/categories-grid";
+import { Faq } from "@/components/marketing/faq";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { Hero } from "@/components/marketing/hero";
 import { ComparisonSection } from "@/components/marketing/home-conversion-sections";
@@ -33,6 +34,7 @@ export default function HomePage() {
       <PricingTable variant="highlight" />
       <ProcessTimeline />
       <SocialProof />
+      <Faq />
       <FinalCta />
     </>
   );

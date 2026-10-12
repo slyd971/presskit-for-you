@@ -41,7 +41,9 @@ export type Example = {
   externalDemoUrl?: string;
 };
 
-export { pricingTiers } from "@/content/pricing";
+import { pricingOptions, pricingTiers } from "@/content/pricing";
+
+export { pricingOptions, pricingTiers };
 
 export const CTA = {
   primary: "Créer mon press kit",
@@ -156,41 +158,37 @@ export const processSteps = [
   },
 ];
 
+const premiumTier = pricingTiers[0];
+const customTier = pricingTiers[1];
+const domainOption = pricingOptions.find((option) => option.name === "Nom de domaine personnalisé");
+const updateOption = pricingOptions.find((option) => option.name === "Mise à jour de contenu");
+const maintenanceOption = pricingOptions.find((option) => option.name === "Maintenance annuelle");
+
 export const faqItems = [
   {
-    question: "À qui s’adresse ce service ?",
-    answer:
-      "Aux artistes, créatifs, freelances et indépendants qui ont besoin d’un lien premium pour mieux se présenter et convertir.",
+    question: "Combien de temps pour recevoir mon press kit ?",
+    answer: "7 jours ouvrés maximum à partir de la réception de tous vos contenus.",
   },
   {
-    question: "Est-ce un simple mini-site ?",
+    question: "Que dois-je fournir ?",
     answer:
-      "Non. Le press kit est pensé comme un outil de présentation stratégique : image, clarté, crédibilité et passage à l’action.",
+      "Vos textes, photos, vidéos, liens et références. Le brief permet de clarifier votre positionnement, vos objectifs, vos contenus clés et l’ambiance visuelle souhaitée.",
   },
   {
-    question: "Combien de modifications sont incluses ?",
-    answer:
-      "5 allers-retours de modifications sont inclus dans le Press Kit Premium. Au-delà, ou pour une demande qui sort du cadre initial, un devis complémentaire est proposé.",
+    question: "Combien d’allers-retours de modifications sont inclus ?",
+    answer: "5 allers-retours de modifications sont inclus.",
   },
   {
-    question: "Que dois-je fournir pour démarrer ?",
-    answer:
-      "Vos textes ou quelques infos clés, vos meilleures photos et vidéos, vos liens (réseaux, écoute, contact) et vos références. On vous guide pour cadrer le tout lors du brief.",
+    question: "Puis-je utiliser mon propre nom de domaine ?",
+    answer: `Oui, avec l’option « ${domainOption?.name} » à ${domainOption?.price.replace("+", "")}.`,
   },
   {
-    question: "Puis-je faire évoluer le contenu plus tard ?",
-    answer:
-      "Oui. Une mise à jour ponctuelle est disponible en option, et la maintenance annuelle couvre les mises à jour et corrections sur l’année.",
+    question: "Puis-je faire évoluer mon press kit ?",
+    answer: `Oui, via l’option « ${updateOption?.name} » (${updateOption?.price}) ou la ${maintenanceOption?.name.toLowerCase()} (${maintenanceOption?.price}).`,
   },
   {
-    question: "Puis-je avoir mon propre nom de domaine ?",
-    answer:
-      "Oui, avec l’option « Nom de domaine personnalisé », pour partager une adresse courte reliée à votre nom ou à votre marque.",
-  },
-  {
-    question: "Quels sont les délais ?",
-    answer:
-      "Le brief est cadré rapidement et le délai de livraison est précisé à la commande selon votre projet et la rapidité de transmission de vos contenus.",
+    question: "Quelle différence entre Press Kit Premium et Studio Custom ?",
+    answer: `${premiumTier.name} : ${premiumTier.description} ${customTier.name} : ${customTier.description}`,
   },
   {
     question: "Comment se passe le paiement ?",
@@ -198,6 +196,7 @@ export const faqItems = [
       "50 % à la commande, 50 % à la livraison. Les prix sont nets, la TVA n’est pas applicable (micro-entreprise).",
   },
 ];
+
 
 export const categories: Category[] = [
   {
