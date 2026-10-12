@@ -1,0 +1,22 @@
+<!-- @dsCard group="Éléments" height=300 subtitle="Photo avec légende sur bandeau" -->
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Cadre photo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+html,body{margin:0}
+.f{--k:.3333;position:relative;width:360px;height:240px;overflow:hidden}
+.f .lm-photo{inset:0}
+.f .leg{position:absolute;left:0;bottom:calc(64px*var(--k));background:var(--charbon);color:var(--creme);padding:calc(16px*var(--k)) calc(24px*var(--k));font:600 calc(32px*var(--k))/1.2 var(--font-body)}
+.g .leg{background:var(--velours);color:var(--creme)}
+</style>
+</head>
+<body>
+<div class="lm-stage">
+ <figure style="margin:0"><div class="f"><div class="lm-photo"><span>Photo La Mif</span></div><div class="leg">Le micro passe de main en main.</div></div><figcaption class="lm-cap">Légende sur bandeau charbon</figcaption></figure>
+ <figure style="margin:0"><div class="f g"><div class="lm-photo"><span>Photo La Mif</span></div><div class="leg">Jeux toute la soirée.</div></div><figcaption class="lm-cap">Légende sur bandeau velours</figcaption></figure>
+</div>
+</body>
+</html>
