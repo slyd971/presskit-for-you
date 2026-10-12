@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Faq } from "@/components/marketing/faq";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { PricingTable } from "@/components/marketing/pricing-table";
 import { Button } from "@/components/ui/button";
@@ -33,6 +34,8 @@ export default function TarifsPage() {
       </section>
 
       <PricingTable variant="highlight" showHeading={false} sectionId={null} contactHref="#contact" />
+
+      <Faq />
 
       <section className="section-divider section-tone-lift py-16 md:py-20" aria-labelledby="pricing-help-title">
         <PageShell className="max-w-5xl">

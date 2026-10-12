@@ -168,9 +168,34 @@ export const faqItems = [
       "Non. Le press kit est pensé comme un outil de présentation stratégique : image, clarté, crédibilité et passage à l’action.",
   },
   {
+    question: "Combien de modifications sont incluses ?",
+    answer:
+      "5 allers-retours de modifications sont inclus dans le Press Kit Premium. Au-delà, ou pour une demande qui sort du cadre initial, un devis complémentaire est proposé.",
+  },
+  {
+    question: "Que dois-je fournir pour démarrer ?",
+    answer:
+      "Vos textes ou quelques infos clés, vos meilleures photos et vidéos, vos liens (réseaux, écoute, contact) et vos références. On vous guide pour cadrer le tout lors du brief.",
+  },
+  {
     question: "Puis-je faire évoluer le contenu plus tard ?",
     answer:
-      "Oui. La structure est pensée pour accueillir d’autres sections, catégories, références ou un futur CMS.",
+      "Oui. Une mise à jour ponctuelle est disponible en option, et la maintenance annuelle couvre les mises à jour et corrections sur l’année.",
+  },
+  {
+    question: "Puis-je avoir mon propre nom de domaine ?",
+    answer:
+      "Oui, avec l’option « Nom de domaine personnalisé », pour partager une adresse courte reliée à votre nom ou à votre marque.",
+  },
+  {
+    question: "Quels sont les délais ?",
+    answer:
+      "Le brief est cadré rapidement et le délai de livraison est précisé à la commande selon votre projet et la rapidité de transmission de vos contenus.",
+  },
+  {
+    question: "Comment se passe le paiement ?",
+    answer:
+      "50 % à la commande, 50 % à la livraison. Les prix sont nets, la TVA n’est pas applicable (micro-entreprise).",
   },
 ];
 
@@ -717,6 +742,28 @@ export const examples: Example[] = [
     image: "/gallery-previews/home-desktop/black-moz.webp",
     mobileImage: "/gallery-previews/home-mobile/Mobile-blackmoz.webp",
     accent: "#C8BBAE",
+  },
+  {
+    slug: "dj-pirate",
+    category: "DJ",
+    title: "DJ Pirate",
+    description: "Un press kit DJ & beatmaker urban et house avec références, galerie, live et booking.",
+    href: "/#contact",
+    externalDemoUrl: "https://dj-pirate.presskit.fr/",
+    image: "/gallery-previews/home-desktop/dj-pirate.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-pirate.webp",
+    accent: "#FF9152",
+  },
+  {
+    slug: "dj-gdc",
+    category: "DJ",
+    title: "DJ GDC",
+    description: "Un press kit DJ open format avec parcours, références, vidéos, SoundCloud et booking.",
+    href: "/#contact",
+    externalDemoUrl: "https://dj-gdc.presskit.fr/",
+    image: "/gallery-previews/home-desktop/dj-gdc.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-gdc.webp",
+    accent: "#FF9152",
   },
   {
     slug: "silver-dj",

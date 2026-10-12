@@ -53,6 +53,12 @@ export function SiteFooter() {
             <Link href="/mentions-legales" className="footer-link text-sm text-white/[0.64] hover:text-white">
               Mentions légales
             </Link>
+            <Link href="/cgv" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              CGV
+            </Link>
+            <Link href="/politique-de-confidentialite" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              Confidentialité
+            </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Métiers</p>
           <div className="mt-6 space-y-4">

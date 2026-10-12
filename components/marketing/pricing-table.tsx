@@ -2,6 +2,7 @@ import { pricingOptions, pricingTiers } from "@/content/pricing";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { VAT_MENTION } from "@/lib/legal";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 
@@ -66,6 +67,7 @@ export function PricingTable({
               </div>
               <div className={`relative mt-10 border-y py-8 ${offerTone.tierBorder}`}>
                 <p className={`text-[clamp(3.2rem,7vw,6.7rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
+                {tier.price.includes("€") ? <p className={`mt-3 text-[11px] ${offerTone.headingMeta}`}>{VAT_MENTION}</p> : null}
                 <p className={`mt-4 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
               </div>
               <p className={`relative mt-7 max-w-md text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
@@ -82,7 +84,7 @@ export function PricingTable({
                 variant="primaryOnLight"
                 className="relative mx-auto mt-10 min-h-12 w-full max-w-sm justify-center px-6 py-3.5"
               >
-                Demander mon press kit
+                {tier.price === "Sur devis" ? "Demander un devis" : "Demander mon press kit"}
               </Button>
             </article>
           ))}
@@ -106,6 +108,7 @@ export function PricingTable({
                       <span>
                         <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
                         <span className="mt-1 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">{option.price}</span>
+                        {option.price.includes("€") ? <span className="block text-[11px] text-white/[0.5]">{VAT_MENTION}</span> : null}
                       </span>
                       <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition duration-300 group-open:rotate-180" aria-hidden="true" />
                     </summary>
@@ -116,6 +119,7 @@ export function PricingTable({
                       <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
                       <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
                     </div>
+                    {option.price.includes("€") ? <p className="mt-1 text-[11px] text-white/[0.5]">{VAT_MENTION}</p> : null}
                     <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
                   </article>
                 </div>
