@@ -206,7 +206,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
               <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
                 {copy.promiseTitle}
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.72] md:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
                 {copy.promiseDescription}
               </p>
             </div>
@@ -221,7 +221,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                       <h3 className="text-[clamp(1.45rem,2.4vw,2.25rem)] font-semibold leading-tight tracking-tighter2 text-white">
                         {benefit.title}
                       </h3>
-                      <p className="mt-4 max-w-2xl text-sm leading-7 text-white/[0.66] md:text-base md:leading-8">
+                      <p className="mt-4 max-w-2xl text-sm leading-7 text-white/[0.64] md:text-base md:leading-8">
                         {benefit.description}
                       </p>
                     </div>
@@ -262,8 +262,8 @@ export function CategoryContent({ category }: CategoryContentProps) {
                       style={{ "--case-accent": example.accent } as CSSProperties}
                     >
                       <div className="relative h-[18rem] overflow-visible md:h-[27rem]">
-                        <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
-                          <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
+                        <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-hover group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
+                          <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.12] bg-mockup p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
                             <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
                               {example.image ? (
                                 <Image
@@ -284,9 +284,9 @@ export function CategoryContent({ category }: CategoryContentProps) {
                               )}
                             </div>
                           </div>
-                          <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
+                          <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.12] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
                           {example.mobileImage ? (
-                            <div className="absolute -bottom-5 -right-8 z-20 w-[30%] min-w-[4.35rem] rotate-[5deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-6 md:-right-10 md:w-[31%] md:min-w-[5rem]">
+                            <div className="absolute -bottom-5 -right-8 z-20 w-[30%] min-w-[4.35rem] rotate-[5deg] transition duration-hover group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-6 md:-right-10 md:w-[31%] md:min-w-[5rem]">
                               <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                                 <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                                   <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
@@ -303,12 +303,12 @@ export function CategoryContent({ category }: CategoryContentProps) {
                           ) : null}
                         </div>
                       </div>
-                      <div className="relative mt-2 border-y border-white/[0.1] py-5">
+                      <div className="relative mt-2 border-y border-white/[0.12] py-5">
                         <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
                           {example.title}
                         </h3>
                       </div>
-                      <p className="mt-5 flex-1 text-sm leading-7 text-white/[0.68]">
+                      <p className="mt-5 flex-1 text-sm leading-7 text-white/[0.64]">
                         {example.description}
                       </p>
                       <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
@@ -335,7 +335,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
             <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
               {copy.detailsTitle}
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.72] md:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
               {copy.detailsDescription}
             </p>
           </div>
@@ -344,7 +344,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
               {category.includes.map((item, index) => (
                 <div key={item} className="motion-line grid grid-cols-[1.25rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
                   <span className="mt-2 h-px w-5 bg-white/[0.32]" aria-hidden="true" />
-                  <p className="text-sm font-medium leading-6 text-white/[0.76]">{item}</p>
+                  <p className="text-sm font-medium leading-6 text-white/[0.74]">{item}</p>
                 </div>
               ))}
             </div>

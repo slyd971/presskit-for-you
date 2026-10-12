@@ -27,7 +27,7 @@ export default function LegalPage() {
           Mentions légales
         </h1>
 
-        <div className="mt-10 grid gap-8 border-y border-white/[0.12] py-8 text-white/[0.72]">
+        <div className="mt-10 grid gap-8 border-y border-white/[0.12] py-8 text-white/[0.74]">
           <section className="overflow-visible">
             <h2 className={h2Class}>Éditeur du site</h2>
             <p className="mt-4 leading-8">

@@ -47,15 +47,15 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div
         className={cn(
-          "w-full border-b backdrop-blur-xl transition-all duration-300",
+          "w-full border-b backdrop-blur-xl transition-all duration-fast",
           isCompact
             ? "border-black/[0.08] bg-white/[0.96] shadow-[0_12px_36px_rgba(13,17,24,0.1)]"
-            : "border-white/[0.08] bg-[#0b0e14]/[0.9] shadow-[0_12px_36px_rgba(0,0,0,0.18)]",
+            : "border-white/[0.08] bg-surface-900/90 shadow-[0_12px_36px_rgba(0,0,0,0.18)]",
         )}
       >
         <div
           className={cn(
-            "mx-auto flex max-w-8xl items-center justify-between gap-4 px-4 transition-all duration-300 md:px-8",
+            "mx-auto flex max-w-8xl items-center justify-between gap-4 px-4 transition-all duration-fast md:px-8",
             isCompact ? "py-3" : "py-4",
           )}
         >
@@ -73,7 +73,7 @@ export function SiteHeader() {
               fill
               sizes="(min-width: 768px) 15rem, 11rem"
               priority
-              className={cn("object-contain object-left transition duration-300", isCompact && "brightness-0")}
+              className={cn("object-contain object-left transition duration-fast", isCompact && "brightness-0")}
             />
           </Link>
 
@@ -84,7 +84,7 @@ export function SiteHeader() {
                 href={item.href}
                 className={cn(
                   "text-[15px] font-semibold transition",
-                  isCompact ? "text-[#10141d]/[0.78] hover:text-[#10141d]" : "text-white/[0.82] hover:text-white",
+                  isCompact ? "text-text-secondary-light hover:text-ink-editorial" : "text-white/[0.84] hover:text-white",
                 )}
               >
                 {item.label}
@@ -109,7 +109,7 @@ export function SiteHeader() {
               onClick={() => setIsOpen((open) => !open)}
               className={cn(
                 "inline-flex h-10 w-10 items-center justify-center rounded-lg transition md:hidden",
-                isCompact ? "text-[#10141d] hover:bg-[#10141d]/[0.06]" : "text-white hover:bg-white/[0.08]",
+                isCompact ? "text-ink-editorial hover:bg-ink-editorial/[0.06]" : "text-white hover:bg-white/[0.08]",
               )}
             >
               <motion.div
@@ -160,8 +160,8 @@ export function SiteHeader() {
                         className={cn(
                           "block rounded-lg border border-transparent px-3 py-3 text-[15px] font-semibold transition",
                           isCompact
-                            ? "text-[#10141d]/[0.82] hover:border-[#10141d]/10 hover:bg-[#10141d]/[0.04] hover:text-[#10141d]"
-                            : "text-white/[0.86] hover:border-white/10 hover:bg-white/[0.04] hover:text-white",
+                            ? "text-text-secondary-light hover:border-ink-editorial/[0.12] hover:bg-ink-editorial/[0.04] hover:text-ink-editorial"
+                            : "text-white/[0.84] hover:border-white/[0.12] hover:bg-white/[0.04] hover:text-white",
                         )}
                       >
                         {item.label}

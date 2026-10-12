@@ -53,8 +53,8 @@ export function PreviewLoopCard({
         transition={{ duration: motionTokens.duration.fast, ease: motionTokens.easing.interaction }}
         className="panel-premium accent-ring flex h-full flex-col rounded-[1.4rem] p-4"
       >
-        <div className="mockup-surface relative overflow-hidden rounded-[1rem] border border-white/8 bg-[#0b0e14]">
-          <div className="relative h-28 overflow-hidden bg-[#0b0e14]">
+        <div className="mockup-surface relative overflow-hidden rounded-[1rem] border border-white/[0.08] bg-mockup">
+          <div className="relative h-28 overflow-hidden bg-mockup">
             <Image
               src={image}
               alt={title}
@@ -64,20 +64,20 @@ export function PreviewLoopCard({
               className={`preview-scroll w-full max-w-none ${delayClassName}`}
               style={Object.keys(imageStyle).length > 0 ? imageStyle : undefined}
             />
-            <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-              <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#0b0e14] to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#0b0e14] to-transparent" />
+            <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-hover group-hover:opacity-100">
+              <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-mockup to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-mockup to-transparent" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_45%)]" />
             </div>
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#0b0e14] to-transparent" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#0b0e14] to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-mockup to-transparent" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-mockup to-transparent" />
           </div>
         </div>
         <div className="mt-4 flex items-center justify-between gap-3">
-          <p className="text-[11px] uppercase tracking-[0.24em] text-white/45 transition duration-300 group-hover:text-white/64">
+          <p className="text-[11px] uppercase tracking-label text-white/[0.64] transition duration-fast group-hover:text-white/[0.64]">
             {label}
           </p>
-          <span className="rounded-full border border-white/10 bg-white/6 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-white/58 transition duration-300 group-hover:border-white/16 group-hover:bg-white/10">
+          <span className="rounded-full border border-white/[0.12] bg-white/[0.055] px-2.5 py-1 text-[10px] uppercase tracking-label-tight text-white/[0.64] transition duration-fast group-hover:border-white/[0.18] group-hover:bg-white/10">
             Live
           </span>
         </div>
