@@ -75,7 +75,7 @@ export function SiteFooter() {
               Discuter du projet
             </a>
             <a
-              href="mailto:david.mecorvin@hotmail.fr"
+              href="mailto:contact@presskit.fr"
               className="footer-link text-sm text-white/[0.64] hover:text-white"
             >
               Envoyer un email

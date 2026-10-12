@@ -42,8 +42,8 @@ export default function LegalPage() {
             </p>
             <p className="mt-2 leading-8">
               Email :{" "}
-              <a className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-white" href="mailto:david.mecorvin@hotmail.fr">
-                david.mecorvin@hotmail.fr
+              <a className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-white" href="mailto:contact@presskit.fr">
+                contact@presskit.fr
               </a>
             </p>
           </section>
