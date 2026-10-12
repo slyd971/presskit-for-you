@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { PageShell } from "@/components/layout/page-shell";
-import { createPageMetadata } from "@/lib/seo";
-import { siteConfig } from "@/content/site";
 import { LEGAL, VAT_MENTION } from "@/lib/legal";
+import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Mentions légales",
@@ -11,6 +11,9 @@ export const metadata: Metadata = createPageMetadata({
   path: "mentions-legales",
   keywords: ["mentions légales PressKit For You", "éditeur PressKit For You"],
 });
+
+const linkClass = "text-white underline decoration-white/30 underline-offset-4 hover:decoration-white";
+const h2Class = "text-2xl font-semibold tracking-tighter2 text-white";
 
 export default function LegalPage() {
   return (
@@ -26,37 +29,37 @@ export default function LegalPage() {
 
         <div className="mt-10 grid gap-8 border-y border-white/[0.12] py-8 text-white/[0.72]">
           <section className="overflow-visible">
-            <h2 className="text-2xl font-semibold tracking-tighter2 text-white">Éditeur du site</h2>
+            <h2 className={h2Class}>Éditeur du site</h2>
             <p className="mt-4 leading-8">
-              Ce site est édité par {LEGAL.publisher}, {LEGAL.legalForm}, exerçant sous le nom commercial « {LEGAL.tradeName} ».
+              Ce site est édité par {LEGAL.publisher}, {LEGAL.legalForm}, exerçant sous le nom commercial «&nbsp;{LEGAL.tradeName}&nbsp;».
             </p>
             <p className="mt-2 leading-8">SIREN : {LEGAL.siren}</p>
             <p className="mt-2 leading-8">Adresse : {LEGAL.address}</p>
-            <p className="mt-2 leading-8">Directeur de la publication : {LEGAL.publicationDirector}</p>
-            <p className="mt-2 leading-8">{VAT_MENTION} (franchise en base).</p>
-          </section>
-
-          <section className="overflow-visible">
-            <h2 className="text-2xl font-semibold tracking-tighter2 text-white">Contact</h2>
-            <p className="mt-4 leading-8">
+            <p className="mt-2 leading-8">
               Téléphone :{" "}
-              <a className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-white" href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>
-                {siteConfig.phone}
+              <a className={linkClass} href={`tel:${LEGAL.phone.replace(/\s/g, "")}`}>
+                {LEGAL.phone}
               </a>
             </p>
             <p className="mt-2 leading-8">
               Email :{" "}
-              <a className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-white" href="mailto:contact@presskit.fr">
-                contact@presskit.fr
+              <a className={linkClass} href={`mailto:${LEGAL.email}`}>
+                {LEGAL.email}
               </a>
             </p>
+            <p className="mt-2 leading-8">{VAT_MENTION}.</p>
           </section>
 
           <section className="overflow-visible">
-            <h2 className="text-2xl font-semibold tracking-tighter2 text-white">Hébergement</h2>
+            <h2 className={h2Class}>Directeur de la publication</h2>
+            <p className="mt-4 leading-8">{LEGAL.publicationDirector}</p>
+          </section>
+
+          <section className="overflow-visible">
+            <h2 className={h2Class}>Hébergeur</h2>
             <p className="mt-4 leading-8">
               Le site est hébergé par {LEGAL.host.name}, {LEGAL.host.address}. Contact :{" "}
-              <a className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-white" href={LEGAL.host.contactUrl}>
+              <a className={linkClass} href={LEGAL.host.contactUrl}>
                 {LEGAL.host.contactUrl}
               </a>
               .
@@ -64,10 +67,31 @@ export default function LegalPage() {
           </section>
 
           <section className="overflow-visible">
-            <h2 className="text-2xl font-semibold tracking-tighter2 text-white">Propriété intellectuelle</h2>
+            <h2 className={h2Class}>Médiateur de la consommation</h2>
+            <p className="mt-4 leading-8">
+              Conformément aux articles L611-1 et suivants du Code de la consommation, le client consommateur peut recourir
+              gratuitement au médiateur suivant : {LEGAL.mediator.name}, {LEGAL.mediator.address}, {LEGAL.mediator.website}.
+            </p>
+          </section>
+
+          <section className="overflow-visible">
+            <h2 className={h2Class}>Propriété intellectuelle</h2>
             <p className="mt-4 leading-8">
               Les textes, visuels, interfaces et éléments graphiques présents sur ce site sont protégés. Toute reproduction
               ou réutilisation non autorisée est interdite.
+            </p>
+          </section>
+
+          <section className="overflow-visible">
+            <h2 className={h2Class}>Documents associés</h2>
+            <p className="mt-4 leading-8">
+              <Link className={linkClass} href="/cgv">
+                Conditions générales de prestation
+              </Link>
+              {" · "}
+              <Link className={linkClass} href="/politique-de-confidentialite">
+                Politique de confidentialité
+              </Link>
             </p>
           </section>
         </div>
