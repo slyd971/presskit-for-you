@@ -67,7 +67,7 @@ export const siteConfig = {
 export const heroStats = [
   { value: "48h", label: "pour cadrer le brief et la direction" },
   { value: "1 lien", label: "pour centraliser médias, infos et contact" },
-  { value: "Sur mesure", label: "pour coller à ton univers et à ta cible" },
+  { value: "Sur mesure", label: "pour coller à votre univers et à votre cible" },
 ];
 
 export const benefits = [
@@ -105,7 +105,7 @@ export const benefits = [
 
 export const heroProofs = [
   "Brief cadré rapidement",
-  "Design premium adapté à ton métier",
+  "Design premium adapté à votre métier",
   "Lien prêt à partager pour booking, presse et prospects",
 ];
 
@@ -137,12 +137,12 @@ export const processSteps = [
   {
     title: "Brief",
     description:
-      "On clarifie ton positionnement, tes objectifs, tes contenus clés et l’ambiance visuelle.",
+      "On clarifie votre positionnement, vos objectifs, vos contenus clés et l’ambiance visuelle.",
   },
   {
     title: "Direction créative",
     description:
-      "On construit un univers premium aligné avec ton métier, ta cible et ton niveau de gamme.",
+      "On construit un univers premium aligné avec votre métier, votre cible et votre niveau de gamme.",
   },
   {
     title: "Intégration",
@@ -152,7 +152,7 @@ export const processSteps = [
   {
     title: "Livraison",
     description:
-      "Tu reçois un lien prêt à partager, pensé pour inspirer confiance et générer plus d’opportunités.",
+      "Vous recevez un lien prêt à partager, pensé pour inspirer confiance et générer plus d’opportunités.",
   },
 ];
 
@@ -567,14 +567,14 @@ export const categories: Category[] = [
     shortName: "Chef / Traiteur",
     eyebrow: "Signature culinaire, événements, devis",
     description:
-      "Une vitrine haut de gamme pour présenter ton concept, tes prestations, tes visuels et faciliter les demandes de devis.",
+      "Une vitrine haut de gamme pour présenter votre concept, vos prestations, vos visuels et faciliter les demandes de devis.",
     audience: "Chefs privés, traiteurs, concepts food et événementiel",
     tone: "culinary",
     accent: "#D7A86E",
     accentSoft: "rgba(215,168,110,0.18)",
     gradient:
       "from-[#D7A86E]/28 via-[#E25E3E]/12 to-transparent",
-    heroTitle: "Un press kit culinaire qui ouvre l’appétit et rassure tes clients.",
+    heroTitle: "Un press kit culinaire qui ouvre l’appétit et rassure vos clients.",
     heroDescription:
       "Concept, prestations, galerie plats, formats événementiels et contact devis réunis dans une présentation premium.",
     valueProps: ["Image haut de gamme", "Offre compréhensible", "Demandes mieux qualifiées"],
@@ -585,11 +585,11 @@ export const categories: Category[] = [
       },
       {
         title: "Galerie plus impactante",
-        description: "Tes plats et ton univers gagnent en désirabilité avec une meilleure mise en scène.",
+        description: "Vos plats et votre univers gagnent en désirabilité avec une meilleure mise en scène.",
       },
       {
         title: "Devis mieux préparés",
-        description: "Les prospects arrivent avec une compréhension plus nette de ce que tu proposes.",
+        description: "Les prospects arrivent avec une compréhension plus nette de ce que vous proposez.",
       },
     ],
     includes: [
