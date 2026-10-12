@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import type { Category } from "@/content/site";
+import { CTA, type Category } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
 import { Reveal } from "@/components/ui/reveal";
@@ -39,7 +39,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button href="/#contact" className="min-h-12 px-7 py-4 text-[15px]">
-                Créer mon press kit
+                {CTA.primary}
               </Button>
               <Button href={href} variant="secondary" className="min-h-12 px-6 py-4 text-[15px]">
                 Voir une démo

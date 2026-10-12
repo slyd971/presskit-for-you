@@ -1,5 +1,6 @@
 "use client";
 
+import { CTA } from "@/content/site";
 import Link from "next/link";
 import Image from "next/image";
 import type { CSSProperties } from "react";
@@ -254,7 +255,7 @@ export function CategoriesGrid() {
         </div>
         <div className="mt-10 flex justify-center md:mt-12">
           <Button href="/exemples" variant="secondary">
-            Voir plus d’exemples
+            {CTA.secondary}
           </Button>
         </div>
       </PageShell>

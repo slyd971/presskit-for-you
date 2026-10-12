@@ -1,5 +1,6 @@
 "use client";
 
+import { CTA } from "@/content/site";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -138,13 +139,13 @@ export function Hero() {
                 variant="secondary"
                 className="min-h-12 w-full px-7 py-4 text-[15px] sm:w-auto"
               >
-                Voir des exemples
+                {CTA.secondary}
               </Button>
               <Button
                 href="#contact"
                 className="min-h-12 w-full px-6 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
               >
-                Lancer mon projet
+                {CTA.primary}
               </Button>
             </div>
           </div>

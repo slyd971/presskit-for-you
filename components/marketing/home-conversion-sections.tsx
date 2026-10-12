@@ -1,3 +1,4 @@
+import { CTA } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
@@ -113,7 +114,7 @@ export function ComparisonSection() {
 
             <div className="mt-10 flex justify-center">
               <Button href="#contact" className="min-h-12 w-full justify-center px-7 py-4 text-[15px] sm:w-auto">
-                Créer mon press kit
+                {CTA.primary}
               </Button>
             </div>
           </Reveal>

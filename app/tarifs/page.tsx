@@ -1,3 +1,4 @@
+import { CTA } from "@/content/site";
 import type { Metadata } from "next";
 
 import { Faq } from "@/components/marketing/faq";
@@ -49,7 +50,7 @@ export default function TarifsPage() {
               </p>
             </div>
             <Button href="#contact" className="min-h-12 justify-center px-7 py-4 text-[15px]">
-              Parler de mon projet
+              {CTA.primary}
             </Button>
           </div>
         </PageShell>

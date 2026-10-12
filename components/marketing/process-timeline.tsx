@@ -1,5 +1,6 @@
 "use client";
 
+import { CTA } from "@/content/site";
 import { motion } from "framer-motion";
 import { ArrowDown, FileImage, Mail, Phone, Video } from "lucide-react";
 
@@ -226,7 +227,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           className="mt-10 flex justify-center md:mt-12"
         >
           <Button href="#exemples" variant="secondary" className="shrink-0 px-7 py-4 text-[15px]">
-            Découvrir un exemple
+            {CTA.secondary}
           </Button>
         </motion.div>
       </PageShell>

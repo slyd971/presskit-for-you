@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { siteConfig } from "@/content/site";
+import { CTA, siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motionTokens } from "@/lib/motion";
@@ -98,7 +98,7 @@ export function SiteHeader() {
               variant={isCompact ? "primaryOnLight" : "primary"}
               className="hidden px-3 py-2 text-[11px] font-semibold shadow-none sm:inline-flex md:px-5 md:py-3 md:text-sm"
             >
-              {siteConfig.ctas.call}
+              {CTA.primary}
             </Button>
 
             <button
@@ -177,7 +177,7 @@ export function SiteHeader() {
                   transition={{ duration: motionTokens.duration.fast, delay: motionTokens.delay.related, ease: motionTokens.easing.enter }}
                 >
                   <Button href="/#contact" variant={isCompact ? "primaryOnLight" : "primary"} className="mt-4 w-full justify-center">
-                    {siteConfig.ctas.call}
+                    {CTA.primary}
                   </Button>
                 </motion.div>
               </motion.div>

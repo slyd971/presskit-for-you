@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { CSSProperties } from "react";
 
-import type { Category } from "@/content/site";
+import { CTA, type Category } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
@@ -322,7 +322,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
             </div>
             <div className="mt-10 flex justify-center md:mt-12">
               <Button href="/exemples" variant="secondary" className="min-h-12 w-full px-6 py-4 text-[15px] sm:w-auto">
-                Voir tous les exemples
+                {CTA.secondary}
               </Button>
             </div>
           </PageShell>

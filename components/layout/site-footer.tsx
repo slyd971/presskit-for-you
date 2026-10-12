@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { siteConfig } from "@/content/site";
+import { CTA, siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { footerCategoryLinks } from "@/lib/presskit-categories";
 
@@ -29,10 +29,10 @@ export function SiteFooter() {
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button href="/#contact" className="justify-center px-7 py-4 text-[15px]">
-              Créer mon presskit
+              {CTA.primary}
             </Button>
             <Button href="/exemples" variant="secondary" className="justify-center px-7 py-4 text-[15px]">
-              Voir les exemples
+              {CTA.secondary}
             </Button>
           </div>
         </div>

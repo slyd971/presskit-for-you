@@ -43,6 +43,12 @@ export type Example = {
 
 export { pricingTiers } from "@/content/pricing";
 
+export const CTA = {
+  primary: "Créer mon press kit",
+  secondary: "Voir des exemples",
+  quote: "Demander un devis",
+} as const;
+
 export const siteConfig = {
   name: "PressKit For You",
   description:
@@ -56,12 +62,6 @@ export const siteConfig = {
     { href: "/#methode", label: "Méthode" },
     { href: "/#avis", label: "Avis" },
   ],
-  ctas: {
-    primary: "Créer mon press kit",
-    secondary: "Voir les tarifs",
-    call: "Créer mon presskit",
-    launch: "Lancer mon projet",
-  },
 };
 
 export const heroStats = [

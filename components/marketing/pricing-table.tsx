@@ -1,4 +1,5 @@
 import { pricingOptions, pricingTiers } from "@/content/pricing";
+import { CTA } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -84,7 +85,7 @@ export function PricingTable({
                 variant="primaryOnLight"
                 className="relative mx-auto mt-10 min-h-12 w-full max-w-sm justify-center px-6 py-3.5"
               >
-                {tier.price === "Sur devis" ? "Demander un devis" : "Demander mon press kit"}
+                {tier.price === "Sur devis" ? CTA.quote : CTA.primary}
               </Button>
             </article>
           ))}
