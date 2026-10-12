@@ -1,0 +1,76 @@
+/* PressKit For You : variables CSS générées depuis tokens.json.
+   Thème sombre par défaut ; thème clair éditorial via [data-theme="clair"]. */
+:root {
+  --surface-900: #0d1118;
+  --surface-850: #111620;
+  --surface-800: #171d28;
+  --surface-760: #1d2430;
+  --ink: #0d1016;
+  --ink-editorial: #10141d;
+  --paper: #f7f5f0;
+  --sand: #f4efe7;
+  --mist: #a8b1c7;
+  --steel: #7b869a;
+  --accent-warm: rgb(184, 193, 205);
+  --white: #ffffff;
+  --light-section-end: #f6f7f8;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #1fbd59;
+  --whatsapp-ink: #07140c;
+  --accent-gold: #f4c26b;
+  --accent-orange: #ff9152;
+  --accent-ochre: #d5a928;
+  --accent-red: #d04c57;
+  --accent-mint: #63e6be;
+  --accent-pink: #ff8daa;
+  --accent-tan: #d7a86e;
+  --bg: var(--surface-900);
+  --text: var(--paper);
+  --text-secondary: rgba(255, 255, 255, 0.74);
+  --text-muted: rgba(255, 255, 255, 0.64);
+  --surface-glass: rgba(255, 255, 255, 0.055);
+  --surface-glass-strong: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.22);
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --container-max: 92rem;
+  --gutter-mobile: 1.25rem;
+  --gutter-sm: 1.5rem;
+  --gutter-md: 2rem;
+  --section-y: 5rem;
+  --section-y-md: 7rem;
+  --heading-gap: 1.25rem;
+  --nav-gap: 2rem;
+  --radius-lg: 0.5rem;
+  --radius-mockup-desktop: 0.9rem;
+  --radius-mockup-mobile: 1.1rem;
+  --radius-4xl: 2rem;
+  --radius-full: 999px;
+  --shadow-button-primary: 0 18px 50px rgba(255, 255, 255, 0.16);
+  --shadow-panel: 0 12px 42px rgba(0, 0, 0, 0.16);
+  --shadow-panel-hover: 0 18px 58px rgba(0, 0, 0, 0.22);
+  --shadow-card-hover: 0 28px 90px rgba(0, 0, 0, 0.34);
+  --shadow-soft: 0 20px 60px rgba(4, 8, 20, 0.18);
+  --shadow-glow: 0 24px 80px rgba(255, 145, 77, 0.18);
+  --duration-feedback: 180ms;
+  --duration-fast: 320ms;
+  --duration-hover: 420ms;
+  --duration-reveal: 480ms;
+  --duration-slow: 720ms;
+  --ease-presskit: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-presskit-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+}
+
+[data-theme="clair"] {
+  --bg: var(--white);
+  --text: var(--ink-editorial);
+  --text-secondary: #4d5561;
+  --text-muted: #5d6470;
+  --surface-glass: rgba(16, 20, 29, 0.03);
+  --surface-glass-strong: rgba(16, 20, 29, 0.06);
+  --border-subtle: rgba(16, 20, 29, 0.08);
+  --border: rgba(16, 20, 29, 0.16);
+  --border-hover: rgba(16, 20, 29, 0.28);
+}
