@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { CTA, siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/button";
+import { VAT_MENTION } from "@/lib/vat";
 import { footerCategoryLinks } from "@/lib/presskit-categories";
 
 export function SiteFooter() {
@@ -88,6 +89,9 @@ export function SiteFooter() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="relative border-t border-white/[0.08] px-5 py-6 text-center text-xs text-white/[0.5] md:px-8">
+        <p>{VAT_MENTION}</p>
       </div>
     </footer>
   );

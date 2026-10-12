@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { examples, testimonials } from "@/content/site";
-import { VAT_MENTION } from "@/lib/vat";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
@@ -11,7 +10,7 @@ const liveExamplesCount = examples.filter((example) => example.externalDemoUrl).
 const proofStats = [
   { value: String(liveExamplesCount), label: "press kits en ligne" },
   { value: "7 jours", label: "ouvrés max pour la livraison" },
-  { value: "dès 300 €", label: "pour un press kit premium" },
+  { value: "dès 300 € TTC", label: "pour un press kit premium" },
 ];
 
 export function ProofStats() {
@@ -41,7 +40,6 @@ export function ProofStats() {
                   <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-[0.18em] text-[#5d6470]">
                     {stat.label}
                   </p>
-                  {stat.value.includes("€") ? <p className="mt-1 text-[10px] text-[#5d6470]">{VAT_MENTION}</p> : null}
                 </div>
               ))}
             </div>

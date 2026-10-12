@@ -203,7 +203,7 @@ const breadcrumbNodes = [
     })),
 ];
 
-const priceFrom = (price: string) => price.match(/d+/)?.[0];
+const priceFrom = (price: string) => price.match(/\d+/)?.[0];
 
 const offerCatalog = {
   "@type": "OfferCatalog",
