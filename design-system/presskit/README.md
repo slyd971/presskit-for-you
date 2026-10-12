@@ -8,6 +8,18 @@ Ce dossier rassemble ce qui existe déjà dans le code du site. Il ne modifie ri
 - `tokens.css` : les mêmes tokens en variables CSS, générés depuis `tokens.json`.
 - Sources : `tailwind.config.ts`, `app/globals.css`, `app/layout.tsx`, `lib/motion.ts`, `components/ui`, `components/marketing`, `content/site.ts`. Audit détaillé : `docs/design-audit.md` et `docs/design-inventory.json`.
 
+## Dans le code
+
+Les tokens sont aussi déclarés dans `tailwind.config.ts`, à utiliser pour tout nouveau code à la place des valeurs en dur :
+
+- Couleurs : `bg-surface-900`, `bg-surface-800`, `bg-surface-850`, `bg-surface-760`, `text-paper`, `text-ink-editorial`, `border-steel`, `bg-whatsapp` / `hover:bg-whatsapp-hover` / `text-whatsapp-ink`, `text-text-secondary-light`, `text-text-muted-light`, `bg-light-section-end`, `accent-gold` … `accent-tan`.
+- Ombres : `shadow-button-primary`, `shadow-panel`, `shadow-panel-hover`, `shadow-card-hover`.
+- Arrondis : `rounded-mockup-desktop`, `rounded-mockup-mobile`.
+- Typo : `tracking-tighter2` (titres), `tracking-label` (micro-labels).
+- Motion : `duration-feedback`, `duration-fast`, `duration-hover`, `duration-reveal`, `duration-slow` ; `ease-presskit`, `ease-presskit-out`, `ease-exit`.
+
+Les composants existants n'ont pas été modifiés : ils gardent leurs valeurs en dur, à remplacer au fil des retouches.
+
 ## 1. Voix
 
 - **« Vous »**, phrases courtes, promesse concrète : « Plus pro qu'Instagram. Plus impactant qu'un PDF. »
