@@ -11,9 +11,10 @@ type LegalDocumentProps = {
   updatedAt: string;
   intro?: string;
   sections: LegalSection[];
+  annex?: { title: string; paragraphs: string[] };
 };
 
-export function LegalDocument({ title, updatedAt, intro, sections }: LegalDocumentProps) {
+export function LegalDocument({ title, updatedAt, intro, sections, annex }: LegalDocumentProps) {
   return (
     <section className="section-wash relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-32">
       <div
@@ -45,6 +46,16 @@ export function LegalDocument({ title, updatedAt, intro, sections }: LegalDocume
               ) : null}
             </section>
           ))}
+          {annex ? (
+            <section id="annexe" className="overflow-visible">
+              <h2 className="text-2xl font-semibold tracking-tighter2 text-white">{annex.title}</h2>
+              {annex.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="mt-4 leading-8">
+                  {paragraph}
+                </p>
+              ))}
+            </section>
+          ) : null}
         </div>
       </PageShell>
     </section>

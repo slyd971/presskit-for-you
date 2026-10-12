@@ -1,112 +1,117 @@
+// TODO: relecture juridique avant mise en ligne
 import type { Metadata } from "next";
 
 import { LegalDocument, type LegalSection } from "@/components/layout/legal-document";
+import { pricingOptions, pricingTiers } from "@/content/pricing";
 import { LEGAL, VAT_MENTION } from "@/lib/legal";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Conditions générales de vente",
-  description: "Conditions générales de vente des prestations de création de press kits digitaux PressKit For You.",
+  title: "Conditions générales de prestation",
+  description: "Conditions générales de prestation de création de press kits digitaux PressKit For You.",
   path: "cgv",
-  keywords: ["CGV PressKit For You", "conditions générales de vente press kit"],
+  keywords: ["CGV PressKit For You", "conditions générales de prestation press kit"],
 });
+
+const optionByName = (name: string) => pricingOptions.find((option) => option.name === name);
+const domainOption = optionByName("Nom de domaine personnalisé");
+const maintenanceOption = optionByName("Maintenance annuelle");
+const updateOption = optionByName("Mise à jour de contenu");
 
 const sections: LegalSection[] = [
   {
-    title: "Identification du prestataire et objet",
+    title: "Objet et champ d'application",
     paragraphs: [
-      `Les présentes conditions générales de vente (CGV) s'appliquent à toute commande de prestation passée auprès de ${LEGAL.publisher}, ${LEGAL.legalForm}, exerçant sous le nom commercial « ${LEGAL.tradeName} », SIREN ${LEGAL.siren}, ${LEGAL.address} (ci-après « le Prestataire »).`,
-      "Elles encadrent la création et la livraison de press kits digitaux (pages web de présentation) pour des artistes, talents, créatifs et indépendants (ci-après « le Client »), ainsi que les options associées. Toute commande implique l'acceptation sans réserve des présentes CGV.",
+      `Les présentes conditions générales de prestation s'appliquent à toute commande de création de press kit digital passée auprès de ${LEGAL.publisher}, ${LEGAL.legalForm}, exerçant sous le nom commercial « ${LEGAL.tradeName} », SIREN ${LEGAL.siren}, ${LEGAL.address} (ci-après « le Prestataire »).`,
+      "Elles s'adressent aux clients particuliers (consommateurs) et aux clients professionnels (ci-après « le Client »). Toute commande implique l'acceptation sans réserve des présentes conditions.",
     ],
   },
   {
-    title: "Prix",
+    title: "Offres et prix",
     paragraphs: [
-      `Les prix sont ceux affichés sur la page Tarifs au jour de la commande. Ils sont exprimés en euros et sont nets : ${VAT_MENTION} (franchise en base de TVA).`,
-      "Les prestations « Studio Custom » et « Séance photo professionnelle » font l'objet d'un devis personnalisé et gratuit, qui précise le périmètre, le prix et les délais. Le prix du devis accepté est ferme.",
+      `Les prix sont exprimés en euros et sont nets : ${VAT_MENTION}.`,
+      "Les formules et options proposées sont les suivantes :",
     ],
     items: [
-      "Press Kit Premium : à partir de 300 €",
-      "Nom de domaine personnalisé : +30 €",
-      "Maintenance annuelle : +60 € par an",
-      "Mise à jour de contenu : +30 €",
+      ...pricingTiers.map((tier) => `${tier.name} : ${tier.price}`),
+      ...pricingOptions.map((option) => `${option.name} : ${option.price}`),
     ],
   },
   {
     title: "Commande et paiement",
     paragraphs: [
-      "La commande est ferme lorsque le Client a accepté le devis ou l'offre par écrit (email, message ou signature) et réglé l'acompte.",
-      "Le paiement s'effectue en deux temps : un acompte de 50 % à la commande, et le solde de 50 % à la livraison du press kit. Le travail démarre à réception de l'acompte.",
-      "Le règlement s'effectue par virement bancaire ou par tout autre moyen indiqué sur la facture. En cas de retard de paiement, des pénalités de retard au taux de trois fois le taux d'intérêt légal sont exigibles, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement pour les clients professionnels.",
+      `La commande est ferme lorsque le Client a accepté l'offre par écrit (email ou message) et réglé l'acompte. Un acompte de ${LEGAL.depositPercent} % du prix est dû à la commande ; le solde est dû à la livraison du press kit.`,
     ],
   },
   {
-    title: "Déroulement, contenus et délais",
+    title: "Déroulé et délais",
     paragraphs: [
-      "Le Client fournit les textes, photos, vidéos, liens et informations nécessaires dans les délais convenus. Il garantit disposer des droits sur les contenus transmis (droit d'auteur, droit à l'image, musique, marques) et dégage le Prestataire de toute responsabilité à ce titre.",
-      "Les délais de livraison sont indiqués à titre prévisionnel lors de la commande. Ils courent à compter de la réception de l'acompte et de l'ensemble des contenus nécessaires, et peuvent être décalés si le Client tarde à fournir ou à valider ses contenus.",
+      `Le Prestataire s'engage à livrer le press kit dans un délai de ${LEGAL.deliveryDays} jours ouvrés maximum à compter de la réception complète des contenus (textes, photos, vidéos, liens et références) nécessaires à la réalisation.`,
+      "Le Client fournit ces contenus et garantit disposer des droits nécessaires sur ceux-ci (droit d'auteur, droit à l'image, musique, marques).",
     ],
   },
   {
-    title: "Modifications et validation",
+    title: "Modifications",
     paragraphs: [
-      "Le prix du Press Kit Premium inclut 5 allers-retours de modifications, c'est-à-dire cinq séries de retours groupés du Client sur les maquettes ou la version de travail.",
-      "Au-delà, ou pour toute demande qui sort du périmètre initialement défini (nouvelles sections, refonte de la direction artistique, changement de contenu majeur), le Prestataire propose un devis complémentaire.",
-      "La livraison est effectuée par la remise du lien du press kit en ligne. Sans retour du Client dans les 7 jours suivant la livraison, la prestation est réputée acceptée.",
+      `${LEGAL.revisionRounds} allers-retours de modifications sont inclus dans le prix. Au-delà, les modifications peuvent être commandées via l'option « ${updateOption?.name} » au tarif affiché (${updateOption?.price}).`,
     ],
   },
   {
-    title: "Options : nom de domaine et maintenance",
+    title: "Options",
+    items: [
+      `« ${domainOption?.name} » (${domainOption?.price}) : ${domainOption?.description}`,
+      `« ${maintenanceOption?.name} » (${maintenanceOption?.price}) : ${maintenanceOption?.description}`,
+    ],
+    paragraphs: ["Ces options sont proposées aux tarifs affichés sur la page Tarifs au jour de la commande."],
+  },
+  {
+    title: "Propriété intellectuelle et droits sur le site livré",
     paragraphs: [
-      "L'option « Nom de domaine personnalisé » comprend l'achat et la configuration d'une adresse reliée au press kit du Client, selon la formule affichée dans les tarifs.",
-      "L'option « Maintenance annuelle » comprend, pour une année, les mises à jour, corrections et le suivi du bon fonctionnement du press kit, dans la limite de ce qui est décrit dans les tarifs. Elle est facturée à l'année et n'est pas reconduite tacitement sans accord du Client.",
-      "L'option « Mise à jour de contenu » couvre une demande ponctuelle de modification (remplacement d'une photo, ajout d'une date, modification d'un texte ou de liens).",
+      "Les contenus fournis par le Client restent sa propriété. Le Client concède au Prestataire le droit de les utiliser pour réaliser la prestation.",
+      "Après paiement intégral, le Client dispose du droit d'utiliser le press kit livré pour son activité. Le Prestataire conserve la propriété de ses outils, composants et méthodes de conception.",
     ],
   },
   {
-    title: "Propriété intellectuelle",
+    title: "Référence et portfolio",
     paragraphs: [
-      "Les contenus fournis par le Client restent sa propriété. Il concède au Prestataire le droit de les utiliser pour réaliser la prestation.",
-      "Après paiement intégral du prix, le Client dispose du droit d'utiliser le press kit livré pour son activité. Le Prestataire conserve la propriété de ses outils, composants et méthodes de conception.",
-      "Sauf opposition écrite du Client, le Prestataire peut présenter le press kit réalisé (capture, lien) comme référence sur son site et ses supports de communication.",
+      "Le Prestataire peut présenter la réalisation (captures et lien) sur presskit.fr et sur ses réseaux sociaux à titre de référence.",
     ],
   },
   {
     title: "Droit de rétractation",
     paragraphs: [
-      "Si le Client est un consommateur (personne agissant à des fins qui n'entrent pas dans le cadre de son activité professionnelle) et que la commande est conclue à distance, il dispose d'un délai de 14 jours à compter de la commande pour se rétracter, sans avoir à motiver sa décision, en écrivant à contact@presskit.fr.",
-      "Le Client qui demande expressément que la prestation commence avant la fin de ce délai, ce que le paiement de l'acompte vaut pour demande, devra payer un montant proportionnel au travail déjà réalisé au moment de la rétractation. Une fois la prestation pleinement exécutée, avec l'accord exprès du Client et renoncement à son droit de rétractation, ce droit ne peut plus être exercé.",
-      "Les clients professionnels ne bénéficient pas du droit de rétractation.",
+      "Le Client consommateur dispose d'un délai de 14 jours à compter de la conclusion du contrat pour se rétracter, sans avoir à motiver sa décision (article L221-18 du Code de la consommation). Ce droit est également applicable aux professionnels employant 5 salariés au plus lorsque l'objet du contrat n'entre pas dans le champ de leur activité principale (article L221-3).",
+      "Pour l'exercer, le Client notifie sa décision au Prestataire par écrit à " + LEGAL.email + ", au moyen du modèle de formulaire figurant en annexe ou de toute déclaration dénuée d'ambiguïté.",
+      "Si le Client demande expressément que la prestation commence avant la fin du délai de rétractation, il doit en faire la demande expresse (article L221-25) ; en cas de rétractation, il paie alors un montant proportionnel à ce qui a été fourni jusqu'à la communication de sa décision.",
     ],
   },
   {
-    title: "Annulation",
+    title: "Médiation de la consommation",
     paragraphs: [
-      "En cas d'annulation par le Client après le début de la prestation et hors droit de rétractation, l'acompte reste acquis au Prestataire en contrepartie du travail engagé. Si le travail réalisé dépasse la valeur de l'acompte, le surplus reste dû.",
+      `Conformément à l'article L612-1 du Code de la consommation, le Client consommateur peut recourir gratuitement au médiateur de la consommation suivant, après une réclamation écrite préalable auprès du Prestataire : ${LEGAL.mediator.name}, ${LEGAL.mediator.address}, ${LEGAL.mediator.website}.`,
     ],
   },
   {
-    title: "Responsabilité",
-    paragraphs: [
-      "Le Prestataire est tenu à une obligation de moyens. Sa responsabilité est limitée aux dommages directs et ne saurait excéder le montant payé par le Client pour la prestation concernée.",
-      "Le Prestataire n'est pas responsable des contenus fournis par le Client, des interruptions dues aux services tiers (hébergeur, registrar, réseaux sociaux, plateformes d'écoute ou de vidéo) ni des cas de force majeure.",
-    ],
-  },
-  {
-    title: "Données personnelles",
-    paragraphs: [
-      "Les données personnelles collectées pour la gestion de la commande sont traitées conformément à la politique de confidentialité, accessible depuis le site.",
-    ],
-  },
-  {
-    title: "Droit applicable et litiges",
-    paragraphs: [
-      "Les présentes CGV sont soumises au droit français. En cas de litige, le Client est invité à contacter d'abord le Prestataire à contact@presskit.fr afin de rechercher une solution amiable.",
-      "Le Client consommateur peut également recourir à la plateforme européenne de règlement en ligne des litiges : https://ec.europa.eu/consumers/odr.",
-    ],
+    title: "Droit applicable",
+    paragraphs: ["Les présentes conditions sont soumises au droit français."],
   },
 ];
 
+const annex = {
+  title: "Annexe : modèle de formulaire de rétractation",
+  paragraphs: [
+    "(Veuillez compléter et renvoyer le présent formulaire uniquement si vous souhaitez vous rétracter du contrat.)",
+    `À l'attention de ${LEGAL.publisher} (${LEGAL.tradeName}), ${LEGAL.address}, ${LEGAL.email} :`,
+    "Je/Nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la prestation de service ci-dessous :",
+    "Commandé le (*) / reçu le (*) : ____________",
+    "Nom du/des consommateur(s) : ____________",
+    "Adresse du/des consommateur(s) : ____________",
+    "Signature du/des consommateur(s) (uniquement en cas de notification du présent formulaire sur papier) : ____________",
+    "Date : ____________",
+    "(*) Rayez la mention inutile.",
+  ],
+};
+
 export default function CgvPage() {
-  return <LegalDocument title="Conditions générales de vente" updatedAt="12 octobre 2026" sections={sections} />;
+  return <LegalDocument title="Conditions générales de prestation" updatedAt="12 octobre 2026" sections={sections} annex={annex} />;
 }
