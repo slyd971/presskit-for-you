@@ -51,15 +51,6 @@ export function SiteFooter() {
             <Link href="/tarifs" className="footer-link text-sm text-white/[0.64] hover:text-white">
               Tous les tarifs
             </Link>
-            <Link href="/mentions-legales" className="footer-link text-sm text-white/[0.64] hover:text-white">
-              Mentions légales
-            </Link>
-            <Link href="/cgv" className="footer-link text-sm text-white/[0.64] hover:text-white">
-              CGV
-            </Link>
-            <Link href="/politique-de-confidentialite" className="footer-link text-sm text-white/[0.64] hover:text-white">
-              Politique de confidentialité
-            </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Métiers</p>
           <div className="mt-6 space-y-4">
@@ -87,6 +78,18 @@ export function SiteFooter() {
             >
               Envoyer un email
             </a>
+          </div>
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-white">Informations légales</p>
+          <div className="mt-6 space-y-4">
+            <Link href="/mentions-legales" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              Mentions légales
+            </Link>
+            <Link href="/cgv" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              CGV
+            </Link>
+            <Link href="/politique-de-confidentialite" className="footer-link text-sm text-white/[0.64] hover:text-white">
+              Politique de confidentialité
+            </Link>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function NotFound() {
           Cette page n’existe pas encore.
         </h1>
         <p className="mt-5 text-lg leading-8 text-white/68">
-          Reviens vers l’accueil ou explore les exemples disponibles.
+          Revenez vers l’accueil ou explorez les exemples disponibles.
         </p>
         <Link
           href="/"
