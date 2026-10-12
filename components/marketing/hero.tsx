@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
 import { motionTokens } from "@/lib/motion";
 
@@ -123,7 +122,7 @@ export function Hero() {
         transition={{ duration: 1.8, ease: "easeInOut" }}
       />
       <PageShell className="relative grid items-start gap-9 md:gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
-        <Reveal>
+        <div>
           <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-6">
             <h1 id="hero-title" className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
               <span className="block">Plus pro qu&apos;Instagram.</span>
@@ -149,9 +148,9 @@ export function Hero() {
               </Button>
             </div>
           </div>
-        </Reveal>
+        </div>
 
-        <Reveal delay={0.1}>
+        <div>
           <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]">
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
             {carouselSlots.map((slot) => {
@@ -277,7 +276,7 @@ export function Hero() {
               </div>
             </div>
           </div>
-        </Reveal>
+        </div>
       </PageShell>
     </section>
   );
