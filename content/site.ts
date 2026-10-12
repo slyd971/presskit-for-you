@@ -137,7 +137,7 @@ export const testimonials = [
     url: EXAMPLE_URLS.yoruboy,
     image: "/témoignages/yoruboy.webp",
     quote:
-      "Merci Press Kit For You pour votre sérieux et ta réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !",
+      "Merci Press Kit For You pour votre sérieux et votre réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !",
   },
 ];
 
@@ -171,6 +171,16 @@ const updateOption = pricingOptions.find((option) => option.name === "Mise à jo
 const maintenanceOption = pricingOptions.find((option) => option.name === "Maintenance annuelle");
 
 export const faqItems = [
+  {
+    question: "Qu’est-ce qu’un press kit digital ?",
+    answer:
+      "Un press kit digital est une page web unique qui regroupe votre présentation, vos médias, vos références et votre contact. Il se partage en un seul lien, aux bookers, aux marques, à la presse ou à vos clients.",
+  },
+  {
+    question: "Quelle différence avec un PDF ou une page de liens ?",
+    answer:
+      "Un PDF se consulte mal sur téléphone et devient vite daté, tandis qu’une page de liens liste vos contenus sans les mettre en scène. Un press kit digital est responsive, structuré, plus facile à mettre à jour et pensé pour inspirer confiance dès le premier clic.",
+  },
   {
     question: "Combien de temps pour recevoir mon press kit ?",
     answer: "7 jours ouvrés maximum à partir de la réception de tous vos contenus.",

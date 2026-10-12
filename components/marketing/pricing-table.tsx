@@ -45,6 +45,7 @@ export function PricingTable({
       )}
     >
       <PageShell>
+        {!showHeading ? <h2 className="sr-only">Nos formules et options</h2> : null}
         {showHeading ? (
           <SectionHeading
             eyebrow="Tarifs"

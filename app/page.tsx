@@ -10,10 +10,10 @@ import { ProcessTimeline } from "@/components/marketing/process-timeline";
 import { ProofStats, SocialProof } from "@/components/marketing/social-proof";
 import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = createPageMetadata({
-  title: "Une vitrine premium en un lien pour artistes, créateurs et indépendants",
+const homeMetadata = createPageMetadata({
+  title: "Press kit digital premium pour artistes et créateurs",
   description:
-    "Présentez votre activité, vos contenus et vos références dans une expérience premium plus claire qu'Instagram, plus impactante qu'un PDF et prête à partager.",
+    "Créez un press kit digital premium : votre activité, vos contenus et vos références en un lien, plus clair qu'Instagram et plus impactant qu'un PDF.",
   keywords: [
     "press kit digital",
     "creation press kit artiste",
@@ -23,6 +23,11 @@ export const metadata: Metadata = createPageMetadata({
     "site make up artist",
   ],
 });
+
+export const metadata: Metadata = {
+  ...homeMetadata,
+  title: { absolute: "Press kit digital premium pour artistes | PressKit For You" },
+};
 
 export default function HomePage() {
   return (

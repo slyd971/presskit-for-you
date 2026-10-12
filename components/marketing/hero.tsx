@@ -132,7 +132,7 @@ export function Hero() {
               <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
             </h1>
             <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-6 md:text-lg md:leading-9">
-              Valorisez votre image grâce à une expérience premium, déjà adoptée par des artistes, DJs, photographes et créateurs.
+              Valorisez votre image avec un press kit digital premium, déjà adopté par des artistes, DJs, photographes et créateurs.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center">
               <Button

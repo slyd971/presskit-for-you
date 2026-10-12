@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 
 import { siteConfig } from "@/content/site";
+import { pricingOptions, pricingTiers } from "@/content/pricing";
+import { LEGAL } from "@/lib/legal";
 import { publishedPresskitCategories } from "@/lib/presskit-categories";
 import { absoluteUrl, socialImage, twitterImage } from "@/lib/seo";
 import "@/app/globals.css";
@@ -16,9 +18,6 @@ const sans = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   applicationName: "PressKit For You",
-  alternates: {
-    canonical: siteConfig.url,
-  },
   title: {
     default: "Press kits digitaux premium | PressKit For You",
     template: "%s | PressKit For You",
@@ -109,6 +108,20 @@ const webPages = [
     name: "Mentions légales",
     description: "Informations légales, éditeur et contact de PressKit For You.",
   },
+  {
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/cgv#webpage`,
+    url: `${siteConfig.url}/cgv`,
+    name: "Conditions générales de prestation",
+    description: "Conditions générales de prestation de création de press kits digitaux.",
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${siteConfig.url}/politique-de-confidentialite#webpage`,
+    url: `${siteConfig.url}/politique-de-confidentialite`,
+    name: "Politique de confidentialité",
+    description: "Traitement et protection des données personnelles par PressKit For You.",
+  },
   ...publishedPresskitCategories.map((category) => ({
     "@type": "WebPage",
     "@id": `${siteConfig.url}/${category.slug}#webpage`,
@@ -147,6 +160,18 @@ const navigationNodes = [
     name: "Mentions légales",
     url: `${siteConfig.url}/mentions-legales`,
   },
+  {
+    "@type": "SiteNavigationElement",
+    "@id": `${siteConfig.url}/#navigation-cgv`,
+    name: "CGV",
+    url: `${siteConfig.url}/cgv`,
+  },
+  {
+    "@type": "SiteNavigationElement",
+    "@id": `${siteConfig.url}/#navigation-politique-de-confidentialite`,
+    name: "Politique de confidentialité",
+    url: `${siteConfig.url}/politique-de-confidentialite`,
+  },
   ...publishedPresskitCategories.map((category) => ({
     "@type": "SiteNavigationElement",
     "@id": `${siteConfig.url}/#navigation-${category.slug}`,
@@ -178,6 +203,35 @@ const breadcrumbNodes = [
     })),
 ];
 
+const priceFrom = (price: string) => price.match(/d+/)?.[0];
+
+const offerCatalog = {
+  "@type": "OfferCatalog",
+  name: "Formules et options PressKit For You",
+  itemListElement: [...pricingTiers, ...pricingOptions].flatMap((item) => {
+    const amount = priceFrom(item.price);
+
+    if (!amount) {
+      return [];
+    }
+
+    return [
+      {
+        "@type": "Offer",
+        name: item.name,
+        description: item.description,
+        priceCurrency: "EUR",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "EUR",
+          ...(item.price.includes("partir") ? { minPrice: amount } : { price: amount }),
+        },
+        url: absoluteUrl("tarifs"),
+      },
+    ];
+  }),
+};
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -185,8 +239,20 @@ const structuredData = {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
       name: siteConfig.name,
+      legalName: LEGAL.publisher,
       url: siteConfig.url,
+      logo: absoluteUrl("logo/logo-presskitforyou-cropped.png"),
+      email: LEGAL.email,
       telephone: siteConfig.phone,
+      taxID: LEGAL.siren,
+      founder: { "@type": "Person", name: LEGAL.publisher },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "17 rue de l'Église",
+        postalCode: "93800",
+        addressLocality: "Épinay-sur-Seine",
+        addressCountry: "FR",
+      },
     },
     {
       "@type": "WebSite",
@@ -206,13 +272,14 @@ const structuredData = {
     {
       "@type": "Service",
       "@id": `${siteConfig.url}/#service`,
-      serviceType: "Creation de press kits digitaux premium",
-      name: "Creation de press kits digitaux premium",
+      serviceType: "Création de press kits digitaux premium",
+      name: "Création de press kits digitaux premium",
       description: siteConfig.description,
       provider: {
         "@id": `${siteConfig.url}/#organization`,
       },
       areaServed: "FR",
+      hasOfferCatalog: offerCatalog,
       url: absoluteUrl("#contact"),
     },
   ],

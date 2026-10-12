@@ -3,7 +3,8 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
 import { footerCategoryLinks } from "@/lib/presskit-categories";
 
-const lastContentUpdate = new Date("2026-07-28T00:00:00.000Z");
+const lastContentUpdate = new Date("2026-10-12T00:00:00.000Z");
+const legalRoutes = ["/mentions-legales", "/cgv", "/politique-de-confidentialite"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/exemples", "/tarifs", "/mentions-legales", "/cgv", "/politique-de-confidentialite"];
@@ -16,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteConfig.url}${route}`,
       lastModified: lastContentUpdate,
       changeFrequency: route === "" ? homepageFrequency : defaultFrequency,
-      priority: route === "" ? 1 : 0.8,
+      priority: route === "" ? 1 : legalRoutes.includes(route) ? 0.3 : 0.8,
     })),
     ...categoryRoutes.map((route) => ({
       url: `${siteConfig.url}${route}`,
