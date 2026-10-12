@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Manrope } from "next/font/google";
 
 import { siteConfig } from "@/content/site";
@@ -307,6 +308,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main id="main-content">{children}</main>
           <SiteFooter />
         </div>
+        <Analytics />
       </body>
     </html>
   );
