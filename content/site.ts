@@ -118,6 +118,8 @@ export const testimonials = [
   {
     name: "Izzy Lokko",
     role: "Vidéaste",
+    categorySlug: "photographe",
+    date: "TODO",
     url: EXAMPLE_URLS.lokkoTv,
     image: "/témoignages/izzy-profil.webp",
     quote:
@@ -126,6 +128,8 @@ export const testimonials = [
   {
     name: "Ishma N.",
     role: "Make-up artist",
+    categorySlug: "make-up-artist",
+    date: "TODO",
     url: EXAMPLE_URLS.ishma,
     image: "/témoignages/ishma.webp",
     quote:
@@ -134,6 +138,8 @@ export const testimonials = [
   {
     name: "Yed D.",
     role: "DJ",
+    categorySlug: "dj",
+    date: "TODO",
     url: EXAMPLE_URLS.yoruboy,
     image: "/témoignages/yoruboy.webp",
     quote:
@@ -205,6 +211,10 @@ export const faqItems = [
   {
     question: "Quelle différence entre Press Kit Premium et Studio Custom ?",
     answer: `${premiumTier.name} : ${premiumTier.description} ${customTier.name} : ${customTier.description}`,
+  },
+  {
+    question: "Peut-on se rencontrer pour le brief ?",
+    answer: "Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si vous êtes plus loin.",
   },
   {
     question: "Comment se passe le paiement ?",
@@ -867,3 +877,5 @@ export const examples: Example[] = [
     accent: "#D7A86E",
   },
 ];
+
+export const liveExamplesCount = examples.filter((example) => example.externalDemoUrl).length;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { categorySeo } from "@/content/seo-pages";
 import { categories, examples } from "@/content/site";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -44,9 +45,13 @@ export function createPresskitCategoryMetadata(slug: string): Metadata {
     "site vitrine",
   ];
 
+  const seo = categorySeo[slug];
+
   return createPageMetadata({
     title: category.name,
-    description: category.heroDescription,
+    absoluteTitle: seo?.title,
+    description: seo?.description ?? category.heroDescription,
+    withSocialImages: false,
     path: category.slug,
     keywords: Array.from(new Set(keywords)),
   });

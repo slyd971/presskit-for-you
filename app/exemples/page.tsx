@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 import { ExamplesGalleryGrid } from "@/components/marketing/examples-gallery-grid";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { PageShell } from "@/components/layout/page-shell";
+import { liveExamplesCount } from "@/content/site";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Exemples",
-  description: "Explore plusieurs exemples de press kits digitaux pour artistes, DJs, photographes, coachs et make-up artists.",
+  absoluteTitle: `${liveExamplesCount} exemples de press kits digitaux | PressKit For You`,
+  description: "Découvrez plusieurs exemples de press kits digitaux pour artistes, DJs, photographes, coachs et make-up artists.",
   path: "exemples",
   keywords: ["exemple press kit", "exemples press kit", "demo press kit digital"],
 });

@@ -3,29 +3,38 @@ import { PageShell } from "@/components/layout/page-shell";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ChevronDown } from "lucide-react";
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: { "@type": "Answer", text: item.answer },
-  })),
+type FaqEntry = { question: string; answer: string };
+
+type FaqProps = {
+  items?: FaqEntry[];
+  title?: string;
+  description?: string;
+  id?: string;
 };
 
-export function Faq() {
+export function Faq({
+  items = faqItems,
+  title = "Les questions les plus fréquentes avant de lancer un projet.",
+  description = "Délais, contenus, modifications, options et paiement : l’essentiel avant de commencer.",
+  id = "faq",
+}: FaqProps) {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
   return (
-    <section id="faq" className="scroll-mt-28 py-16 md:py-20" aria-labelledby="faq-title">
+    <section id={id} className="scroll-mt-28 py-16 md:py-20" aria-labelledby={`${id}-title`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <PageShell>
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Les questions les plus fréquentes avant de lancer un projet."
-          description="Délais, contenus, modifications, options et paiement : l’essentiel avant de commencer."
-          id="faq-title"
-        />
+        <SectionHeading eyebrow="FAQ" title={title} description={description} id={`${id}-title`} />
         <div className="mt-12 border-y border-white/[0.12]">
-          {faqItems.map((item) => (
+          {items.map((item) => (
             <details key={item.question} className="group border-b border-white/[0.08] last:border-b-0">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-6 text-left [&::-webkit-details-marker]:hidden">
                 <h3 className="text-lg font-semibold text-white md:text-xl">{item.question}</h3>

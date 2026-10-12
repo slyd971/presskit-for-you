@@ -18,7 +18,7 @@ const dossierCards = [
   {
     status: "BRIEF RECU",
     title: "On récupère vos contenus.",
-    description: "Vous envoyez vos textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter votre activité.",
+    description: "Vous envoyez vos textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter votre activité. Le brief se fait en rendez-vous en Île-de-France, ou en visio pour les clients plus éloignés.",
     meta: "Jour 01 / Notes client",
     visual: "brief",
   },

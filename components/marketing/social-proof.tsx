@@ -1,11 +1,9 @@
 import Image from "next/image";
 
-import { examples, testimonials } from "@/content/site";
+import { liveExamplesCount, testimonials } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
-
-const liveExamplesCount = examples.filter((example) => example.externalDemoUrl).length;
 
 const proofStats = [
   { value: String(liveExamplesCount), label: "press kits en ligne" },
@@ -75,6 +73,42 @@ export function ProofStats() {
   );
 }
 
+type Testimonial = (typeof testimonials)[number];
+
+export function TestimonialCard({ item }: { item: Testimonial }) {
+  return (
+      <article className="motion-line group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.045] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.075] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
+        <div className="flex items-center gap-4 border-b border-white/[0.1] pb-5">
+          {"image" in item && item.image ? (
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={56}
+              height={56}
+              className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
+            />
+          ) : null}
+          <div>
+            <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
+            <p className="mt-1 text-sm font-medium text-white/[0.58]">{item.role}</p>
+            {item.date && item.date !== "TODO" ? <p className="mt-0.5 text-xs text-white/[0.44]">{item.date}</p> : null}
+          </div>
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            className="ml-auto shrink-0 text-xs font-semibold text-white/[0.7] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
+          >
+            Voir son press kit
+          </a>
+        </div>
+        <p className="flex-1 pt-7 text-[1.05rem] font-medium leading-8 text-white/[0.84] md:text-[1.12rem] md:leading-9">
+          &ldquo;{item.quote}&rdquo;
+        </p>
+      </article>
+  );
+}
+
 export function SocialProof() {
   return (
     <section id="avis" className="section-divider section-wash scroll-mt-28 overflow-hidden py-20 md:py-32" aria-labelledby="social-proof-title">
@@ -106,34 +140,7 @@ export function SocialProof() {
               delay={index * 0.05}
               className="w-[86vw] max-w-[22rem] shrink-0 snap-start md:w-auto md:max-w-none md:shrink"
             >
-              <article className="motion-line group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.045] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.075] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.1] md:px-6 md:py-7">
-                <div className="flex items-center gap-4 border-b border-white/[0.1] pb-5">
-                  {"image" in item && item.image ? (
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={56}
-                      height={56}
-                      className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
-                    />
-                  ) : null}
-                  <div>
-                    <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
-                    <p className="mt-1 text-sm font-medium text-white/[0.58]">{item.role}</p>
-                  </div>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ml-auto shrink-0 text-xs font-semibold text-white/[0.7] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
-                  >
-                    Voir son press kit
-                  </a>
-                </div>
-                <p className="flex-1 pt-7 text-[1.05rem] font-medium leading-8 text-white/[0.84] md:text-[1.12rem] md:leading-9">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-              </article>
+              <TestimonialCard item={item} />
             </Reveal>
           ))}
         </div>

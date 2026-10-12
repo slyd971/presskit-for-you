@@ -13,6 +13,8 @@ export const LEGAL = {
     name: "Vercel Inc.",
     address: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
     contactUrl: "https://vercel.com/contact",
+    // TODO: Vercel Inc. phone number, to verify on vercel.com (not published on its legal pages). Hidden until filled.
+    phone: "[À COMPLÉTER : téléphone de Vercel Inc.]",
   },
   depositPercent: 50,
   revisionRounds: 5,

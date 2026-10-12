@@ -182,7 +182,8 @@ const navigationNodes = [
 
 const breadcrumbNodes = [
   ...webPages
-    .filter((page) => page.url !== siteConfig.url)
+    // Trade pages emit their own BreadcrumbList (see PresskitCategoryPage).
+    .filter((page) => page.url !== siteConfig.url && !publishedPresskitCategories.some((category) => page.url === `${siteConfig.url}/${category.slug}`))
     .map((page) => ({
       "@type": "BreadcrumbList",
       "@id": `${page.url}#breadcrumb`,
@@ -236,14 +237,16 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": `${siteConfig.url}/#organization`,
       name: siteConfig.name,
       legalName: LEGAL.publisher,
       url: siteConfig.url,
       logo: absoluteUrl("logo/logo-presskitforyou-cropped.png"),
       email: LEGAL.email,
-      telephone: siteConfig.phone,
+      telephone: "+33663907888",
+      areaServed: "Île-de-France",
+      sameAs: ["https://www.instagram.com/presskit_for_you"],
       taxID: LEGAL.siren,
       founder: { "@type": "Person", name: LEGAL.publisher },
       address: {

@@ -64,6 +64,7 @@ export default function LegalPage() {
               </a>
               .
             </p>
+            {LEGAL.host.phone.startsWith("[") ? null : <p className="mt-2 leading-8">Téléphone : {LEGAL.host.phone}</p>}
           </section>
 
           <section className="overflow-visible">

@@ -10,6 +10,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Tarifs",
+  absoluteTitle: "Tarifs press kit digital dès 300 € | PressKit For You",
   description:
     "Découvrez les tarifs et formules de création de press kits digitaux premium pour artistes, talents et indépendants.",
   path: "tarifs",
