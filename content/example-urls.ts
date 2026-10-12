@@ -16,8 +16,8 @@ export const EXAMPLE_URLS = {
   silverDj: "https://silver-dj.presskit.fr/",
   paulKeranne: "https://paul-keranne.presskit.fr/",
   lokkoTv: "https://lokko-tv.presskit.fr/",
-  sophieBeauty: "http://sophie-beauty.presskit.fr/",
-  juliaElinaUgc: "http://julia.elina.ugc.presskit.fr/",
+  sophieBeauty: "https://sophie-beauty.presskit.fr/",
+  juliaElinaUgc: "https://julia.elina.ugc.presskit.fr/",
   // TODO: migrate the *.vercel.app entries below to presskit.fr subdomains
   laBringue: "https://labringue-party.vercel.app/", // TODO: migrer vers un sous-domaine presskit.fr
   coachMomar: "https://coach-momar.vercel.app/", // TODO: migrer vers un sous-domaine presskit.fr
