@@ -22,5 +22,4 @@ export const EXAMPLE_URLS = {
   laBringue: "https://labringue-party.vercel.app/", // TODO: migrer vers un sous-domaine presskit.fr
   coachMomar: "https://coach-momar.vercel.app/", // TODO: migrer vers un sous-domaine presskit.fr
   ishma: "https://ishma-makeupartist.vercel.app/", // TODO: migrer vers un sous-domaine presskit.fr
-  coachingDemo: "https://coaching-presskit.vercel.app/", // TODO: migrer vers un sous-domaine presskit.fr
 } as const;

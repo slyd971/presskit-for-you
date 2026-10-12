@@ -67,14 +67,6 @@ export default function LegalPage() {
           </section>
 
           <section className="overflow-visible">
-            <h2 className={h2Class}>Médiateur de la consommation</h2>
-            <p className="mt-4 leading-8">
-              Conformément aux articles L611-1 et suivants du Code de la consommation, le client consommateur peut recourir
-              gratuitement au médiateur suivant : {LEGAL.mediator.name}, {LEGAL.mediator.address}, {LEGAL.mediator.website}.
-            </p>
-          </section>
-
-          <section className="overflow-visible">
             <h2 className={h2Class}>Propriété intellectuelle</h2>
             <p className="mt-4 leading-8">
               Les textes, visuels, interfaces et éléments graphiques présents sur ce site sont protégés. Toute reproduction

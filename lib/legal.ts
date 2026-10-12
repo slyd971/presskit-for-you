@@ -14,11 +14,6 @@ export const LEGAL = {
     address: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
     contactUrl: "https://vercel.com/contact",
   },
-  mediator: {
-    name: "[À COMPLÉTER : nom du médiateur de la consommation]",
-    address: "[À COMPLÉTER : adresse du médiateur]",
-    website: "[À COMPLÉTER : site web du médiateur]",
-  },
   depositPercent: 50,
   revisionRounds: 5,
   deliveryDays: 7,

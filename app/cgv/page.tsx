@@ -86,12 +86,6 @@ const sections: LegalSection[] = [
     ],
   },
   {
-    title: "Médiation de la consommation",
-    paragraphs: [
-      `Conformément à l'article L612-1 du Code de la consommation, le Client consommateur peut recourir gratuitement au médiateur de la consommation suivant, après une réclamation écrite préalable auprès du Prestataire : ${LEGAL.mediator.name}, ${LEGAL.mediator.address}, ${LEGAL.mediator.website}.`,
-    ],
-  },
-  {
     title: "Droit applicable",
     paragraphs: ["Les présentes conditions sont soumises au droit français."],
   },

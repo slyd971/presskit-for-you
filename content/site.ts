@@ -136,7 +136,7 @@ export const testimonials = [
     url: EXAMPLE_URLS.yoruboy,
     image: "/témoignages/yoruboy.webp",
     quote:
-      "Merci SlyD pour ton sérieux et ta réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Tu as su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour ton taf et ton efficacité, c’est un vrai plaisir de bosser avec quelqu’un d’aussi fiable !",
+      "Merci Press Kit For You pour votre sérieux et ta réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !",
   },
 ];
 
@@ -458,10 +458,7 @@ export const categories: Category[] = [
       { label: "Priorité", value: "Clarté + conversion" },
       { label: "Positionnement", value: "Coaching privé" },
     ],
-    heroImage: "https://coaching-presskit.vercel.app/images/hero-main.jpg",
-    heroImageAlt: "Aperçu du press kit coach sportif",
     heroOverlayTitle: "Coaching privé",
-    externalDemoUrl: EXAMPLE_URLS.coachingDemo,
   },
   {
     slug: "make-up-artist",

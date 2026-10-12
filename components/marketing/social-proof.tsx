@@ -75,32 +75,6 @@ export function ProofStats() {
   );
 }
 
-export function AboutBlock() {
-  return (
-    <section className="section-divider section-wash py-16 md:py-20" aria-labelledby="about-title">
-      <PageShell className="max-w-5xl">
-        <div className="grid gap-8 border-y border-white/[0.12] py-10 md:grid-cols-[auto_1fr] md:items-center md:gap-12">
-          {/* TODO: remplacer par la photo de la personne derrière PressKit For You */}
-          <div
-            className="flex h-40 w-40 shrink-0 items-center justify-center rounded-lg border border-white/[0.14] bg-white/[0.04] text-center text-xs font-semibold uppercase tracking-[0.16em] text-white/[0.5]"
-            role="img"
-            aria-label="Photo à venir"
-          >
-            [À COMPLÉTER : photo]
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Qui est derrière PressKit For You</p>
-            <h2 id="about-title" className="mt-4 text-3xl font-semibold leading-tight tracking-tighter2 text-white md:text-4xl">
-              Rencontrez la personne derrière votre press kit.
-            </h2>
-            <p className="mt-4 max-w-2xl leading-8 text-white/[0.68]">[À COMPLÉTER : bio]</p>
-          </div>
-        </div>
-      </PageShell>
-    </section>
-  );
-}
-
 export function SocialProof() {
   return (
     <section id="avis" className="section-divider section-wash scroll-mt-28 overflow-hidden py-20 md:py-32" aria-labelledby="social-proof-title">
