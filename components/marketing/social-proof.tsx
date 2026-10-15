@@ -18,8 +18,8 @@ export function ProofStats() {
       <PageShell>
         <div className="relative mx-auto mb-14 max-w-4xl text-center md:mb-20">
           <p className="text-[clamp(2.2rem,6vw,5rem)] font-semibold leading-[1.08] tracking-tighter2">
-            <span className="quote-line block">Le bon lien ne liste pas tes contenus.</span>
-            <span className="quote-line quote-line-delay block">Il met ton niveau en scène.</span>
+            <Reveal as="span" className="block">Le bon lien ne liste pas tes contenus.</Reveal>
+            <Reveal as="span" delay={0.06} className="block">Il met ton niveau en scène.</Reveal>
           </p>
         </div>
         <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
@@ -139,6 +139,7 @@ export function SocialProof() {
               key={item.name}
               delay={index * 0.05}
               className="w-[86vw] max-w-[22rem] shrink-0 snap-start md:w-auto md:max-w-none md:shrink"
+              threshold={0.1}
             >
               <TestimonialCard item={item} />
             </Reveal>

@@ -253,6 +253,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                     key={example.slug}
                     delay={index * 0.06}
                     className="w-[86vw] max-w-[22rem] shrink-0 snap-start md:w-auto md:max-w-none md:shrink"
+              threshold={0.1}
                   >
                     <Link
                       href={href}

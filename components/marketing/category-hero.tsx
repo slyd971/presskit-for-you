@@ -4,7 +4,6 @@ import Image from "next/image";
 import { CTA, type Category } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
-import { Reveal } from "@/components/ui/reveal";
 import { getExamplesForPresskitCategory } from "@/lib/presskit-categories";
 
 type CategoryHeroProps = {
@@ -29,7 +28,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
         }}
       />
       <PageShell className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)] lg:gap-16">
-        <Reveal>
+        <div className="min-w-0">
           <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl lg:pb-10">
             <h1 className="max-w-[45rem] break-words text-[clamp(2.35rem,7.2vw,5.45rem)] font-semibold leading-[0.94] tracking-tighter2 text-white">
               {category.heroTitle}
@@ -46,9 +45,9 @@ export function CategoryHero({ category }: CategoryHeroProps) {
               </Button>
             </div>
           </div>
-        </Reveal>
+        </div>
 
-        <Reveal delay={0.1}>
+        <div className="min-w-0">
           <Link
             href={href}
             target={isExternal ? "_blank" : undefined}
@@ -106,7 +105,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
               </div>
             </div>
           </Link>
-        </Reveal>
+        </div>
       </PageShell>
     </section>
   );

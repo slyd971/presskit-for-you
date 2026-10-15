@@ -330,22 +330,23 @@ svg {
   }
 }
 
-.reveal-up {
+/* Reveal au scroll : masqué seulement si <html class="js"> (script inline du layout)
+   et si le mouvement est autorisé. Sans JS ou en reduced-motion, tout est visible. */
+.reveal {
   min-width: 0;
-  animation: reveal-up var(--duration-reveal) var(--ease-presskit-out) both;
 }
 
-.quote-line {
-  animation: quote-line-reveal 520ms var(--ease-presskit-out) both;
-  will-change: opacity, transform;
-}
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal:not([data-inview="true"]) {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
 
-.quote-line-delay {
-  animation-delay: 80ms;
-}
-
-.quote-proof-delay {
-  animation-delay: 160ms;
+  html.js .reveal {
+    transition:
+      opacity 320ms var(--ease-presskit-out),
+      transform 320ms var(--ease-presskit-out);
+  }
 }
 
 .motion-line {
@@ -527,30 +528,6 @@ svg {
 
 .snap-x {
   scroll-behavior: smooth;
-}
-
-@keyframes reveal-up {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 0.75rem, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes quote-line-reveal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 0.5rem, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 @keyframes cta-shine {
