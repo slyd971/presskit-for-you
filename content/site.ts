@@ -878,3 +878,15 @@ export const examples: Example[] = [
 ];
 
 export const liveExamplesCount = examples.filter((example) => example.externalDemoUrl).length;
+
+// Un champ « [À COMPLÉTER : …] » n'est jamais affiché : voir isFilled().
+export const founder = {
+  firstName: "David",
+  stageName: "[À COMPLÉTER : nom de scène]",
+  bio: "[À COMPLÉTER : bio]",
+  photo: "/about/david.webp",
+};
+
+export function isFilled(value: string) {
+  return value.trim() !== "" && !value.startsWith("[À COMPLÉTER");
+}

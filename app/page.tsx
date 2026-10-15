@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { AboutFounder } from "@/components/marketing/about-founder";
 import { CategoriesGrid } from "@/components/marketing/categories-grid";
 import { Faq } from "@/components/marketing/faq";
 import { FinalCta } from "@/components/marketing/final-cta";
@@ -38,6 +39,7 @@ export default function HomePage() {
       <CategoriesGrid />
       <PricingTable variant="highlight" />
       <ProcessTimeline />
+      <AboutFounder />
       <SocialProof />
       <Faq />
       <FinalCta />
