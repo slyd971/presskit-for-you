@@ -100,10 +100,12 @@ const carouselSlots = [
 
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
+  // Le carrousel se met en pause tant que la souris ou le focus clavier est sur les mockups.
+  const [isPaused, setIsPaused] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
-    if (shouldReduceMotion) {
+    if (shouldReduceMotion || isPaused) {
       return;
     }
 
@@ -112,7 +114,7 @@ export function Hero() {
     }, 3500);
 
     return () => window.clearInterval(interval);
-  }, [shouldReduceMotion]);
+  }, [shouldReduceMotion, isPaused]);
 
   return (
     <section className="section-wash relative overflow-hidden pb-10 pt-24 md:pb-16 md:pt-28 lg:pt-24" aria-labelledby="hero-title">
@@ -156,7 +158,13 @@ export function Hero() {
         </div>
 
         <div>
-          <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]">
+          <div
+            className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onFocus={() => setIsPaused(true)}
+            onBlur={() => setIsPaused(false)}
+          >
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
