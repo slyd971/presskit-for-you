@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import { onFirstInteraction } from "@/lib/first-interaction";
+
 type ScrollingPreviewProps = {
   src?: string;
   alt: string;
@@ -15,7 +17,7 @@ const MAX_PASS_SECONDS = 2.5;
 const MIN_PASS_SECONDS = 1.2;
 
 // Capture pleine page qui défile dans un cadre `relative overflow-hidden` existant.
-// - Chargée seulement quand la carte approche de l'écran (rootMargin 200 px).
+// - Chargée après le premier geste de l'utilisateur, quand la carte approche de l'écran (rootMargin 200 px).
 // - Desktop : défilement au survol de la carte (CSS, voir .sp-img).
 // - Mobile : un aller-retour quand la carte est visible à 60 %, pause hors écran.
 // - Sans fichier ou en reduced-motion : rien n'est rendu, l'image actuelle reste.
@@ -37,19 +39,25 @@ export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px" },
-    );
+    let observer: IntersectionObserver | undefined;
 
-    observer.observe(frame);
+    const stopWaiting = onFirstInteraction(() => {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            setShouldLoad(true);
+            observer?.disconnect();
+          }
+        },
+        { rootMargin: "200px" },
+      );
+      observer.observe(frame);
+    });
 
-    return () => observer.disconnect();
+    return () => {
+      stopWaiting();
+      observer?.disconnect();
+    };
   }, [src]);
 
   useEffect(() => {
