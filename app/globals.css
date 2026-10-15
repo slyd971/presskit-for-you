@@ -867,3 +867,50 @@ svg {
 .hero-bubble[data-static] .hero-bubble-pill {
   transition: none;
 }
+
+/* Comparatif : page A4 figée -> carte de press kit (fondu croisé + scale) pendant que la section
+   traverse l'écran. Repli (sans animation-timeline ou reduced-motion) : la carte de press kit seule. */
+.compare-pdf {
+  display: none;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .compare-pdf {
+      display: flex;
+      animation: compare-pdf-out linear both;
+      animation-timeline: view();
+      animation-range: cover 25% cover 55%;
+    }
+
+    .compare-kit {
+      animation: compare-kit-in linear both;
+      animation-timeline: view();
+      animation-range: cover 25% cover 55%;
+    }
+  }
+}
+
+@keyframes compare-pdf-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes compare-kit-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
