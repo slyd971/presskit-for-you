@@ -12,7 +12,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Tarifs",
   absoluteTitle: "Tarifs press kit digital dès 300 € | PressKit For You",
   description:
-    "Découvre les tarifs et formules de création de press kits digitaux premium pour artistes, talents et indépendants.",
+    "Press kit digital sur mesure dès 300 €, livré en 7 jours, 5 allers-retours inclus, paiement en 2 fois sans abonnement. Options à la carte.",
   path: "tarifs",
   keywords: ["tarifs press kit", "prix press kit digital", "formules press kit"],
 });
