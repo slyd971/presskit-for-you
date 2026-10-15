@@ -8,6 +8,7 @@ import { ComparisonSection } from "@/components/marketing/home-conversion-sectio
 import { PricingTable } from "@/components/marketing/pricing-table";
 import { ProcessTimeline } from "@/components/marketing/process-timeline";
 import { ProofStats, SocialProof } from "@/components/marketing/social-proof";
+import { getPreviewAssets } from "@/lib/preview-assets";
 import { createPageMetadata } from "@/lib/seo";
 
 const homeMetadata = createPageMetadata({
@@ -35,7 +36,7 @@ export default function HomePage() {
       <Hero />
       <ProofStats />
       <ComparisonSection />
-      <CategoriesGrid />
+      <CategoriesGrid previewAssets={getPreviewAssets()} />
       <PricingTable variant="highlight" />
       <ProcessTimeline />
       <SocialProof />

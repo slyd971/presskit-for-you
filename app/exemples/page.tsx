@@ -4,6 +4,7 @@ import { ExamplesGalleryGrid } from "@/components/marketing/examples-gallery-gri
 import { FinalCta } from "@/components/marketing/final-cta";
 import { PageShell } from "@/components/layout/page-shell";
 import { liveExamplesCount } from "@/content/site";
+import { getPreviewAssets } from "@/lib/preview-assets";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -28,7 +29,7 @@ export default function ExamplesPage() {
           </p>
         </PageShell>
       </section>
-      <ExamplesGalleryGrid />
+      <ExamplesGalleryGrid previewAssets={getPreviewAssets()} />
       <FinalCta />
     </>
   );

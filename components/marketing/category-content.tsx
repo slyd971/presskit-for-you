@@ -1,11 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { CSSProperties } from "react";
 
 import { CTA, type Category } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
+import { ExampleMockup } from "@/components/marketing/example-mockup";
 import { Reveal } from "@/components/ui/reveal";
+import { getPreviewAssets } from "@/lib/preview-assets";
 import { getExamplesForPresskitCategory } from "@/lib/presskit-categories";
 
 type CategoryContentProps = {
@@ -186,6 +187,7 @@ const pageCopy: Record<string, PageCopy> = {
 };
 
 export function CategoryContent({ category }: CategoryContentProps) {
+  const previewAssets = getPreviewAssets();
   const categoryExamples = getExamplesForPresskitCategory(category.slug);
   const displayedExamples = categoryExamples.slice(1, category.slug === "dj" ? 5 : 4);
   const copy = pageCopy[category.slug] ?? {
@@ -262,48 +264,17 @@ export function CategoryContent({ category }: CategoryContentProps) {
                       className="case-study-card group flex h-full min-h-[34rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[42rem] md:p-5"
                       style={{ "--case-accent": example.accent } as CSSProperties}
                     >
-                      <div className="relative h-[18rem] overflow-visible md:h-[27rem]">
-                        <div className="absolute left-1/2 top-4 z-10 w-[86%] -translate-x-1/2 rotate-[-1.4deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.4deg]">
-                          <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.08)]">
-                            <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
-                              {example.image ? (
-                                <Image
-                                  src={example.image}
-                                  alt={`${example.title} en version desktop`}
-                                  fill
-                                  sizes="(min-width: 1024px) 40vw, (min-width: 768px) 74vw, 74vw"
-                                  className="object-contain object-center"
-                                  style={example.imagePosition ? { objectPosition: example.imagePosition } : undefined}
-                                />
-                              ) : (
-                                <div
-                                  className="h-full w-full"
-                                  style={{
-                                    background: `linear-gradient(135deg, ${example.accent}33, rgba(255,255,255,0.05))`,
-                                  }}
-                                />
-                              )}
-                            </div>
-                          </div>
-                          <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
-                          {example.mobileImage ? (
-                            <div className="absolute -bottom-5 -right-8 z-20 w-[30%] min-w-[4.35rem] rotate-[5deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-6 md:-right-10 md:w-[31%] md:min-w-[5rem]">
-                              <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
-                                <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
-                                  <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
-                                  <Image
-                                    src={example.mobileImage}
-                                    alt={`${example.title} en version mobile`}
-                                    fill
-                                    sizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
-                                    className="object-cover object-top"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          ) : null}
-                        </div>
-                      </div>
+                      <ExampleMockup
+                        title={example.title}
+                        desktopImage={example.image}
+                        mobileImage={example.mobileImage}
+                        imagePosition={example.imagePosition}
+                        accent={example.accent}
+                        boxClassName="h-[18rem] md:h-[27rem]"
+                        desktopSizes="(min-width: 1024px) 40vw, (min-width: 768px) 74vw, 74vw"
+                        mobileSizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
+                        preview={previewAssets[example.slug]}
+                      />
                       <div className="relative mt-2 border-y border-white/[0.1] py-5">
                         <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
                           {example.title}

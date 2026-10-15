@@ -642,3 +642,55 @@ svg {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Captures pleine page qui défilent dans les mockups (ScrollingPreview). */
+.sp-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  opacity: 0;
+  transition:
+    opacity 200ms var(--ease-presskit),
+    transform 600ms var(--ease-presskit);
+  will-change: transform;
+}
+
+.sp-img[data-ready="true"] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover .sp-img[data-ready="true"] {
+      transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
+      transition:
+        opacity 200ms var(--ease-presskit),
+        transform var(--sp-dur) linear;
+    }
+  }
+
+  @media (hover: none) {
+    .sp-img[data-play="running"],
+    .sp-img[data-play="paused"] {
+      animation: sp-pass var(--sp-pass) ease-in-out 1 both;
+    }
+
+    .sp-img[data-play="paused"] {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes sp-pass {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
+  }
+}
