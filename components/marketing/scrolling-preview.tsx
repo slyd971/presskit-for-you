@@ -13,14 +13,11 @@ type ScrollingPreviewProps = {
 };
 
 const MAX_HOVER_SECONDS = 8;
-// Tactile : descente à la même vitesse que le survol desktop (1 s par 1 000 px), retour rapide.
-const RETURN_SECONDS = 1.2;
-const MIN_DOWN_SECONDS = 2;
 
 // Capture pleine page qui défile dans un cadre `relative overflow-hidden` existant.
 // - Chargée après le premier geste de l'utilisateur, quand la carte approche de l'écran (rootMargin 200 px).
 // - Desktop : défilement au survol de la carte (CSS, voir .sp-img).
-// - Mobile : un aller-retour quand la carte est visible à 60 %, pause hors écran.
+// - Tactile : aucun défilement automatique, et la capture n'est même pas téléchargée.
 // - Sans fichier ou en reduced-motion : rien n'est rendu, l'image actuelle reste.
 export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
   const frameRef = useRef<HTMLDivElement>(null);
@@ -36,7 +33,10 @@ export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
 
     const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || connection?.saveData) {
+    const noMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const touchOnly = window.matchMedia("(hover: none)").matches;
+
+    if (noMotion || touchOnly || connection?.saveData) {
       return;
     }
 
@@ -78,12 +78,9 @@ export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
 
       const naturalTravel = travel * (img.naturalWidth / img.clientWidth);
       const hoverSeconds = Math.min(naturalTravel / 1000, MAX_HOVER_SECONDS);
-      const downSeconds = Math.min(Math.max(naturalTravel / 1000, MIN_DOWN_SECONDS), MAX_HOVER_SECONDS);
 
       img.style.setProperty("--sp-travel", `${travel}px`);
       img.style.setProperty("--sp-dur", `${hoverSeconds.toFixed(2)}s`);
-      img.style.setProperty("--sp-down", `${downSeconds.toFixed(2)}s`);
-      img.style.setProperty("--sp-up", `${RETURN_SECONDS}s`);
       img.dataset.ready = "true";
     };
 
@@ -94,42 +91,6 @@ export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
       measure();
     } else {
       img.addEventListener("load", measure, { once: true });
-    }
-
-    // Tactile : un seul aller-retour quand la carte est visible à ≥ 60 %.
-    let playObserver: IntersectionObserver | undefined;
-
-    if (window.matchMedia("(hover: none)").matches) {
-      const card = frame.closest(".group") ?? frame;
-      // Deux animations s'enchaînent (descente, retour) : on s'arrête à la fin du retour.
-      const onEnd = (event: AnimationEvent) => {
-        if (event.animationName === "sp-up") {
-          img.dataset.play = "done";
-        }
-      };
-
-      img.addEventListener("animationend", onEnd);
-      playObserver = new IntersectionObserver(
-        ([entry]) => {
-          if (img.dataset.play === "done") {
-            return;
-          }
-
-          if (entry.intersectionRatio >= 0.6) {
-            img.dataset.play = "running";
-          } else if (img.dataset.play === "running") {
-            img.dataset.play = "paused";
-          }
-        },
-        { threshold: [0, 0.6] },
-      );
-      playObserver.observe(card);
-
-      return () => {
-        img.removeEventListener("animationend", onEnd);
-        playObserver?.disconnect();
-        resizeObserver.disconnect();
-      };
     }
 
     return () => resizeObserver.disconnect();

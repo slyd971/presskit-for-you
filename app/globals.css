@@ -673,35 +673,6 @@ svg {
         transform var(--sp-dur) linear;
     }
   }
-
-  @media (hover: none) {
-    .sp-img[data-play="running"],
-    .sp-img[data-play="paused"] {
-      animation:
-        sp-down var(--sp-down) linear 1 forwards,
-        sp-up var(--sp-up) var(--ease-presskit) var(--sp-down) 1 forwards;
-    }
-
-    .sp-img[data-play="paused"] {
-      animation-play-state: paused;
-    }
-  }
-}
-
-@keyframes sp-down {
-  to {
-    transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
-  }
-}
-
-@keyframes sp-up {
-  from {
-    transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 /* Bascule Ordinateur / Mobile des cartes d'exemples (ExampleMockup). */
@@ -834,45 +805,6 @@ svg {
 
 .header-row {
   transition: transform 200ms var(--ease-presskit);
-}
-
-/* Hero : « le lien qui s'envoie » (HeroLinkBubble). Transform et opacité uniquement.
-   Séquence : apparition 400 ms, lecture 1,6 s, repli en pastille 400 ms (2,4 s au total). */
-.hero-bubble-message {
-  opacity: 0;
-  transform: translate3d(0, 12px, 0) scale(0.96);
-  transform-origin: left top;
-  transition:
-    opacity 400ms var(--ease-presskit-out),
-    transform 400ms var(--ease-presskit-out);
-}
-
-.hero-bubble-pill {
-  opacity: 0;
-  transform: scale(0.5);
-  transition:
-    opacity 300ms var(--ease-presskit-out) 100ms,
-    transform 300ms var(--ease-presskit-out) 100ms;
-}
-
-.hero-bubble[data-phase="bubble"] .hero-bubble-message {
-  opacity: 1;
-  transform: none;
-}
-
-.hero-bubble[data-phase="pill"] .hero-bubble-message {
-  opacity: 0;
-  transform: translate3d(0, -4px, 0) scale(0.2);
-}
-
-.hero-bubble[data-phase="pill"] .hero-bubble-pill {
-  opacity: 0.85;
-  transform: none;
-}
-
-.hero-bubble[data-static] .hero-bubble-message,
-.hero-bubble[data-static] .hero-bubble-pill {
-  transition: none;
 }
 
 /* Comparatif : page A4 figée -> carte de press kit (fondu croisé + scale) pendant que la section

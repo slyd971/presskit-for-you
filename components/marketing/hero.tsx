@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
-import { HeroLinkBubble } from "@/components/marketing/hero-link-bubble";
 import { motionTokens } from "@/lib/motion";
 
 type HeroKit = {
@@ -110,7 +109,7 @@ export function Hero() {
 
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % heroKits.length);
-    }, 7600);
+    }, 5000);
 
     return () => window.clearInterval(interval);
   }, [shouldReduceMotion]);
@@ -159,7 +158,6 @@ export function Hero() {
         <div>
           <div className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]">
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
-            <HeroLinkBubble url={heroKits[0].externalDemoUrl} />
             {carouselSlots.map((slot) => {
               const kitIndex = (activeIndex + slot.offset + heroKits.length) % heroKits.length;
               const kit = heroKits[kitIndex];
@@ -187,7 +185,7 @@ export function Hero() {
                     opacity: slot.opacity,
                   }}
                   transition={{
-                    duration: shouldReduceMotion ? 0 : motionTokens.duration.slow,
+                    duration: shouldReduceMotion ? 0 : motionTokens.duration.normal,
                     ease: motionTokens.easing.interaction,
                   }}
                   whileHover={{ y: -8, rotate: slot.rotate * 0.64 }}
