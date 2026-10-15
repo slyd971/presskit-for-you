@@ -127,9 +127,14 @@ export function Hero() {
         <div>
           <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-6">
             <h1 id="hero-title" className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
-              <span className="block">Plus pro qu&apos;Instagram. </span>
-              <span className="block text-white/[0.92]">Plus impactant </span>
-              <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
+              <span className="mb-4 block text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">
+                Press kit digital pour artistes, DJs et créateurs
+              </span>{" "}
+              <span className="block">
+                <span className="block">Plus pro qu&apos;Instagram. </span>
+                <span className="block text-white/[0.92]">Plus impactant </span>
+                <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
+              </span>
             </h1>
             <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.72] md:mt-6 md:text-lg md:leading-9">
               Valorise ton image avec un press kit digital premium, déjà adopté par des artistes, DJs, photographes et créateurs.
