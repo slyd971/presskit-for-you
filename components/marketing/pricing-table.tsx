@@ -23,7 +23,7 @@ export function PricingTable({
   contactHref = "/#contact",
 }: PricingTableProps) {
   const isHighlight = variant === "highlight";
-  const spacingClass = showHeading ? "pt-20 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
+  const spacingClass = showHeading ? "pt-12 pb-8 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
     title: "text-[#10141d]",
     border: "border-[#10141d]/[0.14]",
@@ -55,64 +55,82 @@ export function PricingTable({
             description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
           />
         ) : null}
-        <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-10 md:mt-16" : "mt-0"}`}>
-          {pricingTiers.map((tier, index) => (
-            <article
-              key={tier.name}
-              className={`motion-line group relative flex h-full flex-col border-b px-5 py-8 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${offerTone.tierBorder} ${
-                index === 0 ? offerTone.tierAccent : offerTone.tierSubtle
-              }`}
-            >
-              <div className="relative flex items-start justify-between gap-4">
-                <h3 className={`max-w-sm text-[clamp(2.15rem,3.8vw,4.2rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.name}</h3>
-                <span className={`text-right text-[10px] font-semibold uppercase tracking-[0.18em] ${offerTone.headingMeta}`}>
-                  {tier.badge}
-                </span>
-              </div>
-              <div className={`relative mt-10 border-y py-8 ${offerTone.tierBorder}`}>
-                <p className={`text-[clamp(2.6rem,5.4vw,5.4rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
-                {hasAmount(tier.price) ? <p className={`mt-3 text-xs ${offerTone.headingMeta}`}>{VAT_MENTION}</p> : null}
-                <p className={`mt-4 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
-              </div>
-              <p className={`relative mt-7 max-w-md text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
-              <ul className="relative mt-9 grid flex-1 gap-0 border-y border-[#10141d]/[0.1]">
+        <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-8 md:mt-16" : "mt-0"}`}>
+          {pricingTiers.map((tier, index) => {
+            const isQuote = !hasAmount(tier.price);
+            const featureList = (
+              <ul className="relative grid grid-cols-2 gap-x-3 border-y border-[#10141d]/[0.1] md:mt-9 md:flex-1 md:grid-cols-1 md:gap-x-0">
                 {tier.features.slice(0, 5).map((feature) => (
-                  <li key={feature} className={`flex items-center gap-4 border-b border-[#10141d]/[0.08] py-3.5 text-sm last:border-b-0 ${offerTone.feature}`}>
-                    <span className={`h-px w-7 shrink-0 ${offerTone.rule}`} aria-hidden="true" />
+                  <li key={feature} className={`flex items-center gap-2 border-b border-[#10141d]/[0.08] py-1.5 text-xs last:border-b-0 md:gap-4 md:py-3.5 md:text-sm ${offerTone.feature}`}>
+                    <span className={`hidden h-px shrink-0 md:block md:w-7 ${offerTone.rule}`} aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <Button
-                href={contactHref}
-                variant="primaryOnLight"
-                className="relative mx-auto mt-10 min-h-12 w-full max-w-sm justify-center px-6 py-3.5"
+            );
+
+            return (
+              <article
+                key={tier.name}
+                className={`motion-line group relative flex h-full flex-col border-b px-4 py-4 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${offerTone.tierBorder} ${
+                  index === 0 ? offerTone.tierAccent : offerTone.tierSubtle
+                }`}
               >
-                {tier.price === "Sur devis" ? CTA.quote : CTA.primary}
-              </Button>
-            </article>
-          ))}
+                <div className="relative flex items-start justify-between gap-4">
+                  <h3 className={`max-w-sm text-2xl font-semibold leading-none tracking-tighter2 md:text-[clamp(2.15rem,3.8vw,4.2rem)] ${offerTone.title}`}>{tier.name}</h3>
+                  <span className={`text-right text-[10px] font-semibold uppercase tracking-[0.18em] ${offerTone.headingMeta}`}>
+                    {tier.badge}
+                  </span>
+                </div>
+                <div className={`relative mt-4 border-y py-3 md:mt-10 md:py-8 ${offerTone.tierBorder}`}>
+                  <p className={`text-[2rem] font-semibold leading-none tracking-tighter2 md:text-[clamp(2.6rem,5.4vw,5.4rem)] ${offerTone.title}`}>{tier.price}</p>
+                  {!isQuote ? <p className={`mt-2 text-xs md:mt-3 ${offerTone.headingMeta}`}>{VAT_MENTION}</p> : null}
+                  <p className={`mt-2 text-xs font-medium tracking-wide md:mt-4 ${offerTone.headingMeta} hidden md:block`}>{tier.tagline}</p>
+                </div>
+                <p className={`relative mt-3 max-w-md text-sm leading-6 md:mt-7 md:text-base md:leading-8 ${offerTone.body}`}>{tier.description}</p>
+                {isQuote ? <div className="hidden md:contents">{featureList}</div> : <div className="mt-3 flex flex-1 flex-col md:contents">{featureList}</div>}
+                <Button
+                  href={contactHref}
+                  variant="primaryOnLight"
+                  className="relative mx-auto mt-3 min-h-12 w-full max-w-sm justify-center px-6 py-3.5 md:mt-10"
+                >
+                  {isQuote ? CTA.quote : CTA.primary}
+                </Button>
+                {isQuote ? (
+                  <details className="group relative mt-3 border-t border-[#10141d]/[0.1] md:hidden">
+                    <summary className={`flex cursor-pointer list-none items-center justify-between gap-4 py-2.5 text-sm font-semibold [&::-webkit-details-marker]:hidden ${offerTone.feature}`}>
+                      Voir ce qui est inclus
+                      <ChevronDown className="h-4 w-4 shrink-0 transition duration-300 group-open:rotate-180" aria-hidden="true" />
+                    </summary>
+                    {featureList}
+                  </details>
+                ) : null}
+              </article>
+            );
+          })}
         </div>
-        <div className="mt-10 py-8 md:mt-12 md:py-10">
-          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+        <div className="mt-6 py-4 md:mt-12 md:py-10">
+          <div className="grid gap-3 md:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Options</p>
-              <h3 className="mt-4 max-w-lg text-3xl font-semibold leading-tight tracking-tighter2 text-white md:text-4xl">
+              <h3 className="mt-3 max-w-lg text-2xl font-semibold leading-tight tracking-tighter2 text-white md:mt-4 md:text-4xl">
                 À ajouter seulement si ton projet en a besoin.
               </h3>
-              <p className="mt-4 text-sm leading-7 text-white/[0.66]">
+              <p className="mt-2 text-sm leading-6 text-white/[0.66] md:mt-4 md:leading-7">
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.
               </p>
             </div>
             <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
               {pricingOptions.map((option) => (
                 <div key={option.name}>
-                  <details className="group border-b border-white/[0.09] py-4 md:hidden">
+                  <details className="group border-b border-white/[0.09] py-3 md:hidden">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
                       <span>
                         <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
-                        <span className="mt-1 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">{option.price}</span>
-                        {hasAmount(option.price) ? <span className="mt-0.5 block text-xs text-white/[0.64]">{VAT_MENTION}</span> : null}
+                        <span className="mt-0.5 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">
+                          {option.price}
+                          {hasAmount(option.price) ? <span className="ml-2 text-xs font-normal tracking-normal text-white/[0.64]">{VAT_MENTION}</span> : null}
+                        </span>
                       </span>
                       <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition duration-300 group-open:rotate-180" aria-hidden="true" />
                     </summary>
