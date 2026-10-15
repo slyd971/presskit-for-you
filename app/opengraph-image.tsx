@@ -13,8 +13,8 @@ export default function OpenGraphImage() {
   return new ImageResponse(
     (
       <OgImage
-        title="De vos contenus à un lien prêt à envoyer."
-        description="Un press kit digital premium pour présenter votre activité, vos médias, vos preuves et votre contact au même endroit."
+        title="De tes contenus à un lien prêt à envoyer."
+        description="Un press kit digital premium pour présenter ton activité, tes médias, tes preuves et ton contact au même endroit."
       />
     ),
     size,

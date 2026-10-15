@@ -17,7 +17,7 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Press Kit Premium",
     price: "À partir de 300 €",
-    tagline: "pour lancer votre image pro",
+    tagline: "pour lancer ton image pro",
     description: "L’offre idéale pour créer un press kit clair, premium et prêt à partager.",
     features: [
       "Page press kit sur-mesure",
@@ -51,21 +51,21 @@ export const pricingOptions: PricingOption[] = [
   {
     name: "Nom de domaine personnalisé",
     price: "+30 €",
-    description: "Pour partager une adresse courte et crédible, reliée à votre nom ou votre marque.",
+    description: "Pour partager une adresse courte et crédible, reliée à ton nom ou ta marque.",
   },
   {
     name: "Maintenance annuelle",
     price: "+60 €/an",
-    description: "Pour assurer les mises à jour, les corrections et le bon fonctionnement de votre press kit.",
+    description: "Pour assurer les mises à jour, les corrections et le bon fonctionnement de ton press kit.",
   },
   {
     name: "Mise à jour de contenu",
     price: "+30 €",
-    description: "Pour remplacer une photo, ajouter une date, modifier un texte ou mettre à jour vos liens.",
+    description: "Pour remplacer une photo, ajouter une date, modifier un texte ou mettre à jour tes liens.",
   },
   {
     name: "Séance photo professionnelle",
     price: "Sur devis",
-    description: "Pour créer les visuels manquants quand vos photos actuelles ne rendent pas justice au projet.",
+    description: "Pour créer les visuels manquants quand tes photos actuelles ne rendent pas justice au projet.",
   },
 ];

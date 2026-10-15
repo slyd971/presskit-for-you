@@ -7,12 +7,12 @@ const comparisonRows = [
   {
     criterion: "Clarté",
     current: "Des informations dispersées ou figées dans un PDF.",
-    presskit: "Le visiteur comprend vite qui vous êtes, ce que vous faites et comment vous contacter.",
+    presskit: "Le visiteur comprend vite qui tu es, ce que tu fais et comment te contacter.",
   },
   {
     criterion: "Crédibilité",
     current: "Une présentation basique, souvent trop courte pour convaincre.",
-    presskit: "Un univers premium qui montre votre niveau dès le premier clic.",
+    presskit: "Un univers premium qui montre ton niveau dès le premier clic.",
   },
   {
     criterion: "Mobile",
@@ -21,13 +21,13 @@ const comparisonRows = [
   },
   {
     criterion: "Référencement",
-    current: "Instagram, PDF ou Linktree travaillent peu votre visibilité Google.",
+    current: "Instagram, PDF ou Linktree travaillent peu ta visibilité Google.",
     presskit: "Une page structurée peut être comprise, indexée et partagée plus facilement.",
   },
   {
     criterion: "Mise à jour",
     current: "Le support devient vite daté après une nouvelle actu.",
-    presskit: "Vos contenus peuvent évoluer avec vos projets et références.",
+    presskit: "Tes contenus peuvent évoluer avec tes projets et références.",
   },
 ];
 
@@ -41,7 +41,7 @@ export function ComparisonSection() {
               Faire impression dès les premières secondes
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/[0.68] md:text-lg">
-              Un press kit transforme vos infos en présentation claire, crédible et prête à convaincre.
+              Un press kit transforme tes infos en présentation claire, crédible et prête à convaincre.
             </p>
           </div>
 

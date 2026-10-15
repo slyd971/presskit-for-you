@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Exemples",
   absoluteTitle: `${liveExamplesCount} exemples de press kits digitaux | PressKit For You`,
-  description: "Découvrez plusieurs exemples de press kits digitaux pour artistes, DJs, photographes, coachs et make-up artists.",
+  description: "Découvre plusieurs exemples de press kits digitaux pour artistes, DJs, photographes, coachs et make-up artists.",
   path: "exemples",
   keywords: ["exemple press kit", "exemples press kit", "demo press kit digital"],
 });
@@ -24,7 +24,7 @@ export default function ExamplesPage() {
             Exemples
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.68] md:text-lg">
-            Inspirez-vous de réalisations conçues pour différents profils, métiers et objectifs.
+            Inspire-toi de réalisations conçues pour différents profils, métiers et objectifs.
           </p>
         </PageShell>
       </section>

@@ -72,7 +72,7 @@ export const siteConfig = {
 export const heroStats = [
   { value: "48h", label: "pour cadrer le brief et la direction" },
   { value: "1 lien", label: "pour centraliser médias, infos et contact" },
-  { value: "Sur mesure", label: "pour coller à votre univers et à votre cible" },
+  { value: "Sur mesure", label: "pour coller à ton univers et à ta cible" },
 ];
 
 export const benefits = [
@@ -110,7 +110,7 @@ export const benefits = [
 
 export const heroProofs = [
   "Brief cadré rapidement",
-  "Design premium adapté à votre métier",
+  "Design premium adapté à ton métier",
   "Lien prêt à partager pour booking, presse et prospects",
 ];
 
@@ -151,12 +151,12 @@ export const processSteps = [
   {
     title: "Brief",
     description:
-      "On clarifie votre positionnement, vos objectifs, vos contenus clés et l’ambiance visuelle.",
+      "On clarifie ton positionnement, tes objectifs, tes contenus clés et l’ambiance visuelle.",
   },
   {
     title: "Direction créative",
     description:
-      "On construit un univers premium aligné avec votre métier, votre cible et votre niveau de gamme.",
+      "On construit un univers premium aligné avec ton métier, ta cible et ton niveau de gamme.",
   },
   {
     title: "Intégration",
@@ -166,7 +166,7 @@ export const processSteps = [
   {
     title: "Livraison",
     description:
-      "Vous recevez un lien prêt à partager, pensé pour inspirer confiance et générer plus d’opportunités.",
+      "Tu reçois un lien prêt à partager, pensé pour inspirer confiance et générer plus d’opportunités.",
   },
 ];
 
@@ -180,21 +180,21 @@ export const faqItems = [
   {
     question: "Qu’est-ce qu’un press kit digital ?",
     answer:
-      "Un press kit digital est une page web unique qui regroupe votre présentation, vos médias, vos références et votre contact. Il se partage en un seul lien, aux bookers, aux marques, à la presse ou à vos clients.",
+      "Un press kit digital est une page web unique qui regroupe ta présentation, tes médias, tes références et ton contact. Il se partage en un seul lien, aux bookers, aux marques, à la presse ou à tes clients.",
   },
   {
     question: "Quelle différence avec un PDF ou une page de liens ?",
     answer:
-      "Un PDF se consulte mal sur téléphone et devient vite daté, tandis qu’une page de liens liste vos contenus sans les mettre en scène. Un press kit digital est responsive, structuré, plus facile à mettre à jour et pensé pour inspirer confiance dès le premier clic.",
+      "Un PDF se consulte mal sur téléphone et devient vite daté, tandis qu’une page de liens liste tes contenus sans les mettre en scène. Un press kit digital est responsive, structuré, plus facile à mettre à jour et pensé pour inspirer confiance dès le premier clic.",
   },
   {
     question: "Combien de temps pour recevoir mon press kit ?",
-    answer: "7 jours ouvrés maximum à partir de la réception de tous vos contenus.",
+    answer: "7 jours ouvrés maximum à partir de la réception de tous tes contenus.",
   },
   {
     question: "Que dois-je fournir ?",
     answer:
-      "Vos textes, photos, vidéos, liens et références. Le brief permet de clarifier votre positionnement, vos objectifs, vos contenus clés et l’ambiance visuelle souhaitée.",
+      "Tes textes, photos, vidéos, liens et références. Le brief permet de clarifier ton positionnement, tes objectifs, tes contenus clés et l’ambiance visuelle souhaitée.",
   },
   {
     question: "Combien d’allers-retours de modifications sont inclus ?",
@@ -214,7 +214,7 @@ export const faqItems = [
   },
   {
     question: "Peut-on se rencontrer pour le brief ?",
-    answer: "Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si vous êtes plus loin.",
+    answer: "Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si tu es plus loin.",
   },
   {
     question: "Comment se passe le paiement ?",
@@ -231,21 +231,21 @@ export const categories: Category[] = [
     shortName: "Artiste",
     eyebrow: "Univers, œuvres, médias, booking",
     description:
-      "Une page pour présenter vos œuvres, vos médias, vos références et votre contact.",
+      "Une page pour présenter tes œuvres, tes médias, tes références et ton contact.",
     audience: "Artistes, chanteurs, danseurs, peintres, créateurs et projets culturels",
     tone: "artist",
     accent: "#F4C26B",
     accentSoft: "rgba(244,194,107,0.18)",
     gradient:
       "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
-    heroTitle: "Valorisez votre image, en tant qu'artiste",
+    heroTitle: "Valorise ton image, en tant qu'artiste",
     heroDescription:
-      "Utilisez votre press kit comme une carte de visite digitale pour les médias, sponsors et futurs partenaires.",
+      "Utilise ton press kit comme une carte de visite digitale pour les médias, sponsors et futurs partenaires.",
     valueProps: ["Travail plus clair", "Médias regroupés", "Contact direct"],
     benefits: [
       {
         title: "Travail plus lisible",
-        description: "Le visiteur comprend rapidement votre démarche, vos œuvres et vos références.",
+        description: "Le visiteur comprend rapidement ta démarche, tes œuvres et tes références.",
       },
       {
         title: "Médias mieux organisés",
@@ -282,29 +282,29 @@ export const categories: Category[] = [
     shortName: "DJ",
     eyebrow: "Nuit, booking, médias",
     description:
-      "Une page pour présenter vos styles, vos médias et votre contact booking.",
+      "Une page pour présenter tes styles, tes médias et ton contact booking.",
     audience: "DJs, producteurs, collectifs, résidents et artistes club",
     tone: "after-dark",
     accent: "#FF9152",
     accentSoft: "rgba(255,145,82,0.18)",
     gradient:
       "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
-    heroTitle: "Votre profil DJ, clair pour les bookers.",
+    heroTitle: "Ton profil DJ, clair pour les bookers.",
     heroDescription:
-      "Présentez vos styles, vos photos, vos vidéos, vos liens d’écoute, vos références et votre contact booking.",
+      "Présente tes styles, tes photos, tes vidéos, tes liens d’écoute, tes références et ton contact booking.",
     valueProps: ["Booking plus simple", "Médias regroupés", "Lien unique à partager"],
     benefits: [
       {
         title: "Styles identifiés",
-        description: "Le booker comprend rapidement vos styles musicaux et vos formats de set.",
+        description: "Le booker comprend rapidement tes styles musicaux et tes formats de set.",
       },
       {
         title: "Références visibles",
-        description: "Clubs, événements, photos et vidéos donnent du contexte à votre profil.",
+        description: "Clubs, événements, photos et vidéos donnent du contexte à ton profil.",
       },
       {
         title: "Contact booking clair",
-        description: "Les clubs, agences et organisateurs savent comment vous joindre.",
+        description: "Les clubs, agences et organisateurs savent comment te joindre.",
       },
     ],
     includes: [
@@ -333,25 +333,25 @@ export const categories: Category[] = [
     shortName: "Danseur",
     eyebrow: "Performance, énergie, collaborations",
     description:
-      "Une page pour présenter vos vidéos, vos références et vos formats d’intervention.",
+      "Une page pour présenter tes vidéos, tes références et tes formats d’intervention.",
     audience: "Danseurs, chorégraphes, performers, collectifs et projets culturels",
     tone: "movement",
     accent: "#D5A928",
     accentSoft: "rgba(213,169,40,0.18)",
     gradient:
       "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
-    heroTitle: "Votre parcours de danseur, plus facile à comprendre.",
+    heroTitle: "Ton parcours de danseur, plus facile à comprendre.",
     heroDescription:
-      "Présentez vos vidéos, vos photos, vos références, vos collaborations et votre contact aux lieux, marques et projets culturels.",
+      "Présente tes vidéos, tes photos, tes références, tes collaborations et ton contact aux lieux, marques et projets culturels.",
     valueProps: ["Vidéos regroupées", "Parcours lisible", "Contact clair"],
     benefits: [
       {
         title: "Performances accessibles",
-        description: "Vos vidéos montrent votre travail sans dépendre d’un seul post social.",
+        description: "Tes vidéos montrent ton travail sans dépendre d’un seul post social.",
       },
       {
         title: "Parcours situé",
-        description: "Scènes, clips, collectifs et collaborations donnent du contexte à votre profil.",
+        description: "Scènes, clips, collectifs et collaborations donnent du contexte à ton profil.",
       },
       {
         title: "Demandes cadrées",
@@ -384,21 +384,21 @@ export const categories: Category[] = [
     shortName: "Photographe",
     eyebrow: "Image, nightlife, événements",
     description:
-      "Une page pour présenter votre portfolio, vos services et votre contact.",
+      "Une page pour présenter ton portfolio, tes services et ton contact.",
     audience: "Photographes, vidéastes, créateurs event, nightlife et marques",
     tone: "editorial",
     accent: "#D04C57",
     accentSoft: "rgba(208,76,87,0.18)",
     gradient:
       "from-[#D04C57]/28 via-[#4B6CFF]/12 to-transparent",
-    heroTitle: "Votre regard, vos images, vos prestations.",
+    heroTitle: "Ton regard, tes images, tes prestations.",
     heroDescription:
-      "Présentez votre portfolio, vos formats photo ou vidéo, vos zones d’intervention et votre contact.",
+      "Présente ton portfolio, tes formats photo ou vidéo, tes zones d’intervention et ton contact.",
     valueProps: ["Portfolio clair", "Services lisibles", "Contact direct"],
     benefits: [
       {
         title: "Portfolio sélectionné",
-        description: "Vos meilleures images donnent rapidement une idée de votre style.",
+        description: "Tes meilleures images donnent rapidement une idée de ton style.",
       },
       {
         title: "Prestations lisibles",
@@ -439,16 +439,16 @@ export const categories: Category[] = [
     shortName: "Coach sportif",
     eyebrow: "Confiance, méthode, résultats",
     description:
-      "Une page pour expliquer votre coaching, vos offres et vos résultats.",
+      "Une page pour expliquer ton coaching, tes offres et tes résultats.",
     audience: "Coachs sportifs, préparateurs, studios, profils wellness",
     tone: "performance",
     accent: "#63E6BE",
     accentSoft: "rgba(99,230,190,0.18)",
     gradient:
       "from-[#63E6BE]/28 via-[#4DA6FF]/12 to-transparent",
-    heroTitle: "Votre coaching, vos offres, vos résultats.",
+    heroTitle: "Ton coaching, tes offres, tes résultats.",
     heroDescription:
-      "Présentez votre méthode, vos prestations, vos résultats, vos réseaux et votre prise de rendez-vous.",
+      "Présente ta méthode, tes prestations, tes résultats, tes réseaux et ta prise de rendez-vous.",
     valueProps: ["Offres lisibles", "Résultats visibles", "Contact direct"],
     benefits: [
       {
@@ -461,7 +461,7 @@ export const categories: Category[] = [
       },
       {
         title: "Demandes plus précises",
-        description: "La personne sait quoi réserver et comment vous contacter.",
+        description: "La personne sait quoi réserver et comment te contacter.",
       },
     ],
     includes: [
@@ -487,21 +487,21 @@ export const categories: Category[] = [
     shortName: "Make-up artist",
     eyebrow: "Portfolio, prestations, image",
     description:
-      "Une page pour montrer vos looks, vos prestations et votre contact.",
+      "Une page pour montrer tes looks, tes prestations et ton contact.",
     audience: "MUA, beauty artists, bridal, mode et événementiel",
     tone: "beauty",
     accent: "#FF8DAA",
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
       "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
-    heroTitle: "Vos looks, vos prestations, votre contact.",
+    heroTitle: "Tes looks, tes prestations, ton contact.",
     heroDescription:
-      "Présentez votre portfolio, vos prestations, vos références et votre contact aux clientes, marques ou productions.",
+      "Présente ton portfolio, tes prestations, tes références et ton contact aux clientes, marques ou productions.",
     valueProps: ["Portfolio clair", "Prestations lisibles", "Contact direct"],
     benefits: [
       {
         title: "Looks sélectionnés",
-        description: "Vos photos montrent votre style hors du flux des réseaux sociaux.",
+        description: "Tes photos montrent ton style hors du flux des réseaux sociaux.",
       },
       {
         title: "Prestations claires",
@@ -509,11 +509,11 @@ export const categories: Category[] = [
       },
       {
         title: "Contact direct",
-        description: "Clientes, marques et productions trouvent rapidement comment vous joindre.",
+        description: "Clientes, marques et productions trouvent rapidement comment te joindre.",
       },
     ],
     includes: [
-      "Présentation de votre style",
+      "Présentation de ton style",
       "Portfolio / galerie",
       "Prestations",
       "Références ou collaborations",
@@ -537,16 +537,16 @@ export const categories: Category[] = [
     shortName: "Organisateur",
     eyebrow: "Événement, communauté, sponsors",
     description:
-      "Une page pour présenter votre événement, vos chiffres et vos partenaires.",
+      "Une page pour présenter ton événement, tes chiffres et tes partenaires.",
     audience: "Organisateurs de soirées, collectifs, événements et communautés",
     tone: "event",
     accent: "#FF8DAA",
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
       "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
-    heroTitle: "Votre événement, lisible pour les lieux et sponsors.",
+    heroTitle: "Ton événement, lisible pour les lieux et sponsors.",
     heroDescription:
-      "Présentez votre événement, vos photos, vos vidéos, votre communauté, vos chiffres, vos partenaires et votre contact.",
+      "Présente ton événement, tes photos, tes vidéos, ta communauté, tes chiffres, tes partenaires et ton contact.",
     valueProps: ["Événement lisible", "Chiffres regroupés", "Contact partenaire"],
     benefits: [
       {
@@ -588,29 +588,29 @@ export const categories: Category[] = [
     shortName: "Chef / Traiteur",
     eyebrow: "Signature culinaire, événements, devis",
     description:
-      "Une vitrine haut de gamme pour présenter votre concept, vos prestations, vos visuels et faciliter les demandes de devis.",
+      "Une vitrine haut de gamme pour présenter ton concept, tes prestations, tes visuels et faciliter les demandes de devis.",
     audience: "Chefs privés, traiteurs, concepts food et événementiel",
     tone: "culinary",
     accent: "#D7A86E",
     accentSoft: "rgba(215,168,110,0.18)",
     gradient:
       "from-[#D7A86E]/28 via-[#E25E3E]/12 to-transparent",
-    heroTitle: "Un press kit culinaire qui ouvre l’appétit et rassure vos clients.",
+    heroTitle: "Un press kit culinaire qui ouvre l’appétit et rassure tes clients.",
     heroDescription:
       "Concept, prestations, galerie plats, formats événementiels et contact devis réunis dans une présentation premium.",
     valueProps: ["Image haut de gamme", "Offre compréhensible", "Demandes mieux qualifiées"],
     benefits: [
       {
         title: "Concept plus clair",
-        description: "Votre identité culinaire est comprise rapidement et donne envie d’en savoir plus.",
+        description: "Ton identité culinaire est comprise rapidement et donne envie d’en savoir plus.",
       },
       {
         title: "Galerie plus impactante",
-        description: "Vos plats et votre univers gagnent en désirabilité avec une meilleure mise en scène.",
+        description: "Tes plats et ton univers gagnent en désirabilité avec une meilleure mise en scène.",
       },
       {
         title: "Devis mieux préparés",
-        description: "Les prospects arrivent avec une compréhension plus nette de ce que vous proposez.",
+        description: "Les prospects arrivent avec une compréhension plus nette de ce que tu proposes.",
       },
     ],
     includes: [

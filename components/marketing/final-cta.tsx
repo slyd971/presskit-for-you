@@ -8,10 +8,10 @@ export function FinalCta() {
       <PageShell className="max-w-5xl">
         <div className="mx-auto max-w-4xl py-2 text-center md:py-4">
           <h2 id="final-cta-title" className="mx-auto max-w-3xl text-5xl font-semibold leading-[1.02] tracking-tighter2 text-[#10141d] md:text-7xl">
-            Parlez-nous de votre univers.
+            Parle-nous de ton univers.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-9 text-[#3d4551] md:text-xl md:leading-10">
-            On vous aide à cadrer le bon format, le bon niveau de design et les contenus qui feront vraiment la différence.
+            On t’aide à cadrer le bon format, le bon niveau de design et les contenus qui feront vraiment la différence.
           </p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row md:mt-8">
             <a

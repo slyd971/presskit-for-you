@@ -17,8 +17,8 @@ type ProcessTimelineProps = {
 const dossierCards = [
   {
     status: "BRIEF RECU",
-    title: "On récupère vos contenus.",
-    description: "Vous envoyez vos textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter votre activité. Le brief se fait en rendez-vous en Île-de-France, ou en visio pour les clients plus éloignés.",
+    title: "On récupère tes contenus.",
+    description: "Tu envoies tes textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter ton activité. Le brief se fait en rendez-vous en Île-de-France, ou en visio pour les clients plus éloignés.",
     meta: "Jour 01 / Notes client",
     visual: "brief",
   },
@@ -31,7 +31,7 @@ const dossierCards = [
   },
   {
     status: "MISE EN LIGNE",
-    title: "Vous recevez le lien final.",
+    title: "Tu reçois le lien final.",
     description: "Le press kit est intégré, adapté au mobile, testé puis livré avec un lien prêt à partager.",
     meta: "7 jours max / Final",
     visual: "final",
@@ -172,7 +172,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
                 Une méthode en trois temps.
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/[0.68] md:text-lg">
-                On part de vos contenus, on construit une maquette claire, puis on met en ligne un press kit prêt à envoyer.
+                On part de tes contenus, on construit une maquette claire, puis on met en ligne un press kit prêt à envoyer.
               </p>
             </div>
           ) : null}

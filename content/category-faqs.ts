@@ -8,12 +8,12 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   dj: [
     {
       question: "Puis-je intégrer mes mixes SoundCloud ou Mixcloud ?",
-      answer: "Oui, vos sets sont intégrés dans la page : le booker écoute sans quitter votre press kit.",
+      answer: "Oui, tes sets sont intégrés dans la page : le booker écoute sans quitter ton press kit.",
     },
     {
       question: "Quelle différence avec un Linktree pour un DJ ?",
       answer:
-        "Un Linktree aligne des liens ; le press kit met en avant vos références de clubs, vos vidéos live et vos styles, ce qu'un booker regarde avant de programmer.",
+        "Un Linktree aligne des liens ; le press kit met en avant tes références de clubs, tes vidéos live et tes styles, ce qu'un booker regarde avant de programmer.",
     },
     {
       question: "Je joue en club et en événementiel privé, je peux présenter les deux ?",
@@ -31,11 +31,11 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     },
     {
       question: "Puis-je présenter mes prestations et mes tarifs ?",
-      answer: "Oui, une section services peut détailler vos formules (shooting, événementiel, corporate).",
+      answer: "Oui, une section services peut détailler tes formules (shooting, événementiel, corporate).",
     },
     {
       question: "Quelle différence avec Instagram pour un photographe ?",
-      answer: "Instagram compresse et mélange tout ; le press kit présente une sélection, vos références et un contact direct.",
+      answer: "Instagram compresse et mélange tout ; le press kit présente une sélection, tes références et un contact direct.",
     },
     {
       question: "Combien coûte un press kit photographe ?",
@@ -49,7 +49,7 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     },
     {
       question: "Puis-je indiquer ma zone de déplacement ?",
-      answer: "Oui, une section dédiée précise votre zone de déplacement, par exemple partout en Île-de-France.",
+      answer: "Oui, une section dédiée précise ta zone de déplacement, par exemple partout en Île-de-France.",
     },
     {
       question: "Combien coûte un press kit make-up artist ?",
@@ -59,7 +59,7 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   danseur: [
     {
       question: "Puis-je intégrer mes vidéos de performances ?",
-      answer: "Oui, vos vidéos sont intégrées directement dans la page.",
+      answer: "Oui, tes vidéos sont intégrées directement dans la page.",
     },
     {
       question: "Je fais partie d'un collectif, puis-je le présenter ?",
@@ -113,7 +113,7 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   artiste: [
     {
       question: "Puis-je présenter mes œuvres et ma démarche ?",
-      answer: "Oui, une galerie et une section démarche mettent votre travail en scène.",
+      answer: "Oui, une galerie et une section démarche mettent ton travail en scène.",
     },
     {
       question: "Puis-je lister mes expositions et ma presse ?",

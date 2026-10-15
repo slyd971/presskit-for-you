@@ -23,90 +23,90 @@ type PageCopy = {
 
 const pageCopy: Record<string, PageCopy> = {
   artiste: {
-    promiseTitle: "Une présentation claire, sans perdre la sensibilité de votre travail.",
+    promiseTitle: "Une présentation claire, sans perdre la sensibilité de ton travail.",
     promiseDescription:
-      "La page rassemble votre bio, vos œuvres, vos médias et vos références. Un média ou une galerie comprend vite votre démarche et sait comment vous joindre.",
+      "La page rassemble ta bio, tes œuvres, tes médias et tes références. Un média ou une galerie comprend vite ta démarche et sait comment te joindre.",
     benefits: [
       {
-        title: "Centralisez vos informations pro",
+        title: "Centralise tes informations pro",
         description: "Bio, liens, références et contact sont accessibles depuis une seule page.",
       },
       {
-        title: "Montrez ce qui compte vraiment",
-        description: "Sélectionnez les œuvres, photos, vidéos ou sons qui représentent le mieux votre travail.",
+        title: "Montre ce qui compte vraiment",
+        description: "Sélectionne les œuvres, photos, vidéos ou sons qui représentent le mieux ton travail.",
       },
       {
-        title: "Facilitez la prise de contact",
-        description: "Un média, un lieu ou une galerie sait rapidement comment vous joindre.",
+        title: "Facilite la prise de contact",
+        description: "Un média, un lieu ou une galerie sait rapidement comment te joindre.",
       },
     ],
     examplesTitle: "D'autres exemples d'artistes.",
     detailsTitle: "Ce qu’une galerie, un média ou un lieu doit trouver.",
     detailsDescription:
-      "Le press kit évite les messages dispersés. Vous partagez une page qui présente votre travail, vos références et votre contact.",
+      "Le press kit évite les messages dispersés. Tu partages une page qui présente ton travail, tes références et ton contact.",
   },
   dj: {
     promiseTitle: "Un support clair pour parler aux clubs, agences et organisateurs.",
     promiseDescription:
-      "Votre press kit présente vos styles, vos médias, vos références et votre contact booking dans une page facile à consulter.",
+      "Ton press kit présente tes styles, tes médias, tes références et ton contact booking dans une page facile à consulter.",
     benefits: [
       {
-        title: "Clarifiez vos formats de set",
-        description: "Styles musicaux, ambiances et liens d’écoute aident le booker à vous situer rapidement.",
+        title: "Clarifie tes formats de set",
+        description: "Styles musicaux, ambiances et liens d’écoute aident le booker à te situer rapidement.",
       },
       {
-        title: "Montrez vos références de scène",
-        description: "Photos, vidéos, clubs et événements passés montrent où vous avez déjà joué.",
+        title: "Montre tes références de scène",
+        description: "Photos, vidéos, clubs et événements passés montrent où tu as déjà joué.",
       },
       {
-        title: "Facilitez le booking",
-        description: "Un club ou une agence trouve rapidement votre contact et vos réseaux professionnels.",
+        title: "Facilite le booking",
+        description: "Un club ou une agence trouve rapidement ton contact et tes réseaux professionnels.",
       },
     ],
     examplesTitle: "Des exemples DJ déjà en ligne.",
-    detailsTitle: "Ce qu’un booker doit trouver avant de vous programmer.",
+    detailsTitle: "Ce qu’un booker doit trouver avant de te programmer.",
     detailsDescription:
       "Le press kit donne les informations attendues avant un booking : styles, médias, références, réseaux et contact.",
   },
   danseur: {
-    promiseTitle: "Présenter votre parcours, vos vidéos et vos collaborations.",
+    promiseTitle: "Présenter ton parcours, tes vidéos et tes collaborations.",
     promiseDescription:
-      "La page rassemble vos performances, vos photos, vos références et les formats pour lesquels on peut vous contacter.",
+      "La page rassemble tes performances, tes photos, tes références et les formats pour lesquels on peut te contacter.",
     benefits: [
       {
-        title: "Montrez vos performances",
+        title: "Montre tes performances",
         description: "Un lieu, une marque ou un projet culturel peut consulter plusieurs vidéos au même endroit.",
       },
       {
-        title: "Situez votre parcours",
-        description: "Scènes, clips, collectifs, ateliers et collaborations donnent du contexte à votre travail.",
+        title: "Situe ton parcours",
+        description: "Scènes, clips, collectifs, ateliers et collaborations donnent du contexte à ton travail.",
       },
       {
-        title: "Cadrez les demandes",
+        title: "Cadre les demandes",
         description: "La page précise les formats possibles : scène, clip, atelier, collaboration ou projet culturel.",
       },
     ],
     examplesTitle: "Un exemple danseur à consulter.",
     detailsTitle: "Ce qu’un lieu, une marque ou un projet culturel doit comprendre.",
     detailsDescription:
-      "Le press kit présente votre travail sans renvoyer vers une seule vidéo ou un profil social incomplet.",
+      "Le press kit présente ton travail sans renvoyer vers une seule vidéo ou un profil social incomplet.",
   },
   photographe: {
-    promiseTitle: "Montrer votre portfolio et expliquer vos prestations.",
+    promiseTitle: "Montrer ton portfolio et expliquer tes prestations.",
     promiseDescription:
-      "La page présente vos images, vos formats photo ou vidéo, vos zones d’intervention et votre contact.",
+      "La page présente tes images, tes formats photo ou vidéo, tes zones d’intervention et ton contact.",
     benefits: [
       {
-        title: "Sélectionnez vos meilleures images",
+        title: "Sélectionne tes meilleures images",
         description: "Les photos importantes sont visibles sans demander un PDF ou un lien de drive.",
       },
       {
-        title: "Clarifiez vos prestations",
+        title: "Clarifie tes prestations",
         description: "Photo, vidéo, événement, nightlife ou marque : le prospect sait ce qu’il peut demander.",
       },
       {
-        title: "Préparez la demande de devis",
-        description: "La personne trouve vos formats, votre zone d’intervention et votre contact avant d’écrire.",
+        title: "Prépare la demande de devis",
+        description: "La personne trouve tes formats, ta zone d’intervention et ton contact avant d’écrire.",
       },
     ],
     examplesTitle: "Un exemple photographe à consulter.",
@@ -115,44 +115,44 @@ const pageCopy: Record<string, PageCopy> = {
       "Le press kit ajoute les services, les formats, les zones d’intervention et le contact à côté des images.",
   },
   "coach-sportif": {
-    promiseTitle: "Expliquer votre coaching sans multiplier les messages.",
+    promiseTitle: "Expliquer ton coaching sans multiplier les messages.",
     promiseDescription:
-      "La page présente votre méthode, vos offres, vos résultats, vos réseaux et la prise de rendez-vous.",
+      "La page présente ta méthode, tes offres, tes résultats, tes réseaux et la prise de rendez-vous.",
     benefits: [
       {
-        title: "Clarifiez vos accompagnements",
+        title: "Clarifie tes accompagnements",
         description: "Le visiteur voit les accompagnements proposés et comprend à qui ils s’adressent.",
       },
       {
-        title: "Montrez vos preuves",
+        title: "Montre tes preuves",
         description: "Transformations, avis ou contenus pédagogiques peuvent être consultés avant le premier contact.",
       },
       {
-        title: "Recevez des demandes plus précises",
-        description: "La personne sait ce qu’elle peut réserver et comment vous contacter.",
+        title: "Reçois des demandes plus précises",
+        description: "La personne sait ce qu’elle peut réserver et comment te contacter.",
       },
     ],
     examplesTitle: "Un exemple coach sportif à consulter.",
-    detailsTitle: "Ce qu’un prospect doit comprendre avant de vous contacter.",
+    detailsTitle: "Ce qu’un prospect doit comprendre avant de te contacter.",
     detailsDescription:
       "Le press kit évite les explications répétées en message privé. Il présente les offres, les preuves et le contact.",
   },
   "make-up-artist": {
-    promiseTitle: "Montrer vos looks et expliquer vos prestations.",
+    promiseTitle: "Montrer tes looks et expliquer tes prestations.",
     promiseDescription:
-      "La page présente votre portfolio, vos prestations, vos références et votre contact.",
+      "La page présente ton portfolio, tes prestations, tes références et ton contact.",
     benefits: [
       {
-        title: "Mettez vos looks en avant",
+        title: "Mets tes looks en avant",
         description: "Les photos importantes sont réunies dans une page claire, hors du flux des réseaux sociaux.",
       },
       {
-        title: "Clarifiez vos prestations",
+        title: "Clarifie tes prestations",
         description: "Mariage, mode, éditorial ou événement : chaque service peut être présenté simplement.",
       },
       {
-        title: "Facilitez les demandes",
-        description: "Une cliente, une marque ou une production trouve votre portfolio et votre contact au même endroit.",
+        title: "Facilite les demandes",
+        description: "Une cliente, une marque ou une production trouve ton portfolio et ton contact au même endroit.",
       },
     ],
     examplesTitle: "Un exemple make-up artist à consulter.",
@@ -161,20 +161,20 @@ const pageCopy: Record<string, PageCopy> = {
       "Le press kit réunit les looks, les prestations, les références et les informations de contact.",
   },
   organisateur: {
-    promiseTitle: "Présenter votre événement à un lieu, un sponsor ou un partenaire.",
+    promiseTitle: "Présenter ton événement à un lieu, un sponsor ou un partenaire.",
     promiseDescription:
       "La page regroupe le format de l’événement, les photos, les vidéos, les chiffres, les partenaires et le contact.",
     benefits: [
       {
-        title: "Expliquez le format",
+        title: "Explique le format",
         description: "Le visiteur voit le public, le format, les éditions passées et les informations utiles.",
       },
       {
-        title: "Présentez vos chiffres",
+        title: "Présente tes chiffres",
         description: "Communauté, fréquentation, médias et partenaires peuvent être consultés sans demander un dossier séparé.",
       },
       {
-        title: "Ouvrez la discussion partenaire",
+        title: "Ouvre la discussion partenaire",
         description: "Un lieu, une marque ou un sponsor trouve rapidement comment engager la discussion.",
       },
     ],

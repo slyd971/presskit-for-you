@@ -51,7 +51,7 @@ export function PricingTable({
         {showHeading ? (
           <SectionHeading
             eyebrow="Tarifs"
-            title="Investissez dans une présentation à la hauteur de votre activité."
+            title="Investis dans une présentation à la hauteur de ton activité."
             description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
           />
         ) : null}
@@ -98,7 +98,7 @@ export function PricingTable({
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Options</p>
               <h3 className="mt-4 max-w-lg text-3xl font-semibold leading-tight tracking-tighter2 text-white md:text-4xl">
-                À ajouter seulement si votre projet en a besoin.
+                À ajouter seulement si ton projet en a besoin.
               </h3>
               <p className="mt-4 text-sm leading-7 text-white/[0.66]">
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.

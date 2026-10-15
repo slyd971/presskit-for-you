@@ -136,7 +136,7 @@ const homeExamples = [
     title: "DJ SLY'D",
     category: "DJ",
     exampleName: "DJ SLY'D",
-    description: "Conçu pour valoriser votre image auprès des clubs, festivals et organisateurs.",
+    description: "Conçu pour valoriser ton image auprès des clubs, festivals et organisateurs.",
     context: "DJ avec besoin d’un lien clair pour bookers et clubs.",
     objective: "Remplacer les envois dispersés par une page complète.",
     result: "Un support plus net pour présenter univers, médias et contact.",
@@ -174,10 +174,10 @@ export function CategoriesGrid() {
       <PageShell>
         <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
           <h2 id="categories-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
-            Découvrez quelques réalisations.
+            Découvre quelques réalisations.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
-            Chaque press kit est un projet sur mesure, pensé à partir de votre univers, de vos contenus et de vos objectifs.
+            Chaque press kit est un projet sur mesure, pensé à partir de ton univers, de tes contenus et de tes objectifs.
           </p>
         </div>
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 md:grid-cols-3 [&::-webkit-scrollbar]:hidden">

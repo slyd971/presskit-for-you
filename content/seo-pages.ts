@@ -10,23 +10,23 @@ const deliveryPitch = "Livré en 7 jours ouvrés, dès 300 €.";
 
 export const categorySeo: Record<string, CategorySeo> = {
   dj: {
-    title: "Press kit DJ en ligne : votre site booking pro | PressKit For You",
+    title: "Press kit DJ en ligne : ton site booking pro | PressKit For You",
     description: `Un press kit DJ clair pour les bookers : styles, mixes, vidéos, références et contact booking. ${deliveryPitch}`,
     label: "DJ",
   },
   artiste: {
     title: "Press kit artiste : site vitrine pro en un lien | PressKit For You",
-    description: `Présentez vos œuvres, votre démarche et vos références dans un press kit artiste clair, partageable en un lien. ${deliveryPitch}`,
+    description: `Présente tes œuvres, ta démarche et tes références dans un press kit artiste clair, partageable en un lien. ${deliveryPitch}`,
     label: "artiste",
   },
   danseur: {
-    title: "Press kit danseur : présentez vos performances | PressKit For You",
+    title: "Press kit danseur : présente tes performances | PressKit For You",
     description: `Vidéos de performance, parcours et collectif réunis dans un press kit danseur pensé pour les lieux et les marques. ${deliveryPitch}`,
     label: "danseur",
   },
   photographe: {
     title: "Press kit photographe : portfolio premium en un lien | PressKit For You",
-    description: `Portfolio, prestations et contact réunis dans un press kit photographe qui donne envie de vous réserver. ${deliveryPitch}`,
+    description: `Portfolio, prestations et contact réunis dans un press kit photographe qui donne envie de te réserver. ${deliveryPitch}`,
     label: "photographe",
   },
   "coach-sportif": {
@@ -36,12 +36,12 @@ export const categorySeo: Record<string, CategorySeo> = {
   },
   "make-up-artist": {
     title: "Press kit make-up artist : portfolio beauté pro | PressKit For You",
-    description: `Vos looks, prestations et zone de déplacement réunis dans un press kit make-up artist qui donne envie de réserver. ${deliveryPitch}`,
+    description: `Tes looks, prestations et zone de déplacement réunis dans un press kit make-up artist qui donne envie de réserver. ${deliveryPitch}`,
     label: "make-up artist",
   },
   organisateur: {
     title: "Press kit organisateur de soirée : dossier sponsors | PressKit For You",
-    description: `Chiffres de communauté, photos et partenaires réunis dans un dossier sponsors digital pour votre soirée. ${deliveryPitch}`,
+    description: `Chiffres de communauté, photos et partenaires réunis dans un dossier sponsors digital pour ta soirée. ${deliveryPitch}`,
     label: "organisateur",
   },
 };
