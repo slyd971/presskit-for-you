@@ -1,4 +1,4 @@
-import { CTA } from "@/content/site";
+import { CTA, pricingFaqItems } from "@/content/site";
 import type { Metadata } from "next";
 
 import { Faq } from "@/components/marketing/faq";
@@ -37,7 +37,7 @@ export default function TarifsPage() {
 
       <PricingTable variant="highlight" showHeading={false} sectionId={null} contactHref="#contact" />
 
-      <Faq />
+      <Faq items={pricingFaqItems} />
 
       <section className="section-divider section-tone-lift py-16 md:py-20" aria-labelledby="pricing-help-title">
         <PageShell className="max-w-5xl">

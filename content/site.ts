@@ -183,23 +183,36 @@ export const faqItems = [
       "Un press kit digital est une page web unique qui regroupe ta présentation, tes médias, tes références et ton contact. Il se partage en un seul lien, aux bookers, aux marques, à la presse ou à tes clients.",
   },
   {
-    question: "Quelle différence avec un PDF ou une page de liens ?",
+    question: "J’ai déjà un site, à quoi sert un press kit ?",
     answer:
-      "Un PDF se consulte mal sur téléphone et devient vite daté, tandis qu’une page de liens liste tes contenus sans les mettre en scène. Un press kit digital est responsive, structuré, plus facile à mettre à jour et pensé pour inspirer confiance dès le premier clic.",
+      "Un site présente ton activité, alors que le press kit est l’outil d’envoi pour tes bookers et tes partenaires. Tu leur transmets tes médias, tes références et ton contact en un seul lien.",
+  },
+  {
+    question: "Instagram me suffit, pourquoi un press kit ?",
+    answer:
+      "Instagram et les pages de liens dispersent tes contenus et travaillent peu ta visibilité Google, tandis qu’un PDF se consulte mal sur téléphone et devient vite daté. Un press kit digital est responsive, structuré, plus facile à mettre à jour et pensé pour inspirer confiance dès le premier clic.",
+  },
+  {
+    question: "Je n’ai pas encore toutes mes photos ou vidéos, je peux commencer ?",
+    // TODO: David valide cette réponse
+    answer: `Oui, on démarre avec les contenus que tu as déjà. Tu pourras ensuite les compléter via l’option « ${updateOption?.name} » (${updateOption?.price.replace("+", "")}).`,
   },
   {
     question: "Combien de temps pour recevoir mon press kit ?",
     answer: "7 jours ouvrés maximum à partir de la réception de tous tes contenus.",
   },
   {
-    question: "Que dois-je fournir ?",
+    question: "Comment se passe le paiement ?",
     answer:
-      "Tes textes, photos, vidéos, liens et références. Le brief permet de clarifier ton positionnement, tes objectifs, tes contenus clés et l’ambiance visuelle souhaitée.",
+      `50 % à la commande, 50 % à la livraison. Les prix sont nets : ${VAT_MENTION} (micro-entreprise).`,
   },
   {
-    question: "Combien d’allers-retours de modifications sont inclus ?",
-    answer: "5 allers-retours de modifications sont inclus.",
+    question: "Peut-on se rencontrer pour le brief ?",
+    answer: "Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si tu es plus loin.",
   },
+];
+
+export const pricingFaqItems = [
   {
     question: "Puis-je utiliser mon propre nom de domaine ?",
     answer: `Oui, avec l’option « ${domainOption?.name} » à ${domainOption?.price.replace("+", "")}.`,
@@ -213,13 +226,8 @@ export const faqItems = [
     answer: `${premiumTier.name} : ${premiumTier.description} ${customTier.name} : ${customTier.description}`,
   },
   {
-    question: "Peut-on se rencontrer pour le brief ?",
-    answer: "Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si tu es plus loin.",
-  },
-  {
-    question: "Comment se passe le paiement ?",
-    answer:
-      `50 % à la commande, 50 % à la livraison. Les prix sont nets : ${VAT_MENTION} (micro-entreprise).`,
+    question: "Combien d’allers-retours de modifications sont inclus ?",
+    answer: "5 allers-retours de modifications sont inclus.",
   },
 ];
 
