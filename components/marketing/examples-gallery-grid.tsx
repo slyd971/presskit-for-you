@@ -61,14 +61,9 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
             const imagePosition = example.imagePosition ?? category?.heroImagePosition;
 
             return (
-              <Link
-                key={`${activeFilter}-${example.slug}`}
-                href={href}
-                target={isExternal ? "_blank" : undefined}
-                rel={isExternal ? "noreferrer" : undefined}
-                className="panel-premium group rounded-lg p-5"
-              >
+              <div key={`${activeFilter}-${example.slug}`} className="panel-premium group rounded-lg p-5">
                 <ExampleMockup
+                  id={example.slug}
                   title={example.title}
                   desktopImage={image}
                   mobileImage={mobileImage}
@@ -86,7 +81,14 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                   {isExternal ? "Voir le rendu en live" : "Decouvrir ce format"}{" "}
                   <span className="transition group-hover:translate-x-1 inline-block">→</span>
                 </p>
-              </Link>
+                <Link
+                  href={href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noreferrer" : undefined}
+                  aria-label={`${example.title} : ouvrir la démo`}
+                  className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+                />
+              </div>
             );
           })}
         </div>

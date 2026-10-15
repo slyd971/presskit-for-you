@@ -694,3 +694,58 @@ svg {
     transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
   }
 }
+
+/* Bascule Ordinateur / Mobile des cartes d'exemples (ExampleMockup). */
+.ex-stage {
+  view-transition-class: ex-stage;
+}
+
+.ex-layer {
+  transform-origin: center;
+  transition:
+    opacity 350ms var(--ease-presskit),
+    transform 350ms var(--ease-presskit);
+}
+
+.ex-box[data-mode="desktop"] .ex-layer-mobile,
+.ex-box[data-mode="mobile"] .ex-layer-desktop {
+  opacity: 0;
+  transform: scale(0.94);
+  pointer-events: none;
+}
+
+/* Avec View Transitions, ce sont les pseudo-éléments qui animent : pas de double animation. */
+.ex-box[data-vt] .ex-layer {
+  transition: none;
+}
+
+::view-transition-group(*.ex-stage) {
+  animation-duration: 350ms;
+}
+
+::view-transition-old(*.ex-stage) {
+  animation: ex-vt-out 350ms var(--ease-presskit) both;
+}
+
+::view-transition-new(*.ex-stage) {
+  animation: ex-vt-in 350ms var(--ease-presskit) both;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+@keyframes ex-vt-out {
+  to {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes ex-vt-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}

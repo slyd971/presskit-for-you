@@ -257,14 +257,12 @@ export function CategoryContent({ category }: CategoryContentProps) {
                     className="w-[86vw] max-w-[22rem] shrink-0 snap-start md:w-auto md:max-w-none md:shrink"
               threshold={0.1}
                   >
-                    <Link
-                      href={href}
-                      target={isExternal ? "_blank" : undefined}
-                      rel={isExternal ? "noreferrer" : undefined}
-                      className="case-study-card group flex h-full min-h-[34rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[42rem] md:p-5"
+                    <div
+                      className="case-study-card group flex h-full min-h-[34rem] flex-col overflow-visible p-4 md:min-h-[42rem] md:p-5"
                       style={{ "--case-accent": example.accent } as CSSProperties}
                     >
                       <ExampleMockup
+                        id={example.slug}
                         title={example.title}
                         desktopImage={example.image}
                         mobileImage={example.mobileImage}
@@ -287,7 +285,14 @@ export function CategoryContent({ category }: CategoryContentProps) {
                         <span>Voir le projet</span>
                         <span className="transition group-hover:translate-x-1">→</span>
                       </div>
-                    </Link>
+                      <Link
+                        href={href}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noreferrer" : undefined}
+                        aria-label={`${example.title} : ouvrir la démo`}
+                        className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+                      />
+                    </div>
                   </Reveal>
                 );
               })}

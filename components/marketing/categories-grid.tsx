@@ -193,14 +193,12 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
               className="w-[86vw] max-w-[22rem] shrink-0 snap-start md:w-auto md:max-w-none md:shrink"
               threshold={0.1}
             >
-              <Link
-                href={example.externalDemoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="case-study-card group flex h-full min-h-[30rem] flex-col overflow-visible p-4 outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620] md:min-h-[32rem] md:p-5 lg:min-h-[34rem]"
+              <div
+                className="case-study-card group flex h-full min-h-[30rem] flex-col overflow-visible p-4 md:min-h-[32rem] md:p-5 lg:min-h-[34rem]"
                 style={{ "--case-accent": example.accent } as CSSProperties}
               >
                 <ExampleMockup
+                  id={example.slug}
                   title={example.title}
                   desktopImage={example.desktopImage}
                   mobileImage={example.mobileImage}
@@ -222,7 +220,14 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                   <span>Voir le projet</span>
                   <span className="transition group-hover:translate-x-1">→</span>
                 </div>
-              </Link>
+                <Link
+                  href={example.externalDemoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${example.title} : ouvrir la démo`}
+                  className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+                />
+              </div>
             </Reveal>
           ))}
         </div>
