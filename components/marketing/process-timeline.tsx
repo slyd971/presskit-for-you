@@ -169,7 +169,7 @@ function CompactVisual({ type }: { type: string }) {
 
 export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
   return (
-    <section id="methode" className="section-tone-cool scroll-mt-28 overflow-hidden pb-16 pt-16 md:pb-36 md:pt-24" aria-labelledby="process-title">
+    <section id="methode" className="section-tone-cool scroll-mt-28 overflow-clip pb-16 pt-16 md:pb-36 md:pt-24" aria-labelledby="process-title">
       <PageShell>
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           {showHeading ? (
@@ -188,7 +188,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
         <ol className="relative mt-8 md:hidden">
           <li aria-hidden="true" className="timeline-line absolute bottom-2 left-[7px] top-2 w-px bg-steel" />
           {dossierCards.map((card, index) => (
-            <li key={card.status} className="relative pb-7 pl-9 last:pb-0">
+            <li key={card.status} className="timeline-step relative pb-7 pl-9 last:pb-0">
               <span aria-hidden="true" className="timeline-dot absolute left-0 top-1 h-[15px] w-[15px] rounded-full border border-steel bg-surface-900" />
               <p className="text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">{card.when}</p>
               <h3 className="mt-1 text-xl font-semibold leading-tight tracking-tighter2 text-white">{card.title}</h3>

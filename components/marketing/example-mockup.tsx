@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { flushSync } from "react-dom";
 
 import { ScrollingPreview } from "@/components/marketing/scrolling-preview";
+import { onFirstInteraction } from "@/lib/first-interaction";
 import type { PreviewAssets } from "@/lib/preview-assets";
 import { cn } from "@/lib/utils";
 
@@ -46,6 +47,10 @@ export function ExampleMockup({
 }: ExampleMockupProps) {
   const boxRef = useRef<HTMLDivElement>(null);
   const [mode, setMode] = useState<Mode>("desktop");
+  // L'image du calque mobile n'est demandée qu'après le premier geste : poids initial inchangé.
+  const [armed, setArmed] = useState(false);
+
+  useEffect(() => onFirstInteraction(() => setArmed(true)), []);
 
   const select = (next: Mode) => {
     if (next === mode) {
@@ -126,13 +131,15 @@ export function ExampleMockup({
               <div className="mockup-surface relative h-full rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)]">
                 <div className="relative h-full overflow-hidden rounded-[1rem] bg-black">
                   <div className="absolute left-1/2 top-1.5 z-20 h-2.5 w-8 -translate-x-1/2 rounded-full bg-[#050609]" />
-                  <Image
-                    src={mobileImage}
-                    alt={`${title} en version mobile`}
-                    fill
-                    sizes="12rem"
-                    className="object-cover object-top"
-                  />
+                  {armed || mode === "mobile" ? (
+                    <Image
+                      src={mobileImage}
+                      alt={`${title} en version mobile`}
+                      fill
+                      sizes="12rem"
+                      className="object-cover object-top"
+                    />
+                  ) : null}
                   <ScrollingPreview src={preview?.mobile} alt={`${title}, page complète en version mobile`} width={390} />
                 </div>
               </div>
