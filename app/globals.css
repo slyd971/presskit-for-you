@@ -677,7 +677,9 @@ svg {
   @media (hover: none) {
     .sp-img[data-play="running"],
     .sp-img[data-play="paused"] {
-      animation: sp-pass var(--sp-pass) ease-in-out 1 both;
+      animation:
+        sp-down var(--sp-down) linear 1 forwards,
+        sp-up var(--sp-up) var(--ease-presskit) var(--sp-down) 1 forwards;
     }
 
     .sp-img[data-play="paused"] {
@@ -686,14 +688,19 @@ svg {
   }
 }
 
-@keyframes sp-pass {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
+@keyframes sp-down {
+  to {
+    transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
+  }
+}
+
+@keyframes sp-up {
+  from {
+    transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
   }
 
-  50% {
-    transform: translate3d(0, calc(var(--sp-travel) * -1), 0);
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 

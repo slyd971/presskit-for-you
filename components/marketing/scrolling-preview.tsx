@@ -13,8 +13,9 @@ type ScrollingPreviewProps = {
 };
 
 const MAX_HOVER_SECONDS = 8;
-const MAX_PASS_SECONDS = 2.5;
-const MIN_PASS_SECONDS = 1.2;
+// Tactile : descente à la même vitesse que le survol desktop (1 s par 1 000 px), retour rapide.
+const RETURN_SECONDS = 1.2;
+const MIN_DOWN_SECONDS = 2;
 
 // Capture pleine page qui défile dans un cadre `relative overflow-hidden` existant.
 // - Chargée après le premier geste de l'utilisateur, quand la carte approche de l'écran (rootMargin 200 px).
@@ -77,11 +78,12 @@ export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
 
       const naturalTravel = travel * (img.naturalWidth / img.clientWidth);
       const hoverSeconds = Math.min(naturalTravel / 1000, MAX_HOVER_SECONDS);
-      const passSeconds = Math.min(Math.max((2 * naturalTravel) / 1000, MIN_PASS_SECONDS), MAX_PASS_SECONDS);
+      const downSeconds = Math.min(Math.max(naturalTravel / 1000, MIN_DOWN_SECONDS), MAX_HOVER_SECONDS);
 
       img.style.setProperty("--sp-travel", `${travel}px`);
       img.style.setProperty("--sp-dur", `${hoverSeconds.toFixed(2)}s`);
-      img.style.setProperty("--sp-pass", `${passSeconds.toFixed(2)}s`);
+      img.style.setProperty("--sp-down", `${downSeconds.toFixed(2)}s`);
+      img.style.setProperty("--sp-up", `${RETURN_SECONDS}s`);
       img.dataset.ready = "true";
     };
 
@@ -99,8 +101,11 @@ export function ScrollingPreview({ src, alt, width }: ScrollingPreviewProps) {
 
     if (window.matchMedia("(hover: none)").matches) {
       const card = frame.closest(".group") ?? frame;
-      const onEnd = () => {
-        img.dataset.play = "done";
+      // Deux animations s'enchaînent (descente, retour) : on s'arrête à la fin du retour.
+      const onEnd = (event: AnimationEvent) => {
+        if (event.animationName === "sp-up") {
+          img.dataset.play = "done";
+        }
       };
 
       img.addEventListener("animationend", onEnd);
