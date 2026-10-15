@@ -13,7 +13,7 @@ const proofStats = [
 
 export function ProofStats() {
   return (
-    <section className="relative overflow-hidden bg-white py-14 text-[#10141d] md:py-18" aria-labelledby="proof-stats-title">
+    <section className="relative overflow-hidden bg-white py-16 text-[#10141d] md:py-14" aria-labelledby="proof-stats-title">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,20,29,0.075),transparent_28%)]" aria-hidden="true" />
       <PageShell>
         <div className="relative mx-auto mb-14 max-w-4xl text-center md:mb-20">
@@ -111,7 +111,7 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
 
 export function SocialProof() {
   return (
-    <section id="avis" className="section-divider section-wash scroll-mt-28 overflow-hidden py-20 md:py-32" aria-labelledby="social-proof-title">
+    <section id="avis" className="section-divider section-wash scroll-mt-28 overflow-hidden py-16 md:py-32" aria-labelledby="social-proof-title">
       <div
         className="pointer-events-none absolute inset-0 opacity-45"
         aria-hidden="true"

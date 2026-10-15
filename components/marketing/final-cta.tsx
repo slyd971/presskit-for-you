@@ -4,7 +4,7 @@ import { Mail, MessageCircle } from "lucide-react";
 
 export function FinalCta() {
   return (
-    <section id="contact" className="section-contact scroll-mt-28 py-14 md:py-24" aria-labelledby="final-cta-title">
+    <section id="contact" className="section-contact scroll-mt-28 py-16 md:py-24" aria-labelledby="final-cta-title">
       <PageShell className="max-w-5xl">
         <div className="mx-auto max-w-4xl py-2 text-center md:py-4">
           <h2 id="final-cta-title" className="mx-auto max-w-3xl text-5xl font-semibold leading-[1.02] tracking-tighter2 text-[#10141d] md:text-7xl">

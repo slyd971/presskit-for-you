@@ -169,7 +169,7 @@ function CompactVisual({ type }: { type: string }) {
 
 export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
   return (
-    <section id="methode" className="section-tone-cool scroll-mt-28 overflow-hidden pb-28 pt-18 md:pb-36 md:pt-24" aria-labelledby="process-title">
+    <section id="methode" className="section-tone-cool scroll-mt-28 overflow-hidden pb-16 pt-16 md:pb-36 md:pt-24" aria-labelledby="process-title">
       <PageShell>
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           {showHeading ? (

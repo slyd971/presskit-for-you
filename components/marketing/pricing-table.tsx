@@ -23,7 +23,7 @@ export function PricingTable({
   contactHref = "/#contact",
 }: PricingTableProps) {
   const isHighlight = variant === "highlight";
-  const spacingClass = showHeading ? "pt-12 pb-8 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
+  const spacingClass = showHeading ? "pt-16 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
     title: "text-[#10141d]",
     border: "border-[#10141d]/[0.14]",
@@ -55,7 +55,7 @@ export function PricingTable({
             description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
           />
         ) : null}
-        <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-8 md:mt-16" : "mt-0"}`}>
+        <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-6 md:mt-16" : "mt-0"}`}>
           {pricingTiers.map((tier, index) => {
             const isQuote = !hasAmount(tier.price);
             const featureList = (
@@ -109,7 +109,7 @@ export function PricingTable({
             );
           })}
         </div>
-        <div className="mt-6 py-4 md:mt-12 md:py-10">
+        <div className="mt-4 py-3 md:mt-12 md:py-10">
           <div className="grid gap-3 md:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Options</p>

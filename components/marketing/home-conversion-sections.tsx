@@ -33,7 +33,7 @@ const comparisonRows = [
 
 export function ComparisonSection() {
   return (
-    <section className="section-divider section-tone-cool py-20 md:py-32" aria-labelledby="comparison-title">
+    <section className="section-divider section-tone-cool py-16 md:py-32" aria-labelledby="comparison-title">
       <PageShell>
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-4xl text-center">
