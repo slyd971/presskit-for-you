@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 import { LegalDocument, type LegalSection } from "@/components/layout/legal-document";
 import { pricingOptions, pricingTiers } from "@/content/pricing";
-import { LEGAL, VAT_MENTION } from "@/lib/legal";
+import { LEGAL, VAT_MENTION, mediator } from "@/lib/legal";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -85,6 +85,17 @@ const sections: LegalSection[] = [
       "Si le Client demande expressément que la prestation commence avant la fin du délai de rétractation, il doit en faire la demande expresse (article L221-25) ; en cas de rétractation, il paie alors un montant proportionnel à ce qui a été fourni jusqu'à la communication de sa décision.",
     ],
   },
+  ...(mediator.name
+    ? [
+        {
+          title: "Médiation de la consommation",
+          paragraphs: [
+            "Conformément à l'article L612-1 du Code de la consommation, le Prestataire garantit au Client consommateur le recours effectif à un dispositif de médiation de la consommation.",
+            `Médiateur : ${[mediator.name, mediator.address, mediator.website].filter(Boolean).join(", ")}.`,
+          ],
+        },
+      ]
+    : []),
   {
     title: "Droit applicable",
     paragraphs: ["Les présentes conditions sont soumises au droit français."],

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { PageShell } from "@/components/layout/page-shell";
-import { LEGAL, VAT_MENTION } from "@/lib/legal";
+import { LEGAL, VAT_MENTION, mediator } from "@/lib/legal";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -74,6 +74,22 @@ export default function LegalPage() {
               ou réutilisation non autorisée est interdite.
             </p>
           </section>
+
+          {mediator.name ? (
+            <section className="overflow-visible">
+              <h2 className={h2Class}>Médiateur de la consommation</h2>
+              <p className="mt-4 leading-8">{mediator.name}</p>
+              {mediator.address ? <p className="mt-2 leading-8">Adresse : {mediator.address}</p> : null}
+              {mediator.website ? (
+                <p className="mt-2 leading-8">
+                  Site web :{" "}
+                  <a className={linkClass} href={mediator.website}>
+                    {mediator.website}
+                  </a>
+                </p>
+              ) : null}
+            </section>
+          ) : null}
 
           <section className="overflow-visible">
             <h2 className={h2Class}>Documents associés</h2>

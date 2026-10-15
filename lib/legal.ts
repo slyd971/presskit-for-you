@@ -21,4 +21,12 @@ export const LEGAL = {
   deliveryDays: 7,
 };
 
+// Médiateur de la consommation (art. L612-1 du Code de la consommation).
+// Tant que `name` est vide, les blocs « Médiation » des CGV et des mentions légales ne s'affichent pas.
+export const mediator = {
+  name: "",
+  address: "",
+  website: "",
+};
+
 export { VAT_MENTION } from "@/lib/vat";
