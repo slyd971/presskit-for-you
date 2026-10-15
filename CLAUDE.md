@@ -15,6 +15,6 @@ Avant toute modification visuelle, lire `design-system/presskit/README.md` : ton
 - Valeurs de référence : `design-system/presskit/tokens.json` (variables CSS dans `design-system/presskit/tokens.css`).
 - Réutiliser les primitives de `components/ui/` (`Button`, `Badge`, `SectionHeading`, `Reveal`) et `PageShell` avant d'en créer de nouvelles.
 - Alterner sections sombres (par défaut) et sections claires éditoriales. Réserver les accents de couleur aux cartes d'exemples clients et le vert WhatsApp au CTA WhatsApp.
-- Écrire en français, en vouvoyant, avec des phrases courtes ; CTA à la première personne (« Créer mon press kit »).
+- Écrire en français, en tutoyant, avec des phrases courtes ; CTA à la première personne (« Créer mon press kit »).
 - Respecter `prefers-reduced-motion` et garder un contraste d'au moins 4,5:1 (texte blanc à 64 % minimum sur fond sombre).
 - Version en ligne du design system : https://claude.ai/artifact/MPrpVjKP3g2j4LpMAzTiE2. En cas de changement de charte, mettre à jour les deux.

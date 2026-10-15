@@ -22,7 +22,7 @@ Les composants existants n'ont pas été modifiés : ils gardent leurs valeurs e
 
 ## 1. Voix
 
-- **« Vous »**, phrases courtes, promesse concrète : « Plus pro qu'Instagram. Plus impactant qu'un PDF. »
+- **Tutoiement** (« tu »), phrases courtes, promesse concrète : « Plus pro qu'Instagram. Plus impactant qu'un PDF. »
 - On parle de résultat (crédibilité, conversion, un lien unique), pas de technique.
 - CTA à la première personne : « Créer mon press kit », « Voir des exemples ».
 - Micro-labels en capitales très espacées (`label`), jamais de phrase entière en capitales.
