@@ -109,7 +109,7 @@ export function Hero() {
 
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % heroKits.length);
-    }, 5000);
+    }, 3500);
 
     return () => window.clearInterval(interval);
   }, [shouldReduceMotion]);
