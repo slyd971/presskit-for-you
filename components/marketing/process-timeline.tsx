@@ -20,6 +20,8 @@ const dossierCards = [
     title: "On récupère tes contenus.",
     description: "Tu envoies tes textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter ton activité. Le brief se fait en rendez-vous en Île-de-France, ou en visio pour les clients plus éloignés.",
     meta: "Jour 01 / Notes client",
+    when: "Jour 1",
+    summary: "Tu envoies tes textes, photos, vidéos, liens et références.",
     visual: "brief",
   },
   {
@@ -27,6 +29,8 @@ const dossierCards = [
     title: "On prépare la maquette.",
     description: "On choisit la direction artistique, l'organisation des informations et la hiérarchisation des boutons d'action",
     meta: "Jour 02-03 / Maquette",
+    when: "Jours 2-3",
+    summary: "On choisit la direction artistique, l'organisation des informations et la hiérarchisation des boutons d'action.",
     visual: "direction",
   },
   {
@@ -34,6 +38,8 @@ const dossierCards = [
     title: "Tu reçois le lien final.",
     description: "Le press kit est intégré, adapté au mobile, testé puis livré avec un lien prêt à partager.",
     meta: "7 jours max / Final",
+    when: "7 jours max",
+    summary: "Le press kit est intégré, adapté au mobile, testé puis livré avec un lien prêt à partager.",
     visual: "final",
   },
 ];
@@ -179,7 +185,30 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
 
         </div>
 
-        <div className="mt-10 grid gap-9 md:mt-12 md:grid-cols-3 md:gap-4">
+        <ol className="relative mt-8 md:hidden">
+          <li aria-hidden="true" className="timeline-line absolute bottom-2 left-[7px] top-2 w-px bg-steel" />
+          {dossierCards.map((card, index) => (
+            <li key={card.status} className="relative pb-7 pl-9 last:pb-0">
+              <span aria-hidden="true" className="timeline-dot absolute left-0 top-1 h-[15px] w-[15px] rounded-full border border-steel bg-surface-900" />
+              <p className="text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">{card.when}</p>
+              <h3 className="mt-1 text-xl font-semibold leading-tight tracking-tighter2 text-white">{card.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-white/[0.68]">{card.summary}</p>
+              {index === dossierCards.length - 1 ? (
+                <div className="relative mt-4 aspect-[91/60] w-44 overflow-hidden rounded-mockup-desktop border border-steel bg-black">
+                  <Image
+                    src="/gallery-previews/home-desktop/dj-slyd.webp"
+                    alt="Press kit de DJ SLY'D, DJ, version desktop"
+                    fill
+                    sizes="176px"
+                    className="object-contain object-center"
+                  />
+                </div>
+              ) : null}
+            </li>
+          ))}
+        </ol>
+
+        <div className="mt-10 hidden gap-9 md:mt-12 md:grid md:grid-cols-3 md:gap-4">
           {dossierCards.map((card, index) => (
             <div key={card.status} className="relative">
               <motion.article
