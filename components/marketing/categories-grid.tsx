@@ -224,7 +224,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                   href={example.externalDemoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`${example.title} : ouvrir la démo`}
+                  aria-label={`${example.title} : ouvrir la démo (nouvel onglet)`}
                   className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
                 />
               </div>

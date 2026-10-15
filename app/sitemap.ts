@@ -4,11 +4,11 @@ import { siteConfig } from "@/content/site";
 import { footerCategoryLinks } from "@/lib/presskit-categories";
 
 // Last real content change per route. Update the date when a page's content changes.
-const defaultLastModified = "2026-10-12";
+const defaultLastModified = "2026-10-15";
 const routeLastModified: Record<string, string> = {
-  "": "2026-10-12",
-  "/exemples": "2026-10-12",
-  "/tarifs": "2026-10-12",
+  "": "2026-10-15",
+  "/exemples": "2026-10-15",
+  "/tarifs": "2026-10-15",
   "/mentions-legales": "2026-10-12",
   "/cgv": "2026-10-12",
   "/politique-de-confidentialite": "2026-10-12",
