@@ -15,18 +15,19 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
 
+  // Sentinelle de 80 px en haut de page : plus visible = page défilée de plus de 80 px.
   useEffect(() => {
-    const onScroll = () => {
-      const currentY = window.scrollY;
+    const sentinel = document.getElementById("header-sentinel");
 
-      setIsCompact(currentY > 24);
-    };
+    if (!sentinel || typeof IntersectionObserver === "undefined") {
+      return;
+    }
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    const observer = new IntersectionObserver(([entry]) => setIsCompact(!entry.isIntersecting));
 
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
+    observer.observe(sentinel);
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -45,18 +46,26 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div
-        className={cn(
-          "w-full border-b backdrop-blur-xl transition-all duration-300",
-          isCompact
-            ? "border-black/[0.08] bg-white/[0.96] shadow-[0_12px_36px_rgba(13,17,24,0.1)]"
-            : "border-white/[0.08] bg-[#0b0e14]/[0.9] shadow-[0_12px_36px_rgba(0,0,0,0.18)]",
-        )}
-      >
+      <div className="relative w-full">
+        {/* Deux fonds superposés (sombre / clair) : fondu en opacité, et la barre rétrécit de 8 px par translation. */}
+        <div
+          aria-hidden="true"
+          className={cn(
+            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-white/[0.08] bg-[#0b0e14]/[0.9] shadow-[0_12px_36px_rgba(0,0,0,0.18)] backdrop-blur-xl",
+            isCompact && "-translate-y-2 opacity-0",
+          )}
+        />
+        <div
+          aria-hidden="true"
+          className={cn(
+            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-black/[0.08] bg-white/[0.96] opacity-0 shadow-[0_12px_36px_rgba(13,17,24,0.1)] backdrop-blur-xl",
+            isCompact && "-translate-y-2 opacity-100",
+          )}
+        />
         <div
           className={cn(
-            "mx-auto flex max-w-8xl items-center justify-between gap-4 px-4 transition-all duration-300 md:px-8",
-            isCompact ? "py-3" : "py-4",
+            "header-row relative mx-auto flex max-w-8xl items-center justify-between gap-4 px-4 py-3 md:px-8",
+            !isCompact && "translate-y-1",
           )}
         >
           <Link
@@ -73,7 +82,7 @@ export function SiteHeader() {
               fill
               sizes="(min-width: 768px) 15rem, 11rem"
               priority
-              className={cn("object-contain object-left transition duration-300", isCompact && "brightness-0")}
+              className={cn("object-contain object-left transition duration-200", isCompact && "brightness-0")}
             />
           </Link>
 
@@ -93,7 +102,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button
+            <Button arrow
               href="/#contact"
               variant={isCompact ? "primaryOnLight" : "primary"}
               className="hidden px-3 py-2 text-[11px] font-semibold shadow-none sm:inline-flex md:px-5 md:py-3 md:text-sm"
@@ -176,7 +185,7 @@ export function SiteHeader() {
                   exit={{ y: 8, opacity: 0 }}
                   transition={{ duration: motionTokens.duration.fast, delay: motionTokens.delay.related, ease: motionTokens.easing.enter }}
                 >
-                  <Button href="/#contact" variant={isCompact ? "primaryOnLight" : "primary"} className="mt-4 w-full justify-center">
+                  <Button arrow href="/#contact" variant={isCompact ? "primaryOnLight" : "primary"} className="mt-4 w-full justify-center">
                     {CTA.primary}
                   </Button>
                 </motion.div>

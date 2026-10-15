@@ -21,7 +21,7 @@ export function CategoryOffer({ slug }: CategoryOfferProps) {
             </p>
             <p className="mt-3 text-xs text-white/[0.64]">{VAT_MENTION}</p>
           </div>
-          <Button href="/#contact" className="min-h-12 justify-center px-7 py-4 text-[15px]">
+          <Button arrow href="/#contact" className="min-h-12 justify-center px-7 py-4 text-[15px]">
             {CTA.primary}
           </Button>
         </div>

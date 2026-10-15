@@ -37,7 +37,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
               {category.heroDescription}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Button href="/#contact" className="min-h-12 px-7 py-4 text-[15px]">
+              <Button arrow href="/#contact" className="min-h-12 px-7 py-4 text-[15px]">
                 {CTA.primary}
               </Button>
               <Button href={href} variant="secondary" className="min-h-12 px-6 py-4 text-[15px]">

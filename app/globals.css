@@ -422,8 +422,9 @@ svg {
   transform: translate3d(0, -0.04rem, 0);
 }
 
-.button-cycle:active {
-  transform: perspective(700px) translate3d(0, 0.0625rem, 0) rotateX(-0.45deg);
+/* Spécificité relevée : sinon l'utilitaire hover:-translate-y-0.5 des variantes l'emporte au clic. */
+.button-cycle.cta-shine:active {
+  transform: perspective(700px) translate3d(0, 0.0625rem, 0) rotateX(-0.45deg) scale(0.98);
   transition-duration: var(--duration-feedback);
 }
 
@@ -785,4 +786,45 @@ svg {
   to {
     opacity: 1;
   }
+}
+
+/* Micro-interactions : flèche du CTA principal. */
+.cta-arrow {
+  transition: transform 150ms var(--ease-presskit);
+}
+
+.button-cycle:hover .cta-arrow {
+  transform: translate3d(4px, 0, 0);
+}
+
+/* Accordéons (FAQ, options) : ouverture/fermeture en 200 ms via grid-template-rows 0fr -> 1fr.
+   Sans ::details-content (Firefox), le <details> natif s'ouvre instantanément. */
+.acc-body {
+  min-height: 0;
+  overflow: hidden;
+}
+
+@supports selector(::details-content) {
+  .acc::details-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+      grid-template-rows 200ms var(--ease-presskit),
+      content-visibility 200ms allow-discrete;
+  }
+
+  .acc[open]::details-content {
+    grid-template-rows: 1fr;
+  }
+}
+
+/* En-tête : fonds superposés, seuls transform et opacity s'animent (200 ms). */
+.header-layer {
+  transition:
+    opacity 200ms var(--ease-presskit),
+    transform 200ms var(--ease-presskit);
+}
+
+.header-row {
+  transition: transform 200ms var(--ease-presskit);
 }

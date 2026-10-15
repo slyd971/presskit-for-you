@@ -92,17 +92,18 @@ export function PricingTable({
                 <Button
                   href={contactHref}
                   variant="primaryOnLight"
+                  arrow={!isQuote}
                   className="relative mx-auto mt-3 min-h-12 w-full max-w-sm justify-center px-6 py-3.5 md:mt-10"
                 >
                   {isQuote ? CTA.quote : CTA.primary}
                 </Button>
                 {isQuote ? (
-                  <details className="group relative mt-3 border-t border-[#10141d]/[0.1] md:hidden">
+                  <details className="acc group relative mt-3 border-t border-[#10141d]/[0.1] md:hidden">
                     <summary className={`flex cursor-pointer list-none items-center justify-between gap-4 py-2.5 text-sm font-semibold [&::-webkit-details-marker]:hidden ${offerTone.feature}`}>
                       Voir ce qui est inclus
-                      <ChevronDown className="h-4 w-4 shrink-0 transition duration-300 group-open:rotate-180" aria-hidden="true" />
+                      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
                     </summary>
-                    {featureList}
+                    <div className="acc-body">{featureList}</div>
                   </details>
                 ) : null}
               </article>
@@ -123,7 +124,7 @@ export function PricingTable({
             <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
               {pricingOptions.map((option) => (
                 <div key={option.name}>
-                  <details className="group border-b border-white/[0.09] py-3 md:hidden">
+                  <details className="acc group border-b border-white/[0.09] py-3 md:hidden">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
                       <span>
                         <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
@@ -132,9 +133,11 @@ export function PricingTable({
                           {hasAmount(option.price) ? <span className="ml-2 text-xs font-normal tracking-normal text-white/[0.64]">{VAT_MENTION}</span> : null}
                         </span>
                       </span>
-                      <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition duration-300 group-open:rotate-180" aria-hidden="true" />
+                      <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
                     </summary>
-                    <p className="mt-3 pr-8 text-sm leading-6 text-white/[0.62]">{option.description}</p>
+                    <div className="acc-body">
+                      <p className="pr-8 pt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
+                    </div>
                   </details>
                   <article className="motion-line hidden border-b border-white/[0.09] py-5 md:block md:border-r md:px-5 md:last:border-r">
                     <div className="flex items-baseline justify-between gap-4">

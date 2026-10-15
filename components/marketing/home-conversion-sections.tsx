@@ -113,7 +113,7 @@ export function ComparisonSection() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <Button href="#contact" className="min-h-12 w-full justify-center px-7 py-4 text-[15px] sm:w-auto">
+              <Button arrow href="#contact" className="min-h-12 w-full justify-center px-7 py-4 text-[15px] sm:w-auto">
                 {CTA.primary}
               </Button>
             </div>

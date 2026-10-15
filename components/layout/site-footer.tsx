@@ -29,7 +29,7 @@ export function SiteFooter() {
             {"L'image que tu envoies avant même de parler."}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#contact" className="justify-center px-7 py-4 text-[15px]">
+            <Button arrow href="/#contact" className="justify-center px-7 py-4 text-[15px]">
               {CTA.primary}
             </Button>
             <Button href="/exemples" variant="secondary" className="justify-center px-7 py-4 text-[15px]">

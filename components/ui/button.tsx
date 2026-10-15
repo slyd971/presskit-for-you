@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -7,6 +8,8 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "ghost" | "primaryOnLight" | "secondaryOnLight";
   className?: string;
+  // Flèche qui glisse de 4 px au survol : réservée au CTA principal.
+  arrow?: boolean;
 };
 
 const styles = {
@@ -27,6 +30,7 @@ export function Button({
   children,
   variant = "primary",
   className,
+  arrow = false,
 }: ButtonProps) {
   return (
     <Link
@@ -38,6 +42,7 @@ export function Button({
       )}
     >
       {children}
+      {arrow ? <ArrowRight className="cta-arrow h-4 w-4 shrink-0" aria-hidden="true" /> : null}
     </Link>
   );
 }

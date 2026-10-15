@@ -307,6 +307,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Aller au contenu
         </a>
         <div className="relative min-h-screen">
+          {/* Sentinelle observée par l'en-tête : au-delà de 80 px de scroll, l'en-tête se compacte. */}
+          <div id="header-sentinel" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-20 w-px" />
           <SiteHeader />
           <main id="main-content">{children}</main>
           <SiteFooter />

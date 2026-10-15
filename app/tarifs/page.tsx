@@ -50,7 +50,7 @@ export default function TarifsPage() {
                 Le bon choix dépend surtout du niveau de personnalisation attendu, de la quantité de contenu à intégrer et de l’accompagnement nécessaire sur la direction artistique.
               </p>
             </div>
-            <Button href="#contact" className="min-h-12 justify-center px-7 py-4 text-[15px]">
+            <Button arrow href="#contact" className="min-h-12 justify-center px-7 py-4 text-[15px]">
               {CTA.primary}
             </Button>
           </div>
