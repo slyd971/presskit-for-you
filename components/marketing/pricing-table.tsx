@@ -1,10 +1,13 @@
 import { pricingOptions, pricingTiers } from "@/content/pricing";
 import { CTA } from "@/content/site";
+import { VAT_MENTION } from "@/lib/vat";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
+
+const hasAmount = (price: string) => price.includes("€");
 
 type PricingTableProps = {
   variant?: "default" | "highlight";
@@ -67,7 +70,8 @@ export function PricingTable({
                 </span>
               </div>
               <div className={`relative mt-10 border-y py-8 ${offerTone.tierBorder}`}>
-                <p className={`text-[clamp(2.6rem,5.4vw,5.4rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}{tier.priceSuffix ? <span className="ml-3 align-top text-[clamp(1rem,1.8vw,1.6rem)] font-semibold tracking-normal">{tier.priceSuffix}</span> : null}</p>
+                <p className={`text-[clamp(2.6rem,5.4vw,5.4rem)] font-semibold leading-none tracking-tighter2 ${offerTone.title}`}>{tier.price}</p>
+                {hasAmount(tier.price) ? <p className={`mt-3 text-xs ${offerTone.headingMeta}`}>{VAT_MENTION}</p> : null}
                 <p className={`mt-4 text-xs font-medium tracking-wide ${offerTone.headingMeta}`}>{tier.tagline}</p>
               </div>
               <p className={`relative mt-7 max-w-md text-base leading-8 ${offerTone.body}`}>{tier.description}</p>
@@ -108,6 +112,7 @@ export function PricingTable({
                       <span>
                         <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
                         <span className="mt-1 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">{option.price}</span>
+                        {hasAmount(option.price) ? <span className="mt-0.5 block text-xs text-white/[0.64]">{VAT_MENTION}</span> : null}
                       </span>
                       <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition duration-300 group-open:rotate-180" aria-hidden="true" />
                     </summary>
@@ -118,6 +123,7 @@ export function PricingTable({
                       <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
                       <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
                     </div>
+                    {hasAmount(option.price) ? <p className="mt-1 text-right text-xs text-white/[0.64]">{VAT_MENTION}</p> : null}
                     <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
                   </article>
                 </div>

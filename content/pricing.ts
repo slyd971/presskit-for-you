@@ -1,7 +1,6 @@
 export type PricingTier = {
   name: string;
   price: string;
-  priceSuffix?: string;
   tagline: string;
   description: string;
   features: string[];
@@ -18,7 +17,6 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Press Kit Premium",
     price: "À partir de 300 €",
-    priceSuffix: "TTC",
     tagline: "pour lancer votre image pro",
     description: "L’offre idéale pour créer un press kit clair, premium et prêt à partager.",
     features: [
