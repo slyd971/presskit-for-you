@@ -54,6 +54,19 @@ Si un nouveau client s'ajoute, ce nombre change : demande-le plutôt que de supp
 - Pas d'emoji dans les textes du site. Capitales réservées aux petits labels (« BRIEF REÇU »).
 - Ne modifie jamais le texte des témoignages clients : ce sont des citations.
 
+## Instagram (@presskit_for_you)
+
+Pour les visuels et les vidéos, la référence est le fichier `da-instagram.md` (dans les connaissances du projet) : en cas de doute, il l'emporte.
+
+- Objectif : des abonnés qualifiés et des demandes (DM, lien en bio vers presskit.fr). 2 posts par semaine.
+- Un post = un client : 6 à 7 réalisations clients par mois (carrousel ou Reel, en alternance), 1 conseil au plus, 1 preuve ou offre.
+- Clients validés pour publication : DJ Soyumi, Paul Keranne, DJ Mack, Silver DJ, La Bringue, Lokko TV, DJ SLY'D, DJ GDC. Pour tous les autres (dont DJ Pirate et La MIF), demander à David avant.
+- Couvertures, couleurs, polices, formats : uniquement ce que dit `da-instagram.md` (sa section 19, relevée sur les couvertures Canva, prime). Ne recopie pas ces valeurs de mémoire et n'en invente aucune : si une valeur manque, demande à David. Formules : « Nouvelle collab presskit débloquée », « Découvre son presskit », « Il nous a fait confiance ».
+- 12 mots maximum par slide : le texte long va dans la légende.
+- Légende : première ligne de moins de 125 caractères, 3 à 6 lignes concrètes, une seule action (DM « PRESSKIT », lien en bio ou presskit.fr), 5 hashtags maximum, 0 à 2 emoji.
+- Sur Instagram on écrit « presskit » ; sur le site, « press kit ».
+- Jamais d'info client inventée (club, date, chiffre, citation), jamais de « retouches illimitées » ni de « TTC », et relire la légende finale pour qu'aucune note de travail ne reste dedans.
+
 ## À ne pas faire
 
 - N'invente ni chiffres, ni clients, ni résultats, ni témoignages.

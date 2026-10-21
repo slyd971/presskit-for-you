@@ -44,7 +44,8 @@ presskit-for-you/
 ├── lib/                      Helpers : SEO, catégories, OG, motion, légal
 ├── design-system/presskit/   Design system : charte, tokens.json, tokens.css
 ├── docs/                     Audits design et SEO, ce fichier
-├── agents/                   Prompts d'agents de revue (contenu, QA, SEO)
+├── AGENTS.md                 Instructions du projet, importé par CLAUDE.md
+├── .claude/skills/           Skills : relectures (contenu, QA, SEO) et Instagram (stratégie, posts, community)
 ├── scripts/                  Scripts zsh de capture des previews
 ├── public/                   Images (logos, previews, OG, témoignages)
 ├── tailwind.config.ts        Thème Tailwind et tokens du design system
