@@ -141,7 +141,7 @@ Les textes du site se modifient ici, pas dans les composants.
 
 - Imports avec l'alias `@/` (`@/components/...`, `@/lib/...`, `@/content/...`).
 - Composants en fonctions nommées exportées (`export function Hero()`), fichiers en kebab-case.
-- Textes en français, vouvoiement, CTA à la première personne (« Créer mon press kit »).
+- Textes en français, vouvoiement, CTA à la première personne (« Demander mon press kit »).
 - Chaque page exporte ses `metadata` via `createPageMetadata()` ou `createPresskitCategoryMetadata()`.
 - Animations : respecter `prefers-reduced-motion` (CSS global et `useReducedMotion` côté Framer).
 - `.env.example` déclare des variables Airtable, mais aucun code ne les utilise actuellement.

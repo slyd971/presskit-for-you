@@ -51,7 +51,7 @@ import { pricingOptions, pricingTiers } from "@/content/pricing";
 export { pricingOptions, pricingTiers };
 
 export const CTA = {
-  primary: "Créer mon press kit",
+  primary: "Demander mon press kit",
   secondary: "Voir des exemples",
   quote: "Demander un devis",
 } as const;
@@ -62,7 +62,7 @@ export const siteConfig = {
     "Press kits digitaux premium pour artistes, talents et indépendants qui veulent une présentation claire, crédible et pensée pour convertir.",
   url: "https://www.presskit.fr",
   phone: "06 63 90 78 88",
-  whatsappUrl: "https://wa.me/33663907888",
+  whatsappUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, je voudrais un press kit. Je suis ")}`,
   nav: [
     { href: "/exemples", label: "Exemples" },
     { href: "/tarifs", label: "Tarifs" },
@@ -172,8 +172,6 @@ export const processSteps = [
   },
 ];
 
-const premiumTier = pricingTiers[0];
-const customTier = pricingTiers[1];
 const domainOption = pricingOptions.find((option) => option.name === "Nom de domaine personnalisé");
 const updateOption = pricingOptions.find((option) => option.name === "Mise à jour de contenu");
 const maintenanceOption = pricingOptions.find((option) => option.name === "Maintenance annuelle");
@@ -192,12 +190,12 @@ export const faqItems = [
   {
     question: "J’ai déjà un site, à quoi sert un press kit ?",
     answer:
-      "Un site présente ton activité, alors que le press kit est l’outil d’envoi pour tes bookers et tes partenaires. Tu leur transmets tes médias, tes références et ton contact en un seul lien.",
+      "Ton site présente toute ton activité. Le press kit, c'est la page que tu envoies quand un booker, une marque ou un client te demande ce que tu fais : l'essentiel, en un lien.",
   },
   {
     question: "Instagram me suffit, pourquoi un press kit ?",
     answer:
-      "Instagram et les pages de liens dispersent tes contenus et travaillent peu ta visibilité Google, tandis qu’un PDF se consulte mal sur téléphone et devient vite daté. Un press kit digital est responsive, structuré, plus facile à mettre à jour et pensé pour inspirer confiance dès le premier clic.",
+      "Garde Instagram : c'est là qu'on te découvre. Mais un booker ou une marque ne fera pas défiler 300 posts pour trouver tes références et ton contact. Le press kit les rassemble en une page, et tu mets son lien dans ta bio.",
   },
   {
     question: "Je n’ai pas encore toutes mes photos ou vidéos, je peux commencer ?",
@@ -206,7 +204,7 @@ export const faqItems = [
   },
   {
     question: "Combien de temps pour recevoir mon press kit ?",
-    answer: "7 jours ouvrés maximum à partir de la réception de tous tes contenus.",
+    answer: "7 jours maximum à partir de la réception de tous tes contenus.",
   },
   {
     question: "Comment se passe le paiement ?",
@@ -230,11 +228,11 @@ export const pricingFaqItems = [
   },
   {
     question: "Quelle différence entre Press Kit Premium et Studio Custom ?",
-    answer: `${premiumTier.name} : ${premiumTier.description} ${customTier.name} : ${customTier.description}`,
+    answer: "Premium : une page, jusqu’à 5 sections, dès 300 €, livrée en 7 jours. Studio Custom : plusieurs pages, direction artistique poussée, fonctionnalités spécifiques, sur devis.",
   },
   {
     question: "Combien d’allers-retours de modifications sont inclus ?",
-    answer: "5 allers-retours de modifications sont inclus.",
+    answer: "Un aller-retour, c’est une liste de demandes envoyée en une fois et appliquée. Tu en as 5 : de quoi ajuster textes, photos et ordre des sections.",
   },
 ];
 
@@ -253,7 +251,7 @@ export const categories: Category[] = [
     accentSoft: "rgba(244,194,107,0.18)",
     gradient:
       "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
-    heroTitle: "Press kit artiste : ta musique, ta scène, tes contacts presse",
+    heroTitle: "Press kit artiste : ta musique, ta scène, ton booking",
     heroTitleKicker: true,
     heroDescription:
       "Ton EPK (electronic press kit) en un lien : bio, sons, clips, dates et contact booking, pensés pour les programmateurs, les médias et les labels.",
@@ -305,7 +303,7 @@ export const categories: Category[] = [
     accentSoft: "rgba(255,145,82,0.18)",
     gradient:
       "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
-    heroTitle: "Press kit DJ : ton profil clair pour les bookers",
+    heroTitle: "Press kit DJ : tout ce qu'un booker veut voir, en un lien",
     heroDescription:
       "Présente tes styles, tes photos, tes vidéos, tes liens d’écoute, tes références et ton contact booking.",
     valueProps: ["Booking plus simple", "Médias regroupés", "Lien unique à partager"],
@@ -359,7 +357,7 @@ export const categories: Category[] = [
     heroTitle: "Press kit danseur : ton parcours, tes vidéos, tes collaborations",
     heroTitleKicker: true,
     heroDescription:
-      "Présente tes vidéos, tes photos, tes références, tes collaborations et ton contact aux lieux, marques et projets culturels.",
+      "Présente tes vidéos, tes photos, tes références, tes collaborations et ton contact aux chorégraphes, directeurs de casting, compagnies et marques.",
     valueProps: ["Vidéos regroupées", "Parcours lisible", "Contact clair"],
     benefits: [
       {
@@ -811,7 +809,7 @@ export const examples: Example[] = [
     slug: "silver-dj",
     category: "DJ",
     title: "Silver DJ",
-    description: "Un exemple DJ avec médias, liens d’écoute et contact booking.",
+    description: "Un press kit DJ avec médias, liens d’écoute et contact booking.",
     href: "/#contact",
     externalDemoUrl: EXAMPLE_URLS.silverDj,
     image: "/gallery-previews/silver-dj.webp",
@@ -833,7 +831,7 @@ export const examples: Example[] = [
   },
   {
     slug: "coach-performance",
-    category: "Photographe",
+    category: "Photographe-vidéaste",
     title: "Lokko TV",
     description: "Un press kit photographe avec portfolio, services et contact booking.",
     href: "/#contact",

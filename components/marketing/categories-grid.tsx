@@ -17,7 +17,7 @@ const homeExamples = [
     title: "MelyMelow",
     category: "Artiste peintre",
     exampleName: "MelyMelow",
-    description: "Un press kit artiste peintre pour exposer un univers résine, acrylique, œuvres et contact pro.",
+    description: "Un press kit artiste peintre avec œuvres, démarche, médias et contact pro.",
     context: "Artiste peintre avec un univers très visuel.",
     objective: "Présenter œuvres, démarche et contact sans diluer l’image.",
     result: "Une vitrine contemplative, claire et plus crédible pour les opportunités.",
@@ -179,7 +179,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
       <PageShell>
         <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
           <h2 id="categories-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
-            Découvre quelques réalisations.
+            Découvre quelques réalisations
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
             Chaque press kit est un projet sur mesure, pensé à partir de ton univers, de tes contenus et de tes objectifs.

@@ -5,6 +5,7 @@ import { CTA, type Category } from "@/content/site";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
 import { getExamplesForPresskitCategory } from "@/lib/presskit-categories";
+import { withDe } from "@/lib/utils";
 
 type CategoryHeroProps = {
   category: Category;
@@ -50,7 +51,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                 {CTA.primary}
               </Button>
               <Button href={href} variant="secondary" className="min-h-12 px-6 py-4 text-[15px]">
-                Voir une démo
+                {heroExample ? `Voir le press kit ${withDe(heroExample.title)}` : CTA.secondary}
               </Button>
             </div>
           </div>
@@ -74,7 +75,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                     {image ? (
                       <Image
                         src={image}
-                        alt={heroExample ? `Press kit de ${heroExample.title}, ${heroExample.category}, version desktop` : category.heroImageAlt ?? category.name}
+                        alt={heroExample ? `Press kit ${withDe(heroExample.title)}, ${heroExample.category}, version desktop` : category.heroImageAlt ?? category.name}
                         fill
                         priority
                         sizes="(min-width: 1024px) 52vw, 96vw"
@@ -94,7 +95,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                         <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
                         <Image
                           src={mobileImage}
-                          alt={heroExample ? `Press kit de ${heroExample.title}, ${heroExample.category}, version mobile` : `${category.name} en version mobile`}
+                          alt={heroExample ? `Press kit ${withDe(heroExample.title)}, ${heroExample.category}, version mobile` : `${category.name} en version mobile`}
                           fill
                           sizes="(min-width: 768px) 15vw, 24vw"
                           className="object-cover object-top"
@@ -108,7 +109,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
             <div className="border-t border-white/[0.12] pt-5">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <h2 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
-                  {heroExample ? `Exemple : le press kit de ${heroExample.title}` : category.heroOverlayTitle ?? category.name}
+                  {heroExample ? `Exemple : le press kit ${withDe(heroExample.title)}` : category.heroOverlayTitle ?? category.name}
                 </h2>
                 <span className="text-sm font-semibold text-white">Voir le projet →</span>
               </div>

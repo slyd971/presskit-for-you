@@ -33,7 +33,11 @@ Les composants et pages (`components/`, `app/`, `content/`) suivent ces tokens e
 
 - **Tutoiement** (« tu »), phrases courtes, promesse concrète : « Plus pro qu'Instagram. Plus impactant qu'un PDF. »
 - On parle de résultat (crédibilité, conversion, un lien unique), pas de technique.
-- CTA à la première personne : « Créer mon press kit », « Voir des exemples ».
+- CTA à la première personne : « Demander mon press kit », « Voir des exemples ».
+- Contact : « Écrire sur WhatsApp » (lien wa.me avec message pré-rempli) et « Envoyer un e-mail » (lien `mailto:`).
+- Titres H2 sans point final.
+- Délai : « 7 jours », sans « ouvrés ». « Sur mesure » sans trait d'union.
+- Élision devant un nom : « le press kit d'Arthur Chaps », « de DJ FLO » (helper `withDe` de `lib/utils.ts`).
 - Micro-labels en capitales très espacées (`label`), jamais de phrase entière en capitales.
 
 ## 2. Couleurs

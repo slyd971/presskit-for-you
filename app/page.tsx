@@ -17,7 +17,7 @@ import { createPageMetadata } from "@/lib/seo";
 const homeMetadata = createPageMetadata({
   title: "Press kit digital premium pour artistes et créateurs",
   description:
-    "Crée un press kit digital premium : ton activité, tes contenus et tes références en un lien, plus clair qu'Instagram et plus impactant qu'un PDF.",
+    "Ton press kit digital premium, conçu pour toi : ton activité, tes contenus et tes références en un lien, plus clair qu'Instagram et plus impactant qu'un PDF.",
   keywords: [
     "press kit digital",
     "creation press kit artiste",

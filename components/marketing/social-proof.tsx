@@ -7,7 +7,7 @@ import { PageShell } from "@/components/layout/page-shell";
 
 const proofStats = [
   { value: String(liveExamplesCount), label: "press kits en ligne" },
-  { value: "7 jours", label: "ouvrés max pour la livraison" },
+  { value: "7 jours", label: "max, après réception de tes contenus" },
   { value: "dès 300 €", label: "pour un press kit premium" },
 ];
 
@@ -18,17 +18,17 @@ export function ProofStats() {
       <PageShell>
         <div className="relative mx-auto mb-14 max-w-4xl text-center md:mb-20">
           <p className="text-[clamp(2.2rem,6vw,5rem)] font-semibold leading-[1.08] tracking-tighter2">
-            <Reveal as="span" className="block">Le bon lien ne liste pas tes contenus.</Reveal>
-            <Reveal as="span" delay={0.06} className="block">Il met ton niveau en scène.</Reveal>
+            <Reveal as="span" className="block">Une page de liens empile tes contenus.</Reveal>{" "}
+            <Reveal as="span" delay={0.06} className="block">Un press kit les met en valeur.</Reveal>
           </p>
         </div>
         <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-ink-editorial md:text-5xl">
-              Une carte de visite digitale, accessible en un seul lien, prête à être partagée.
+              Ton activité, tes médias et tes références dans un seul lien
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-text-secondary-light md:text-lg">
-              {"Le press kit doit refléter la personnalité de la personne qu'il présente, tout en renforçant la crédibilité de son activité"}
+              Il reflète ta personnalité et renforce ta crédibilité.
             </p>
 
             <div className="mt-9 grid gap-7 border-y border-ink-editorial/[0.12] py-7 text-left sm:grid-cols-3 md:mt-10">

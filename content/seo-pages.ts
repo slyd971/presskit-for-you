@@ -6,7 +6,7 @@ export type CategorySeo = {
   label: string;
 };
 
-const deliveryPitch = "Livré en 7 jours ouvrés, dès 300 €.";
+const deliveryPitch = "Livré en 7 jours, dès 300 €.";
 
 export const categorySeo: Record<string, CategorySeo> = {
   dj: {

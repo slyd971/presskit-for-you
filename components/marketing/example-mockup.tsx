@@ -7,7 +7,7 @@ import { flushSync } from "react-dom";
 import { ScrollingPreview } from "@/components/marketing/scrolling-preview";
 import { onFirstInteraction } from "@/lib/first-interaction";
 import type { PreviewAssets } from "@/lib/preview-assets";
-import { cn } from "@/lib/utils";
+import { cn, withDe } from "@/lib/utils";
 
 type Mode = "desktop" | "mobile";
 
@@ -49,7 +49,7 @@ export function ExampleMockup({
   preview,
 }: ExampleMockupProps) {
   const captureAlt = (version: Mode) =>
-    category ? `Press kit de ${title}, ${category}, version ${version}` : `${title} en version ${version}`;
+    category ? `Press kit ${withDe(title)}, ${category}, version ${version}` : `${title} en version ${version}`;
   const boxRef = useRef<HTMLDivElement>(null);
   const [mode, setMode] = useState<Mode>("desktop");
   // L'image du calque mobile n'est demandée qu'après le premier geste : poids initial inchangé.

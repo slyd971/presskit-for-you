@@ -358,7 +358,7 @@ Elements singuliers a preserver:
 - La tension sombre premium / ruptures blanches editoriales.
 - Les micro-labels uppercase tres espaces.
 - Les animations lentes de preview et les reveals doux.
-- Les accents par metier/projet, qui gardent le cote sur-mesure.
+- Les accents par metier/projet, qui gardent le cote sur mesure.
 - Les mini schémas de `ProcessTimeline`, car ils racontent le service sans generique marketing.
 
 ## Risques

@@ -63,7 +63,7 @@ export async function createCategoryOgImage(slug: string) {
               {`Press kit ${label}`}
             </div>
             <div style={{ display: "flex", fontSize: 26, lineHeight: 1.4, color: "rgba(255,255,255,0.72)" }}>
-              Livré en 7 jours ouvrés, dès 300 €.
+              Livré en 7 jours, dès 300 €.
             </div>
           </div>
           {preview ? (

@@ -55,8 +55,8 @@ export function PricingTable({
         {showHeading ? (
           <SectionHeading
             eyebrow="Tarifs"
-            title="Investis dans une présentation à la hauteur de ton activité."
-            description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction sur mesure."
+            title="Investis dans une présentation à la hauteur de ton activité"
+            description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction artistique sur mesure."
           />
         ) : null}
         <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-6 md:mt-16" : "mt-0"}`}>

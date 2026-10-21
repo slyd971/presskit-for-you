@@ -45,12 +45,6 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/exemples" className="footer-link text-sm text-white/[0.64] hover:text-white">
-              Tous les exemples
-            </Link>
-            <Link href="/tarifs" className="footer-link text-sm text-white/[0.64] hover:text-white">
-              Tous les tarifs
-            </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-label text-white">Métiers</p>
           <div className="mt-6 space-y-4">
@@ -70,13 +64,13 @@ export function SiteFooter() {
               rel="noreferrer"
               className="footer-link text-sm text-white/[0.64] hover:text-white"
             >
-              Discuter du projet
+              Écrire sur WhatsApp
             </a>
             <a
               href="mailto:contact@presskit.fr"
               className="footer-link text-sm text-white/[0.64] hover:text-white"
             >
-              Envoyer un email
+              Envoyer un e-mail
             </a>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-label text-white">Informations légales</p>

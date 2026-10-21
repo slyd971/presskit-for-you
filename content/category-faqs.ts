@@ -2,7 +2,7 @@ import { LEGAL } from "@/lib/legal";
 
 export type FaqEntry = { question: string; answer: string };
 
-const pricingAnswer = `À partir de 300 €, livré en ${LEGAL.deliveryDays} jours ouvrés maximum, ${LEGAL.revisionRounds} allers-retours inclus.`;
+const pricingAnswer = `À partir de 300 €, livré en ${LEGAL.deliveryDays} jours maximum, ${LEGAL.revisionRounds} allers-retours inclus.`;
 
 export const categoryFaqs: Record<string, FaqEntry[]> = {
   dj: [
@@ -26,7 +26,7 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     },
     {
       question: "Combien coûte un press kit DJ ?",
-      answer: `À partir de 300 €, livré en ${LEGAL.deliveryDays} jours ouvrés maximum, avec ${LEGAL.revisionRounds} allers-retours de modifications inclus.`,
+      answer: `À partir de 300 €, livré en ${LEGAL.deliveryDays} jours maximum, avec ${LEGAL.revisionRounds} allers-retours de modifications inclus.`,
     },
   ],
   photographe: [

@@ -33,7 +33,7 @@ type PageCopy = {
 
 const pageCopy: Record<string, PageCopy> = {
   artiste: {
-    promiseTitle: "Un dossier de presse en ligne, sans perdre ton identité artistique.",
+    promiseTitle: "Un dossier de presse en ligne, sans perdre ton identité artistique",
     promiseDescription:
       "Chanteur, rappeur, musicien ou groupe : ta page réunit ta bio, ta musique, tes clips, tes dates et ta presse. Un programmateur comprend ton projet en une minute et sait comment te booker.",
     benefits: [
@@ -50,7 +50,7 @@ const pageCopy: Record<string, PageCopy> = {
         description: "Dates, scènes, fiche technique et contact direct pour les salles, les festivals et les médias.",
       },
     ],
-    examplesTitle: "D'autres exemples d'artistes.",
+    examplesTitle: "D'autres exemples d'artistes",
     exampleDescriptions: {
       "black-moz": "Un press kit rap et slam avec bio, écoute, médias et booking.",
       melymelow:
@@ -77,7 +77,7 @@ const pageCopy: Record<string, PageCopy> = {
     checklistNote: "Artiste visuel ? Remplace l'écoute par une galerie d'œuvres et une section démarche.",
   },
   dj: {
-    promiseTitle: "Un support clair pour parler aux clubs, agences et organisateurs.",
+    promiseTitle: "Un support clair pour parler aux clubs, agences et organisateurs",
     promiseDescription:
       "Ton press kit présente tes styles, tes médias, tes références et ton contact booking dans une page facile à consulter.",
     benefits: [
@@ -94,7 +94,7 @@ const pageCopy: Record<string, PageCopy> = {
         description: "Un club ou une agence trouve rapidement ton contact et tes réseaux professionnels.",
       },
     ],
-    examplesTitle: "Des exemples DJ déjà en ligne.",
+    examplesTitle: "Des exemples DJ déjà en ligne",
     detailsTitle: "Que mettre dans un press kit DJ ?",
     detailsDescription:
       "Un booker, un club ou une agence doit trouver ces éléments en moins d'une minute, sur mobile. C'est ce qu'on appelle aussi un EPK DJ (electronic press kit) ou un dossier de presse DJ.",
@@ -112,7 +112,7 @@ const pageCopy: Record<string, PageCopy> = {
     ],
   },
   danseur: {
-    promiseTitle: "Présenter ton parcours, tes vidéos et tes collaborations.",
+    promiseTitle: "Présenter ton parcours, tes vidéos et tes collaborations",
     promiseDescription:
       "La page rassemble tes performances, tes photos, tes références et les formats pour lesquels on peut te contacter.",
     benefits: [
@@ -129,7 +129,7 @@ const pageCopy: Record<string, PageCopy> = {
         description: "La page précise les formats possibles : scène, clip, atelier, collaboration ou projet culturel.",
       },
     ],
-    examplesTitle: "Un exemple danseur à consulter.",
+    examplesTitle: "Un exemple danseur à consulter",
     detailsTitle: "Que mettre dans un press kit danseur ?",
     detailsDescription:
       "Un chorégraphe, une compagnie, une marque ou un directeur de casting doit trouver ces éléments en moins d'une minute.",
@@ -145,7 +145,7 @@ const pageCopy: Record<string, PageCopy> = {
     ],
   },
   photographe: {
-    promiseTitle: "Montrer ton portfolio et expliquer tes prestations.",
+    promiseTitle: "Montrer ton portfolio et expliquer tes prestations",
     promiseDescription:
       "La page présente tes images, tes formats photo ou vidéo, tes zones d’intervention et ton contact.",
     benefits: [
@@ -162,8 +162,8 @@ const pageCopy: Record<string, PageCopy> = {
         description: "La personne trouve tes formats, ta zone d’intervention et ton contact avant d’écrire.",
       },
     ],
-    examplesTitle: "Un exemple photographe à consulter.",
-    detailsTitle: "Ce qui manque souvent dans un simple portfolio.",
+    examplesTitle: "Un exemple photographe à consulter",
+    detailsTitle: "Ce qui manque souvent dans un simple portfolio",
     detailsDescription:
       "Le press kit ajoute les services, les formats, les zones d’intervention et le contact à côté des images.",
     extraChecklist: {
@@ -183,7 +183,7 @@ const pageCopy: Record<string, PageCopy> = {
     },
   },
   "coach-sportif": {
-    promiseTitle: "Expliquer ton coaching sans multiplier les messages.",
+    promiseTitle: "Expliquer ton coaching sans multiplier les messages",
     promiseDescription:
       "La page présente ta méthode, tes offres, tes résultats, tes réseaux et la prise de rendez-vous.",
     benefits: [
@@ -200,7 +200,7 @@ const pageCopy: Record<string, PageCopy> = {
         description: "La personne sait ce qu’elle peut réserver et comment te contacter.",
       },
     ],
-    examplesTitle: "Un exemple coach sportif à consulter.",
+    examplesTitle: "Un exemple coach sportif à consulter",
     detailsTitle: "Que mettre dans un press kit coach sportif ?",
     detailsDescription:
       "Un futur client doit comprendre ton coaching et réserver sans échanger dix messages.",
@@ -216,7 +216,7 @@ const pageCopy: Record<string, PageCopy> = {
     ],
   },
   "make-up-artist": {
-    promiseTitle: "Montrer tes looks et expliquer tes prestations.",
+    promiseTitle: "Montrer tes looks et expliquer tes prestations",
     promiseDescription:
       "La page présente ton portfolio, tes prestations, tes références et ton contact.",
     benefits: [
@@ -233,7 +233,7 @@ const pageCopy: Record<string, PageCopy> = {
         description: "Une cliente, une marque ou une production trouve ton portfolio et ton contact au même endroit.",
       },
     ],
-    examplesTitle: "Un exemple make-up artist à consulter.",
+    examplesTitle: "Un exemple make-up artist à consulter",
     detailsTitle: "Que mettre dans un press kit make-up artist ?",
     detailsDescription:
       "Une future mariée, une marque ou une production doit trouver ces éléments en moins d'une minute.",
@@ -249,7 +249,7 @@ const pageCopy: Record<string, PageCopy> = {
     ],
   },
   organisateur: {
-    promiseTitle: "Présenter ton événement à un lieu, un sponsor ou un partenaire.",
+    promiseTitle: "Présenter ton événement à un lieu, un sponsor ou un partenaire",
     promiseDescription:
       "La page regroupe le format de l’événement, les photos, les vidéos, les chiffres, les partenaires et le contact.",
     benefits: [
@@ -266,7 +266,7 @@ const pageCopy: Record<string, PageCopy> = {
         description: "Un lieu, une marque ou un sponsor trouve rapidement comment engager la discussion.",
       },
     ],
-    examplesTitle: "Un exemple événementiel à consulter.",
+    examplesTitle: "Un exemple événementiel à consulter",
     detailsTitle: "Que mettre dans un press kit organisateur (dossier de sponsoring) ?",
     detailsDescription:
       "Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y gagne avant de répondre.",
@@ -288,11 +288,11 @@ export function CategoryContent({ category }: CategoryContentProps) {
   const categoryExamples = getExamplesForPresskitCategory(category.slug);
   const displayedExamples = categoryExamples.slice(1, category.slug === "dj" ? 5 : 4);
   const copy = pageCopy[category.slug] ?? {
-    promiseTitle: "Présenter les informations utiles dans un seul lien.",
+    promiseTitle: "Présenter les informations utiles dans un seul lien",
     promiseDescription: category.description,
     benefits: category.benefits,
-    examplesTitle: "Des exemples concrets pour se projeter.",
-    detailsTitle: "Les informations essentielles, dans le bon ordre.",
+    examplesTitle: "Des exemples concrets pour se projeter",
+    detailsTitle: "Les informations essentielles, dans le bon ordre",
     detailsDescription: category.description,
   };
 

@@ -20,7 +20,7 @@ export const pricingTiers: PricingTier[] = [
     tagline: "pour lancer ton image pro",
     description: "L’offre idéale pour créer un press kit clair, premium et prêt à partager.",
     features: [
-      "Page press kit sur-mesure",
+      "Page press kit sur mesure",
       "Adaptation mobile",
       "Jusqu’à 5 sections",
       "Galerie photos / vidéos",

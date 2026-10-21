@@ -10,7 +10,7 @@ const categoryExampleLabels: Record<string, string[]> = {
   artiste: ["Artiste peintre", "Chanteuse", "Chanteur / Rap"],
   dj: ["DJ"],
   danseur: ["Danseur"],
-  photographe: ["Photographe"],
+  photographe: ["Photographe", "Photographe-vidéaste"],
   "coach-sportif": ["Coach sportif"],
   "make-up-artist": ["Make-up artist"],
   organisateur: ["Organisateur", "Organisateur de soirée"],

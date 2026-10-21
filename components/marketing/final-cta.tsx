@@ -8,10 +8,10 @@ export function FinalCta() {
       <PageShell className="max-w-5xl">
         <div className="mx-auto max-w-4xl py-2 text-center md:py-4">
           <h2 id="final-cta-title" className="mx-auto max-w-3xl text-5xl font-semibold leading-[1.02] tracking-tighter2 text-ink-editorial md:text-7xl">
-            Parle-nous de ton univers.
+            Parle-nous de ton univers
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-9 text-[#3d4551] md:text-xl md:leading-10">
-            On t’aide à cadrer le bon format, le bon niveau de design et les contenus qui feront vraiment la différence.
+            Dis-nous ce que tu fais et à qui tu veux l’envoyer : on te répond avec le format et le prix.
           </p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row md:mt-8">
             <a
@@ -21,14 +21,14 @@ export function FinalCta() {
               className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-8 py-[1.125rem] text-base font-semibold text-[#07140c] shadow-[0_18px_50px_rgba(37,211,102,0.24),inset_0_-1px_0_rgba(7,20,12,0.14)] hover:bg-[#1fbd59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              Discuter du projet
+              Écrire sur WhatsApp
             </a>
             <a
               href="mailto:contact@presskit.fr"
               className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-ink-editorial/[0.24] bg-white px-8 py-[1.125rem] text-base font-semibold text-ink-editorial shadow-[0_12px_34px_rgba(13,16,22,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] hover:border-ink-editorial/[0.36] hover:bg-[#F4EFE7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
-              Envoyer un email
+              Envoyer un e-mail
             </a>
           </div>
         </div>

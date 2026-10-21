@@ -22,7 +22,7 @@ const comparisonRows = [
   {
     criterion: "Référencement",
     current: "Instagram, PDF ou Linktree travaillent peu ta visibilité Google.",
-    presskit: "Une page structurée peut être comprise, indexée et partagée plus facilement.",
+    presskit: "Une vraie page web, que Google peut afficher quand on cherche ton nom.",
   },
   {
     criterion: "Mise à jour",

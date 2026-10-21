@@ -16,10 +16,10 @@ type ProcessTimelineProps = {
 
 const dossierCards = [
   {
-    status: "BRIEF RECU",
+    status: "BRIEF REÇU",
     title: "On récupère tes contenus.",
     description: "Tu envoies tes textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter ton activité. Le brief se fait en rendez-vous en Île-de-France, ou en visio pour les clients plus éloignés.",
-    meta: "Jour 01 / Notes client",
+    meta: "Jour 1 / Notes client",
     when: "Jour 1",
     summary: "Tu envoies tes textes, photos, vidéos, liens et références.",
     visual: "brief",
@@ -27,10 +27,10 @@ const dossierCards = [
   {
     status: "MAQUETTE",
     title: "On prépare la maquette.",
-    description: "On choisit la direction artistique, l'organisation des informations et la hiérarchisation des boutons d'action",
-    meta: "Jour 02-03 / Maquette",
+    description: "On choisit le style, l'ordre des sections et ce que le visiteur doit voir en premier.",
+    meta: "Jours 2-3 / Maquette",
     when: "Jours 2-3",
-    summary: "On choisit la direction artistique, l'organisation des informations et la hiérarchisation des boutons d'action.",
+    summary: "On choisit le style, l'ordre des sections et ce que le visiteur doit voir en premier.",
     visual: "direction",
   },
   {
@@ -47,7 +47,7 @@ const dossierCards = [
 function CompactVisual({ type }: { type: string }) {
   if (type === "direction") {
     return (
-      <div className="relative h-56 overflow-hidden bg-[#f5f5f1] p-4 text-ink-editorial md:h-64">
+      <div className="relative h-56 overflow-hidden bg-[#f5f5f1] p-4 text-ink-editorial md:h-64" aria-hidden="true">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(16,20,29,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(16,20,29,0.055)_1px,transparent_1px)] bg-[size:28px_28px]" />
         <div className="relative grid h-full grid-cols-[1fr_3.4rem] gap-3">
           <div className="grid grid-rows-[0.8fr_0.65fr_0.55fr] gap-3">
@@ -112,7 +112,7 @@ function CompactVisual({ type }: { type: string }) {
   }
 
   return (
-    <div className="relative h-56 overflow-hidden bg-[#f2efe8] p-4 text-ink-editorial md:h-64">
+    <div className="relative h-56 overflow-hidden bg-[#f2efe8] p-4 text-ink-editorial md:h-64" aria-hidden="true">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(16,20,29,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(16,20,29,0.045)_1px,transparent_1px)] bg-[size:32px_32px]" />
       <div className="relative grid h-full grid-cols-[0.95fr_1.05fr] gap-3">
         <div className="grid grid-rows-[1fr_0.75fr] gap-3">
@@ -178,7 +178,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
           {showHeading ? (
             <div className="max-w-2xl">
               <h2 id="process-title" className="text-4xl font-semibold leading-[0.98] tracking-tighter2 text-white md:text-6xl">
-                Une méthode en trois temps.
+                Une méthode en trois temps
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/[0.64] md:text-lg">
                 On part de tes contenus, on construit une maquette claire, puis on met en ligne un press kit prêt à envoyer.

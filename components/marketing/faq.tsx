@@ -14,7 +14,7 @@ type FaqProps = {
 
 export function Faq({
   items = faqItems,
-  title = "Les questions les plus fréquentes avant de lancer un projet.",
+  title = "Les questions les plus fréquentes avant de lancer un projet",
   description = "Délais, contenus, modifications, options et paiement : l’essentiel avant de commencer.",
   id = "faq",
 }: FaqProps) {

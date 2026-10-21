@@ -5,6 +5,7 @@ import { categories, examples } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
+import { withDe } from "@/lib/utils";
 
 export function ExamplesShowcase() {
   const exampleBadges = [
@@ -19,7 +20,7 @@ export function ExamplesShowcase() {
       <PageShell>
         <SectionHeading
           eyebrow="Exemples"
-          title="Quelques directions possibles selon l’univers et le niveau de gamme."
+          title="Quelques directions possibles selon l’univers et le niveau de gamme"
           description="Le site présente des démos par catégorie pour aider à se projeter rapidement dans un rendu concret."
         />
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
@@ -44,7 +45,7 @@ export function ExamplesShowcase() {
                     <>
                       <Image
                         src={image}
-                        alt={`Press kit de ${example.title}, ${example.category}`}
+                        alt={`Press kit ${withDe(example.title)}, ${example.category}`}
                         fill
                         sizes="(min-width: 1024px) 32vw, 90vw"
                         className="object-cover object-top"

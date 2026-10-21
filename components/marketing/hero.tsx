@@ -1,7 +1,7 @@
 "use client";
 
 import { EXAMPLE_URLS } from "@/content/example-urls";
-import { CTA } from "@/content/site";
+import { CTA, liveExamplesCount } from "@/content/site";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
 import { motionTokens } from "@/lib/motion";
+import { withDe } from "@/lib/utils";
 
 type HeroKit = {
   title: string;
@@ -137,7 +138,7 @@ export function Hero() {
               </span>
             </h1>
             <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.74] md:mt-6 md:text-lg md:leading-9">
-              Valorise ton image avec un press kit digital premium, déjà adopté par des artistes, DJs, photographes et créateurs.
+              {liveExamplesCount} artistes, DJs, photographes et créateurs ont déjà le leur.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center">
               <Button
@@ -204,7 +205,7 @@ export function Hero() {
                       <span className="relative block aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
                         <Image
                           src={kit.desktopImage}
-                          alt={`Press kit de ${kit.title}, ${kit.category}, version desktop`}
+                          alt={`Press kit ${withDe(kit.title)}, ${kit.category}, version desktop`}
                           fill
                           priority={slot.offset === 0}
                           sizes={slot.offset === 0 ? "(min-width: 1024px) 45vw, 88vw" : "(min-width: 1024px) 30vw, 62vw"}
@@ -220,7 +221,7 @@ export function Hero() {
                             <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
                             <Image
                               src={mobileImage}
-                              alt={`Press kit de ${kit.title}, ${kit.category}, version mobile`}
+                              alt={`Press kit ${withDe(kit.title)}, ${kit.category}, version mobile`}
                               fill
                               sizes="(min-width: 1024px) 11vw, 20vw"
                               className="object-cover object-top"
@@ -255,7 +256,7 @@ export function Hero() {
                         <span className="relative block aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
                           <Image
                             src={kit.desktopImage}
-                            alt={`Press kit de ${kit.title}, ${kit.category}, version desktop`}
+                            alt={`Press kit ${withDe(kit.title)}, ${kit.category}, version desktop`}
                             fill
                             priority={index === 0}
                             sizes="90vw"
@@ -268,7 +269,7 @@ export function Hero() {
                               <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
                               <Image
                                 src={mobileImage}
-                                alt={`Press kit de ${kit.title}, ${kit.category}, version mobile`}
+                                alt={`Press kit ${withDe(kit.title)}, ${kit.category}, version mobile`}
                                 fill
                                 sizes="23vw"
                                 className="object-cover object-top"

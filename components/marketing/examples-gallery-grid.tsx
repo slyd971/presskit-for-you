@@ -7,7 +7,7 @@ import { categories, examples } from "@/content/site";
 import { PageShell } from "@/components/layout/page-shell";
 import { ExampleMockup } from "@/components/marketing/example-mockup";
 import type { PreviewAssets } from "@/lib/preview-assets";
-import { cn } from "@/lib/utils";
+import { cn, withDe } from "@/lib/utils";
 
 // Groupes par métier : ordre des cartes et lien vers la page métier sous chaque H2.
 const exampleGroups = [
@@ -104,7 +104,8 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
             ) : null}
             <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {group.examples.map((example) => {
-                const category = categories.find((item) => item.shortName === example.category);
+                // startsWith : « Photographe-vidéaste » reprend la catégorie « Photographe ».
+                const category = categories.find((item) => example.category.startsWith(item.shortName));
                 const href = example.externalDemoUrl ?? category?.externalDemoUrl ?? example.href;
                 const isExternal = href.startsWith("http");
                 const image = example.image ?? category?.heroImage;
@@ -130,14 +131,14 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                     <h3 className="mt-3 text-2xl font-semibold text-white">{example.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-white/[0.64]">{example.description}</p>
                     <p className="mt-6 text-sm font-medium text-white/[0.84]">
-                      {isExternal ? `Voir le press kit de ${example.title}` : "Decouvrir ce format"}{" "}
+                      {isExternal ? `Voir le press kit ${withDe(example.title)}` : "Decouvrir ce format"}{" "}
                       <span className="transition group-hover:translate-x-1 inline-block">→</span>
                     </p>
                     <Link
                       href={href}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noreferrer" : undefined}
-                      aria-label={`Voir le press kit de ${example.title}${isExternal ? " (nouvel onglet)" : ""}`}
+                      aria-label={`Voir le press kit ${withDe(example.title)}${isExternal ? " (nouvel onglet)" : ""}`}
                       className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
                     />
                   </div>
