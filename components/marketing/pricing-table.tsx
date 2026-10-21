@@ -25,15 +25,15 @@ export function PricingTable({
   const isHighlight = variant === "highlight";
   const spacingClass = showHeading ? "pt-16 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
   const offerTone = {
-    title: "text-[#10141d]",
-    border: "border-[#10141d]/[0.14]",
-    tierBorder: "border-[#10141d]/[0.1]",
-    tierAccent: "bg-[#10141d]/[0.035]",
-    tierSubtle: "bg-[#10141d]/[0.018]",
-    headingMeta: "text-[#5d6470]",
+    title: "text-ink-editorial",
+    border: "border-ink-editorial/[0.12]",
+    tierBorder: "border-ink-editorial/[0.12]",
+    tierAccent: "bg-ink-editorial/[0.035]",
+    tierSubtle: "bg-ink-editorial/[0.018]",
+    headingMeta: "text-text-muted-light",
     body: "text-[#303744]",
     feature: "text-[#1f2632]",
-    rule: "bg-[#10141d]/30",
+    rule: "bg-ink-editorial/30",
   };
 
   return (
@@ -59,9 +59,9 @@ export function PricingTable({
           {pricingTiers.map((tier, index) => {
             const isQuote = !hasAmount(tier.price);
             const featureList = (
-              <ul className="relative grid grid-cols-2 gap-x-3 border-y border-[#10141d]/[0.1] md:mt-9 md:flex-1 md:grid-cols-1 md:gap-x-0">
+              <ul className="relative grid grid-cols-2 gap-x-3 border-y border-ink-editorial/[0.12] md:mt-9 md:flex-1 md:grid-cols-1 md:gap-x-0">
                 {tier.features.slice(0, 5).map((feature) => (
-                  <li key={feature} className={`flex items-center gap-2 border-b border-[#10141d]/[0.08] py-1.5 text-xs last:border-b-0 md:gap-4 md:py-3.5 md:text-sm ${offerTone.feature}`}>
+                  <li key={feature} className={`flex items-center gap-2 border-b border-ink-editorial/[0.08] py-1.5 text-xs last:border-b-0 md:gap-4 md:py-3.5 md:text-sm ${offerTone.feature}`}>
                     <span className={`hidden h-px shrink-0 md:block md:w-7 ${offerTone.rule}`} aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
@@ -78,7 +78,7 @@ export function PricingTable({
               >
                 <div className="relative flex items-start justify-between gap-4">
                   <h3 className={`max-w-sm text-2xl font-semibold leading-none tracking-tighter2 md:text-[clamp(2.15rem,3.8vw,4.2rem)] ${offerTone.title}`}>{tier.name}</h3>
-                  <span className={`text-right text-[10px] font-semibold uppercase tracking-[0.18em] ${offerTone.headingMeta}`}>
+                  <span className={`text-right text-[10px] font-semibold uppercase tracking-label-tight ${offerTone.headingMeta}`}>
                     {tier.badge}
                   </span>
                 </div>
@@ -97,7 +97,7 @@ export function PricingTable({
                   {isQuote ? CTA.quote : CTA.primary}
                 </Button>
                 {isQuote ? (
-                  <details className="acc group relative mt-3 border-t border-[#10141d]/[0.1] md:hidden">
+                  <details className="acc group relative mt-3 border-t border-ink-editorial/[0.12] md:hidden">
                     <summary className={`flex cursor-pointer list-none items-center justify-between gap-4 py-2.5 text-sm font-semibold [&::-webkit-details-marker]:hidden ${offerTone.feature}`}>
                       Voir ce qui est inclus
                       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
@@ -113,37 +113,37 @@ export function PricingTable({
         <div className="mt-4 py-3 md:mt-12 md:py-10">
           <div className="grid gap-3 md:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.52]">Options</p>
+              <p className="text-xs font-semibold uppercase tracking-label text-white/[0.64]">Options</p>
               <h3 className="mt-3 max-w-lg text-2xl font-semibold leading-tight tracking-tighter2 text-white md:mt-4 md:text-4xl">
                 À ajouter seulement si ton projet en a besoin.
               </h3>
-              <p className="mt-2 text-sm leading-6 text-white/[0.66] md:mt-4 md:leading-7">
+              <p className="mt-2 text-sm leading-6 text-white/[0.64] md:mt-4 md:leading-7">
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.
               </p>
             </div>
             <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
               {pricingOptions.map((option) => (
                 <div key={option.name}>
-                  <details className="acc group border-b border-white/[0.09] py-3 md:hidden">
+                  <details className="acc group border-b border-white/[0.08] py-3 md:hidden">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
                       <span>
                         <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
-                        <span className="mt-0.5 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">
+                        <span className="mt-0.5 block text-sm font-semibold tracking-tighter2 text-white/[0.74]">
                           {option.price}
                         </span>
                       </span>
-                      <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
+                      <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.64] transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
                     </summary>
                     <div className="acc-body">
-                      <p className="pr-8 pt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
+                      <p className="pr-8 pt-3 text-sm leading-6 text-white/[0.64]">{option.description}</p>
                     </div>
                   </details>
-                  <article className="motion-line hidden border-b border-white/[0.09] py-5 md:block md:border-r md:px-5 md:last:border-r">
+                  <article className="motion-line hidden border-b border-white/[0.08] py-5 md:block md:border-r md:px-5 md:last:border-r">
                     <div className="flex items-baseline justify-between gap-4">
                       <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
                       <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
                     </div>
-                    <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
+                    <p className="mt-3 text-sm leading-6 text-white/[0.64]">{option.description}</p>
                   </article>
                 </div>
               ))}

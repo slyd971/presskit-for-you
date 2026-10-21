@@ -51,7 +51,7 @@ export function SiteHeader() {
         <div
           aria-hidden="true"
           className={cn(
-            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-white/[0.08] bg-[#0b0e14]/[0.9] shadow-[0_12px_36px_rgba(0,0,0,0.18)] backdrop-blur-xl",
+            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-white/[0.08] bg-surface-900/90 shadow-[0_12px_36px_rgba(0,0,0,0.18)] backdrop-blur-xl",
             isCompact && "-translate-y-2 opacity-0",
           )}
         />
@@ -93,7 +93,7 @@ export function SiteHeader() {
                 href={item.href}
                 className={cn(
                   "text-[15px] font-semibold transition",
-                  isCompact ? "text-[#10141d]/[0.78] hover:text-[#10141d]" : "text-white/[0.82] hover:text-white",
+                  isCompact ? "text-text-secondary-light hover:text-ink-editorial" : "text-white/[0.84] hover:text-white",
                 )}
               >
                 {item.label}
@@ -118,7 +118,7 @@ export function SiteHeader() {
               onClick={() => setIsOpen((open) => !open)}
               className={cn(
                 "inline-flex h-10 w-10 items-center justify-center rounded-lg transition md:hidden",
-                isCompact ? "text-[#10141d] hover:bg-[#10141d]/[0.06]" : "text-white hover:bg-white/[0.08]",
+                isCompact ? "text-ink-editorial hover:bg-ink-editorial/[0.06]" : "text-white hover:bg-white/[0.08]",
               )}
             >
               <motion.div
@@ -169,8 +169,8 @@ export function SiteHeader() {
                         className={cn(
                           "block rounded-lg border border-transparent px-3 py-3 text-[15px] font-semibold transition",
                           isCompact
-                            ? "text-[#10141d]/[0.82] hover:border-[#10141d]/10 hover:bg-[#10141d]/[0.04] hover:text-[#10141d]"
-                            : "text-white/[0.86] hover:border-white/10 hover:bg-white/[0.04] hover:text-white",
+                            ? "text-text-secondary-light hover:border-ink-editorial/[0.12] hover:bg-ink-editorial/[0.04] hover:text-ink-editorial"
+                            : "text-white/[0.84] hover:border-white/[0.12] hover:bg-white/[0.04] hover:text-white",
                         )}
                       >
                         {item.label}

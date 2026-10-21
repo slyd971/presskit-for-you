@@ -247,7 +247,7 @@ export const categories: Category[] = [
     accent: "#F4C26B",
     accentSoft: "rgba(244,194,107,0.18)",
     gradient:
-      "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+      "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
     heroTitle: "Press kit artiste : ta musique, ta scène, tes contacts presse",
     heroTitleKicker: true,
     heroDescription:
@@ -299,7 +299,7 @@ export const categories: Category[] = [
     accent: "#FF9152",
     accentSoft: "rgba(255,145,82,0.18)",
     gradient:
-      "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+      "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
     heroTitle: "Press kit DJ : ton profil clair pour les bookers",
     heroDescription:
       "Présente tes styles, tes photos, tes vidéos, tes liens d’écoute, tes références et ton contact booking.",
@@ -350,7 +350,7 @@ export const categories: Category[] = [
     accent: "#D5A928",
     accentSoft: "rgba(213,169,40,0.18)",
     gradient:
-      "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
+      "from-[#D5A928]/[0.28] via-[#63E6BE]/[0.12] to-transparent",
     heroTitle: "Press kit danseur : ton parcours, tes vidéos, tes collaborations",
     heroTitleKicker: true,
     heroDescription:
@@ -402,7 +402,7 @@ export const categories: Category[] = [
     accent: "#D04C57",
     accentSoft: "rgba(208,76,87,0.18)",
     gradient:
-      "from-[#D04C57]/28 via-[#4B6CFF]/12 to-transparent",
+      "from-[#D04C57]/[0.28] via-[#4B6CFF]/[0.12] to-transparent",
     heroTitle: "Press kit photographe : ton regard, tes images, tes prestations",
     heroTitleKicker: true,
     heroDescription:
@@ -458,7 +458,7 @@ export const categories: Category[] = [
     accent: "#63E6BE",
     accentSoft: "rgba(99,230,190,0.18)",
     gradient:
-      "from-[#63E6BE]/28 via-[#4DA6FF]/12 to-transparent",
+      "from-[#63E6BE]/[0.28] via-[#4DA6FF]/[0.12] to-transparent",
     heroTitle: "Press kit coach sportif : ton coaching, tes offres, tes résultats",
     heroTitleKicker: true,
     heroDescription:
@@ -507,7 +507,7 @@ export const categories: Category[] = [
     accent: "#FF8DAA",
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
-      "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+      "from-[#FF8DAA]/[0.28] via-[#FFD37A]/[0.12] to-transparent",
     heroTitle: "Press kit make-up artist : tes looks, tes prestations, ton contact",
     heroTitleKicker: true,
     heroDescription:
@@ -558,7 +558,7 @@ export const categories: Category[] = [
     accent: "#FF8DAA",
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
-      "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+      "from-[#FF8DAA]/[0.28] via-[#FFD37A]/[0.12] to-transparent",
     heroTitle: "Press kit organisateur : ton événement, lisible pour les lieux et sponsors",
     heroTitleKicker: true,
     heroDescription:
@@ -610,7 +610,7 @@ export const categories: Category[] = [
     accent: "#D7A86E",
     accentSoft: "rgba(215,168,110,0.18)",
     gradient:
-      "from-[#D7A86E]/28 via-[#E25E3E]/12 to-transparent",
+      "from-[#D7A86E]/[0.28] via-[#E25E3E]/[0.12] to-transparent",
     heroTitle: "Un press kit culinaire qui ouvre l’appétit et rassure tes clients.",
     heroDescription:
       "Concept, prestations, galerie plats, formats événementiels et contact devis réunis dans une présentation premium.",

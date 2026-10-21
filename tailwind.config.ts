@@ -26,6 +26,7 @@ const config: Config = {
           850: "#111620",
           900: "#0D1118",
         },
+        mockup: "#080B11",
         "light-section-end": "#F6F7F8",
         "text-secondary-light": "#4D5561",
         "text-muted-light": "#5D6470",
@@ -70,6 +71,7 @@ const config: Config = {
       letterSpacing: {
         tighter2: "-0.05em",
         label: "0.22em",
+        "label-tight": "0.16em",
       },
       transitionDuration: {
         feedback: "var(--duration-feedback)",

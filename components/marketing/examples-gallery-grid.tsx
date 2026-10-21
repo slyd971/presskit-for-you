@@ -40,10 +40,10 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
               type="button"
               onClick={() => setActiveFilter(filter.value)}
               className={cn(
-                "rounded-lg border px-4 py-2 text-sm font-medium transition duration-300",
+                "rounded-lg border px-4 py-2 text-sm font-medium transition duration-fast",
                 activeFilter === filter.value
                   ? "border-white/[0.24] bg-white text-ink shadow-[0_18px_48px_rgba(255,255,255,0.14)]"
-                  : "border-white/10 bg-white/[0.045] text-white/[0.68] hover:border-white/[0.18] hover:bg-white/[0.08] hover:text-white",
+                  : "border-white/[0.12] bg-white/[0.04] text-white/[0.64] hover:border-white/[0.18] hover:bg-white/[0.08] hover:text-white",
               )}
             >
               {filter.label}
@@ -75,10 +75,10 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                   mobileSizes="(min-width: 1280px) 8vw, (min-width: 768px) 12vw, 22vw"
                   preview={previewAssets[example.slug]}
                 />
-                <p className="mt-5 text-xs uppercase tracking-[0.28em] text-white/44">{example.category}</p>
+                <p className="mt-5 text-xs uppercase tracking-label text-white/[0.64]">{example.category}</p>
                 <h2 className="mt-3 text-2xl font-semibold text-white">{example.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-white/64">{example.description}</p>
-                <p className="mt-6 text-sm font-medium text-white/80">
+                <p className="mt-3 text-sm leading-7 text-white/[0.64]">{example.description}</p>
+                <p className="mt-6 text-sm font-medium text-white/[0.84]">
                   {isExternal ? `Voir le press kit de ${example.title}` : "Decouvrir ce format"}{" "}
                   <span className="transition group-hover:translate-x-1 inline-block">→</span>
                 </p>
@@ -87,7 +87,7 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
                   aria-label={`Voir le press kit de ${example.title}${isExternal ? " (nouvel onglet)" : ""}`}
-                  className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+                  className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
                 />
               </div>
             );

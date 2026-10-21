@@ -208,7 +208,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
               <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
                 {copy.promiseTitle}
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.72] md:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
                 {copy.promiseDescription}
               </p>
             </div>
@@ -223,7 +223,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                       <h3 className="text-[clamp(1.45rem,2.4vw,2.25rem)] font-semibold leading-tight tracking-tighter2 text-white">
                         {benefit.title}
                       </h3>
-                      <p className="mt-4 max-w-2xl text-sm leading-7 text-white/[0.66] md:text-base md:leading-8">
+                      <p className="mt-4 max-w-2xl text-sm leading-7 text-white/[0.64] md:text-base md:leading-8">
                         {benefit.description}
                       </p>
                     </div>
@@ -274,12 +274,12 @@ export function CategoryContent({ category }: CategoryContentProps) {
                         mobileSizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
                         preview={previewAssets[example.slug]}
                       />
-                      <div className="relative mt-2 border-y border-white/[0.1] py-5">
+                      <div className="relative mt-2 border-y border-white/[0.12] py-5">
                         <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
                           {example.title}
                         </h3>
                       </div>
-                      <p className="mt-5 flex-1 text-sm leading-7 text-white/[0.68]">
+                      <p className="mt-5 flex-1 text-sm leading-7 text-white/[0.64]">
                         {example.description}
                       </p>
                       <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
@@ -291,7 +291,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                         target={isExternal ? "_blank" : undefined}
                         rel={isExternal ? "noreferrer" : undefined}
                         aria-label={`${example.title} : ouvrir la démo${isExternal ? " (nouvel onglet)" : ""}`}
-                        className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+                        className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
                       />
                     </div>
                   </Reveal>
@@ -313,7 +313,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
             <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
               {copy.detailsTitle}
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.72] md:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
               {copy.detailsDescription}
             </p>
           </div>
@@ -322,7 +322,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
               {category.includes.map((item, index) => (
                 <div key={item} className="motion-line grid grid-cols-[1.25rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
                   <span className="mt-2 h-px w-5 bg-white/[0.32]" aria-hidden="true" />
-                  <p className="text-sm font-medium leading-6 text-white/[0.76]">{item}</p>
+                  <p className="text-sm font-medium leading-6 text-white/[0.74]">{item}</p>
                 </div>
               ))}
             </div>

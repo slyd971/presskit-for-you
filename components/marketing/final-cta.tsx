@@ -7,7 +7,7 @@ export function FinalCta() {
     <section id="contact" className="section-contact scroll-mt-28 py-16 md:py-24" aria-labelledby="final-cta-title">
       <PageShell className="max-w-5xl">
         <div className="mx-auto max-w-4xl py-2 text-center md:py-4">
-          <h2 id="final-cta-title" className="mx-auto max-w-3xl text-5xl font-semibold leading-[1.02] tracking-tighter2 text-[#10141d] md:text-7xl">
+          <h2 id="final-cta-title" className="mx-auto max-w-3xl text-5xl font-semibold leading-[1.02] tracking-tighter2 text-ink-editorial md:text-7xl">
             Parle-nous de ton univers.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-9 text-[#3d4551] md:text-xl md:leading-10">
@@ -25,7 +25,7 @@ export function FinalCta() {
             </a>
             <a
               href="mailto:contact@presskit.fr"
-              className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-[#10141d]/[0.24] bg-white px-8 py-[1.125rem] text-base font-semibold text-[#10141d] shadow-[0_12px_34px_rgba(13,16,22,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] hover:border-[#10141d]/[0.36] hover:bg-[#F4EFE7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+              className="button-cycle cta-shine inline-flex items-center justify-center gap-2 rounded-lg border border-ink-editorial/[0.24] bg-white px-8 py-[1.125rem] text-base font-semibold text-ink-editorial shadow-[0_12px_34px_rgba(13,16,22,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] hover:border-ink-editorial/[0.36] hover:bg-[#F4EFE7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
               Envoyer un email
