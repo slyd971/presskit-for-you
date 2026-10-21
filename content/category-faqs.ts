@@ -7,6 +7,11 @@ const pricingAnswer = `À partir de 300 €, livré en ${LEGAL.deliveryDays} jou
 export const categoryFaqs: Record<string, FaqEntry[]> = {
   dj: [
     {
+      question: "Press kit DJ, EPK ou dossier de presse : c'est pareil ?",
+      answer:
+        "Oui. EPK (electronic press kit) est le terme anglais, dossier de presse le terme français. Ici, c'est une page web à jour plutôt qu'un PDF à renvoyer à chaque nouvelle date.",
+    },
+    {
       question: "Puis-je intégrer mes mixes SoundCloud ou Mixcloud ?",
       answer: "Oui, tes sets sont intégrés dans la page : le booker écoute sans quitter ton press kit.",
     },

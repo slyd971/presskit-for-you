@@ -91,9 +91,21 @@ const pageCopy: Record<string, PageCopy> = {
       },
     ],
     examplesTitle: "Des exemples DJ déjà en ligne.",
-    detailsTitle: "Ce qu’un booker doit trouver avant de te programmer.",
+    detailsTitle: "Que mettre dans un press kit DJ ?",
     detailsDescription:
-      "Le press kit donne les informations attendues avant un booking : styles, médias, références, réseaux et contact.",
+      "Un booker, un club ou une agence doit trouver ces éléments en moins d'une minute, sur mobile. C'est ce qu'on appelle aussi un EPK DJ (electronic press kit) ou un dossier de presse DJ.",
+    checklist: [
+      { title: "Bio courte et bio longue", description: "trois lignes pour un flyer ou une programmation, et une version complète pour les médias." },
+      { title: "Styles et formats de set", description: "genres joués (house, afro, hip-hop, open format…), durée, warm-up, peak time ou closing." },
+      { title: "Mixes à écouter", description: "SoundCloud, Mixcloud ou YouTube, ton mix le plus récent en premier." },
+      { title: "Vidéos de sets", description: "un extrait filmé en club ou en festival vaut plus qu'une description." },
+      { title: "Références", description: "clubs, festivals, résidences, premières parties, événements privés." },
+      { title: "Photos presse et logo", description: "en haute définition, téléchargeables, en version claire et sombre." },
+      { title: "Rider et fiche technique", description: "matériel attendu (platines, table de mixage, retours) et conditions d'accueil." },
+      { title: "Chiffres", description: "abonnés, écoutes, dates jouées par an." },
+      { title: "Zone et disponibilités", description: "ville de base, déplacements, délai de réservation." },
+      { title: "Contact booking", description: "un e-mail ou un numéro direct, et ton agence si tu en as une." },
+    ],
   },
   danseur: {
     promiseTitle: "Présenter ton parcours, tes vidéos et tes collaborations.",
@@ -343,30 +355,31 @@ export function CategoryContent({ category }: CategoryContentProps) {
               {copy.detailsDescription}
             </p>
           </div>
-          {copy.checklist ? (
-            <div>
-              <ol className="border-y border-white/[0.12]">
-                {copy.checklist.map((item, index) => (
-                  <li key={item.title} className="motion-line grid grid-cols-[1.75rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
-                    <span className="text-sm font-semibold leading-6 text-white/[0.64]">{String(index + 1).padStart(2, "0")}</span>
-                    <p className="text-sm font-medium leading-6 text-white/[0.74]">
-                      <strong className="font-semibold text-white">{item.title} :</strong> {item.description}
-                    </p>
-                  </li>
-                ))}
-              </ol>
-              {copy.checklistNote ? <p className="mt-6 text-sm leading-6 text-white/[0.74]">{copy.checklistNote}</p> : null}
-            </div>
-          ) : (
           <div className="grid gap-8">
-            <div className="border-y border-white/[0.12]">
-              {category.includes.map((item, index) => (
-                <div key={item} className="motion-line grid grid-cols-[1.25rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
-                  <span className="mt-2 h-px w-5 bg-white/[0.32]" aria-hidden="true" />
-                  <p className="text-sm font-medium leading-6 text-white/[0.74]">{item}</p>
-                </div>
-              ))}
-            </div>
+            {copy.checklist ? (
+              <div>
+                <ol className="border-y border-white/[0.12]">
+                  {copy.checklist.map((item, index) => (
+                    <li key={item.title} className="motion-line grid grid-cols-[1.75rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
+                      <span className="text-sm font-semibold leading-6 text-white/[0.64]">{String(index + 1).padStart(2, "0")}</span>
+                      <p className="text-sm font-medium leading-6 text-white/[0.74]">
+                        <strong className="font-semibold text-white">{item.title} :</strong> {item.description}
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+                {copy.checklistNote ? <p className="mt-6 text-sm leading-6 text-white/[0.74]">{copy.checklistNote}</p> : null}
+              </div>
+            ) : (
+              <div className="border-y border-white/[0.12]">
+                {category.includes.map((item) => (
+                  <div key={item} className="motion-line grid grid-cols-[1.25rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
+                    <span className="mt-2 h-px w-5 bg-white/[0.32]" aria-hidden="true" />
+                    <p className="text-sm font-medium leading-6 text-white/[0.74]">{item}</p>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="grid gap-4 md:grid-cols-2">
               {category.modules.map((module) => (
                 <div key={module} className="border-l border-white/[0.18] pl-4">
@@ -375,7 +388,6 @@ export function CategoryContent({ category }: CategoryContentProps) {
               ))}
             </div>
           </div>
-          )}
         </PageShell>
       </section>
 
