@@ -15,7 +15,7 @@ const exampleGroups = [
     title: "Press kits DJ",
     href: "/dj",
     linkLabel: "Voir la page press kit DJ",
-    titles: ["DJ MACK", "Soyumi", "FLO", "Arthur Chaps", "DJ SLY'D", "Yoruboy", "DJ Pirate", "DJ GDC", "Silver DJ", "Paul Keranne"],
+    titles: ["DJ MACK", "Soyumi", "DJ FLO", "Arthur Chaps", "DJ SLY'D", "Yoruboy", "DJ Pirate", "DJ GDC", "Silver DJ", "Paul Keranne"],
   },
   { title: "Press kits artistes", href: "/artiste", linkLabel: "Voir la page press kit artiste", titles: ["Sherin", "Black Moz", "MelyMelow"] },
   { title: "Press kits danseurs", href: "/danseur", linkLabel: "Voir la page press kit danseur", titles: ["KRIMO"] },

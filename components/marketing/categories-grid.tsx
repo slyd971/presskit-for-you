@@ -89,9 +89,9 @@ const homeExamples = [
   },
   {
     slug: "flo",
-    title: "FLO",
+    title: "DJ FLO",
     category: "DJ",
-    exampleName: "FLO",
+    exampleName: "DJ FLO",
     description: "Un press kit DJ open format pour hôtels, marques, rooftops et événements corporate.",
     context: "Profil DJ orienté hôtels, marques et événements privés.",
     objective: "Installer une image élégante, lisible et corporate-ready.",

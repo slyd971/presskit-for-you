@@ -711,7 +711,7 @@ export const examples: Example[] = [
   {
     slug: "flo",
     category: "DJ",
-    title: "FLO",
+    title: "DJ FLO",
     description: "Un press kit DJ open format pour hôtels, marques, rooftops et événements corporate.",
     href: "/#contact",
     externalDemoUrl: EXAMPLE_URLS.flo,
