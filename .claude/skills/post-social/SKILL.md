@@ -61,7 +61,13 @@ Quand David demande les visuels, et pas seulement le texte :
 5. **Si le contrôle échoue**, corrige la page pour revenir aux tokens. Une valeur nouvelle n'entre que si David la valide, et elle s'ajoute alors à `docs/da-instagram.md` avant d'être utilisée.
 6. **Regarde chaque PNG** et passe la checklist de la DA (§17) : le script vérifie les valeurs, pas la composition ni l'orthographe.
 7. **Canva** : fournis aussi les textes séparés pour que David puisse retravailler les couvertures. Si David le demande, pars de ses designs Canva existants (copie d'un gabarit plutôt que création depuis zéro) avec son Brand Kit (`kAFC_yIvevI`).
-8. **Vidéo** : Remotion ou FFmpeg (DA §12.8) ne sont pas installés. Demande à David avant d'ajouter un outil ; sinon, livre le script de montage et les plans fixes rendus avec `render.mjs`.
+8. **Vidéo** : projet Remotion dans `.claude/skills/post-social/video/` (séparé du site, pour ne pas alourdir son déploiement). Une composition par Reel dans `src/`, enregistrée dans `src/Root.tsx`, sur le modèle de `src/TestCouverture.tsx`.
+   - Constantes (cadence, format, easing, durées, zones de sécurité) : `src/da.ts` ; couleurs et polices : `src/tokens.css`. Les deux sont régénérés depuis la DA à chaque `npm run studio` ou `npm run render` : ne jamais les modifier à la main, ni écrire une valeur en dur dans une composition.
+   - `useDaFonts()` annule le rendu si Anton ou Manrope n'est pas chargée.
+   - Rendu aux réglages de la DA (§12.1) : `npm run render -- <Composition> out/<nom>.mp4 --codec=h264 --pixel-format=yuv420p --crf=18`.
+   - FFmpeg et ffprobe (assemblage, contrôle) : `npm run ffmpeg -- …` et `npm run ffprobe -- …`, fournis par Remotion. Contrôle d'un export : `npm run ffprobe -- -v error -show_entries stream=codec_name,width,height,r_frame_rate,pix_fmt -of compact out/<nom>.mp4` doit donner h264, 1080 × 1920, 30/1, yuv420p.
+   - Le rendu Remotion ne fonctionne pas dans le bac à sable de Claude Code (le navigateur ne joint pas le serveur local de Remotion) : si la commande se bloque sur « Waiting for root component to load », demande à David de la lancer dans son terminal.
+   - Pas de musique commerciale dans le fichier (DA §12.7).
 
 ## 5. Se relire
 

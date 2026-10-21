@@ -1,0 +1,21 @@
+{
+  "name": "presskit-instagram-video",
+  "private": true,
+  "description": "Montage des Reels et stories Instagram de @presskit_for_you (Remotion), selon docs/da-instagram.md §12.",
+  "type": "module",
+  "scripts": {
+    "prepare-da": "node ../scripts/da-tokens.mjs src/tokens.css && node ../scripts/da-tokens.mjs --remotion src/da.ts && mkdir -p src/fonts && cp ../assets/fonts/*.woff2 src/fonts/",
+    "prestudio": "npm run prepare-da",
+    "studio": "remotion studio src/index.ts",
+    "prerender": "npm run prepare-da",
+    "render": "remotion render src/index.ts",
+    "ffmpeg": "remotion ffmpeg",
+    "ffprobe": "remotion ffprobe"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.534"
+  }
+}
