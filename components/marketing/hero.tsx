@@ -100,7 +100,7 @@ const carouselSlots = [
 
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-  // Le carrousel se met en pause tant que la souris ou le focus clavier est sur les mockups.
+  // Le carrousel se met en pause tant que la souris (pas le tactile) ou le focus clavier est sur les mockups.
   const [isPaused, setIsPaused] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
@@ -157,12 +157,12 @@ export function Hero() {
           </div>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <div
             className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            onFocus={() => setIsPaused(true)}
+            onPointerEnter={(event) => setIsPaused(event.pointerType === "mouse")}
+            onPointerLeave={() => setIsPaused(false)}
+            onFocus={(event) => setIsPaused(event.target.matches(":focus-visible"))}
             onBlur={() => setIsPaused(false)}
           >
             <div className="ambient-shift pointer-events-none absolute inset-8 bg-[radial-gradient(circle_at_52%_42%,rgba(255,255,255,0.12),transparent_45%)] blur-3xl" />
