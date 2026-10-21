@@ -15,8 +15,8 @@ export const categorySeo: Record<string, CategorySeo> = {
     label: "DJ",
   },
   artiste: {
-    title: "Press kit artiste : site vitrine pro en un lien | PressKit For You",
-    description: `Présente tes œuvres, ta démarche et tes références dans un press kit artiste clair, partageable en un lien. ${deliveryPitch}`,
+    title: "Press kit artiste : ton EPK pro en un lien | PressKit For You",
+    description: `Bio, sons, clips, presse et booking dans un press kit artiste (EPK) clair pour programmateurs, médias et labels. ${deliveryPitch}`,
     label: "artiste",
   },
   danseur: {

@@ -21,14 +21,31 @@ export const footerCategoryLinks = publishedPresskitCategories.map((category) =>
   label: category.shortName,
 }));
 
+// Ordre d'affichage des exemples d'une page métier (le premier sert d'exemple principal dans le hero).
+const categoryExampleOrder: Record<string, string[]> = {
+  artiste: ["sherin", "black-moz", "melymelow"],
+};
+
 export function getPresskitCategory(slug: string) {
   return categories.find((category) => category.slug === slug);
 }
 
 export function getExamplesForPresskitCategory(slug: string) {
   const labels = categoryExampleLabels[slug] ?? [];
+  const order = categoryExampleOrder[slug];
+  const matching = examples.filter((example) => labels.includes(example.category));
 
-  return examples.filter((example) => labels.includes(example.category));
+  if (!order) {
+    return matching;
+  }
+
+  const rank = (slugToRank: string) => {
+    const index = order.indexOf(slugToRank);
+
+    return index === -1 ? order.length : index;
+  };
+
+  return [...matching].sort((a, b) => rank(a.slug) - rank(b.slug));
 }
 
 export function createPresskitCategoryMetadata(slug: string): Metadata {

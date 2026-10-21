@@ -20,31 +20,57 @@ type PageCopy = {
   examplesTitle: string;
   detailsTitle: string;
   detailsDescription: string;
+  // Remplace la liste « includes » + « modules » par une liste numérotée (titre + phrase).
+  checklist?: { title: string; description: string }[];
+  checklistNote?: string;
+  // Description propre à cette page pour un exemple (sinon celle de content/site.ts).
+  exampleDescriptions?: Record<string, string>;
 };
 
 const pageCopy: Record<string, PageCopy> = {
   artiste: {
-    promiseTitle: "Une présentation claire, sans perdre la sensibilité de ton travail.",
+    promiseTitle: "Un dossier de presse en ligne, sans perdre ton identité artistique.",
     promiseDescription:
-      "La page rassemble ta bio, tes œuvres, tes médias et tes références. Un média ou une galerie comprend vite ta démarche et sait comment te joindre.",
+      "Chanteur, rappeur, musicien ou groupe : ta page réunit ta bio, ta musique, tes clips, tes dates et ta presse. Un programmateur comprend ton projet en une minute et sait comment te booker.",
     benefits: [
       {
-        title: "Centralise tes informations pro",
-        description: "Bio, liens, références et contact sont accessibles depuis une seule page.",
+        title: "Centralise ton projet",
+        description: "Bio courte et longue, liens Spotify, YouTube, SoundCloud, réseaux et contact dans une seule page.",
       },
       {
-        title: "Montre ce qui compte vraiment",
-        description: "Sélectionne les œuvres, photos, vidéos ou sons qui représentent le mieux ton travail.",
+        title: "Fais écouter le meilleur",
+        description: "Tes meilleurs titres, ton dernier clip et tes lives en tête, sans faire chercher.",
       },
       {
-        title: "Facilite la prise de contact",
-        description: "Un média, un lieu ou une galerie sait rapidement comment te joindre.",
+        title: "Facilite le booking",
+        description: "Dates, scènes, fiche technique et contact direct pour les salles, les festivals et les médias.",
       },
     ],
     examplesTitle: "D'autres exemples d'artistes.",
-    detailsTitle: "Ce qu’une galerie, un média ou un lieu doit trouver.",
+    exampleDescriptions: {
+      "black-moz": "Un press kit rap et slam avec bio, écoute, médias et booking.",
+      melymelow:
+        "Un press kit artiste peintre avec œuvres, démarche et contact pro : le même format fonctionne pour les artistes visuels.",
+    },
+    detailsTitle: "Que mettre dans un press kit artiste ?",
     detailsDescription:
-      "Le press kit évite les messages dispersés. Tu partages une page qui présente ton travail, tes références et ton contact.",
+      "Un programmateur, un journaliste ou un label doit trouver ces éléments en moins d'une minute, sur mobile.",
+    checklist: [
+      { title: "Bio courte et bio longue", description: "trois lignes à copier dans une programmation, et une version complète pour la presse." },
+      { title: "Photos presse", description: "en haute définition, téléchargeables, avec le crédit du photographe." },
+      { title: "Musique à écouter", description: "un lecteur Spotify, SoundCloud ou YouTube, tes deux ou trois meilleurs titres en premier." },
+      { title: "Clips et vidéos live", description: "la preuve de ce que tu donnes sur scène." },
+      { title: "Actualité", description: "ta dernière sortie, ton prochain projet, tes dates à venir." },
+      { title: "Références", description: "concerts, festivals, premières parties, collaborations." },
+      { title: "Presse et chiffres", description: "articles, interviews, passages radio, auditeurs mensuels, abonnés." },
+      { title: "Fiche technique et rider", description: "pour les salles et les festivals." },
+      { title: "Liens officiels", description: "réseaux sociaux, plateformes de streaming, site." },
+      {
+        title: "Contact booking et presse",
+        description: "un e-mail ou un numéro direct, et ton manager ou ton tourneur si tu en as un.",
+      },
+    ],
+    checklistNote: "Artiste visuel ? Remplace l'écoute par une galerie d'œuvres et une section démarche.",
   },
   dj: {
     promiseTitle: "Un support clair pour parler aux clubs, agences et organisateurs.",
@@ -280,7 +306,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                         </h3>
                       </div>
                       <p className="mt-5 flex-1 text-sm leading-7 text-white/[0.64]">
-                        {example.description}
+                        {copy.exampleDescriptions?.[example.slug] ?? example.description}
                       </p>
                       <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
                         <span>Voir le projet</span>
@@ -317,6 +343,21 @@ export function CategoryContent({ category }: CategoryContentProps) {
               {copy.detailsDescription}
             </p>
           </div>
+          {copy.checklist ? (
+            <div>
+              <ol className="border-y border-white/[0.12]">
+                {copy.checklist.map((item, index) => (
+                  <li key={item.title} className="motion-line grid grid-cols-[1.75rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
+                    <span className="text-sm font-semibold leading-6 text-white/[0.64]">{String(index + 1).padStart(2, "0")}</span>
+                    <p className="text-sm font-medium leading-6 text-white/[0.74]">
+                      <strong className="font-semibold text-white">{item.title} :</strong> {item.description}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+              {copy.checklistNote ? <p className="mt-6 text-sm leading-6 text-white/[0.74]">{copy.checklistNote}</p> : null}
+            </div>
+          ) : (
           <div className="grid gap-8">
             <div className="border-y border-white/[0.12]">
               {category.includes.map((item, index) => (
@@ -334,6 +375,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
               ))}
             </div>
           </div>
+          )}
         </PageShell>
       </section>
 

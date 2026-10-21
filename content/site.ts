@@ -251,7 +251,7 @@ export const categories: Category[] = [
     heroTitle: "Press kit artiste : ta musique, ta scène, tes contacts presse",
     heroTitleKicker: true,
     heroDescription:
-      "Utilise ton press kit comme une carte de visite digitale pour les médias, sponsors et futurs partenaires.",
+      "Ton EPK (electronic press kit) en un lien : bio, sons, clips, dates et contact booking, pensés pour les programmateurs, les médias et les labels.",
     valueProps: ["Travail plus clair", "Médias regroupés", "Contact direct"],
     benefits: [
       {
