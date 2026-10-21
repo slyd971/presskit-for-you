@@ -65,6 +65,7 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                 <ExampleMockup
                   id={example.slug}
                   title={example.title}
+                  category={example.category}
                   desktopImage={image}
                   mobileImage={mobileImage}
                   imagePosition={imagePosition}
@@ -78,14 +79,14 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                 <h2 className="mt-3 text-2xl font-semibold text-white">{example.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-white/64">{example.description}</p>
                 <p className="mt-6 text-sm font-medium text-white/80">
-                  {isExternal ? "Voir le rendu en live" : "Decouvrir ce format"}{" "}
+                  {isExternal ? `Voir le press kit de ${example.title}` : "Decouvrir ce format"}{" "}
                   <span className="transition group-hover:translate-x-1 inline-block">→</span>
                 </p>
                 <Link
                   href={href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
-                  aria-label={`${example.title} : ouvrir la démo${isExternal ? " (nouvel onglet)" : ""}`}
+                  aria-label={`Voir le press kit de ${example.title}${isExternal ? " (nouvel onglet)" : ""}`}
                   className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
                 />
               </div>

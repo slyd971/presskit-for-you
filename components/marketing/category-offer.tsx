@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
 import { TestimonialCard } from "@/components/marketing/social-proof";
@@ -20,6 +22,12 @@ export function CategoryOffer({ slug }: CategoryOfferProps) {
               À partir de 300 € · livré en {LEGAL.deliveryDays} jours ouvrés · {LEGAL.revisionRounds} allers-retours inclus
             </p>
             <p className="mt-3 text-xs text-white/[0.64]">{VAT_MENTION}</p>
+            <Link
+              href="/tarifs"
+              className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
+            >
+              Voir les tarifs
+            </Link>
           </div>
           <Button arrow href="/#contact" className="min-h-12 justify-center px-7 py-4 text-[15px]">
             {CTA.primary}

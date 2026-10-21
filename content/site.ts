@@ -13,6 +13,8 @@ export type Category = {
   accentSoft: string;
   gradient: string;
   heroTitle: string;
+  // Titre long : « Press kit X : » passe en sur-titre dans le H1 (voir CategoryHero).
+  heroTitleKicker?: boolean;
   heroDescription: string;
   valueProps: string[];
   benefits: { title: string; description: string }[];
@@ -204,7 +206,7 @@ export const faqItems = [
   {
     question: "Comment se passe le paiement ?",
     answer:
-      `50 % à la commande, 50 % à la livraison. Les prix sont nets : ${VAT_MENTION} (micro-entreprise).`,
+      `50 % à la commande, 50 % à la livraison. Les prix sont nets de TVA (micro-entreprise).`,
   },
   {
     question: "Peut-on se rencontrer pour le brief ?",
@@ -219,7 +221,7 @@ export const pricingFaqItems = [
   },
   {
     question: "Puis-je faire évoluer mon press kit ?",
-    answer: `Oui, via l’option « ${updateOption?.name} » (${updateOption?.price}) ou la ${maintenanceOption?.name.toLowerCase()} (${maintenanceOption?.price}). ${VAT_MENTION}.`,
+    answer: `Oui, via l’option « ${updateOption?.name} » (${updateOption?.price}) ou la ${maintenanceOption?.name.toLowerCase()} (${maintenanceOption?.price}).`,
   },
   {
     question: "Quelle différence entre Press Kit Premium et Studio Custom ?",
@@ -246,7 +248,8 @@ export const categories: Category[] = [
     accentSoft: "rgba(244,194,107,0.18)",
     gradient:
       "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
-    heroTitle: "Valorise ton image, en tant qu'artiste",
+    heroTitle: "Press kit artiste : ta musique, ta scène, tes contacts presse",
+    heroTitleKicker: true,
     heroDescription:
       "Utilise ton press kit comme une carte de visite digitale pour les médias, sponsors et futurs partenaires.",
     valueProps: ["Travail plus clair", "Médias regroupés", "Contact direct"],
@@ -297,7 +300,7 @@ export const categories: Category[] = [
     accentSoft: "rgba(255,145,82,0.18)",
     gradient:
       "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
-    heroTitle: "Ton profil DJ, clair pour les bookers.",
+    heroTitle: "Press kit DJ : ton profil clair pour les bookers",
     heroDescription:
       "Présente tes styles, tes photos, tes vidéos, tes liens d’écoute, tes références et ton contact booking.",
     valueProps: ["Booking plus simple", "Médias regroupés", "Lien unique à partager"],
@@ -348,7 +351,8 @@ export const categories: Category[] = [
     accentSoft: "rgba(213,169,40,0.18)",
     gradient:
       "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
-    heroTitle: "Ton parcours de danseur, plus facile à comprendre.",
+    heroTitle: "Press kit danseur : ton parcours, tes vidéos, tes collaborations",
+    heroTitleKicker: true,
     heroDescription:
       "Présente tes vidéos, tes photos, tes références, tes collaborations et ton contact aux lieux, marques et projets culturels.",
     valueProps: ["Vidéos regroupées", "Parcours lisible", "Contact clair"],
@@ -399,7 +403,8 @@ export const categories: Category[] = [
     accentSoft: "rgba(208,76,87,0.18)",
     gradient:
       "from-[#D04C57]/28 via-[#4B6CFF]/12 to-transparent",
-    heroTitle: "Ton regard, tes images, tes prestations.",
+    heroTitle: "Press kit photographe : ton regard, tes images, tes prestations",
+    heroTitleKicker: true,
     heroDescription:
       "Présente ton portfolio, tes formats photo ou vidéo, tes zones d’intervention et ton contact.",
     valueProps: ["Portfolio clair", "Services lisibles", "Contact direct"],
@@ -454,7 +459,8 @@ export const categories: Category[] = [
     accentSoft: "rgba(99,230,190,0.18)",
     gradient:
       "from-[#63E6BE]/28 via-[#4DA6FF]/12 to-transparent",
-    heroTitle: "Ton coaching, tes offres, tes résultats.",
+    heroTitle: "Press kit coach sportif : ton coaching, tes offres, tes résultats",
+    heroTitleKicker: true,
     heroDescription:
       "Présente ta méthode, tes prestations, tes résultats, tes réseaux et ta prise de rendez-vous.",
     valueProps: ["Offres lisibles", "Résultats visibles", "Contact direct"],
@@ -502,7 +508,8 @@ export const categories: Category[] = [
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
       "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
-    heroTitle: "Tes looks, tes prestations, ton contact.",
+    heroTitle: "Press kit make-up artist : tes looks, tes prestations, ton contact",
+    heroTitleKicker: true,
     heroDescription:
       "Présente ton portfolio, tes prestations, tes références et ton contact aux clientes, marques ou productions.",
     valueProps: ["Portfolio clair", "Prestations lisibles", "Contact direct"],
@@ -552,7 +559,8 @@ export const categories: Category[] = [
     accentSoft: "rgba(255,141,170,0.18)",
     gradient:
       "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
-    heroTitle: "Ton événement, lisible pour les lieux et sponsors.",
+    heroTitle: "Press kit organisateur : ton événement, lisible pour les lieux et sponsors",
+    heroTitleKicker: true,
     heroDescription:
       "Présente ton événement, tes photos, tes vidéos, ta communauté, tes chiffres, tes partenaires et ton contact.",
     valueProps: ["Événement lisible", "Chiffres regroupés", "Contact partenaire"],

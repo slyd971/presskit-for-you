@@ -200,6 +200,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                 <ExampleMockup
                   id={example.slug}
                   title={example.title}
+                  category={example.category}
                   desktopImage={example.desktopImage}
                   mobileImage={example.mobileImage}
                   boxClassName="h-[18rem] md:h-[16rem] lg:h-[18rem]"

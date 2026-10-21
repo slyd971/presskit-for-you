@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { PageShell } from "@/components/layout/page-shell";
+import { PageJsonLd } from "@/components/seo/page-json-ld";
 import { LEGAL, VAT_MENTION, mediator } from "@/lib/legal";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -17,6 +18,8 @@ const h2Class = "text-2xl font-semibold tracking-tighter2 text-white";
 
 export default function LegalPage() {
   return (
+    <>
+      <PageJsonLd path="mentions-legales" name="Mentions légales" description="Informations légales, éditeur et contact de PressKit For You." />
     <section className="section-wash relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-32">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(255,255,255,0.055),transparent_24%),radial-gradient(circle_at_82%_14%,rgba(255,255,255,0.04),transparent_18%)]"
@@ -106,5 +109,6 @@ export default function LegalPage() {
         </div>
       </PageShell>
     </section>
+    </>
   );
 }

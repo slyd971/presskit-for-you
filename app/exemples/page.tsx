@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 
 import { ExamplesGalleryGrid } from "@/components/marketing/examples-gallery-grid";
 import { FinalCta } from "@/components/marketing/final-cta";
+import { MetiersLinks } from "@/components/marketing/metiers-links";
 import { PageShell } from "@/components/layout/page-shell";
 import { liveExamplesCount } from "@/content/site";
+import { PageJsonLd } from "@/components/seo/page-json-ld";
 import { getPreviewAssets } from "@/lib/preview-assets";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -18,15 +20,17 @@ export const metadata: Metadata = createPageMetadata({
 export default function ExamplesPage() {
   return (
     <>
+      <PageJsonLd path="exemples" name="Exemples de press kits" description="Exemples réels de press kits digitaux déjà en ligne." />
       <section className="section-wash relative overflow-hidden pb-6 pt-28 md:pb-8 md:pt-32">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(255,255,255,0.055),transparent_24%),radial-gradient(circle_at_82%_14%,rgba(255,255,255,0.04),transparent_18%)]" />
         <PageShell className="relative max-w-4xl">
           <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">
-            Exemples
+            Exemples de press kits digitaux
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.68] md:text-lg">
             Inspire-toi de réalisations conçues pour différents profils, métiers et objectifs.
           </p>
+          <MetiersLinks />
         </PageShell>
       </section>
       <ExamplesGalleryGrid previewAssets={getPreviewAssets()} />

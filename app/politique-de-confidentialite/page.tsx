@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import { LegalDocument, type LegalSection } from "@/components/layout/legal-document";
 import { LEGAL } from "@/lib/legal";
+import { PageJsonLd } from "@/components/seo/page-json-ld";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -67,5 +68,10 @@ const sections: LegalSection[] = [
 ];
 
 export default function PrivacyPage() {
-  return <LegalDocument title="Politique de confidentialité" updatedAt="12 octobre 2026" sections={sections} />;
+  return (
+    <>
+      <PageJsonLd path="politique-de-confidentialite" name="Politique de confidentialité" description="Traitement et protection des données personnelles par PressKit For You." />
+      <LegalDocument title="Politique de confidentialité" updatedAt="12 octobre 2026" sections={sections} />
+    </>
+  );
 }

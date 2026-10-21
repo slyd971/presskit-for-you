@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { LegalDocument, type LegalSection } from "@/components/layout/legal-document";
 import { pricingOptions, pricingTiers } from "@/content/pricing";
 import { LEGAL, VAT_MENTION, mediator } from "@/lib/legal";
+import { PageJsonLd } from "@/components/seo/page-json-ld";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -118,5 +119,10 @@ const annex = {
 };
 
 export default function CgvPage() {
-  return <LegalDocument title="Conditions générales de prestation" updatedAt="12 octobre 2026" sections={sections} annex={annex} />;
+  return (
+    <>
+      <PageJsonLd path="cgv" name="Conditions générales de prestation" description="Conditions générales de prestation de création de press kits digitaux." />
+      <LegalDocument title="Conditions générales de prestation" updatedAt="12 octobre 2026" sections={sections} annex={annex} />
+    </>
+  );
 }

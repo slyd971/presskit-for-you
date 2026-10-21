@@ -84,7 +84,6 @@ export function PricingTable({
                 </div>
                 <div className={`relative mt-4 border-y py-3 md:mt-10 md:py-8 ${offerTone.tierBorder}`}>
                   <p className={`text-[2rem] font-semibold leading-none tracking-tighter2 md:text-[clamp(2.6rem,5.4vw,5.4rem)] ${offerTone.title}`}>{tier.price}</p>
-                  {!isQuote ? <p className={`mt-2 text-xs md:mt-3 ${offerTone.headingMeta}`}>{VAT_MENTION}</p> : null}
                   <p className={`mt-2 text-xs font-medium tracking-wide md:mt-4 ${offerTone.headingMeta} hidden md:block`}>{tier.tagline}</p>
                 </div>
                 <p className={`relative mt-3 max-w-md text-sm leading-6 md:mt-7 md:text-base md:leading-8 ${offerTone.body}`}>{tier.description}</p>
@@ -110,6 +109,7 @@ export function PricingTable({
             );
           })}
         </div>
+        <p className="mt-4 text-xs text-white/[0.64] md:mt-6">{VAT_MENTION}</p>
         <div className="mt-4 py-3 md:mt-12 md:py-10">
           <div className="grid gap-3 md:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
@@ -130,7 +130,6 @@ export function PricingTable({
                         <span className="block text-base font-semibold leading-snug text-white">{option.name}</span>
                         <span className="mt-0.5 block text-sm font-semibold tracking-tighter2 text-white/[0.76]">
                           {option.price}
-                          {hasAmount(option.price) ? <span className="ml-2 text-xs font-normal tracking-normal text-white/[0.64]">{VAT_MENTION}</span> : null}
                         </span>
                       </span>
                       <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.62] transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
@@ -144,7 +143,6 @@ export function PricingTable({
                       <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
                       <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
                     </div>
-                    {hasAmount(option.price) ? <p className="mt-1 text-right text-xs text-white/[0.64]">{VAT_MENTION}</p> : null}
                     <p className="mt-3 text-sm leading-6 text-white/[0.62]">{option.description}</p>
                   </article>
                 </div>

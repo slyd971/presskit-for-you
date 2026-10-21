@@ -264,6 +264,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                       <ExampleMockup
                         id={example.slug}
                         title={example.title}
+                        category={example.category}
                         desktopImage={example.image}
                         mobileImage={example.mobileImage}
                         imagePosition={example.imagePosition}

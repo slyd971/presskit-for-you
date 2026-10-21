@@ -31,7 +31,16 @@ export function CategoryHero({ category }: CategoryHeroProps) {
         <div className="min-w-0">
           <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl lg:pb-10">
             <h1 className="max-w-[45rem] break-words text-[clamp(2.35rem,7.2vw,5.45rem)] font-semibold leading-[0.94] tracking-tighter2 text-white">
-              {category.heroTitle}
+              {category.heroTitleKicker ? (
+                <>
+                  <span className="block text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">
+                    {category.heroTitle.split(" : ")[0]} :
+                  </span>{" "}
+                  {category.heroTitle.split(" : ")[1]}
+                </>
+              ) : (
+                category.heroTitle
+              )}
             </h1>
             <p className="mt-6 max-w-2xl text-[0.95rem] leading-7 text-white/[0.72] md:text-lg md:leading-9">
               {category.heroDescription}
@@ -65,7 +74,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                     {image ? (
                       <Image
                         src={image}
-                        alt={heroExample ? `${heroExample.title} en version desktop` : category.heroImageAlt ?? category.name}
+                        alt={heroExample ? `Press kit de ${heroExample.title}, ${heroExample.category}, version desktop` : category.heroImageAlt ?? category.name}
                         fill
                         priority
                         sizes="(min-width: 1024px) 52vw, 96vw"
@@ -85,7 +94,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                         <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
                         <Image
                           src={mobileImage}
-                          alt={heroExample ? `${heroExample.title} en version mobile` : `${category.name} en version mobile`}
+                          alt={heroExample ? `Press kit de ${heroExample.title}, ${heroExample.category}, version mobile` : `${category.name} en version mobile`}
                           fill
                           sizes="(min-width: 768px) 15vw, 24vw"
                           className="object-cover object-top"
@@ -99,7 +108,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
             <div className="border-t border-white/[0.1] pt-5">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <h2 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
-                  {heroExample?.title ?? category.heroOverlayTitle ?? category.name}
+                  {heroExample ? `Exemple : le press kit de ${heroExample.title}` : category.heroOverlayTitle ?? category.name}
                 </h2>
                 <span className="text-sm font-semibold text-white">Voir le projet →</span>
               </div>

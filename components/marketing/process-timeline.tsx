@@ -2,7 +2,7 @@
 
 import { CTA } from "@/content/site";
 import { motion } from "framer-motion";
-import { ArrowDown, FileImage, Mail, Phone, Video } from "lucide-react";
+import { FileImage, Mail, Phone, Video } from "lucide-react";
 
 import { PageShell } from "@/components/layout/page-shell";
 import Image from "next/image";
@@ -185,68 +185,47 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
 
         </div>
 
-        <ol className="relative mt-8 md:hidden">
-          <li aria-hidden="true" className="timeline-line absolute bottom-2 left-[7px] top-2 w-px bg-steel" />
+        <ol className="relative mt-8 md:mt-12 md:grid md:grid-cols-3 md:gap-4">
+          <li aria-hidden="true" className="timeline-line absolute bottom-2 left-[7px] top-2 w-px bg-steel md:hidden" />
           {dossierCards.map((card, index) => (
-            <li key={card.status} className="timeline-step relative pb-7 pl-9 last:pb-0">
-              <span aria-hidden="true" className="timeline-dot absolute left-0 top-1 h-[15px] w-[15px] rounded-full border border-steel bg-surface-900" />
-              <p className="text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">{card.when}</p>
-              <h3 className="mt-1 text-xl font-semibold leading-tight tracking-tighter2 text-white">{card.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-white/[0.68]">{card.summary}</p>
-              {index === dossierCards.length - 1 ? (
-                <div className="relative mt-4 aspect-[91/60] w-44 overflow-hidden rounded-mockup-desktop border border-steel bg-black">
-                  <Image
-                    src="/gallery-previews/home-desktop/dj-slyd.webp"
-                    alt="Press kit de DJ SLY'D, DJ, version desktop"
-                    fill
-                    sizes="176px"
-                    className="object-contain object-center"
-                  />
-                </div>
-              ) : null}
-            </li>
-          ))}
-        </ol>
-
-        <div className="mt-10 hidden gap-9 md:mt-12 md:grid md:grid-cols-3 md:gap-4">
-          {dossierCards.map((card, index) => (
-            <div key={card.status} className="relative">
+            <li key={card.status} className="timeline-step relative pb-7 pl-9 last:pb-0 md:p-0 md:[animation:none]">
+              <span aria-hidden="true" className="timeline-dot absolute left-0 top-1 h-[15px] w-[15px] rounded-full border border-steel bg-surface-900 md:hidden" />
               <motion.article
                 initial={{ y: motionTokens.distance.strong, opacity: 0, rotate: index === 1 ? 0.25 : -0.25 }}
                 whileInView={{ y: 0, opacity: 1, rotate: index === 1 ? 0.1 : -0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: motionTokens.duration.normal, delay: index * motionTokens.delay.related, ease: motionTokens.easing.enter }}
                 whileHover={{ y: -6, rotate: index === 1 ? 0.02 : -0.02 }}
-                className="h-full overflow-hidden border border-[#10141d]/10 bg-[#f7f6f1] text-[#10141d] shadow-[0_24px_80px_rgba(0,0,0,0.22)] transition-colors duration-500 ease-out hover:border-[#10141d]/20 hover:shadow-[0_34px_110px_rgba(0,0,0,0.32)]"
+                className="max-md:!transform-none max-md:!opacity-100 md:h-full md:overflow-hidden md:border md:border-[#10141d]/10 md:bg-[#f7f6f1] md:text-[#10141d] md:shadow-[0_24px_80px_rgba(0,0,0,0.22)] md:transition-colors md:duration-500 md:ease-out md:hover:border-[#10141d]/20 md:hover:shadow-[0_34px_110px_rgba(0,0,0,0.32)]"
               >
-                <CompactVisual type={card.visual} />
-                <div className="p-6 md:p-7">
-                  <div className="flex items-center justify-between gap-4 border-b border-[#10141d]/12 pb-4">
+                <div className="hidden md:block">
+                  <CompactVisual type={card.visual} />
+                </div>
+                <div className="md:p-7">
+                  <div className="hidden items-center justify-between gap-4 border-b border-[#10141d]/12 pb-4 md:flex">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#10141d]/48">{card.status}</p>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#10141d]/34">{card.meta}</p>
                   </div>
-                  <h3 className="mt-6 text-4xl font-semibold leading-none tracking-tighter2 md:text-5xl">{card.title}</h3>
-                  <p className="mt-5 text-sm leading-7 text-[#303744]">{card.description}</p>
+                  <p className="text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64] md:hidden">{card.when}</p>
+                  <h3 className="mt-1 text-xl font-semibold leading-tight tracking-tighter2 text-white md:mt-6 md:text-5xl md:leading-none md:text-inherit">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/[0.68] md:hidden">{card.summary}</p>
+                  <p className="mt-5 hidden text-sm leading-7 text-[#303744] md:block">{card.description}</p>
+                  {index === dossierCards.length - 1 ? (
+                    <div className="relative mt-4 aspect-[91/60] w-44 overflow-hidden rounded-mockup-desktop border border-steel bg-black md:hidden">
+                      <Image
+                        src="/gallery-previews/home-desktop/dj-slyd.webp"
+                        alt="Press kit de DJ SLY'D, DJ, version desktop"
+                        fill
+                        sizes="176px"
+                        className="object-contain object-center"
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </motion.article>
-              {index < dossierCards.length - 1 ? (
-                <motion.div
-                  initial={{ opacity: 0, y: -motionTokens.distance.subtle, scaleY: 0.72 }}
-                  whileInView={{ opacity: 1, y: 0, scaleY: 1 }}
-                  viewport={{ once: true, amount: 0.8 }}
-                  transition={{ duration: motionTokens.duration.normal, delay: 0.08 + index * motionTokens.delay.related, ease: motionTokens.easing.enter }}
-                  className="pointer-events-none absolute left-1/2 top-full z-10 flex h-9 w-9 origin-top -translate-x-1/2 items-center justify-center md:hidden"
-                  aria-hidden="true"
-                >
-                  <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-white/55 via-white/34 to-transparent" />
-                  <span className="relative flex h-7 w-7 items-center justify-center rounded-full border border-white/18 bg-white/[0.08] text-white shadow-[0_12px_34px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.14)]">
-                    <ArrowDown className="h-3.5 w-3.5" />
-                  </span>
-                </motion.div>
-              ) : null}
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
 
         <motion.div
           initial={{ y: motionTokens.distance.standard, opacity: 0 }}

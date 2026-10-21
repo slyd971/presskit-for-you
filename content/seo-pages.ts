@@ -25,7 +25,7 @@ export const categorySeo: Record<string, CategorySeo> = {
     label: "danseur",
   },
   photographe: {
-    title: "Press kit photographe : portfolio premium en un lien | PressKit For You",
+    title: "Press kit photographe : portfolio en un lien | PressKit For You",
     description: `Portfolio, prestations et contact réunis dans un press kit photographe qui donne envie de te réserver. ${deliveryPitch}`,
     label: "photographe",
   },
@@ -40,7 +40,7 @@ export const categorySeo: Record<string, CategorySeo> = {
     label: "make-up artist",
   },
   organisateur: {
-    title: "Press kit organisateur de soirée : dossier sponsors | PressKit For You",
+    title: "Press kit organisateur : dossier sponsoring | PressKit For You",
     description: `Chiffres de communauté, photos et partenaires réunis dans un dossier sponsors digital pour ta soirée. ${deliveryPitch}`,
     label: "organisateur",
   },

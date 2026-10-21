@@ -15,6 +15,8 @@ type ExampleMockupProps = {
   // Identifiant unique sur la page : nomme l'élément pour la View Transition.
   id: string;
   title: string;
+  // Métier du client : sert à l'alt des captures (« Press kit de {nom}, {métier}, version … »).
+  category?: string;
   desktopImage?: string;
   mobileImage?: string;
   imagePosition?: string;
@@ -36,6 +38,7 @@ const MODES: { value: Mode; label: string }[] = [
 export function ExampleMockup({
   id,
   title,
+  category,
   desktopImage,
   mobileImage,
   imagePosition,
@@ -45,6 +48,8 @@ export function ExampleMockup({
   mobileSizes,
   preview,
 }: ExampleMockupProps) {
+  const captureAlt = (version: Mode) =>
+    category ? `Press kit de ${title}, ${category}, version ${version}` : `${title} en version ${version}`;
   const boxRef = useRef<HTMLDivElement>(null);
   const [mode, setMode] = useState<Mode>("desktop");
   // L'image du calque mobile n'est demandée qu'après le premier geste : poids initial inchangé.
@@ -89,7 +94,7 @@ export function ExampleMockup({
                 {desktopImage ? (
                   <Image
                     src={desktopImage}
-                    alt={`${title} en version desktop`}
+                    alt={captureAlt("desktop")}
                     fill
                     sizes={desktopSizes}
                     className="object-contain object-center"
@@ -112,7 +117,7 @@ export function ExampleMockup({
                     <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
                     <Image
                       src={mobileImage}
-                      alt={`${title} en version mobile`}
+                      alt={captureAlt("mobile")}
                       fill
                       sizes={mobileSizes}
                       className="object-cover object-top"
@@ -134,7 +139,7 @@ export function ExampleMockup({
                   {armed || mode === "mobile" ? (
                     <Image
                       src={mobileImage}
-                      alt={`${title} en version mobile`}
+                      alt={captureAlt("mobile")}
                       fill
                       sizes="12rem"
                       className="object-cover object-top"
