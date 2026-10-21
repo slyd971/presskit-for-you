@@ -20,7 +20,7 @@ const styles = {
   ghost:
     "text-white/[0.84] hover:-translate-y-0.5 hover:text-white",
   primaryOnLight:
-    "bg-[#10141d] text-white shadow-[0_18px_50px_rgba(13,16,22,0.16),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-0.5 hover:bg-[#1d2430] hover:shadow-[0_24px_70px_rgba(13,16,22,0.2)]",
+    "bg-ink-editorial text-white shadow-[0_18px_50px_rgba(13,16,22,0.16),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-0.5 hover:bg-[#1d2430] hover:shadow-[0_24px_70px_rgba(13,16,22,0.2)]",
   secondaryOnLight:
     "border border-ink/[0.24] bg-white text-ink shadow-[0_12px_34px_rgba(13,16,22,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] hover:-translate-y-0.5 hover:border-ink/[0.36] hover:bg-sand hover:shadow-[0_16px_42px_rgba(13,16,22,0.1)]",
 };

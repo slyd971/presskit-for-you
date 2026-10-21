@@ -25,7 +25,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/hero-mobile/Mobile-melymelow.jpeg",
     externalDemoUrl: EXAMPLE_URLS.melymelow,
     accent: "#F4C26B",
-    gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+    gradient: "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
   },
   {
     slug: "sherin",
@@ -40,7 +40,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-sherin.webp",
     externalDemoUrl: EXAMPLE_URLS.sherin,
     accent: "#F4C26B",
-    gradient: "from-[#F4C26B]/28 via-[#F46B8D]/12 to-transparent",
+    gradient: "from-[#F4C26B]/[0.28] via-[#F46B8D]/[0.12] to-transparent",
   },
   {
     slug: "krimo",
@@ -55,7 +55,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-krimo.webp",
     externalDemoUrl: EXAMPLE_URLS.krimo,
     accent: "#D5A928",
-    gradient: "from-[#D5A928]/28 via-[#63E6BE]/12 to-transparent",
+    gradient: "from-[#D5A928]/[0.28] via-[#63E6BE]/[0.12] to-transparent",
   },
   {
     slug: "dj-mack",
@@ -70,7 +70,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/dj-mack.webp",
     externalDemoUrl: EXAMPLE_URLS.djMack,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "soyumi",
@@ -85,7 +85,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-soyumi.webp",
     externalDemoUrl: EXAMPLE_URLS.soyumi,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "flo",
@@ -100,7 +100,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-djflo.webp",
     externalDemoUrl: EXAMPLE_URLS.flo,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "la-bringue",
@@ -115,7 +115,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-labringueparty.webp",
     externalDemoUrl: EXAMPLE_URLS.laBringue,
     accent: "#FF8DAA",
-    gradient: "from-[#FF8DAA]/28 via-[#FFD37A]/12 to-transparent",
+    gradient: "from-[#FF8DAA]/[0.28] via-[#FFD37A]/[0.12] to-transparent",
   },
   {
     slug: "arthur-chaps",
@@ -130,7 +130,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/arthur-chaps.webp",
     externalDemoUrl: EXAMPLE_URLS.arthurChaps,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "dj-slyd",
@@ -145,7 +145,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/dj-slyd.webp",
     externalDemoUrl: EXAMPLE_URLS.djSlyd,
     accent: "#FF9152",
-    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/12 to-transparent",
+    gradient: "from-[#FF9152]/30 via-[#CE5DFF]/[0.12] to-transparent",
   },
   {
     slug: "black-moz",
@@ -160,7 +160,7 @@ const homeExamples = [
     mobileImage: "/gallery-previews/home-mobile/Mobile-blackmoz.webp",
     externalDemoUrl: EXAMPLE_URLS.blackMoz,
     accent: "#C8BBAE",
-    gradient: "from-[#C8BBAE]/28 via-[#FFFFFF]/10 to-transparent",
+    gradient: "from-[#C8BBAE]/[0.28] via-[#FFFFFF]/10 to-transparent",
   },
 ];
 
@@ -208,15 +208,15 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                   mobileSizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
                   preview={previewAssets[example.slug]}
                 />
-                <div className="relative mt-2 border-y border-white/[0.1] py-5">
-                  <p className="text-[0.66rem] font-semibold uppercase leading-5 tracking-[0.16em] text-white/[0.56] md:text-xs">
+                <div className="relative mt-2 border-y border-white/[0.12] py-5">
+                  <p className="text-[0.66rem] font-semibold uppercase leading-5 tracking-label-tight text-white/[0.64] md:text-xs">
                     {example.category}
                   </p>
                   <div className="mt-3 flex items-end justify-between gap-4">
                     <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">{example.title}</h3>
                   </div>
                 </div>
-                <p className="relative mt-5 flex-1 text-sm leading-6 text-white/[0.76]">{example.description}</p>
+                <p className="relative mt-5 flex-1 text-sm leading-6 text-white/[0.74]">{example.description}</p>
                 <div className="relative mt-6 flex items-center justify-between text-sm font-semibold text-white">
                   <span>Voir le projet</span>
                   <span className="transition group-hover:translate-x-1">→</span>
@@ -226,7 +226,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`${example.title} : ouvrir la démo (nouvel onglet)`}
-                  className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+                  className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
                 />
               </div>
             </Reveal>

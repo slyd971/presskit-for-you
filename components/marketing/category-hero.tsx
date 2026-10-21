@@ -42,7 +42,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                 category.heroTitle
               )}
             </h1>
-            <p className="mt-6 max-w-2xl text-[0.95rem] leading-7 text-white/[0.72] md:text-lg md:leading-9">
+            <p className="mt-6 max-w-2xl text-[0.95rem] leading-7 text-white/[0.74] md:text-lg md:leading-9">
               {category.heroDescription}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -61,15 +61,15 @@ export function CategoryHero({ category }: CategoryHeroProps) {
             href={href}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noreferrer" : undefined}
-            className="group block overflow-visible outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-[#111620]"
+            className="group block overflow-visible outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
           >
             <div className="relative min-h-[21rem] overflow-visible sm:min-h-[36rem]">
               <div
                 className="ambient-shift pointer-events-none absolute inset-8 rounded-full opacity-80 blur-3xl"
                 style={{ background: category.accentSoft }}
               />
-              <div className="absolute left-1/2 top-8 w-[96%] -translate-x-1/2 rotate-[-1.2deg] transition duration-500 group-hover:-translate-y-1.5 group-hover:rotate-[-0.35deg] sm:top-10">
-                <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.14] bg-[#07090e] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.12)]">
+              <div className="absolute left-1/2 top-8 w-[96%] -translate-x-1/2 rotate-[-1.2deg] transition duration-hover group-hover:-translate-y-1.5 group-hover:rotate-[-0.35deg] sm:top-10">
+                <div className="mockup-surface relative overflow-hidden rounded-t-[0.9rem] border border-white/[0.12] bg-mockup p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.12)]">
                   <div className="relative aspect-[91/60] overflow-hidden rounded-t-[0.62rem] bg-black">
                     {image ? (
                       <Image
@@ -86,9 +86,9 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                     )}
                   </div>
                 </div>
-                <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.1] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
+                <div className="mx-auto h-2.5 w-[106%] -translate-x-[3%] rounded-b-xl border border-white/[0.12] bg-[linear-gradient(180deg,#2b3040,#0a0c12)] shadow-[0_10px_28px_rgba(0,0,0,0.34)]" />
                 {mobileImage ? (
-                  <div className="absolute -bottom-5 -right-5 z-20 w-[27%] min-w-[4.7rem] rotate-[5deg] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-8 md:-right-8 md:min-w-[5.6rem]">
+                  <div className="absolute -bottom-5 -right-5 z-20 w-[27%] min-w-[4.7rem] rotate-[5deg] transition duration-hover group-hover:-translate-y-2 group-hover:rotate-[2deg] md:-bottom-8 md:-right-8 md:min-w-[5.6rem]">
                     <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_50px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
                       <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
                         <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
@@ -105,7 +105,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
                 ) : null}
               </div>
             </div>
-            <div className="border-t border-white/[0.1] pt-5">
+            <div className="border-t border-white/[0.12] pt-5">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <h2 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
                   {heroExample ? `Exemple : le press kit de ${heroExample.title}` : category.heroOverlayTitle ?? category.name}

@@ -32,7 +32,7 @@ export function AboutFounder() {
             Fait pour toi, par quelqu&apos;un de la scène
           </h2>
           <div className="mt-7 grid grid-cols-[5rem_1fr] items-center gap-x-5 gap-y-4 md:mt-10 md:grid-cols-[11rem_1fr] md:items-start md:gap-x-8 md:gap-y-3">
-            <div className="relative aspect-square overflow-hidden rounded-lg border border-white/[0.12] bg-white/[0.045] md:row-span-2">
+            <div className="relative aspect-square overflow-hidden rounded-lg border border-white/[0.12] bg-white/[0.04] md:row-span-2">
               {hasPhoto ? (
                 <Image src={founder.photo} alt={`${founder.firstName}, fondateur de PressKit For You`} fill sizes="(min-width: 768px) 11rem, 5rem" className="object-cover object-center" />
               ) : (
@@ -51,13 +51,13 @@ export function AboutFounder() {
                   href={founderExample.externalDemoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-2 inline-block text-sm font-semibold text-white/[0.72] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
+                  className="mt-2 inline-block text-sm font-semibold text-white/[0.74] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
                 >
                   Voir mon press kit
                 </a>
               ) : null}
             </div>
-            {hasBio ? <p className="col-span-2 text-sm leading-6 text-white/[0.72] md:col-span-1 md:col-start-2 md:text-base md:leading-8">{founder.bio}</p> : null}
+            {hasBio ? <p className="col-span-2 text-sm leading-6 text-white/[0.74] md:col-span-1 md:col-start-2 md:text-base md:leading-8">{founder.bio}</p> : null}
           </div>
           <ul className="mt-7 grid gap-3 border-y border-white/[0.12] py-5 sm:grid-cols-3 sm:gap-6 md:mt-10">
             {landmarks.map((landmark) => (
