@@ -31,6 +31,11 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   ],
   photographe: [
     {
+      question: "Press kit ou book photographe : quelle différence ?",
+      answer:
+        "Le book montre tes images. Le press kit y ajoute tes prestations, tes références et la demande de devis, sur une seule page.",
+    },
+    {
       question: "Mes photos seront-elles affichées en haute qualité ?",
       answer: "Oui, la galerie est optimisée pour rester nette sur mobile comme sur grand écran, sans ralentir la page.",
     },
@@ -49,6 +54,11 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   ],
   "make-up-artist": [
     {
+      question: "Je suis maquilleuse professionnelle, c'est fait pour moi ?",
+      answer:
+        "Oui : maquillage beauté, mariée, mode ou effets spéciaux, la page s'adapte à ta spécialité.",
+    },
+    {
       question: "Puis-je présenter mes prestations mariée, shooting et événementiel ?",
       answer: "Oui, chaque prestation peut avoir sa description et son contact de réservation.",
     },
@@ -62,6 +72,11 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     },
   ],
   danseur: [
+    {
+      question: "Un press kit peut-il remplacer mon book de danseur ?",
+      answer:
+        "Oui : book photo, showreel et parcours sont réunis sur une seule page, plus simple à envoyer pour un casting qu'un PDF ou une liste de liens.",
+    },
     {
       question: "Puis-je intégrer mes vidéos de performances ?",
       answer: "Oui, tes vidéos sont intégrées directement dans la page.",
@@ -81,6 +96,11 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   ],
   "coach-sportif": [
     {
+      question: "Je suis coach à domicile, c'est adapté ?",
+      answer:
+        "Oui : ta zone d'intervention, tes créneaux et la prise de rendez-vous apparaissent dès le haut de la page.",
+    },
+    {
       question: "Puis-je présenter mes offres et programmes ?",
       answer: "Oui, chaque offre peut avoir sa description et son appel à l'action.",
     },
@@ -98,6 +118,11 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     },
   ],
   organisateur: [
+    {
+      question: "Quelle différence avec un dossier de sponsoring PDF ?",
+      answer:
+        "Le contenu est le même, mais la page se met à jour après chaque édition, se lit sur mobile et se partage en un lien.",
+    },
     {
       question: "Puis-je présenter les chiffres de ma communauté ?",
       answer: "Oui : abonnés, participants, éditions passées, des preuves que les sponsors regardent en premier.",

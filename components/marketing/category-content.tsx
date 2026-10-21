@@ -13,6 +13,8 @@ type CategoryContentProps = {
   category: Category;
 };
 
+type ChecklistItem = { title: string; description?: string };
+
 type PageCopy = {
   promiseTitle: string;
   promiseDescription: string;
@@ -21,8 +23,10 @@ type PageCopy = {
   detailsTitle: string;
   detailsDescription: string;
   // Remplace la liste « includes » + « modules » par une liste numérotée (titre + phrase).
-  checklist?: { title: string; description: string }[];
+  checklist?: ChecklistItem[];
   checklistNote?: string;
+  // Section checklist supplémentaire, ajoutée après la section détails (sans la remplacer).
+  extraChecklist?: { title: string; description: string; items: ChecklistItem[] };
   // Description propre à cette page pour un exemple (sinon celle de content/site.ts).
   exampleDescriptions?: Record<string, string>;
 };
@@ -126,9 +130,19 @@ const pageCopy: Record<string, PageCopy> = {
       },
     ],
     examplesTitle: "Un exemple danseur à consulter.",
-    detailsTitle: "Ce qu’un lieu, une marque ou un projet culturel doit comprendre.",
+    detailsTitle: "Que mettre dans un press kit danseur ?",
     detailsDescription:
-      "Le press kit présente ton travail sans renvoyer vers une seule vidéo ou un profil social incomplet.",
+      "Un chorégraphe, une compagnie, une marque ou un directeur de casting doit trouver ces éléments en moins d'une minute.",
+    checklist: [
+      { title: "Bio et parcours", description: "formation, styles (hip-hop, afro, contemporain…), années de pratique." },
+      { title: "Showreel", description: "une vidéo d'une à deux minutes avec tes meilleurs passages, en haut de page." },
+      { title: "Vidéos de performances", description: "battles, spectacles, clips, scènes." },
+      { title: "Collaborations", description: "artistes, compagnies, marques, clips tournés." },
+      { title: "Collectif ou compagnie", description: "qui vous êtes et ce que vous proposez ensemble." },
+      { title: "Ateliers, cours et stages", description: "publics, formats, tarifs ou « sur demande »." },
+      { title: "Photos presse en haute définition." },
+      { title: "Contact direct pour les castings, les spectacles et les marques." },
+    ],
   },
   photographe: {
     promiseTitle: "Montrer ton portfolio et expliquer tes prestations.",
@@ -152,6 +166,21 @@ const pageCopy: Record<string, PageCopy> = {
     detailsTitle: "Ce qui manque souvent dans un simple portfolio.",
     detailsDescription:
       "Le press kit ajoute les services, les formats, les zones d’intervention et le contact à côté des images.",
+    extraChecklist: {
+      title: "Que mettre dans un press kit photographe ?",
+      description:
+        "Photographe ou vidéaste : un client doit comprendre ce que tu fais, pour qui et à quel prix, avant de demander un devis.",
+      items: [
+          { title: "Portfolio par spécialité", description: "mariage, portrait, corporate, événementiel, mode, une galerie par type de prestation." },
+          { title: "Images en haute qualité, optimisées pour le mobile." },
+          { title: "Prestations et formules", description: "ce qui est inclus, durée, délai de livraison des photos." },
+          { title: "Tarifs ou prix « à partir de », pour filtrer les demandes." },
+          { title: "Zone d'intervention et déplacements." },
+          { title: "Références", description: "clients, publications, expositions." },
+          { title: "Avis clients." },
+          { title: "Demande de devis en un clic." },
+      ],
+    },
   },
   "coach-sportif": {
     promiseTitle: "Expliquer ton coaching sans multiplier les messages.",
@@ -172,9 +201,19 @@ const pageCopy: Record<string, PageCopy> = {
       },
     ],
     examplesTitle: "Un exemple coach sportif à consulter.",
-    detailsTitle: "Ce qu’un prospect doit comprendre avant de te contacter.",
+    detailsTitle: "Que mettre dans un press kit coach sportif ?",
     detailsDescription:
-      "Le press kit évite les explications répétées en message privé. Il présente les offres, les preuves et le contact.",
+      "Un futur client doit comprendre ton coaching et réserver sans échanger dix messages.",
+    checklist: [
+      { title: "Ta spécialité", description: "remise en forme, perte de poids, préparation physique, renforcement musculaire…" },
+      { title: "Tes formats", description: "coaching à domicile, en salle, en extérieur ou en visio, en individuel ou en petit groupe." },
+      { title: "Ta méthode", description: "comment se passent une séance et un programme." },
+      { title: "Diplômes et certifications." },
+      { title: "Résultats", description: "transformations et avis clients, publiés avec leur accord." },
+      { title: "Offres et tarifs", description: "séance à l'unité, carnets, abonnements." },
+      { title: "Zone d'intervention." },
+      { title: "Prise de rendez-vous", description: "un lien ou un numéro direct." },
+    ],
   },
   "make-up-artist": {
     promiseTitle: "Montrer tes looks et expliquer tes prestations.",
@@ -195,9 +234,19 @@ const pageCopy: Record<string, PageCopy> = {
       },
     ],
     examplesTitle: "Un exemple make-up artist à consulter.",
-    detailsTitle: "Ce qui aide une cliente, une marque ou une prod à décider.",
+    detailsTitle: "Que mettre dans un press kit make-up artist ?",
     detailsDescription:
-      "Le press kit réunit les looks, les prestations, les références et les informations de contact.",
+      "Une future mariée, une marque ou une production doit trouver ces éléments en moins d'une minute.",
+    checklist: [
+      { title: "Portfolio par type de maquillage", description: "mariée, shooting, mode, événementiel, effets spéciaux." },
+      { title: "Photos avant/après, publiées avec l'accord de tes clientes." },
+      { title: "Prestations", description: "maquillage mariée avec essai, maquillage shooting, cours d'auto-maquillage…" },
+      { title: "Tarifs ou prix « à partir de »." },
+      { title: "Zone de déplacement et frais." },
+      { title: "Références", description: "marques, défilés, tournages, magazines." },
+      { title: "Avis clientes." },
+      { title: "Contact et disponibilités, surtout pour les dates de mariage." },
+    ],
   },
   organisateur: {
     promiseTitle: "Présenter ton événement à un lieu, un sponsor ou un partenaire.",
@@ -218,9 +267,19 @@ const pageCopy: Record<string, PageCopy> = {
       },
     ],
     examplesTitle: "Un exemple événementiel à consulter.",
-    detailsTitle: "Ce qu’un partenaire doit trouver avant de répondre.",
+    detailsTitle: "Que mettre dans un press kit organisateur (dossier de sponsoring) ?",
     detailsDescription:
-      "Le press kit donne les informations nécessaires avant un échange : format, médias, chiffres, partenaires et contact.",
+      "Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y gagne avant de répondre.",
+    checklist: [
+      { title: "Le concept", description: "format, ambiance, musique, public visé." },
+      { title: "Les éditions passées", description: "dates, lieux, nombre de participants." },
+      { title: "Les chiffres", description: "audience, abonnés, billets vendus, taux de remplissage." },
+      { title: "Photos et aftermovie." },
+      { title: "Le line-up", description: "DJs et artistes programmés." },
+      { title: "Les partenaires déjà engagés", description: "lieux, marques, médias." },
+      { title: "Les offres de sponsoring", description: "visibilité proposée, contreparties, formats de partenariat." },
+      { title: "Le contact partenariats." },
+    ],
   },
 };
 
@@ -358,16 +417,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
           <div className="grid gap-8">
             {copy.checklist ? (
               <div>
-                <ol className="border-y border-white/[0.12]">
-                  {copy.checklist.map((item, index) => (
-                    <li key={item.title} className="motion-line grid grid-cols-[1.75rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
-                      <span className="text-sm font-semibold leading-6 text-white/[0.64]">{String(index + 1).padStart(2, "0")}</span>
-                      <p className="text-sm font-medium leading-6 text-white/[0.74]">
-                        <strong className="font-semibold text-white">{item.title} :</strong> {item.description}
-                      </p>
-                    </li>
-                  ))}
-                </ol>
+                <Checklist items={copy.checklist} />
                 {copy.checklistNote ? <p className="mt-6 text-sm leading-6 text-white/[0.74]">{copy.checklistNote}</p> : null}
               </div>
             ) : (
@@ -391,6 +441,43 @@ export function CategoryContent({ category }: CategoryContentProps) {
         </PageShell>
       </section>
 
+      {copy.extraChecklist ? (
+        <section className="section-divider py-20 md:py-28">
+          <PageShell className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+            <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
+              <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+                {copy.extraChecklist.title}
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
+                {copy.extraChecklist.description}
+              </p>
+            </div>
+            <Checklist items={copy.extraChecklist.items} />
+          </PageShell>
+        </section>
+      ) : null}
     </>
+  );
+}
+
+// Liste numérotée « titre en gras : phrase » des sections « Que mettre dans un press kit … ? ».
+function Checklist({ items }: { items: ChecklistItem[] }) {
+  return (
+    <ol className="border-y border-white/[0.12]">
+      {items.map((item, index) => (
+        <li key={item.title} className="motion-line grid grid-cols-[1.75rem_1fr] gap-4 border-b border-white/[0.08] py-4 last:border-b-0">
+          <span className="text-sm font-semibold leading-6 text-white/[0.64]">{String(index + 1).padStart(2, "0")}</span>
+          <p className="text-sm font-medium leading-6 text-white/[0.74]">
+            {item.description ? (
+              <>
+                <strong className="font-semibold text-white">{item.title} :</strong> {item.description}
+              </>
+            ) : (
+              <strong className="font-semibold text-white">{item.title}</strong>
+            )}
+          </p>
+        </li>
+      ))}
+    </ol>
   );
 }

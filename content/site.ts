@@ -511,7 +511,7 @@ export const categories: Category[] = [
     heroTitle: "Press kit make-up artist : tes looks, tes prestations, ton contact",
     heroTitleKicker: true,
     heroDescription:
-      "Présente ton portfolio, tes prestations, tes références et ton contact aux clientes, marques ou productions.",
+      "Maquilleuse ou maquilleur professionnel : présente ton portfolio, tes prestations, tes références et ton contact aux clientes, marques ou productions.",
     valueProps: ["Portfolio clair", "Prestations lisibles", "Contact direct"],
     benefits: [
       {
@@ -562,7 +562,7 @@ export const categories: Category[] = [
     heroTitle: "Press kit organisateur : ton événement, lisible pour les lieux et sponsors",
     heroTitleKicker: true,
     heroDescription:
-      "Présente ton événement, tes photos, tes vidéos, ta communauté, tes chiffres, tes partenaires et ton contact.",
+      "Collectif, soirée récurrente ou festival : présente ton événement, tes photos, tes vidéos, ta communauté, tes chiffres, tes partenaires et ton contact.",
     valueProps: ["Événement lisible", "Chiffres regroupés", "Contact partenaire"],
     benefits: [
       {
