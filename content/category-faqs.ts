@@ -59,6 +59,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
         "Oui : maquillage beauté, mariée, mode ou effets spéciaux, la page s'adapte à ta spécialité.",
     },
     {
+      question: "Quelles photos choisir pour mon portfolio ?",
+      answer:
+        "Tes meilleurs maquillages par spécialité : mariée, shooting, mode ou effets spéciaux. Mieux vaut quinze photos nettes et variées que cinquante images proches. Les avant/après rassurent les futures mariées, toujours publiés avec l'accord de tes clientes.",
+    },
+    {
+      question: "Puis-je ajouter de nouvelles réalisations après la livraison ?",
+      answer:
+        "Oui, avec l'option « Mise à jour de contenu » : tu nous envoies tes nouvelles photos et on les ajoute à ta galerie. Pratique après une saison de mariages ou un nouveau shooting.",
+    },
+    {
       question: "Puis-je présenter mes prestations mariée, shooting et événementiel ?",
       answer: "Oui, chaque prestation peut avoir sa description et son contact de réservation.",
     },
@@ -76,6 +86,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
       question: "Un press kit peut-il remplacer mon book de danseur ?",
       answer:
         "Oui : book photo, showreel et parcours sont réunis sur une seule page, plus simple à envoyer pour un casting qu'un PDF ou une liste de liens.",
+    },
+    {
+      question: "Quels contenus préparer avant de commencer ?",
+      answer:
+        "Ton showreel ou deux à trois vidéos, une dizaine de photos en haute définition, ta bio et la liste de tes collaborations. S'il manque un élément, on construit la page avec ce que tu as, et on l'ajoute plus tard avec l'option de mise à jour.",
+    },
+    {
+      question: "Comment envoyer mon press kit à un directeur de casting ?",
+      answer:
+        "Tu colles le lien dans un e-mail, un message privé ou un formulaire de candidature. La page s'ouvre sur mobile comme sur ordinateur, sans application ni téléchargement, et ton showreel se lance tout de suite.",
     },
     {
       question: "Puis-je intégrer mes vidéos de performances ?",
@@ -101,6 +121,21 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
         "Oui : ta zone d'intervention, tes créneaux et la prise de rendez-vous apparaissent dès le haut de la page.",
     },
     {
+      question: "Quels contenus préparer avant de commencer ?",
+      answer:
+        "Ta bio, tes diplômes, tes formules et tes tarifs, quelques photos de séances et, si tes clients sont d'accord, leurs avis ou leurs transformations. On t'aide à trier et à formuler le reste pendant le brief.",
+    },
+    {
+      question: "Je coache en salle et en visio, je peux présenter les deux ?",
+      answer:
+        "Oui. Chaque format a sa place : séance en salle, à domicile ou en visio, en individuel ou en petit groupe. Le client voit tout de suite ce qui lui correspond et comment réserver.",
+    },
+    {
+      question: "Puis-je afficher mes diplômes et certifications ?",
+      answer:
+        "Oui. Tes diplômes (BPJEPS, licence STAPS, certifications spécialisées) apparaissent dans une section dédiée. Ils rassurent un client qui hésite entre plusieurs coachs et justifient tes tarifs.",
+    },
+    {
       question: "Puis-je présenter mes offres et programmes ?",
       answer: "Oui, chaque offre peut avoir sa description et son appel à l'action.",
     },
@@ -122,6 +157,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
       question: "Quelle différence avec un dossier de sponsoring PDF ?",
       answer:
         "Le contenu est le même, mais la page se met à jour après chaque édition, se lit sur mobile et se partage en un lien.",
+    },
+    {
+      question: "Quels chiffres montrer à un sponsor ?",
+      answer:
+        "Le nombre de participants par édition, le taux de remplissage, les billets vendus, ton audience sur les réseaux et le profil de ton public. Un sponsor veut savoir qui il va toucher : quelques chiffres clairs suffisent.",
+    },
+    {
+      question: "Mon événement n'a eu qu'une édition, ça vaut le coup ?",
+      answer:
+        "Oui. Une première édition bien présentée, avec photos, aftermovie et retours du public, suffit pour convaincre un lieu ou une marque. Tu ajoutes les chiffres des éditions suivantes au fil du temps.",
     },
     {
       question: "Puis-je présenter les chiffres de ma communauté ?",
