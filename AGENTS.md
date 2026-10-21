@@ -27,8 +27,8 @@ Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 3, Framer
 - `lib/legal.ts` : mentions légales, délai, acompte, nombre d'allers-retours.
 - `components/ui/` : primitives (`Button`, `Badge`, `SectionHeading`, `Reveal`) ; `components/layout/` : `PageShell`, header, footer.
 - `design-system/presskit/` : charte (`README.md`), `tokens.json`, `tokens.css`. Version en ligne : https://claude.ai/artifact/MPrpVjKP3g2j4LpMAzTiE2. En cas de changement de charte, mettre à jour les deux.
-- `docs/da-instagram.md` : DA des visuels et vidéos Instagram, source de vérité (validée par David).
-- `docs/claude-projet-instructions.md` et `docs/claude-projet-connaissances.md` : contexte pour le projet Claude Desktop de David. Les régénérer si l'offre, les textes ou la liste des clients changent.
+- `docs/instagram/` : référentiel Instagram, `da.md` (DA des visuels et vidéos, validée par David) et `ligne-editoriale.md` (clients, grille, ton, interdits).
+- `docs/claude-projet-instructions.md` (écrit à la main) et `docs/claude-projet-connaissances.md` (généré par `node scripts/claude-projet-connaissances.mjs`) : contexte pour le projet Claude Desktop de David. Relancer le script dès que l'offre, les textes ou la liste des clients changent.
 
 ## Rédaction
 
@@ -65,7 +65,7 @@ En cas de conflit entre deux consignes (par exemple « supprime cet élément »
 - Texte ajouté ou modifié : `/relecture-contenu` (vocabulaire creux, phrases vides, charte).
 - Avant tout commit ou push : `/relecture-qa` (types, lint, build, diff, layout, responsive, liens).
 - Nouvelle page, meta, titres ou maillage : `/relecture-seo` (métadonnées, H1/H2, sitemap, JSON-LD, alt).
-- Instagram @presskit_for_you : `/strategie-social` (planning du mois, bilan Metricool), `/post-social` (carrousels, Reels, légendes), `/community` (réponses aux commentaires et DM, relances, objections). Ligne éditoriale commune : `.claude/skills/strategie-social/references/ligne-editoriale.md`.
+- Instagram @presskit_for_you : `/insta-strategie` (planning du mois, bilan Metricool), `/insta-post` (posts : client, couverture, slides, script, légende), `/insta-visuel` (PNG et vidéos, contrôlés contre la DA), `/insta-community` (commentaires, DM, relances, objections). Tous passent par `docs/instagram/`.
 - Sans Claude Code : faire au minimum `npx tsc --noEmit`, `npm run lint`, `npm run build`, relire `git diff` et vérifier le rendu sur http://localhost:3000 en desktop et à 375 px.
 
 ## Décisions en attente

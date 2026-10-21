@@ -1,8 +1,8 @@
 # Ligne éditoriale Instagram : @presskit_for_you
 
-Référence commune aux skills `strategie-social`, `post-social` et `community`. Avec `docs/da-instagram.md`, elle forme le **référentiel Instagram** : tout ce qui est publié ou proposé en vient. Ce qui n'y figure pas ne s'invente pas : on demande à David, puis on l'ajoute au référentiel.
+Référence commune aux skills `insta-strategie`, `insta-post`, `insta-visuel` et `insta-community`. Avec `docs/instagram/da.md`, elle forme le **référentiel Instagram** : tout ce qui est publié ou proposé en vient. Ce qui n'y figure pas ne s'invente pas : on demande à David, puis on l'ajoute au référentiel.
 
-- **Visuels et vidéos** : source unique `docs/da-instagram.md` (DA validée par David ; sa §19, relevée dans Canva, prime sur le reste).
+- **Visuels et vidéos** : source unique `docs/instagram/da.md` (DA validée par David ; sa §19, relevée dans Canva, prime sur le reste).
 - **Textes** : ce fichier, plus les règles de rédaction d'`AGENTS.md` (section « Rédaction »).
 
 ## Pour qui on publie
@@ -52,7 +52,7 @@ La matière vient uniquement du site du client et de ce que David fournit, jamai
 
 ## Visuels : aucun chiffre ici
 
-Ce fichier ne contient volontairement aucune valeur visuelle (couleur, police, taille, format) : elles vivent uniquement dans `docs/da-instagram.md`, pour qu'il n'existe jamais deux versions d'une même valeur. Pour produire, suivre `post-social` (étape 4), qui extrait les tokens de la DA et contrôle chaque export.
+Ce fichier ne contient volontairement aucune valeur visuelle (couleur, police, taille, format) : elles vivent uniquement dans `docs/instagram/da.md`, pour qu'il n'existe jamais deux versions d'une même valeur. Pour produire, suivre `insta-visuel`, qui extrait les tokens de la DA et contrôle chaque export.
 
 Repères dans la DA : formats §9, zones de sécurité §10, gabarits de posts §11, couvertures Canva §19, couleurs §3, polices §4, mockups §7, vidéo §12, grille §13, checklist §17.
 
@@ -87,7 +87,7 @@ Repères dans la DA : formats §9, zones de sécurité §10, gabarits de posts �
 
 - Une info client inventée : date, chiffre, club, festival, citation, même « pour illustrer ».
 - Une photo de banque d'images pour représenter un client.
-- Un prix ou un délai différent du site (dès 300 €, 7 jours, 5 allers-retours). Pas de « retouches illimitées », pas de « TTC » (TVA non applicable).
+- Un prix, un délai ou un nombre d'allers-retours différent de `content/pricing.ts` et `lib/legal.ts`. Pas de « retouches illimitées », pas de « TTC » (TVA non applicable).
 - Une promo non validée par David, une critique d'un concurrent nommé, les coordonnées d'un client sans son accord.
 - Une note interne laissée dans une légende : relire la légende finale telle qu'elle sera collée.
 

@@ -11,7 +11,6 @@ Tu relis des textes, tu n'en écris pas de nouveaux. Le site en ligne est la ré
 
 - Par défaut : les textes modifiés dans `git diff` (fichiers `content/`, `components/`, `app/`, meta descriptions comprises).
 - Si l'utilisateur désigne une page ou un fichier, relire celui-là en entier.
-- Lire la section « Rédaction » d'`AGENTS.md` : ses règles priment.
 
 ## 2. Contrôler chaque phrase
 
@@ -34,11 +33,8 @@ Tu relis des textes, tu n'en écris pas de nouveaux. Le site en ligne est la ré
 
 ## 3. Contrôler la charte
 
-- Tutoiement partout, CTA à la première personne (« Demander mon press kit »).
-- « 7 jours » sans « ouvrés » (sauf CGV), « sur mesure » sans trait d'union, « e-mail » avec.
-- H2 sans point final, casse de phrase.
-- Élision via `withDe()` devant un nom : « d'Arthur Chaps », « de DJ FLO ».
-- Témoignages clients : jamais modifiés, même pour une faute.
+Vérifie chaque règle de la section « Rédaction » d'`AGENTS.md` (tutoiement, CTA, délai, orthographes fixées, H2, élision, témoignages intouchables) : c'est la seule liste à jour, ne t'appuie pas sur une copie. Pour un texte Instagram, ajoute les règles de `docs/instagram/ligne-editoriale.md`. Les chiffres (prix, délai, nombre d'exemples) se contrôlent contre `content/pricing.ts`, `lib/legal.ts` et `liveExamplesCount`.
+
 - Une page d'accueil explique et rassure, elle ne force pas la vente. Une page métier dit ce qui est inclus, pour qui, et pourquoi c'est utile.
 
 ## 4. Rapport

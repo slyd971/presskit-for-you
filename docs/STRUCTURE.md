@@ -43,9 +43,9 @@ presskit-for-you/
 ├── content/                  Textes et données (aucune UI)
 ├── lib/                      Helpers : SEO, catégories, OG, motion, légal
 ├── design-system/presskit/   Design system : charte, tokens.json, tokens.css
-├── docs/                     Audits design et SEO, ce fichier
+├── docs/                     Audits design et SEO, référentiel Instagram (instagram/), contexte Claude Desktop, ce fichier
 ├── AGENTS.md                 Instructions du projet, importé par CLAUDE.md
-├── .claude/skills/           Skills : relectures (contenu, QA, SEO) et Instagram (stratégie, posts, community)
+├── .claude/skills/           Skills : relecture-* (contenu, QA, SEO) et insta-* (stratégie, post, visuel, community)
 ├── scripts/                  Scripts zsh de capture des previews
 ├── public/                   Images (logos, previews, OG, témoignages)
 ├── tailwind.config.ts        Thème Tailwind et tokens du design system

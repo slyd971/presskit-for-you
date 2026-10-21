@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Vérifie qu'un dossier de visuels Instagram n'utilise que des valeurs du référentiel
-// (docs/da-instagram.md) : couleurs hex, polices et dimensions d'export.
+// (docs/instagram/da.md) : couleurs hex, polices et dimensions d'export.
 //
 // Usage :
-//   node .claude/skills/post-social/scripts/check-da.mjs <dossier>
+//   node .claude/skills/insta-visuel/scripts/check-da.mjs <dossier>
 //
 // Convention du dossier : fichiers .html/.css/.svg à la racine ou dans des sous-dossiers,
 // PNG/JPG finaux dans <dossier>/export/ (les captures intermédiaires peuvent vivre ailleurs).
@@ -14,13 +14,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../../..");
-const DA_PATH = path.join(ROOT, "docs/da-instagram.md");
+const DA_PATH = path.join(ROOT, "docs/instagram/da.md");
 const ALLOWED_FONTS = new Set(["anton", "manrope", "sans-serif"]);
 const ALLOWED_SIZES = new Set(["1080x1350", "1080x1920"]);
 
 const dir = process.argv[2];
 if (!dir || !existsSync(dir)) {
-  console.error("Usage : node .claude/skills/post-social/scripts/check-da.mjs <dossier>");
+  console.error("Usage : node .claude/skills/insta-visuel/scripts/check-da.mjs <dossier>");
   process.exit(1);
 }
 
@@ -74,7 +74,7 @@ if (images.length) {
 }
 
 if (problems.length) {
-  console.log(`✗ ${problems.length} valeur(s) hors référentiel (docs/da-instagram.md) :\n`);
+  console.log(`✗ ${problems.length} valeur(s) hors référentiel (docs/instagram/da.md) :\n`);
   console.log(problems.join("\n"));
   console.log("\nUtiliser les tokens de la DA, ou faire valider la valeur par David et l'ajouter au référentiel.");
   process.exit(1);

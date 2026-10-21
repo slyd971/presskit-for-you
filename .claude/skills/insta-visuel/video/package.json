@@ -1,7 +1,7 @@
 {
   "name": "presskit-instagram-video",
   "private": true,
-  "description": "Montage des Reels et stories Instagram de @presskit_for_you (Remotion), selon docs/da-instagram.md §12.",
+  "description": "Montage des Reels et stories Instagram de @presskit_for_you (Remotion), selon docs/instagram/da.md §12.",
   "type": "module",
   "scripts": {
     "prepare-da": "node ../scripts/da-tokens.mjs src/tokens.css && node ../scripts/da-tokens.mjs --remotion src/da.ts && mkdir -p src/fonts && cp ../assets/fonts/*.woff2 src/fonts/",

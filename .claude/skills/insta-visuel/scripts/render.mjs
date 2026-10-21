@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Rend les slides HTML d'un dossier en PNG, avec les tokens et les polices du référentiel
-// (docs/da-instagram.md), puis vérifie la conformité avec check-da.mjs.
+// (docs/instagram/da.md), puis vérifie la conformité avec check-da.mjs.
 //
 // Usage :
-//   node .claude/skills/post-social/scripts/render.mjs <dossier>
+//   node .claude/skills/insta-visuel/scripts/render.mjs <dossier>
 //
 // Chaque fichier <dossier>/*.html devient <dossier>/export/<nom>.png. Le format vient de
 // <meta name="canvas" content="1080x1350"> (carrousel, par défaut) ou "1080x1920" (Reel, couverture, story).
@@ -22,7 +22,7 @@ const SIZES = new Set(["1080x1350", "1080x1920"]);
 
 const dir = process.argv[2] && path.resolve(process.argv[2]);
 if (!dir || !existsSync(dir)) {
-  console.error("Usage : node .claude/skills/post-social/scripts/render.mjs <dossier>");
+  console.error("Usage : node .claude/skills/insta-visuel/scripts/render.mjs <dossier>");
   process.exit(1);
 }
 

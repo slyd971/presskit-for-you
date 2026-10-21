@@ -141,7 +141,7 @@ export function SiteHeader() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: motionTokens.duration.fast, ease: motionTokens.easing.interaction }}
-              className="overflow-hidden md:hidden"
+              className="relative overflow-hidden md:hidden"
             >
               <motion.div
                 initial={{ y: -10, opacity: 0 }}

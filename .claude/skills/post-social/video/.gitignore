@@ -1,5 +1,0 @@
-# Régénérés depuis docs/da-instagram.md et assets/fonts/ à chaque lancement (npm run prepare-da).
-src/tokens.css
-src/da.ts
-src/fonts/
-out/

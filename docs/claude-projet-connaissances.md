@@ -62,7 +62,7 @@ Oui, on démarre avec les contenus que tu as déjà. Tu pourras ensuite les comp
 
 **Comment se passe le paiement ?**
 
-50 % à la commande, 50 % à la livraison. Les prix sont nets de TVA (micro-entreprise).
+50 % à la commande, 50 % à la livraison. Les prix sont nets : TVA non applicable, art. 293 B du CGI (micro-entreprise).
 
 **Peut-on se rencontrer pour le brief ?**
 
