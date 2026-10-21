@@ -47,7 +47,7 @@ const homeExamples = [
     title: "KRIMO",
     category: "Danseur",
     exampleName: "KRIMO",
-    description: "Un press kit danseur immersif pour performance, collectif, engagement social et collaborations.",
+    description: "Un press kit danseur avec performances, collectif, engagement social et collaborations.",
     context: "Danseur et projet culturel à forte dimension humaine.",
     objective: "Faire sentir l’énergie, le propos et les possibilités de collaboration.",
     result: "Une présence plus incarnée, pensée pour convaincre au-delà d’une vidéo.",

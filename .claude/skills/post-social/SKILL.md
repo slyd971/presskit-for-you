@@ -65,7 +65,7 @@ Quand David demande les visuels, et pas seulement le texte :
    - Constantes (cadence, format, easing, durées, zones de sécurité) : `src/da.ts` ; couleurs et polices : `src/tokens.css`. Les deux sont régénérés depuis la DA à chaque `npm run studio` ou `npm run render` : ne jamais les modifier à la main, ni écrire une valeur en dur dans une composition.
    - `useDaFonts()` annule le rendu si Anton ou Manrope n'est pas chargée.
    - Rendu aux réglages de la DA (§12.1) : `npm run render -- <Composition> out/<nom>.mp4 --codec=h264 --pixel-format=yuv420p --crf=18`.
-   - FFmpeg et ffprobe (assemblage, contrôle) : `npm run ffmpeg -- …` et `npm run ffprobe -- …`, fournis par Remotion. Contrôle d'un export : `npm run ffprobe -- -v error -show_entries stream=codec_name,width,height,r_frame_rate,pix_fmt -of compact out/<nom>.mp4` doit donner h264, 1080 × 1920, 30/1, yuv420p.
+   - FFmpeg et ffprobe (assemblage, contrôle) : installés sur le Mac de David via Homebrew (`ffmpeg`, `ffprobe`, avec libx264 et AAC) ; à défaut, `npm run ffmpeg -- …` et `npm run ffprobe -- …`, fournis par Remotion. Contrôle d'un export : `npm run ffprobe -- -v error -show_entries stream=codec_name,width,height,r_frame_rate,pix_fmt -of compact out/<nom>.mp4` doit donner h264, 1080 × 1920, 30/1, yuv420p.
    - Le rendu Remotion ne fonctionne pas dans le bac à sable de Claude Code (le navigateur ne joint pas le serveur local de Remotion) : si la commande se bloque sur « Waiting for root component to load », demande à David de la lancer dans son terminal.
    - Pas de musique commerciale dans le fichier (DA §12.7).
 

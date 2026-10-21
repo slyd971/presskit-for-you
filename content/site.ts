@@ -209,7 +209,7 @@ export const faqItems = [
   {
     question: "Comment se passe le paiement ?",
     answer:
-      `50 % à la commande, 50 % à la livraison. Les prix sont nets de TVA (micro-entreprise).`,
+      `50 % à la commande, 50 % à la livraison. Les prix sont nets : TVA non applicable, art. 293 B du CGI (micro-entreprise).`,
   },
   {
     question: "Peut-on se rencontrer pour le brief ?",

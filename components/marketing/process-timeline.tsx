@@ -17,7 +17,7 @@ type ProcessTimelineProps = {
 const dossierCards = [
   {
     status: "BRIEF REÇU",
-    title: "On récupère tes contenus.",
+    title: "On récupère tes contenus",
     description: "Tu envoies tes textes, photos, vidéos, liens et références. On trie ce qui sert vraiment à présenter ton activité. Le brief se fait en rendez-vous en Île-de-France, ou en visio pour les clients plus éloignés.",
     meta: "Jour 1 / Notes client",
     when: "Jour 1",
@@ -26,7 +26,7 @@ const dossierCards = [
   },
   {
     status: "MAQUETTE",
-    title: "On prépare la maquette.",
+    title: "On prépare la maquette",
     description: "On choisit le style, l'ordre des sections et ce que le visiteur doit voir en premier.",
     meta: "Jours 2-3 / Maquette",
     when: "Jours 2-3",
@@ -35,7 +35,7 @@ const dossierCards = [
   },
   {
     status: "MISE EN LIGNE",
-    title: "Tu reçois le lien final.",
+    title: "Tu reçois le lien final",
     description: "Le press kit est intégré, adapté au mobile, testé puis livré avec un lien prêt à partager.",
     meta: "7 jours max / Final",
     when: "7 jours max",
