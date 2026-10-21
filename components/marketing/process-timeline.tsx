@@ -84,7 +84,8 @@ function CompactVisual({ type }: { type: string }) {
   if (type === "final") {
     return (
       <div className="relative h-56 overflow-hidden bg-mockup p-3 md:h-64">
-        <div className="relative aspect-[91/60] overflow-hidden border border-white/[0.12] bg-black">
+        <div className="mockup-surface relative rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1">
+          <div className="relative aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
           <Image
             src="/gallery-previews/home-desktop/dj-slyd.webp"
             alt="Press kit de DJ SLY'D, DJ, version desktop"
@@ -92,9 +93,11 @@ function CompactVisual({ type }: { type: string }) {
             sizes="(min-width: 1024px) 36vw, 82vw"
             className="object-contain object-center"
           />
+          </div>
         </div>
-        <div className="absolute bottom-5 right-5 w-[24%] min-w-[4rem] rotate-[3deg] border border-white/[0.18] bg-mockup p-1 shadow-[0_18px_48px_rgba(0,0,0,0.45)]">
-          <div className="relative aspect-[0.48/1] overflow-hidden bg-black">
+        <div className="absolute bottom-5 right-5 w-[24%] min-w-[4rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_48px_rgba(0,0,0,0.45)]">
+          <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
+            <div className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
             <Image
               src="/gallery-previews/home-mobile/dj-slyd.webp"
               alt="Press kit de DJ SLY'D, DJ, version mobile"

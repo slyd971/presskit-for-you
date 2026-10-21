@@ -44,8 +44,8 @@ export function ProofStats() {
           </div>
 
           <div className="relative min-h-[18rem] lg:min-h-[22rem]">
-            <div className="product-drift absolute left-0 top-6 w-[82%] rotate-[-1.5deg] border border-ink-editorial/[0.12] bg-mockup p-2 shadow-[0_26px_80px_rgba(16,20,29,0.2)]">
-              <div className="relative aspect-[91/60] overflow-hidden bg-black">
+            <div className="product-drift mockup-surface absolute left-0 top-6 w-[82%] rotate-[-1.5deg] rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_26px_80px_rgba(16,20,29,0.2),inset_0_1px_0_rgba(255,255,255,0.14)]">
+              <div className="relative aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
                 <Image
                   src="/gallery-previews/home-desktop/dj-slyd.webp"
                   alt="Press kit de DJ SLY'D, DJ, version desktop"

@@ -200,8 +200,8 @@ export function Hero() {
                 >
                   <span className="relative block -translate-x-1/2 overflow-visible">
                     <span className="absolute -inset-8 rounded-full bg-white opacity-0 blur-3xl transition duration-slow group-hover:opacity-10" aria-hidden="true" />
-                    <span className="mockup-surface relative block overflow-hidden border border-white/[0.12] bg-mockup p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
-                      <span className="block aspect-[91/60] overflow-hidden bg-black">
+                    <span className="mockup-surface relative block overflow-hidden rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.14)]">
+                      <span className="relative block aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
                         <Image
                           src={kit.desktopImage}
                           alt={`Press kit de ${kit.title}, ${kit.category}, version desktop`}
@@ -249,10 +249,10 @@ export function Hero() {
                       className="group w-[90vw] max-w-[24rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-900"
                     >
                       <span
-                        className="relative block border border-white/[0.18] bg-mockup p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
+                        className="relative block rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_24px_78px_rgba(0,0,0,0.48),inset_0_1px_0_rgba(255,255,255,0.12)]"
                       >
                         <span className="absolute -inset-x-1 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.42),transparent)] opacity-70" aria-hidden="true" />
-                        <span className="relative block aspect-[91/60] overflow-hidden bg-black">
+                        <span className="relative block aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
                           <Image
                             src={kit.desktopImage}
                             alt={`Press kit de ${kit.title}, ${kit.category}, version desktop`}
@@ -263,7 +263,7 @@ export function Hero() {
                           />
                         </span>
                         {mobileImage ? (
-                          <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-mockup p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
+                          <span className="absolute bottom-9 right-3 block w-[23%] min-w-[3.8rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_14px_40px_rgba(0,0,0,0.52)]">
                             <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
                               <span className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
                               <Image
