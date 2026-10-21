@@ -2,10 +2,21 @@
 
 Site vitrine de presskit.fr : press kits digitaux premium pour artistes, talents et indépendants. Next.js 16 (App Router), React 19, Tailwind CSS 3, Framer Motion, icônes Lucide.
 
-- `npm run dev` : serveur local sur http://127.0.0.1:3000
+- `npm run dev` : serveur local sur http://localhost:3000 (pas 127.0.0.1 : Next bloque alors ses ressources de dev et la page ne s'anime plus)
 - `npm run lint` : ESLint ; `npx tsc --noEmit` pour les types
 - Textes et données : `content/` (`site.ts` pour la config, la nav et les CTA)
 - Pages par métier : `app/<metier>/`, construites avec `components/marketing/presskit-category-page.tsx`
+- Exemples clients : tableau `examples` de `content/site.ts` ; `liveExamplesCount` donne le nombre de press kits en ligne (ne jamais l'écrire en dur)
+- Déploiement : un push sur `main` (github.com/slyd971/presskit-for-you) déclenche le déploiement Vercel
+
+## Rédaction
+
+- CTA : « Demander mon press kit » (`CTA.primary`), « Voir des exemples ». Contact : « Écrire sur WhatsApp » et « Envoyer un e-mail » (`mailto:contact@presskit.fr`).
+- `siteConfig.whatsappUrl` contient déjà le message pré-rempli : le réutiliser pour tout lien WhatsApp.
+- Délai : « 7 jours », sans « ouvrés », sauf dans les CGV (texte contractuel). Paiement : « 50 % à la commande, 50 % à la livraison ».
+- « sur mesure » sans trait d'union ; titres H2 sans point final.
+- Devant un nom de client, utiliser `withDe()` de `lib/utils.ts` (« d'Arthur Chaps », « de DJ FLO »).
+- Corrections de texte : ne toucher ni aux `className`, ni aux styles, ni au layout, ni aux témoignages clients.
 
 ## Design system
 

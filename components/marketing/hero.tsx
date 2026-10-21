@@ -160,7 +160,7 @@ export function Hero() {
 
         <div className="min-w-0">
           <div
-            className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[46rem]"
+            className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[36rem]"
             onPointerEnter={(event) => setIsPaused(event.pointerType === "mouse")}
             onPointerLeave={() => setIsPaused(false)}
             onFocus={(event) => setIsPaused(event.target.matches(":focus-visible"))}
