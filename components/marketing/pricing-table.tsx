@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { pricingOptions, pricingTiers } from "@/content/pricing";
 import { CTA } from "@/content/site";
 import { VAT_MENTION } from "@/lib/vat";
@@ -14,6 +15,8 @@ type PricingTableProps = {
   showHeading?: boolean;
   sectionId?: string | null;
   contactHref?: string;
+  // Lien « Voir le détail des tarifs » sous les formules (accueil).
+  showDetailsLink?: boolean;
 };
 
 export function PricingTable({
@@ -21,6 +24,7 @@ export function PricingTable({
   showHeading = true,
   sectionId = "tarifs",
   contactHref = "/#contact",
+  showDetailsLink = false,
 }: PricingTableProps) {
   const isHighlight = variant === "highlight";
   const spacingClass = showHeading ? "pt-16 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
@@ -110,6 +114,11 @@ export function PricingTable({
           })}
         </div>
         <p className="mt-4 text-xs text-white/[0.64] md:mt-6">{VAT_MENTION}</p>
+        {showDetailsLink ? (
+          <Link href="/tarifs" className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white">
+            Voir le détail des tarifs
+          </Link>
+        ) : null}
         <div className="mt-4 py-3 md:mt-12 md:py-10">
           <div className="grid gap-3 md:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>

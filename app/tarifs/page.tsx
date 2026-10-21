@@ -1,4 +1,4 @@
-import { CTA, pricingFaqItems } from "@/content/site";
+import { CTA, pricingFaqItems, siteConfig } from "@/content/site";
 import type { Metadata } from "next";
 
 import { Faq } from "@/components/marketing/faq";
@@ -19,10 +19,30 @@ export const metadata: Metadata = createPageMetadata({
   keywords: ["tarifs press kit", "prix press kit digital", "formules press kit"],
 });
 
+const serviceJsonLd = {
+  "@type": "Service",
+  name: "Création de press kits digitaux premium",
+  serviceType: "Création de press kits digitaux",
+  provider: { "@id": `${siteConfig.url}/#organization` },
+  areaServed: "FR",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "300",
+    priceSpecification: { "@type": "PriceSpecification", minPrice: 300, priceCurrency: "EUR" },
+  },
+};
+
 export default function TarifsPage() {
   return (
     <>
-      <PageJsonLd path="tarifs" name="Tarifs PressKit For You" breadcrumbName="Tarifs PressKit For You" description="Tarifs et formules de création de press kits digitaux premium." />
+      <PageJsonLd
+        path="tarifs"
+        name="Tarifs PressKit For You"
+        breadcrumbName="Tarifs PressKit For You"
+        description="Tarifs et formules de création de press kits digitaux premium."
+        extraNodes={[serviceJsonLd]}
+      />
       <section className="section-wash relative overflow-hidden pb-6 pt-28 md:pb-8 md:pt-32">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(255,255,255,0.055),transparent_24%),radial-gradient(circle_at_82%_14%,rgba(255,255,255,0.04),transparent_18%)]"

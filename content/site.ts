@@ -180,6 +180,11 @@ const maintenanceOption = pricingOptions.find((option) => option.name === "Maint
 
 export const faqItems = [
   {
+    question: "Press kit, EPK, dossier de presse : quelle différence ?",
+    answer:
+      "C'est la même chose sous trois noms. EPK (electronic press kit) est le terme anglais, dossier de presse le terme français. PressKit For You en fait une page web à ton image plutôt qu'un PDF.",
+  },
+  {
     question: "Qu’est-ce qu’un press kit digital ?",
     answer:
       "Un press kit digital est une page web unique qui regroupe ta présentation, tes médias, tes références et ton contact. Il se partage en un seul lien, aux bookers, aux marques, à la presse ou à tes clients.",

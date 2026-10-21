@@ -114,6 +114,14 @@ export function CategoryHero({ category }: CategoryHeroProps) {
               </div>
             </div>
           </Link>
+          {/* Pages à un seul exemple : pas de section « autres exemples », on renvoie vers /exemples. */}
+          {examples.length <= 1 ? (
+            <div className="mt-10 flex justify-center md:mt-12">
+              <Button href="/exemples" variant="secondary" className="min-h-12 w-full px-6 py-4 text-[15px] sm:w-auto">
+                {CTA.secondary}
+              </Button>
+            </div>
+          ) : null}
         </div>
       </PageShell>
     </section>

@@ -42,7 +42,7 @@ export default function HomePage() {
       <ComparisonSection />
       <CategoriesGrid previewAssets={getPreviewAssets()} />
       <MetiersLinks id="metiers-title" title="Un press kit pensé pour ton métier" />
-      <PricingTable variant="highlight" />
+      <PricingTable variant="highlight" showDetailsLink />
       <ProcessTimeline />
       <SocialProof />
       <Faq />
