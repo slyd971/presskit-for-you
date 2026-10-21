@@ -187,16 +187,22 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
   ],
   artiste: [
     {
-      question: "Puis-je présenter mes œuvres et ma démarche ?",
-      answer: "Oui, une galerie et une section démarche mettent ton travail en scène.",
+      question: "Quelle différence entre un press kit et un EPK ?",
+      answer:
+        "Aucune : EPK (electronic press kit) est le nom anglais du press kit en ligne. C'est la version web du dossier de presse papier ou PDF.",
     },
     {
-      question: "Puis-je lister mes expositions et ma presse ?",
-      answer: "Oui, dans une section références.",
+      question: "Puis-je intégrer mes sons et mes clips ?",
+      answer: "Oui : tes lecteurs Spotify, SoundCloud ou YouTube s'affichent directement dans la page.",
     },
     {
-      question: "Quelle différence avec un PDF de dossier artistique ?",
-      answer: "Le press kit se consulte bien sur mobile, se met à jour facilement et se partage en un lien.",
+      question: "Je prépare une sortie, je peux l'annoncer ?",
+      answer:
+        "Oui : une section actualité met en avant ton single, ton EP ou ton album. Tu la mets à jour à la sortie suivante (option mise à jour, 30 €).",
+    },
+    {
+      question: "Je suis peintre ou artiste visuel, c'est adapté ?",
+      answer: "Oui : galerie d'œuvres, démarche, expositions et presse. Regarde le press kit de MelyMelow.",
     },
     {
       question: "Combien coûte un press kit artiste ?",
