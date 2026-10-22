@@ -236,7 +236,7 @@ export function Hero() {
             })}
 
             <div className="-mx-5 block overflow-hidden sm:hidden">
-              <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pr-5 pb-5 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {heroKits.slice(0, 5).map((kit, index) => {
                   const mobileImage = kit.heroMobileImage ?? kit.mobileImage;
 
@@ -246,7 +246,7 @@ export function Hero() {
                       href={kit.externalDemoUrl}
                       target="_blank"
                       rel="noreferrer"
-                      aria-label={`Voir le rendu live ${kit.title}`}
+                      aria-label={`${kit.title} ${kit.category} : voir le press kit en ligne`}
                       className="group w-[90vw] max-w-[24rem] shrink-0 snap-start text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-900"
                     >
                       <span
@@ -280,6 +280,7 @@ export function Hero() {
                         <span className="flex items-center justify-between gap-3 border-t border-white/[0.12] px-1 py-3 text-white">
                           <span>
                             <span className="block text-sm font-semibold leading-none">{kit.title}</span>
+                            {" "}
                             <span className="mt-1 block text-[10px] uppercase tracking-label-tight text-white/[0.64]">{kit.category}</span>
                           </span>
                         </span>

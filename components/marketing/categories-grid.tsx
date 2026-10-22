@@ -185,7 +185,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
             Chaque press kit est un projet sur mesure, pensé à partir de ton univers, de tes contenus et de tes objectifs.
           </p>
         </div>
-        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 md:grid-cols-3 [&::-webkit-scrollbar]:hidden">
+        <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pr-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-14 md:grid md:snap-none md:overflow-visible md:px-0 md:pb-0 md:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {featuredHomeExamples.map((example, index) => (
             <Reveal
               key={example.slug}
