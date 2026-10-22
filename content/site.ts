@@ -44,6 +44,8 @@ export type Example = {
   mobileImage?: string;
   imagePosition?: string;
   externalDemoUrl?: string;
+  // Lien vers un témoignage vidéo sur l'accueil (carte de /exemples).
+  testimonialHref?: string;
 };
 
 import { pricingOptions, pricingTiers } from "@/content/pricing";
@@ -150,6 +152,22 @@ export const testimonials = [
       "Merci Press Kit For You pour votre sérieux et votre réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !",
   },
 ];
+
+// Témoignage vidéo, affiché en premier dans la section « Témoignages » de l'accueil.
+// Les sous-titres sont incrustés dans la vidéo : pas de piste <track>.
+export const videoTestimonial = {
+  id: "temoignage-julia",
+  name: "Julia",
+  role: "Créatrice de contenu",
+  date: "octobre 2026",
+  url: EXAMPLE_URLS.juliaElinaUgc,
+  video: "/témoignages/temoignage-julia-sous-titres.mp4",
+  poster: "/témoignages/temoignage-julia-poster.webp",
+  label: "Témoignage vidéo de Julia, créatrice de contenu",
+  // Citation mot pour mot : ne pas corriger.
+  transcript:
+    "Depuis que je suis créatrice de contenu, il y a quelque chose que je fais dix fois par jour : envoyer mon portfolio. Et franchement, j'en avais marre de proposer un support non personnalisé, sans dynamisme, et en plus issu d'une plateforme copiée-collée de montage que tout le monde utilisait déjà. J'ai donc décidé qu'il fallait y ajouter un peu de piment. J'ai donc fait appel à PressKit For You pour me faire un support dynamique, élégant, à mon image, parce que j'en avais simplement marre d'envoyer des supports ennuyants à des marques qui souhaitaient travailler avec moi. Et pour ça, rien de plus simple : c'est un accompagnement personnalisé. Tu les contactes, ils te créent une page selon tes envies, tes besoins, ton contenu et surtout ton domaine. Alors que tu sois DJ, chanteur, comédien et j'en passe, je te conseille PressKit For You, tu vas forcément kiffer.",
+};
 
 export const processSteps = [
   {
@@ -897,6 +915,7 @@ export const examples: Example[] = [
     image: "/gallery-previews/home-desktop/julia-elina-ugc.webp",
     mobileImage: "/gallery-previews/home-mobile/julia-elina-ugc.webp",
     accent: "#C97B4A",
+    testimonialHref: "/#temoignage-julia",
   },
   {
     slug: "chef-event",

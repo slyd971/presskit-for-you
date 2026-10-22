@@ -130,6 +130,14 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                     <p className="mt-5 text-xs uppercase tracking-label text-white/[0.64]">{example.category}</p>
                     <h3 className="mt-3 text-2xl font-semibold text-white">{example.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-white/[0.64]">{example.description}</p>
+                    {example.testimonialHref ? (
+                      <Link
+                        href={example.testimonialHref}
+                        className="relative z-30 mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
+                      >
+                        Voir son témoignage vidéo
+                      </Link>
+                    ) : null}
                     <p className="mt-6 text-sm font-medium text-white/[0.84]">
                       {isExternal ? `Voir le press kit ${withDe(example.title)}` : "Decouvrir ce format"}{" "}
                       <span className="transition group-hover:translate-x-1 inline-block">→</span>

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
-import { liveExamplesCount, testimonials } from "@/content/site";
+import { liveExamplesCount, testimonials, videoTestimonial } from "@/content/site";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
@@ -78,36 +79,80 @@ export function ProofStats() {
 
 type Testimonial = (typeof testimonials)[number];
 
+type TestimonialHeaderProps = { name: string; role: string; date?: string; url: string; image?: string };
+
+// En-tête commun aux avis écrits et au témoignage vidéo.
+function TestimonialHeader({ name, role, date, url, image }: TestimonialHeaderProps) {
+  return (
+    <div className="flex items-center gap-4 border-b border-white/[0.12] pb-5">
+      {image ? (
+        <Image
+          src={image}
+          alt={name}
+          width={56}
+          height={56}
+          className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
+        />
+      ) : null}
+      <div>
+        <p className="text-lg font-semibold leading-tight text-white">{name}</p>
+        <p className="mt-1 text-sm font-medium text-white/[0.64]">{role}</p>
+        {date && date !== "TODO" ? <p className="mt-0.5 text-xs text-white/[0.64]">{date}</p> : null}
+      </div>
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        className="ml-auto shrink-0 text-xs font-semibold text-white/[0.74] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
+      >
+        Voir son press kit
+      </a>
+    </div>
+  );
+}
+
 export function TestimonialCard({ item }: { item: Testimonial }) {
   return (
       <article className="motion-line group flex h-full min-h-[24rem] flex-col border-y border-white/[0.12] bg-white/[0.04] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.08] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.12] md:px-6 md:py-7">
-        <div className="flex items-center gap-4 border-b border-white/[0.12] pb-5">
-          {"image" in item && item.image ? (
-            <Image
-              src={item.image}
-              alt={item.name}
-              width={56}
-              height={56}
-              className="h-14 w-14 shrink-0 rounded-full object-cover object-center ring-1 ring-white/15"
-            />
-          ) : null}
-          <div>
-            <p className="text-lg font-semibold leading-tight text-white">{item.name}</p>
-            <p className="mt-1 text-sm font-medium text-white/[0.64]">{item.role}</p>
-            {item.date && item.date !== "TODO" ? <p className="mt-0.5 text-xs text-white/[0.64]">{item.date}</p> : null}
-          </div>
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-            className="ml-auto shrink-0 text-xs font-semibold text-white/[0.74] underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white"
-          >
-            Voir son press kit
-          </a>
-        </div>
+        <TestimonialHeader name={item.name} role={item.role} date={item.date} url={item.url} image={item.image} />
         <p className="flex-1 pt-7 text-[1.05rem] font-medium leading-8 text-white/[0.84] md:text-[1.12rem] md:leading-9">
           &ldquo;{item.quote}&rdquo;
         </p>
+      </article>
+  );
+}
+
+// Carte vidéo : lecture uniquement au clic (preload="none"), ratio 9:16 réservé pour éviter tout décalage.
+// À partir de 1024 px : vidéo à gauche, transcription à droite, sur toute la largeur de la grille.
+function VideoTestimonialCard() {
+  const item = videoTestimonial;
+
+  return (
+      <article id={item.id} className="motion-line group flex h-full min-h-[24rem] scroll-mt-28 flex-col border-y border-white/[0.12] bg-white/[0.04] px-5 py-6 shadow-[0_16px_54px_rgba(0,0,0,0.12)] hover:border-white/[0.24] hover:bg-white/[0.08] hover:shadow-[0_28px_90px_rgba(0,0,0,0.28)] md:min-h-[28rem] md:border md:border-white/[0.12] md:px-6 md:py-7 lg:grid lg:min-h-0 lg:grid-cols-[20rem_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:[&>:not(video)]:col-start-2">
+        <TestimonialHeader name={item.name} role={item.role} date={item.date} url={item.url} />
+        <video
+          controls
+          playsInline
+          preload="none"
+          poster={item.poster}
+          width={720}
+          height={1280}
+          aria-label={item.label}
+          className="mt-7 block aspect-[9/16] h-auto w-full bg-black lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0"
+        >
+          <source src={item.video} type="video/mp4" />
+        </video>
+        {/* Ordinateur : transcription affichée à côté de la vidéo. Mobile et tablette : repliable. */}
+        <p className="hidden pt-7 text-[1.12rem] font-medium leading-9 text-white/[0.84] lg:block">&ldquo;{item.transcript}&rdquo;</p>
+        <details className="acc group/transcript mt-5 border-t border-white/[0.12] lg:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold text-white [&::-webkit-details-marker]:hidden">
+            Lire la transcription
+            <ChevronDown className="h-4 w-4 shrink-0 text-white/[0.64] transition-transform duration-200 group-open/transcript:rotate-180" aria-hidden="true" />
+          </summary>
+          <div className="acc-body">
+            <p className="pb-2 text-sm leading-7 text-white/[0.64]">{item.transcript}</p>
+          </div>
+        </details>
       </article>
   );
 }
@@ -135,6 +180,10 @@ export function SocialProof() {
             align="center"
           />
         </div>
+
+        <Reveal className="mx-auto mt-10 max-w-[22rem] md:mt-12 lg:max-w-none" threshold={0.1}>
+          <VideoTestimonialCard />
+        </Reveal>
 
         <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pr-5 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:mt-12 md:grid md:snap-none md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 md:pb-0 xl:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {testimonials.map((item, index) => (
