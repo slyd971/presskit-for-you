@@ -16,18 +16,18 @@ const comparisonRows = [
   },
   {
     criterion: "Mobile",
-    current: "Un PDF ou une page de liens se consulte mal sur téléphone.",
+    current: "Un PDF s'ouvre dans un lecteur à part, une page de liens renvoie vers d'autres sites.",
     presskit: "Une page responsive, propre sur mobile, tablette et ordinateur.",
   },
   {
     criterion: "Référencement",
-    current: "Instagram, PDF ou Linktree travaillent peu ta visibilité Google.",
+    current: "Un profil Instagram, un PDF ou un Linktree sont peu visibles dans Google.",
     presskit: "Une vraie page web, que Google peut afficher quand on cherche ton nom.",
   },
   {
     criterion: "Mise à jour",
-    current: "Le support devient vite daté après une nouvelle actu.",
-    presskit: "Tes contenus peuvent évoluer avec tes projets et références.",
+    current: "Un PDF déjà envoyé garde l'ancienne version.",
+    presskit: "Le même lien affiche toujours ta dernière version.",
   },
 ];
 

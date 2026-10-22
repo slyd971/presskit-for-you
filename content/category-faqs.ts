@@ -198,7 +198,7 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     {
       question: "Je prépare une sortie, je peux l'annoncer ?",
       answer:
-        "Oui : une section actualité met en avant ton single, ton EP ou ton album. Tu la mets à jour à la sortie suivante (option mise à jour, 30 €).",
+        "Oui : une section actualité met en avant ton single, ton EP ou ton album. Tu la mets à jour à la sortie suivante (mise à jour à 30 €, ou en illimité avec la maintenance annuelle).",
     },
     {
       question: "Je suis peintre ou artiste visuel, c'est adapté ?",

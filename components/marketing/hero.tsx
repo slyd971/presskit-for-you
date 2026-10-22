@@ -138,7 +138,7 @@ export function Hero() {
               </span>
             </h1>
             <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.74] md:mt-6 md:text-lg md:leading-9">
-              {liveExamplesCount} artistes, DJs, photographes et créateurs ont déjà le leur.
+              On trie, on organise, on met en page : {liveExamplesCount} artistes, DJs, photographes et créateurs ont déjà le leur.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center">
               <Button

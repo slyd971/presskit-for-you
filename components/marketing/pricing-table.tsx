@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { pricingOptions, pricingTiers } from "@/content/pricing";
-import { CTA } from "@/content/site";
+import { CTA, siteConfig } from "@/content/site";
 import { VAT_MENTION } from "@/lib/vat";
 import { PageShell } from "@/components/layout/page-shell";
 import { Button } from "@/components/ui/button";
@@ -92,8 +92,13 @@ export function PricingTable({
                 </div>
                 <p className={`relative mt-3 max-w-md text-sm leading-6 md:mt-7 md:text-base md:leading-8 ${offerTone.body}`}>{tier.description}</p>
                 {isQuote ? <div className="hidden md:contents">{featureList}</div> : <div className="mt-3 flex flex-1 flex-col md:contents">{featureList}</div>}
+                {isQuote ? null : (
+                  <p className={`relative mt-3 text-xs font-medium tracking-wide md:mt-4 ${offerTone.headingMeta}`}>
+                    Paiement unique, sans abonnement : 50 % à la commande, 50 % à la livraison.
+                  </p>
+                )}
                 <Button
-                  href={contactHref}
+                  href={isQuote ? siteConfig.whatsappQuoteUrl : contactHref}
                   variant="primaryOnLight"
                   arrow={!isQuote}
                   className="relative mx-auto mt-3 min-h-12 w-full max-w-sm justify-center px-6 py-3.5 md:mt-10"
@@ -124,7 +129,7 @@ export function PricingTable({
             <div>
               <p className="text-xs font-semibold uppercase tracking-label text-white/[0.64]">Options</p>
               <h3 className="mt-3 max-w-lg text-2xl font-semibold leading-tight tracking-tighter2 text-white md:mt-4 md:text-4xl">
-                À ajouter seulement si ton projet en a besoin.
+                À ajouter seulement si ton projet en a besoin
               </h3>
               <p className="mt-2 text-sm leading-6 text-white/[0.64] md:mt-4 md:leading-7">
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.

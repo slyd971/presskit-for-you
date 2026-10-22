@@ -36,7 +36,7 @@ export const pricingTiers: PricingTier[] = [
     tagline: "pour un projet plus ambitieux",
     description: "Pour une expérience plus éditoriale, multi-pages ou entièrement sur mesure.",
     features: [
-      "Architecture complète",
+      "Structure et navigation sur mesure",
       "Pages supplémentaires",
       "Direction artistique plus poussée",
       "Fonctionnalités spécifiques",
@@ -51,17 +51,17 @@ export const pricingOptions: PricingOption[] = [
   {
     name: "Nom de domaine personnalisé",
     price: "+30 €",
-    description: "Pour partager une adresse courte et crédible, reliée à ton nom ou ta marque.",
+    description: "Pour relier ton press kit à une adresse courte, à ton nom ou à celui de ta marque. Le domaine t'appartient, son renouvellement est à ta charge.",
   },
   {
     name: "Maintenance annuelle",
     price: "+60 €/an",
-    description: "Pour assurer les mises à jour, les corrections et le bon fonctionnement de ton press kit.",
+    description: "Tes mises à jour de contenu en illimité pendant un an (photos, dates, textes, liens), corrections techniques comprises. Avantageuse dès la deuxième mise à jour. Nouvelle section ou refonte : sur devis.",
   },
   {
     name: "Mise à jour de contenu",
     price: "+30 €",
-    description: "Pour remplacer une photo, ajouter une date, modifier un texte ou mettre à jour tes liens.",
+    description: "Pour une modification ponctuelle : remplacer une photo, ajouter une date, modifier un texte ou mettre à jour tes liens.",
   },
   {
     name: "Séance photo professionnelle",

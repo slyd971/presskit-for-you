@@ -1,6 +1,6 @@
 # PressKit For You : textes du site
 
-Textes en ligne sur presskit.fr, extraits du code le 2026-10-21. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
+Textes en ligne sur presskit.fr, extraits du code le 2026-10-22. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
 
 ## Formules
 
@@ -20,7 +20,7 @@ L’offre idéale pour créer un press kit clair, premium et prêt à partager. 
 
 Pour une expérience plus éditoriale, multi-pages ou entièrement sur mesure. (pour un projet plus ambitieux)
 
-- Architecture complète
+- Structure et navigation sur mesure
 - Pages supplémentaires
 - Direction artistique plus poussée
 - Fonctionnalités spécifiques
@@ -29,9 +29,9 @@ Pour une expérience plus éditoriale, multi-pages ou entièrement sur mesure. (
 
 ### Options
 
-- **Nom de domaine personnalisé** (+30 €) : Pour partager une adresse courte et crédible, reliée à ton nom ou ta marque.
-- **Maintenance annuelle** (+60 €/an) : Pour assurer les mises à jour, les corrections et le bon fonctionnement de ton press kit.
-- **Mise à jour de contenu** (+30 €) : Pour remplacer une photo, ajouter une date, modifier un texte ou mettre à jour tes liens.
+- **Nom de domaine personnalisé** (+30 €) : Pour relier ton press kit à une adresse courte, à ton nom ou à celui de ta marque. Le domaine t'appartient, son renouvellement est à ta charge.
+- **Maintenance annuelle** (+60 €/an) : Tes mises à jour de contenu en illimité pendant un an (photos, dates, textes, liens), corrections techniques comprises. Avantageuse dès la deuxième mise à jour. Nouvelle section ou refonte : sur devis.
+- **Mise à jour de contenu** (+30 €) : Pour une modification ponctuelle : remplacer une photo, ajouter une date, modifier un texte ou mettre à jour tes liens.
 - **Séance photo professionnelle** (Sur devis) : Pour créer les visuels manquants quand tes photos actuelles ne rendent pas justice au projet.
 
 ## FAQ de l'accueil
@@ -64,6 +64,10 @@ Oui, on démarre avec les contenus que tu as déjà. Tu pourras ensuite les comp
 
 50 % à la commande, 50 % à la livraison. Les prix sont nets : TVA non applicable, art. 293 B du CGI (micro-entreprise).
 
+**Y a-t-il un abonnement ?**
+
+Non. Tu paies ton press kit une fois, et il reste en ligne sans frais sur une adresse presskit.fr (par exemple ton-nom.presskit.fr). La maintenance annuelle reste une option, sans reconduction automatique. Si tu choisis ton propre nom de domaine, il est à ton nom : son renouvellement annuel reste à ta charge.
+
 **Peut-on se rencontrer pour le brief ?**
 
 Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si tu es plus loin.
@@ -76,7 +80,7 @@ Oui, avec l’option « Nom de domaine personnalisé » à 30 €.
 
 **Puis-je faire évoluer mon press kit ?**
 
-Oui, via l’option « Mise à jour de contenu » (+30 €) ou la maintenance annuelle (+60 €/an).
+Oui, de deux façons : une mise à jour de contenu à 30 € quand tu en as besoin, ou la maintenance annuelle à 60 €/an, avec des mises à jour illimitées pendant un an. Dès deux mises à jour dans l'année, la maintenance revient moins cher.
 
 **Quelle différence entre Press Kit Premium et Studio Custom ?**
 
@@ -85,6 +89,10 @@ Premium : une page, jusqu’à 5 sections, dès 300 €, livrée en 7 jours. Stu
 **Combien d’allers-retours de modifications sont inclus ?**
 
 Un aller-retour, c’est une liste de demandes envoyée en une fois et appliquée. Tu en as 5 : de quoi ajuster textes, photos et ordre des sections.
+
+**Y a-t-il un abonnement ?**
+
+Non. Tu paies ton press kit une fois, et il reste en ligne sans frais sur une adresse presskit.fr (par exemple ton-nom.presskit.fr). La maintenance annuelle reste une option, sans reconduction automatique. Si tu choisis ton propre nom de domaine, il est à ton nom : son renouvellement annuel reste à ta charge.
 
 ## Pages métiers
 
@@ -124,7 +132,7 @@ Artiste visuel ? Remplace l'écoute par une galerie d'œuvres et une section dé
 
 - *Quelle différence entre un press kit et un EPK ?* Aucune : EPK (electronic press kit) est le nom anglais du press kit en ligne. C'est la version web du dossier de presse papier ou PDF.
 - *Puis-je intégrer mes sons et mes clips ?* Oui : tes lecteurs Spotify, SoundCloud ou YouTube s'affichent directement dans la page.
-- *Je prépare une sortie, je peux l'annoncer ?* Oui : une section actualité met en avant ton single, ton EP ou ton album. Tu la mets à jour à la sortie suivante (option mise à jour, 30 €).
+- *Je prépare une sortie, je peux l'annoncer ?* Oui : une section actualité met en avant ton single, ton EP ou ton album. Tu la mets à jour à la sortie suivante (mise à jour à 30 €, ou en illimité avec la maintenance annuelle).
 - *Je suis peintre ou artiste visuel, c'est adapté ?* Oui : galerie d'œuvres, démarche, expositions et presse. Regarde le press kit de MelyMelow.
 - *Combien coûte un press kit artiste ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
@@ -137,7 +145,7 @@ Artiste visuel ? Remplace l'écoute par une galerie d'œuvres et une section dé
 
 **Un support clair pour parler aux clubs, agences et organisateurs**
 
-Ton press kit présente tes styles, tes médias, tes références et ton contact booking dans une page facile à consulter.
+Un booker reçoit des dizaines de profils : il te situe en une minute ou il passe au suivant.
 
 - **Clarifie tes formats de set** : Styles musicaux, ambiances et liens d’écoute aident le booker à te situer rapidement.
 - **Montre tes références de scène** : Photos, vidéos, clubs et événements passés montrent où tu as déjà joué.
@@ -175,7 +183,7 @@ Un booker, un club ou une agence doit trouver ces éléments en moins d'une minu
 
 **Présenter ton parcours, tes vidéos et tes collaborations**
 
-La page rassemble tes performances, tes photos, tes références et les formats pour lesquels on peut te contacter.
+Un directeur de casting ouvre ton lien entre deux auditions : ton showreel doit se lancer tout de suite.
 
 - **Montre tes performances** : Un lieu, une marque ou un projet culturel peut consulter plusieurs vidéos au même endroit.
 - **Situe ton parcours** : Scènes, clips, collectifs, ateliers et collaborations donnent du contexte à ton travail.
@@ -213,7 +221,7 @@ Un chorégraphe, une compagnie, une marque ou un directeur de casting doit trouv
 
 **Montrer ton portfolio et expliquer tes prestations**
 
-La page présente tes images, tes formats photo ou vidéo, tes zones d’intervention et ton contact.
+Un client ne réserve pas sur un lien Drive : il veut voir tes meilleures images, ce que tu proposes et à partir de combien.
 
 - **Sélectionne tes meilleures images** : Les photos importantes sont visibles sans demander un PDF ou un lien de drive.
 - **Clarifie tes prestations** : Photo, vidéo, événement, nightlife ou marque : le prospect sait ce qu’il peut demander.
@@ -260,7 +268,7 @@ Photographe ou vidéaste : un client doit comprendre ce que tu fais, pour qui et
 
 **Expliquer ton coaching sans multiplier les messages**
 
-La page présente ta méthode, tes offres, tes résultats, tes réseaux et la prise de rendez-vous.
+Un futur client veut savoir ce que tu proposes et comment réserver, sans t'écrire dix messages.
 
 - **Clarifie tes accompagnements** : Le visiteur voit les accompagnements proposés et comprend à qui ils s’adressent.
 - **Montre tes preuves** : Transformations, avis ou contenus pédagogiques peuvent être consultés avant le premier contact.
@@ -299,7 +307,7 @@ Un futur client doit comprendre ton coaching et réserver sans échanger dix mes
 
 **Montrer tes looks et expliquer tes prestations**
 
-La page présente ton portfolio, tes prestations, tes références et ton contact.
+Une future mariée compare plusieurs maquilleuses : ton portfolio, tes prestations et ta zone doivent se lire en une minute.
 
 - **Mets tes looks en avant** : Les photos importantes sont réunies dans une page claire, hors du flux des réseaux sociaux.
 - **Clarifie tes prestations** : Mariage, mode, éditorial ou événement : chaque service peut être présenté simplement.

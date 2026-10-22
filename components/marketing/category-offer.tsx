@@ -19,7 +19,7 @@ export function CategoryOffer({ slug }: CategoryOfferProps) {
         <div className="grid gap-7 border-y border-white/[0.12] py-8 md:grid-cols-[1fr_auto] md:items-center md:py-10">
           <div>
             <p className="text-2xl font-semibold leading-tight tracking-tighter2 text-white md:text-3xl">
-              À partir de 300 € · livré en {LEGAL.deliveryDays} jours · {LEGAL.revisionRounds} allers-retours inclus
+              À partir de 300 € · livré en {LEGAL.deliveryDays} jours · {LEGAL.revisionRounds} allers-retours inclus · sans abonnement
             </p>
             <p className="mt-3 text-xs text-white/[0.64]">{VAT_MENTION}</p>
             <Link

@@ -63,6 +63,8 @@ export const siteConfig = {
   url: "https://www.presskit.fr",
   phone: "06 63 90 78 88",
   whatsappUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, je voudrais un press kit. Je suis ")}`,
+  whatsappQuoteUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, je voudrais un devis Studio Custom. Mon projet : ")}`,
+  whatsappAdviceUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, j'hésite entre Premium et Studio Custom. Je suis ")}`,
   nav: [
     { href: "/exemples", label: "Exemples" },
     { href: "/tarifs", label: "Tarifs" },
@@ -212,6 +214,11 @@ export const faqItems = [
       `50 % à la commande, 50 % à la livraison. Les prix sont nets : TVA non applicable, art. 293 B du CGI (micro-entreprise).`,
   },
   {
+    question: "Y a-t-il un abonnement ?",
+    answer:
+      "Non. Tu paies ton press kit une fois, et il reste en ligne sans frais sur une adresse presskit.fr (par exemple ton-nom.presskit.fr). La maintenance annuelle reste une option, sans reconduction automatique. Si tu choisis ton propre nom de domaine, il est à ton nom : son renouvellement annuel reste à ta charge.",
+  },
+  {
     question: "Peut-on se rencontrer pour le brief ?",
     answer: "Oui, le brief se fait en rendez-vous en Île-de-France, ou en visio si tu es plus loin.",
   },
@@ -224,7 +231,7 @@ export const pricingFaqItems = [
   },
   {
     question: "Puis-je faire évoluer mon press kit ?",
-    answer: `Oui, via l’option « ${updateOption?.name} » (${updateOption?.price}) ou la ${maintenanceOption?.name.toLowerCase()} (${maintenanceOption?.price}).`,
+    answer: `Oui, de deux façons : une mise à jour de contenu à ${updateOption?.price.replace("+", "")} quand tu en as besoin, ou la maintenance annuelle à ${maintenanceOption?.price.replace("+", "")}, avec des mises à jour illimitées pendant un an. Dès deux mises à jour dans l'année, la maintenance revient moins cher.`,
   },
   {
     question: "Quelle différence entre Press Kit Premium et Studio Custom ?",
@@ -233,6 +240,11 @@ export const pricingFaqItems = [
   {
     question: "Combien d’allers-retours de modifications sont inclus ?",
     answer: "Un aller-retour, c’est une liste de demandes envoyée en une fois et appliquée. Tu en as 5 : de quoi ajuster textes, photos et ordre des sections.",
+  },
+  {
+    question: "Y a-t-il un abonnement ?",
+    answer:
+      "Non. Tu paies ton press kit une fois, et il reste en ligne sans frais sur une adresse presskit.fr (par exemple ton-nom.presskit.fr). La maintenance annuelle reste une option, sans reconduction automatique. Si tu choisis ton propre nom de domaine, il est à ton nom : son renouvellement annuel reste à ta charge.",
   },
 ];
 

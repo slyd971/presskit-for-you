@@ -79,7 +79,7 @@ const pageCopy: Record<string, PageCopy> = {
   dj: {
     promiseTitle: "Un support clair pour parler aux clubs, agences et organisateurs",
     promiseDescription:
-      "Ton press kit présente tes styles, tes médias, tes références et ton contact booking dans une page facile à consulter.",
+      "Un booker reçoit des dizaines de profils : il te situe en une minute ou il passe au suivant.",
     benefits: [
       {
         title: "Clarifie tes formats de set",
@@ -114,7 +114,7 @@ const pageCopy: Record<string, PageCopy> = {
   danseur: {
     promiseTitle: "Présenter ton parcours, tes vidéos et tes collaborations",
     promiseDescription:
-      "La page rassemble tes performances, tes photos, tes références et les formats pour lesquels on peut te contacter.",
+      "Un directeur de casting ouvre ton lien entre deux auditions : ton showreel doit se lancer tout de suite.",
     benefits: [
       {
         title: "Montre tes performances",
@@ -147,7 +147,7 @@ const pageCopy: Record<string, PageCopy> = {
   photographe: {
     promiseTitle: "Montrer ton portfolio et expliquer tes prestations",
     promiseDescription:
-      "La page présente tes images, tes formats photo ou vidéo, tes zones d’intervention et ton contact.",
+      "Un client ne réserve pas sur un lien Drive : il veut voir tes meilleures images, ce que tu proposes et à partir de combien.",
     benefits: [
       {
         title: "Sélectionne tes meilleures images",
@@ -185,7 +185,7 @@ const pageCopy: Record<string, PageCopy> = {
   "coach-sportif": {
     promiseTitle: "Expliquer ton coaching sans multiplier les messages",
     promiseDescription:
-      "La page présente ta méthode, tes offres, tes résultats, tes réseaux et la prise de rendez-vous.",
+      "Un futur client veut savoir ce que tu proposes et comment réserver, sans t'écrire dix messages.",
     benefits: [
       {
         title: "Clarifie tes accompagnements",
@@ -218,7 +218,7 @@ const pageCopy: Record<string, PageCopy> = {
   "make-up-artist": {
     promiseTitle: "Montrer tes looks et expliquer tes prestations",
     promiseDescription:
-      "La page présente ton portfolio, tes prestations, tes références et ton contact.",
+      "Une future mariée compare plusieurs maquilleuses : ton portfolio, tes prestations et ta zone doivent se lire en une minute.",
     benefits: [
       {
         title: "Mets tes looks en avant",

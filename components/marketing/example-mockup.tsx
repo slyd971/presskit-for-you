@@ -156,7 +156,7 @@ export function ExampleMockup({
       {mobileImage ? (
         <div
           role="group"
-          aria-label={`Format d'affichage de ${title}`}
+          aria-label={`Format d'affichage ${withDe(title)}`}
           className="absolute bottom-0 left-0 z-30 inline-flex rounded-lg border border-white/[0.12] bg-surface-900/[0.82] p-0.5 backdrop-blur-md"
         >
           {MODES.map((item) => (

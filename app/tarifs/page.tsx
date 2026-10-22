@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Tarifs",
   absoluteTitle: "Tarifs press kit digital dès 300 € | PressKit For You",
   description:
-    "Press kit digital sur mesure dès 300 €, livré en 7 jours, 5 allers-retours inclus, 50 % à la commande, 50 % à la livraison. Options à la carte.",
+    "Press kit digital sur mesure dès 300 €, livré en 7 jours, 5 allers-retours inclus, paiement unique sans abonnement. Options à la carte.",
   path: "tarifs",
   keywords: ["tarifs press kit", "prix press kit digital", "formules press kit"],
 });
@@ -74,7 +74,7 @@ export default function TarifsPage() {
                 Le bon choix dépend surtout du niveau de personnalisation attendu, de la quantité de contenu à intégrer et de l’accompagnement nécessaire sur la direction artistique.
               </p>
             </div>
-            <Button arrow href={siteConfig.whatsappUrl} className="min-h-12 justify-center px-7 py-4 text-[15px]">
+            <Button arrow href={siteConfig.whatsappAdviceUrl} className="min-h-12 justify-center px-7 py-4 text-[15px]">
               Me conseiller sur WhatsApp
             </Button>
           </div>
