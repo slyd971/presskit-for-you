@@ -14,24 +14,12 @@ import { getPreviewAssets } from "@/lib/preview-assets";
 import { siteConfig } from "@/content/site";
 import { createPageMetadata } from "@/lib/seo";
 
-const homeMetadata = createPageMetadata({
-  title: "Press kit digital premium pour artistes et créateurs",
+export const metadata: Metadata = createPageMetadata({
+  title: "Press kit digital premium pour artistes",
+  absoluteTitle: "Press kit digital premium pour artistes | PressKit For You",
   description:
     "Ton press kit digital premium, conçu pour toi : ton activité, tes contenus et tes références en un lien, plus clair qu'Instagram et plus impactant qu'un PDF.",
-  keywords: [
-    "press kit digital",
-    "creation press kit artiste",
-    "press kit dj",
-    "site vitrine artiste",
-    "portfolio photographe premium",
-    "site make up artist",
-  ],
 });
-
-export const metadata: Metadata = {
-  ...homeMetadata,
-  title: { absolute: "Press kit digital premium pour artistes | PressKit For You" },
-};
 
 export default function HomePage() {
   return (

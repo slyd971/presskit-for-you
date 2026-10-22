@@ -4,14 +4,14 @@ import { siteConfig } from "@/content/site";
 import { footerCategoryLinks } from "@/lib/presskit-categories";
 
 // Last real content change per route. Update the date when a page's content changes.
-const defaultLastModified = "2026-10-15";
+const defaultLastModified = "2026-10-22";
 const routeLastModified: Record<string, string> = {
-  "": "2026-10-15",
-  "/exemples": "2026-10-15",
-  "/tarifs": "2026-10-15",
+  "": "2026-10-22",
+  "/exemples": "2026-10-22",
+  "/tarifs": "2026-10-22",
   "/mentions-legales": "2026-10-12",
-  "/cgv": "2026-10-12",
-  "/politique-de-confidentialite": "2026-10-12",
+  "/cgv": "2026-10-22",
+  "/politique-de-confidentialite": "2026-10-22",
 };
 const legalRoutes = ["/mentions-legales", "/cgv", "/politique-de-confidentialite"];
 

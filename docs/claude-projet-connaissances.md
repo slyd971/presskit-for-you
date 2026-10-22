@@ -141,7 +141,7 @@ Artiste visuel ? Remplace l'écoute par une galerie d'œuvres et une section dé
 - **Titre** : Press kit DJ : tout ce qu'un booker veut voir, en un lien
 - **Chapeau** : Présente tes styles, tes photos, tes vidéos, tes liens d’écoute, tes références et ton contact booking.
 - **Public** : DJs, producteurs, collectifs, résidents et artistes club
-- **Description Google** : Un press kit DJ clair pour les bookers : styles, mixes, vidéos, références et contact booking. Livré en 7 jours, dès 300 €.
+- **Description Google** : Un press kit DJ clair pour les bookers et les clubs : styles, mixes, vidéos, références et contact booking, en un seul lien. Livré en 7 jours, dès 300 €.
 
 **Un support clair pour parler aux clubs, agences et organisateurs**
 
@@ -217,7 +217,7 @@ Un chorégraphe, une compagnie, une marque ou un directeur de casting doit trouv
 - **Titre** : Press kit photographe : ton regard, tes images, tes prestations
 - **Chapeau** : Présente ton portfolio, tes formats photo ou vidéo, tes zones d’intervention et ton contact.
 - **Public** : Photographes, vidéastes, créateurs event, nightlife et marques
-- **Description Google** : Portfolio, prestations et contact réunis dans un press kit photographe qui donne envie de te réserver. Livré en 7 jours, dès 300 €.
+- **Description Google** : Tes meilleures images, tes prestations et ton contact réunis dans un press kit photographe qui donne envie de te réserver. Livré en 7 jours, dès 300 €.
 
 **Montrer ton portfolio et expliquer tes prestations**
 
@@ -264,7 +264,7 @@ Photographe ou vidéaste : un client doit comprendre ce que tu fais, pour qui et
 - **Titre** : Press kit coach sportif : ton coaching, tes offres, tes résultats
 - **Chapeau** : Présente ta méthode, tes prestations, tes résultats, tes réseaux et ta prise de rendez-vous.
 - **Public** : Coachs sportifs, préparateurs, studios, profils wellness
-- **Description Google** : Offres, méthode et résultats clairs dans un press kit coach sportif qui facilite la prise de rendez-vous. Livré en 7 jours, dès 300 €.
+- **Description Google** : Ta méthode, tes offres et tes résultats présentés clairement dans un press kit coach sportif qui facilite la prise de rendez-vous. Livré en 7 jours, dès 300 €.
 
 **Expliquer ton coaching sans multiplier les messages**
 
@@ -340,7 +340,7 @@ Une future mariée, une marque ou une production doit trouver ces éléments en 
 - **Titre** : Press kit organisateur : ton événement, lisible pour les lieux et sponsors
 - **Chapeau** : Collectif, soirée récurrente ou festival : présente ton événement, tes photos, tes vidéos, ta communauté, tes chiffres, tes partenaires et ton contact.
 - **Public** : Organisateurs de soirées, collectifs, événements et communautés
-- **Description Google** : Chiffres de communauté, photos et partenaires réunis dans un dossier sponsors digital pour ta soirée. Livré en 7 jours, dès 300 €.
+- **Description Google** : Chiffres de communauté, photos et partenaires réunis dans un dossier sponsors digital pour ta soirée, prêt à envoyer aux marques. Livré en 7 jours, dès 300 €.
 
 **Présenter ton événement à un lieu, un sponsor ou un partenaire**
 

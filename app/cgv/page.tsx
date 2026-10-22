@@ -11,7 +11,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Conditions générales de prestation",
   description: "Conditions générales de prestation de création de press kits digitaux PressKit For You.",
   path: "cgv",
-  keywords: ["CGV PressKit For You", "conditions générales de prestation press kit"],
 });
 
 const optionByName = (name: string) => pricingOptions.find((option) => option.name === name);

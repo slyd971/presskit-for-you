@@ -10,7 +10,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Mentions légales",
   description: "Informations légales, éditeur, hébergement et contact de PressKit For You.",
   path: "mentions-legales",
-  keywords: ["mentions légales PressKit For You", "éditeur PressKit For You"],
 });
 
 const linkClass = "text-white underline decoration-white/30 underline-offset-4 hover:decoration-white";
@@ -40,7 +39,7 @@ export default function LegalPage() {
             <p className="mt-2 leading-8">Adresse : {LEGAL.address}</p>
             <p className="mt-2 leading-8">
               Téléphone :{" "}
-              <a className={linkClass} href={`tel:${LEGAL.phone.replace(/\s/g, "")}`}>
+              <a className={linkClass} href={`tel:+33${LEGAL.phone.replace(/\s/g, "").slice(1)}`}>
                 {LEGAL.phone}
               </a>
             </p>

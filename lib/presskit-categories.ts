@@ -55,13 +55,6 @@ export function createPresskitCategoryMetadata(slug: string): Metadata {
     return {};
   }
 
-  const keywords = [
-    category.name.toLowerCase(),
-    `press kit ${category.shortName.toLowerCase()}`,
-    "press kit digital",
-    "site vitrine",
-  ];
-
   const seo = categorySeo[slug];
 
   return createPageMetadata({
@@ -70,6 +63,5 @@ export function createPresskitCategoryMetadata(slug: string): Metadata {
     description: seo?.description ?? category.heroDescription,
     withSocialImages: false,
     path: category.slug,
-    keywords: Array.from(new Set(keywords)),
   });
 }

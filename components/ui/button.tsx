@@ -32,9 +32,13 @@ export function Button({
   className,
   arrow = false,
 }: ButtonProps) {
+  // Lien externe (WhatsApp) : nouvel onglet, comme « Écrire sur WhatsApp ».
+  const isExternal = href.startsWith("http");
+
   return (
     <Link
       href={href}
+      {...(isExternal ? { target: "_blank", rel: "noreferrer" } : {})}
       className={cn(
         "button-cycle cta-shine group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold tracking-[0.01em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current",
         styles[variant],

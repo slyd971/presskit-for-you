@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Manrope } from "next/font/google";
 
-import { siteConfig } from "@/content/site";
+import { CTA, siteConfig } from "@/content/site";
 import { LEGAL } from "@/lib/legal";
 import { absoluteUrl, socialImage, twitterImage } from "@/lib/seo";
 import "@/app/globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { ClickTracking } from "@/components/layout/click-tracking";
 
 const sans = Manrope({
   subsets: ["latin"],
@@ -22,14 +23,6 @@ export const metadata: Metadata = {
     template: "%s | PressKit For You",
   },
   description: siteConfig.description,
-  keywords: [
-    "press kit digital",
-    "site vitrine artiste",
-    "press kit dj",
-    "press kit coach sportif",
-    "press kit photographe",
-    "press kit make up artist",
-  ],
   openGraph: {
     title: "PressKit For You",
     description: siteConfig.description,
@@ -90,7 +83,7 @@ const structuredData = {
       logo: absoluteUrl("logo/logo-presskitforyou-cropped.png"),
       email: LEGAL.email,
       telephone: "+33663907888",
-      areaServed: "Île-de-France",
+      areaServed: "FR",
       sameAs: ["https://www.instagram.com/presskit_for_you"],
       taxID: LEGAL.siren,
       founder: { "@type": "Person", name: LEGAL.publisher },
@@ -141,6 +134,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SiteFooter />
         </div>
         <Analytics />
+        <ClickTracking primaryLabel={CTA.primary} quoteUrl={siteConfig.whatsappQuoteUrl} adviceUrl={siteConfig.whatsappAdviceUrl} />
       </body>
     </html>
   );

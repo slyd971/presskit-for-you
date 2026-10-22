@@ -25,7 +25,6 @@ type PageMetadataOptions = {
   title: string;
   description: string;
   path?: string;
-  keywords?: string[];
   // When set, used as-is as the page title (no "| PressKit For You" template suffix).
   absoluteTitle?: string;
   // Set to false to let a file-based opengraph-image / twitter-image take over.
@@ -36,7 +35,6 @@ export function createPageMetadata({
   title,
   description,
   path = "",
-  keywords = [],
   absoluteTitle,
   withSocialImages = true,
 }: PageMetadataOptions): Metadata {
@@ -45,7 +43,6 @@ export function createPageMetadata({
   return {
     title: absoluteTitle ? { absolute: absoluteTitle } : title,
     description,
-    keywords,
     alternates: {
       canonical: url,
     },

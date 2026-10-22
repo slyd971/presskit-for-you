@@ -1,6 +1,6 @@
 import { categoryOgSize, createCategoryOgImage } from "@/lib/category-og";
 
-export const alt = "Press kit dj - PressKit For You";
+export const alt = "Press kit DJ - PressKit For You";
 export const size = categoryOgSize;
 export const contentType = "image/png";
 

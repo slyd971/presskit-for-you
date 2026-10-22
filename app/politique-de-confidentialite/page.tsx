@@ -10,7 +10,6 @@ export const metadata: Metadata = createPageMetadata({
   title: "Politique de confidentialité",
   description: "Comment PressKit For You collecte, utilise et protège vos données personnelles.",
   path: "politique-de-confidentialite",
-  keywords: ["politique de confidentialité PressKit For You", "RGPD"],
 });
 
 const sections: LegalSection[] = [
@@ -26,7 +25,7 @@ const sections: LegalSection[] = [
       "Échanges par email et WhatsApp (canal optionnel opéré par Meta) : nom, coordonnées et contenu de vos messages.",
       "Données de projet transmises par le client : textes, photos, vidéos, liens et informations nécessaires à la réalisation du press kit.",
       "Journaux techniques de l'hébergeur, dont l'adresse IP.",
-      "Mesure d'audience : statistiques de fréquentation anonymisées (pages vues, pays, type d'appareil) collectées par Vercel Web Analytics, sans cookie et sans identification des visiteurs.",
+      "Mesure d'audience : statistiques de fréquentation anonymisées (pages vues, clics sur les boutons de contact, pays, type d'appareil) collectées par Vercel Web Analytics, sans cookie et sans identification des visiteurs.",
     ],
   },
   {
