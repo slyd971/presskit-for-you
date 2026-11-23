@@ -24,6 +24,7 @@ export const footerCategoryLinks = publishedPresskitCategories.map((category) =>
 // Ordre d'affichage des exemples d'une page métier (le premier sert d'exemple principal dans le hero).
 const categoryExampleOrder: Record<string, string[]> = {
   artiste: ["sherin", "black-moz", "melymelow"],
+  dj: ["dj-mack", "soyumi", "flo", "arthur-chaps", "dj-afterhours", "dj-wayans", "yoruboy-dj"],
 };
 
 export function getPresskitCategory(slug: string) {

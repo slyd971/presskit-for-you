@@ -151,6 +151,17 @@ export const testimonials = [
     quote:
       "Merci Press Kit For You pour votre sérieux et votre réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !",
   },
+  {
+    name: "DJ Wayans",
+    role: "DJ",
+    categorySlug: "dj",
+    date: "octobre 2026",
+    url: EXAMPLE_URLS.djWayans,
+    image: "/temoignages/dj-wayans.webp",
+    // Citation mot pour mot : ne pas corriger.
+    quote:
+      "Mon expérience avec PressKit s'est super bien passée. Ça a été super agréable, rapide. Ils ont su cerner mon activité et mettre en valeur chacun des éléments que je leur ai fournis : les photos, le SoundCloud, mes vidéos. J'ai eu de très bons retours d'organisateurs suite à mon press kit, qui fait vraiment un rendu professionnel. L'équipe est super à l'écoute, hyper réactive pour les moindres modifications. Donc top.",
+  },
 ];
 
 // Témoignage vidéo, affiché en premier dans la section « Témoignages » de l'accueil.
@@ -857,6 +868,17 @@ export const examples: Example[] = [
     image: "/gallery-previews/paul-keranne.png",
     mobileImage: "/gallery-previews/home-mobile/paul-keranne.png",
     imagePosition: "center 42%",
+    accent: "#FF9152",
+  },
+  {
+    slug: "dj-wayans",
+    category: "DJ",
+    title: "DJ Wayans",
+    description: "Un press kit DJ afro, urban FR et RnB avec références club et marque, vidéos live, SoundCloud et booking.",
+    href: "/#contact",
+    externalDemoUrl: EXAMPLE_URLS.djWayans,
+    image: "/gallery-previews/home-desktop/dj-wayans.webp",
+    mobileImage: "/gallery-previews/home-mobile/dj-wayans.webp",
     accent: "#FF9152",
   },
   {

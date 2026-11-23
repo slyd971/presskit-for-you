@@ -28,9 +28,9 @@ PressKit For You conçoit des press kits digitaux premium : une page web à l'im
 2. Jours 2-3 : maquette. On choisit le style, l'ordre des sections et ce que le visiteur doit voir en premier.
 3. 7 jours max : le press kit est intégré, testé sur mobile et livré avec un lien prêt à partager.
 
-## Exemples clients en ligne (21)
+## Exemples clients en ligne (22)
 
-- DJ : DJ MACK, Soyumi, DJ FLO, Arthur Chaps, DJ SLY'D, Yoruboy, DJ Pirate, DJ GDC, Silver DJ, Paul Keranne
+- DJ : DJ MACK, Soyumi, DJ FLO, Arthur Chaps, DJ SLY'D, Yoruboy, DJ Pirate, DJ GDC, Silver DJ, Paul Keranne, DJ Wayans
 - Artistes : Sherin (chanteuse), Black Moz (rap/slam), MelyMelow (artiste peintre)
 - Danseur : KRIMO
 - Organisateurs de soirée : La Bringue, La MIF

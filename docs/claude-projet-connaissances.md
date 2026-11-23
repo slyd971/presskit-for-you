@@ -1,6 +1,6 @@
 # PressKit For You : textes du site
 
-Textes en ligne sur presskit.fr, extraits du code le 2026-10-22. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
+Textes en ligne sur presskit.fr, extraits du code le 2026-11-23. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
 
 ## Formules
 
@@ -373,7 +373,7 @@ Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y 
 - *Puis-je ajouter les flyers et photos de mes soirées ?* Oui, dans une galerie dédiée.
 - *Combien coûte un press kit organisateur ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
-## Exemples clients en ligne (21)
+## Exemples clients en ligne (22)
 
 - **MelyMelow** (Artiste peintre) : Un press kit artiste peintre avec œuvres, démarche, médias et contact pro. https://presskit.melymelow.art/
 - **Sherin** (Chanteuse) : Un press kit chanteuse pour annoncer une sortie, présenter les médias, les chiffres et le booking. https://sherin.presskit.fr/
@@ -391,6 +391,7 @@ Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y 
 - **DJ GDC** (DJ) : Un press kit DJ open format avec parcours, références, vidéos, SoundCloud et booking. https://dj-gdc.presskit.fr/
 - **Silver DJ** (DJ) : Un press kit DJ avec médias, liens d’écoute et contact booking. https://silver-dj.presskit.fr/
 - **Paul Keranne** (DJ) : Un press kit DJ avec médias, références et contact booking. https://paul-keranne.presskit.fr/
+- **DJ Wayans** (DJ) : Un press kit DJ afro, urban FR et RnB avec références club et marque, vidéos live, SoundCloud et booking. https://wayans.presskit.fr/
 - **Lokko TV** (Photographe-vidéaste) : Un press kit photographe avec portfolio, services et contact booking. https://lokko-tv.presskit.fr/
 - **Coach Momar** (Coach sportif) : Un press kit coaching avec offres, résultats, méthode et contact. https://coach-momar.vercel.app/
 - **Ishma Make Up Artist** (Make-up artist) : Un press kit make-up artist avec looks, prestations et contact. https://ishma-makeupartist.vercel.app/
@@ -412,3 +413,7 @@ Citations exactes : ne jamais les reformuler ni en inventer d'autres.
 **Yed D.**, DJ (juin 2026)
 
 > Merci Press Kit For You pour votre sérieux et votre réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !
+
+**DJ Wayans**, DJ (octobre 2026)
+
+> Mon expérience avec PressKit s'est super bien passée. Ça a été super agréable, rapide. Ils ont su cerner mon activité et mettre en valeur chacun des éléments que je leur ai fournis : les photos, le SoundCloud, mes vidéos. J'ai eu de très bons retours d'organisateurs suite à mon press kit, qui fait vraiment un rendu professionnel. L'équipe est super à l'écoute, hyper réactive pour les moindres modifications. Donc top.

@@ -15,6 +15,7 @@ export const EXAMPLE_URLS = {
   djGdc: "https://dj-gdc.presskit.fr/",
   silverDj: "https://silver-dj.presskit.fr/",
   paulKeranne: "https://paul-keranne.presskit.fr/",
+  djWayans: "https://wayans.presskit.fr/",
   lokkoTv: "https://lokko-tv.presskit.fr/",
   sophieBeauty: "https://sophie-beauty.presskit.fr/",
   juliaElinaUgc: "https://julia.elina.ugc.presskit.fr/",

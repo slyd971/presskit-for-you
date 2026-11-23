@@ -286,7 +286,7 @@ const pageCopy: Record<string, PageCopy> = {
 export function CategoryContent({ category }: CategoryContentProps) {
   const previewAssets = getPreviewAssets();
   const categoryExamples = getExamplesForPresskitCategory(category.slug);
-  const displayedExamples = categoryExamples.slice(1, category.slug === "dj" ? 5 : 4);
+  const displayedExamples = categoryExamples.slice(1, category.slug === "dj" ? 7 : 4);
   const copy = pageCopy[category.slug] ?? {
     promiseTitle: "Présenter les informations utiles dans un seul lien",
     promiseDescription: category.description,
