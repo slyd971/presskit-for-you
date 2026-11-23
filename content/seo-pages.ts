@@ -1,4 +1,5 @@
-// SEO titles and descriptions for the trade pages. Titles are absolute (the brand is already included).
+// SEO titles and descriptions for the trade pages. Titles are absolute: 60 characters max,
+// so the brand is left out when it does not fit.
 export type CategorySeo = {
   title: string;
   description: string;
@@ -15,12 +16,12 @@ export const categorySeo: Record<string, CategorySeo> = {
     label: "DJ",
   },
   artiste: {
-    title: "Press kit artiste : ton EPK en un lien | PressKit For You",
+    title: "Press kit artiste : ton EPK musique | PressKit For You",
     description: `Bio, sons, clips, presse et booking dans un press kit artiste (EPK) clair pour programmateurs, médias et labels. ${deliveryPitch}`,
     label: "artiste",
   },
   danseur: {
-    title: "Press kit danseur : tes vidéos en un lien | PressKit For You",
+    title: "Press kit danseur : ton book en ligne | PressKit For You",
     description: `Vidéos de performance, parcours et collectif réunis dans un press kit danseur pensé pour les lieux et les marques. ${deliveryPitch}`,
     label: "danseur",
   },
@@ -35,13 +36,18 @@ export const categorySeo: Record<string, CategorySeo> = {
     label: "coach sportif",
   },
   "make-up-artist": {
-    title: "Press kit make-up artist : ton portfolio | PressKit For You",
+    title: "Press kit make-up artist : ton portfolio maquillage",
     description: `Tes looks, prestations et zone de déplacement réunis dans un press kit make-up artist qui donne envie de réserver. ${deliveryPitch}`,
     label: "make-up artist",
   },
   organisateur: {
-    title: "Press kit organisateur : dossier sponsors | PressKit For You",
+    title: "Press kit organisateur : ton dossier de sponsoring",
     description: `Chiffres de communauté, photos et partenaires réunis dans un dossier sponsors digital pour ta soirée, prêt à envoyer aux marques. ${deliveryPitch}`,
     label: "organisateur",
+  },
+  "createur-de-contenu": {
+    title: "Media kit UGC et créateur de contenu | PressKit For You",
+    description: `Ton media kit de créateur de contenu ou UGC : présentation, chiffres, vidéos, marques et contact réunis en un seul lien. ${deliveryPitch}`,
+    label: "créateur de contenu",
   },
 };

@@ -128,12 +128,85 @@ Un programmateur, un journaliste ou un label doit trouver ces éléments en moin
 
 Artiste visuel ? Remplace l'écoute par une galerie d'œuvres et une section démarche.
 
+**Chanteur, rappeur, musicien : ce que ton press kit met en avant**
+
+La base est la même pour tous : bio, écoute, vidéos, dates, contact. L'ordre change selon ton projet et la personne qui reçoit le lien.
+
+*Dossier de presse chanteur ou chanteuse*
+
+Place ta voix tout en haut : ton titre le plus récent, puis une vidéo live sans montage. Un dossier de presse de chanteur annonce aussi la prochaine sortie, avec sa date et sa pochette. Le press kit de Sherin présente une sortie, ses médias, ses chiffres et son booking sur une seule page.
+
+*Press kit rappeur*
+
+Commence par le clip ou le freestyle que tu veux montrer. Ajoute tes collaborations, tes passages radio et tes chiffres d'écoute à jour. Précise qui t'accompagne sur scène : DJ, backeur ou musiciens. Le press kit de Black Moz, entre rap et slam, réunit bio, écoute, médias et booking.
+
+*EPK musicien ou groupe*
+
+Présente chaque membre avec son instrument. Montre une captation de concert où l'on entend tout le groupe. Dans un EPK de musicien, indique tes formats : solo, duo, formation complète. Une salle sait ainsi ce qu'elle peut accueillir.
+
+**Quand envoyer ton EPK, et à qui**
+
+Le lien est le même, mais ton message change. Dis en deux phrases pourquoi tu écris, puis indique la section à regarder.
+
+- **À un programmateur** : ta ville, tes formats, ta durée de concert et une vidéo live. Envoie-le bien avant la saison ou le festival visé.
+- **À un média** : ta sortie, sa date, tes photos presse créditées et ta bio longue. Donne un contact disponible pour une interview.
+- **À un label** : deux titres, tes chiffres et tes prochaines dates. Dis ce que tu cherches : distribution, édition ou accompagnement.
+- **À une marque ou un lieu privé** : tes formats, tes références et ta zone de déplacement.
+
+*Modèle de message à un programmateur*
+
+Ce texte est un modèle : remplace les crochets par tes informations.
+
+> Bonjour [prénom],
+>
+> Je suis [nom], [style] à [ville]. J'aimerais jouer au [lieu ou festival] en [période].
+> Mon press kit, avec une vidéo live et ma fiche technique : [lien].
+>
+> Bonne journée,
+> [nom et numéro]
+
+**Exemple de bio artiste : courte et longue**
+
+Ces deux bios sont fictives. Elles montrent la structure : garde l'ordre, change tout le reste.
+
+*Modèle de bio courte (trois lignes)*
+
+> Artiste Exemple chante une pop en français, entre piano et machines.
+> Premier EP, [titre], sorti en [mois et année].
+> En concert à [ville] le [date].
+
+*Modèle de bio longue*
+
+> Artiste Exemple grandit à Nantes et apprend le piano à huit ans. Les premières chansons s'écrivent dans une chambre, avec un clavier et un téléphone pour enregistrer.
+>
+> En [année], Artiste Exemple publie [titre], un premier single écrit et produit à la maison. Un EP de cinq titres suit en [année], enregistré avec [nom du producteur ou de la productrice].
+>
+> Sur scène, le projet se joue en duo : voix et piano d'un côté, batterie de l'autre. Le duo a joué au [nom de la salle], au [nom du festival] et en première partie de [nom de l'artiste].
+>
+> Le prochain titre, [titre], sort le [date]. Une tournée est prévue en [période].
+
+**Fiche technique : ce qu'une salle te demandera**
+
+Une salle prépare ton concert à partir de ta fiche technique. Elle tient en général sur une ou deux pages.
+
+- **Formation** : qui est sur scène, à quel instrument.
+- **Plan de scène** : la place de chacun, des retours et des prises électriques.
+- **Patch** : la liste des entrées, micros et boîtiers de direct.
+- **Backline** : ce que tu apportes, et ce que la salle doit fournir.
+- **Son** : retours par musicien, système intra-auriculaire, bandes lancées depuis un ordinateur.
+- **Lumière** : ambiance souhaitée, vidéo éventuelle.
+- **Timing** : installation, balances, durée du concert, changement de plateau.
+- **Accueil** : nombre de personnes, repas, loge, hébergement.
+
+Ajoute la date de la version en haut du document. Dans ton press kit, propose-la en téléchargement, à côté du contact booking.
+
 **FAQ Artiste**
 
 - *Quelle différence entre un press kit et un EPK ?* Aucune : EPK (electronic press kit) est le nom anglais du press kit en ligne. C'est la version web du dossier de presse papier ou PDF.
 - *Puis-je intégrer mes sons et mes clips ?* Oui : tes lecteurs Spotify, SoundCloud ou YouTube s'affichent directement dans la page.
 - *Je prépare une sortie, je peux l'annoncer ?* Oui : une section actualité met en avant ton single, ton EP ou ton album. Tu la mets à jour à la sortie suivante (mise à jour à 30 €, ou en illimité avec la maintenance annuelle).
 - *Je suis peintre ou artiste visuel, c'est adapté ?* Oui : galerie d'œuvres, démarche, expositions et presse. Regarde le press kit de MelyMelow.
+- *Je n'ai pas encore d'EP ni d'album, un press kit est-il utile ?* Oui. Un titre, une vidéo live, une bio et un contact suffisent pour commencer. On démarre avec les contenus que tu as, et tu complètes ensuite avec une mise à jour à 30 €.
 - *Combien coûte un press kit artiste ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ### Press kit DJ (presskit.fr/dj)
@@ -166,12 +239,76 @@ Un booker, un club ou une agence doit trouver ces éléments en moins d'une minu
 - Zone et disponibilités : ville de base, déplacements, délai de réservation.
 - Contact booking : un e-mail ou un numéro direct, et ton agence si tu en as une.
 
+**Press kit, Linktree ou PDF : lequel envoyer à un booker ?**
+
+Un booker ouvre souvent ton lien sur son téléphone. Il veut t'écouter, voir où tu as joué et savoir comment te réserver. Les trois formats n'y répondent pas de la même façon.
+
+*Linktree : pratique pour ton public*
+
+Un Linktree aligne tes liens : SoundCloud, Instagram, billetterie. Il se crée vite et va bien dans une bio Instagram. Mais le booker doit ouvrir chaque lien pour te situer. Ta bio, tes références et ton rider restent à chercher ailleurs.
+
+*PDF : utile en pièce jointe, vite dépassé*
+
+Un dossier de presse DJ en PDF se joint à un e-mail et se lit hors connexion. Mais chaque nouvelle date demande un nouveau fichier. Les versions déjà envoyées ne changent plus, et tes sets s'ouvrent dans une autre application.
+
+*Press kit en ligne : tout sur une page*
+
+Un EPK DJ en ligne réunit ta bio, tes mixes, tes vidéos, tes références, ton rider et ton contact. Le booker écoute sans quitter la page. Quand une date change, la page est mise à jour et le lien reste le même. C'est aussi un site booking DJ : une adresse à mettre dans ta bio, tes e-mails et tes messages.
+
+Notre conseil : garde ton Linktree pour ton public, et un PDF si un lieu te le demande. Au booker, envoie le lien de ton press kit.
+
+**Exemple de bio DJ : version courte et version longue**
+
+Une bio DJ dit qui tu es, ce que tu joues et où tu as joué. Ces deux textes sont des modèles fictifs : remplace chaque information par la tienne.
+
+*Modèle de bio courte (trois lignes)*
+
+> DJ Exemple joue house, afro house et disco, du warm-up au closing.
+> Basé à Lyon, résident au [nom du club] depuis [année].
+> Booking : [ton e-mail]
+
+À utiliser pour un flyer, une programmation ou une bio Instagram.
+
+*Modèle de bio longue*
+
+> DJ Exemple commence à mixer à 16 ans, sur les platines de son grand frère. Il joue d'abord dans les soirées étudiantes de Lyon, puis devient résident au [nom du club] en [année].
+>
+> Ses sets vont de la house à l'afro house, avec des classiques disco en fin de nuit. En warm-up, il laisse la salle se remplir. En peak time, il accélère. En closing, il ressort les morceaux que tout le monde connaît.
+>
+> Il a joué au [nom du festival], au [nom du club] et en première partie de [nom de l'artiste]. Il mixe aussi pour des marques et des mariages, avec une sélection adaptée à chaque date.
+>
+> Son dernier mix, [titre], s'écoute sur SoundCloud. Basé à Lyon, il se déplace dans toute la France.
+
+*Trois règles pour écrire la tienne*
+
+- Écris à la troisième personne : un organisateur pourra la copier telle quelle.
+- Cite des lieux et des dates vérifiables, plutôt que « DJ incontournable ».
+- Relis-la à chaque nouvelle résidence ou date importante.
+
+**Ce qu'un rider DJ doit contenir**
+
+Le rider DJ liste ce dont tu as besoin pour jouer. Le lieu prépare la soirée, et tu évites les surprises en arrivant. Reste réaliste : une petite salle n'a pas le matériel d'un festival.
+
+- **Platines** : nombre, modèle souhaité et modèle accepté en remplacement.
+- **Table de mixage** : modèle et nombre de voies.
+- **Branchements** : USB, ordinateur, vinyles, câbles à fournir, prises électriques.
+- **Retours de scène** : un ou deux, réglables depuis la cabine.
+- **Micro** : si tu animes ou si un MC t'accompagne.
+- **Cabine** : taille de la table, hauteur, éclairage, protection en extérieur.
+- **Horaires** : arrivée, installation, balances, début et fin du set.
+- **Accueil** : transport, hôtel, repas, boissons, nombre d'invités.
+- **Contact sur place** : un nom et un numéro, côté lieu et côté artiste.
+
+Le cachet et les conditions de paiement vont dans le devis ou le contrat, pas dans le rider. Sur ton press kit, place le rider près de ton contact booking.
+
 **FAQ DJ**
 
 - *Press kit DJ, EPK ou dossier de presse : c'est pareil ?* Oui. EPK (electronic press kit) est le terme anglais, dossier de presse le terme français. Ici, c'est une page web à jour plutôt qu'un PDF à renvoyer à chaque nouvelle date.
 - *Puis-je intégrer mes mixes SoundCloud ou Mixcloud ?* Oui, tes sets sont intégrés dans la page : le booker écoute sans quitter ton press kit.
 - *Quelle différence avec un Linktree pour un DJ ?* Un Linktree aligne des liens ; le press kit met en avant tes références de clubs, tes vidéos live et tes styles, ce qu'un booker regarde avant de programmer.
 - *Je joue en club et en événementiel privé, je peux présenter les deux ?* Oui, on peut séparer les formats (club, mariage, corporate) avec des médias adaptés à chacun.
+- *Un press kit peut-il servir de site booking DJ ?* Oui. Tes styles, tes mixes, tes références et ton contact booking tiennent sur une page. Pour un site de plusieurs pages, c'est la formule Studio Custom, sur devis.
+- *Vous pouvez m'aider à écrire ma bio DJ ?* Oui, l'aide à l'écriture est incluse dans Press Kit Premium. Tu envoies ton parcours, tes styles et tes références, et on met ta bio en forme avec toi.
 - *Combien coûte un press kit DJ ?* À partir de 300 €, livré en 7 jours maximum, avec 5 allers-retours de modifications inclus.
 
 ### Press kit danseur (presskit.fr/danseur)
@@ -183,7 +320,7 @@ Un booker, un club ou une agence doit trouver ces éléments en moins d'une minu
 
 **Présenter ton parcours, tes vidéos et tes collaborations**
 
-Un directeur de casting ouvre ton lien entre deux auditions : ton showreel doit se lancer tout de suite.
+Un directeur de casting ouvre ton lien entre deux auditions : ton showreel doit se lancer tout de suite. C'est ton book de danseur en ligne : un lien à envoyer avant une audition.
 
 - **Montre tes performances** : Un lieu, une marque ou un projet culturel peut consulter plusieurs vidéos au même endroit.
 - **Situe ton parcours** : Scènes, clips, collectifs, ateliers et collaborations donnent du contexte à ton travail.
@@ -372,6 +509,94 @@ Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y 
 - *Le press kit peut-il servir de dossier sponsor ?* Oui, il remplace un PDF statique par une page à jour, avec galerie et contact partenaires.
 - *Puis-je ajouter les flyers et photos de mes soirées ?* Oui, dans une galerie dédiée.
 - *Combien coûte un press kit organisateur ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
+
+### Press kit créateur de contenu (presskit.fr/createur-de-contenu)
+
+- **Titre** : Media kit créateur de contenu : ce qu'une marque veut voir, en un lien
+- **Chapeau** : Présente tes vidéos, tes chiffres, tes collaborations et ton contact dans un media kit en ligne. Créateur de contenu ou UGC, tu envoies le même lien à toutes les marques.
+- **Public** : Créateurs de contenu, créateurs UGC et influenceurs qui travaillent avec des marques
+- **Description Google** : Ton media kit de créateur de contenu ou UGC : présentation, chiffres, vidéos, marques et contact réunis en un seul lien. Livré en 7 jours, dès 300 €.
+
+**Répondre à une marque sans refaire ton portfolio**
+
+Une marque te demande tes chiffres, tes formats et des exemples. Ton media kit répond en un lien.
+
+- **Montre tes vidéos** : La marque regarde tes meilleurs contenus sur la page, sans ouvrir un dossier partagé.
+- **Présente tes chiffres** : Abonnés, engagement et vues sont au même endroit, avec leur date.
+- **Cadre la collaboration** : Formats, délais et contact sont clairs avant le premier échange.
+
+**Que mettre dans un media kit UGC ou créateur de contenu ?**
+
+Une marque ou une agence doit trouver ces éléments en moins d'une minute, sur mobile.
+
+- Présentation : qui tu es, ta ville, tes thèmes en deux ou trois phrases.
+- Thèmes : beauté, mode, food, voyage… ceux que tu traites vraiment.
+- Chiffres par réseau : abonnés, vues moyennes, taux d'engagement, avec le mois de relevé.
+- Audience : âge, pays, part de femmes et d'hommes, si tu as accès à ces données.
+- Portfolio vidéo : six à dix contenus verticaux, les plus récents en premier.
+- Collaborations : marques, type de contenu, résultat si tu as le droit de le partager.
+- Formats proposés : vidéo UGC, Reel, TikTok, story, photo, présence sur un événement.
+- Conditions : délai de livraison, nombre de retouches, droits d'utilisation.
+- Tarifs : une fourchette, un prix de départ ou « sur demande ».
+- Contact direct : un e-mail professionnel, et ton agent si tu en as un.
+
+**Créateur de contenu ou créateur UGC : deux media kits différents**
+
+Les deux travaillent avec des marques, mais elles n'achètent pas la même chose. Ton media kit doit le montrer dès le haut de la page.
+
+*Media kit créateur de contenu : ton audience compte*
+
+La marque paie pour apparaître sur ton compte. Elle regarde tes abonnés, ton engagement et le profil de ton audience. Place tes chiffres en haut, puis tes collaborations les plus proches de son secteur.
+
+*Media kit UGC : tes vidéos comptent*
+
+La marque diffuse tes vidéos sur ses propres comptes ou dans ses publicités. Ton nombre d'abonnés passe après la qualité de tes contenus. Place ton portfolio en haut, classé par secteur ou par format : démonstration, témoignage, déballage.
+
+*Tu fais les deux ?*
+
+Sépare les deux offres sur la page, avec des exemples pour chacune. Le press kit de Julia, créatrice de contenu et UGC, réunit parcours, thèmes, chiffres clés, références, portfolio vidéo et contact.
+
+**Media kit, profil Instagram ou PDF : que regarde une marque ?**
+
+Une marque compare plusieurs créateurs avant de choisir. Elle veut les mêmes informations pour chacun, vite.
+
+- **Profil Instagram ou TikTok** : il montre ton style au quotidien. Mais tes formats, ton audience et tes conditions n'y sont pas.
+- **PDF** : il se joint à un e-mail. Mais tes vidéos ne s'y lancent pas toujours, et tes chiffres datent du jour de l'export.
+- **Media kit en ligne** : tes vidéos, tes chiffres et ton contact sont sur une page. Tes chiffres changent, le lien reste le même.
+
+Indique toujours le mois de tes statistiques : une marque veut savoir de quand elles datent.
+
+**Modèle de message à une marque**
+
+Ce texte est un modèle. Garde-le court et remplace les crochets.
+
+> Bonjour [prénom],
+>
+> Je suis [nom], je crée des vidéos [thème] à [ville]. J'ai une idée pour [produit] : [une phrase].
+> Mon media kit, avec mes vidéos et mes formats : [lien].
+>
+> Est-ce que le sujet vous intéresse ce mois-ci ?
+> [nom et e-mail]
+
+**Droits d'utilisation : ce que ton media kit doit préciser**
+
+Une vidéo livrée à une marque peut servir longtemps. Annonce tes règles avant le devis.
+
+- **Supports** : comptes de la marque, site, publicités en ligne, affichage.
+- **Durée** : nombre de mois ou d'années d'utilisation.
+- **Zone** : France, Europe ou monde.
+- **Publicité** : si la marque peut sponsoriser la vidéo, et à quel prix.
+- **Retouches** : nombre de modifications comprises.
+- **Exclusivité** : si tu t'engages à ne pas travailler avec un concurrent, et combien de temps.
+
+Les conditions exactes vont dans le contrat. Le media kit donne le cadre.
+
+**FAQ Créateur de contenu**
+
+- *Media kit ou press kit : quelle différence pour un créateur de contenu ?* Le media kit s'adresse aux marques : audience, formats, collaborations. Le press kit s'adresse aussi à la presse. Ici, une seule page fait les deux.
+- *J'ai peu d'abonnés, un media kit UGC est-il utile ?* Oui. Pour l'UGC, une marque regarde surtout tes vidéos. Quelques contenus réalisés pour toi suffisent pour commencer.
+- *Mes statistiques changent souvent, comment les mettre à jour ?* Avec une mise à jour à 30 €, ou en illimité pendant un an avec la maintenance annuelle à 60 €.
+- *Combien coûte un press kit créateur de contenu ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ## Exemples clients en ligne (22)
 

@@ -2,14 +2,48 @@ import Link from "next/link";
 
 import { PageShell } from "@/components/layout/page-shell";
 
+// `description` : version courte du chapeau de la page métier (heroDescription dans content/site.ts).
 const metiers = [
-  { slug: "artiste", label: "Press kit artiste" },
-  { slug: "dj", label: "Press kit DJ" },
-  { slug: "danseur", label: "Press kit danseur" },
-  { slug: "photographe", label: "Press kit photographe" },
-  { slug: "coach-sportif", label: "Press kit coach sportif" },
-  { slug: "make-up-artist", label: "Press kit make-up artist" },
-  { slug: "organisateur", label: "Press kit organisateur de soirée" },
+  {
+    slug: "artiste",
+    label: "Press kit artiste",
+    description: "Ta bio, tes sons, tes clips, tes dates et ton contact booking",
+  },
+  {
+    slug: "dj",
+    label: "Press kit DJ",
+    description: "Tes styles, tes vidéos, tes liens d'écoute, tes références et ton contact booking",
+  },
+  {
+    slug: "danseur",
+    label: "Press kit danseur",
+    description: "Tes vidéos, tes références et ton contact, pour les compagnies et les marques",
+  },
+  {
+    slug: "photographe",
+    label: "Press kit photographe",
+    description: "Ton portfolio, tes formats photo ou vidéo, tes zones d'intervention et ton contact",
+  },
+  {
+    slug: "coach-sportif",
+    label: "Press kit coach sportif",
+    description: "Ta méthode, tes prestations, tes résultats et ta prise de rendez-vous",
+  },
+  {
+    slug: "make-up-artist",
+    label: "Press kit make-up artist",
+    description: "Ton portfolio, tes prestations et tes références, pour les clientes, marques ou productions",
+  },
+  {
+    slug: "organisateur",
+    label: "Press kit organisateur de soirée",
+    description: "Tes photos, ta communauté, tes chiffres, tes partenaires et ton contact",
+  },
+  {
+    slug: "createur-de-contenu",
+    label: "Press kit créateur de contenu",
+    description: "Tes vidéos, tes chiffres, tes formats et ton contact, pour les marques et les agences",
+  },
 ];
 
 type MetiersLinksProps = {
@@ -17,15 +51,36 @@ type MetiersLinksProps = {
   // Sans titre, seuls les liens sont rendus (sous le H1 de /exemples).
   title?: string;
   id?: string;
+  // Une phrase sous chaque lien, en grille (accueil). Sans elle, les liens restent des pastilles.
+  withDescriptions?: boolean;
 };
 
-export function MetiersLinks({ currentSlug, title, id }: MetiersLinksProps) {
+export function MetiersLinks({ currentSlug, title, id, withDescriptions = false }: MetiersLinksProps) {
+  const visibleMetiers = metiers.filter((metier) => metier.slug !== currentSlug);
+
   const links = (
     <nav {...(title ? { "aria-labelledby": id } : { "aria-label": "Press kits par métier" })}>
-      <ul className="flex flex-wrap gap-3">
-        {metiers
-          .filter((metier) => metier.slug !== currentSlug)
-          .map((metier) => (
+      {withDescriptions ? (
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {visibleMetiers.map((metier) => (
+            <li
+              key={metier.slug}
+              className="relative rounded-lg border border-white/[0.12] p-5 transition duration-hover ease-presskit hover:border-white/[0.24] hover:bg-white/[0.08]"
+            >
+              {/* Le lien couvre toute la carte, son texte reste le seul nom du métier. */}
+              <Link
+                href={`/${metier.slug}`}
+                className="text-base font-semibold text-white after:absolute after:inset-0 after:rounded-lg focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-4 focus-visible:after:outline-white/70"
+              >
+                {metier.label}
+              </Link>
+              <p className="mt-2 text-sm leading-6 text-white/[0.74]">{metier.description}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className="flex flex-wrap gap-3">
+          {visibleMetiers.map((metier) => (
             <li key={metier.slug}>
               <Link
                 href={`/${metier.slug}`}
@@ -35,7 +90,8 @@ export function MetiersLinks({ currentSlug, title, id }: MetiersLinksProps) {
               </Link>
             </li>
           ))}
-      </ul>
+        </ul>
+      )}
     </nav>
   );
 

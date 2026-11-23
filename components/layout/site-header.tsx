@@ -74,11 +74,10 @@ export function SiteHeader() {
               "relative block h-10 w-44 shrink-0 transition md:h-12 md:w-60",
               isCompact ? "opacity-100 hover:opacity-80" : "opacity-95 hover:opacity-80",
             )}
-            aria-label={siteConfig.name}
           >
             <Image
               src="/logo/logo-presskitforyou-cropped.png"
-              alt=""
+              alt={siteConfig.name}
               fill
               sizes="(min-width: 768px) 15rem, 11rem"
               priority

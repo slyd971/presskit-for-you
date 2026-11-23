@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import type { PreviewAssets } from "@/lib/preview-assets";
 import { Reveal } from "@/components/ui/reveal";
 import { PageShell } from "@/components/layout/page-shell";
+import { withDe } from "@/lib/utils";
 
 const homeExamples = [
   {
@@ -225,7 +226,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                   href={example.externalDemoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`${example.title} : ouvrir la démo (nouvel onglet)`}
+                  aria-label={`Voir le press kit ${withDe(example.title)} (nouvel onglet)`}
                   className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
                 />
               </div>

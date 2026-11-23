@@ -15,11 +15,10 @@ export function SiteFooter() {
           <Link
             href="/"
             className="relative block h-20 w-[24rem] max-w-full opacity-95 transition hover:opacity-80 md:h-24 md:w-[32rem]"
-            aria-label={siteConfig.name}
           >
             <Image
               src="/logo/logo-presskitforyou-cropped.png"
-              alt=""
+              alt={siteConfig.name}
               fill
               sizes="(min-width: 768px) 32rem, min(24rem, 100vw)"
               className="object-contain object-left"

@@ -29,7 +29,7 @@ presskit-for-you/
 │   ├── page.tsx              Accueil
 │   ├── exemples/             Galerie des press kits réalisés
 │   ├── tarifs/               Page tarifs
-│   ├── artiste/ dj/ danseur/ photographe/ coach-sportif/ make-up-artist/ organisateur/
+│   ├── artiste/ dj/ danseur/ photographe/ coach-sportif/ make-up-artist/ organisateur/ createur-de-contenu/
 │   │                         Une page par métier (page.tsx + opengraph-image.tsx + twitter-image.tsx)
 │   ├── cgv/ mentions-legales/ politique-de-confidentialite/   Pages légales
 │   ├── not-found.tsx         Page 404

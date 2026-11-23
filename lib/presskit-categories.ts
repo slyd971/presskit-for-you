@@ -4,7 +4,7 @@ import { categorySeo } from "@/content/seo-pages";
 import { categories, examples } from "@/content/site";
 import { createPageMetadata } from "@/lib/seo";
 
-export const publishedPresskitCategories = categories.filter((category) => category.slug !== "chef");
+export const publishedPresskitCategories = categories.filter((category) => category.slug !== "chef" && !category.draft);
 
 const categoryExampleLabels: Record<string, string[]> = {
   artiste: ["Artiste peintre", "Chanteuse", "Chanteur / Rap"],
@@ -14,6 +14,7 @@ const categoryExampleLabels: Record<string, string[]> = {
   "coach-sportif": ["Coach sportif"],
   "make-up-artist": ["Make-up artist"],
   organisateur: ["Organisateur", "Organisateur de soirée"],
+  "createur-de-contenu": ["Créateur de contenu"],
 };
 
 export const footerCategoryLinks = publishedPresskitCategories.map((category) => ({
@@ -58,11 +59,13 @@ export function createPresskitCategoryMetadata(slug: string): Metadata {
 
   const seo = categorySeo[slug];
 
-  return createPageMetadata({
+  const metadata = createPageMetadata({
     title: category.name,
     absoluteTitle: seo?.title,
     description: seo?.description ?? category.heroDescription,
     withSocialImages: false,
     path: category.slug,
   });
+
+  return category.draft ? { ...metadata, robots: { index: false, follow: false } } : metadata;
 }

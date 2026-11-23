@@ -1,6 +1,12 @@
+import { pricingOptions } from "@/content/pricing";
 import { LEGAL } from "@/lib/legal";
 
 export type FaqEntry = { question: string; answer: string };
+
+const optionPrice = (name: string) => pricingOptions.find((option) => option.name === name)?.price.replace("+", "");
+const updatePrice = optionPrice("Mise à jour de contenu");
+// « 60 €/an » : la phrase dit déjà « pendant un an ».
+const maintenancePrice = optionPrice("Maintenance annuelle")?.replace("/an", "");
 
 const pricingAnswer = `À partir de 300 €, livré en ${LEGAL.deliveryDays} jours maximum, ${LEGAL.revisionRounds} allers-retours inclus.`;
 
@@ -23,6 +29,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     {
       question: "Je joue en club et en événementiel privé, je peux présenter les deux ?",
       answer: "Oui, on peut séparer les formats (club, mariage, corporate) avec des médias adaptés à chacun.",
+    },
+    {
+      question: "Un press kit peut-il servir de site booking DJ ?",
+      answer:
+        "Oui. Tes styles, tes mixes, tes références et ton contact booking tiennent sur une page. Pour un site de plusieurs pages, c'est la formule Studio Custom, sur devis.",
+    },
+    {
+      question: "Vous pouvez m'aider à écrire ma bio DJ ?",
+      answer:
+        "Oui, l'aide à l'écriture est incluse dans Press Kit Premium. Tu envoies ton parcours, tes styles et tes références, et on met ta bio en forme avec toi.",
     },
     {
       question: "Combien coûte un press kit DJ ?",
@@ -205,7 +221,30 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
       answer: "Oui : galerie d'œuvres, démarche, expositions et presse. Regarde le press kit de MelyMelow.",
     },
     {
+      question: "Je n'ai pas encore d'EP ni d'album, un press kit est-il utile ?",
+      answer: `Oui. Un titre, une vidéo live, une bio et un contact suffisent pour commencer. On démarre avec les contenus que tu as, et tu complètes ensuite avec une mise à jour à ${updatePrice}.`,
+    },
+    {
       question: "Combien coûte un press kit artiste ?",
+      answer: pricingAnswer,
+    },
+  ],
+  "createur-de-contenu": [
+    {
+      question: "Media kit ou press kit : quelle différence pour un créateur de contenu ?",
+      answer:
+        "Le media kit s'adresse aux marques : audience, formats, collaborations. Le press kit s'adresse aussi à la presse. Ici, une seule page fait les deux.",
+    },
+    {
+      question: "J'ai peu d'abonnés, un media kit UGC est-il utile ?",
+      answer: "Oui. Pour l'UGC, une marque regarde surtout tes vidéos. Quelques contenus réalisés pour toi suffisent pour commencer.",
+    },
+    {
+      question: "Mes statistiques changent souvent, comment les mettre à jour ?",
+      answer: `Avec une mise à jour à ${updatePrice}, ou en illimité pendant un an avec la maintenance annuelle à ${maintenancePrice}.`,
+    },
+    {
+      question: "Combien coûte un press kit créateur de contenu ?",
       answer: pricingAnswer,
     },
   ],

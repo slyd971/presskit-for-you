@@ -8,6 +8,7 @@ import { ExampleMockup } from "@/components/marketing/example-mockup";
 import { Reveal } from "@/components/ui/reveal";
 import { getPreviewAssets } from "@/lib/preview-assets";
 import { getExamplesForPresskitCategory } from "@/lib/presskit-categories";
+import { withDe } from "@/lib/utils";
 
 type CategoryContentProps = {
   category: Category;
@@ -114,7 +115,7 @@ const pageCopy: Record<string, PageCopy> = {
   danseur: {
     promiseTitle: "Présenter ton parcours, tes vidéos et tes collaborations",
     promiseDescription:
-      "Un directeur de casting ouvre ton lien entre deux auditions : ton showreel doit se lancer tout de suite.",
+      "Un directeur de casting ouvre ton lien entre deux auditions : ton showreel doit se lancer tout de suite. C'est ton book de danseur en ligne : un lien à envoyer avant une audition.",
     benefits: [
       {
         title: "Montre tes performances",
@@ -281,6 +282,30 @@ const pageCopy: Record<string, PageCopy> = {
       { title: "Le contact partenariats." },
     ],
   },
+  "createur-de-contenu": {
+    promiseTitle: "Répondre à une marque sans refaire ton portfolio",
+    promiseDescription: "Une marque te demande tes chiffres, tes formats et des exemples. Ton media kit répond en un lien.",
+    benefits: [
+      { title: "Montre tes vidéos", description: "La marque regarde tes meilleurs contenus sur la page, sans ouvrir un dossier partagé." },
+      { title: "Présente tes chiffres", description: "Abonnés, engagement et vues sont au même endroit, avec leur date." },
+      { title: "Cadre la collaboration", description: "Formats, délais et contact sont clairs avant le premier échange." },
+    ],
+    examplesTitle: "Un exemple de créatrice de contenu à consulter",
+    detailsTitle: "Que mettre dans un media kit UGC ou créateur de contenu ?",
+    detailsDescription: "Une marque ou une agence doit trouver ces éléments en moins d'une minute, sur mobile.",
+    checklist: [
+      { title: "Présentation", description: "qui tu es, ta ville, tes thèmes en deux ou trois phrases." },
+      { title: "Thèmes", description: "beauté, mode, food, voyage… ceux que tu traites vraiment." },
+      { title: "Chiffres par réseau", description: "abonnés, vues moyennes, taux d'engagement, avec le mois de relevé." },
+      { title: "Audience", description: "âge, pays, part de femmes et d'hommes, si tu as accès à ces données." },
+      { title: "Portfolio vidéo", description: "six à dix contenus verticaux, les plus récents en premier." },
+      { title: "Collaborations", description: "marques, type de contenu, résultat si tu as le droit de le partager." },
+      { title: "Formats proposés", description: "vidéo UGC, Reel, TikTok, story, photo, présence sur un événement." },
+      { title: "Conditions", description: "délai de livraison, nombre de retouches, droits d'utilisation." },
+      { title: "Tarifs", description: "une fourchette, un prix de départ ou « sur demande »." },
+      { title: "Contact direct", description: "un e-mail professionnel, et ton agent si tu en as un." },
+    ],
+  },
 };
 
 export function CategoryContent({ category }: CategoryContentProps) {
@@ -387,7 +412,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                         href={href}
                         target={isExternal ? "_blank" : undefined}
                         rel={isExternal ? "noreferrer" : undefined}
-                        aria-label={`${example.title} : ouvrir la démo${isExternal ? " (nouvel onglet)" : ""}`}
+                        aria-label={`Voir le press kit ${withDe(example.title)}${isExternal ? " (nouvel onglet)" : ""}`}
                         className="absolute inset-0 z-20 rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-850"
                       />
                     </div>

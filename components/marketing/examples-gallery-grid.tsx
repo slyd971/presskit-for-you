@@ -38,7 +38,12 @@ const exampleGroups = [
     linkLabel: "Voir la page press kit make-up artist",
     titles: ["Ishma Make Up Artist", "Sophie Beauty"],
   },
-  { title: "Press kits créateurs de contenu", href: null, linkLabel: null, titles: ["Julia"] },
+  {
+    title: "Press kits créateurs de contenu",
+    href: "/createur-de-contenu",
+    linkLabel: "Voir la page press kit créateur de contenu",
+    titles: ["Julia"],
+  },
 ];
 
 type ExamplesGalleryGridProps = {

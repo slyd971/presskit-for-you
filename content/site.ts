@@ -3,6 +3,8 @@ import { VAT_MENTION } from "@/lib/vat";
 
 export type Category = {
   slug: string;
+  // Page en brouillon : accessible par son URL, mais noindex, hors sitemap et hors menus.
+  draft?: boolean;
   name: string;
   shortName: string;
   eyebrow: string;
@@ -127,7 +129,7 @@ export const testimonials = [
     categorySlug: "photographe",
     date: "mai 2026",
     url: EXAMPLE_URLS.lokkoTv,
-    image: "/témoignages/izzy-profil.webp",
+    image: "/temoignages/izzy-profil.webp",
     quote:
       "Très satisfait du press kit : c’est une mise en avant qualitative de mon travail professionnel, qui me démarque directement de la concurrence. Ça porte déjà ses fruits et m’a permis de décrocher de nouveaux clients.",
   },
@@ -137,7 +139,7 @@ export const testimonials = [
     categorySlug: "make-up-artist",
     date: "juillet 2026",
     url: EXAMPLE_URLS.ishma,
-    image: "/témoignages/ishma.webp",
+    image: "/temoignages/ishma.webp",
     quote:
       "Une expérience incroyable ! En tant que make-up artist, j’ai senti que l’équipe avait tout de suite saisi ma signature. Le résultat me ressemble totalement et reflète parfaitement ma façon de travailler. La page est intuitive, très professionnelle et va bien au-delà de mes attentes. Un immense merci.",
   },
@@ -147,7 +149,7 @@ export const testimonials = [
     categorySlug: "dj",
     date: "juin 2026",
     url: EXAMPLE_URLS.yoruboy,
-    image: "/témoignages/yoruboy.webp",
+    image: "/temoignages/yoruboy.webp",
     quote:
       "Merci Press Kit For You pour votre sérieux et votre réactivité sur la création de mon site DJ. Franchement, le résultat est au-delà de mes attentes : ultra qualitatif, propre et professionnel. Vous avez su comprendre exactement ce que je voulais et le retranscrire parfaitement. Encore merci pour votre travail et votre efficacité, c’est un vrai plaisir de travailler avec une équipe aussi fiable !",
   },
@@ -172,8 +174,8 @@ export const videoTestimonial = {
   role: "Créatrice de contenu",
   date: "octobre 2026",
   url: EXAMPLE_URLS.juliaElinaUgc,
-  video: "/témoignages/temoignage-julia-sous-titres.mp4",
-  poster: "/témoignages/temoignage-julia-poster.webp",
+  video: "/temoignages/temoignage-julia-sous-titres.mp4",
+  poster: "/temoignages/temoignage-julia-poster.webp",
   label: "Témoignage vidéo de Julia, créatrice de contenu",
   // Citation mot pour mot : ne pas corriger.
   transcript:
@@ -641,6 +643,37 @@ export const categories: Category[] = [
     heroImageAlt: "Aperçu d'un press kit organisateur de soirée",
     heroOverlayTitle: "Événement",
     externalDemoUrl: EXAMPLE_URLS.laBringue,
+  },
+  {
+    slug: "createur-de-contenu",
+    name: "Press kit créateur de contenu",
+    shortName: "Créateur de contenu",
+    eyebrow: "Vidéos, chiffres, collaborations",
+    description: "Une page pour présenter tes vidéos, tes chiffres et tes collaborations.",
+    audience: "Créateurs de contenu, créateurs UGC et influenceurs qui travaillent avec des marques",
+    tone: "creator",
+    accent: "#C97B4A",
+    accentSoft: "rgba(201,123,74,0.18)",
+    gradient:
+      "from-[#C97B4A]/[0.28] via-[#F4C26B]/[0.12] to-transparent",
+    heroTitle: "Media kit créateur de contenu : ce qu'une marque veut voir, en un lien",
+    heroDescription:
+      "Présente tes vidéos, tes chiffres, tes collaborations et ton contact dans un media kit en ligne. Créateur de contenu ou UGC, tu envoies le même lien à toutes les marques.",
+    valueProps: ["Vidéos regroupées", "Chiffres datés", "Contact direct"],
+    benefits: [
+      { title: "Montre tes vidéos", description: "La marque regarde tes meilleurs contenus sur la page, sans ouvrir un dossier partagé." },
+      { title: "Présente tes chiffres", description: "Abonnés, engagement et vues sont au même endroit, avec leur date." },
+      { title: "Cadre la collaboration", description: "Formats, délais et contact sont clairs avant le premier échange." },
+    ],
+    includes: ["Présentation", "Thèmes", "Chiffres par réseau", "Audience", "Portfolio vidéo", "Collaborations", "Formats proposés", "Conditions", "Tarifs", "Contact direct"],
+    modules: ["Présentation courte", "Chiffres clés", "Portfolio vidéo", "Contact marques"],
+    sampleHighlights: ["Vidéos visibles", "Chiffres clés", "Contact clair"],
+    stats: [
+      { label: "Usage", value: "Marques • Agences" },
+      { label: "Focus", value: "Vidéos + chiffres" },
+      { label: "Format", value: "Lien à partager" },
+    ],
+    externalDemoUrl: EXAMPLE_URLS.juliaElinaUgc,
   },
   {
     slug: "chef",

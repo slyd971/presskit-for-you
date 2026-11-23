@@ -1,6 +1,8 @@
 export type PricingTier = {
   name: string;
   price: string;
+  // Prix de départ en euros (JSON-LD). Absent : sur devis.
+  minPrice?: number;
   tagline: string;
   description: string;
   features: string[];
@@ -13,10 +15,13 @@ export type PricingOption = {
   description: string;
 };
 
+const premiumMinPrice = 300;
+
 export const pricingTiers: PricingTier[] = [
   {
     name: "Press Kit Premium",
-    price: "À partir de 300 €",
+    price: `À partir de ${premiumMinPrice} €`,
+    minPrice: premiumMinPrice,
     tagline: "pour lancer ton image pro",
     description: "L’offre idéale pour créer un press kit clair, premium et prêt à partager.",
     features: [

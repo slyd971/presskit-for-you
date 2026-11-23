@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        // Ancien dossier « /témoignages/ », renommé sans accent.
+        source: "/t%C3%A9moignages/:file",
+        destination: "/temoignages/:file",
+        statusCode: 301,
+      },
+      {
         source: "/galerie",
         destination: "/exemples",
         statusCode: 301,

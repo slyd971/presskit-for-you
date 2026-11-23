@@ -1,21 +1,19 @@
 import type { MetadataRoute } from "next";
 
+import lastModified from "@/content/last-modified.json";
 import { siteConfig } from "@/content/site";
 import { footerCategoryLinks } from "@/lib/presskit-categories";
 
-// Last real content change per route. Update the date when a page's content changes.
-const defaultLastModified = "2026-10-22";
-const routeLastModified: Record<string, string> = {
-  "": "2026-10-22",
-  "/exemples": "2026-10-22",
-  "/tarifs": "2026-10-22",
-  "/mentions-legales": "2026-10-12",
-  "/cgv": "2026-10-22",
-  "/politique-de-confidentialite": "2026-10-22",
-};
+// Date du dernier vrai changement de contenu, tenue à jour par scripts/sitemap-dates.mjs après chaque build local.
+// Nouvelle page pas encore datée : pas de lastmod plutôt qu'une date inventée.
+const pages: Record<string, { date: string } | undefined> = lastModified;
 const legalRoutes = ["/mentions-legales", "/cgv", "/politique-de-confidentialite"];
 
-const lastModifiedFor = (route: string) => new Date(`${routeLastModified[route] ?? defaultLastModified}T00:00:00.000Z`);
+const lastModifiedFor = (route: string) => {
+  const page = pages[route || "/"];
+
+  return page ? new Date(`${page.date}T00:00:00.000Z`) : undefined;
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ["", "/exemples", "/tarifs", "/mentions-legales", "/cgv", "/politique-de-confidentialite"];

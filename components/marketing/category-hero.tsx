@@ -115,6 +115,14 @@ export function CategoryHero({ category }: CategoryHeroProps) {
               </div>
             </div>
           </Link>
+          {heroExample?.testimonialHref ? (
+            <Link
+              href={heroExample.testimonialHref}
+              className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
+            >
+              Voir son témoignage vidéo
+            </Link>
+          ) : null}
           {/* Pages à un seul exemple : pas de section « autres exemples », on renvoie vers /exemples. */}
           {examples.length <= 1 ? (
             <div className="mt-10 flex justify-center md:mt-12">

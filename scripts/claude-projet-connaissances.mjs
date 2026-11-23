@@ -23,6 +23,7 @@ const jiti = require("jiti")(fileURLToPath(import.meta.url), { alias: { "@": ROO
 
 const site = jiti(path.join(ROOT, "content/site.ts"));
 const { categoryFaqs } = jiti(path.join(ROOT, "content/category-faqs.ts"));
+const { categoryGuides } = jiti(path.join(ROOT, "content/category-guides.ts"));
 const { categorySeo } = jiti(path.join(ROOT, "content/seo-pages.ts"));
 
 // Les textes longs des pages métiers vivent dans un composant (non exporté) : on isole l'objet pageCopy.
@@ -72,7 +73,7 @@ faq("FAQ de la page Tarifs", site.pricingFaqItems);
 
 add("## Pages métiers");
 add();
-for (const category of site.categories.filter((c) => c.slug !== "chef")) {
+for (const category of site.categories.filter((c) => c.slug !== "chef" && !c.draft)) {
   const seo = categorySeo[category.slug];
   const copy = pageCopy[category.slug];
   add(`### ${category.name} (presskit.fr/${category.slug})`);
@@ -105,6 +106,28 @@ for (const category of site.categories.filter((c) => c.slug !== "chef")) {
       add(copy.extraChecklist.description);
       add();
       copy.extraChecklist.items.forEach((i) => add(item(i)));
+      add();
+    }
+  }
+  for (const guide of categoryGuides[category.slug] ?? []) {
+    add(`**${guide.title}**`);
+    add();
+    add(guide.intro);
+    add();
+    for (const part of guide.parts) {
+      if (part.title) {
+        add(`*${part.title}*`);
+        add();
+      }
+      for (const block of part.blocks) {
+        if (block.type === "text") add(block.text);
+        if (block.type === "list") block.items.forEach((i) => add(i.title ? `- **${i.title}** : ${i.description}` : `- ${i.description}`));
+        if (block.type === "template") add(block.paragraphs.map((p) => p.replace(/^/gm, "> ")).join("\n>\n"));
+        add();
+      }
+    }
+    if (guide.note) {
+      add(`${guide.note.title ? `${guide.note.title} : ` : ""}${guide.note.text}`);
       add();
     }
   }

@@ -4,6 +4,7 @@ import { Manrope } from "next/font/google";
 
 import { CTA, siteConfig } from "@/content/site";
 import { LEGAL } from "@/lib/legal";
+import { FRANCE, ILE_DE_FRANCE } from "@/lib/json-ld";
 import { absoluteUrl, socialImage, twitterImage } from "@/lib/seo";
 import "@/app/globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -81,10 +82,10 @@ const structuredData = {
       name: siteConfig.name,
       legalName: LEGAL.publisher,
       url: siteConfig.url,
-      logo: absoluteUrl("logo/logo-presskitforyou-cropped.png"),
+      logo: absoluteUrl("logo/logo-presskitforyou-512.png"),
       email: LEGAL.email,
       telephone: "+33663907888",
-      areaServed: "FR",
+      areaServed: [ILE_DE_FRANCE, FRANCE],
       sameAs: ["https://www.instagram.com/presskit_for_you"],
       taxID: LEGAL.siren,
       founder: { "@type": "Person", name: LEGAL.publisher },

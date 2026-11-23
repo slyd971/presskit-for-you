@@ -1,4 +1,4 @@
-import { pricingFaqItems, siteConfig } from "@/content/site";
+import { pricingFaqItems, pricingTiers, siteConfig } from "@/content/site";
 import type { Metadata } from "next";
 
 import { Faq } from "@/components/marketing/faq";
@@ -8,7 +8,8 @@ import { PricingTable } from "@/components/marketing/pricing-table";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
 import { PageJsonLd } from "@/components/seo/page-json-ld";
-import { createPageMetadata } from "@/lib/seo";
+import { serviceJsonLdNode } from "@/lib/json-ld";
+import { absoluteUrl, createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Tarifs",
@@ -18,19 +19,17 @@ export const metadata: Metadata = createPageMetadata({
   path: "tarifs",
 });
 
-const serviceJsonLd = {
-  "@type": "Service",
-  name: "Création de press kits digitaux premium",
-  serviceType: "Création de press kits digitaux",
-  provider: { "@id": `${siteConfig.url}/#organization` },
-  areaServed: "FR",
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "300",
-    priceSpecification: { "@type": "PriceSpecification", minPrice: 300, priceCurrency: "EUR" },
-  },
-};
+// Un Service par formule.
+const serviceNodes = pricingTiers.map((tier, index) =>
+  serviceJsonLdNode({
+    id: `${absoluteUrl("tarifs")}#service-${index + 1}`,
+    name: tier.name,
+    serviceType: "Création de press kits digitaux",
+    description: tier.description,
+    url: absoluteUrl("tarifs"),
+    tier,
+  }),
+);
 
 export default function TarifsPage() {
   return (
@@ -40,7 +39,7 @@ export default function TarifsPage() {
         name="Tarifs PressKit For You"
         breadcrumbName="Tarifs PressKit For You"
         description="Tarifs et formules de création de press kits digitaux premium."
-        extraNodes={[serviceJsonLd]}
+        extraNodes={serviceNodes}
       />
       <section className="section-wash relative overflow-hidden pb-6 pt-28 md:pb-8 md:pt-32">
         <div

@@ -129,14 +129,16 @@ export function Hero() {
       <PageShell className="relative grid items-start gap-9 md:gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
         <div>
           <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-6">
-            <h1 id="hero-title" className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
-              <span className="sr-only">Press kit digital pour DJs, artistes, créateurs et indépendants.</span>{" "}
+            <h1 id="hero-title" className="mb-3 text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">
+              Press kit digital pour DJs, artistes, créateurs et indépendants
+            </h1>
+            <p className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
               <span className="block">
                 <span className="block">Plus pro qu&apos;Instagram. </span>
                 <span className="block text-white/[0.92]">Plus impactant </span>
                 <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
               </span>
-            </h1>
+            </p>
             <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.74] md:mt-6 md:text-lg md:leading-9">
               On trie, on organise, on met en page : {liveExamplesCount} artistes, DJs, photographes et créateurs ont déjà le leur.
             </p>
@@ -178,7 +180,7 @@ export function Hero() {
                   href={kit.externalDemoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`Voir le rendu live ${kit.title}`}
+                  aria-label={`Voir le press kit ${withDe(kit.title)} (nouvel onglet)`}
                   className="group absolute hidden cursor-pointer text-left outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-surface-900 sm:block"
                   style={{
                     left: "45%",

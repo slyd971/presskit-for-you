@@ -22,10 +22,11 @@ Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 3, Framer
 
 - `content/site.ts` : config (`siteConfig`, nav, `CTA`), FAQ, pages métiers (`categories`), exemples clients (`examples`), témoignages. `liveExamplesCount` donne le nombre de press kits en ligne : ne jamais l'écrire en dur.
 - `content/pricing.ts`, `content/category-faqs.ts`, `content/seo-pages.ts` : formules, FAQ et SEO des pages métiers.
-- `app/<metier>/` : pages métiers, construites avec `components/marketing/presskit-category-page.tsx`. Leurs textes longs sont dans `components/marketing/category-content.tsx`.
+- `app/<metier>/` : pages métiers, construites avec `components/marketing/presskit-category-page.tsx`. Leurs textes longs sont dans `components/marketing/category-content.tsx` et `content/category-guides.ts` (comparatifs, modèles de bio, riders).
 - `lib/presskit-categories.ts` : lien entre la catégorie d'un exemple et une page métier (sert aussi au filtre de `/exemples`).
 - `lib/legal.ts` : mentions légales, délai, acompte, nombre d'allers-retours.
 - `components/ui/` : primitives (`Button`, `Badge`, `SectionHeading`, `Reveal`) ; `components/layout/` : `PageShell`, header, footer.
+- `content/last-modified.json` : dates du sitemap, écrites par `scripts/sitemap-dates.mjs` après chaque `npm run build` local. À commiter avec le changement, jamais à la main.
 - `design-system/presskit/` : charte (`README.md`), `tokens.json`, `tokens.css`. Version en ligne : https://claude.ai/artifact/MPrpVjKP3g2j4LpMAzTiE2. En cas de changement de charte, mettre à jour les deux.
 - `docs/instagram/` : référentiel Instagram, `da.md` (DA des visuels et vidéos, validée par David) et `ligne-editoriale.md` (clients, grille, ton, interdits).
 - `docs/claude-projet-instructions.md` (écrit à la main) et `docs/claude-projet-connaissances.md` (généré par `node scripts/claude-projet-connaissances.mjs`) : contexte pour le projet Claude Desktop de David. Relancer le script dès que l'offre, les textes ou la liste des clients changent.
