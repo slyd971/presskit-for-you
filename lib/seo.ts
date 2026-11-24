@@ -27,8 +27,6 @@ type PageMetadataOptions = {
   path?: string;
   // When set, used as-is as the page title (no "| PressKit For You" template suffix).
   absoluteTitle?: string;
-  // When set, replaces the page title in share previews (Open Graph, Twitter).
-  socialTitle?: string;
   // Set to false to let a file-based opengraph-image / twitter-image take over.
   withSocialImages?: boolean;
 };
@@ -38,7 +36,6 @@ export function createPageMetadata({
   description,
   path = "",
   absoluteTitle,
-  socialTitle,
   withSocialImages = true,
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
@@ -50,7 +47,7 @@ export function createPageMetadata({
       canonical: url,
     },
     openGraph: {
-      title: socialTitle ?? absoluteTitle ?? title,
+      title: absoluteTitle ?? title,
       description,
       url,
       siteName: siteConfig.name,
@@ -60,7 +57,7 @@ export function createPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: socialTitle ?? absoluteTitle ?? title,
+      title: absoluteTitle ?? title,
       description,
       ...(withSocialImages ? { images: [twitterImage] } : {}),
     },

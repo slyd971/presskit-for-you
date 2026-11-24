@@ -24,6 +24,7 @@ Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 3, Framer
 - `content/pricing.ts`, `content/category-faqs.ts`, `content/seo-pages.ts` : formules, FAQ et SEO des pages métiers.
 - `app/<metier>/` : pages métiers, construites avec `components/marketing/presskit-category-page.tsx`. Leurs textes longs sont dans `components/marketing/category-content.tsx` et `content/category-guides.ts` (comparatifs, modèles de bio, riders).
 - `lib/presskit-categories.ts` : lien entre la catégorie d'un exemple et une page métier (sert aussi au filtre de `/exemples`).
+- `app/llms.txt/route.ts` : `/llms.txt`, résumé du site pour les IA, généré depuis `content/` et `lib/legal.ts`.
 - `lib/legal.ts` : mentions légales, délai, acompte, nombre d'allers-retours.
 - `components/ui/` : primitives (`Button`, `Badge`, `SectionHeading`, `Reveal`) ; `components/layout/` : `PageShell`, header, footer.
 - `content/last-modified.json` : dates du sitemap, écrites par `scripts/sitemap-dates.mjs` après chaque `npm run build` local. À commiter avec le changement, jamais à la main.
