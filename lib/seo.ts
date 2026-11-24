@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/content/site";
 
 export const socialImage = {
-  url: "/opengraph-image?v=20260728-2",
+  url: "/opengraph-image?v=20261124-1",
   width: 1200,
   height: 630,
   alt: "PressKit For You - press kits digitaux",
 };
 
-export const twitterImage = "/twitter-image?v=20260728-2";
+export const twitterImage = "/twitter-image?v=20261124-1";
 
 function trimSlashes(value: string) {
   return value.replace(/^\/+|\/+$/g, "");
@@ -27,6 +27,8 @@ type PageMetadataOptions = {
   path?: string;
   // When set, used as-is as the page title (no "| PressKit For You" template suffix).
   absoluteTitle?: string;
+  // When set, replaces the page title in share previews (Open Graph, Twitter).
+  socialTitle?: string;
   // Set to false to let a file-based opengraph-image / twitter-image take over.
   withSocialImages?: boolean;
 };
@@ -36,6 +38,7 @@ export function createPageMetadata({
   description,
   path = "",
   absoluteTitle,
+  socialTitle,
   withSocialImages = true,
 }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(path);
@@ -47,7 +50,7 @@ export function createPageMetadata({
       canonical: url,
     },
     openGraph: {
-      title: absoluteTitle ?? title,
+      title: socialTitle ?? absoluteTitle ?? title,
       description,
       url,
       siteName: siteConfig.name,
@@ -57,7 +60,7 @@ export function createPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: absoluteTitle ?? title,
+      title: socialTitle ?? absoluteTitle ?? title,
       description,
       ...(withSocialImages ? { images: [twitterImage] } : {}),
     },

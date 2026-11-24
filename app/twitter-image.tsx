@@ -13,7 +13,7 @@ export default function TwitterImage() {
   return new ImageResponse(
     (
       <OgImage
-        title="De tes contenus à un lien prêt à envoyer."
+        title="De tes contenus à un lien prêt à envoyer"
         description="Un press kit digital premium pour présenter ton activité, tes médias, tes preuves et ton contact au même endroit."
       />
     ),

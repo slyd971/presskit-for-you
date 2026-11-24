@@ -145,7 +145,7 @@ export function OgImage({ title, description }: OgImageProps) {
               borderBottom: "1px solid rgba(255,255,255,0.14)",
             }}
           >
-            {["Contenus tries", "Maquette claire", "Lien pret a partager"].map((item) => (
+            {["Contenus triés", "Maquette claire", "Lien prêt à partager"].map((item) => (
               <div
                 key={item}
                 style={{

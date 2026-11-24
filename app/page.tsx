@@ -15,8 +15,9 @@ import { siteConfig } from "@/content/site";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Press kit digital premium pour artistes",
-  absoluteTitle: "Press kit digital premium pour artistes | PressKit For You",
+  title: "Press kit digital pour DJs, artistes et indépendants",
+  absoluteTitle: "Press kit digital pour DJs, artistes et indépendants | PressKit For You",
+  socialTitle: "Press kit digital pour DJs, artistes et indépendants",
   description:
     "Ton press kit digital premium, conçu pour toi : ton activité, tes contenus et tes références en un lien, plus clair qu'Instagram et plus impactant qu'un PDF.",
 });
