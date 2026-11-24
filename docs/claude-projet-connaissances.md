@@ -1,6 +1,6 @@
 # PressKit For You : textes du site
 
-Textes en ligne sur presskit.fr, extraits du code le 2026-11-23. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
+Textes en ligne sur presskit.fr, extraits du code le 2026-11-24. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
 
 ## Formules
 
@@ -339,6 +339,87 @@ Un chorégraphe, une compagnie, une marque ou un directeur de casting doit trouv
 - Photos presse en haute définition.
 - Contact direct pour les castings, les spectacles et les marques.
 
+**Book danseur : ce qu'un directeur de casting regarde**
+
+Un directeur de casting trie vite, souvent sur son téléphone. Il cherche un profil précis pour un projet précis. Ton book de danseur doit lui permettre de dire oui ou non sans t'écrire.
+
+- **Ta danse** : un showreel qui se lance tout de suite, avec ton style principal dès le début.
+- **Ta silhouette** : une photo en pied et un portrait, récents, sans filtre.
+- **Tes informations** : ville, taille, styles, langues, mobilité, permis si le projet le demande.
+- **Tes références** : clips, scènes, compagnies, marques, avec l'année et ton rôle.
+- **Tes autres compétences** : acrobatie, chant, comédie, chorégraphie, animation.
+- **Ta disponibilité** : tes périodes libres, et ton statut si on te le demande.
+- **Ton contact** : un numéro, un e-mail, et ton agent si tu en as un.
+
+Garde ton adresse et ta date de naissance pour le dossier demandé par la production. Elles n'ont pas leur place sur une page publique.
+
+*CV danseur : une page, toujours à jour*
+
+Un CV de danseur se lit en une minute. Classe tes expériences par type : scène, clip, publicité, événement, enseignement. Pour chacune, écris le projet, l'année, le chorégraphe et ton rôle. Termine par tes formations et tes stages. Dans ton press kit, le CV devient une section, et tes vidéos en sont la preuve.
+
+*Modèle de message pour un casting*
+
+Ce texte est un modèle : remplace les crochets par tes informations.
+
+> Bonjour [prénom],
+>
+> Je suis [nom], [style] à [ville]. Je réponds à l'annonce [nom du projet] pour le profil [profil].
+> Mon showreel, mes photos et mon parcours sont ici : [lien].
+>
+> Je suis disponible du [date] au [date].
+> [nom et numéro]
+
+**Faire un bon showreel**
+
+Un showreel de danseur montre ce que tu sais faire aujourd'hui. Une bonne vidéo récente vaut mieux que cinq anciennes.
+
+*La durée*
+
+Vise une à deux minutes. Si tu hésites à garder un passage, enlève-le. Tes vidéos complètes restent plus bas dans la page, pour qui veut en voir plus.
+
+*Les premières secondes*
+
+Place ton meilleur passage en ouverture, sans long titre ni logo. On doit te reconnaître tout de suite, surtout si tu danses en groupe. Ajoute une flèche ou un texte court pour indiquer où tu es.
+
+*L'ordre*
+
+- **D'abord** : ton style principal, en pied, sans coupe rapide.
+- **Ensuite** : un deuxième style ou un autre contexte, comme la scène, le clip ou le battle.
+- **Puis** : un moment qui montre ta présence : regard, interaction avec le public, improvisation.
+- **À la fin** : ton nom, ta ville et ton contact.
+
+*L'image et le son*
+
+Garde des plans larges : on doit voir les pieds. Évite les effets et les ralentis qui cachent la danse. Une vidéo bien éclairée au téléphone suffit. Si tu publies ta vidéo en ligne, vérifie les droits de la musique : elle peut être coupée ou bloquée.
+
+**Exemple de bio de danseur**
+
+Une bio dit ce que tu danses, avec qui et pour quoi on peut te contacter. Ces deux textes sont des modèles fictifs : remplace chaque information par la tienne.
+
+*Modèle de bio courte (trois lignes)*
+
+> Danseur Exemple mêle hip-hop et afro, en solo ou en collectif.
+> Basé à Bordeaux, il a dansé pour [artiste], [compagnie] et [marque].
+> Castings et collaborations : [e-mail]
+
+*Modèle de bio longue*
+
+> Danseur Exemple découvre le hip-hop à douze ans, dans une association de son quartier. Il se forme ensuite à [école ou stage], auprès de [chorégraphe].
+>
+> En [année], il rejoint [collectif], avec qui il participe à [battle] et à [spectacle]. Il danse aussi dans le clip [titre] de [artiste], chorégraphié par [nom].
+>
+> Son travail passe par l'improvisation et le rapport au public. Il donne des ateliers à [structure], pour les enfants et les adultes débutants.
+>
+> Basé à Bordeaux, il se déplace en France et à l'étranger. Il prépare [projet], prévu en [période].
+
+*Trois règles pour écrire la tienne*
+
+- Écris à la troisième personne : un festival pourra la copier telle quelle.
+- Cite des projets vérifiables, avec l'année et ton rôle.
+- Sépare l'artiste, le collectif et les ateliers si tu fais les trois.
+
+Le press kit de KRIMO présente ainsi séparément l'artiste, le collectif La Tempête et l'association La Danse ou Rien.
+
 **FAQ Danseur**
 
 - *Un press kit peut-il remplacer mon book de danseur ?* Oui : book photo, showreel et parcours sont réunis sur une seule page, plus simple à envoyer pour un casting qu'un PDF ou une liste de liens.
@@ -347,6 +428,8 @@ Un chorégraphe, une compagnie, une marque ou un directeur de casting doit trouv
 - *Puis-je intégrer mes vidéos de performances ?* Oui, tes vidéos sont intégrées directement dans la page.
 - *Je fais partie d'un collectif, puis-je le présenter ?* Oui, une section peut présenter le collectif, ses projets et ses membres.
 - *Puis-je proposer des ateliers ou des cours ?* Oui, avec leur description et un contact direct.
+- *CV danseur ou press kit : lequel envoyer ?* Le press kit contient ton CV, avec tes vidéos et tes photos. Si une production demande un document, envoie ton CV en pièce jointe et ajoute le lien.
+- *Puis-je envoyer le même lien à une compagnie et à une marque ?* Oui. Tes sections séparent scène, clips, ateliers et événements. Dans ton message, indique celle à regarder.
 - *Combien coûte un press kit danseur ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ### Press kit vidéaste / photographe (presskit.fr/photographe)
@@ -388,12 +471,90 @@ Photographe ou vidéaste : un client doit comprendre ce que tu fais, pour qui et
 - Avis clients.
 - Demande de devis en un clic.
 
+**Press kit, book ou Instagram : que regarde un client ?**
+
+Un client se pose trois questions : est-ce que j'aime ses images, est-ce qu'il a déjà fait ce dont j'ai besoin, combien ça coûte. Aucun support n'y répond de la même façon.
+
+*Instagram : pour se faire découvrir*
+
+Ton compte montre ton style et ton actualité. Mais les mariages, les portraits et les soirées s'y mélangent, et les anciens travaux disparaissent sous les nouveaux. Tes prestations et ta zone d'intervention n'y sont pas.
+
+*Book photographe : pour juger tes images*
+
+Un book de photographe réunit ta meilleure sélection, en PDF, en tirage ou dans une galerie. Il convient à une agence ou à un directeur artistique qui sait déjà ce qu'il cherche. Un particulier ou un organisateur doit encore te demander tes formules et tes disponibilités.
+
+*Press kit : pour décider de te contacter*
+
+Un press kit est un portfolio de photographe en ligne, avec le reste à côté : prestations, références, zone d'intervention, contact. Le client voit tes images, comprend ce que tu proposes et t'écrit depuis la même page. Le press kit de Lokko TV réunit bio, sélection vidéo, galerie photo, services et demande de booking.
+
+Notre conseil : garde Instagram pour te faire découvrir, et un book si une agence te le demande. À un client, envoie ton press kit.
+
+**Choisir ses images selon le client**
+
+Montre ce que tu veux refaire. Dix photos du bon type valent mieux que cinquante photos variées.
+
+- **Soirée ou événement** : ambiance, public, scène, détails, portraits. Un site de photographe événementiel doit prouver que tu travailles en basse lumière.
+- **Mariage** : un reportage complet plutôt que les plus belles photos de dix mariages. Le couple veut voir une journée entière.
+- **Entreprise** : portraits, équipes, conférences, lieux. Précise ton délai de livraison.
+- **Marque ou artiste** : une série cohérente, avec le nom du projet et ton rôle.
+- **Vidéaste** : un showreel court en haut de la page, puis deux ou trois films complets. Indique ce que tu as fait : tournage, montage, étalonnage.
+
+Demande l'accord des personnes reconnaissables avant de publier leurs images, surtout pour un événement privé.
+
+*Photographe et vidéaste à la fois ?*
+
+Sépare les deux dès le haut de la page. Un organisateur qui cherche un aftermovie ne doit pas traverser une galerie de portraits. Ajoute ensuite une formule photo et vidéo, si tu la proposes.
+
+**Exemple de présentation courte de photographe**
+
+Une présentation dit ce que tu photographies, pour qui, où, et comment te joindre. Ces deux textes sont des modèles fictifs : garde l'ordre, remplace le reste.
+
+*Modèle photographe*
+
+> [Nom], photographe événementiel à Nantes.
+> Je couvre des soirées, des conférences et des lancements de marque.
+> Références : [client], [lieu], [événement].
+> Photos livrées en [délai], retouchées et prêtes à publier.
+> Contact : [e-mail]
+
+*Modèle vidéaste*
+
+> [Nom], vidéaste à Nantes.
+> Je filme et je monte des aftermovies, des clips et des formats courts pour les réseaux.
+> Derniers projets : [projet], [projet].
+> Déplacements : [zone].
+> Contact : [e-mail]
+
+*Trois règles pour écrire la tienne*
+
+- Commence par ta spécialité et ta ville, pas par ta passion.
+- Cite trois références que le client peut reconnaître ou vérifier.
+- Reste sous six lignes : le client vient surtout voir tes images.
+
+**Comment présenter ses tarifs sans faire fuir**
+
+Sans aucun repère de prix, un client ne sait pas s'il peut t'écrire. Tu peux donner un ordre d'idée sans tout figer.
+
+- **Un prix de départ** : « à partir de », pour chaque type de prestation. Il filtre les demandes hors budget.
+- **Ce qui est inclus** : durée sur place, nombre de photos, retouches, délai, format de livraison.
+- **Ce qui s'ajoute** : déplacement, heure supplémentaire, seconde caméra, livraison express.
+- **Les droits d'utilisation** : usage privé, réseaux sociaux ou publicité. Une marque qui diffuse tes images en publicité n'achète pas la même chose qu'un particulier.
+- **La réservation** : acompte, report, annulation, en une phrase chacun.
+
+*Limite-toi à trois formules*
+
+Présente peu de formules, avec un nom simple : demi-journée, journée, journée et vidéo. Place la plus demandée au milieu. Pour le reste, écris « sur devis » et dis ce dont tu as besoin pour répondre : date, lieu, durée, usage des images.
+
+Si tu ne veux afficher aucun prix, explique comment tu le calcules et sous combien de temps tu réponds. Le client sait alors à quoi s'attendre.
+
 **FAQ Photographe**
 
 - *Press kit ou book photographe : quelle différence ?* Le book montre tes images. Le press kit y ajoute tes prestations, tes références et la demande de devis, sur une seule page.
 - *Mes photos seront-elles affichées en haute qualité ?* Oui, la galerie est optimisée pour rester nette sur mobile comme sur grand écran, sans ralentir la page.
 - *Puis-je présenter mes prestations et mes tarifs ?* Oui, une section services peut détailler tes formules (shooting, événementiel, corporate).
 - *Quelle différence avec Instagram pour un photographe ?* Instagram compresse et mélange tout ; le press kit présente une sélection, tes références et un contact direct.
+- *Je suis vidéaste, un press kit est-il adapté ?* Oui. Ton showreel et tes films sont placés en haut de la page, avec tes formats et ton contact. Regarde le press kit de Lokko TV, qui réunit vidéo et photo.
+- *Un press kit peut-il remplacer un site de photographe ?* Oui, si une page suffit : présentation, portfolio, prestations, références et contact. Pour un site de plusieurs pages, c'est la formule Studio Custom, sur devis.
 - *Combien coûte un press kit photographe ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ### Press kit coach sportif (presskit.fr/coach-sportif)
@@ -424,6 +585,85 @@ Un futur client doit comprendre ton coaching et réserver sans échanger dix mes
 - Zone d'intervention.
 - Prise de rendez-vous : un lien ou un numéro direct.
 
+**Site vitrine ou press kit : que choisir quand on est coach ?**
+
+Les deux te présentent en ligne. La différence tient au nombre de pages, au temps que tu veux y passer et à la façon dont tes clients te trouvent.
+
+*Le site vitrine : plusieurs pages à faire vivre*
+
+Un site de coach sportif en plusieurs pages convient si tu publies des articles ou si tu gères une salle. Il demande plus de textes, plus de photos et un suivi régulier.
+
+*Le press kit : une page qui répond à l'essentiel*
+
+Un press kit est une page de coach sportif complète : présentation, formules, preuves, contact. Tu l'envoies à une personne qui te découvre sur Instagram, à une salle ou à une entreprise. Elle lit tout au même endroit, sur son téléphone.
+
+*Le profil Instagram : utile, mais pas pour réserver*
+
+Tes vidéos montrent ta façon de coacher. Mais tes tarifs, ta zone et tes créneaux se perdent dans les stories et les messages. Garde Instagram pour te faire découvrir, et mets le lien de ta page dans ta bio.
+
+Notre conseil : commence par une page si tu travailles en indépendant. Passe à plusieurs pages quand ton activité le demande.
+
+**Présenter ses formules clairement**
+
+Un futur client compare des séances, des durées et des prix. Si tes formules se ressemblent, il repousse sa décision. Pour chacune, réponds aux mêmes questions :
+
+- **Pour qui** : débutant, reprise après une pause, objectif précis, petit groupe.
+- **Le contenu** : bilan, séance, programme, suivi entre les séances.
+- **Le format** : à domicile, en salle, en extérieur ou en visio.
+- **La durée et la fréquence** : temps d'une séance, nombre par semaine ou par mois.
+- **Le prix** : à la séance, au carnet ou au mois, avec ce qui est inclus.
+- **La première étape** : séance d'essai, appel ou bilan, et comment réserver.
+
+Trois formules suffisent dans la plupart des cas : une pour essayer, une régulière, une plus complète. Le press kit de Coach Momar suit cet ordre : séance découverte, coaching à domicile, pack sur devis.
+
+*Donne un nom que le client comprend*
+
+« Reprise en douceur » ou « Deux séances par semaine » parle mieux que « Pack Gold ». Écris le nom, une phrase, puis trois ou quatre points inclus. Le reste se discute pendant la première séance.
+
+*Annonce tes conditions avant la première séance*
+
+Durée de validité d'un carnet, délai pour annuler, déplacement au-delà de ta zone : une ligne pour chaque point évite les malentendus.
+
+**Rassurer sans promettre de résultats**
+
+Tu ne peux pas garantir un résultat : il dépend aussi de la personne, de son rythme et de sa santé. Tu peux montrer pourquoi on peut te faire confiance.
+
+- **Tes diplômes** : nom exact, année et carte professionnelle d'éducateur sportif.
+- **Ton expérience** : années de pratique, publics accompagnés, compétition si tu en as fait.
+- **Tes avis** : un prénom, un objectif, une phrase. Publie-les avec l'accord de la personne, sans les réécrire.
+- **Ta façon de travailler** : une vidéo courte d'une vraie séance, avec le son de tes consignes.
+- **Tes limites** : ce que tu ne fais pas, et quand tu renvoies vers un médecin ou un kiné.
+
+*Photos avant/après : avec prudence*
+
+Demande un accord écrit, garde la même lumière et la même pose, et indique la durée du suivi. Si tu n'en as pas, une vidéo de progression technique fonctionne aussi.
+
+**Exemple de présentation courte de coach sportif**
+
+Une présentation de coach sportif tient en quelques lignes. Ces deux textes sont des modèles fictifs : garde l'ordre, remplace le reste.
+
+*Modèle coach à domicile*
+
+> [Nom], coach sportif à domicile à Toulouse.
+> J'accompagne des adultes qui reprennent le sport, une à trois fois par semaine.
+> Diplôme : [diplôme, année].
+> Première séance : [bilan ou essai].
+> Réservation : [lien ou numéro]
+
+*Modèle coach spécialisé*
+
+> [Nom], préparation physique pour [sport ou public] à Toulouse.
+> Je travaille en salle et en extérieur, en individuel ou en petit groupe.
+> Parcours : [diplôme], [club ou structure], [compétition].
+> Créneaux : [jours et horaires].
+> Contact : [e-mail ou numéro]
+
+*Trois règles pour écrire la tienne*
+
+- Commence par la personne que tu aides, puis par ta méthode.
+- Remplace « coach passionné et motivé » par un diplôme, un public ou une spécialité.
+- Termine par une seule action : réserver, appeler ou écrire.
+
 **FAQ Coach sportif**
 
 - *Je suis coach à domicile, c'est adapté ?* Oui : ta zone d'intervention, tes créneaux et la prise de rendez-vous apparaissent dès le haut de la page.
@@ -433,6 +673,8 @@ Un futur client doit comprendre ton coaching et réserver sans échanger dix mes
 - *Puis-je présenter mes offres et programmes ?* Oui, chaque offre peut avoir sa description et son appel à l'action.
 - *Puis-je montrer les résultats de mes clients ?* Oui, avec leur accord : témoignages, transformations, chiffres.
 - *Mes clients peuvent-ils me contacter directement ?* Oui, via WhatsApp, email ou un lien de prise de rendez-vous.
+- *Un press kit peut-il remplacer un site de coach sportif ?* Oui, si une page suffit : présentation, formules, preuves et prise de rendez-vous. Pour un site de plusieurs pages, c'est la formule Studio Custom, sur devis.
+- *Je débute et je n'ai pas encore d'avis clients, est-ce utile ?* Oui. Tes diplômes, ta spécialité, tes formules et une vidéo de séance suffisent pour commencer. Tu ajoutes tes premiers avis ensuite, avec une mise à jour à 30 €.
 - *Combien coûte un press kit coach sportif ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ### Press kit make-up artist (presskit.fr/make-up-artist)
@@ -463,6 +705,80 @@ Une future mariée, une marque ou une production doit trouver ces éléments en 
 - Avis clientes.
 - Contact et disponibilités, surtout pour les dates de mariage.
 
+**Préparer son portfolio maquillage**
+
+Ton portfolio de maquilleuse doit montrer ce que tu veux vendre demain. Si tu vises les mariages, les mariées passent avant les effets spéciaux. Voici comment trier.
+
+- **Classe par prestation** : mariée, soirée, shooting, mode, effets spéciaux. Chaque cliente va droit à sa catégorie.
+- **Varie les visages** : carnations, âges, types de peau, formes d'yeux. Une cliente cherche quelqu'un qui lui ressemble.
+- **Soigne la lumière** : une photo nette près d'une fenêtre vaut mieux qu'une photo filtrée. Ne retouche pas la peau.
+- **Montre de près et de loin** : un détail des yeux, un portrait, puis une photo en situation.
+- **Ajoute une vidéo** : le maquillage y bouge et prend la lumière, sans filtre.
+- **Crédite l'équipe** : photographe, modèle, coiffure, marque ou magazine.
+- **Demande l'accord** : pour chaque visage reconnaissable, surtout en avant/après.
+
+Le press kit d'Ishma classe ses photos par thème, dont le mariage, la soirée et la coiffure. Une autre section montre des avant/après.
+
+*Book maquilleuse professionnelle : mode, clip et tournage*
+
+Une production ou un magazine regarde autre chose qu'une mariée. Dans un book de maquilleuse professionnelle, présente des séries complètes : trois à cinq images d'un même projet. Indique ton rôle, l'équipe et le média. Ajoute tes tournages, avec le titre du clip ou du film et ton poste : cheffe maquilleuse, assistante, effets spéciaux.
+
+**Ce qu'une future mariée veut savoir avant de réserver**
+
+Une future mariée compare plusieurs maquilleuses. Si ta page répond à ses questions avant le premier message, tu lui fais gagner du temps. Mets-y ces réponses :
+
+- **Ta disponibilité** : jusqu'à quand réserver, et comment vérifier une date.
+- **L'essai** : s'il est compris, où il se passe, combien de temps il dure.
+- **Le jour J** : ton heure d'arrivée, la durée par personne, le nombre de personnes que tu peux maquiller.
+- **Le déplacement** : tes villes, ton rayon, tes frais.
+- **Les invitées** : mère, témoins, demoiselles d'honneur, et le prix par personne.
+- **Les produits** : les marques que tu utilises, et ce que tu fais en cas d'allergie.
+- **La tenue** : comment tu prépares la peau, et si tu prévois des retouches.
+- **La réservation** : acompte, report et annulation, en une phrase chacun.
+
+Affiche au moins un prix de départ. Pour une maquilleuse mariée, il évite les demandes trop loin de ses prix.
+
+*Modèle de réponse à une future mariée*
+
+Ce texte est un modèle : remplace les crochets par tes informations.
+
+> Bonjour [prénom], et félicitations.
+>
+> Je suis disponible le [date] à [ville]. Mes formules mariée et mes photos sont ici : [lien].
+> Il me faut l'heure de la cérémonie, le lieu des préparatifs et le nombre de personnes à maquiller.
+>
+> On peut fixer un essai dès que tu as choisi ta formule.
+> [nom et numéro]
+
+*Les questions à poser avant l'essai*
+
+Demande une photo de la robe, une photo d'elle au naturel, ses allergies et deux ou trois images d'inspiration. L'essai sert alors à régler les détails. Ishma, par exemple, envoie un questionnaire avant l'essai.
+
+**Exemple de présentation courte de maquilleuse**
+
+Une présentation dit ce que tu fais, pour qui et où. Ces deux textes sont des modèles fictifs : garde l'ordre, remplace le reste.
+
+*Modèle maquilleuse mariée*
+
+> [Nom], maquilleuse professionnelle à Lille.
+> Je maquille des mariées et leurs invitées, avec un essai avant le jour J.
+> Mon style : [trois mots, par exemple teint léger, regard travaillé, tenue longue].
+> Déplacements : [zone].
+> Réservation : [lien ou numéro]
+
+*Modèle mode et tournage*
+
+> [Nom], make-up artist mode et image à Lille.
+> Je travaille sur des shootings, des clips et des défilés, en beauté et en effets spéciaux.
+> Derniers projets : [projet, rôle], [projet, rôle].
+> Contact : [e-mail]
+
+*Trois règles pour écrire la tienne*
+
+- Dis ta spécialité dès la première ligne : une mariée et une production ne cherchent pas la même personne.
+- Cite tes formations et tes années de pratique, sans arrondir.
+- Décris ton style avec des mots que tes clientes utilisent.
+
 **FAQ Make-up artist**
 
 - *Je suis maquilleuse professionnelle, c'est fait pour moi ?* Oui : maquillage beauté, mariée, mode ou effets spéciaux, la page s'adapte à ta spécialité.
@@ -470,6 +786,8 @@ Une future mariée, une marque ou une production doit trouver ces éléments en 
 - *Puis-je ajouter de nouvelles réalisations après la livraison ?* Oui, avec l'option « Mise à jour de contenu » : tu nous envoies tes nouvelles photos et on les ajoute à ta galerie. Pratique après une saison de mariages ou un nouveau shooting.
 - *Puis-je présenter mes prestations mariée, shooting et événementiel ?* Oui, chaque prestation peut avoir sa description et son contact de réservation.
 - *Puis-je indiquer ma zone de déplacement ?* Oui, une section dédiée précise ta zone de déplacement, par exemple partout en Île-de-France.
+- *Je fais aussi la coiffure, je peux la présenter ?* Oui. Le press kit d'Ishma réunit maquillage, coiffure et cours d'auto-maquillage. Chaque prestation a sa place.
+- *Faut-il afficher mes tarifs mariée ?* Un prix « à partir de » suffit. Il évite les demandes hors budget, et le devis précise le reste : date, lieu, nombre de personnes.
 - *Combien coûte un press kit make-up artist ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ### Press kit organisateur de soirée (presskit.fr/organisateur)
@@ -500,6 +818,79 @@ Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y 
 - Les offres de sponsoring : visibilité proposée, contreparties, formats de partenariat.
 - Le contact partenariats.
 
+**Construire son dossier de sponsoring**
+
+Une marque qui soutient une soirée veut toucher un public. Ton dossier de sponsoring doit donc parler d'elle autant que de toi. Voici les éléments, dans l'ordre où une marque les cherche.
+
+- **Ton événement en deux phrases** : le format, la ville, le rythme, l'ambiance. Si un ami ne comprend pas, une marque non plus.
+- **Ton public** : âge, centres d'intérêt, d'où il vient, pourquoi il revient. Donne ce que tu sais, et dis comment tu le sais.
+- **Tes preuves** : participants, éditions passées, abonnés, articles de presse. Indique une date à côté de chaque chiffre.
+- **Tes images** : une vidéo courte et quelques photos où l'on voit la salle et le public.
+- **Le projet à financer** : la prochaine édition, sa date, son lieu et ce que le partenaire rend possible.
+- **Tes offres** : deux ou trois formats de partenariat, faciles à comparer.
+- **Ton contact** : un nom, un e-mail, un numéro.
+
+Le press kit de La MIF a une section pour chaque type de partenaire : sponsors et marques, lieux, organisateurs et collectifs. Chacun trouve sa place sans lire le reste.
+
+*Dossier sponsor événement : PDF ou page en ligne ?*
+
+Un dossier sponsor d'événement part souvent en PDF, en pièce jointe. Il se transfère facilement, mais l'aftermovie reste dehors et les chiffres vieillissent. Une page en ligne montre la vidéo et se met à jour après chaque édition. Si une marque te demande un PDF, envoie-le avec le lien.
+
+**Quelles contreparties proposer à un sponsor**
+
+Une contrepartie est ce que la marque reçoit en échange de son soutien. Choisis celles que tu peux vraiment tenir, puis détaille-les dans ton offre.
+
+- **Visibilité avant l'événement** : logo sur l'affiche, la billetterie, les e-mails et les publications.
+- **Visibilité pendant l'événement** : logo à l'entrée, sur les écrans, sur scène ou près du bar.
+- **Contenus** : photos et vidéos où la marque apparaît, livrées après la soirée, avec le droit de les publier.
+- **Activation sur place** : stand, photobooth, atelier, jeu ou distribution d'échantillons.
+- **Invitations** : places, accès réservés, rencontre avec les artistes.
+- **Parrainage** : une scène, un espace ou une édition qui porte le nom de la marque.
+- **Dotation** : la marque offre des lots ou du matériel plutôt que de l'argent.
+
+*Présente tes formules sans te piéger*
+
+Deux ou trois formules suffisent. Pour chacune, écris ce qui est inclus, le nombre de publications et les dates. Laisse une place pour une demande particulière : une marque a souvent sa propre idée.
+
+Le montant peut rester dans l'échange, « sur demande ». Après la soirée, envoie un bilan : photos, chiffres réels, publications. Il te servira pour renouveler le partenariat, et pour convaincre le sponsor suivant.
+
+**Présenter son événement à un lieu**
+
+Un lieu ne lit pas ton dossier comme un sponsor. Il veut savoir si sa salle sera remplie et si la soirée se passera bien. Mets en avant ces réponses :
+
+- **Le public** : combien de personnes, quel âge, quelles habitudes de sortie.
+- **L'organisation** : qui gère la billetterie, la communication, l'accueil et la sécurité.
+- **Les besoins** : son, lumière, horaires, scène, loges.
+- **Les références** : les lieux qui t'ont déjà accueilli, et combien de fois.
+
+Le press kit de La Bringue explique comment se passe une soirée classique : quand, comment, avec qui. Un établissement sait à quoi s'attendre avant d'appeler.
+
+*Modèle de message à un lieu*
+
+Ce texte est un modèle : remplace les crochets par tes informations.
+
+> Bonjour [prénom],
+>
+> J'organise [nom de l'événement], une soirée [format] à [ville]. Je cherche un lieu pour [nombre] personnes, en [période].
+> Le concept, les photos et nos éditions passées sont ici : [lien].
+>
+> Est-ce qu'on peut en parler cette semaine ?
+> [nom et numéro]
+
+**Présenter une première édition**
+
+Sans édition passée, tu n'as pas encore de chiffres. Ne les invente pas : montre ton sérieux avec ce que tu as.
+
+- **L'équipe** : qui organise, et ce que chacun a déjà fait.
+- **Le concept** : ce que le public ne trouve pas ailleurs dans ta ville.
+- **La programmation** : artistes confirmés, ou en discussion si tu le précises.
+- **Le lieu et la date** : confirmés, ou deux options.
+- **Le public visé** : la communauté que tu touches déjà, sur les réseaux ou dans ton association.
+- **Le plan de communication** : qui publie quoi, et quand.
+- **L'affiche** : un visuel, même provisoire, aide à imaginer la soirée.
+
+Pour un premier dossier de sponsoring de soirée, vise des partenaires proches : commerces du quartier, marques locales, médias de ta ville. Propose-leur un format simple, avec une seule contrepartie claire. Pendant la soirée, garde des photos, une vidéo et des retours du public. Ce sera la base de ton dossier pour la deuxième édition.
+
 **FAQ Organisateur**
 
 - *Quelle différence avec un dossier de sponsoring PDF ?* Le contenu est le même, mais la page se met à jour après chaque édition, se lit sur mobile et se partage en un lien.
@@ -508,6 +899,8 @@ Un lieu, une marque ou un sponsor doit comprendre ton événement et ce qu'il y 
 - *Puis-je présenter les chiffres de ma communauté ?* Oui : abonnés, participants, éditions passées, des preuves que les sponsors regardent en premier.
 - *Le press kit peut-il servir de dossier sponsor ?* Oui, il remplace un PDF statique par une page à jour, avec galerie et contact partenaires.
 - *Puis-je ajouter les flyers et photos de mes soirées ?* Oui, dans une galerie dédiée.
+- *Puis-je présenter plusieurs villes ou plusieurs concepts ?* Oui. Une section peut lister tes villes ou tes formats, comme sur le press kit de La Bringue. Pour plusieurs pages, c'est la formule Studio Custom, sur devis.
+- *Quand envoyer mon dossier de sponsoring ?* Dès que la date et le lieu sont fixés. Une marque a besoin de temps pour valider un budget, puis pour préparer sa présence sur place.
 - *Combien coûte un press kit organisateur ?* À partir de 300 €, livré en 7 jours maximum, 5 allers-retours inclus.
 
 ### Press kit créateur de contenu (presskit.fr/createur-de-contenu)
@@ -606,7 +999,7 @@ Les conditions exactes vont dans le contrat. Le media kit donne le cadre.
 - **DJ MACK** (DJ) : Un press kit DJ & MC international pour références, médias, SoundCloud et booking événementiel. https://dj-mack.presskit.fr/
 - **Soyumi** (DJ) : Un press kit DJ avec styles, photos, vidéos, références et booking. https://soyumi.presskit.fr/
 - **DJ FLO** (DJ) : Un press kit DJ open format pour hôtels, marques, rooftops et événements corporate. https://www.djfloparis.com/
-- **La Bringue** (Organisateur) : Un press kit organisateur de soirée pour communauté, chiffres, sponsors et partenaires. https://labringue-party.vercel.app/
+- **La Bringue** (Organisateur) : Un press kit organisateur de soirée pour communauté, chiffres, villes et presse. https://labringue-party.vercel.app/
 - **La MIF** (Organisateur) : Un press kit organisateur de soirée avec concept, flyers, galerie et contact collab. https://lamifparis.presskit.fr/
 - **Arthur Chaps** (DJ) : Un press kit DJ et directeur artistique avec références, médias et contact. https://arthur-chaps.presskit.fr/
 - **DJ SLY'D** (DJ) : Un press kit DJ pour présenter médias, références et contact aux clubs. https://djslyd.presskit.fr/
@@ -618,7 +1011,7 @@ Les conditions exactes vont dans le contrat. Le media kit donne le cadre.
 - **Paul Keranne** (DJ) : Un press kit DJ avec médias, références et contact booking. https://paul-keranne.presskit.fr/
 - **DJ Wayans** (DJ) : Un press kit DJ afro, urban FR et RnB avec références club et marque, vidéos live, SoundCloud et booking. https://wayans.presskit.fr/
 - **Lokko TV** (Photographe-vidéaste) : Un press kit photographe avec portfolio, services et contact booking. https://lokko-tv.presskit.fr/
-- **Coach Momar** (Coach sportif) : Un press kit coaching avec offres, résultats, méthode et contact. https://coach-momar.vercel.app/
+- **Coach Momar** (Coach sportif) : Un press kit coaching avec disciplines, vidéos, offres et contact. https://coach-momar.vercel.app/
 - **Ishma Make Up Artist** (Make-up artist) : Un press kit make-up artist avec looks, prestations et contact. https://ishma-makeupartist.vercel.app/
 - **Sophie Beauty** (Prothésiste ongulaire) : Un press kit prothésiste ongulaire avec galerie, méthode, prestations et contact. https://sophie-beauty.presskit.fr/
 - **Julia** (Créateur de contenu) : Un press kit créatrice de contenu UGC avec parcours, univers, portfolio et contact. https://julia.elina.ugc.presskit.fr/

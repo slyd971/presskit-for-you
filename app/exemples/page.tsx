@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { ChooseSections } from "@/components/marketing/choose-sections";
 import { ExamplesGalleryGrid } from "@/components/marketing/examples-gallery-grid";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { MetiersLinks } from "@/components/marketing/metiers-links";
@@ -33,6 +34,7 @@ export default function ExamplesPage() {
         </PageShell>
       </section>
       <ExamplesGalleryGrid previewAssets={getPreviewAssets()} />
+      <ChooseSections />
       <FinalCta />
     </>
   );

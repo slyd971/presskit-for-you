@@ -31,7 +31,7 @@ export const categorySeo: Record<string, CategorySeo> = {
     label: "photographe",
   },
   "coach-sportif": {
-    title: "Press kit coach sportif : site vitrine | PressKit For You",
+    title: "Press kit coach sportif : ta page pro | PressKit For You",
     description: `Ta méthode, tes offres et tes résultats présentés clairement dans un press kit coach sportif qui facilite la prise de rendez-vous. ${deliveryPitch}`,
     label: "coach sportif",
   },

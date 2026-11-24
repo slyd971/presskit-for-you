@@ -13,33 +13,56 @@ import { cn, withDe } from "@/lib/utils";
 const exampleGroups = [
   {
     title: "Press kits DJ",
+    intro: "Un booker veut écouter, voir les références et trouver un contact. Ces press kits y répondent, du club à l'événement corporate.",
     href: "/dj",
     linkLabel: "Voir la page press kit DJ",
     titles: ["DJ MACK", "Soyumi", "DJ FLO", "Arthur Chaps", "DJ SLY'D", "Yoruboy", "DJ Pirate", "DJ GDC", "Silver DJ", "Paul Keranne", "DJ Wayans"],
   },
-  { title: "Press kits artistes", href: "/artiste", linkLabel: "Voir la page press kit artiste", titles: ["Sherin", "Black Moz", "MelyMelow"] },
-  { title: "Press kits danseurs", href: "/danseur", linkLabel: "Voir la page press kit danseur", titles: ["KRIMO"] },
+  {
+    title: "Press kits artistes",
+    intro: "Chanson, rap, slam ou peinture : la base reste la même, l'ordre change. Compare ce que chacun place en premier.",
+    href: "/artiste",
+    linkLabel: "Voir la page press kit artiste",
+    titles: ["Sherin", "Black Moz", "MelyMelow"],
+  },
+  {
+    title: "Press kits danseurs",
+    intro: "Un directeur de casting ou une marque veut voir la danse, puis comprendre le parcours. La page peut aussi présenter un collectif.",
+    href: "/danseur",
+    linkLabel: "Voir la page press kit danseur",
+    titles: ["KRIMO"],
+  },
   {
     title: "Press kits organisateurs de soirée",
+    intro: "Un lieu ou un sponsor veut comprendre le concept avant de répondre. Chaque page le présente à sa façon.",
     href: "/organisateur",
     linkLabel: "Voir la page press kit organisateur",
     titles: ["La Bringue", "La MIF"],
   },
   {
     title: "Press kits photographes et vidéastes",
+    intro: "Un client regarde d'abord les images, puis les prestations. Le press kit réunit les deux, avec le contact.",
     href: "/photographe",
     linkLabel: "Voir la page press kit photographe",
     titles: ["Lokko TV"],
   },
-  { title: "Press kits coachs sportifs", href: "/coach-sportif", linkLabel: "Voir la page press kit coach sportif", titles: ["Coach Momar"] },
+  {
+    title: "Press kits coachs sportifs",
+    intro: "Un futur client compare les offres avant de réserver. Le press kit les présente avec un contact direct.",
+    href: "/coach-sportif",
+    linkLabel: "Voir la page press kit coach sportif",
+    titles: ["Coach Momar"],
+  },
   {
     title: "Press kits beauté",
+    intro: "Maquillage ou ongles : une cliente veut voir le travail, les prestations et la façon de réserver.",
     href: "/make-up-artist",
     linkLabel: "Voir la page press kit make-up artist",
     titles: ["Ishma Make Up Artist", "Sophie Beauty"],
   },
   {
     title: "Press kits créateurs de contenu",
+    intro: "Une marque veut connaître le créateur, voir ses contenus et savoir à qui écrire. Le press kit sert aussi de portfolio UGC.",
     href: "/createur-de-contenu",
     linkLabel: "Voir la page press kit créateur de contenu",
     titles: ["Julia"],
@@ -99,6 +122,7 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
         {visibleGroups.map((group) => (
           <div key={group.title} className="mt-14">
             <h2 className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-4xl">{group.title}</h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.64]">{group.intro}</p>
             {group.href ? (
               <Link
                 href={group.href}
@@ -134,7 +158,7 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                     />
                     <p className="mt-5 text-xs uppercase tracking-label text-white/[0.64]">{example.category}</p>
                     <h3 className="mt-3 text-2xl font-semibold text-white">{example.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-white/[0.64]">{example.description}</p>
+                    <p className="mt-3 text-sm leading-7 text-white/[0.64]">{example.galleryLine ?? example.description}</p>
                     {example.testimonialHref ? (
                       <Link
                         href={example.testimonialHref}

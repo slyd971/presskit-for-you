@@ -64,6 +64,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
       answer: "Instagram compresse et mélange tout ; le press kit présente une sélection, tes références et un contact direct.",
     },
     {
+      question: "Je suis vidéaste, un press kit est-il adapté ?",
+      answer:
+        "Oui. Ton showreel et tes films sont placés en haut de la page, avec tes formats et ton contact. Regarde le press kit de Lokko TV, qui réunit vidéo et photo.",
+    },
+    {
+      question: "Un press kit peut-il remplacer un site de photographe ?",
+      answer:
+        "Oui, si une page suffit : présentation, portfolio, prestations, références et contact. Pour un site de plusieurs pages, c'est la formule Studio Custom, sur devis.",
+    },
+    {
       question: "Combien coûte un press kit photographe ?",
       answer: pricingAnswer,
     },
@@ -91,6 +101,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     {
       question: "Puis-je indiquer ma zone de déplacement ?",
       answer: "Oui, une section dédiée précise ta zone de déplacement, par exemple partout en Île-de-France.",
+    },
+    {
+      question: "Je fais aussi la coiffure, je peux la présenter ?",
+      answer:
+        "Oui. Le press kit d'Ishma réunit maquillage, coiffure et cours d'auto-maquillage. Chaque prestation a sa place.",
+    },
+    {
+      question: "Faut-il afficher mes tarifs mariée ?",
+      answer:
+        "Un prix « à partir de » suffit. Il évite les demandes hors budget, et le devis précise le reste : date, lieu, nombre de personnes.",
     },
     {
       question: "Combien coûte un press kit make-up artist ?",
@@ -124,6 +144,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     {
       question: "Puis-je proposer des ateliers ou des cours ?",
       answer: "Oui, avec leur description et un contact direct.",
+    },
+    {
+      question: "CV danseur ou press kit : lequel envoyer ?",
+      answer:
+        "Le press kit contient ton CV, avec tes vidéos et tes photos. Si une production demande un document, envoie ton CV en pièce jointe et ajoute le lien.",
+    },
+    {
+      question: "Puis-je envoyer le même lien à une compagnie et à une marque ?",
+      answer:
+        "Oui. Tes sections séparent scène, clips, ateliers et événements. Dans ton message, indique celle à regarder.",
     },
     {
       question: "Combien coûte un press kit danseur ?",
@@ -164,6 +194,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
       answer: "Oui, via WhatsApp, email ou un lien de prise de rendez-vous.",
     },
     {
+      question: "Un press kit peut-il remplacer un site de coach sportif ?",
+      answer:
+        "Oui, si une page suffit : présentation, formules, preuves et prise de rendez-vous. Pour un site de plusieurs pages, c'est la formule Studio Custom, sur devis.",
+    },
+    {
+      question: "Je débute et je n'ai pas encore d'avis clients, est-ce utile ?",
+      answer:
+        `Oui. Tes diplômes, ta spécialité, tes formules et une vidéo de séance suffisent pour commencer. Tu ajoutes tes premiers avis ensuite, avec une mise à jour à ${updatePrice}.`,
+    },
+    {
       question: "Combien coûte un press kit coach sportif ?",
       answer: pricingAnswer,
     },
@@ -195,6 +235,16 @@ export const categoryFaqs: Record<string, FaqEntry[]> = {
     {
       question: "Puis-je ajouter les flyers et photos de mes soirées ?",
       answer: "Oui, dans une galerie dédiée.",
+    },
+    {
+      question: "Puis-je présenter plusieurs villes ou plusieurs concepts ?",
+      answer:
+        "Oui. Une section peut lister tes villes ou tes formats, comme sur le press kit de La Bringue. Pour plusieurs pages, c'est la formule Studio Custom, sur devis.",
+    },
+    {
+      question: "Quand envoyer mon dossier de sponsoring ?",
+      answer:
+        "Dès que la date et le lieu sont fixés. Une marque a besoin de temps pour valider un budget, puis pour préparer sa présence sur place.",
     },
     {
       question: "Combien coûte un press kit organisateur ?",

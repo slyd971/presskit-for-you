@@ -108,7 +108,7 @@ const homeExamples = [
     title: "La Bringue",
     category: "Organisateur de soirée",
     exampleName: "La Bringue",
-    description: "Un press kit organisateur de soirée pour communauté, chiffres, sponsors et partenaires.",
+    description: "Un press kit organisateur de soirée pour communauté, chiffres, villes et presse.",
     context: "Concept événementiel avec communauté et partenaires.",
     objective: "Montrer la traction, l’ambiance et le potentiel sponsor.",
     result: "Un dossier digital plus convaincant qu’un PDF statique.",

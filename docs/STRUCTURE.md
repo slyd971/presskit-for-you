@@ -101,6 +101,7 @@ Une page métier fait une dizaine de lignes : elle déclare son `slug`, appelle 
 | `metiers-links.tsx` | `/`, `/exemples`, `/tarifs`, métiers | `MetiersLinks` : liens internes vers les 7 pages métiers (sans la page courante via `currentSlug`). |
 | `faq.tsx` | `/`, `/tarifs`, métiers | FAQ en accordéon. |
 | `final-cta.tsx` | Toutes les pages | Section contact claire, CTA WhatsApp et email. |
+| `choose-sections.tsx` | `/exemples` | Section finale « Comment choisir les sections de ton press kit », liens vers les pages métiers. |
 | `examples-gallery-grid.tsx` | `/exemples` | Grille filtrable des exemples. |
 | `presskit-category-page.tsx` | Pages métier | Assemble la page métier. |
 | `category-hero.tsx`, `category-content.tsx`, `category-offer.tsx` | Pages métier | Hero, contenu et offre d'un métier. |
