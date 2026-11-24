@@ -18,7 +18,7 @@ async function loadPreview(slug: string) {
   }
 }
 
-export async function createCategoryOgImage(slug: string) {
+export async function createCategoryOgImage(slug: string, kit = "Press kit") {
   const label = categorySeo[slug]?.label ?? getPresskitCategory(slug)?.shortName.toLowerCase() ?? slug;
   const preview = await loadPreview(slug);
 
@@ -46,7 +46,7 @@ export async function createCategoryOgImage(slug: string) {
             padding: "64px",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", maxWidth: 560, gap: 28 }}>
+          <div style={{ display: "flex", flexDirection: "column", width: 510, flexShrink: 0, gap: 28 }}>
             <div
               style={{
                 display: "flex",
@@ -59,8 +59,23 @@ export async function createCategoryOgImage(slug: string) {
             >
               PressKit For You
             </div>
-            <div style={{ display: "flex", fontSize: 76, lineHeight: 1, fontWeight: 700, letterSpacing: "-0.04em" }}>
-              {`Press kit ${label}`}
+            {/* One element per word, so a hyphenated word such as "make-up" is never cut. */}
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                columnGap: 18,
+                fontSize: 76,
+                lineHeight: 1,
+                fontWeight: 700,
+                letterSpacing: "-0.04em",
+              }}
+            >
+              {`${kit} ${label}`.split(" ").map((word) => (
+                <span key={word} style={{ whiteSpace: "nowrap" }}>
+                  {word}
+                </span>
+              ))}
             </div>
             <div style={{ display: "flex", fontSize: 26, lineHeight: 1.4, color: "rgba(255,255,255,0.72)" }}>
               Livré en 7 jours, dès 300 €.
@@ -70,6 +85,7 @@ export async function createCategoryOgImage(slug: string) {
             <div
               style={{
                 display: "flex",
+                flexShrink: 0,
                 border: "1px solid rgba(255,255,255,0.16)",
                 background: "#080b11",
                 padding: 10,
@@ -77,7 +93,7 @@ export async function createCategoryOgImage(slug: string) {
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={preview} width={520} alt="" />
+              <img src={preview} width={500} alt="" />
             </div>
           ) : null}
         </div>
