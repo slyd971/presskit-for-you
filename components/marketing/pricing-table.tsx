@@ -10,6 +10,30 @@ import { ChevronDown } from "lucide-react";
 
 const hasAmount = (price: string) => price.includes("€");
 
+// Formule chiffrée : carte claire mise en avant. Formule sur devis : carte sombre à bordure fine.
+const offerTones = {
+  light: {
+    card: "border-white bg-white",
+    title: "text-ink-editorial",
+    border: "border-ink-editorial/[0.12]",
+    itemBorder: "border-ink-editorial/[0.08]",
+    meta: "text-text-muted-light",
+    body: "text-text-secondary-light",
+    feature: "text-ink-editorial",
+    rule: "bg-ink-editorial/30",
+  },
+  dark: {
+    card: "border-white/[0.12] bg-white/[0.04] hover:border-white/[0.24]",
+    title: "text-white",
+    border: "border-white/[0.12]",
+    itemBorder: "border-white/[0.08]",
+    meta: "text-white/[0.64]",
+    body: "text-white/[0.74]",
+    feature: "text-white/[0.84]",
+    rule: "bg-white/30",
+  },
+};
+
 type PricingTableProps = {
   variant?: "default" | "highlight";
   showHeading?: boolean;
@@ -28,18 +52,6 @@ export function PricingTable({
 }: PricingTableProps) {
   const isHighlight = variant === "highlight";
   const spacingClass = showHeading ? "pt-16 pb-12 md:pt-32 md:pb-14" : "pt-0 pb-14 md:pt-0 md:pb-20";
-  const offerTone = {
-    title: "text-ink-editorial",
-    border: "border-ink-editorial/[0.12]",
-    tierBorder: "border-ink-editorial/[0.12]",
-    tierAccent: "bg-ink-editorial/[0.035]",
-    tierSubtle: "bg-ink-editorial/[0.018]",
-    headingMeta: "text-text-muted-light",
-    body: "text-[#303744]",
-    feature: "text-[#1f2632]",
-    rule: "bg-ink-editorial/30",
-  };
-
   return (
     <section
       id={sectionId ?? undefined}
@@ -59,14 +71,16 @@ export function PricingTable({
             description="Deux niveaux simples : un press kit premium prêt à partager, ou une expérience plus poussée pour les projets qui demandent une direction artistique sur mesure."
           />
         ) : null}
-        <div className={`grid overflow-hidden rounded-lg border bg-white lg:grid-cols-[1.15fr_0.85fr] ${offerTone.border} ${showHeading ? "mt-6 md:mt-16" : "mt-0"}`}>
-          {pricingTiers.map((tier, index) => {
+        {/* À partir de lg, les deux cartes partagent les mêmes rangées (subgrid) : titres, prix, listes et boutons alignés. */}
+        <div className={`grid gap-4 md:gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:grid-rows-[repeat(6,auto)] lg:gap-y-0 ${showHeading ? "mt-6 md:mt-16" : "mt-0"}`}>
+          {pricingTiers.map((tier) => {
             const isQuote = !hasAmount(tier.price);
+            const tone = offerTones[isQuote ? "dark" : "light"];
             const featureList = (
-              <ul className="relative grid grid-cols-2 gap-x-3 border-y border-ink-editorial/[0.12] md:mt-9 md:flex-1 md:grid-cols-1 md:gap-x-0">
+              <ul className={`relative grid grid-cols-2 gap-x-3 border-y md:mt-9 md:flex-1 md:grid-cols-1 md:gap-x-0 ${tone.border}`}>
                 {tier.features.slice(0, 5).map((feature) => (
-                  <li key={feature} className={`flex items-center gap-2 border-b border-ink-editorial/[0.08] py-1.5 text-xs last:border-b-0 md:gap-4 md:py-3.5 md:text-sm ${offerTone.feature}`}>
-                    <span className={`hidden h-px shrink-0 md:block md:w-7 ${offerTone.rule}`} aria-hidden="true" />
+                  <li key={feature} className={`flex items-center gap-2 border-b py-1.5 text-xs last:border-b-0 md:gap-4 md:py-3.5 md:text-sm ${tone.itemBorder} ${tone.feature}`}>
+                    <span className={`hidden h-px shrink-0 md:block md:w-7 ${tone.rule}`} aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -76,38 +90,36 @@ export function PricingTable({
             return (
               <article
                 key={tier.name}
-                className={`motion-line group relative flex h-full flex-col border-b px-4 py-4 last:border-b-0 md:px-7 md:py-10 lg:border-b-0 lg:border-r lg:px-9 lg:py-12 lg:last:border-r-0 ${offerTone.tierBorder} ${
-                  index === 0 ? offerTone.tierAccent : offerTone.tierSubtle
-                }`}
+                className={`relative flex h-full flex-col rounded-lg border px-4 py-4 transition-colors duration-hover ease-presskit md:px-7 md:py-10 lg:row-span-6 lg:grid lg:grid-rows-subgrid lg:px-9 lg:py-12 ${tone.card}`}
               >
                 <div className="relative flex items-start justify-between gap-4">
-                  <h3 className={`max-w-sm text-2xl font-semibold leading-none tracking-tighter2 md:text-[clamp(2.15rem,3.8vw,4.2rem)] ${offerTone.title}`}>{tier.name}</h3>
-                  <span className={`text-right text-[10px] font-semibold uppercase tracking-label-tight ${offerTone.headingMeta}`}>
+                  <h3 className={`text-2xl font-semibold leading-none tracking-tighter2 md:text-[clamp(1.9rem,3.2vw,3.2rem)] ${tone.title}`}>{tier.name}</h3>
+                  <span className={`text-right text-[10px] font-semibold uppercase tracking-label-tight ${tone.meta}`}>
                     {tier.badge}
                   </span>
                 </div>
-                <div className={`relative mt-4 border-y py-3 md:mt-10 md:py-8 ${offerTone.tierBorder}`}>
-                  <p className={`text-[2rem] font-semibold leading-none tracking-tighter2 md:text-[clamp(2.6rem,5.4vw,5.4rem)] ${offerTone.title}`}>{tier.price}</p>
-                  <p className={`mt-2 text-xs font-medium tracking-wide md:mt-4 ${offerTone.headingMeta} hidden md:block`}>{tier.tagline}</p>
+                <div className={`relative mt-4 border-y py-3 md:mt-10 md:py-8 ${tone.border}`}>
+                  <p className={`text-[2rem] font-semibold leading-none tracking-tighter2 md:text-[clamp(2.6rem,5.4vw,5.4rem)] ${tone.title}`}>{tier.price}</p>
+                  <p className={`mt-2 text-xs font-medium tracking-wide md:mt-4 ${tone.meta} hidden md:block`}>{tier.tagline}</p>
                 </div>
-                <p className={`relative mt-3 max-w-md text-sm leading-6 md:mt-7 md:text-base md:leading-8 ${offerTone.body}`}>{tier.description}</p>
+                <p className={`relative mt-3 max-w-md text-sm leading-6 md:mt-7 md:text-base md:leading-8 ${tone.body}`}>{tier.description}</p>
                 {isQuote ? <div className="hidden md:contents">{featureList}</div> : <div className="mt-3 flex flex-1 flex-col md:contents">{featureList}</div>}
                 {isQuote ? null : (
-                  <p className={`relative mt-3 text-xs font-medium tracking-wide md:mt-4 ${offerTone.headingMeta}`}>
+                  <p className={`relative mt-3 text-xs font-medium tracking-wide md:mt-4 ${tone.meta}`}>
                     Paiement unique, sans abonnement : 50 % à la commande, 50 % à la livraison.
                   </p>
                 )}
                 <Button
                   href={isQuote ? siteConfig.whatsappQuoteUrl : contactHref}
-                  variant="primaryOnLight"
+                  variant={isQuote ? "secondary" : "primaryOnLight"}
                   arrow={!isQuote}
-                  className="relative mx-auto mt-3 min-h-12 w-full max-w-sm justify-center px-6 py-3.5 md:mt-10"
+                  className="relative mt-3 min-h-12 w-full justify-center px-6 py-3.5 md:mt-10 lg:row-start-6"
                 >
                   {isQuote ? CTA.quote : CTA.primary}
                 </Button>
                 {isQuote ? (
-                  <details className="acc group relative mt-3 border-t border-ink-editorial/[0.12] md:hidden">
-                    <summary className={`flex cursor-pointer list-none items-center justify-between gap-4 py-2.5 text-sm font-semibold [&::-webkit-details-marker]:hidden ${offerTone.feature}`}>
+                  <details className={`acc group relative mt-3 border-t md:hidden ${tone.border}`}>
+                    <summary className={`flex cursor-pointer list-none items-center justify-between gap-4 py-2.5 text-sm font-semibold [&::-webkit-details-marker]:hidden ${tone.feature}`}>
                       Voir ce qui est inclus
                       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
                     </summary>
@@ -135,7 +147,8 @@ export function PricingTable({
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 md:border-l md:border-white/[0.08]">
+            {/* Bordures gauche et haute sur la grille, droite et basse sur chaque cellule : les lignes se croisent toujours. */}
+            <div className="grid md:grid-cols-2 md:border-l md:border-t md:border-white/[0.12]">
               {pricingOptions.map((option) => (
                 <div key={option.name}>
                   <details className="acc group border-b border-white/[0.08] py-3 md:hidden">
@@ -152,7 +165,7 @@ export function PricingTable({
                       <p className="pr-8 pt-3 text-sm leading-6 text-white/[0.64]">{option.description}</p>
                     </div>
                   </details>
-                  <article className="motion-line hidden border-b border-white/[0.08] py-5 md:block md:border-r md:px-5 md:last:border-r">
+                  <article className="hidden h-full border-b border-r border-white/[0.12] p-5 transition-colors duration-hover ease-presskit hover:bg-white/[0.04] md:block lg:p-6">
                     <div className="flex items-baseline justify-between gap-4">
                       <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
                       <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>

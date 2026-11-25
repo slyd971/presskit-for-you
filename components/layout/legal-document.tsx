@@ -22,7 +22,7 @@ export function LegalDocument({ title, updatedAt, intro, sections, annex }: Lega
         aria-hidden="true"
       />
       <PageShell className="relative max-w-4xl">
-        <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">{title}</h1>
+        <h1 className="max-w-4xl text-4xl font-semibold leading-none tracking-tighter2 text-white md:text-5xl">{title}</h1>
         <p className="mt-4 text-sm text-white/[0.64]">Dernière mise à jour : {updatedAt}</p>
         {intro ? <p className="mt-6 leading-8 text-white/[0.74]">{intro}</p> : null}
 

@@ -47,19 +47,12 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="relative w-full">
-        {/* Deux fonds superposés (sombre / clair) : fondu en opacité, et la barre rétrécit de 8 px par translation. */}
+        {/* Verre sombre sur toute la page : au défilement, la barre rétrécit de 8 px par translation. */}
         <div
           aria-hidden="true"
           className={cn(
-            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-white/[0.08] bg-surface-900/90 shadow-[0_12px_36px_rgba(0,0,0,0.18)] backdrop-blur-xl",
-            isCompact && "-translate-y-2 opacity-0",
-          )}
-        />
-        <div
-          aria-hidden="true"
-          className={cn(
-            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-black/[0.08] bg-white/[0.96] opacity-0 shadow-[0_12px_36px_rgba(13,17,24,0.1)] backdrop-blur-xl",
-            isCompact && "-translate-y-2 opacity-100",
+            "header-layer pointer-events-none absolute inset-x-0 -bottom-2 top-0 border-b border-white/[0.08] bg-surface-900/90 backdrop-blur-xl",
+            isCompact && "-translate-y-2",
           )}
         />
         <div
@@ -70,10 +63,7 @@ export function SiteHeader() {
         >
           <Link
             href="/"
-            className={cn(
-              "relative block h-10 w-44 shrink-0 transition md:h-12 md:w-60",
-              isCompact ? "opacity-100 hover:opacity-80" : "opacity-95 hover:opacity-80",
-            )}
+            className="relative block h-10 w-44 shrink-0 opacity-95 transition hover:opacity-80 md:h-12 lg:w-60"
           >
             <Image
               src="/logo/logo-presskitforyou-cropped.png"
@@ -81,19 +71,16 @@ export function SiteHeader() {
               fill
               sizes="(min-width: 768px) 15rem, 11rem"
               priority
-              className={cn("object-contain object-left transition duration-200", isCompact && "brightness-0")}
+              className="object-contain object-left"
             />
           </Link>
 
-          <nav aria-label="Navigation principale" className="hidden items-center gap-8 md:flex">
+          <nav aria-label="Navigation principale" className="hidden items-center gap-5 md:flex lg:gap-8">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "text-[15px] font-semibold transition",
-                  isCompact ? "text-text-secondary-light hover:text-ink-editorial" : "text-white/[0.84] hover:text-white",
-                )}
+                className="text-[15px] font-semibold text-white/[0.84] transition hover:text-white"
               >
                 {item.label}
               </Link>
@@ -103,8 +90,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <Button arrow
               href="/#contact"
-              variant={isCompact ? "primaryOnLight" : "primary"}
-              className="hidden px-3 py-2 text-[11px] font-semibold shadow-none sm:inline-flex md:px-5 md:py-3 md:text-sm"
+              className="hidden px-3 py-2 text-[11px] font-semibold sm:inline-flex md:px-5 md:py-3 md:text-sm"
             >
               {CTA.primary}
             </Button>
@@ -115,10 +101,7 @@ export function SiteHeader() {
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((open) => !open)}
-              className={cn(
-                "inline-flex h-10 w-10 items-center justify-center rounded-lg transition md:hidden",
-                isCompact ? "text-ink-editorial hover:bg-ink-editorial/[0.06]" : "text-white hover:bg-white/[0.08]",
-              )}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white transition hover:bg-white/[0.08] md:hidden"
             >
               <motion.div
                 key={isOpen ? "close" : "open"}
@@ -165,12 +148,7 @@ export function SiteHeader() {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className={cn(
-                          "block rounded-lg border border-transparent px-3 py-3 text-[15px] font-semibold transition",
-                          isCompact
-                            ? "text-text-secondary-light hover:border-ink-editorial/[0.12] hover:bg-ink-editorial/[0.04] hover:text-ink-editorial"
-                            : "text-white/[0.84] hover:border-white/[0.12] hover:bg-white/[0.04] hover:text-white",
-                        )}
+                        className="block rounded-lg border border-transparent px-3 py-3 text-[15px] font-semibold text-white/[0.84] transition hover:border-white/[0.12] hover:bg-white/[0.04] hover:text-white"
                       >
                         {item.label}
                       </Link>
@@ -184,7 +162,7 @@ export function SiteHeader() {
                   exit={{ y: 8, opacity: 0 }}
                   transition={{ duration: motionTokens.duration.fast, delay: motionTokens.delay.related, ease: motionTokens.easing.enter }}
                 >
-                  <Button arrow href="/#contact" variant={isCompact ? "primaryOnLight" : "primary"} className="mt-4 w-full justify-center">
+                  <Button arrow href="/#contact" className="mt-4 w-full justify-center">
                     {CTA.primary}
                   </Button>
                 </motion.div>

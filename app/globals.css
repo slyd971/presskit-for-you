@@ -395,31 +395,13 @@ svg {
     transform var(--duration-hover) var(--ease-presskit),
     background-color var(--duration-hover) var(--ease-presskit),
     border-color var(--duration-hover) var(--ease-presskit),
-    box-shadow var(--duration-hover) var(--ease-presskit),
     color var(--duration-hover) var(--ease-presskit);
   will-change: transform;
   touch-action: manipulation;
 }
 
-.button-cycle::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 48%);
-  opacity: 0.36;
-  transition:
-    opacity var(--duration-hover) var(--ease-presskit),
-    transform var(--duration-hover) var(--ease-presskit);
-}
-
 .button-cycle:hover {
   transform: perspective(700px) translate3d(0, -0.125rem, 0) rotateX(0.65deg);
-}
-
-.button-cycle:hover::before {
-  opacity: 0.52;
-  transform: translate3d(0, -0.04rem, 0);
 }
 
 /* Spécificité relevée : sinon l'utilitaire hover:-translate-y-0.5 des variantes l'emporte au clic. */
@@ -796,60 +778,11 @@ svg {
   }
 }
 
-/* En-tête : fonds superposés, seuls transform et opacity s'animent (200 ms). */
+/* En-tête : seul transform s'anime (200 ms). */
 .header-layer {
-  transition:
-    opacity 200ms var(--ease-presskit),
-    transform 200ms var(--ease-presskit);
+  transition: transform 200ms var(--ease-presskit);
 }
 
 .header-row {
   transition: transform 200ms var(--ease-presskit);
-}
-
-/* Comparatif : page A4 figée -> carte de press kit (fondu croisé + scale) pendant que la section
-   traverse l'écran. Repli (sans animation-timeline ou reduced-motion) : la carte de press kit seule. */
-.compare-pdf {
-  display: none;
-}
-
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .compare-pdf {
-      display: flex;
-      animation: compare-pdf-out linear both;
-      animation-timeline: view();
-      animation-range: cover 25% cover 55%;
-    }
-
-    .compare-kit {
-      animation: compare-kit-in linear both;
-      animation-timeline: view();
-      animation-range: cover 25% cover 55%;
-    }
-  }
-}
-
-@keyframes compare-pdf-out {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  to {
-    opacity: 0;
-    transform: scale(0.94);
-  }
-}
-
-@keyframes compare-kit-in {
-  from {
-    opacity: 0;
-    transform: scale(0.94);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }

@@ -13,7 +13,7 @@ Ce dossier rassemble ce qui existe déjà dans le code du site. Il ne modifie ri
 Les tokens sont aussi déclarés dans `tailwind.config.ts`, à utiliser pour tout nouveau code à la place des valeurs en dur :
 
 - Couleurs : `bg-surface-900`, `bg-surface-800`, `bg-surface-850`, `bg-surface-760`, `bg-mockup` (fond des mockups), `text-paper`, `text-ink-editorial`, `border-steel`, `bg-whatsapp` / `hover:bg-whatsapp-hover` / `text-whatsapp-ink`, `text-text-secondary-light`, `text-text-muted-light`, `bg-light-section-end`, `accent-gold` … `accent-tan`.
-- Ombres : `shadow-button-primary`, `shadow-panel`, `shadow-panel-hover`, `shadow-card-hover`.
+- Ombres : `shadow-panel`, `shadow-panel-hover`, `shadow-card-hover`.
 - Arrondis : `rounded-mockup-desktop`, `rounded-mockup-mobile`.
 - Typo : `tracking-tighter2` (titres), `tracking-label` (0.22em) et `tracking-label-tight` (0.16em) pour les micro-labels.
 - Motion : `duration-feedback`, `duration-fast`, `duration-hover`, `duration-reveal`, `duration-slow` ; `ease-presskit`, `ease-presskit-out`, `ease-exit`.
@@ -60,7 +60,7 @@ Rôles (voir `tokens.json`) : `bg`, `text`, `text-secondary`, `text-muted`, `sur
 
 Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `app/layout.tsx`).
 
-- **Titres** : poids 600, interlettrage `-0.05em` (`tracking-tighter2`), interlignage serré (0.91 à 1.08). `hero` en clamp(2.28rem, 9.5vw, 5.45rem), `h2` en 1.875rem puis 3rem à partir de md.
+- **Titres** : poids 600, interlettrage `-0.035em` (`tracking-tighter2`), interlignage 1 (hero, H1), 1.04 (très grands H2) ou 1.08 (H2). `hero` en clamp(2.2rem, 9.2vw, 5rem), `h2` en 1.875rem puis 3rem à partir de md. `md:text-5xl` remet l'interlignage à 1 : toujours répéter `md:leading-[1.08]`.
 - **Texte** : `lead` 1.125rem et `body` 1rem, interlignage 2rem.
 - **Boutons** : 0.875rem (15px dans le hero), poids 600.
 - **Labels** : 11px, 600, capitales, interlettrage `0.22em`. Ne pas descendre sous 11px.
@@ -74,6 +74,7 @@ Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `a
 ## 5. Formes, ombres, effets
 
 - Rayon dominant `radius-lg` (0.5rem) partout : boutons, badges, cartes, panneaux.
+- Boutons plats : fond uni, bordure 1px, aucune ombre ni halo. Au survol, le fond change et le bouton monte de 2px.
 - Panneaux en verre : `surface-glass` + `border` + ombre noire profonde (`shadow-panel`). Au survol : `border-hover`, `shadow-panel-hover`, léger lift.
 - Mockups desktop inclinés et mobile superposé : c'est le motif le plus identitaire du site. On le garde dans toute nouvelle présentation d'exemple.
 - Fond global : dégradé sombre + grille de 80px à 2,5 % + grain en `screen`. Les sections ajoutent des halos radiaux blancs très faibles (`section-wash`, `section-tone-cool`, `section-tone-lift`).
@@ -86,7 +87,7 @@ Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `a
 | Badge | `components/ui/badge.tsx` | un style : verre sombre, label capitales |
 | SectionHeading | `components/ui/section-heading.tsx` | `left`, `center` |
 | Reveal | `components/ui/reveal.tsx` | apparition au scroll (`reveal-up`) |
-| Header / Footer / PageShell | `components/layout/` | header transparent en haut de page, compact blanc après 24px de scroll |
+| Header / Footer / PageShell | `components/layout/` | header en verre sombre sur toute la page, 8px moins haut après 80px de scroll |
 | Sections marketing | `components/marketing/` | Hero, ComparisonSection, CategoriesGrid, PricingTable, ProcessTimeline, SocialProof, FinalCta… |
 
 ## 7. Motion
@@ -99,7 +100,7 @@ Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `a
 ## 8. Logo
 
 - Fichiers : `public/logo/logo-presskitforyou-cropped.png` (1120 × 360, utilisé dans le header, le footer et les données structurées) et `public/logo/logo-presskitforyou.png` (1536 × 1024). Favicon : `public/favicon/`.
-- Monogramme « PK » au trait + « PRESSKIT » en capitales fines + « FOR YOU » entre deux filets. Version blanche au trait, sur fond sombre. Dans le header compact (fond blanc), il passe en noir via `brightness-0`.
+- Monogramme « PK » au trait + « PRESSKIT » en capitales fines + « FOR YOU » entre deux filets. Version blanche au trait, sur fond sombre. Toujours sur fond sombre, header compris.
 - Pas de version vectorielle dans le repo : à ajouter (SVG) pour l'impression et les grands formats.
 
 ## 9. Points à harmoniser (repris de l'audit)

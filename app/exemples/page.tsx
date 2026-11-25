@@ -24,7 +24,7 @@ export default function ExamplesPage() {
       <section className="section-wash relative overflow-hidden pb-6 pt-28 md:pb-8 md:pt-32">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_0%,rgba(255,255,255,0.055),transparent_24%),radial-gradient(circle_at_82%_14%,rgba(255,255,255,0.04),transparent_18%)]" />
         <PageShell className="relative max-w-4xl">
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">
+          <h1 className="max-w-4xl text-4xl font-semibold leading-none tracking-tighter2 text-white md:text-5xl">
             Exemples de press kits digitaux
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.64] md:text-lg">

@@ -19,23 +19,23 @@ export function ProofStats() {
       <PageShell>
         <div className="relative mx-auto mb-14 max-w-4xl text-center md:mb-20">
           <p className="text-[clamp(2.2rem,6vw,5rem)] font-semibold leading-[1.08] tracking-tighter2">
-            <Reveal as="span" className="block">Une page de liens empile tes contenus.</Reveal>{" "}
+            <Reveal as="span" className="block text-text-muted-light">Une page de liens empile tes contenus.</Reveal>{" "}
             <Reveal as="span" delay={0.06} className="block">Un press kit les met en valeur.</Reveal>
           </p>
         </div>
         <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-ink-editorial md:text-5xl">
+            <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-ink-editorial md:text-5xl">
               Ton activité, tes médias et tes références dans un seul lien
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-text-secondary-light md:text-lg">
               Il reflète ta personnalité et renforce ta crédibilité.
             </p>
 
-            <div className="mt-9 grid gap-7 border-y border-ink-editorial/[0.12] py-7 text-left sm:grid-cols-3 md:mt-10">
+            <div className="mt-9 grid gap-7 border-y border-ink-editorial/[0.12] py-7 text-left sm:grid-cols-[0.8fr_1fr_1.15fr] md:mt-10">
               {proofStats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-4xl font-semibold leading-none tracking-tighter2 text-ink-editorial md:text-5xl">{stat.value}</p>
+                  <p className="whitespace-nowrap text-4xl font-semibold leading-none tracking-tighter2 text-ink-editorial lg:text-[1.75rem] xl:text-4xl">{stat.value}</p>
                   <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-label-tight text-text-muted-light">
                     {stat.label}
                   </p>
@@ -44,7 +44,7 @@ export function ProofStats() {
             </div>
           </div>
 
-          <div className="relative min-h-[18rem] lg:min-h-[22rem]">
+          <div className="relative min-h-[18rem] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[22rem]">
             <div className="product-drift mockup-surface absolute left-0 top-6 w-[82%] rotate-[-1.5deg] rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_26px_80px_rgba(16,20,29,0.2),inset_0_1px_0_rgba(255,255,255,0.14)]">
               <div className="relative aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
                 <Image

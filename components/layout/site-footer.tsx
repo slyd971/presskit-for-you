@@ -24,7 +24,7 @@ export function SiteFooter() {
               className="object-contain object-left"
             />
           </Link>
-          <p className="mt-10 max-w-3xl text-[clamp(2.45rem,5.6vw,6.4rem)] font-semibold leading-[0.94] tracking-tighter2 text-white">
+          <p className="mt-10 max-w-3xl text-[clamp(2.45rem,5.6vw,6.4rem)] font-semibold leading-none tracking-tighter2 text-white">
             {"L'image que tu envoies avant même de parler."}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">

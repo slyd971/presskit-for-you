@@ -31,7 +31,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
       <PageShell className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)] lg:gap-16">
         <div className="min-w-0">
           <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl lg:pb-10">
-            <h1 className="max-w-[45rem] break-words text-[clamp(2.35rem,7.2vw,5.45rem)] font-semibold leading-[0.94] tracking-tighter2 text-white lg:text-[clamp(2.35rem,5vw,4.5rem)]">
+            <h1 className="max-w-[45rem] break-words text-[clamp(2.35rem,7.2vw,5.45rem)] font-semibold leading-none tracking-tighter2 text-white lg:text-[clamp(2.35rem,5vw,4.5rem)]">
               {category.heroTitleKicker ? (
                 <>
                   <span className="block text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">
@@ -48,7 +48,7 @@ export function CategoryHero({ category }: CategoryHeroProps) {
             <p className="mt-6 max-w-2xl text-[0.95rem] leading-7 text-white/[0.74] md:text-lg md:leading-9">
               {category.heroDescription}
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Button arrow href="/#contact" className="min-h-12 px-7 py-4 text-[15px]">
                 {CTA.primary}
               </Button>

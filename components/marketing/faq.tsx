@@ -31,9 +31,11 @@ export function Faq({
   return (
     <section id={id} className="scroll-mt-28 py-16 md:py-20" aria-labelledby={`${id}-title`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <PageShell>
-        <SectionHeading eyebrow="FAQ" title={title} description={description} id={`${id}-title`} />
-        <div className="mt-12 border-y border-white/[0.12]">
+      <PageShell className="lg:grid lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <SectionHeading eyebrow="FAQ" title={title} description={description} id={`${id}-title`} />
+        </div>
+        <div className="mt-12 self-start border-y border-white/[0.12] lg:mt-0">
           {items.map((item) => (
             <details key={item.question} className="acc group border-b border-white/[0.08] last:border-b-0">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-6 text-left [&::-webkit-details-marker]:hidden">

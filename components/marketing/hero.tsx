@@ -132,7 +132,7 @@ export function Hero() {
             <h1 id="hero-title" className="mb-3 text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">
               Press kit digital pour DJs, artistes, créateurs et indépendants
             </h1>
-            <p className="max-w-[22rem] break-words text-[clamp(2.28rem,9.5vw,5.45rem)] font-semibold leading-[0.91] tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,6.2vw,5.45rem)]">
+            <p className="max-w-[22rem] break-words text-[clamp(2.2rem,9.2vw,5rem)] font-semibold leading-none tracking-tighter2 text-white sm:max-w-[44rem] sm:text-[clamp(3rem,5.6vw,5rem)]">
               <span className="block">
                 <span className="block">Plus pro qu&apos;Instagram. </span>
                 <span className="block text-white/[0.92]">Plus impactant </span>
@@ -142,7 +142,7 @@ export function Hero() {
             <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.74] md:mt-6 md:text-lg md:leading-9">
               On trie, on organise, on met en page : {liveExamplesCount} artistes, DJs, photographes et créateurs ont déjà le leur.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-center">
               <Button
                 href="#exemples"
                 variant="secondary"
@@ -152,7 +152,7 @@ export function Hero() {
               </Button>
               <Button arrow
                 href="#contact"
-                className="min-h-12 w-full px-6 py-4 text-[15px] shadow-[0_26px_80px_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(13,16,22,0.16)] sm:w-auto"
+                className="min-h-12 w-full px-6 py-4 text-[15px] sm:w-auto"
               >
                 {CTA.primary}
               </Button>

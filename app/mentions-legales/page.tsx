@@ -25,7 +25,7 @@ export default function LegalPage() {
         aria-hidden="true"
       />
       <PageShell className="relative max-w-4xl">
-        <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">
+        <h1 className="max-w-4xl text-4xl font-semibold leading-none tracking-tighter2 text-white md:text-5xl">
           Mentions légales
         </h1>
 

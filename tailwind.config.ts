@@ -55,7 +55,6 @@ const config: Config = {
       boxShadow: {
         soft: "0 20px 60px rgba(4, 8, 20, 0.18)",
         glow: "0 24px 80px rgba(255, 145, 77, 0.18)",
-        "button-primary": "0 18px 50px rgba(255, 255, 255, 0.16)",
         panel: "0 12px 42px rgba(0, 0, 0, 0.16)",
         "panel-hover": "0 18px 58px rgba(0, 0, 0, 0.22)",
         "card-hover": "0 28px 90px rgba(0, 0, 0, 0.34)",
@@ -69,7 +68,7 @@ const config: Config = {
         "8xl": "92rem",
       },
       letterSpacing: {
-        tighter2: "-0.05em",
+        tighter2: "-0.035em",
         label: "0.22em",
         "label-tight": "0.16em",
       },

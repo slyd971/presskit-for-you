@@ -121,7 +121,7 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
 
         {visibleGroups.map((group) => (
           <div key={group.title} className="mt-14">
-            <h2 className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-4xl">{group.title}</h2>
+            <h2 className="max-w-3xl text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-4xl">{group.title}</h2>
             <p className="mt-4 max-w-3xl text-base leading-7 text-white/[0.64]">{group.intro}</p>
             {group.href ? (
               <Link
@@ -151,7 +151,7 @@ export function ExamplesGalleryGrid({ previewAssets = {} }: ExamplesGalleryGridP
                       mobileImage={mobileImage}
                       imagePosition={imagePosition}
                       accent={example.accent}
-                      boxClassName="h-[22rem] rounded-lg md:h-[27rem] xl:h-[22rem]"
+                      boxClassName="h-[22rem] rounded-lg sm:h-[25.5rem] md:h-[27rem] xl:h-[22rem]"
                       desktopSizes="(min-width: 1280px) 25vw, (min-width: 768px) 40vw, 74vw"
                       mobileSizes="(min-width: 1280px) 8vw, (min-width: 768px) 12vw, 22vw"
                       preview={previewAssets[example.slug]}

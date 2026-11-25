@@ -47,7 +47,7 @@ export default function TarifsPage() {
           aria-hidden="true"
         />
         <PageShell className="relative">
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[0.95] tracking-tighter2 text-white md:text-5xl">
+          <h1 className="max-w-4xl text-4xl font-semibold leading-none tracking-tighter2 text-white md:text-5xl">
             Tarifs du press kit digital
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 text-white/[0.64] md:text-lg md:leading-8">

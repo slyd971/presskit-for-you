@@ -63,7 +63,7 @@ export function ChooseSections() {
     <section className="section-divider section-tone-lift py-20 md:py-28" aria-labelledby="choose-sections-title">
       <PageShell className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
         <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
-          <h2 id="choose-sections-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+          <h2 id="choose-sections-title" className="max-w-full break-words text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
             Comment choisir les sections de ton press kit
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">

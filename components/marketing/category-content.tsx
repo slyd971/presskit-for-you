@@ -327,7 +327,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
         <PageShell>
           <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
-              <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+              <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
                 {copy.promiseTitle}
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
@@ -362,7 +362,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
           <PageShell>
             <div className="flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
               <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
-                <h2 id={`${category.slug}-examples`} className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+                <h2 id={`${category.slug}-examples`} className="max-w-full break-words text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
                   {copy.examplesTitle}
                 </h2>
               </div>
@@ -391,7 +391,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
                         mobileImage={example.mobileImage}
                         imagePosition={example.imagePosition}
                         accent={example.accent}
-                        boxClassName="h-[18rem] md:h-[27rem]"
+                        boxClassName="h-[18rem] md:h-[29rem] lg:h-[27rem] xl:h-[29rem]"
                         desktopSizes="(min-width: 1024px) 40vw, (min-width: 768px) 74vw, 74vw"
                         mobileSizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
                         preview={previewAssets[example.slug]}
@@ -432,7 +432,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
       <section className="section-divider py-20 md:py-28">
         <PageShell className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
-            <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+            <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
               {copy.detailsTitle}
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
@@ -470,7 +470,7 @@ export function CategoryContent({ category }: CategoryContentProps) {
         <section className="section-divider py-20 md:py-28">
           <PageShell className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
             <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
-              <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+              <h2 className="max-w-full break-words text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
                 {copy.extraChecklist.title}
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">

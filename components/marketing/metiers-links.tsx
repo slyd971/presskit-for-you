@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { PageShell } from "@/components/layout/page-shell";
@@ -61,11 +62,11 @@ export function MetiersLinks({ currentSlug, title, id, withDescriptions = false 
   const links = (
     <nav {...(title ? { "aria-labelledby": id } : { "aria-label": "Press kits par métier" })}>
       {withDescriptions ? (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {visibleMetiers.map((metier) => (
             <li
               key={metier.slug}
-              className="relative rounded-lg border border-white/[0.12] p-5 transition duration-hover ease-presskit hover:border-white/[0.24] hover:bg-white/[0.08]"
+              className="group relative rounded-lg border border-white/[0.12] p-5 pr-12 transition duration-hover ease-presskit hover:border-white/[0.24] hover:bg-white/[0.08]"
             >
               {/* Le lien couvre toute la carte, son texte reste le seul nom du métier. */}
               <Link
@@ -74,6 +75,10 @@ export function MetiersLinks({ currentSlug, title, id, withDescriptions = false 
               >
                 {metier.label}
               </Link>
+              <ArrowUpRight
+                className="absolute right-5 top-5 h-4 w-4 text-white/[0.64] transition duration-hover ease-presskit group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white"
+                aria-hidden="true"
+              />
               <p className="mt-2 text-sm leading-6 text-white/[0.74]">{metier.description}</p>
             </li>
           ))}
@@ -102,7 +107,7 @@ export function MetiersLinks({ currentSlug, title, id, withDescriptions = false 
   return (
     <section className="section-divider py-16 md:py-20" aria-labelledby={id}>
       <PageShell>
-        <h2 id={id} className="max-w-3xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-4xl">
+        <h2 id={id} className="max-w-3xl text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-4xl">
           {title}
         </h2>
         <div className="mt-8">{links}</div>

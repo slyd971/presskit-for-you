@@ -28,7 +28,7 @@ export function AboutFounder() {
     <section className="section-divider section-wash relative overflow-hidden py-14 md:py-24" aria-labelledby="about-title">
       <PageShell className="relative">
         <div className="mx-auto max-w-4xl">
-          <h2 id="about-title" className="max-w-xl text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+          <h2 id="about-title" className="max-w-xl text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
             Fait pour toi, par quelqu&apos;un de la scène
           </h2>
           <div className="mt-7 grid grid-cols-[5rem_1fr] items-center gap-x-5 gap-y-4 md:mt-10 md:grid-cols-[11rem_1fr] md:items-start md:gap-x-8 md:gap-y-3">

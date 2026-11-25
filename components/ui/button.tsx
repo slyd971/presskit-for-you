@@ -12,17 +12,18 @@ type ButtonProps = {
   arrow?: boolean;
 };
 
+// Surfaces plates : bordure 1 px, pas d'ombre. Au survol, seul le fond (et 2 px de lift) change.
 const styles = {
   primary:
-    "bg-white text-ink shadow-[0_18px_50px_rgba(255,255,255,0.16),inset_0_-1px_0_rgba(13,16,22,0.14)] hover:-translate-y-0.5 hover:bg-sand hover:shadow-[0_24px_70px_rgba(255,255,255,0.22),inset_0_-1px_0_rgba(13,16,22,0.14)]",
+    "border border-white bg-white text-ink hover:-translate-y-0.5 hover:border-sand hover:bg-sand",
   secondary:
-    "border border-[#7B869A] bg-white/[0.04] text-white shadow-[0_14px_42px_rgba(4,8,20,0.18),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-0.5 hover:border-white hover:bg-white/[0.08] hover:shadow-[0_18px_52px_rgba(0,0,0,0.2)]",
+    "border border-steel bg-white/[0.04] text-white hover:-translate-y-0.5 hover:border-white hover:bg-white/[0.08]",
   ghost:
     "text-white/[0.84] hover:-translate-y-0.5 hover:text-white",
   primaryOnLight:
-    "bg-ink-editorial text-white shadow-[0_18px_50px_rgba(13,16,22,0.16),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-0.5 hover:bg-[#1d2430] hover:shadow-[0_24px_70px_rgba(13,16,22,0.2)]",
+    "border border-ink-editorial bg-ink-editorial text-white hover:-translate-y-0.5 hover:border-surface-760 hover:bg-surface-760",
   secondaryOnLight:
-    "border border-ink/[0.24] bg-white text-ink shadow-[0_12px_34px_rgba(13,16,22,0.08),inset_0_1px_0_rgba(255,255,255,0.72)] hover:-translate-y-0.5 hover:border-ink/[0.36] hover:bg-sand hover:shadow-[0_16px_42px_rgba(13,16,22,0.1)]",
+    "border border-ink-editorial/[0.24] bg-white text-ink-editorial hover:-translate-y-0.5 hover:border-ink-editorial hover:bg-sand",
 };
 
 export function Button({

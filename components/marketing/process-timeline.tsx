@@ -83,26 +83,27 @@ function CompactVisual({ type }: { type: string }) {
 
   if (type === "final") {
     return (
-      <div className="relative h-56 overflow-hidden bg-mockup p-3 md:h-64">
-        <div className="mockup-surface relative rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1">
+      <div className="relative h-56 overflow-hidden bg-[#f5f5f1] p-4 md:h-64">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(16,20,29,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(16,20,29,0.055)_1px,transparent_1px)] bg-[size:28px_28px]" aria-hidden="true" />
+        <div className="mockup-surface relative w-[78%] max-w-[21.5rem] overflow-hidden rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1">
           <div className="relative aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
-          <Image
-            src="/gallery-previews/home-desktop/dj-slyd.webp"
-            alt="Press kit de DJ SLY'D, DJ, version desktop"
-            fill
-            sizes="(min-width: 1024px) 36vw, 82vw"
-            className="object-contain object-center"
-          />
+            <Image
+              src="/gallery-previews/home-desktop/black-moz.webp"
+              alt="Press kit de Black Moz, rappeur et slameur, version desktop"
+              fill
+              sizes="(min-width: 768px) 24vw, 82vw"
+              className="object-contain object-center"
+            />
           </div>
         </div>
-        <div className="absolute bottom-5 right-5 w-[24%] min-w-[4rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_18px_48px_rgba(0,0,0,0.45)]">
+        <div className="absolute bottom-4 right-5 w-[22%] min-w-[4rem] rotate-[3deg] rounded-[0.85rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-panel-hover">
           <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.58rem] bg-black">
             <div className="absolute left-1/2 top-1 z-20 h-1.5 w-5 -translate-x-1/2 rounded-full bg-[#050609]" />
             <Image
-              src="/gallery-previews/home-mobile/dj-slyd.webp"
-              alt="Press kit de DJ SLY'D, DJ, version mobile"
+              src="/gallery-previews/home-mobile/Mobile-blackmoz.webp"
+              alt="Press kit de Black Moz, rappeur et slameur, version mobile"
               fill
-              sizes="(min-width: 1024px) 10vw, 26vw"
+              sizes="(min-width: 768px) 8vw, 26vw"
               className="object-cover object-top"
             />
           </div>
@@ -177,7 +178,7 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           {showHeading ? (
             <div className="max-w-2xl">
-              <h2 id="process-title" className="text-4xl font-semibold leading-[0.98] tracking-tighter2 text-white md:text-6xl">
+              <h2 id="process-title" className="text-4xl font-semibold leading-[1.04] md:leading-[1.04] tracking-tighter2 text-white md:text-6xl">
                 Une méthode en trois temps
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/[0.64] md:text-lg">
@@ -210,14 +211,14 @@ export function ProcessTimeline({ showHeading = true }: ProcessTimelineProps) {
                     <p className="text-[10px] font-semibold uppercase tracking-label-tight text-text-muted-light">{card.meta}</p>
                   </div>
                   <p className="text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64] md:hidden">{card.when}</p>
-                  <h3 className="mt-1 text-xl font-semibold leading-tight tracking-tighter2 text-white md:mt-6 md:text-5xl md:leading-none md:text-inherit">{card.title}</h3>
+                  <h3 className="mt-1 text-xl font-semibold leading-tight tracking-tighter2 text-white md:mt-6 md:text-5xl md:leading-[1.04] md:text-inherit">{card.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-white/[0.64] md:hidden">{card.summary}</p>
                   <p className="mt-5 hidden text-sm leading-7 text-[#303744] md:block">{card.description}</p>
                   {index === dossierCards.length - 1 ? (
                     <div className="relative mt-4 aspect-[91/60] w-44 overflow-hidden rounded-mockup-desktop border border-steel bg-black md:hidden">
                       <Image
-                        src="/gallery-previews/home-desktop/dj-slyd.webp"
-                        alt="Press kit de DJ SLY'D, DJ, version desktop"
+                        src="/gallery-previews/home-desktop/black-moz.webp"
+                        alt="Press kit de Black Moz, rappeur et slameur, version desktop"
                         fill
                         sizes="176px"
                         className="object-contain object-center"

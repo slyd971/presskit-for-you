@@ -179,7 +179,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
     <section id="exemples" className="section-divider section-tone-lift scroll-mt-28 py-16 md:py-28" aria-labelledby="categories-title">
       <PageShell>
         <div className="w-full max-w-[17.5rem] min-[375px]:max-w-[20rem] sm:max-w-3xl">
-          <h2 id="categories-title" className="max-w-full break-words text-3xl font-semibold leading-[1.04] tracking-tighter2 text-white md:text-5xl">
+          <h2 id="categories-title" className="max-w-full break-words text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-white md:text-5xl">
             Découvre quelques réalisations
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.74] md:text-lg">
@@ -204,7 +204,7 @@ export function CategoriesGrid({ previewAssets = {} }: CategoriesGridProps) {
                   category={example.category}
                   desktopImage={example.desktopImage}
                   mobileImage={example.mobileImage}
-                  boxClassName="h-[18rem] md:h-[16rem] lg:h-[18rem]"
+                  boxClassName="h-[18rem] md:h-[16rem] lg:h-[18rem] xl:h-[20rem]"
                   desktopSizes="(min-width: 1024px) 40vw, (min-width: 768px) 74vw, 74vw"
                   mobileSizes="(min-width: 1024px) 13vw, (min-width: 768px) 22vw, 22vw"
                   preview={previewAssets[example.slug]}
