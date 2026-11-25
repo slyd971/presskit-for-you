@@ -86,7 +86,7 @@ const structuredData = {
       email: LEGAL.email,
       telephone: "+33663907888",
       areaServed: [ILE_DE_FRANCE, FRANCE],
-      sameAs: ["https://www.instagram.com/presskit_for_you"],
+      sameAs: [siteConfig.instagramUrl],
       taxID: LEGAL.siren,
       founder: { "@type": "Person", name: LEGAL.publisher },
       address: {

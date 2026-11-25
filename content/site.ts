@@ -71,6 +71,7 @@ export const siteConfig = {
     "Press kits digitaux premium pour artistes, talents et indépendants qui veulent une présentation claire, crédible et pensée pour convertir.",
   url: "https://www.presskit.fr",
   phone: "06 63 90 78 88",
+  instagramUrl: "https://www.instagram.com/presskit_for_you/",
   whatsappUrl: whatsappLink("Salut, je voudrais un press kit. Je suis "),
   whatsappQuoteUrl: whatsappLink("Salut, je voudrais un devis Studio Custom. Mon projet : "),
   whatsappAdviceUrl: whatsappLink("Salut, j'hésite entre Premium et Studio Custom. Je suis "),

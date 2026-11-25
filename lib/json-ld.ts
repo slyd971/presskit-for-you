@@ -1,4 +1,5 @@
 import type { PricingTier } from "@/content/pricing";
+import lastModified from "@/content/last-modified.json";
 import { siteConfig } from "@/content/site";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -57,6 +58,8 @@ type PageNodeOptions = {
 // WebPage de la page (url = canonical) et, hors accueil, son unique BreadcrumbList.
 export function pageJsonLdNodes({ path = "", name, breadcrumbName, description }: PageNodeOptions) {
   const url = absoluteUrl(path);
+  // Même date que le <lastmod> du sitemap ; page pas encore datée : pas de dateModified.
+  const dateModified = (lastModified as Record<string, { date: string } | undefined>)[`/${path}`]?.date;
 
   const webPage = {
     "@type": "WebPage",
@@ -64,6 +67,7 @@ export function pageJsonLdNodes({ path = "", name, breadcrumbName, description }
     url,
     name,
     ...(description ? { description } : {}),
+    ...(dateModified ? { dateModified } : {}),
     isPartOf: { "@id": `${siteConfig.url}/#website` },
   };
 

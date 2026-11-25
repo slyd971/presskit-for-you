@@ -71,6 +71,14 @@ export function SiteFooter() {
             >
               Envoyer un e-mail
             </a>
+            <a
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="footer-link text-sm text-white/[0.64] hover:text-white"
+            >
+              Instagram
+            </a>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-label text-white">Informations légales</p>
           <div className="mt-6 space-y-4">
