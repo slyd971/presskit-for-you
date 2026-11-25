@@ -1,15 +1,15 @@
 {
   "/": {
     "date": "2026-11-25",
-    "hash": "186d67263b8c159a"
+    "hash": "f12e157a0e08cd60"
   },
   "/exemples": {
-    "date": "2026-11-23",
-    "hash": "8103bcc76cb959fd"
+    "date": "2026-11-25",
+    "hash": "9c632ddfa0b1d845"
   },
   "/tarifs": {
-    "date": "2026-11-23",
-    "hash": "0a486cc7ba94224b"
+    "date": "2026-11-25",
+    "hash": "fea00b8962b37428"
   },
   "/mentions-legales": {
     "date": "2026-10-12",
@@ -24,35 +24,35 @@
     "hash": "6e3d918a71216760"
   },
   "/artiste": {
-    "date": "2026-11-23",
-    "hash": "b26fd41f7586f459"
+    "date": "2026-11-25",
+    "hash": "42384a19362fa5df"
   },
   "/dj": {
-    "date": "2026-11-23",
-    "hash": "63c5f840b68e99dc"
+    "date": "2026-11-25",
+    "hash": "48612a498d5ff3de"
   },
   "/danseur": {
-    "date": "2026-11-23",
-    "hash": "d6427217f354a950"
+    "date": "2026-11-25",
+    "hash": "6bae428ebec89e05"
   },
   "/photographe": {
-    "date": "2026-11-23",
-    "hash": "09890a6765d8ba9e"
+    "date": "2026-11-25",
+    "hash": "16eb8ea1166d0d5f"
   },
   "/coach-sportif": {
-    "date": "2026-11-24",
-    "hash": "74b69042b2a447f9"
+    "date": "2026-11-25",
+    "hash": "ae61a2faaf412727"
   },
   "/make-up-artist": {
-    "date": "2026-11-23",
-    "hash": "fde65f15836f0e75"
+    "date": "2026-11-25",
+    "hash": "d91f32493d2d2903"
   },
   "/organisateur": {
-    "date": "2026-11-23",
-    "hash": "7f6d391cd80b2285"
+    "date": "2026-11-25",
+    "hash": "739c7293f33882a5"
   },
   "/createur-de-contenu": {
-    "date": "2026-11-23",
-    "hash": "4c8b9d4fcb95b172"
+    "date": "2026-11-25",
+    "hash": "48d79a5f582f2d62"
   }
 }

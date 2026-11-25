@@ -69,14 +69,15 @@ Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `a
 
 - Conteneur `PageShell` : `container-max` 92rem, marges 1.25rem / 1.5rem / 2rem (mobile / sm / md).
 - Sections : `section-y` 5rem sur mobile, 7rem et plus à partir de md.
-- Sur mobile, les grilles de cartes deviennent un **rail horizontal** qui défile (`snap-x`, cartes à 84-86vw).
+- Sur mobile, les grilles de cartes deviennent un **rail horizontal** qui défile (`snap-x`, cartes à 84-86vw ; deux rangées à 78vw pour les liens métiers).
+- Hero : à partir de lg, il va jusqu'à la ligne de flottaison (`100svh`, 56rem max). Un seul titre, une phrase, deux boutons, les mockups. Les métiers sont une ligne de texte discrète sous les mockups, jamais une rangée de boutons.
 
 ## 5. Formes, ombres, effets
 
 - Rayon dominant `radius-lg` (0.5rem) partout : boutons, badges, cartes, panneaux.
 - Boutons plats : fond uni, bordure 1px, aucune ombre ni halo. Au survol, le fond change et le bouton monte de 2px.
 - Panneaux en verre : `surface-glass` + `border` + ombre noire profonde (`shadow-panel`). Au survol : `border-hover`, `shadow-panel-hover`, léger lift.
-- Mockups desktop inclinés et mobile superposé : c'est le motif le plus identitaire du site. On le garde dans toute nouvelle présentation d'exemple.
+- Mockups desktop inclinés et mobile superposé : c'est le motif le plus identitaire du site. On le garde dans toute nouvelle présentation d'exemple. Seule exception : le comparateur à glisser, à plat.
 - Fond global : dégradé sombre + grille de 80px à 2,5 % + grain en `screen`. Les sections ajoutent des halos radiaux blancs très faibles (`section-wash`, `section-tone-cool`, `section-tone-lift`).
 
 ## 6. Composants existants
@@ -88,13 +89,15 @@ Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `a
 | SectionHeading | `components/ui/section-heading.tsx` | `left`, `center` |
 | Reveal | `components/ui/reveal.tsx` | apparition au scroll (`reveal-up`) |
 | Header / Footer / PageShell | `components/layout/` | header en verre sombre sur toute la page, 8px moins haut après 80px de scroll |
-| Sections marketing | `components/marketing/` | Hero, ComparisonSection, CategoriesGrid, PricingTable, ProcessTimeline, SocialProof, FinalCta… |
+| Sections marketing | `components/marketing/` | Hero, LinkPageSlider, ComparisonSection, CategoriesGrid, PricingTable, ProcessTimeline, SocialProof, FinalCta… |
+| LinkPageSlider | `components/marketing/link-page-slider.tsx` | comparateur page de liens / press kit : écran à partir de sm, téléphone en dessous. Étiquettes « Avant » / « Après » dans une barre au-dessus des captures, jamais dessus |
+| BriefForm | `components/marketing/brief-form.tsx` | panneau de contact clair (étapes numérotées, choix en noir et blanc) et carte d'aperçu sombre qui porte le CTA WhatsApp |
 
 ## 7. Motion
 
 - Durées : `duration-feedback` 180ms, `duration-hover` 420ms, `duration-reveal` 480ms (plus `fast` 320ms et `slow` 720ms dans `lib/motion.ts`).
 - Easings : `ease-presskit` pour les interactions, `ease-presskit-out` pour les entrées, `ease-exit` pour les sorties.
-- Mouvements doux et lents : lift de 2 à 5px, légère rotation 3D des cartes, carrousel du hero toutes les 7,6s.
+- Mouvements doux et lents : lift de 2 à 5px, légère rotation 3D des cartes, carrousel du hero toutes les 3,5s (arrêté dès qu'un métier est choisi), aller-retour du comparateur à sa première apparition.
 - `prefers-reduced-motion` coupe toutes les animations (CSS global + `useReducedMotion` dans le hero).
 
 ## 8. Logo
@@ -108,5 +111,5 @@ Une seule famille : **Manrope** (`--font-sans`, chargée par `next/font` dans `a
 - Noirs très proches à fusionner : `#0d1016`, `#10141d`, `#11151d`, `#10141b` → `ink` / `ink-editorial`.
 - Opacités de surfaces et bordures à ramener aux rôles `surface-glass*` et `border*`.
 - `.panel-premium` en 300ms alors que le reste est en `duration-hover` (420ms).
-- Le CTA WhatsApp de `FinalCta` recode un bouton au lieu d'une variante de `Button`.
+- Le CTA WhatsApp de `BriefForm` recode un bouton au lieu d'une variante de `Button`.
 - Prop `eyebrow` de `SectionHeading` déclarée mais jamais affichée.

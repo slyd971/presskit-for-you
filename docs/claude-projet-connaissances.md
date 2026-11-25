@@ -1,6 +1,6 @@
 # PressKit For You : textes du site
 
-Textes en ligne sur presskit.fr, extraits du code le 2026-11-24. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
+Textes en ligne sur presskit.fr, extraits du code le 2026-11-25. Sers-t'en comme référence pour rester cohérent avec le site : mêmes promesses, mêmes chiffres, même vocabulaire.
 
 ## Formules
 

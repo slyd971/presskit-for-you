@@ -1,14 +1,16 @@
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MoveHorizontal } from "lucide-react";
 
-import { liveExamplesCount, testimonials, videoTestimonial } from "@/content/site";
+import { testimonials, videoTestimonial } from "@/content/site";
+import { LinkPageSlider } from "@/components/marketing/link-page-slider";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PageShell } from "@/components/layout/page-shell";
+import { LEGAL } from "@/lib/legal";
 
 const proofStats = [
-  { value: String(liveExamplesCount), label: "press kits en ligne" },
   { value: "7 jours", label: "max, après réception de tes contenus" },
+  { value: `${LEGAL.revisionRounds} allers-retours`, label: "inclus" },
   { value: "dès 300 €", label: "pour un press kit premium" },
 ];
 
@@ -17,61 +19,51 @@ export function ProofStats() {
     <section className="relative overflow-hidden bg-white py-16 text-ink-editorial md:py-14" aria-labelledby="proof-stats-title">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(16,20,29,0.075),transparent_28%)]" aria-hidden="true" />
       <PageShell>
-        <div className="relative mx-auto mb-14 max-w-4xl text-center md:mb-20">
-          <p className="text-[clamp(2.2rem,6vw,5rem)] font-semibold leading-[1.08] tracking-tighter2">
-            <Reveal as="span" className="block text-text-muted-light">Une page de liens empile tes contenus.</Reveal>{" "}
-            <Reveal as="span" delay={0.06} className="block">Un press kit les met en valeur.</Reveal>
-          </p>
-        </div>
-        <div className="relative grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div>
-            <h2 id="proof-stats-title" className="max-w-3xl text-3xl font-semibold leading-[1.08] md:leading-[1.08] tracking-tighter2 text-ink-editorial md:text-5xl">
-              Ton activité, tes médias et tes références dans un seul lien
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-text-secondary-light md:text-lg">
-              Il reflète ta personnalité et renforce ta crédibilité.
+        <div className="relative mx-auto max-w-[68rem]">
+          <h2 id="proof-stats-title" className="font-semibold text-ink-editorial">
+            <Reveal as="span" className="block text-lg leading-7 text-text-muted-light md:text-2xl md:leading-8">
+              Une page de liens empile tes contenus.
+            </Reveal>{" "}
+            <Reveal
+              as="span"
+              delay={0.06}
+              className="mt-2 block text-[clamp(2.2rem,5.6vw,3.75rem)] leading-[1.04] tracking-tighter2 md:mt-3"
+            >
+              Un press kit digital les met en valeur
+            </Reveal>
+          </h2>
+          <div className="mt-5 flex flex-col gap-6 md:mt-6 md:flex-row md:items-end md:justify-between">
+            <p className="max-w-xl text-base leading-8 text-text-secondary-light lg:text-lg">
+              Ton activité, tes médias et tes références dans un seul lien.
             </p>
-
-            <div className="mt-9 grid gap-7 border-y border-ink-editorial/[0.12] py-7 text-left sm:grid-cols-[0.8fr_1fr_1.15fr] md:mt-10">
-              {proofStats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="whitespace-nowrap text-4xl font-semibold leading-none tracking-tighter2 text-ink-editorial lg:text-[1.75rem] xl:text-4xl">{stat.value}</p>
-                  <p className="mt-3 max-w-44 text-xs font-medium uppercase leading-5 tracking-label-tight text-text-muted-light">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative min-h-[18rem] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[22rem]">
-            <div className="product-drift mockup-surface absolute left-0 top-6 w-[82%] rotate-[-1.5deg] rounded-mockup-desktop border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_26px_80px_rgba(16,20,29,0.2),inset_0_1px_0_rgba(255,255,255,0.14)]">
-              <div className="relative aspect-[91/60] overflow-hidden rounded-[0.62rem] bg-black">
-                <Image
-                  src="/gallery-previews/home-desktop/dj-slyd.webp"
-                  alt="Press kit de DJ SLY'D, DJ, version desktop"
-                  fill
-                  sizes="(min-width: 1024px) 42vw, 82vw"
-                  className="object-contain object-center"
-                />
-              </div>
-            </div>
-            <div className="product-drift-slow absolute bottom-0 right-4 w-[26%] min-w-[5rem] rotate-[4deg]">
-              <div className="mockup-surface relative rounded-[1.1rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1 shadow-[0_22px_60px_rgba(16,20,29,0.22),inset_0_1px_0_rgba(255,255,255,0.14)] md:rounded-[1.35rem]">
-                <div className="relative aspect-[0.48/1] overflow-hidden rounded-[0.78rem] bg-black md:rounded-[1rem]">
-                  <div className="absolute left-1/2 top-1.5 z-20 h-2 w-6 -translate-x-1/2 rounded-full bg-[#050609] md:h-2.5 md:w-8" />
-                  <Image
-                    src="/gallery-previews/home-mobile/dj-slyd.webp"
-                    alt="Press kit de DJ SLY'D, DJ, version mobile"
-                    fill
-                    sizes="(min-width: 1024px) 13vw, 26vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-              </div>
-            </div>
+            <p className="inline-flex shrink-0 items-center justify-center gap-3 text-base font-semibold leading-8 text-ink-editorial">
+              <MoveHorizontal className="h-5 w-5" aria-hidden="true" />
+              Glisse pour voir la différence
+            </p>
           </div>
         </div>
+        <div className="relative mx-auto mt-5 max-w-[68rem] md:mt-8">
+          <LinkPageSlider
+            title="DJ SLY'D"
+            linkPage={{
+              desktop: "/gallery-previews/home-desktop/dj-slyd-page-de-liens.webp",
+              mobile: "/gallery-previews/home-mobile/dj-slyd-page-de-liens.webp",
+            }}
+            linkPageDesktop={{ shift: "-27%", background: "#191919" }}
+            presskit={{
+              desktop: "/gallery-previews/home-desktop/dj-slyd.webp",
+              mobile: "/gallery-previews/home-mobile/dj-slyd.webp",
+            }}
+          />
+        </div>
+        <ul className="relative mx-auto mt-9 grid max-w-[68rem] gap-5 border-t border-ink-editorial/[0.12] pt-7 md:mt-10 md:grid-cols-3 xl:grid-cols-[1.2fr_0.9fr_1.1fr] md:gap-8">
+          {proofStats.map((stat) => (
+            <li key={stat.label} className="flex items-baseline gap-4 md:flex-col md:gap-2 xl:flex-row xl:gap-4">
+              <span className="shrink-0 whitespace-nowrap text-2xl font-semibold leading-none tracking-tighter2 text-ink-editorial lg:text-3xl">{stat.value}</span>
+              <span className="text-sm leading-6 text-text-secondary-light">{stat.label}</span>
+            </li>
+          ))}
+        </ul>
       </PageShell>
     </section>
   );

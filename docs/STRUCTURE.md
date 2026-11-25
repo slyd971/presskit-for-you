@@ -57,7 +57,7 @@ presskit-for-you/
 
 | Route | Fichier | Composition |
 | --- | --- | --- |
-| `/` | `app/page.tsx` | `Hero` → `ProofStats` → `ComparisonSection` → `CategoriesGrid` → `PricingTable` (highlight) → `ProcessTimeline` → `SocialProof` → `Faq` → `FinalCta` |
+| `/` | `app/page.tsx` | `Hero` → `ProofStats` → `ComparisonSection` → `CategoriesGrid` → `MetiersLinks` → `PricingTable` (highlight) → `ProcessTimeline` → `SocialProof` → `Faq` → `FinalCta` |
 | `/exemples` | `app/exemples/page.tsx` | Intro + `ExamplesGalleryGrid` (filtres par catégorie) |
 | `/tarifs` | `app/tarifs/page.tsx` | Intro + `PricingTable` + `Faq` + bloc CTA + `FinalCta` |
 | `/<metier>` | `app/<metier>/page.tsx` | `PresskitCategoryPage` : `CategoryHero` → `CategoryContent` → `CategoryOffer` → `Faq` (FAQ du métier) → `FinalCta` |
@@ -92,15 +92,17 @@ Une page métier fait une dizaine de lignes : elle déclare son `slug`, appelle 
 
 | Fichier | Utilisé par | Rôle |
 | --- | --- | --- |
-| `hero.tsx` | `/` | Titre, CTA, carrousel de mockups desktop/mobile (3,5 s, en pause au survol souris et au focus clavier, coupé en reduced-motion). |
-| `social-proof.tsx` | `/` | `ProofStats` (stat monumentale), `SocialProof` et `TestimonialCard` (témoignages). |
+| `hero.tsx` | `/` | Titre, CTA, carrousel de mockups desktop/mobile (3,5 s, en pause au survol souris et au focus clavier, coupé en reduced-motion, arrêté quand un métier est choisi sous les mockups). |
+| `social-proof.tsx` | `/` | `ProofStats` (titre, comparateur, chiffres), `SocialProof` et `TestimonialCard` (témoignages). |
+| `link-page-slider.tsx` | `/` | Comparateur à glisser page de liens / press kit (souris, doigt, clavier). |
 | `home-conversion-sections.tsx` | `/` | `ComparisonSection` : press kit vs PDF/Instagram. |
 | `categories-grid.tsx` | `/` | Cartes d'études de cas par métier avec mockups. |
 | `pricing-table.tsx` | `/`, `/tarifs` | Offre principale + options (accordéon sur mobile). Données dans `content/pricing.ts`. |
 | `process-timeline.tsx` | `/` | Méthode en 3 étapes (une seule liste responsive : frise sur mobile, cartes sur desktop). |
 | `metiers-links.tsx` | `/`, `/exemples`, `/tarifs`, métiers | `MetiersLinks` : liens internes vers les 7 pages métiers (sans la page courante via `currentSlug`). |
 | `faq.tsx` | `/`, `/tarifs`, métiers | FAQ en accordéon. |
-| `final-cta.tsx` | Toutes les pages | Section contact claire, CTA WhatsApp et email. |
+| `final-cta.tsx` | Toutes les pages | Section contact claire, rend `BriefForm` (prop `metier` sur les pages métiers). |
+| `brief-form.tsx` | `FinalCta` | Métier, formule, nom : compose le message WhatsApp ou l'e-mail. Rien n'est envoyé ni enregistré par le site. |
 | `choose-sections.tsx` | `/exemples` | Section finale « Comment choisir les sections de ton press kit », liens vers les pages métiers. |
 | `examples-gallery-grid.tsx` | `/exemples` | Grille filtrable des exemples. |
 | `presskit-category-page.tsx` | Pages métier | Assemble la page métier. |

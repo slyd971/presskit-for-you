@@ -1,7 +1,7 @@
 "use client";
 
 import { EXAMPLE_URLS } from "@/content/example-urls";
-import { CTA, liveExamplesCount } from "@/content/site";
+import { CTA } from "@/content/site";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/layout/page-shell";
 import { motionTokens } from "@/lib/motion";
-import { withDe } from "@/lib/utils";
+import { cn, withDe } from "@/lib/utils";
 
 type HeroKit = {
   title: string;
@@ -93,9 +93,16 @@ const heroKits: HeroKit[] = [
   },
 ];
 
+// Un press kit par métier, dans l'ordre du carrousel (sélecteur sous les mockups, ordinateur).
+const metierKits = ["MelyMelow", "Sherin", "DJ SLY'D", "KRIMO", "La Bringue"].map((title) => {
+  const index = heroKits.findIndex((kit) => kit.title === title);
+
+  return { category: heroKits[index].category, index };
+});
+
 const carouselSlots = [
-  { offset: 0, x: "-6%", y: "8%", width: "88%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
-  { offset: 1, x: "22%", y: "19%", width: "62%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
+  { offset: 0, x: "-3%", y: "3%", width: "88%", rotate: 0, scale: 1, opacity: 1, zIndex: 40 },
+  { offset: 1, x: "34%", y: "14%", width: "62%", rotate: 3.5, scale: 0.88, opacity: 0.72, zIndex: 28 },
   { offset: -1, x: "-34%", y: "22%", width: "60%", rotate: -3.5, scale: 0.86, opacity: 0.58, zIndex: 24 },
 ];
 
@@ -103,10 +110,12 @@ export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   // Le carrousel se met en pause tant que la souris (pas le tactile) ou le focus clavier est sur les mockups.
   const [isPaused, setIsPaused] = useState(false);
+  // Un métier choisi à la main arrête la rotation automatique.
+  const [hasChosen, setHasChosen] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
-    if (shouldReduceMotion || isPaused) {
+    if (shouldReduceMotion || isPaused || hasChosen) {
       return;
     }
 
@@ -115,10 +124,10 @@ export function Hero() {
     }, 3500);
 
     return () => window.clearInterval(interval);
-  }, [shouldReduceMotion, isPaused]);
+  }, [shouldReduceMotion, isPaused, hasChosen]);
 
   return (
-    <section className="section-wash relative overflow-hidden pb-10 pt-24 md:pb-16 md:pt-28 lg:pt-24" aria-labelledby="hero-title">
+    <section className="section-wash relative overflow-hidden pb-10 pt-24 md:pb-16 md:pt-28 lg:min-h-[min(100svh,56rem)] lg:pb-10 lg:pt-32" aria-labelledby="hero-title">
       <motion.div
         className="absolute inset-0"
         animate={{
@@ -126,9 +135,9 @@ export function Hero() {
         }}
         transition={{ duration: 1.8, ease: "easeInOut" }}
       />
-      <PageShell className="relative grid items-start gap-9 md:gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
+      <PageShell className="relative grid items-start gap-9 md:gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16 xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)] xl:gap-12">
         <div>
-          <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem] lg:pb-6">
+          <div className="w-full max-w-[17.5rem] min-w-0 pt-0 min-[375px]:max-w-[20rem] sm:max-w-[46rem]">
             <h1 id="hero-title" className="mb-3 text-[11px] font-semibold uppercase leading-5 tracking-label text-white/[0.64]">
               Press kit digital pour DJs, artistes, créateurs et indépendants
             </h1>
@@ -139,10 +148,10 @@ export function Hero() {
                 <span className="block text-white/[0.92]">qu&apos;un PDF.</span>
               </span>
             </p>
-            <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.74] md:mt-6 md:text-lg md:leading-9">
-              On trie, on organise, on met en page : {liveExamplesCount} artistes, DJs, photographes et créateurs ont déjà le leur.
+            <p className="mt-5 max-w-[35rem] text-[0.95rem] leading-7 text-white/[0.74] md:mt-6 md:text-lg md:leading-9 xl:mt-8">
+              Tu envoies tes contenus : on trie, on organise, on met en page.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-center">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-center xl:mt-10">
               <Button
                 href="#exemples"
                 variant="secondary"
@@ -162,7 +171,7 @@ export function Hero() {
 
         <div className="min-w-0">
           <div
-            className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[36rem]"
+            className="relative isolate min-h-[19rem] min-w-0 overflow-visible sm:min-h-[40rem] lg:min-h-[27rem] xl:min-h-[33rem]"
             onPointerEnter={(event) => setIsPaused(event.pointerType === "mouse")}
             onPointerLeave={() => setIsPaused(false)}
             onFocus={(event) => setIsPaused(event.target.matches(":focus-visible"))}
@@ -218,7 +227,7 @@ export function Hero() {
                     {slot.offset === 0 && mobileImage ? (
                       <span className="absolute -bottom-8 -right-8 z-50 block w-[24%] min-w-[5.9rem] rotate-[3deg] transition duration-hover group-hover:-translate-y-2 group-hover:rotate-[1.5deg]">
                         <span className="absolute -inset-5 rounded-full bg-white opacity-10 blur-2xl transition duration-hover group-hover:opacity-16" aria-hidden="true" />
-                        <span className="mockup-surface relative block rounded-[1.35rem] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        <span className="mockup-surface relative block rounded-[1.35rem] after:rounded-[inherit] border border-white/[0.18] bg-[linear-gradient(145deg,#343a4b,#07090e_42%,#171b25)] p-1.5 shadow-[0_28px_90px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.16)]">
                           <span className="relative block aspect-[0.48/1] overflow-hidden rounded-[1rem] bg-black">
                             <span className="absolute left-1/2 top-1.5 z-20 h-2 w-7 -translate-x-1/2 rounded-full bg-[#050609]" />
                             <Image
@@ -292,6 +301,30 @@ export function Hero() {
                 })}
               </div>
             </div>
+          </div>
+          <div role="group" aria-label="Voir un press kit par métier" className="mt-5 hidden gap-x-6 lg:flex">
+            {metierKits.map((kit) => {
+              // « DJ » reste actif pour « DJ & MC ».
+              const isActive = heroKits[activeIndex].category.startsWith(kit.category);
+
+              return (
+                <button
+                  key={kit.category}
+                  type="button"
+                  aria-pressed={isActive}
+                  onClick={() => {
+                    setHasChosen(true);
+                    setActiveIndex(kit.index);
+                  }}
+                  className={cn(
+                    "min-h-11 text-sm font-medium underline-offset-8 transition-colors duration-hover ease-presskit focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/70",
+                    isActive ? "text-white underline" : "text-white/[0.64] hover:text-white",
+                  )}
+                >
+                  {kit.category}
+                </button>
+              );
+            })}
           </div>
         </div>
       </PageShell>

@@ -137,18 +137,18 @@ export function PricingTable({
           </Link>
         ) : null}
         <div className="mt-4 py-3 md:mt-12 md:py-10">
-          <div className="grid gap-3 md:gap-8 lg:grid-cols-[0.72fr_1.28fr]">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-label text-white/[0.64]">Options</p>
-              <h3 className="mt-3 max-w-lg text-2xl font-semibold leading-tight tracking-tighter2 text-white md:mt-4 md:text-4xl">
+          <div className="grid gap-3 md:gap-8">
+            <div className="lg:grid lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-x-12">
+              <p className="text-xs font-semibold uppercase tracking-label text-white/[0.64] lg:col-span-2">Options</p>
+              <h3 className="mt-3 max-w-lg text-2xl font-semibold leading-tight tracking-tighter2 text-white md:mt-4 md:max-w-3xl md:text-4xl">
                 À ajouter seulement si ton projet en a besoin
               </h3>
-              <p className="mt-2 text-sm leading-6 text-white/[0.64] md:mt-4 md:leading-7">
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-white/[0.64] md:mt-4 md:leading-7">
                 Pas de pack forcé : on ajoute ce qui sert vraiment à la mise en ligne, à la mise à jour ou à la qualité des visuels.
               </p>
             </div>
             {/* Bordures gauche et haute sur la grille, droite et basse sur chaque cellule : les lignes se croisent toujours. */}
-            <div className="grid md:grid-cols-2 md:border-l md:border-t md:border-white/[0.12]">
+            <div className="grid md:grid-cols-2 md:border-l md:border-t md:border-white/[0.12] xl:grid-cols-4">
               {pricingOptions.map((option) => (
                 <div key={option.name}>
                   <details className="acc group border-b border-white/[0.08] py-3 md:hidden">
@@ -166,7 +166,7 @@ export function PricingTable({
                     </div>
                   </details>
                   <article className="hidden h-full border-b border-r border-white/[0.12] p-5 transition-colors duration-hover ease-presskit hover:bg-white/[0.04] md:block lg:p-6">
-                    <div className="flex items-baseline justify-between gap-4">
+                    <div className="flex items-baseline justify-between gap-4 xl:flex-col xl:gap-2">
                       <h4 className="text-base font-semibold leading-snug text-white">{option.name}</h4>
                       <span className="shrink-0 text-lg font-semibold tracking-tighter2 text-white">{option.price}</span>
                     </div>

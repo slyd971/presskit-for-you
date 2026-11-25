@@ -36,7 +36,7 @@ Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 3, Framer
 
 - Français, tutoiement, phrases courtes, promesse concrète : « Plus pro qu'Instagram. Plus impactant qu'un PDF. »
 - CTA à la première personne : « Demander mon press kit » (`CTA.primary`), « Voir des exemples », « Demander un devis ».
-- Contact : « Écrire sur WhatsApp » avec `siteConfig.whatsappUrl` (message pré-rempli inclus) et « Envoyer un e-mail » en `mailto:contact@presskit.fr`.
+- Contact : « Écrire sur WhatsApp » avec `siteConfig.whatsappUrl` (message pré-rempli inclus) et « Envoyer un e-mail » en `mailto:contact@presskit.fr`. Le brief (`brief-form.tsx`) complète ces messages via `whatsappLink()`.
 - Délai : « 7 jours », sans « ouvrés ». Seules les CGV (`app/cgv/page.tsx`) gardent « 7 jours ouvrés » : c'est contractuel, ne pas y toucher sans l'accord de David.
 - « sur mesure » sans trait d'union, « e-mail » avec. Titres H2 sans point final.
 - Devant un nom de client, utiliser `withDe()` de `lib/utils.ts` : « d'Arthur Chaps », « de DJ FLO ».

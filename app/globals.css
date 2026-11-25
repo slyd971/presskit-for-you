@@ -604,14 +604,6 @@ svg {
   transform-origin: center;
 }
 
-.product-drift {
-  transform-origin: center;
-}
-
-.product-drift-slow {
-  transform-origin: center;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

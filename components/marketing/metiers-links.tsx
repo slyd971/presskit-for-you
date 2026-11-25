@@ -62,11 +62,12 @@ export function MetiersLinks({ currentSlug, title, id, withDescriptions = false 
   const links = (
     <nav {...(title ? { "aria-labelledby": id } : { "aria-label": "Press kits par métier" })}>
       {withDescriptions ? (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        // Sur mobile : rail horizontal sur deux rangées.
+        <ul className="-mx-5 grid snap-x snap-mandatory scroll-px-5 auto-cols-[78vw] grid-flow-col grid-rows-[auto_auto] gap-3 overflow-x-auto px-5 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:mx-0 sm:grid-flow-row sm:auto-cols-auto sm:grid-cols-2 sm:grid-rows-none sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
           {visibleMetiers.map((metier) => (
             <li
               key={metier.slug}
-              className="group relative rounded-lg border border-white/[0.12] p-5 pr-12 transition duration-hover ease-presskit hover:border-white/[0.24] hover:bg-white/[0.08]"
+              className="group relative snap-start rounded-lg border border-white/[0.12] p-5 pr-12 transition duration-hover ease-presskit hover:border-white/[0.24] hover:bg-white/[0.08]"
             >
               {/* Le lien couvre toute la carte, son texte reste le seul nom du métier. */}
               <Link

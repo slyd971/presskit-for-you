@@ -58,7 +58,7 @@ export function PresskitCategoryPage({ category }: PresskitCategoryPageProps) {
         />
       ) : null}
       <MetiersLinks id="metiers-title" currentSlug={category.slug} title="Press kits pour d’autres métiers" />
-      <FinalCta />
+      <FinalCta metier={category.shortName} />
     </>
   );
 }

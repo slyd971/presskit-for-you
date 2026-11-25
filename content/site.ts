@@ -62,15 +62,18 @@ export const CTA = {
   quote: "Demander un devis",
 } as const;
 
+// Lien WhatsApp avec message pré-rempli.
+export const whatsappLink = (message: string) => `https://wa.me/33663907888?text=${encodeURIComponent(message)}`;
+
 export const siteConfig = {
   name: "PressKit For You",
   description:
     "Press kits digitaux premium pour artistes, talents et indépendants qui veulent une présentation claire, crédible et pensée pour convertir.",
   url: "https://www.presskit.fr",
   phone: "06 63 90 78 88",
-  whatsappUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, je voudrais un press kit. Je suis ")}`,
-  whatsappQuoteUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, je voudrais un devis Studio Custom. Mon projet : ")}`,
-  whatsappAdviceUrl: `https://wa.me/33663907888?text=${encodeURIComponent("Salut, j'hésite entre Premium et Studio Custom. Je suis ")}`,
+  whatsappUrl: whatsappLink("Salut, je voudrais un press kit. Je suis "),
+  whatsappQuoteUrl: whatsappLink("Salut, je voudrais un devis Studio Custom. Mon projet : "),
+  whatsappAdviceUrl: whatsappLink("Salut, j'hésite entre Premium et Studio Custom. Je suis "),
   nav: [
     { href: "/exemples", label: "Exemples" },
     { href: "/tarifs", label: "Tarifs" },
