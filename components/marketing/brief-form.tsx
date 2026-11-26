@@ -85,17 +85,21 @@ export function BriefForm({ titleId, title, description, metiers, formules, defa
       : "mailto:contact@presskit.fr";
 
   return (
-    <div className="relative overflow-hidden rounded-lg border border-ink-editorial/[0.12] bg-white p-5 pt-8 text-ink-editorial sm:p-9 lg:p-14">
-      <div className="grid gap-7 sm:gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+    <div className="text-ink-editorial">
+      <div className="grid gap-10 lg:grid-cols-[1.12fr_0.88fr] lg:items-start lg:gap-16">
         <div className="min-w-0">
           <h2 id={titleId} className="max-w-xl text-4xl font-semibold leading-[1.04] tracking-tighter2 text-ink-editorial md:text-6xl md:leading-[1.04]">
             {title}
           </h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-text-secondary-light md:mt-5 md:text-lg md:leading-8">{description}</p>
 
-          <div className="mt-7 grid min-w-0 gap-6 md:mt-11 md:gap-8">
-            <ChoiceGroup step={1} legend="Ton métier" name="metier" options={metiers} value={metier} onChange={setMetier} />
-            <ChoiceGroup step={2} legend="La formule" name="formule" options={formules} value={formule} onChange={setFormule} />
+          <div className="mt-8 grid min-w-0 grid-cols-[minmax(0,1fr)] border-b border-ink-editorial/[0.12] md:mt-12 [&>*]:min-w-0 [&>*]:border-t [&>*]:border-ink-editorial/[0.12] [&>*]:py-6 md:[&>*]:py-7">
+            <div>
+              <ChoiceGroup step={1} legend="Ton métier" name="metier" options={metiers} value={metier} onChange={setMetier} />
+            </div>
+            <div>
+              <ChoiceGroup step={2} legend="La formule" name="formule" options={formules} value={formule} onChange={setFormule} />
+            </div>
             <div>
               <label htmlFor="brief-name">
                 <StepLabel step={3}>Ton nom ou ton Instagram</StepLabel>
@@ -108,13 +112,13 @@ export function BriefForm({ titleId, title, description, metiers, formules, defa
                 autoComplete="off"
                 onChange={(event) => setName(event.target.value)}
                 placeholder="@ton_compte"
-                className="mt-4 block min-h-12 w-full rounded-lg border border-ink-editorial/[0.24] bg-white px-4 text-base text-ink-editorial transition-colors duration-hover ease-presskit placeholder:text-text-muted-light hover:border-ink-editorial focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-editorial"
+                className="mt-3 block min-h-12 w-full rounded-lg border border-ink-editorial/[0.24] bg-white px-4 text-base text-ink-editorial transition-colors duration-hover ease-presskit placeholder:text-text-muted-light hover:border-ink-editorial focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-editorial"
               />
             </div>
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-col w-full self-center rounded-lg bg-[linear-gradient(160deg,var(--surface-760),var(--surface-900)_62%)] p-4 text-white shadow-panel sm:p-0">
+        <div className="flex w-full min-w-0 flex-col rounded-lg bg-[linear-gradient(160deg,var(--surface-760),var(--surface-900)_62%)] p-4 text-white shadow-panel sm:p-0 lg:sticky lg:top-28">
           <div className="hidden items-center gap-3 border-b border-white/[0.12] px-5 py-4 sm:flex">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-white/[0.18] text-sm font-semibold tracking-tighter2" aria-hidden="true">
               PK

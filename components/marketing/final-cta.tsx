@@ -16,8 +16,8 @@ const formules = [
 
 export function FinalCta({ metier }: FinalCtaProps) {
   return (
-    <section id="contact" className="section-contact scroll-mt-16 py-6 sm:py-16 md:scroll-mt-20 md:py-24" aria-labelledby="final-cta-title">
-      <PageShell className="max-w-8xl px-3 sm:px-6 md:px-8">
+    <section id="contact" className="section-contact scroll-mt-16 py-20 md:scroll-mt-20 md:py-28" aria-labelledby="final-cta-title">
+      <PageShell>
         <BriefForm
           titleId="final-cta-title"
           title="Parle-nous de ton univers"
